@@ -448,6 +448,23 @@ fieldset {
   border: none;
 }
 
+.fieldset--error {
+  border-left: 2px #b50909 solid;
+}
+
+.span--error {
+  padding: 1rem;
+  display: flex;
+  color: #b50909;
+  font-weight: bold;
+}
+
+.input--error {
+  border: 2px #b50909 solid;
+  outline: 1px solid #b50909;
+  box-shadow: 0 0 3px #b50909;
+}
+
 form {
   min-width: 80%;
 }

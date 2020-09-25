@@ -76,11 +76,27 @@ input[type=checkbox] {
 
 fieldset {
     border: none;
+}
 
+.fieldset--error {
+    border-left: 2px $nys-error-state solid;
+}
+
+.span--error {
+    padding: 1rem;
+    display: flex;
+    color: $nys-error-state;
+    font-weight: bold;
+}
+
+.input--error {
+    border: 2px $nys-error-state solid;
+    outline: 1px solid $nys-error-state;
+    box-shadow: 0 0 3px $nys-error-state;
 }
 
 form {
-min-width: 80%;
+    min-width: 80%;
 
 }
 

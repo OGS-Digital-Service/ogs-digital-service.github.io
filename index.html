@@ -22,11 +22,27 @@
       <input type="text" id="placeholder-only-ID" > 
     </fieldset>
 
+
+    <fieldset class="fieldset--error">
+      <label for="placeholder-only-ID-error" class="nys-label">Text Input Error State</label>
+      <span class="span--error" id="input-error-message" role="alert">Helpful error message!</span>
+      <input class="input--error" type="text" id="placeholder-only-ID-error" aria-describedby="input-error-message" aria-labelledby="input-error-message"> 
+    </fieldset>
+
+
+
+
     <fieldset>
       <label for="placeholder-only-ID-2" class="nys-label">Text Area Label </label>
       <textarea id="placeholder-only-ID-2"></textarea> 
     </fieldset>
     
+
+
+
+
+
+
     <fieldset>
       <label for="placeholder-only-ID-3" class="nys-label">Select Label </label>
         <select id="placeholder-only-ID-3">
@@ -40,6 +56,20 @@
         </select>
     </fieldset>
 
+
+    <fieldset class="fieldset--error">
+      <label for="placeholder-only-ID-3" class="nys-label">Select Input Error </label>
+      <span class="span--error" id="select-error-message" role="alert">Helpful error message!</span>
+        <select class="input--error" id="placeholder-only-ID-3">
+         <option id="demoID1" selected disabled> - Select - </option>
+         <option id="demoID2"> First Option </option>
+         <option id="demoID2"> Second Option </option>
+         <option id="demoID2"> Another Option </option>
+         <option id="demoID2"> Another Option </option>
+         <option id="demoID2"> Another Option </option>
+         <option id="demoID2"> Billionth Option </option>
+        </select>
+    </fieldset>
   </form>
 
   <button class="nys">Submit</button>
