@@ -6,8 +6,8 @@ button {
     font-family: $nys-primary-font;
 }
 
-button.ogs {
-    background-color: $ogs-primary-color;
+button.nys {
+    background-color: $nys-primary-color;
     color: #fff;
     border: none;
     cursor: pointer;
@@ -20,20 +20,20 @@ button.ogs {
     margin: 4px 4px 0 0;
 
     &:hover {
-        background-color: $ogs-tertiary-color;
+        background-color: $nys-tertiary-color;
     }
 
     &:active {
-        outline: 1px solid $ogs-primary-color;
-        box-shadow: 0 0 3px $ogs-primary-color;
-        border-color: $ogs-primary-color;
+        outline: 1px solid $nys-primary-color;
+        box-shadow: 0 0 3px $nys-primary-color;
+        border-color: $nys-primary-color;
     }
 
 }
 
 
 button.component-alternate {
-    background-color: $ogs-primary-color;
+    background-color: $nys-primary-color;
     color: #fff;
     border: none;
     cursor: pointer;
@@ -47,13 +47,13 @@ button.component-alternate {
     margin: 4px 4px 0 0;
 
     &:hover {
-        background-color: $ogs-tertiary-color;
+        background-color: $nys-tertiary-color;
     }
 
     &:active {
-        outline: 1px solid $ogs-primary-color;
-        box-shadow: 0 0 3px $ogs-primary-color;
-        border-color: $ogs-primary-color;
+        outline: 1px solid $nys-primary-color;
+        box-shadow: 0 0 3px $nys-primary-color;
+        border-color: $nys-primary-color;
     }
 }
 
@@ -79,9 +79,9 @@ button.component-hero {
     }
 
     &:active {
-        outline: 1px solid $ogs-primary-color;
-        box-shadow: 0 0 3px $ogs-primary-color;
-        border-color: $ogs-primary-color;
+        outline: 1px solid $nys-primary-color;
+        box-shadow: 0 0 3px $nys-primary-color;
+        border-color: $nys-primary-color;
     }
 }
 
@@ -109,9 +109,9 @@ button.component-frame {
     }
 
     &:active {
-        outline: 1px solid $ogs-primary-color;
-        box-shadow: 0 0 3px $ogs-primary-color;
-        border-color: $ogs-primary-color;
+        outline: 1px solid $nys-primary-color;
+        box-shadow: 0 0 3px $nys-primary-color;
+        border-color: $nys-primary-color;
     }
 }
 
@@ -127,15 +127,15 @@ button.component-frame {
     background-color: #fff;
 
     &:hover {
-        background-color:$ogs-primary-color;
+        background-color:$nys-primary-color;
         color: #fff;
         text-decoration: none;
     }
 
     &:active {
-        outline: 1px solid $ogs-primary-color;
-        box-shadow: 0 0 3px $ogs-primary-color;
-        border-color: $ogs-primary-color;
+        outline: 1px solid $nys-primary-color;
+        box-shadow: 0 0 3px $nys-primary-color;
+        border-color: $nys-primary-color;
     }
 
 }
@@ -149,15 +149,15 @@ button.component-frame {
 
     &:hover {
         text-decoration: underline;
-        background-color:$ogs-primary-color;
+        background-color:$nys-primary-color;
         color: #fff;
         text-decoration: none;
     }
 
     &:active {
-        outline: 1px solid $ogs-primary-color;
-        box-shadow: 0 0 3px $ogs-primary-color;
-        border-color: $ogs-primary-color;
+        outline: 1px solid $nys-primary-color;
+        box-shadow: 0 0 3px $nys-primary-color;
+        border-color: $nys-primary-color;
     }
 
 }

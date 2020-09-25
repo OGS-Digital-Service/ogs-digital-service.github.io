@@ -26,18 +26,18 @@ input[type=text], input[type=number], input[type=password], textarea {
     border: 1px solid #999;
     font-size: 90%;
     line-height: 24px;
-    margin: 1rem 0 2.5rem 0; 
+    margin: 1rem 0 1rem 0; 
     font-family: $nys-primary-font;
     width: 100%;
     
     &:focus {
-        outline: 1px solid $ogs-primary-color;
-        box-shadow: 0 0 3px $ogs-primary-color;
-        border-color: $ogs-primary-color;
+        outline: 1px solid $nys-primary-color;
+        box-shadow: 0 0 3px $nys-primary-color;
+        border-color: $nys-primary-color;
     }
 }
 
-label.ogs-label {
+label.nys-label {
     font-weight: bold;
     display: flex;
 }
@@ -47,7 +47,7 @@ select {
     background-color: white;
     min-width: 20rem;
     border: 1px solid #999;
-    margin: 1rem 0 2.5rem 0; 
+    margin: 1rem 0 1rem 0; 
     font-size: 90%;
     font-family: $nys-primary-font;
     width: 100%;
@@ -60,9 +60,9 @@ select {
     background-position-y: 50%;
  
     &:focus {
-        outline: 1px solid $ogs-primary-color;
-        box-shadow: 0 0 3px $ogs-primary-color;
-        border-color: $ogs-primary-color;
+        outline: 1px solid $nys-primary-color;
+        box-shadow: 0 0 3px $nys-primary-color;
+        border-color: $nys-primary-color;
     }
 
     
@@ -76,6 +76,11 @@ input[type=checkbox] {
 
 fieldset {
     border: none;
+
+}
+
+form {
+min-width: 80%;
 
 }
 

@@ -1,1 +1,497 @@
-@font-face{font-family:"Proxima Nova";font-weight:normal;font-style:normal;src:url(../fonts/proximanova/proximanova-regular.eot);src:url(../fonts/proximanova/proximanova-regular.eot#iefix) format("embedded-opentype"),url(../fonts/proximanova/proximanova-regular.woff2) format("woff2"),url(../fonts/proximanova/proximanova-regular.woff) format("woff"),url(../fonts/proximanova/proximanova-regular.ttf) format("truetype")}@font-face{font-family:"Proxima Nova";font-weight:600;font-style:normal;src:url(../fonts/proximanova/proximanova-semibold.eot);src:url(../fonts/proximanova/proximanova-semibold.eot#iefix) format("embedded-opentype"),url(../fonts/proximanova/proximanova-semibold.woff2) format("woff2"),url(../fonts/proximanova/proximanova-semibold.woff) format("woff"),url(../fonts/proximanova/proximanova-semibold.ttf) format("truetype")}@font-face{font-family:"Proxima Nova";font-weight:bold;font-style:normal;src:url(../fonts/proximanova/proximanova-bold.eot);src:url(../fonts/proximanova/proximanova-bold.eot#iefix) format("embedded-opentype"),url(../fonts/proximanova/proximanova-bold.woff2) format("woff2"),url(../fonts/proximanova/proximanova-bold.woff) format("woff"),url(../fonts/proximanova/proximanova-bold.ttf) format("truetype")}@font-face{font-family:"Proxima Nova";font-weight:800;font-style:normal;src:url(../fonts/proximanova/proximanova-extrabold.eot);src:url(../fonts/proximanova/proximanova-extrabold.eot#iefix) format("embedded-opentype"),url(../fonts/proximanova/proximanova-extrabold.woff2) format("woff2"),url(../fonts/proximanova/proximanova-extrabold.woff) format("woff"),url(../fonts/proximanova/proximanova-extrabold.ttf) format("truetype")}@font-face{font-family:"Proxima Nova";font-weight:normal;font-style:italic;src:url(../fonts/proximanova/proximanova-italic.eot);src:url(../fonts/proximanova/proximanova-italic.eot#iefix) format("embedded-opentype"),url(../fonts/proximanova/proximanova-italic.woff2) format("woff2"),url(../fonts/proximanova/proximanova-italic.woff) format("woff"),url(../fonts/proximanova/proximanova-italic.ttf) format("truetype")}@font-face{font-family:"Proxima Nova";font-weight:bold;font-style:italic;src:url(../fonts/proximanova/proximanova-bolditalic.eot);src:url(../fonts/proximanova/proximanova-bolditalic.eot#iefix) format("embedded-opentype"),url(../fonts/proximanova/proximanova-bolditalic.woff2) format("woff2"),url(../fonts/proximanova/proximanova-bolditalic.woff) format("woff"),url(../fonts/proximanova/proximanova-bolditalic.ttf) format("truetype")}@font-face{font-family:"Proxima Nova";font-weight:200;font-style:normal;src:url(../fonts/proximanova/proximanova-light.eot);src:url(../fonts/proximanova/proximanova-light.eot#iefix) format("embedded-opentype"),url(../fonts/proximanova/proximanova-light.woff2) format("woff2"),url(../fonts/proximanova/proximanova-light.woff) format("woff"),url(../fonts/proximanova/proximanova-light.ttf) format("truetype")}@font-face{font-family:"Proxima Nova";font-weight:200;font-style:italic;src:url(../fonts/proximanova/proximanova-lightitalic.eot);src:url(../fonts/proximanova/proximanova-lightitalic.eot#iefix) format("embedded-opentype"),url(../fonts/proximanova/proximanova-lightitalic.woff2) format("woff2"),url(../fonts/proximanova/proximanova-lightitalic.woff) format("woff"),url(../fonts/proximanova/proximanova-lightitalic.ttf) format("truetype")}@font-face{font-family:"D Sari Bold";font-weight:normal;font-style:normal;src:url(../fonts/dsaribold/DSari_Bold-webfont.eot);src:url(../fonts/dsaribold/DSari_Bold-webfont.eot#iefix) format("embedded-opentype"),url(../fonts/dsaribold/DSari_Bold-webfont.woff2) format("woff2"),url(../fonts/dsaribold/DSari_Bold-webfont.woff) format("woff"),url(../fonts/dsaribold/DSari_Bold-webfont.ttf) format("truetype")}@font-face{font-family:"Oswald";src:url(../fonts/oswald/oswald-light-webfont.eot);src:url(../fonts/oswald/oswald-light-webfont.eot#iefix) format("embedded-opentype"),url(../fonts/oswald/oswald-light-webfont.woff) format("woff"),url(../fonts/oswald/oswald-light-webfont.ttf) format("truetype"),url(../fonts/oswald/oswald-light-webfont.svg#oswaldlight) format("svg");font-weight:normal;font-style:normal}@font-face{font-family:"Oswald";src:url(../fonts/oswald/oswald-bold-webfont.eot);src:url(../fonts/oswald/oswald-bold-webfont.eot#iefix) format("embedded-opentype"),url(../fonts/oswald/oswald-bold-webfont.woff) format("woff"),url(../fonts/oswald/oswald-bold-webfont.ttf) format("truetype"),url(../fonts/oswald/oswald-bold-webfont.svg#oswaldbold) format("svg");font-weight:bold;font-style:normal}@font-face{font-family:"Oswald";src:url(../fonts/oswald/oswald-regular-webfont.eot);src:url(../fonts/oswald/oswald-regular-webfont.eot#iefix) format("embedded-opentype"),url(../fonts/oswald/oswald-regular-webfont.woff) format("woff"),url(../fonts/oswald/oswald-regular-webfont.ttf) format("truetype"),url(../fonts/oswald/oswald-regular-webfont.svg#oswaldbook) format("svg");font-weight:normal;font-style:normal}@font-face{font-family:'icomoon';src:url(../fonts/icomoon../fonts/icomoon.eot?visjn7=);src:url(../fonts/icomoon../fonts/icomoon.eot?visjn7=#iefix) format("embedded-opentype"),url(../fonts/icomoon../fonts/icomoon.woff?visjn7=) format("woff"),url(../fonts/icomoon../fonts/icomoon.ttf?visjn7=) format("truetype"),url(../fonts/icomoon../fonts/icomoon.svg?visjn7=#icomoon) format("svg");font-weight:normal;font-style:normal}*{box-sizing:border-box}body{font-family:"Proxima Nova","Arial",sans-serif;color:#000;font-size:18px}.nys-global-footer{background-color:#F3D3C1}button{font-size:90%;font-family:"Proxima Nova","Arial",sans-serif}button.ogs{background-color:#ac3f14;color:#fff;border:none;cursor:pointer;display:inline-block;text-align:center;text-transform:uppercase;text-decoration:none;min-width:50px;padding:22px 50px;margin:4px 4px 0 0}button.ogs:hover{background-color:#7e2e0f}button.ogs:active{outline:1px solid #ac3f14;box-shadow:0 0 3px #ac3f14;border-color:#ac3f14}button.component-alternate{background-color:#ac3f14;color:#fff;border:none;cursor:pointer;display:inline-block;text-align:center;text-transform:uppercase;text-decoration:none;min-width:50px;padding:14px 20px;line-height:20px;margin:4px 4px 0 0}button.component-alternate:hover{background-color:#7e2e0f}button.component-alternate:active{outline:1px solid #ac3f14;box-shadow:0 0 3px #ac3f14;border-color:#ac3f14}button.component-hero{font-size:14px;font-weight:bold;line-height:27px;min-width:175px;background-color:transparent;color:#000;border:1px solid #000;cursor:pointer;display:inline-block;text-align:center;text-transform:uppercase;text-decoration:none;padding:14px 20px;letter-spacing:2px}button.component-hero:hover{background-color:rgba(0,0,0,0.8);color:#fff}button.component-hero:active{outline:1px solid #ac3f14;box-shadow:0 0 3px #ac3f14;border-color:#ac3f14}button.component-frame{font-size:13px;font-weight:bold;line-height:20px;min-width:175px;background-color:transparent;color:#000;border:1px solid #000;cursor:pointer;display:inline-block;text-align:center;text-transform:uppercase;text-decoration:none;padding:13px 20px;letter-spacing:2px}button.component-frame:hover{background-color:rgba(0,0,0,0.5);color:#fff}button.component-frame:active{outline:1px solid #ac3f14;box-shadow:0 0 3px #ac3f14;border-color:#ac3f14}.activePageButton{width:45px;font-weight:normal;padding:10px;color:#000;border:none;background-color:#fff}.activePageButton:hover{background-color:#ac3f14;color:#fff;text-decoration:none}.activePageButton:active{outline:1px solid #ac3f14;box-shadow:0 0 3px #ac3f14;border-color:#ac3f14}.activePageButton-text{min-width:80px;padding:10px;background-color:white;color:#000;border:none}.activePageButton-text:hover{text-decoration:underline;background-color:#ac3f14;color:#fff;text-decoration:none}.activePageButton-text:active{outline:1px solid #ac3f14;box-shadow:0 0 3px #ac3f14;border-color:#ac3f14}.inactivePageButton{color:#666;background-color:transparent;cursor:default}.inactivePageButton:hover{color:#666;background-color:transparent}.inactivePageButton:active{outline:none;box-shadow:none;border-color:none}.currentPageButton{width:45px;background-color:#F6F8F8;color:#000;padding:10px;border:1px solid #ccc}span.ellipsis{width:45px;background-color:transparent;padding:10px;border:none}span.ellipsis::after{content:"..."}@media (max-width: 480px){button.component-frame{min-width:100%}button.component-hero{min-width:100%}}h1,h2,h3,h4,h5,h6{color:#ac3f14;font-family:"Proxima Nova","Arial",sans-serif;font-weight:bold;padding:0 0 0.3em;margin:0;line-height:1.25em}h1{font-size:48px}h2{font-size:42px}h3{font-size:36px}h4{font-size:30px}h5{font-size:24px}h6{font-size:18px}h1.demo-only{color:#000;margin:100px 0px 25px 0px;padding:0px;background-color:#d1d0d0;text-align:center}h5.demo-only{color:#000;margin:25px 0px;padding:0px;background-color:#F3D3C1;font-family:"Oswald",sans-serif;text-align:left;text-transform:uppercase}.filterTitle{font-weight:bold;font-family:"Oswald",sans-serif;font-size:16px;text-transform:uppercase;padding:20px 0px 0px 0px;color:#000}.filterSectionHeader{padding:10px 0px 10px 0px;font-weight:bold;font-family:"Proxima Nova","Arial",sans-serif;font-size:16px;color:#000;line-height:26px}input[type=text],input[type=number],input[type=password],textarea{padding:1rem;background-color:white;min-width:20rem;border:1px solid #999;font-size:90%;line-height:24px;margin:1rem 0 2.5rem 0;font-family:"Proxima Nova","Arial",sans-serif;width:100%}input[type=text]:focus,input[type=number]:focus,input[type=password]:focus,textarea:focus{outline:1px solid #ac3f14;box-shadow:0 0 3px #ac3f14;border-color:#ac3f14}label.ogs-label{font-weight:bold;display:flex}select{padding:1.25rem;background-color:white;min-width:20rem;border:1px solid #999;margin:1rem 0 2.5rem 0;font-size:90%;font-family:"Proxima Nova","Arial",sans-serif;width:100%;-webkit-appearance:none;-moz-appearance:none;background:transparent;background-image:url("data:image/svg+xml;utf8,<svg fill='black' height='28' viewBox='0 0 24 24' width='28' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");background-repeat:no-repeat;background-position-x:98%;background-position-y:50%}select:focus{outline:1px solid #ac3f14;box-shadow:0 0 3px #ac3f14;border-color:#ac3f14}input[type=checkbox]{margin:10px 0px;border-radius:0}fieldset{border:none}p{font-family:"Proxima Nova","Arial",sans-serif;font-size:18px;line-height:27px}li{margin:4px 0;padding:0}ol>ol{list-style-type:lower-roman}ol>ol>ol{list-style-type:decimal}a{color:#0f3cc3}code{background-color:rgba(0,0,0,0.05);padding:3px;font-size:.9rem}.frame-wrapper{display:flex;width:100%}.ogs-primary-frame{background-color:#F3D3C1}
+/* theme colors */
+/* universal colors */
+/* agency themes */
+/* FONTS _______________________________________________________________________________ */
+@font-face {
+  font-family: "Proxima Nova";
+  font-weight: normal;
+  font-style: normal;
+  src: url(../fonts/proximanova/proximanova-regular.eot);
+  src: url(../fonts/proximanova/proximanova-regular.eot#iefix) format("embedded-opentype"), url(../fonts/proximanova/proximanova-regular.woff2) format("woff2"), url(../fonts/proximanova/proximanova-regular.woff) format("woff"), url(../fonts/proximanova/proximanova-regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  font-weight: 600;
+  font-style: normal;
+  src: url(../fonts/proximanova/proximanova-semibold.eot);
+  src: url(../fonts/proximanova/proximanova-semibold.eot#iefix) format("embedded-opentype"), url(../fonts/proximanova/proximanova-semibold.woff2) format("woff2"), url(../fonts/proximanova/proximanova-semibold.woff) format("woff"), url(../fonts/proximanova/proximanova-semibold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  font-weight: bold;
+  font-style: normal;
+  src: url(../fonts/proximanova/proximanova-bold.eot);
+  src: url(../fonts/proximanova/proximanova-bold.eot#iefix) format("embedded-opentype"), url(../fonts/proximanova/proximanova-bold.woff2) format("woff2"), url(../fonts/proximanova/proximanova-bold.woff) format("woff"), url(../fonts/proximanova/proximanova-bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  font-weight: 800;
+  font-style: normal;
+  src: url(../fonts/proximanova/proximanova-extrabold.eot);
+  src: url(../fonts/proximanova/proximanova-extrabold.eot#iefix) format("embedded-opentype"), url(../fonts/proximanova/proximanova-extrabold.woff2) format("woff2"), url(../fonts/proximanova/proximanova-extrabold.woff) format("woff"), url(../fonts/proximanova/proximanova-extrabold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  font-weight: normal;
+  font-style: italic;
+  src: url(../fonts/proximanova/proximanova-italic.eot);
+  src: url(../fonts/proximanova/proximanova-italic.eot#iefix) format("embedded-opentype"), url(../fonts/proximanova/proximanova-italic.woff2) format("woff2"), url(../fonts/proximanova/proximanova-italic.woff) format("woff"), url(../fonts/proximanova/proximanova-italic.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  font-weight: bold;
+  font-style: italic;
+  src: url(../fonts/proximanova/proximanova-bolditalic.eot);
+  src: url(../fonts/proximanova/proximanova-bolditalic.eot#iefix) format("embedded-opentype"), url(../fonts/proximanova/proximanova-bolditalic.woff2) format("woff2"), url(../fonts/proximanova/proximanova-bolditalic.woff) format("woff"), url(../fonts/proximanova/proximanova-bolditalic.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  font-weight: 200;
+  font-style: normal;
+  src: url(../fonts/proximanova/proximanova-light.eot);
+  src: url(../fonts/proximanova/proximanova-light.eot#iefix) format("embedded-opentype"), url(../fonts/proximanova/proximanova-light.woff2) format("woff2"), url(../fonts/proximanova/proximanova-light.woff) format("woff"), url(../fonts/proximanova/proximanova-light.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  font-weight: 200;
+  font-style: italic;
+  src: url(../fonts/proximanova/proximanova-lightitalic.eot);
+  src: url(../fonts/proximanova/proximanova-lightitalic.eot#iefix) format("embedded-opentype"), url(../fonts/proximanova/proximanova-lightitalic.woff2) format("woff2"), url(../fonts/proximanova/proximanova-lightitalic.woff) format("woff"), url(../fonts/proximanova/proximanova-lightitalic.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "D Sari Bold";
+  font-weight: normal;
+  font-style: normal;
+  src: url(../fonts/dsaribold/DSari_Bold-webfont.eot);
+  src: url(../fonts/dsaribold/DSari_Bold-webfont.eot#iefix) format("embedded-opentype"), url(../fonts/dsaribold/DSari_Bold-webfont.woff2) format("woff2"), url(../fonts/dsaribold/DSari_Bold-webfont.woff) format("woff"), url(../fonts/dsaribold/DSari_Bold-webfont.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Oswald";
+  src: url(../fonts/oswald/oswald-light-webfont.eot);
+  src: url(../fonts/oswald/oswald-light-webfont.eot#iefix) format("embedded-opentype"), url(../fonts/oswald/oswald-light-webfont.woff) format("woff"), url(../fonts/oswald/oswald-light-webfont.ttf) format("truetype"), url(../fonts/oswald/oswald-light-webfont.svg#oswaldlight) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Oswald";
+  src: url(../fonts/oswald/oswald-bold-webfont.eot);
+  src: url(../fonts/oswald/oswald-bold-webfont.eot#iefix) format("embedded-opentype"), url(../fonts/oswald/oswald-bold-webfont.woff) format("woff"), url(../fonts/oswald/oswald-bold-webfont.ttf) format("truetype"), url(../fonts/oswald/oswald-bold-webfont.svg#oswaldbold) format("svg");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Oswald";
+  src: url(../fonts/oswald/oswald-regular-webfont.eot);
+  src: url(../fonts/oswald/oswald-regular-webfont.eot#iefix) format("embedded-opentype"), url(../fonts/oswald/oswald-regular-webfont.woff) format("woff"), url(../fonts/oswald/oswald-regular-webfont.ttf) format("truetype"), url(../fonts/oswald/oswald-regular-webfont.svg#oswaldbook) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src: url(../fonts/icomoon../fonts/icomoon.eot?visjn7=);
+  src: url(../fonts/icomoon../fonts/icomoon.eot?visjn7=#iefix) format("embedded-opentype"), url(../fonts/icomoon../fonts/icomoon.woff?visjn7=) format("woff"), url(../fonts/icomoon../fonts/icomoon.ttf?visjn7=) format("truetype"), url(../fonts/icomoon../fonts/icomoon.svg?visjn7=#icomoon) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* END FONTS _______________________________________________________________________________ */
+/* Extra Small Devices, Phones */
+/* Small Devices, Tablets */
+/* Medium Devices, Desktops */
+/* Large Devices, Wide Screens */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Proxima Nova", "Arial", sans-serif;
+  color: #000;
+  font-size: 18px;
+}
+
+.nys-global-footer {
+  background-color: #E8EDEE;
+}
+
+button {
+  font-size: 90%;
+  font-family: "Proxima Nova", "Arial", sans-serif;
+}
+
+button.nys {
+  background-color: #24387E;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  min-width: 50px;
+  padding: 22px 50px;
+  margin: 4px 4px 0 0;
+}
+
+button.nys:hover {
+  background-color: #192656;
+}
+
+button.nys:active {
+  outline: 1px solid #24387E;
+  box-shadow: 0 0 3px #24387E;
+  border-color: #24387E;
+}
+
+button.component-alternate {
+  background-color: #24387E;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  min-width: 50px;
+  padding: 14px 20px;
+  line-height: 20px;
+  margin: 4px 4px 0 0;
+}
+
+button.component-alternate:hover {
+  background-color: #192656;
+}
+
+button.component-alternate:active {
+  outline: 1px solid #24387E;
+  box-shadow: 0 0 3px #24387E;
+  border-color: #24387E;
+}
+
+button.component-hero {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 27px;
+  min-width: 175px;
+  background-color: transparent;
+  color: #000;
+  border: 1px solid #000;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 14px 20px;
+  letter-spacing: 2px;
+}
+
+button.component-hero:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+}
+
+button.component-hero:active {
+  outline: 1px solid #24387E;
+  box-shadow: 0 0 3px #24387E;
+  border-color: #24387E;
+}
+
+button.component-frame {
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 20px;
+  min-width: 175px;
+  background-color: transparent;
+  color: #000;
+  border: 1px solid #000;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 13px 20px;
+  letter-spacing: 2px;
+}
+
+button.component-frame:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+button.component-frame:active {
+  outline: 1px solid #24387E;
+  box-shadow: 0 0 3px #24387E;
+  border-color: #24387E;
+}
+
+/* boostrap pagination buttons */
+.activePageButton {
+  width: 45px;
+  font-weight: normal;
+  padding: 10px;
+  color: #000;
+  border: none;
+  background-color: #fff;
+}
+
+.activePageButton:hover {
+  background-color: #24387E;
+  color: #fff;
+  text-decoration: none;
+}
+
+.activePageButton:active {
+  outline: 1px solid #24387E;
+  box-shadow: 0 0 3px #24387E;
+  border-color: #24387E;
+}
+
+.activePageButton-text {
+  min-width: 80px;
+  padding: 10px;
+  background-color: white;
+  color: #000;
+  border: none;
+}
+
+.activePageButton-text:hover {
+  text-decoration: underline;
+  background-color: #24387E;
+  color: #fff;
+  text-decoration: none;
+}
+
+.activePageButton-text:active {
+  outline: 1px solid #24387E;
+  box-shadow: 0 0 3px #24387E;
+  border-color: #24387E;
+}
+
+.inactivePageButton {
+  color: #666;
+  background-color: transparent;
+  cursor: default;
+}
+
+.inactivePageButton:hover {
+  color: #666;
+  background-color: transparent;
+}
+
+.inactivePageButton:active {
+  outline: none;
+  box-shadow: none;
+  border-color: none;
+}
+
+.currentPageButton {
+  width: 45px;
+  background-color: #F6F8F8;
+  color: #000;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+span.ellipsis {
+  width: 45px;
+  background-color: transparent;
+  padding: 10px;
+  border: none;
+}
+
+span.ellipsis::after {
+  content: "...";
+}
+
+@media (max-width: 480px) {
+  button.component-frame {
+    min-width: 100%;
+  }
+  button.component-hero {
+    min-width: 100%;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #24387E;
+  font-family: "Proxima Nova", "Arial", sans-serif;
+  font-weight: bold;
+  padding: 0 0 0.3em;
+  margin: 0;
+  line-height: 1.25em;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 42px;
+}
+
+h3 {
+  font-size: 36px;
+}
+
+h4 {
+  font-size: 30px;
+}
+
+h5 {
+  font-size: 24px;
+}
+
+h6 {
+  font-size: 18px;
+}
+
+h1.demo-only {
+  color: #000;
+  margin: 100px 0px 25px 0px;
+  padding: 0px;
+  background-color: #d1d0d0;
+  text-align: center;
+}
+
+h5.demo-only {
+  color: #000;
+  margin: 25px 0px;
+  padding: 0px;
+  background-color: #E8EDEE;
+  font-family: "Oswald", sans-serif;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.filterTitle {
+  font-weight: bold;
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  padding: 20px 0px 0px 0px;
+  color: #000;
+}
+
+.filterSectionHeader {
+  padding: 10px 0px 10px 0px;
+  font-weight: bold;
+  font-family: "Proxima Nova", "Arial", sans-serif;
+  font-size: 16px;
+  color: #000;
+  line-height: 26px;
+}
+
+input[type=text], input[type=number], input[type=password], textarea {
+  padding: 1rem;
+  background-color: white;
+  min-width: 20rem;
+  border: 1px solid #999;
+  font-size: 90%;
+  line-height: 24px;
+  margin: 1rem 0 1rem 0;
+  font-family: "Proxima Nova", "Arial", sans-serif;
+  width: 100%;
+}
+
+input[type=text]:focus, input[type=number]:focus, input[type=password]:focus, textarea:focus {
+  outline: 1px solid #24387E;
+  box-shadow: 0 0 3px #24387E;
+  border-color: #24387E;
+}
+
+label.nys-label {
+  font-weight: bold;
+  display: flex;
+}
+
+select {
+  padding: 1.25rem;
+  background-color: white;
+  min-width: 20rem;
+  border: 1px solid #999;
+  margin: 1rem 0 1rem 0;
+  font-size: 90%;
+  font-family: "Proxima Nova", "Arial", sans-serif;
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='28' viewBox='0 0 24 24' width='28' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: 98%;
+  background-position-y: 50%;
+}
+
+select:focus {
+  outline: 1px solid #24387E;
+  box-shadow: 0 0 3px #24387E;
+  border-color: #24387E;
+}
+
+input[type=checkbox] {
+  margin: 10px 0px;
+  border-radius: 0;
+}
+
+fieldset {
+  border: none;
+}
+
+form {
+  min-width: 80%;
+}
+
+p {
+  font-family: "Proxima Nova", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+li {
+  margin: 4px 0;
+  padding: 0;
+}
+
+ol > ol {
+  list-style-type: lower-roman;
+}
+
+ol > ol > ol {
+  list-style-type: decimal;
+}
+
+a {
+  color: #0f3cc3;
+}
+
+code {
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 3px;
+  font-size: .9rem;
+}
+
+.frame-wrapper {
+  display: flex;
+  width: 100%;
+}
+
+.frame-center {
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.nys-primary-frame {
+  background-color: #E8EDEE;
+}

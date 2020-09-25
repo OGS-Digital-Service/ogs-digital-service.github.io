@@ -6,8 +6,14 @@
     width: 100%;
   }
 
-  .ogs-primary-frame {
-    background-color: $ogs-secondary-color;
+  .frame-center {
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .nys-primary-frame {
+    background-color: $nys-secondary-color;
 
   }
 

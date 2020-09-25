@@ -1,11 +1,19 @@
 
 @charset "UTF-8";
 
-$ogs-primary-color: #ac3f14;
-$ogs-secondary-color: #F3D3C1;
-$ogs-tertiary-color: #7e2e0f;
 
-$ogs-table-header: #626669;
-$ogs-table-row-alternate: #F6F8F8; 
+/* theme colors */
+$nys-primary-color: #24387E;
+$nys-secondary-color: #E8EDEE;
+$nys-tertiary-color: darken(#24387E, 10%);
 
-$ogs-link-color: #0f3cc3;
+/* universal colors */
+$nys-table-header: #626669;
+$nys-table-row-alternate: #F6F8F8; 
+$nys-link-color: #0f3cc3;
+
+/* agency themes */
+$administration-primary-color: #ac3f14;
+$administration-secondary-color: #F3D3C1;
+$administration-tertiary-color: #7e2e0f;
+
