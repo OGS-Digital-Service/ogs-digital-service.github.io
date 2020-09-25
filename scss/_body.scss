@@ -1,0 +1,16 @@
+
+@charset "UTF-8";
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $nys-primary-font;
+    color: #000;
+    font-size: 18px;
+}
+
+
+.nys-global-footer {
+    background-color: $ogs-secondary-color ;
+}

@@ -1,0 +1,114 @@
+@charset "UTF-8";
+$nys-primary-font: "Proxima Nova", "Arial" , sans-serif;
+$nys-secondary-font: "Oswald", sans-serif;
+$nys-agency-name-font: "D Sari Bold", Arial, sans-serif;
+$nys-base-fontsize: 16px;
+
+/* FONTS _______________________________________________________________________________ */
+@font-face {
+    font-family: "Proxima Nova";
+    font-weight: normal;
+    font-style: normal;
+    src: url(../fonts/proximanova/proximanova-regular.eot);
+    src: url(../fonts/proximanova/proximanova-regular.eot#iefix) format("embedded-opentype"),url(../fonts/proximanova/proximanova-regular.woff2) format("woff2"),url(../fonts/proximanova/proximanova-regular.woff) format("woff"),url(../fonts/proximanova/proximanova-regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Proxima Nova";
+    font-weight: 600;
+    font-style: normal;
+    src: url(../fonts/proximanova/proximanova-semibold.eot);
+    src: url(../fonts/proximanova/proximanova-semibold.eot#iefix) format("embedded-opentype"),url(../fonts/proximanova/proximanova-semibold.woff2) format("woff2"),url(../fonts/proximanova/proximanova-semibold.woff) format("woff"),url(../fonts/proximanova/proximanova-semibold.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Proxima Nova";
+    font-weight: bold;
+    font-style: normal;
+    src: url(../fonts/proximanova/proximanova-bold.eot);
+    src: url(../fonts/proximanova/proximanova-bold.eot#iefix) format("embedded-opentype"),url(../fonts/proximanova/proximanova-bold.woff2) format("woff2"),url(../fonts/proximanova/proximanova-bold.woff) format("woff"),url(../fonts/proximanova/proximanova-bold.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Proxima Nova";
+    font-weight: 800;
+    font-style: normal;
+    src: url(../fonts/proximanova/proximanova-extrabold.eot);
+    src: url(../fonts/proximanova/proximanova-extrabold.eot#iefix) format("embedded-opentype"),url(../fonts/proximanova/proximanova-extrabold.woff2) format("woff2"),url(../fonts/proximanova/proximanova-extrabold.woff) format("woff"),url(../fonts/proximanova/proximanova-extrabold.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Proxima Nova";
+    font-weight: normal;
+    font-style: italic;
+    src: url(../fonts/proximanova/proximanova-italic.eot);
+    src: url(../fonts/proximanova/proximanova-italic.eot#iefix) format("embedded-opentype"),url(../fonts/proximanova/proximanova-italic.woff2) format("woff2"),url(../fonts/proximanova/proximanova-italic.woff) format("woff"),url(../fonts/proximanova/proximanova-italic.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Proxima Nova";
+    font-weight: bold;
+    font-style: italic;
+    src: url(../fonts/proximanova/proximanova-bolditalic.eot);
+    src: url(../fonts/proximanova/proximanova-bolditalic.eot#iefix) format("embedded-opentype"),url(../fonts/proximanova/proximanova-bolditalic.woff2) format("woff2"),url(../fonts/proximanova/proximanova-bolditalic.woff) format("woff"),url(../fonts/proximanova/proximanova-bolditalic.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Proxima Nova";
+    font-weight: 200;
+    font-style: normal;
+    src: url(../fonts/proximanova/proximanova-light.eot);
+    src: url(../fonts/proximanova/proximanova-light.eot#iefix) format("embedded-opentype"),url(../fonts/proximanova/proximanova-light.woff2) format("woff2"),url(../fonts/proximanova/proximanova-light.woff) format("woff"),url(../fonts/proximanova/proximanova-light.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Proxima Nova";
+    font-weight: 200;
+    font-style: italic;
+    src: url(../fonts/proximanova/proximanova-lightitalic.eot);
+    src: url(../fonts/proximanova/proximanova-lightitalic.eot#iefix) format("embedded-opentype"),url(../fonts/proximanova/proximanova-lightitalic.woff2) format("woff2"),url(../fonts/proximanova/proximanova-lightitalic.woff) format("woff"),url(../fonts/proximanova/proximanova-lightitalic.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "D Sari Bold";
+    font-weight: normal;
+    font-style: normal;
+    src: url(../fonts/dsaribold/DSari_Bold-webfont.eot);
+    src: url(../fonts/dsaribold/DSari_Bold-webfont.eot#iefix) format("embedded-opentype"),url(../fonts/dsaribold/DSari_Bold-webfont.woff2) format("woff2"),url(../fonts/dsaribold/DSari_Bold-webfont.woff) format("woff"),url(../fonts/dsaribold/DSari_Bold-webfont.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Oswald";
+    src: url(../fonts/oswald/oswald-light-webfont.eot);
+    src: url(../fonts/oswald/oswald-light-webfont.eot#iefix) format("embedded-opentype"),url(../fonts/oswald/oswald-light-webfont.woff) format("woff"),url(../fonts/oswald/oswald-light-webfont.ttf) format("truetype"),url(../fonts/oswald/oswald-light-webfont.svg#oswaldlight) format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Oswald";
+    src: url(../fonts/oswald/oswald-bold-webfont.eot);
+    src: url(../fonts/oswald/oswald-bold-webfont.eot#iefix) format("embedded-opentype"),url(../fonts/oswald/oswald-bold-webfont.woff) format("woff"),url(../fonts/oswald/oswald-bold-webfont.ttf) format("truetype"),url(../fonts/oswald/oswald-bold-webfont.svg#oswaldbold) format("svg");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Oswald";
+    src: url(../fonts/oswald/oswald-regular-webfont.eot);
+    src: url(../fonts/oswald/oswald-regular-webfont.eot#iefix) format("embedded-opentype"),url(../fonts/oswald/oswald-regular-webfont.woff) format("woff"),url(../fonts/oswald/oswald-regular-webfont.ttf) format("truetype"),url(../fonts/oswald/oswald-regular-webfont.svg#oswaldbook) format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src: url(../fonts/icomoon../fonts/icomoon.eot?visjn7=);
+    src: url(../fonts/icomoon../fonts/icomoon.eot?visjn7=#iefix) format("embedded-opentype"),url(../fonts/icomoon../fonts/icomoon.woff?visjn7=) format("woff"),url(../fonts/icomoon../fonts/icomoon.ttf?visjn7=) format("truetype"),url(../fonts/icomoon../fonts/icomoon.svg?visjn7=#icomoon) format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+/* END FONTS _______________________________________________________________________________ */

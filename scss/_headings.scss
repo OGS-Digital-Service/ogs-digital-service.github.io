@@ -1,0 +1,57 @@
+
+@charset "UTF-8";
+
+
+
+
+     h1, h2, h3, h4, h5, h6 {
+        color: $ogs-primary-color;
+        font-family:$nys-primary-font;
+        font-weight: bold;
+        padding: 0 0 0.3em;
+        margin: 0;
+        line-height: 1.25em;
+    }
+
+     h1 {
+        font-size:48px;
+    }
+
+     h2 {
+        font-size:42px;
+    }
+
+     h3 {
+        font-size:36px;
+    }
+
+     h4 {
+        font-size:30px;
+    }
+
+     h5 {
+        font-size:24px;
+    }
+     h6 {
+        font-size:18px;
+    }
+
+    h1.demo-only {
+        color: #000;
+        margin: 100px 0px 25px 0px;
+        padding: 0px;
+        background-color: rgb(209, 208, 208);
+        text-align: center;
+    }
+
+    h5.demo-only {
+        color: #000;
+        margin: 25px 0px;
+        padding: 0px;
+        background-color: $ogs-secondary-color;
+        font-family: $nys-secondary-font;
+        text-align: left;
+        text-transform: uppercase;
+    }
+
+

@@ -1,0 +1,81 @@
+
+@charset "UTF-8";
+
+.filterTitle {
+    font-weight: bold;
+    font-family: $nys-secondary-font;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 20px 0px 0px 0px;
+    color: #000;
+}
+
+.filterSectionHeader {
+    padding: 10px 0px 10px 0px;
+    font-weight: bold;
+    font-family: $nys-primary-font;
+    font-size: 16px;
+    color: #000;
+    line-height: 26px;
+}
+
+input[type=text], input[type=number], input[type=password], textarea {
+    padding: 1rem;
+    background-color: white;
+    min-width: 20rem;
+    border: 1px solid #999;
+    font-size: 90%;
+    line-height: 24px;
+    margin: 1rem 0 2.5rem 0; 
+    font-family: $nys-primary-font;
+    width: 100%;
+    
+    &:focus {
+        outline: 1px solid $ogs-primary-color;
+        box-shadow: 0 0 3px $ogs-primary-color;
+        border-color: $ogs-primary-color;
+    }
+}
+
+label.ogs-label {
+    font-weight: bold;
+    display: flex;
+}
+
+select {
+    padding: 1.25rem;
+    background-color: white;
+    min-width: 20rem;
+    border: 1px solid #999;
+    margin: 1rem 0 2.5rem 0; 
+    font-size: 90%;
+    font-family: $nys-primary-font;
+    width: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='28' viewBox='0 0 24 24' width='28' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    background-repeat: no-repeat;
+    background-position-x: 98%;
+    background-position-y: 50%;
+ 
+    &:focus {
+        outline: 1px solid $ogs-primary-color;
+        box-shadow: 0 0 3px $ogs-primary-color;
+        border-color: $ogs-primary-color;
+    }
+
+    
+    
+}
+
+input[type=checkbox] {
+    margin: 10px 0px;
+    border-radius: 0;
+}
+
+fieldset {
+    border: none;
+
+}
+
