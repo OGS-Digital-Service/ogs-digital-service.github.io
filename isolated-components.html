@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<head>
+
+  <link href="./css/design-lab.css" rel="stylesheet" /> 
+  </head>
+<body>
+
+
+
+<h1 class="demo-only">General Paragraph Styles </h1>
+
+<h5 class="demo-only"> Headings </h5>
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>
+
+
+<h5 class="demo-only"> Paragraph text, links, and lists </h5>
+<p><a href="https://www.w3.org/TR/WCAG20/">Web Content Accessibility Guidelines (WCAG) 2.0 </a> covers a wide range of recommendations for making Web content more accessible. Following these guidelines will make content accessible to a wider range of people with disabilities, including blindness and low vision, deafness and hearing loss, learning disabilities, cognitive limitations, limited movement, speech disabilities, photosensitivity and combinations of these. Following these guidelines will also often make your Web content more usable to users in general. </p>
+
+  <p>WCAG 2.0 success criteria are written as testable statements that are not technology-specific. Guidance about satisfying the success criteria in specific technologies, as well as general information about interpreting the success criteria, is provided in separate documents. See Web Content Accessibility Guidelines (WCAG) Overview for an introduction and links to WCAG technical and educational material. </p>
+
+
+<p><a href="https://ogs.ny.gov">Hyperlink Color that meets WCAG 2.0AA</a></p>
+
+<p>
+<ul>
+  <li>An unordered list item</li>
+  <li>An unordered list item</li>
+  <ul><li>A second level unordered list item</li></ul>
+  <li>An unordered list item</li>
+  <li>An unordered list item and a <a href="https://ogs.ny.gov">hyperlink</a></li>
+</ul>
+
+<ol>
+  <li>an ordered list item </li>
+  <li>an ordered list item </li>
+  <ol><li>a second level ordered list item</li>
+    <li>a second level ordered list item</li>
+    <li>a second level ordered list item</li>
+    <ol> <li> a third level</li></ol>
+  </ol>
+  <li>an ordered list item </li>
+  <li>an ordered list item </li>
+  <ol><li>a second level ordered list item</li>
+    <li>a second level ordered list item</li>
+    <li>a second level ordered list item</li>
+    <ol> <li> a third level</li></ol>
+  </ol>
+  <li>an ordered list item </li>
+</ol>
+
+</p>
+
+<h1 class="demo-only">Form, Label, and Input Controls </h1>
+  
+
+<h5 class="demo-only"> Form Input Controls </h5>
+
+<p>Each input should have a semantic <code>id</code> attribute, and its label should have the same value in the <code>for</code> attribute. </p>
+
+        <form><!-- using the bootstrap form and form group controls -->
+          <div class="filterTitle">
+              Filter Title 
+          </div>
+          <fieldset>
+          <div class="filterSectionHeader">
+              Filter Section Title
+          </div> 
+          <div class="form-group"> <!-- this is a demo only - obviously real id an labels will be here when the lot is visible-->
+              <input type="checkbox" id="PLACEHOLDERONLY" onclick="filterContractorList()">
+              <label for="PLACEHOLDERONLY" class="filterSectionItem">Lot 1 - Name of This Lot</label>
+            </div>
+            <div class="form-group"> <!-- this is a demo only - obviously real id an labels will be here when the lot is visible-->
+              <input type="checkbox" id="PLACEHOLDERONLY2" onclick="filterContractorList()">
+              <label for="PLACEHOLDERONLY2" class="filterSectionItem">Lot 2 - Name of This Lot</label>
+            </div>
+            <div class="form-group"> <!-- this is a demo only - obviously real id an labels will be here when the lot is visible-->
+              <input type="checkbox" id="PLACEHOLDERONLY3" onclick="filterContractorList()">
+              <label for="PLACEHOLDERONLY3" class="filterSectionItem">Lot 3 - Name of This Lot</label>
+            </div>
+            <div class="form-group"> <!-- this is a demo only - obviously real id an labels will be here when the lot is visible-->
+              <input type="checkbox" id="PLACEHOLDERONLY4" onclick="filterContractorList()">
+              <label for="PLACEHOLDERONLY4" class="filterSectionItem">Lot 4 - Name of This Lot</label>
+            </div>
+            <div class="form-group"> <!-- this is a demo only - obviously real id an labels will be here when the lot is visible-->
+              <input type="checkbox" id="PLACEHOLDERONLY5" onclick="filterContractorList()">
+              <label for="PLACEHOLDERONLY5" class="filterSectionItem">Lot 5 - Name of This Lot</label>
+            </div>
+            <div class="form-group"> <!-- this is a demo only - obviously real id an labels will be here when the lot is visible-->
+              <input type="checkbox" id="PLACEHOLDERONLY6" onclick="filterContractorList()">
+              <label for="PLACEHOLDERONLY6" class="filterSectionItem">Lot 6 - Name of This Lot</label>
+            </div>
+            <div class="form-group"> <!-- this is a demo only - obviously real id an labels will be here when the lot is visible-->
+              <input type="checkbox" id="PLACEHOLDERONLY7" onclick="filterContractorList()">
+              <label for="PLACEHOLDERONLY7" class="filterSectionItem">Lot 7 - Name of This Lot</label>
+            </div>
+          </fieldset>
+  
+          <fieldset>
+            <div class="filterSectionHeader">
+              Checkboxes
+            </div>
+
+            <div class="form-group">
+              <input type="checkbox" id="mbeFilterCheck" onclick="filterContractorList()">
+              <label for="mbeFilterCheck" class="filterSectionItem">MBE</label>
+            </div>
+  
+            <div class="form-group">
+              <input type="checkbox" id="wbeFilterCheck" onclick="filterContractorList()">
+              <label for="wbeFilterCheck" class="filterSectionItem">WBE</label>
+            </div>
+  
+            <div class="form-group">
+              <input type="checkbox" id="sdvobFilterCheck" onclick="filterContractorList()">
+              <label for="sdvobFilterCheck" class="filterSectionItem">SDVOB</label>
+            </div>
+          </fieldset>
+  
+      </form>
+
+
+      <h5 class="demo-only"> Text input </h5>
+  <form>
+    <fieldset>
+      <label for="placeholder-only-ID" class="ogs-label">Text Input Label</label>
+      <input type="text" id="placeholder-only-ID" > 
+    </fieldset>
+
+    <fieldset>
+      <label for="placeholder-only-ID-2" class="ogs-label">Text Area Label </label>
+      <textarea id="placeholder-only-ID-2"></textarea> 
+    </fieldset>
+    
+
+    <h5 class="demo-only"> Selectbox</h5>
+
+    <fieldset>
+      <label for="placeholder-only-ID-3" class="ogs-label">Select Label </label>
+        <select id="placeholder-only-ID-3">
+         <option id="demoID1" selected disabled> - Select - </option>
+         <option id="demoID2"> First Option </option>
+         <option id="demoID2"> Second Option </option>
+         <option id="demoID2"> Billionth Option </option>
+        </select>
+    </fieldset>
+
+  </form>
+
+  
+
+  <h1 class="demo-only">Buttons </h1>
+  <h5 class="demo-only"> WYSIWYG & Design Area Buttons</h5>
+
+
+  <p><button class="component-alternate">Alternate Design Area Button </button></p>
+  <p><button class="component-hero">Hero Design Area Button </button></p>
+  <p><button class="component-frame">Frame Design Area Button </button></p>
+
+  <p><button class="ogs">This is a standard button</button> <button class="ogs">Next to another</button></p>
+
+
+
+
+<h5 class="demo-only"> Pagination buttons</h5>
+<button class="activePageButton-text inactivePageButton">Previous</button>
+<button class="currentPageButton"> 1 </button>
+<button class="activePageButton"> 2 </button>
+<button class="activePageButton"> 3 </button>
+<button class="activePageButton"> 4 </button>
+<button class="activePageButton"> 5 </button>
+<button class="activePageButton-text">Next</button>
+<button class="activePageButton-text">View All </button>
+</div>
+
+<div class="pull-right padding-bottom-2rem">
+
+<button class="activePageButton-text inactivePageButton">Previous</button>
+<button class="currentPageButton"> 1 </button>
+<button class="activePageButton"> 2 </button>
+<button class="activePageButton"> 3 </button>
+<button class="activePageButton"> 4 </button>
+<span class="ellipsis"></span>
+<button class="activePageButton"> 65 </button>
+<button class="activePageButton-text">Next</button>
+<button class="activePageButton-text">View All </button>
+</div>
+
+
+
+<div class="pull-right padding-bottom-2rem">
+
+<button class="activePageButton-text">Previous</button>
+<button class="activePageButton"> 1 </button>
+<span class="ellipsis"></span>
+<button class="currentPageButton"> 18 </button>
+<button class="activePageButton"> 19 </button>
+<button class="activePageButton"> 20 </button>
+<span class="ellipsis"></span>
+<button class="activePageButton"> 65 </button>
+<button class="activePageButton-text">Next</button>
+<button class="activePageButton-text">View All </button>
+</div>
+
+<div class="pull-right padding-bottom-2rem">
+
+<button class="activePageButton-text">Previous</button>
+<button class="activePageButton"> 1 </button>
+<span class="ellipsis"></span>
+<button class="currentPageButton"> 62 </button>
+<button class="activePageButton"> 63 </button>
+<button class="activePageButton"> 64 </button>
+<button class="activePageButton"> 65 </button>
+<button class="activePageButton-text inactivePageButton">Next</button>
+<button class="activePageButton-text">View All </button>
+</div>
+<h1 class="demo-only">Design Areas </h1>
+
+<h5 class="demo-only"> Notification Area</h5>
+
+
+<div class="frame-wrapper ogs-primary-frame">
+  
+  
+
+  <button class="component-alternate">frame Design Area Button </button>
+
+</div>
+
+</body>
+</html>
