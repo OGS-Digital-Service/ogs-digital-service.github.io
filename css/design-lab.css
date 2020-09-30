@@ -130,6 +130,11 @@ button {
   font-family: "Proxima Nova", "Arial", sans-serif;
 }
 
+button > a {
+  color: #fff;
+  text-decoration: none;
+}
+
 button.nys {
   background-color: #24387E;
   color: #fff;
@@ -358,7 +363,7 @@ h6 {
 
 h1.demo-only {
   color: #000;
-  margin: 100px 0px 25px 0px;
+  margin: 20px 0px 25px 0px;
   padding: 0px;
   background-color: #d1d0d0;
   text-align: center;

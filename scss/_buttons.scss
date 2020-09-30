@@ -6,6 +6,11 @@ button {
     font-family: $nys-primary-font;
 }
 
+button > a {
+    color: #fff;
+    text-decoration: none;
+}
+
 button.nys {
     background-color: $nys-primary-color;
     color: #fff;
