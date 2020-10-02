@@ -143,16 +143,17 @@ body {
 }
 
 button {
-  font-size: 90%;
   font-family: "Proxima Nova", "Arial", sans-serif;
 }
 
 button > a {
   color: #fff;
   text-decoration: none;
+  width: 100%;
+  height: 100%;
 }
 
-button.codebomb {
+.codebomb {
   font-family: 'Courier New', Courier, monospace;
   text-decoration: none;
   min-width: 50px;
@@ -160,7 +161,8 @@ button.codebomb {
   margin: 4px 4px 0 0;
 }
 
-button.nys {
+.button-wysiwyg {
+  font-size: 90%;
   background-color: #24387E;
   color: #fff;
   border: none;
@@ -174,17 +176,17 @@ button.nys {
   margin: 4px 4px 0 0;
 }
 
-button.nys:hover {
+.button-wysiwyg:hover {
   background-color: #192656;
 }
 
-button.nys:active {
+.button-wysiwyg:active {
   outline: 1px solid #24387E;
   box-shadow: 0 0 3px #24387E;
   border-color: #24387E;
 }
 
-button.component-alternate {
+.button-component-alternate {
   background-color: #24387E;
   color: #fff;
   border: none;
@@ -199,17 +201,17 @@ button.component-alternate {
   margin: 4px 4px 0 0;
 }
 
-button.component-alternate:hover {
+.button-component-alternate:hover {
   background-color: #192656;
 }
 
-button.component-alternate:active {
+.button-component-alternate:active {
   outline: 1px solid #24387E;
   box-shadow: 0 0 3px #24387E;
   border-color: #24387E;
 }
 
-button.component-hero {
+.button-component-hero {
   font-size: 14px;
   font-weight: bold;
   line-height: 27px;
@@ -226,18 +228,18 @@ button.component-hero {
   letter-spacing: 2px;
 }
 
-button.component-hero:hover {
+.button-component-hero:hover {
   background-color: rgba(0, 0, 0, 0.8);
   color: #fff;
 }
 
-button.component-hero:active {
+.button-component-hero:active {
   outline: 1px solid #24387E;
   box-shadow: 0 0 3px #24387E;
   border-color: #24387E;
 }
 
-button.component-frame {
+.button-component-frame {
   font-size: 13px;
   font-weight: bold;
   line-height: 20px;
@@ -254,12 +256,12 @@ button.component-frame {
   letter-spacing: 2px;
 }
 
-button.component-frame:hover {
+.button-component-frame:hover {
   background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
 }
 
-button.component-frame:active {
+.button-component-frame:active {
   outline: 1px solid #24387E;
   box-shadow: 0 0 3px #24387E;
   border-color: #24387E;
@@ -345,10 +347,10 @@ span.ellipsis::after {
 }
 
 @media (max-width: 480px) {
-  button.component-frame {
+  .button-component-frame {
     min-width: 100%;
   }
-  button.component-hero {
+  .button-component-hero {
     min-width: 100%;
   }
 }
@@ -495,7 +497,7 @@ fieldset {
   box-shadow: 0 0 3px #b50909;
 }
 
-form {
+.webform {
   min-width: 80%;
 }
 

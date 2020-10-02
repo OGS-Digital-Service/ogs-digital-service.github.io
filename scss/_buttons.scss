@@ -2,16 +2,17 @@
 @charset "UTF-8";
 
 button {
-    font-size: 90%;
     font-family: $nys-primary-font;
 }
 
 button > a {
     color: #fff;
     text-decoration: none;
+    width: 100%;
+    height: 100%;
 }
 
-button.codebomb {
+.codebomb {
     font-family: 'Courier New', Courier, monospace;
     text-decoration: none;
     min-width: 50px;
@@ -19,7 +20,8 @@ button.codebomb {
     margin: 4px 4px 0 0;
 }
 
-button.nys {
+.button-wysiwyg {
+    font-size: 90%;
     background-color: $nys-primary-color;
     color: #fff;
     border: none;
@@ -44,8 +46,7 @@ button.nys {
 
 }
 
-
-button.component-alternate {
+.button-component-alternate {
     background-color: $nys-primary-color;
     color: #fff;
     border: none;
@@ -70,7 +71,7 @@ button.component-alternate {
     }
 }
 
-button.component-hero {
+.button-component-hero {
     font-size: 14px;
     font-weight: bold;
     line-height: 27px;
@@ -98,7 +99,7 @@ button.component-hero {
     }
 }
 
-button.component-frame {
+.button-component-frame {
     font-size: 13px;
     font-weight: bold;
     line-height: 20px;
@@ -214,11 +215,11 @@ span.ellipsis {
 
 @media (max-width: $bootstrap-xs){
 
-button.component-frame {
+.button-component-frame {
     min-width: 100%;
 }
 
-button.component-hero {
+.button-component-hero {
     min-width: 100%;
 }
 }
