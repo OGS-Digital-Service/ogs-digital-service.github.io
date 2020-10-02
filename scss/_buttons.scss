@@ -11,6 +11,14 @@ button > a {
     text-decoration: none;
 }
 
+button.codebomb {
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: none;
+    min-width: 50px;
+    padding: 15px 50px;
+    margin: 4px 4px 0 0;
+}
+
 button.nys {
     background-color: $nys-primary-color;
     color: #fff;

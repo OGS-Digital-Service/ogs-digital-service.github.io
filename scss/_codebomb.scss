@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+    
+// code {
+//         background-color: rgba(0,0,0,.05);
+//         padding: 3px;
+//         font-size: .9rem;
+//         color: white;
+        
+//     }
+
+
+    .codebomb-row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        
+    }
+
+
+.codebomb-column {
+   flex: 1 auto;
+   background-color: #2d2d2d;
+   border: 2px dashed black;
+
+
+h3 {
+    color: #fff;
+    text-align: center;
+}
+
+}
+

@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+    
+.nys-breadcrumb {
+    display: flex;
+    
+}
+
+.nys-breadcrumb__list {
+    display: inline-flex;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    
+
+    li {
+        border: 1px solid blue;
+        padding: 1em 2em 1em 1em;
+    }
+
+    li:first-of-type {
+        font-weight: bold;
+        
+        ::marker {
+            display: none;
+        }
+    }
+
+    ::marker {
+        content: ">";
+    }
+
+    
+}
+
+
+.nys-current {
+
+}
+
+.nys-breadcrumb__link {
+
+}

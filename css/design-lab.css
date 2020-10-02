@@ -111,6 +111,23 @@
 /* Small Devices, Tablets */
 /* Medium Devices, Desktops */
 /* Large Devices, Wide Screens */
+.codebomb-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.codebomb-column {
+  flex: 1 auto;
+  background-color: #2d2d2d;
+  border: 2px dashed black;
+}
+
+.codebomb-column h3 {
+  color: #fff;
+  text-align: center;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -133,6 +150,14 @@ button {
 button > a {
   color: #fff;
   text-decoration: none;
+}
+
+button.codebomb {
+  font-family: 'Courier New', Courier, monospace;
+  text-decoration: none;
+  min-width: 50px;
+  padding: 15px 50px;
+  margin: 4px 4px 0 0;
 }
 
 button.nys {
@@ -497,10 +522,11 @@ a {
   color: #0f3cc3;
 }
 
-code {
-  background-color: rgba(0, 0, 0, 0.05);
-  padding: 3px;
-  font-size: .9rem;
+p.reminder {
+  color: #fff;
+  font-size: 80%;
+  font-style: italic;
+  text-align: center;
 }
 
 .frame-wrapper {
@@ -516,4 +542,32 @@ code {
 
 .nys-primary-frame {
   background-color: #E8EDEE;
+}
+
+.nys-breadcrumb {
+  display: flex;
+}
+
+.nys-breadcrumb__list {
+  display: inline-flex;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.nys-breadcrumb__list li {
+  border: 1px solid blue;
+  padding: 1em 2em 1em 1em;
+}
+
+.nys-breadcrumb__list li:first-of-type {
+  font-weight: bold;
+}
+
+.nys-breadcrumb__list li:first-of-type ::marker {
+  display: none;
+}
+
+.nys-breadcrumb__list ::marker {
+  content: ">";
 }
