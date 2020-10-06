@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<head>
+    <link href="../_COMMON/css/local_only/bootstrap.min.css" rel="stylesheet" /> <!-- for local view - assuming portal already has this-->
+    <link href="../_COMMON/css/local_only/portal.css" rel="stylesheet" /><!-- for local view - assuming portal already has this-->
+    <link href="../_COMMON/css/local_only/theme.css" rel="stylesheet" /><!-- for local view - assuming portal already has this-->
+    <link href="../_COMMON/css/local_only/glyphicons-font-awesome-migrate.min.css" rel="stylesheet"/><!-- for local view - assuming portal already has this-->
+    <link href="../_COMMON/css/local_only/preform.bundle-6192e4ae44.css" rel="stylesheet" /><!-- for local view - assuming portal already has this-->
+  
+    <link href="../_COMMON/css/nys-global-nav.css" rel="stylesheet" ><!-- NYS OGS CSS Global Navigation Styles  -->
+    <link href="../_COMMON/css/NYSOGS_Master_Styles.css" rel="stylesheet" /> <!-- MASTER ALL NYSOGS COMPILED STYLES -->
+    
+    </head>
+<body>
+
+  <div id="nygov-universal-navigation" class="nygov-universal-container" data-iframe="true">
+      <script type="text/javascript">
+          var _NY = {
+              HOST: "static-assets.ny.gov",
+              BASE_HOST: "www.ny.gov",
+              hideSettings: true,
+              hideSearch: false
+          };
+          (function (document, bundle, head) {
+              head = document.getElementsByTagName('head')[0];
+              bundle = document.createElement('script');
+              bundle.type = 'text/javascript';
+              bundle.async = true;
+              bundle.src = "//static-assets.ny.gov/sites/all/widgets/universal-navigation/js/dist/global-nav-bundle.js";
+              head.appendChild(bundle);
+          }(document));
+      </script>
+      <div id="nygov-universal-notification" class="nygov-universal-notification"></div>
+      <div id="nygov-global-notification" class="nygov-universal-notification" style="display: block;"></div>
+  </div>
+
+<!-- NYS OGS Global Navigation -->
+<div class="nys-global-header horizontal unstacked" role="navigation" aria-label="Main">
+    <div class="nav-toggle"> <a href="#" role="button" id="nys-menu-control" tabindex="1">Navigation menu</a> </div>
+    <h1><a href="/">Directory of New York State Centralized Contracts</a></h1>
+        <ul id="nys-global-nav">
+            <li aria-expanded="false">
+                <a href="/">Procurement Services Website</a>
+            </li>
+            <li aria-expanded="false">
+                <a href="/contact-us/">eMarketplace</a>
+            </li>
+            <li aria-expanded="false">
+                <a href="">Send a Contract Performance Report</a>
+            </li>
+            <li  aria-expanded="false">
+                <a href="/services/create-contact/">Sign Up for Contract Notifications</a>
+            </li>
+            <li  aria-expanded="false">
+                <a href="/services/">Customer Services</a>
+            </li>
+            <li  aria-expanded="false">
+                <a href="/search-award/">Search</a>
+            </li>
+          </ul>
+</div>
+<!-- NYS OGS Global Navigation -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- All other body template content will go in here. We'll provide those templates separately. -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="../_COMMON/js/ogsdatatable.js"></script><!-- OGS data table javascript -->
+<script src="../_COMMON/js/local_only/jquery-1.12.4.min.js"></script> <!--local use only as the portal already has this version of jquery -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script> <!-- bootstrap js needs to be referenced somewhere -->
+<script src="../_COMMON/js/nys-global-nav-header.js"></script><!-- NYS OGS javascript must be at the BOTTOM of the BODY content in order to load correct-->
+
+</body>
+</html>
