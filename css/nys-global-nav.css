@@ -127,8 +127,8 @@ body {
   display: block;
 }
 .nys-global-header ul > li > a[href="#"]:after {
-  background-image: url(../icons/icon-arrow-right.png);
-  background-image: linear-gradient(transparent, transparent), url(../icons/icon-arrow-right.svg);
+  background-image: url(./icons/icon-arrow-right.png);
+  background-image: linear-gradient(transparent, transparent), url(./icons/icon-arrow-right.svg);
   background-size: 16px;
   background-repeat: no-repeat;
   width: 2em;
@@ -155,8 +155,8 @@ body {
   letter-spacing: .03em;
 }
 .nys-global-header > ul li.active > a:before {
-  background-image: url(../icons/icon-arrow-left.png);
-  background-image: linear-gradient(transparent, transparent), url(../icons/icon-arrow-left.svg);
+  background-image: url(./icons/icon-arrow-left.png);
+  background-image: linear-gradient(transparent, transparent), url(./icons/icon-arrow-left.svg);
   background-size: 16px;
   background-repeat: no-repeat;
   width: 2em;
@@ -481,8 +481,8 @@ body {
     padding-left: 24px;
   }
   .nys-global-header.vertical ul li.active > a:before {
-    background-image: url(../icons/icon-arrow-left.png);
-    background-image: linear-gradient(transparent, transparent), url(../icons/icon-arrow-left.svg);
+    background-image: url(./icons/icon-arrow-left.png);
+    background-image: linear-gradient(transparent, transparent), url(./icons/icon-arrow-left.svg);
     background-size: 16px;
     background-repeat: no-repeat;
     width: 2em;
