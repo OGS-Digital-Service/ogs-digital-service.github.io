@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+    
+.nys-megamenu {
+    
+    columns: 4;
+    border: 2px solid red;
+    column-fill: balance;
+    
+
+// display: grid;
+// grid-template-columns: repeat(4, 1fr);
+// gap: 10px;
+// border: 2px solid red;
+// grid-auto-rows: minmax(200px, auto);
+// grid-auto-columns: max-content;
+    
+
+
+& ul{
+    break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+    padding-left: 3%;
+    min-height: 10vh;
+}
+
+& li { 
+    list-style-type: none;
+    
+
+}   
+
+& li h4 {
+    font-size: 18px;
+    
+}
+
+
+}
+
+
+
