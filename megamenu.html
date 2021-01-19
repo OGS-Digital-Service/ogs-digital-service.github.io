@@ -16,6 +16,10 @@
   This uses <code>columns: 4;</code>, <code>column-fill: balance;</code>, on the menu container and <code>break-inside: avoid;</code> on the list ul's which is supported as far back as IE10
 </p>
 
+<p>The main limitation is still that it can't be 100% guaranteed that everything is in an exact column because the 
+  css is trying to fill all 4 columns evenly without breaking any lists. It will always retain the order that they are in though.
+</p>
+
 
 
 
@@ -236,33 +240,380 @@
             </li>
             </ul>
            
-
-            
-            
-            
-            
-            
-            
-            
-            
-           
-            
-            
-            
-            
-            
-            
-            
-            
-           
-            
-            
-            
-           
-
-
 </div>
 
+<p> what if we had a crazy bigger menu? </p>
 
+<div class="nys-megamenu">
+  <ul>
+    <li>
+      <a href="#"><h4>One</h4></a>
+    </li>
+    <li>
+      <a href="#"> Division of Labor Standards</a>
+    </li>
+    <li>
+      <a href="#">Apparel Industry</a>
+    </li>
+    <li>
+      <a href="#">Child Employment</a>
+    </li>
+    <li>
+      <a href="#">Employee Fringe Benefits</a>
+    </li>
+    <li>
+      <a href="#">Employment Agencies</a>
+    </li>
+    <li>
+      <a href="#"> Farm Labor</a>
+    </li>
+    <li>
+      <a href="#">Meal Period Guidelines</a>
+    </li>
+    <li>
+      <a href="#">Nail Salon Industry</a>
+    </li>
+    <li>
+      <a href="#">Nurse Mandatory Overtime</a>
+    </li>
+    <li>
+      <a href="#">Nursing Mothers in the Workplace</a>
+    </li>
+    <li>
+      <a href="#"> Professional Employer</a>
+    </li>
+    <li>
+      <a href="#">Organizations</a>
+    </li>
+    <li>
+      <a href="#">Retaliation Protection</a>
+    </li>
+    <li>
+      <a href="#"> Wages & Hour Laws</a>
+    </li>
+    </ul>
+
+    <ul>
+      <li>
+        <a href="#"><h4>Two</h4></a>
+      </li>
+  <li>
+    <a href="#">Division of Immigran Policies & Affairs</a>
+  </li>
+  <li>
+    <a href="#">Agriculture Labor Program</a>
+  </li>
+  <li>
+    <a href="#">Farm Laborers Fair Labor Practices Act</a>
+  </li>
+  <li>
+    <a href="#">H2A & H2B Visa Programs</a>
+  </li>
+  <li>
+    <a href="#">Horse Racing Industry</a>
+  </li>
+  <li>
+    <a href="#">Human Trafficking</a>
+  </li>
+  <li>
+    <a href="#">Immigrant Victims of Crime (U & T Visas)</a>
+  </li>
+  <li>
+    <a href="#">Language Access & Assistance</a>
+  </li>
+  <li>
+    <a href="#">State Monitor Advocate</a>
+  </li>
+
+  </ul>
+
+    <ul>
+      <li>
+        <a href="#"><h4>Three</h4></a>
+      </li>
+      <li>
+        <a href="#"> Division of Labor Standards</a>
+      </li>
+      <li>
+        <a href="#">Apparel Industry</a>
+      </li>
+      <li>
+        <a href="#">Child Employment</a>
+      </li>
+      <li>
+        <a href="#">Employee Fringe Benefits</a>
+      </li>
+      <li>
+        <a href="#">Employment Agencies</a>
+      </li>
+      <li>
+        <a href="#"> Farm Labor</a>
+      </li>
+      <li>
+        <a href="#">Meal Period Guidelines</a>
+      </li>
+      <li>
+        <a href="#">Nail Salon Industry</a>
+      </li>
+      <li>
+        <a href="#">Nurse Mandatory Overtime</a>
+      </li>
+      <li>
+        <a href="#">Nursing Mothers in the Workplace</a>
+      </li>
+      <li>
+        <a href="#"> Professional Employer</a>
+      </li>
+      <li>
+        <a href="#">Organizations</a>
+      </li>
+      <li>
+        <a href="#">Retaliation Protection</a>
+      </li>
+      <li>
+        <a href="#"> Wages & Hour Laws</a>
+      </li>
+      </ul>
+
+      <ul>
+        <li>
+          <a href="#"><h4>Four</h4></a>
+        </li>
+        <li>
+          <a href="#"> Division of Labor Standards</a>
+        </li>
+        <li>
+          <a href="#">Apparel Industry</a>
+        </li>
+        <li>
+          <a href="#">Child Employment</a>
+        </li>
+        <li>
+          <a href="#">Employee Fringe Benefits</a>
+        </li>
+        <li>
+          <a href="#">Employment Agencies</a>
+        </li>
+        <li>
+          <a href="#"> Farm Labor</a>
+        </li>
+        <li>
+          <a href="#">Meal Period Guidelines</a>
+        </li>
+        <li>
+          <a href="#">Nail Salon Industry</a>
+        </li>
+        <li>
+          <a href="#">Nurse Mandatory Overtime</a>
+        </li>
+        <li>
+          <a href="#">Nursing Mothers in the Workplace</a>
+        </li>
+        <li>
+          <a href="#"> Professional Employer</a>
+        </li>
+        <li>
+          <a href="#">Organizations</a>
+        </li>
+        <li>
+          <a href="#">Retaliation Protection</a>
+        </li>
+        <li>
+          <a href="#"> Wages & Hour Laws</a>
+        </li>
+        </ul>
+    
+        <ul>
+          <li>
+            <a href="#"><h4>Five</h4></a>
+          </li>
+      <li>
+        <a href="#">Division of Immigran Policies & Affairs</a>
+      </li>
+      <li>
+        <a href="#">Agriculture Labor Program</a>
+      </li>
+      <li>
+        <a href="#">Farm Laborers Fair Labor Practices Act</a>
+      </li>
+      <li>
+        <a href="#">H2A & H2B Visa Programs</a>
+      </li>
+      <li>
+        <a href="#">Horse Racing Industry</a>
+      </li>
+      <li>
+        <a href="#">Human Trafficking</a>
+      </li>
+      <li>
+        <a href="#">Immigrant Victims of Crime (U & T Visas)</a>
+      </li>
+      <li>
+        <a href="#">Language Access & Assistance</a>
+      </li>
+      <li>
+        <a href="#">State Monitor Advocate</a>
+      </li>
+    
+      </ul>
+    
+        <ul>
+          <li>
+            <a href="#"><h4>Six</h4></a>
+          </li>
+          <li>
+            <a href="#"> Division of Labor Standards</a>
+          </li>
+          <li>
+            <a href="#">Apparel Industry</a>
+          </li>
+          <li>
+            <a href="#">Child Employment</a>
+          </li>
+          <li>
+            <a href="#">Employee Fringe Benefits</a>
+          </li>
+          <li>
+            <a href="#">Employment Agencies</a>
+          </li>
+          <li>
+            <a href="#"> Farm Labor</a>
+          </li>
+          <li>
+            <a href="#">Meal Period Guidelines</a>
+          </li>
+          <li>
+            <a href="#">Nail Salon Industry</a>
+          </li>
+          <li>
+            <a href="#">Nurse Mandatory Overtime</a>
+          </li>
+          <li>
+            <a href="#">Nursing Mothers in the Workplace</a>
+          </li>
+          <li>
+            <a href="#"> Professional Employer</a>
+          </li>
+          <li>
+            <a href="#">Organizations</a>
+          </li>
+          <li>
+            <a href="#">Retaliation Protection</a>
+          </li>
+          <li>
+            <a href="#"> Wages & Hour Laws</a>
+          </li>
+          </ul>
+      
+          <ul>
+            <li>
+              <a href="#"><h4>Seven</h4></a>
+            </li>
+        <li>
+          <a href="#">Bureau of Public Work</a>
+        </li>
+        <li>
+          <a href="#">Prevailing Wage</a>
+        </li>
+       
+        </ul>
+        
+
+
+       
+          <ul>
+            <li>
+              <a href="#"><h4>Eight</h4></a>
+            </li>
+        <li>
+          <a href="#">Legal Information</a>
+        </li>
+        <li>
+          <a href="#">Freedom of Information Act (FOIL)</a>
+        </li>
+       
+        </ul>
+
+
+        <ul>
+          <li>
+            <a href="#"><h4>Nine</h4></a>
+          </li>
+      <li>
+        <a href="#">Bureau of Public Work</a>
+      </li>
+      <li>
+        <a href="#">Prevailing Wage</a>
+      </li>
+     
+      </ul>
+      
+
+
+     
+        <ul>
+          <li>
+            <a href="#"><h4>Ten </h4></a>
+          </li>
+      <li>
+        <a href="#">Legal Information</a>
+      </li>
+      <li>
+        <a href="#">Freedom of Information Act (FOIL)</a>
+      </li>
+     
+      </ul>
+      </div>
+
+
+      <p> and also a smaller one </p>
+
+
+<div class="nys-megamenu">
+  <ul>
+    <li>
+      <a href="#"><h4>One</h4></a>
+    </li>
+<li>
+  <a href="#">Bureau of Public Work</a>
+</li>
+<li>
+  <a href="#">Prevailing Wage</a>
+</li>
+
+</ul>
+
+
+
+
+  <ul>
+    <li>
+      <a href="#"><h4>Two</h4></a>
+    </li>
+<li>
+  <a href="#">Legal Information</a>
+</li>
+<li>
+  <a href="#">Freedom of Information Act (FOIL)</a>
+</li>
+  </ul>
+
+
+<ul>
+  <li>
+    <a href="#"><h4>Three </h4></a>
+  </li>
+<li>
+<a href="#">Legal Information</a>
+</li>
+<li>
+<a href="#">Freedom of Information Act (FOIL)</a>
+</li>
+
+</ul>
+
+
+ 
+</div>
 </body>
 </html>
