@@ -1,38 +1,63 @@
 @charset "UTF-8";
 
+.nys-megamenu_container {
+    border: 2px solid teal; //obviously a demo to show the container
+    padding: 3%;
+
+    & a {
+        text-decoration: none;
+    }
+
+    a:hover, :active {
+        text-decoration: underline;
+    }
+
+
+    & h3 {
+        border-bottom: 1px black solid;
+        
+    }
+}
+
     
-.nys-megamenu {
+.nys-megamenu_columns {
     
     columns: 4;
-    border: 2px solid red;
+    padding-top: 2%;
     column-fill: balance;
     
+    & a {
+        text-decoration: none;
+    }
 
-// display: grid;
-// grid-template-columns: repeat(4, 1fr);
-// gap: 10px;
-// border: 2px solid red;
-// grid-auto-rows: minmax(200px, auto);
-// grid-auto-columns: max-content;
+    a:hover, :active {
+        text-decoration: underline;
+    }
+
     
 
-
-& ul{
+& ul {
     break-inside: avoid;
     -webkit-column-break-inside: avoid;
     padding-left: 3%;
     min-height: 10vh;
+    margin-top: 0;
 }
 
 & li { 
     list-style-type: none;
-    
 
+    & a {
+        text-decoration: none;
+    }
+
+    a:hover, :active {
+        text-decoration: underline;
+    }
 }   
 
 & li h4 {
     font-size: 18px;
-    
 }
 
 
