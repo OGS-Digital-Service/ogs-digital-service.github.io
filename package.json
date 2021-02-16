@@ -4,7 +4,7 @@
   "description": "OGS Digital Service Design Lab",
   "main": "index.js",
   "scripts": {
-    "build:prod": "NODE_ENV=production npx tailwindcss-cli@latest build css/tailwind-import.css -o css/nyds-tailwind-dol.css",
+    "build:prod": "NODE_ENV=production npx tailwindcss-cli@latest build css/tailwind-import.css -o css/nysds-tailwind-dol.css",
     "build:dev": "NODE_ENV=production npx tailwindcss-cli@latest build css/tailwind-import.css -o css/tailwind-dev.css"
   },
   "repository": {

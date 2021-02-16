@@ -34,14 +34,32 @@
   }
 }
 
-.bg-green-800 {
+.bg-blue-100 {
   --tw-bg-opacity: 1;
-  background-color: rgba(6, 95, 70, var(--tw-bg-opacity))
+  background-color: rgba(219, 234, 254, var(--tw-bg-opacity))
 }
 
-.hover\:bg-green-900:hover {
+.bg-DOL-theme-primary {
   --tw-bg-opacity: 1;
-  background-color: rgba(6, 78, 59, var(--tw-bg-opacity))
+  background-color: rgba(11, 93, 102, var(--tw-bg-opacity))
+}
+
+.hover\:bg-DOL-theme-darker:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgba(7, 61, 66, var(--tw-bg-opacity))
+}
+
+.border-gray-400 {
+  --tw-border-opacity: 1;
+  border-color: rgba(156, 163, 175, var(--tw-border-opacity))
+}
+
+.border-solid {
+  border-style: solid
+}
+
+.border {
+  border-width: 1px
 }
 
 .block {
@@ -58,6 +76,11 @@
 
 .font-bold {
   font-weight: 700
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem
 }
 
 .text-3xl {
@@ -89,8 +112,16 @@
   margin-right: auto
 }
 
+.mb-6 {
+  margin-bottom: 1.5rem
+}
+
 .mb-7 {
   margin-bottom: 1.75rem
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem
 }
 
 .max-w-max {
@@ -101,6 +132,10 @@
 
 .p-2 {
   padding: 0.5rem
+}
+
+.p-4 {
+  padding: 1rem
 }
 
 .py-4 {
@@ -137,6 +172,14 @@
 .text-white {
   --tw-text-opacity: 1;
   color: rgba(255, 255, 255, var(--tw-text-opacity))
+}
+
+.no-underline {
+  text-decoration: none
+}
+
+.hover\:underline:hover {
+  text-decoration: underline
 }
 
 .w-10\/12 {

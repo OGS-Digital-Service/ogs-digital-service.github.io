@@ -5,12 +5,11 @@
   
     <link href="./css/design-lab.css" rel="stylesheet" />  <!-- used only for the design lab, but you'll need to reference our fonts in your site. See _fonts.scss in the scss folder for details  -->
     <link href="./css/nys-global-nav-labor.css" rel="stylesheet" ><!-- NYS CSS Global Navigation Styles  -->
-    <!-- <link href="./css/nysds-tailwind-dol.css" rel="stylesheet"> NYSDS dol tailwind prod  -->
+   
     <link href="./css/tailwind-dev.css" rel="stylesheet"> <!-- NYSDS tailwind dev  -->
  
-    <script src="https://www.trumba.com/scripts/spuds.js" type="text/javascript">
-    </script>
-    
+    <script src="https://www.trumba.com/scripts/spuds.js" type="text/javascript"> </script><!-- need this loaded in head -->
+    <!-- <link href="./css/nysds-tailwind-dol.css" rel="stylesheet"> NYSDS dol tailwind production css -->
 
 
     <style>
@@ -57,14 +56,6 @@
       <div id="nygov-universal-notification" class="nygov-universal-notification"></div>
       <div id="nygov-global-notification" class="nygov-universal-notification" style="display: block;"></div>
   </div>
-  <!-- Universal Navigation Footer Include -->
-
-
-
-
-
-
-
 
 <!-- NYS Global Navigation -->
 <div class="nys-global-header horizontal unstacked" role="navigation" aria-label="Main">
@@ -76,31 +67,35 @@
              <span class="pseudo-nav"> NYS Career Center Events & Recruitments </span>
 
             </li>
-            
-           
-            
-           
+
           </ul>
 </div>
 <!-- NYS Global Navigation -->
 
 
-<div class="mx-auto w-10/12 ">
+
+
+
+<div class="mx-auto w-10/12"><!-- START DOL Body html -->
+
 <div class="p-2 my-5">
 <h1 class="text-3xl font-bold">NYS Career Center Events & Recruitments </h1>
 
-  <p class="my-2">IMPORTANT MESSAGE: All in-person appointments at all Career Centers in New York State have been canceled until further notice.
+  <p class="p-4 text-sm bg-blue-100 border border-solid border-gray-400">
+    <strong> IMPORTANT MESSAGE:</strong> All in-person appointments at all Career Centers in New York State have been canceled until further notice.
   Unemployment Insurance benefits will NOT be impacted and customers should continue to file for weekly benefits as normal.
   This is being done out of an abundance of caution based on directives from Governor Cuomo to ensure appropriate measures are being taken for the safety and health of our staff and customers. All appointments will be rescheduled at a later date or offered virtually. Customers will receive a follow-up letter or phone call with additional information at a later date.
 </p>
 
-  <p class="my-2">New York’s Career Centers offer a variety of classes, workshops, job fairs, job clubs including virtual career fairs and virtual workshops, including informational sessions on a variety of topics. They also offer recruitments for numerous companies. Discover what is being offered in your area and take advantage of what your local Career Center has to offer to help you prepare for your next career. Select your Labor Market Region or your local Career Center from the filters on the left to find events and recruitments in your area. If you have any questions about attending any of these events or recruitments, be sure to contact your local Career Center. 
+  <p class="my-2">New York's Career Centers offer a variety of classes, workshops, job fairs, job clubs including virtual career fairs and virtual workshops, including informational sessions on a variety of topics. They also offer recruitments for numerous companies. Discover what is being offered in your area and take advantage of what your local Career Center has to offer to help you prepare for your next career. Select your Labor Market Region or your local Career Center from the filters on the left to find events and recruitments in your area. If you have any questions about attending any of these events or recruitments, be sure to contact your local Career Center. 
 
   </p>
+
+  <a class="block mx-auto max-w-max m-2 px-8 py-4 text-center text-white bg-DOL-theme-primary hover:bg-DOL-theme-darker no-underline hover:underline" href="#">Event Submission Form</a>
+
 </div>
 
 
-  <a class="block mx-auto max-w-max m-2 px-8 py-4 text-center text-white bg-green-800 hover:bg-green-900" href="https://google.com">Submission Form</a>
 
 
 
@@ -111,7 +106,7 @@
   <div class="grid grid-cols-4 col-span-4 mb-7 gap-5 md:col-span-1">
     <div class="col-span-2 md:col-span-4">
       <!-- Calendar Datefinder-->
-      <div class="mb-7 md:mb-2">
+      <div class="mb-7 md:mb-2 border border-gray-400 border-solid">
         <script type="text/javascript">
         $Trumba.addSpud({
         webName: "nys-department-of-labor",
@@ -169,7 +164,7 @@
 
 
 
-</div>
+</div><!-- END DOL Body html -->
 
 
 
