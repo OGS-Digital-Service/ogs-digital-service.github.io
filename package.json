@@ -1,0 +1,23 @@
+{
+  "name": "ogs-digital-service.github.io",
+  "version": "1.0.0",
+  "description": "OGS Digital Service Design Lab",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "NODE_ENV=production npx tailwindcss-cli@latest build css/tailwind-import.css -o css/nyds-tailwind-dol.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OGS-Digital-Service/ogs-digital-service.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OGS-Digital-Service/ogs-digital-service.github.io/issues"
+  },
+  "homepage": "https://github.com/OGS-Digital-Service/ogs-digital-service.github.io#readme",
+  "dependencies": {
+    "tailwindcss": "^2.0.3"
+  }
+}
