@@ -1,0 +1,81 @@
+#ux-page-rating {
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  margin: 0; }
+  .container_16 #ux-page-rating {
+    padding-left: 45px; }
+  #ux-page-rating .container_16 .grid_12 {
+    padding-left: 0; }
+  #ux-page-rating #ratings p {
+    height: 21px;
+    margin: 50px 0 0 0; }
+  #ux-page-rating a {
+    font-size: 11px;
+    display: inline-block;
+    height: 24px;
+    text-decoration: none;
+    white-space: nowrap;
+    margin: 0 0 0 7px; }
+    #ux-page-rating a.upvote .text {
+      background: url(../images/icons/thumb_up_sprite.png) no-repeat 3px -28px transparent; }
+    #ux-page-rating a.downvote .text {
+      background: url(../images/icons/thumb_down_sprite.png) no-repeat 3px -28px transparent;
+      padding-left: 24px; }
+    #ux-page-rating a .text {
+      display: inline-block;
+      height: 24px;
+      padding: 4px 7px 3px 25px; }
+    #ux-page-rating a.vote .text, #ux-page-rating a:hover .text {
+      background-position: 4px 2px;
+      color: white;
+      text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4); }
+    #ux-page-rating a.upvote.vote, #ux-page-rating a.upvote:hover {
+      background: #368D4D;
+      border-radius: 5px;
+      -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2), inset 0 2px 0 rgba(255, 255, 255, 0.25);
+      -moz-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2), inset 0 2px 0 rgba(255, 255, 255, 0.25);
+      box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2), inset 0 2px 0 rgba(255, 255, 255, 0.25); }
+    #ux-page-rating a.downvote.vote, #ux-page-rating a.downvote:hover {
+      background: #C64249;
+      border-radius: 5px;
+      -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2), inset 0 2px 0 rgba(255, 255, 255, 0.25);
+      -moz-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2), inset 0 2px 0 rgba(255, 255, 255, 0.25);
+      box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2), inset 0 2px 0 rgba(255, 255, 255, 0.25); }
+    #ux-page-rating a.upvote.vote, #ux-page-rating a.downvote.vote {
+      box-shadow: none;
+      cursor: default; }
+    #ux-page-rating a #change-link, #ux-page-rating a .no-comment {
+      display: none;
+      font-size: 9px;
+      height: 12px;
+      margin-left: 7px; }
+    #ux-page-rating a .no-comment {
+      display: inline-block;
+      margin-top: 3px; }
+
+#ux-page-rating .title, #written-feedback label span {
+  color: #8a8a8a;
+  margin-right: 10px; }
+
+#additional-info {
+  margin: 7px 0 0 0; }
+
+#rating-improve {
+  font-size: 11px; }
+
+#written-feedback {
+  display: none; }
+
+#rating-submit {
+  padding-right: 12px;
+  margin: 10px 0 0 0; }
+
+#pr-thank-you {
+  display: block;
+  font-size: 11px;
+  height: 15px;
+  margin: 0;
+  float: left; }
+  #pr-thank-you span {
+    display: none; }
