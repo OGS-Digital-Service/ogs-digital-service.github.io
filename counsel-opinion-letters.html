@@ -2,15 +2,14 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>DOL Test Pages</title>
-  
-    <link href="./css/design-lab.css" rel="stylesheet" />  <!-- used only for the design lab, but you'll need to reference our fonts in your site. See _fonts.scss in the scss folder for details  -->
+
     <link href="./css/nys-global-nav-labor.css" rel="stylesheet" ><!-- NYS CSS Global Navigation Styles  -->
-   
     <link href="./css/uswds-accordion.css" rel="stylesheet">
-    <!-- <link href="./css/tailwind-dev.css" rel="stylesheet"> NYSDS tailwind dev  -->
- 
+    <link href="./css/nysds-fonts.css" rel="stylesheet">
+    <link href="./css/tailwind-dev.css" rel="stylesheet"> 
+    <!-- <link href="./css/nysds-tailwind-dol.css" rel="stylesheet">  -->
     <script src="https://www.trumba.com/scripts/spuds.js" type="text/javascript"> </script><!-- need this loaded in head -->
-    <link href="./css/nysds-tailwind-dol.css" rel="stylesheet"> 
+   
     <script src="js/uswds.min.js" type="text/javascript"> </script><!-- need this loaded in head -->
 
 
@@ -79,35 +78,35 @@
 
 
 
-<div class="mx-auto w-10/12"><!-- START DOL Body html -->
+<div class="mx-auto w-10/12 font-body text-lg leading-7"><!-- START DOL Body html -->
 
 <div class="p-2 my-5">
-<h1 class="text-3xl font-bold">Counsel Opinion Letters</h1> 
 
-    <p class="my-2">
+
+<h1 class="text-3xl font-bold ">Counsel Opinion Letters</h1> 
+    <p class="my-2 ">
      These opinions represent the views of the Department at the time they were rendered. The opinions may no longer represent those views if, for example, there have been subsequent court cases or statutory amendments that bear on the issues discussed in the opinions. Opinions are no longer rendered by the Department of Labor. 
     </p>
     <p class="my-2">
         Opinions obtained from the Department were given based on the representation, express or implied, that the requestor provided a full and fair description of all the facts and circumstances that would be pertinent to the Department's consideration of the question presented. Existence of any other factual or historical background not contained in the information provided may require a conclusion different from the one expressed in the opinion. 
     </p>
 
-    <br>
-    <!-- <form action="http://www.search.its.ny.gov/search" class="ux-form-side" id="internal-search-form" method="get" name="internal-search-form" target="_blank">
-        <div class="grid_9 alpha">
-        <label id="search-bar-input-label"><span class="width-45" class="width-45">Search the full text of opinion letters</span> <input class="width-50" id="search-bar-input" name="q" type="text" /> </label>
-        </div>
-        <div class="grid_3 omega">
-        <input class="button magnifier primary" type="submit" value="Search" /> 
-        </div>
-        <input name="entqr" type="hidden" value="0" /> <input name="ud" type="hidden" value="1" /> <input name="sort" type="hidden" value="date:D:L:d1" /> <input name="output" type="hidden" value="xml_no_dtd" /> <input name="oe" type="hidden" value="UTF-8" /> <input name="ie" type="hidden" value="UTF-8" /> <input name="client" type="hidden" value="default_frontend" /> <input name="proxystylesheet" type="hidden" value="default_frontend" /> <input name="site" type="hidden" value="labor_collection" /> <input name="as_sitesearch" type="hidden" value="www.labor.ny.gov/legal/counsel/pdf" /> <input name="filter" type="hidden" value="0" /> 
-    </form> -->
+    
+    
+        <form action="http://www.search.its.ny.gov/search" class="" id="internal-search-form" method="get" name="internal-search-form" target="_blank">    
+                <label id="search-bar-input-label"><span class="">Search the full text of opinion letters</span> <input class="w-1/2" id="search-bar-input" name="q" type="text" /> </label>
 
+                <input class="block mx-auto max-w-max m-2 px-8 py-4 text-center text-white border-none text-lg bg-DOL-theme-primary hover:bg-DOL-theme-darker no-underline hover:underline" type="submit" value="Search" /> 
+            
+                <input name="as_sitesearch" type="hidden" value="statistics.labor.ny.gov/counsel/pdf" />
+        </form>
+       
+        
 
-
-  <div class="usa-accordion md:w-3/4 mx-auto"> <!-- first level accordion (a) -->
+  <div class="usa-accordion md:w-3/4 mx-auto font-body"> <!-- first level accordion (a) -->
   
     <h2 class="usa-accordion__heading">
-      <button class="usa-accordion__button text-base"
+      <button class="usa-accordion__button text-base font-body"
         aria-expanded="false"
         aria-controls="a1">
         Wage and Hour Law (Division of Labor Standards)
@@ -118,7 +117,7 @@
         <div class="usa-accordion md:w-11/12 mx-auto"><!-- second level accordion (b)-->
 
                     <h2 class="usa-accordion__heading"> <!-- accordion item -->
-                        <button class="usa-accordion__button text-base bg-gray-300 p-2"
+                        <button class="usa-accordion__button text-base font-body bg-gray-300 p-2 m-1"
                         aria-expanded="false"
                         aria-controls="b1">
                         Apparel (Labor Law Article 12-A)
@@ -131,7 +130,7 @@
  
                     </div>
                     <h2 class="usa-accordion__heading"><!-- accordion item -->
-                        <button class="usa-accordion__button text-base bg-gray-300 p-2"
+                        <button class="usa-accordion__button text-base font-body bg-gray-300 p-2 m-1"
                         aria-expanded="false"
                         aria-controls="b2">
                         Blood Donation / Nursing Mothers
@@ -147,7 +146,7 @@
  
                     </div>               
                     <h2 class="usa-accordion__heading"><!-- accordion item -->
-                        <button class="usa-accordion__button text-base bg-gray-300 p-2"
+                        <button class="usa-accordion__button text-base font-body bg-gray-300 p-2 m-1"
                         aria-expanded="false"
                         aria-controls="b3">
                         Child Labor (Labor Law Article 4)
@@ -170,7 +169,7 @@
  
                     </div>
                     <h2 class="usa-accordion__heading"><!-- accordion item -->
-                        <button class="usa-accordion__button text-base bg-gray-300 p-2"
+                        <button class="usa-accordion__button text-base font-body bg-gray-300 p-2 m-1"
                         aria-expanded="false"
                         aria-controls="b4">
                         Commission Salespersons
@@ -186,7 +185,7 @@
  
                     </div>
                     <h2 class="usa-accordion__heading"><!-- accordion item -->
-                        <button class="usa-accordion__button text-base bg-gray-300 p-2"
+                        <button class="usa-accordion__button text-base font-body bg-gray-300 p-2 m-1"
                         aria-expanded="false"
                         aria-controls="b5">
                         Day of Rest (Labor Law &sect;161)
@@ -204,7 +203,7 @@
  
                     </div>               
                     <h2 class="usa-accordion__heading"><!-- accordion item -->
-                        <button class="usa-accordion__button text-base bg-gray-300 p-2"
+                        <button class="usa-accordion__button text-base font-body bg-gray-300 p-2 m-1"
                         aria-expanded="false"
                         aria-controls="b6">
                         Day&rsquo;s Work (Labor Law &sect;160)
@@ -218,7 +217,7 @@
  
                     </div>
                     <h2 class="usa-accordion__heading"><!-- accordion item -->
-                        <button class="usa-accordion__button text-base bg-gray-300 p-2"
+                        <button class="usa-accordion__button text-base font-body bg-gray-300 p-2 m-1"
                         aria-expanded="false"
                         aria-controls="b7">
                         Definition Clarifications for Wage and Hour Provisions
@@ -244,7 +243,7 @@
  
                     </div>
                     <h2 class="usa-accordion__heading"><!-- accordion item -->
-                        <button class="usa-accordion__button text-base bg-gray-300 p-2"
+                        <button class="usa-accordion__button text-base font-body bg-gray-300 p-2 m-1"
                         aria-expanded="false"
                         aria-controls="b8">
                         Direct Deposit of Wages/Checks/Debit Cards
@@ -265,7 +264,7 @@
  
                     </div>               
                     <h2 class="usa-accordion__heading"><!-- accordion item -->
-                        <button class="usa-accordion__button text-base bg-gray-300 p-2"
+                        <button class="usa-accordion__button text-base font-body bg-gray-300 p-2 m-1"
                         aria-expanded="false"
                         aria-controls="b9">
                         Employment Classifications
@@ -281,7 +280,7 @@
  
                     </div>
                     <h2 class="usa-accordion__heading"><!-- accordion item -->
-                        <button class="usa-accordion__button text-base bg-gray-300 p-2"
+                        <button class="usa-accordion__button text-base font-body bg-gray-300 p-2 m-1"
                         aria-expanded="false"
                         aria-controls="b10">
                         Fingerprinting (Labor Law &sect;201-a)
@@ -297,7 +296,7 @@
  
                     </div>
                     <h2 class="usa-accordion__heading"><!-- accordion item -->
-                        <button class="usa-accordion__button text-base bg-gray-300 p-2"
+                        <button class="usa-accordion__button text-base font-body bg-gray-300 p-2 m-1"
                         aria-expanded="false"
                         aria-controls="b11">
                         Frequency of Pay (Labor Law &sect;191)
@@ -326,7 +325,7 @@
  
                     </div>               
                     <h2 class="usa-accordion__heading"><!-- accordion item -->
-                        <button class="usa-accordion__button text-base bg-gray-300 p-2"
+                        <button class="usa-accordion__button text-base font-body bg-gray-300 p-2 m-1"
                         aria-expanded="false"
                         aria-controls="b12">
                         Home Health Aides and Live-In Workers
@@ -345,7 +344,7 @@
  
                     </div>
                     <h2 class="usa-accordion__heading"><!-- accordion item -->
-                        <button class="usa-accordion__button text-base bg-gray-300 p-2"
+                        <button class="usa-accordion__button text-base font-body bg-gray-300 p-2 m-1"
                         aria-expanded="false"
                         aria-controls="b13">
                         Independent Contractors/Employees Issues
@@ -361,7 +360,7 @@
  
                     </div>
                     <h2 class="usa-accordion__heading"><!-- accordion item -->
-                        <button class="usa-accordion__button text-base bg-gray-300 p-2"
+                        <button class="usa-accordion__button text-base font-body bg-gray-300 p-2 m-1"
                         aria-expanded="false"
                         aria-controls="b14">
                         Meal Periods and Rest Periods
@@ -385,7 +384,7 @@
  
                     </div>               
                     <h2 class="usa-accordion__heading"><!-- accordion item -->
-                        <button class="usa-accordion__button text-base bg-gray-300 p-2"
+                        <button class="usa-accordion__button text-base font-body bg-gray-300 p-2 m-1"
                         aria-expanded="false"
                         aria-controls="b15">
                         Medical Exam Fees (Labor Law &sect;201-b)
@@ -398,7 +397,7 @@
  
                     </div>
                     <h2 class="usa-accordion__heading"><!-- accordion item -->
-                        <button class="usa-accordion__button text-base bg-gray-300 p-2"
+                        <button class="usa-accordion__button text-base font-body bg-gray-300 p-2 m-1"
                         aria-expanded="false"
                         aria-controls="b16">
                         Minimum Wage and Overtime (Labor Law Article 19) - Minimum Wage and Minimum Wage Orders Generally
@@ -441,7 +440,7 @@
  
                     </div>
                     <h2 class="usa-accordion__heading"><!-- accordion item -->
-                        <button class="usa-accordion__button text-base bg-gray-300 p-2"
+                        <button class="usa-accordion__button text-base font-body bg-gray-300 p-2 m-1"
                         aria-expanded="false"
                         aria-controls="b17">
                         Minimum Wage and Overtime (Labor Law Article 19) - Overtime
@@ -484,7 +483,7 @@
  
                     </div>               
                     <h2 class="usa-accordion__heading"><!-- accordion item -->
-                        <button class="usa-accordion__button text-base bg-gray-300 p-2"
+                        <button class="usa-accordion__button text-base font-body bg-gray-300 p-2 m-1"
                         aria-expanded="false"
                         aria-controls="b18">
                         Notice, Posting Requirements (Labor Law &sect;195.5)
@@ -503,7 +502,7 @@
  
                     </div>
                     <h2 class="usa-accordion__heading"><!-- accordion item -->
-                        <button class="usa-accordion__button text-base bg-gray-300 p-2"
+                        <button class="usa-accordion__button text-base font-body bg-gray-300 p-2 m-1"
                         aria-expanded="false"
                         aria-controls="b19">
                         Notice of Rate of Pay (Labor Law &sect;195.1)
@@ -521,7 +520,7 @@
  
                     </div>
                     <h2 class="usa-accordion__heading"><!-- accordion item -->
-                        <button class="usa-accordion__button text-base bg-gray-300 p-2"
+                        <button class="usa-accordion__button text-base font-body bg-gray-300 p-2 m-1"
                         aria-expanded="false"
                         aria-controls="b20">
                         Nurse Overtime (Labor Law &sect;167)
@@ -534,7 +533,7 @@
  
                     </div>               
                     <h2 class="usa-accordion__heading"><!-- accordion item -->
-                        <button class="usa-accordion__button text-base bg-gray-300 p-2"
+                        <button class="usa-accordion__button text-base font-body bg-gray-300 p-2 m-1"
                         aria-expanded="false"
                         aria-controls="b21">
                         Other Wage and Hour
@@ -587,7 +586,7 @@
  
                     </div>
                     <h2 class="usa-accordion__heading"><!-- accordion item -->
-                        <button class="usa-accordion__button text-base bg-gray-300 p-2"
+                        <button class="usa-accordion__button text-base font-body bg-gray-300 p-2 m-1"
                         aria-expanded="false"
                         aria-controls="b22">
                         Record Keeping Requirements
@@ -601,7 +600,7 @@
  
                     </div>
                     <h2 class="usa-accordion__heading"><!-- accordion item -->
-                        <button class="usa-accordion__button text-base bg-gray-300 p-2"
+                        <button class="usa-accordion__button text-base font-body bg-gray-300 p-2 m-1"
                         aria-expanded="false"
                         aria-controls="b23">
                         Sick Leave
@@ -615,7 +614,7 @@
                         
                     </div>               
                     <h2 class="usa-accordion__heading"><!-- accordion item -->
-                        <button class="usa-accordion__button text-base bg-gray-300 p-2"
+                        <button class="usa-accordion__button text-base font-body bg-gray-300 p-2 m-1"
                         aria-expanded="false"
                         aria-controls="b24">
                         Supplement Payments (Labor Law &sect;198-c)
@@ -629,7 +628,7 @@
  
                     </div>
                     <h2 class="usa-accordion__heading"><!-- accordion item -->
-                        <button class="usa-accordion__button text-base bg-gray-300 p-2"
+                        <button class="usa-accordion__button text-base font-body bg-gray-300 p-2 m-1"
                         aria-expanded="false"
                         aria-controls="b25">
                         Tips (Labor Law &sect;196-d)
@@ -659,7 +658,7 @@
  
                     </div>
                     <h2 class="usa-accordion__heading"><!-- accordion item -->
-                        <button class="usa-accordion__button text-base bg-gray-300 p-2"
+                        <button class="usa-accordion__button text-base font-body bg-gray-300 p-2 m-1"
                         aria-expanded="false"
                         aria-controls="b26">
                         Travel Time
@@ -674,7 +673,7 @@
  
                     </div>               
                     <h2 class="usa-accordion__heading"><!-- accordion item -->
-                        <button class="usa-accordion__button text-base bg-gray-300 p-2"
+                        <button class="usa-accordion__button text-base font-body bg-gray-300 p-2 m-1"
                         aria-expanded="false"
                         aria-controls="b27">
                         Uniforms
@@ -689,7 +688,7 @@
  
                     </div>
                     <h2 class="usa-accordion__heading"><!-- accordion item -->
-                        <button class="usa-accordion__button text-base bg-gray-300 p-2"
+                        <button class="usa-accordion__button text-base font-body bg-gray-300 p-2 m-1"
                         aria-expanded="false"
                         aria-controls="b28">
                         Vacation Pay
@@ -703,7 +702,7 @@
  
                     </div>
                     <h2 class="usa-accordion__heading"><!-- accordion item -->
-                        <button class="usa-accordion__button text-base bg-gray-300 p-2"
+                        <button class="usa-accordion__button text-base font-body bg-gray-300 p-2 m-1"
                         aria-expanded="false"
                         aria-controls="b29">
                         Volunteers/Interns
@@ -718,7 +717,7 @@
  
                     </div>               
                     <h2 class="usa-accordion__heading"><!-- accordion item -->
-                        <button class="usa-accordion__button text-base bg-gray-300 p-2"
+                        <button class="usa-accordion__button text-base font-body bg-gray-300 p-2 m-1"
                         aria-expanded="false"
                         aria-controls="b30">
                         Wage Statements (Labor Law &sect;195.3)
@@ -740,7 +739,7 @@
   
     
     <h2 class="usa-accordion__heading">
-      <button class="usa-accordion__button text-base"
+      <button class="usa-accordion__button text-base font-body"
         aria-expanded="false"
         aria-controls="a2">
         Public Work Projects and Prevailing Wage
@@ -751,7 +750,7 @@
         <div class="usa-accordion md:w-11/12 mx-auto"><!-- second level accordion (b)-->
 
                 <h2 class="usa-accordion__heading"><!-- accordion item -->
-                    <button class="usa-accordion__button text-base bg-gray-300 p-2"
+                    <button class="usa-accordion__button text-base font-body bg-gray-300 p-2 m-1"
                     aria-expanded="false"
                     aria-controls="b31">
                     Applicability of the Prevailing Wage Requirements for Public Work Contracts (Volunteers and Donations)
@@ -765,7 +764,7 @@
 
                 </div>
                 <h2 class="usa-accordion__heading"><!-- accordion item -->
-                    <button class="usa-accordion__button text-base bg-gray-300 p-2"
+                    <button class="usa-accordion__button text-base font-body bg-gray-300 p-2 m-1"
                     aria-expanded="false"
                     aria-controls="b32">
                     Applicability of the Prevailing Wage Requirements for Public Work Contracts (Equipment Repair)
@@ -779,7 +778,7 @@
 
                 </div>
                 <h2 class="usa-accordion__heading"><!-- accordion item -->
-                    <button class="usa-accordion__button text-base bg-gray-300 p-2"
+                    <button class="usa-accordion__button text-base font-body bg-gray-300 p-2 m-1"
                     aria-expanded="false"
                     aria-controls="b33">
                     Applicability of the Prevailing Wage Requirements for Public Work Contracts (Fire Departments)
@@ -792,7 +791,7 @@
 
                 </div>
                 <h2 class="usa-accordion__heading"><!-- accordion item -->
-                    <button class="usa-accordion__button text-base bg-gray-300 p-2"
+                    <button class="usa-accordion__button text-base font-body bg-gray-300 p-2 m-1"
                     aria-expanded="false"
                     aria-controls="b34">
                     Applicability of the Prevailing Wage Requirements for Public Work Contracts (Hazardous Spill Clean-up)
@@ -805,7 +804,7 @@
 
                 </div>
                 <h2 class="usa-accordion__heading"><!-- accordion item -->
-                    <button class="usa-accordion__button text-base bg-gray-300 p-2"
+                    <button class="usa-accordion__button text-base font-body bg-gray-300 p-2 m-1"
                     aria-expanded="false"
                     aria-controls="b35">
                     Applicability of the Prevailing Wage Requirements for Public Work Contracts (HUD Projects)
@@ -818,7 +817,7 @@
 
                 </div>
                 <h2 class="usa-accordion__heading"><!-- accordion item -->
-                    <button class="usa-accordion__button text-base bg-gray-300 p-2"
+                    <button class="usa-accordion__button text-base font-body bg-gray-300 p-2 m-1"
                     aria-expanded="false"
                     aria-controls="b36">
                     Applicability of the Prevailing Wage Requirements for Public Work Contracts (Leaseholds)
@@ -834,7 +833,7 @@
 
                 </div>
                 <h2 class="usa-accordion__heading"><!-- accordion item -->
-                    <button class="usa-accordion__button text-base bg-gray-300 p-2"
+                    <button class="usa-accordion__button text-base font-body bg-gray-300 p-2 m-1"
                     aria-expanded="false"
                     aria-controls="b37">
                     Applicability of the Prevailing Wage Requirements for Public Work Contracts (Libraries)
@@ -851,7 +850,7 @@
 
                 </div>
                 <h2 class="usa-accordion__heading"><!-- accordion item -->
-                    <button class="usa-accordion__button text-base bg-gray-300 p-2"
+                    <button class="usa-accordion__button text-base font-body bg-gray-300 p-2 m-1"
                     aria-expanded="false"
                     aria-controls="b38">
                     Applicability of the Prevailing Wage Requirements for Public Work Contracts (Modular/Equipment Installation)
@@ -864,7 +863,7 @@
 
                 </div>
                 <h2 class="usa-accordion__heading"><!-- accordion item -->
-                    <button class="usa-accordion__button text-base bg-gray-300 p-2"
+                    <button class="usa-accordion__button text-base font-body bg-gray-300 p-2 m-1"
                     aria-expanded="false"
                     aria-controls="b39">
                     Applicability of the Prevailing Wage Requirements for Public Work Contracts (Not for Profit)
@@ -880,7 +879,7 @@
 
                 </div>
                 <h2 class="usa-accordion__heading"><!-- accordion item -->
-                    <button class="usa-accordion__button text-base bg-gray-300 p-2"
+                    <button class="usa-accordion__button text-base font-body bg-gray-300 p-2 m-1"
                     aria-expanded="false"
                     aria-controls="b40">
                     Applicability of the Prevailing Wage Requirements for Public Work Contracts (Other Applicability Issues)
@@ -901,7 +900,7 @@
 
                 </div>
                 <h2 class="usa-accordion__heading"><!-- accordion item -->
-                    <button class="usa-accordion__button text-base bg-gray-300 p-2"
+                    <button class="usa-accordion__button text-base font-body bg-gray-300 p-2 m-1"
                     aria-expanded="false"
                     aria-controls="b41">
                     Applicability of the Prevailing Wage Requirements for Public Work Contracts (Private Ownership)
@@ -917,7 +916,7 @@
 
                 </div>
                 <h2 class="usa-accordion__heading"><!-- accordion item -->
-                    <button class="usa-accordion__button text-base bg-gray-300 p-2"
+                    <button class="usa-accordion__button text-base font-body bg-gray-300 p-2 m-1"
                     aria-expanded="false"
                     aria-controls="b42">
                     Applicability of the Prevailing Wage Requirements for Public Work Contracts (Public Ownership)
@@ -932,7 +931,7 @@
 
                 </div>
                 <h2 class="usa-accordion__heading"><!-- accordion item -->
-                    <button class="usa-accordion__button text-base bg-gray-300 p-2"
+                    <button class="usa-accordion__button text-base font-body bg-gray-300 p-2 m-1"
                     aria-expanded="false"
                     aria-controls="b43">
                     Applicability of the Prevailing Wage Requirements for Public Work Contracts (Telecommunications)
@@ -945,7 +944,7 @@
 
                 </div>
                 <h2 class="usa-accordion__heading"><!-- accordion item -->
-                    <button class="usa-accordion__button text-base bg-gray-300 p-2"
+                    <button class="usa-accordion__button text-base font-body bg-gray-300 p-2 m-1"
                     aria-expanded="false"
                     aria-controls="b44">
                     BOCES
@@ -958,7 +957,7 @@
 
                 </div>
                 <h2 class="usa-accordion__heading"><!-- accordion item -->
-                    <button class="usa-accordion__button text-base bg-gray-300 p-2"
+                    <button class="usa-accordion__button text-base font-body bg-gray-300 p-2 m-1"
                     aria-expanded="false"
                     aria-controls="b45">
                     Other Public Work
@@ -973,7 +972,7 @@
 
                 </div>
                 <h2 class="usa-accordion__heading"><!-- accordion item -->
-                    <button class="usa-accordion__button text-base bg-gray-300 p-2"
+                    <button class="usa-accordion__button text-base font-body bg-gray-300 p-2 m-1"
                     aria-expanded="false"
                     aria-controls="b46">
                     Overtime, Overtime Dispensation and Premium Pay
@@ -986,7 +985,7 @@
 
                 </div>
                 <h2 class="usa-accordion__heading"><!-- accordion item -->
-                    <button class="usa-accordion__button text-base bg-gray-300 p-2"
+                    <button class="usa-accordion__button text-base font-body bg-gray-300 p-2 m-1"
                     aria-expanded="false"
                     aria-controls="b47">
                     Wage Supplements
@@ -999,7 +998,7 @@
 
                 </div>
                 <h2 class="usa-accordion__heading"><!-- accordion item -->
-                    <button class="usa-accordion__button text-base bg-gray-300 p-2"
+                    <button class="usa-accordion__button text-base font-body bg-gray-300 p-2 m-1"
                     aria-expanded="false"
                     aria-controls="b48">
                     Wicks Law
@@ -1022,7 +1021,7 @@
   
    
     <h2 class="usa-accordion__heading">
-      <button class="usa-accordion__button text-base"
+      <button class="usa-accordion__button text-base font-body"
         aria-expanded="false"
         aria-controls="a3">
         Worker Adjustment and Retraining Notification (WARN Act)
@@ -1032,7 +1031,7 @@
         <div class="usa-accordion md:w-11/12 mx-auto"><!-- second level accordion (b)-->
 
             <h2 class="usa-accordion__heading"><!-- accordion item -->
-                <button class="usa-accordion__button text-base bg-gray-300 p-2"
+                <button class="usa-accordion__button text-base font-body bg-gray-300 p-2 m-1"
                 aria-expanded="false"
                 aria-controls="b49">
                 Definitions
@@ -1050,7 +1049,7 @@
 
             </div>
             <h2 class="usa-accordion__heading"><!-- accordion item -->
-                <button class="usa-accordion__button text-base bg-gray-300 p-2"
+                <button class="usa-accordion__button text-base font-body bg-gray-300 p-2 m-1"
                 aria-expanded="false"
                 aria-controls="b50">
                 Notice
@@ -1064,7 +1063,7 @@
 
             </div>
             <h2 class="usa-accordion__heading"><!-- accordion item -->
-                <button class="usa-accordion__button text-base bg-gray-300 p-2"
+                <button class="usa-accordion__button text-base font-body bg-gray-300 p-2 m-1"
                 aria-expanded="false"
                 aria-controls="b51">
                 Other

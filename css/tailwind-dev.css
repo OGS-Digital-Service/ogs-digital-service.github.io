@@ -10864,6 +10864,10 @@
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
 }
 
+.font-body {
+  font-family: "Proxima Nova", Arial, sans-serif
+}
+
 .font-thin {
   font-weight: 100
 }
@@ -42270,6 +42274,10 @@
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
   }
 
+  .sm\:font-body {
+    font-family: "Proxima Nova", Arial, sans-serif
+  }
+
   .sm\:font-thin {
     font-weight: 100
   }
@@ -73596,6 +73604,10 @@
 
   .md\:font-mono {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
+  }
+
+  .md\:font-body {
+    font-family: "Proxima Nova", Arial, sans-serif
   }
 
   .md\:font-thin {
@@ -104926,6 +104938,10 @@
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
   }
 
+  .lg\:font-body {
+    font-family: "Proxima Nova", Arial, sans-serif
+  }
+
   .lg\:font-thin {
     font-weight: 100
   }
@@ -136254,6 +136270,10 @@
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
   }
 
+  .xl\:font-body {
+    font-family: "Proxima Nova", Arial, sans-serif
+  }
+
   .xl\:font-thin {
     font-weight: 100
   }
@@ -167580,6 +167600,10 @@
 
   .\32xl\:font-mono {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
+  }
+
+  .\32xl\:font-body {
+    font-family: "Proxima Nova", Arial, sans-serif
   }
 
   .\32xl\:font-thin {
