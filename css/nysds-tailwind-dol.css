@@ -1,37 +1,13 @@
 /* @import "tailwindcss/base"; */
 
-.container {
-  width: 100%
+.bg-gray-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(243, 244, 246, var(--tw-bg-opacity))
 }
 
-@media (min-width: 640px) {
-  .container {
-    max-width: 640px
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 768px
-  }
-}
-
-@media (min-width: 1024px) {
-  .container {
-    max-width: 1024px
-  }
-}
-
-@media (min-width: 1280px) {
-  .container {
-    max-width: 1280px
-  }
-}
-
-@media (min-width: 1536px) {
-  .container {
-    max-width: 1536px
-  }
+.bg-gray-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(209, 213, 219, var(--tw-bg-opacity))
 }
 
 .bg-blue-100 {
@@ -58,8 +34,16 @@
   border-style: solid
 }
 
+.border-0 {
+  border-width: 0px
+}
+
 .border {
   border-width: 1px
+}
+
+.border-t-2 {
+  border-top-width: 2px
 }
 
 .block {
@@ -70,8 +54,20 @@
   display: table
 }
 
+.table-row {
+  display: table-row
+}
+
 .grid {
   display: grid
+}
+
+.hidden {
+  display: none
+}
+
+.float-right {
+  float: right
 }
 
 .font-bold {
@@ -81,6 +77,11 @@
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem
+}
+
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem
 }
 
 .text-3xl {
@@ -95,6 +96,11 @@
 .my-2 {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem
+}
+
+.mx-2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem
 }
 
 .my-5 {
@@ -120,6 +126,10 @@
   margin-bottom: 1.75rem
 }
 
+.mt-8 {
+  margin-top: 2rem
+}
+
 .mb-10 {
   margin-bottom: 2.5rem
 }
@@ -130,12 +140,20 @@
   max-width: max-content
 }
 
+.p-0 {
+  padding: 0px
+}
+
 .p-2 {
   padding: 0.5rem
 }
 
 .p-4 {
   padding: 1rem
+}
+
+.p-0\.5 {
+  padding: 0.125rem
 }
 
 .py-4 {
@@ -170,6 +188,16 @@
 }
 
 .text-white {
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity))
+}
+
+.visited\:text-white:visited {
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity))
+}
+
+.hover\:text-white:hover {
   --tw-text-opacity: 1;
   color: rgba(255, 255, 255, var(--tw-text-opacity))
 }
@@ -276,8 +304,25 @@
 }
 
 @media (min-width: 768px) {
+  .md\:inline-block {
+    display: inline-block
+  }
+
+  .md\:mx-2 {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem
+  }
+
   .md\:mb-2 {
     margin-bottom: 0.5rem
+  }
+
+  .md\:w-3\/4 {
+    width: 75%
+  }
+
+  .md\:w-11\/12 {
+    width: 91.666667%
   }
 
   .md\:col-span-1 {
@@ -297,6 +342,9 @@
 }
 
 @media (min-width: 1280px) {
+  .xl\:pl-64 {
+    padding-left: 16rem
+  }
 }
 
 @media (min-width: 1536px) {
