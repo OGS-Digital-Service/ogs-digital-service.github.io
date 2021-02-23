@@ -1378,6 +1378,11 @@
   border-color: rgba(7, 61, 66, var(--tw-divide-opacity))
 }
 
+.divide-nysds-heading > :not([hidden]) ~ :not([hidden]) {
+  --tw-divide-opacity: 1;
+  border-color: rgba(36, 56, 126, var(--tw-divide-opacity))
+}
+
 .divide-solid > :not([hidden]) ~ :not([hidden]) {
   border-style: solid
 }
@@ -1990,6 +1995,11 @@
   background-color: rgba(7, 61, 66, var(--tw-bg-opacity))
 }
 
+.bg-nysds-heading {
+  --tw-bg-opacity: 1;
+  background-color: rgba(36, 56, 126, var(--tw-bg-opacity))
+}
+
 .group:hover .group-hover\:bg-transparent {
   background-color: transparent
 }
@@ -2416,6 +2426,11 @@
 .group:hover .group-hover\:bg-DOL-theme-darker {
   --tw-bg-opacity: 1;
   background-color: rgba(7, 61, 66, var(--tw-bg-opacity))
+}
+
+.group:hover .group-hover\:bg-nysds-heading {
+  --tw-bg-opacity: 1;
+  background-color: rgba(36, 56, 126, var(--tw-bg-opacity))
 }
 
 .focus-within\:bg-transparent:focus-within {
@@ -2846,6 +2861,11 @@
   background-color: rgba(7, 61, 66, var(--tw-bg-opacity))
 }
 
+.focus-within\:bg-nysds-heading:focus-within {
+  --tw-bg-opacity: 1;
+  background-color: rgba(36, 56, 126, var(--tw-bg-opacity))
+}
+
 .hover\:bg-transparent:hover {
   background-color: transparent
 }
@@ -3274,6 +3294,11 @@
   background-color: rgba(7, 61, 66, var(--tw-bg-opacity))
 }
 
+.hover\:bg-nysds-heading:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgba(36, 56, 126, var(--tw-bg-opacity))
+}
+
 .focus\:bg-transparent:focus {
   background-color: transparent
 }
@@ -3700,6 +3725,11 @@
 .focus\:bg-DOL-theme-darker:focus {
   --tw-bg-opacity: 1;
   background-color: rgba(7, 61, 66, var(--tw-bg-opacity))
+}
+
+.focus\:bg-nysds-heading:focus {
+  --tw-bg-opacity: 1;
+  background-color: rgba(36, 56, 126, var(--tw-bg-opacity))
 }
 
 .bg-none {
@@ -4168,6 +4198,11 @@
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(7, 61, 66, 0))
 }
 
+.from-nysds-heading {
+  --tw-gradient-from: #24387E;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(36, 56, 126, 0))
+}
+
 .via-transparent {
   --tw-gradient-stops: var(--tw-gradient-from), transparent, var(--tw-gradient-to, rgba(0, 0, 0, 0))
 }
@@ -4512,6 +4547,10 @@
   --tw-gradient-stops: var(--tw-gradient-from), #073d42, var(--tw-gradient-to, rgba(7, 61, 66, 0))
 }
 
+.via-nysds-heading {
+  --tw-gradient-stops: var(--tw-gradient-from), #24387E, var(--tw-gradient-to, rgba(36, 56, 126, 0))
+}
+
 .to-transparent {
   --tw-gradient-to: transparent
 }
@@ -4854,6 +4893,10 @@
 
 .to-DOL-theme-darker {
   --tw-gradient-to: #073d42
+}
+
+.to-nysds-heading {
+  --tw-gradient-to: #24387E
 }
 
 .hover\:from-transparent:hover {
@@ -5286,6 +5329,11 @@
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(7, 61, 66, 0))
 }
 
+.hover\:from-nysds-heading:hover {
+  --tw-gradient-from: #24387E;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(36, 56, 126, 0))
+}
+
 .hover\:via-transparent:hover {
   --tw-gradient-stops: var(--tw-gradient-from), transparent, var(--tw-gradient-to, rgba(0, 0, 0, 0))
 }
@@ -5630,6 +5678,10 @@
   --tw-gradient-stops: var(--tw-gradient-from), #073d42, var(--tw-gradient-to, rgba(7, 61, 66, 0))
 }
 
+.hover\:via-nysds-heading:hover {
+  --tw-gradient-stops: var(--tw-gradient-from), #24387E, var(--tw-gradient-to, rgba(36, 56, 126, 0))
+}
+
 .hover\:to-transparent:hover {
   --tw-gradient-to: transparent
 }
@@ -5972,6 +6024,10 @@
 
 .hover\:to-DOL-theme-darker:hover {
   --tw-gradient-to: #073d42
+}
+
+.hover\:to-nysds-heading:hover {
+  --tw-gradient-to: #24387E
 }
 
 .focus\:from-transparent:focus {
@@ -6404,6 +6460,11 @@
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(7, 61, 66, 0))
 }
 
+.focus\:from-nysds-heading:focus {
+  --tw-gradient-from: #24387E;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(36, 56, 126, 0))
+}
+
 .focus\:via-transparent:focus {
   --tw-gradient-stops: var(--tw-gradient-from), transparent, var(--tw-gradient-to, rgba(0, 0, 0, 0))
 }
@@ -6748,6 +6809,10 @@
   --tw-gradient-stops: var(--tw-gradient-from), #073d42, var(--tw-gradient-to, rgba(7, 61, 66, 0))
 }
 
+.focus\:via-nysds-heading:focus {
+  --tw-gradient-stops: var(--tw-gradient-from), #24387E, var(--tw-gradient-to, rgba(36, 56, 126, 0))
+}
+
 .focus\:to-transparent:focus {
   --tw-gradient-to: transparent
 }
@@ -7090,6 +7155,10 @@
 
 .focus\:to-DOL-theme-darker:focus {
   --tw-gradient-to: #073d42
+}
+
+.focus\:to-nysds-heading:focus {
+  --tw-gradient-to: #24387E
 }
 
 .bg-opacity-0 {
@@ -7900,6 +7969,11 @@
   border-color: rgba(7, 61, 66, var(--tw-border-opacity))
 }
 
+.border-nysds-heading {
+  --tw-border-opacity: 1;
+  border-color: rgba(36, 56, 126, var(--tw-border-opacity))
+}
+
 .group:hover .group-hover\:border-transparent {
   border-color: transparent
 }
@@ -8326,6 +8400,11 @@
 .group:hover .group-hover\:border-DOL-theme-darker {
   --tw-border-opacity: 1;
   border-color: rgba(7, 61, 66, var(--tw-border-opacity))
+}
+
+.group:hover .group-hover\:border-nysds-heading {
+  --tw-border-opacity: 1;
+  border-color: rgba(36, 56, 126, var(--tw-border-opacity))
 }
 
 .focus-within\:border-transparent:focus-within {
@@ -8756,6 +8835,11 @@
   border-color: rgba(7, 61, 66, var(--tw-border-opacity))
 }
 
+.focus-within\:border-nysds-heading:focus-within {
+  --tw-border-opacity: 1;
+  border-color: rgba(36, 56, 126, var(--tw-border-opacity))
+}
+
 .hover\:border-transparent:hover {
   border-color: transparent
 }
@@ -9184,6 +9268,11 @@
   border-color: rgba(7, 61, 66, var(--tw-border-opacity))
 }
 
+.hover\:border-nysds-heading:hover {
+  --tw-border-opacity: 1;
+  border-color: rgba(36, 56, 126, var(--tw-border-opacity))
+}
+
 .focus\:border-transparent:focus {
   border-color: transparent
 }
@@ -9610,6 +9699,11 @@
 .focus\:border-DOL-theme-darker:focus {
   --tw-border-opacity: 1;
   border-color: rgba(7, 61, 66, var(--tw-border-opacity))
+}
+
+.focus\:border-nysds-heading:focus {
+  --tw-border-opacity: 1;
+  border-color: rgba(36, 56, 126, var(--tw-border-opacity))
 }
 
 .border-opacity-0 {
@@ -16495,6 +16589,21 @@
   color: rgba(7, 61, 66, var(--tw-placeholder-opacity))
 }
 
+.placeholder-nysds-heading::-moz-placeholder {
+  --tw-placeholder-opacity: 1;
+  color: rgba(36, 56, 126, var(--tw-placeholder-opacity))
+}
+
+.placeholder-nysds-heading:-ms-input-placeholder {
+  --tw-placeholder-opacity: 1;
+  color: rgba(36, 56, 126, var(--tw-placeholder-opacity))
+}
+
+.placeholder-nysds-heading::placeholder {
+  --tw-placeholder-opacity: 1;
+  color: rgba(36, 56, 126, var(--tw-placeholder-opacity))
+}
+
 .focus\:placeholder-transparent:focus::-moz-placeholder {
   color: transparent
 }
@@ -17777,6 +17886,21 @@
 .focus\:placeholder-DOL-theme-darker:focus::placeholder {
   --tw-placeholder-opacity: 1;
   color: rgba(7, 61, 66, var(--tw-placeholder-opacity))
+}
+
+.focus\:placeholder-nysds-heading:focus::-moz-placeholder {
+  --tw-placeholder-opacity: 1;
+  color: rgba(36, 56, 126, var(--tw-placeholder-opacity))
+}
+
+.focus\:placeholder-nysds-heading:focus:-ms-input-placeholder {
+  --tw-placeholder-opacity: 1;
+  color: rgba(36, 56, 126, var(--tw-placeholder-opacity))
+}
+
+.focus\:placeholder-nysds-heading:focus::placeholder {
+  --tw-placeholder-opacity: 1;
+  color: rgba(36, 56, 126, var(--tw-placeholder-opacity))
 }
 
 .placeholder-opacity-0::-moz-placeholder {
@@ -21666,6 +21790,10 @@
   --tw-ring-offset-color: #073d42
 }
 
+.ring-offset-nysds-heading {
+  --tw-ring-offset-color: #24387E
+}
+
 .focus-within\:ring-offset-transparent:focus-within {
   --tw-ring-offset-color: transparent
 }
@@ -22010,6 +22138,10 @@
   --tw-ring-offset-color: #073d42
 }
 
+.focus-within\:ring-offset-nysds-heading:focus-within {
+  --tw-ring-offset-color: #24387E
+}
+
 .focus\:ring-offset-transparent:focus {
   --tw-ring-offset-color: transparent
 }
@@ -22352,6 +22484,10 @@
 
 .focus\:ring-offset-DOL-theme-darker:focus {
   --tw-ring-offset-color: #073d42
+}
+
+.focus\:ring-offset-nysds-heading:focus {
+  --tw-ring-offset-color: #24387E
 }
 
 .ring-offset-0 {
@@ -22842,6 +22978,11 @@
   --tw-ring-color: rgba(7, 61, 66, var(--tw-ring-opacity))
 }
 
+.ring-nysds-heading {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgba(36, 56, 126, var(--tw-ring-opacity))
+}
+
 .focus-within\:ring-transparent:focus-within {
   --tw-ring-color: transparent
 }
@@ -23270,6 +23411,11 @@
   --tw-ring-color: rgba(7, 61, 66, var(--tw-ring-opacity))
 }
 
+.focus-within\:ring-nysds-heading:focus-within {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgba(36, 56, 126, var(--tw-ring-opacity))
+}
+
 .focus\:ring-transparent:focus {
   --tw-ring-color: transparent
 }
@@ -23696,6 +23842,11 @@
 .focus\:ring-DOL-theme-darker:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgba(7, 61, 66, var(--tw-ring-opacity))
+}
+
+.focus\:ring-nysds-heading:focus {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgba(36, 56, 126, var(--tw-ring-opacity))
 }
 
 .ring-opacity-0 {
@@ -24350,6 +24501,11 @@
   color: rgba(7, 61, 66, var(--tw-text-opacity))
 }
 
+.text-nysds-heading {
+  --tw-text-opacity: 1;
+  color: rgba(36, 56, 126, var(--tw-text-opacity))
+}
+
 .visited\:text-transparent:visited {
   color: transparent
 }
@@ -24776,6 +24932,11 @@
 .visited\:text-DOL-theme-darker:visited {
   --tw-text-opacity: 1;
   color: rgba(7, 61, 66, var(--tw-text-opacity))
+}
+
+.visited\:text-nysds-heading:visited {
+  --tw-text-opacity: 1;
+  color: rgba(36, 56, 126, var(--tw-text-opacity))
 }
 
 .group:hover .group-hover\:text-transparent {
@@ -25206,6 +25367,11 @@
   color: rgba(7, 61, 66, var(--tw-text-opacity))
 }
 
+.group:hover .group-hover\:text-nysds-heading {
+  --tw-text-opacity: 1;
+  color: rgba(36, 56, 126, var(--tw-text-opacity))
+}
+
 .focus-within\:text-transparent:focus-within {
   color: transparent
 }
@@ -25632,6 +25798,11 @@
 .focus-within\:text-DOL-theme-darker:focus-within {
   --tw-text-opacity: 1;
   color: rgba(7, 61, 66, var(--tw-text-opacity))
+}
+
+.focus-within\:text-nysds-heading:focus-within {
+  --tw-text-opacity: 1;
+  color: rgba(36, 56, 126, var(--tw-text-opacity))
 }
 
 .hover\:text-transparent:hover {
@@ -26062,6 +26233,11 @@
   color: rgba(7, 61, 66, var(--tw-text-opacity))
 }
 
+.hover\:text-nysds-heading:hover {
+  --tw-text-opacity: 1;
+  color: rgba(36, 56, 126, var(--tw-text-opacity))
+}
+
 .focus\:text-transparent:focus {
   color: transparent
 }
@@ -26488,6 +26664,11 @@
 .focus\:text-DOL-theme-darker:focus {
   --tw-text-opacity: 1;
   color: rgba(7, 61, 66, var(--tw-text-opacity))
+}
+
+.focus\:text-nysds-heading:focus {
+  --tw-text-opacity: 1;
+  color: rgba(36, 56, 126, var(--tw-text-opacity))
 }
 
 .text-opacity-0 {
@@ -32788,6 +32969,11 @@
     border-color: rgba(7, 61, 66, var(--tw-divide-opacity))
   }
 
+  .sm\:divide-nysds-heading > :not([hidden]) ~ :not([hidden]) {
+    --tw-divide-opacity: 1;
+    border-color: rgba(36, 56, 126, var(--tw-divide-opacity))
+  }
+
   .sm\:divide-solid > :not([hidden]) ~ :not([hidden]) {
     border-style: solid
   }
@@ -33400,6 +33586,11 @@
     background-color: rgba(7, 61, 66, var(--tw-bg-opacity))
   }
 
+  .sm\:bg-nysds-heading {
+    --tw-bg-opacity: 1;
+    background-color: rgba(36, 56, 126, var(--tw-bg-opacity))
+  }
+
   .group:hover .sm\:group-hover\:bg-transparent {
     background-color: transparent
   }
@@ -33826,6 +34017,11 @@
   .group:hover .sm\:group-hover\:bg-DOL-theme-darker {
     --tw-bg-opacity: 1;
     background-color: rgba(7, 61, 66, var(--tw-bg-opacity))
+  }
+
+  .group:hover .sm\:group-hover\:bg-nysds-heading {
+    --tw-bg-opacity: 1;
+    background-color: rgba(36, 56, 126, var(--tw-bg-opacity))
   }
 
   .sm\:focus-within\:bg-transparent:focus-within {
@@ -34256,6 +34452,11 @@
     background-color: rgba(7, 61, 66, var(--tw-bg-opacity))
   }
 
+  .sm\:focus-within\:bg-nysds-heading:focus-within {
+    --tw-bg-opacity: 1;
+    background-color: rgba(36, 56, 126, var(--tw-bg-opacity))
+  }
+
   .sm\:hover\:bg-transparent:hover {
     background-color: transparent
   }
@@ -34684,6 +34885,11 @@
     background-color: rgba(7, 61, 66, var(--tw-bg-opacity))
   }
 
+  .sm\:hover\:bg-nysds-heading:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgba(36, 56, 126, var(--tw-bg-opacity))
+  }
+
   .sm\:focus\:bg-transparent:focus {
     background-color: transparent
   }
@@ -35110,6 +35316,11 @@
   .sm\:focus\:bg-DOL-theme-darker:focus {
     --tw-bg-opacity: 1;
     background-color: rgba(7, 61, 66, var(--tw-bg-opacity))
+  }
+
+  .sm\:focus\:bg-nysds-heading:focus {
+    --tw-bg-opacity: 1;
+    background-color: rgba(36, 56, 126, var(--tw-bg-opacity))
   }
 
   .sm\:bg-none {
@@ -35578,6 +35789,11 @@
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(7, 61, 66, 0))
   }
 
+  .sm\:from-nysds-heading {
+    --tw-gradient-from: #24387E;
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(36, 56, 126, 0))
+  }
+
   .sm\:via-transparent {
     --tw-gradient-stops: var(--tw-gradient-from), transparent, var(--tw-gradient-to, rgba(0, 0, 0, 0))
   }
@@ -35922,6 +36138,10 @@
     --tw-gradient-stops: var(--tw-gradient-from), #073d42, var(--tw-gradient-to, rgba(7, 61, 66, 0))
   }
 
+  .sm\:via-nysds-heading {
+    --tw-gradient-stops: var(--tw-gradient-from), #24387E, var(--tw-gradient-to, rgba(36, 56, 126, 0))
+  }
+
   .sm\:to-transparent {
     --tw-gradient-to: transparent
   }
@@ -36264,6 +36484,10 @@
 
   .sm\:to-DOL-theme-darker {
     --tw-gradient-to: #073d42
+  }
+
+  .sm\:to-nysds-heading {
+    --tw-gradient-to: #24387E
   }
 
   .sm\:hover\:from-transparent:hover {
@@ -36696,6 +36920,11 @@
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(7, 61, 66, 0))
   }
 
+  .sm\:hover\:from-nysds-heading:hover {
+    --tw-gradient-from: #24387E;
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(36, 56, 126, 0))
+  }
+
   .sm\:hover\:via-transparent:hover {
     --tw-gradient-stops: var(--tw-gradient-from), transparent, var(--tw-gradient-to, rgba(0, 0, 0, 0))
   }
@@ -37040,6 +37269,10 @@
     --tw-gradient-stops: var(--tw-gradient-from), #073d42, var(--tw-gradient-to, rgba(7, 61, 66, 0))
   }
 
+  .sm\:hover\:via-nysds-heading:hover {
+    --tw-gradient-stops: var(--tw-gradient-from), #24387E, var(--tw-gradient-to, rgba(36, 56, 126, 0))
+  }
+
   .sm\:hover\:to-transparent:hover {
     --tw-gradient-to: transparent
   }
@@ -37382,6 +37615,10 @@
 
   .sm\:hover\:to-DOL-theme-darker:hover {
     --tw-gradient-to: #073d42
+  }
+
+  .sm\:hover\:to-nysds-heading:hover {
+    --tw-gradient-to: #24387E
   }
 
   .sm\:focus\:from-transparent:focus {
@@ -37814,6 +38051,11 @@
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(7, 61, 66, 0))
   }
 
+  .sm\:focus\:from-nysds-heading:focus {
+    --tw-gradient-from: #24387E;
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(36, 56, 126, 0))
+  }
+
   .sm\:focus\:via-transparent:focus {
     --tw-gradient-stops: var(--tw-gradient-from), transparent, var(--tw-gradient-to, rgba(0, 0, 0, 0))
   }
@@ -38158,6 +38400,10 @@
     --tw-gradient-stops: var(--tw-gradient-from), #073d42, var(--tw-gradient-to, rgba(7, 61, 66, 0))
   }
 
+  .sm\:focus\:via-nysds-heading:focus {
+    --tw-gradient-stops: var(--tw-gradient-from), #24387E, var(--tw-gradient-to, rgba(36, 56, 126, 0))
+  }
+
   .sm\:focus\:to-transparent:focus {
     --tw-gradient-to: transparent
   }
@@ -38500,6 +38746,10 @@
 
   .sm\:focus\:to-DOL-theme-darker:focus {
     --tw-gradient-to: #073d42
+  }
+
+  .sm\:focus\:to-nysds-heading:focus {
+    --tw-gradient-to: #24387E
   }
 
   .sm\:bg-opacity-0 {
@@ -39310,6 +39560,11 @@
     border-color: rgba(7, 61, 66, var(--tw-border-opacity))
   }
 
+  .sm\:border-nysds-heading {
+    --tw-border-opacity: 1;
+    border-color: rgba(36, 56, 126, var(--tw-border-opacity))
+  }
+
   .group:hover .sm\:group-hover\:border-transparent {
     border-color: transparent
   }
@@ -39736,6 +39991,11 @@
   .group:hover .sm\:group-hover\:border-DOL-theme-darker {
     --tw-border-opacity: 1;
     border-color: rgba(7, 61, 66, var(--tw-border-opacity))
+  }
+
+  .group:hover .sm\:group-hover\:border-nysds-heading {
+    --tw-border-opacity: 1;
+    border-color: rgba(36, 56, 126, var(--tw-border-opacity))
   }
 
   .sm\:focus-within\:border-transparent:focus-within {
@@ -40166,6 +40426,11 @@
     border-color: rgba(7, 61, 66, var(--tw-border-opacity))
   }
 
+  .sm\:focus-within\:border-nysds-heading:focus-within {
+    --tw-border-opacity: 1;
+    border-color: rgba(36, 56, 126, var(--tw-border-opacity))
+  }
+
   .sm\:hover\:border-transparent:hover {
     border-color: transparent
   }
@@ -40594,6 +40859,11 @@
     border-color: rgba(7, 61, 66, var(--tw-border-opacity))
   }
 
+  .sm\:hover\:border-nysds-heading:hover {
+    --tw-border-opacity: 1;
+    border-color: rgba(36, 56, 126, var(--tw-border-opacity))
+  }
+
   .sm\:focus\:border-transparent:focus {
     border-color: transparent
   }
@@ -41020,6 +41290,11 @@
   .sm\:focus\:border-DOL-theme-darker:focus {
     --tw-border-opacity: 1;
     border-color: rgba(7, 61, 66, var(--tw-border-opacity))
+  }
+
+  .sm\:focus\:border-nysds-heading:focus {
+    --tw-border-opacity: 1;
+    border-color: rgba(36, 56, 126, var(--tw-border-opacity))
   }
 
   .sm\:border-opacity-0 {
@@ -47905,6 +48180,21 @@
     color: rgba(7, 61, 66, var(--tw-placeholder-opacity))
   }
 
+  .sm\:placeholder-nysds-heading::-moz-placeholder {
+    --tw-placeholder-opacity: 1;
+    color: rgba(36, 56, 126, var(--tw-placeholder-opacity))
+  }
+
+  .sm\:placeholder-nysds-heading:-ms-input-placeholder {
+    --tw-placeholder-opacity: 1;
+    color: rgba(36, 56, 126, var(--tw-placeholder-opacity))
+  }
+
+  .sm\:placeholder-nysds-heading::placeholder {
+    --tw-placeholder-opacity: 1;
+    color: rgba(36, 56, 126, var(--tw-placeholder-opacity))
+  }
+
   .sm\:focus\:placeholder-transparent:focus::-moz-placeholder {
     color: transparent
   }
@@ -49187,6 +49477,21 @@
   .sm\:focus\:placeholder-DOL-theme-darker:focus::placeholder {
     --tw-placeholder-opacity: 1;
     color: rgba(7, 61, 66, var(--tw-placeholder-opacity))
+  }
+
+  .sm\:focus\:placeholder-nysds-heading:focus::-moz-placeholder {
+    --tw-placeholder-opacity: 1;
+    color: rgba(36, 56, 126, var(--tw-placeholder-opacity))
+  }
+
+  .sm\:focus\:placeholder-nysds-heading:focus:-ms-input-placeholder {
+    --tw-placeholder-opacity: 1;
+    color: rgba(36, 56, 126, var(--tw-placeholder-opacity))
+  }
+
+  .sm\:focus\:placeholder-nysds-heading:focus::placeholder {
+    --tw-placeholder-opacity: 1;
+    color: rgba(36, 56, 126, var(--tw-placeholder-opacity))
   }
 
   .sm\:placeholder-opacity-0::-moz-placeholder {
@@ -53063,6 +53368,10 @@
     --tw-ring-offset-color: #073d42
   }
 
+  .sm\:ring-offset-nysds-heading {
+    --tw-ring-offset-color: #24387E
+  }
+
   .sm\:focus-within\:ring-offset-transparent:focus-within {
     --tw-ring-offset-color: transparent
   }
@@ -53407,6 +53716,10 @@
     --tw-ring-offset-color: #073d42
   }
 
+  .sm\:focus-within\:ring-offset-nysds-heading:focus-within {
+    --tw-ring-offset-color: #24387E
+  }
+
   .sm\:focus\:ring-offset-transparent:focus {
     --tw-ring-offset-color: transparent
   }
@@ -53749,6 +54062,10 @@
 
   .sm\:focus\:ring-offset-DOL-theme-darker:focus {
     --tw-ring-offset-color: #073d42
+  }
+
+  .sm\:focus\:ring-offset-nysds-heading:focus {
+    --tw-ring-offset-color: #24387E
   }
 
   .sm\:ring-offset-0 {
@@ -54239,6 +54556,11 @@
     --tw-ring-color: rgba(7, 61, 66, var(--tw-ring-opacity))
   }
 
+  .sm\:ring-nysds-heading {
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgba(36, 56, 126, var(--tw-ring-opacity))
+  }
+
   .sm\:focus-within\:ring-transparent:focus-within {
     --tw-ring-color: transparent
   }
@@ -54667,6 +54989,11 @@
     --tw-ring-color: rgba(7, 61, 66, var(--tw-ring-opacity))
   }
 
+  .sm\:focus-within\:ring-nysds-heading:focus-within {
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgba(36, 56, 126, var(--tw-ring-opacity))
+  }
+
   .sm\:focus\:ring-transparent:focus {
     --tw-ring-color: transparent
   }
@@ -55093,6 +55420,11 @@
   .sm\:focus\:ring-DOL-theme-darker:focus {
     --tw-ring-opacity: 1;
     --tw-ring-color: rgba(7, 61, 66, var(--tw-ring-opacity))
+  }
+
+  .sm\:focus\:ring-nysds-heading:focus {
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgba(36, 56, 126, var(--tw-ring-opacity))
   }
 
   .sm\:ring-opacity-0 {
@@ -55747,6 +56079,11 @@
     color: rgba(7, 61, 66, var(--tw-text-opacity))
   }
 
+  .sm\:text-nysds-heading {
+    --tw-text-opacity: 1;
+    color: rgba(36, 56, 126, var(--tw-text-opacity))
+  }
+
   .sm\:visited\:text-transparent:visited {
     color: transparent
   }
@@ -56173,6 +56510,11 @@
   .sm\:visited\:text-DOL-theme-darker:visited {
     --tw-text-opacity: 1;
     color: rgba(7, 61, 66, var(--tw-text-opacity))
+  }
+
+  .sm\:visited\:text-nysds-heading:visited {
+    --tw-text-opacity: 1;
+    color: rgba(36, 56, 126, var(--tw-text-opacity))
   }
 
   .group:hover .sm\:group-hover\:text-transparent {
@@ -56603,6 +56945,11 @@
     color: rgba(7, 61, 66, var(--tw-text-opacity))
   }
 
+  .group:hover .sm\:group-hover\:text-nysds-heading {
+    --tw-text-opacity: 1;
+    color: rgba(36, 56, 126, var(--tw-text-opacity))
+  }
+
   .sm\:focus-within\:text-transparent:focus-within {
     color: transparent
   }
@@ -57029,6 +57376,11 @@
   .sm\:focus-within\:text-DOL-theme-darker:focus-within {
     --tw-text-opacity: 1;
     color: rgba(7, 61, 66, var(--tw-text-opacity))
+  }
+
+  .sm\:focus-within\:text-nysds-heading:focus-within {
+    --tw-text-opacity: 1;
+    color: rgba(36, 56, 126, var(--tw-text-opacity))
   }
 
   .sm\:hover\:text-transparent:hover {
@@ -57459,6 +57811,11 @@
     color: rgba(7, 61, 66, var(--tw-text-opacity))
   }
 
+  .sm\:hover\:text-nysds-heading:hover {
+    --tw-text-opacity: 1;
+    color: rgba(36, 56, 126, var(--tw-text-opacity))
+  }
+
   .sm\:focus\:text-transparent:focus {
     color: transparent
   }
@@ -57885,6 +58242,11 @@
   .sm\:focus\:text-DOL-theme-darker:focus {
     --tw-text-opacity: 1;
     color: rgba(7, 61, 66, var(--tw-text-opacity))
+  }
+
+  .sm\:focus\:text-nysds-heading:focus {
+    --tw-text-opacity: 1;
+    color: rgba(36, 56, 126, var(--tw-text-opacity))
   }
 
   .sm\:text-opacity-0 {
@@ -64120,6 +64482,11 @@
     border-color: rgba(7, 61, 66, var(--tw-divide-opacity))
   }
 
+  .md\:divide-nysds-heading > :not([hidden]) ~ :not([hidden]) {
+    --tw-divide-opacity: 1;
+    border-color: rgba(36, 56, 126, var(--tw-divide-opacity))
+  }
+
   .md\:divide-solid > :not([hidden]) ~ :not([hidden]) {
     border-style: solid
   }
@@ -64732,6 +65099,11 @@
     background-color: rgba(7, 61, 66, var(--tw-bg-opacity))
   }
 
+  .md\:bg-nysds-heading {
+    --tw-bg-opacity: 1;
+    background-color: rgba(36, 56, 126, var(--tw-bg-opacity))
+  }
+
   .group:hover .md\:group-hover\:bg-transparent {
     background-color: transparent
   }
@@ -65158,6 +65530,11 @@
   .group:hover .md\:group-hover\:bg-DOL-theme-darker {
     --tw-bg-opacity: 1;
     background-color: rgba(7, 61, 66, var(--tw-bg-opacity))
+  }
+
+  .group:hover .md\:group-hover\:bg-nysds-heading {
+    --tw-bg-opacity: 1;
+    background-color: rgba(36, 56, 126, var(--tw-bg-opacity))
   }
 
   .md\:focus-within\:bg-transparent:focus-within {
@@ -65588,6 +65965,11 @@
     background-color: rgba(7, 61, 66, var(--tw-bg-opacity))
   }
 
+  .md\:focus-within\:bg-nysds-heading:focus-within {
+    --tw-bg-opacity: 1;
+    background-color: rgba(36, 56, 126, var(--tw-bg-opacity))
+  }
+
   .md\:hover\:bg-transparent:hover {
     background-color: transparent
   }
@@ -66016,6 +66398,11 @@
     background-color: rgba(7, 61, 66, var(--tw-bg-opacity))
   }
 
+  .md\:hover\:bg-nysds-heading:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgba(36, 56, 126, var(--tw-bg-opacity))
+  }
+
   .md\:focus\:bg-transparent:focus {
     background-color: transparent
   }
@@ -66442,6 +66829,11 @@
   .md\:focus\:bg-DOL-theme-darker:focus {
     --tw-bg-opacity: 1;
     background-color: rgba(7, 61, 66, var(--tw-bg-opacity))
+  }
+
+  .md\:focus\:bg-nysds-heading:focus {
+    --tw-bg-opacity: 1;
+    background-color: rgba(36, 56, 126, var(--tw-bg-opacity))
   }
 
   .md\:bg-none {
@@ -66910,6 +67302,11 @@
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(7, 61, 66, 0))
   }
 
+  .md\:from-nysds-heading {
+    --tw-gradient-from: #24387E;
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(36, 56, 126, 0))
+  }
+
   .md\:via-transparent {
     --tw-gradient-stops: var(--tw-gradient-from), transparent, var(--tw-gradient-to, rgba(0, 0, 0, 0))
   }
@@ -67254,6 +67651,10 @@
     --tw-gradient-stops: var(--tw-gradient-from), #073d42, var(--tw-gradient-to, rgba(7, 61, 66, 0))
   }
 
+  .md\:via-nysds-heading {
+    --tw-gradient-stops: var(--tw-gradient-from), #24387E, var(--tw-gradient-to, rgba(36, 56, 126, 0))
+  }
+
   .md\:to-transparent {
     --tw-gradient-to: transparent
   }
@@ -67596,6 +67997,10 @@
 
   .md\:to-DOL-theme-darker {
     --tw-gradient-to: #073d42
+  }
+
+  .md\:to-nysds-heading {
+    --tw-gradient-to: #24387E
   }
 
   .md\:hover\:from-transparent:hover {
@@ -68028,6 +68433,11 @@
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(7, 61, 66, 0))
   }
 
+  .md\:hover\:from-nysds-heading:hover {
+    --tw-gradient-from: #24387E;
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(36, 56, 126, 0))
+  }
+
   .md\:hover\:via-transparent:hover {
     --tw-gradient-stops: var(--tw-gradient-from), transparent, var(--tw-gradient-to, rgba(0, 0, 0, 0))
   }
@@ -68372,6 +68782,10 @@
     --tw-gradient-stops: var(--tw-gradient-from), #073d42, var(--tw-gradient-to, rgba(7, 61, 66, 0))
   }
 
+  .md\:hover\:via-nysds-heading:hover {
+    --tw-gradient-stops: var(--tw-gradient-from), #24387E, var(--tw-gradient-to, rgba(36, 56, 126, 0))
+  }
+
   .md\:hover\:to-transparent:hover {
     --tw-gradient-to: transparent
   }
@@ -68714,6 +69128,10 @@
 
   .md\:hover\:to-DOL-theme-darker:hover {
     --tw-gradient-to: #073d42
+  }
+
+  .md\:hover\:to-nysds-heading:hover {
+    --tw-gradient-to: #24387E
   }
 
   .md\:focus\:from-transparent:focus {
@@ -69146,6 +69564,11 @@
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(7, 61, 66, 0))
   }
 
+  .md\:focus\:from-nysds-heading:focus {
+    --tw-gradient-from: #24387E;
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(36, 56, 126, 0))
+  }
+
   .md\:focus\:via-transparent:focus {
     --tw-gradient-stops: var(--tw-gradient-from), transparent, var(--tw-gradient-to, rgba(0, 0, 0, 0))
   }
@@ -69490,6 +69913,10 @@
     --tw-gradient-stops: var(--tw-gradient-from), #073d42, var(--tw-gradient-to, rgba(7, 61, 66, 0))
   }
 
+  .md\:focus\:via-nysds-heading:focus {
+    --tw-gradient-stops: var(--tw-gradient-from), #24387E, var(--tw-gradient-to, rgba(36, 56, 126, 0))
+  }
+
   .md\:focus\:to-transparent:focus {
     --tw-gradient-to: transparent
   }
@@ -69832,6 +70259,10 @@
 
   .md\:focus\:to-DOL-theme-darker:focus {
     --tw-gradient-to: #073d42
+  }
+
+  .md\:focus\:to-nysds-heading:focus {
+    --tw-gradient-to: #24387E
   }
 
   .md\:bg-opacity-0 {
@@ -70642,6 +71073,11 @@
     border-color: rgba(7, 61, 66, var(--tw-border-opacity))
   }
 
+  .md\:border-nysds-heading {
+    --tw-border-opacity: 1;
+    border-color: rgba(36, 56, 126, var(--tw-border-opacity))
+  }
+
   .group:hover .md\:group-hover\:border-transparent {
     border-color: transparent
   }
@@ -71068,6 +71504,11 @@
   .group:hover .md\:group-hover\:border-DOL-theme-darker {
     --tw-border-opacity: 1;
     border-color: rgba(7, 61, 66, var(--tw-border-opacity))
+  }
+
+  .group:hover .md\:group-hover\:border-nysds-heading {
+    --tw-border-opacity: 1;
+    border-color: rgba(36, 56, 126, var(--tw-border-opacity))
   }
 
   .md\:focus-within\:border-transparent:focus-within {
@@ -71498,6 +71939,11 @@
     border-color: rgba(7, 61, 66, var(--tw-border-opacity))
   }
 
+  .md\:focus-within\:border-nysds-heading:focus-within {
+    --tw-border-opacity: 1;
+    border-color: rgba(36, 56, 126, var(--tw-border-opacity))
+  }
+
   .md\:hover\:border-transparent:hover {
     border-color: transparent
   }
@@ -71926,6 +72372,11 @@
     border-color: rgba(7, 61, 66, var(--tw-border-opacity))
   }
 
+  .md\:hover\:border-nysds-heading:hover {
+    --tw-border-opacity: 1;
+    border-color: rgba(36, 56, 126, var(--tw-border-opacity))
+  }
+
   .md\:focus\:border-transparent:focus {
     border-color: transparent
   }
@@ -72352,6 +72803,11 @@
   .md\:focus\:border-DOL-theme-darker:focus {
     --tw-border-opacity: 1;
     border-color: rgba(7, 61, 66, var(--tw-border-opacity))
+  }
+
+  .md\:focus\:border-nysds-heading:focus {
+    --tw-border-opacity: 1;
+    border-color: rgba(36, 56, 126, var(--tw-border-opacity))
   }
 
   .md\:border-opacity-0 {
@@ -79237,6 +79693,21 @@
     color: rgba(7, 61, 66, var(--tw-placeholder-opacity))
   }
 
+  .md\:placeholder-nysds-heading::-moz-placeholder {
+    --tw-placeholder-opacity: 1;
+    color: rgba(36, 56, 126, var(--tw-placeholder-opacity))
+  }
+
+  .md\:placeholder-nysds-heading:-ms-input-placeholder {
+    --tw-placeholder-opacity: 1;
+    color: rgba(36, 56, 126, var(--tw-placeholder-opacity))
+  }
+
+  .md\:placeholder-nysds-heading::placeholder {
+    --tw-placeholder-opacity: 1;
+    color: rgba(36, 56, 126, var(--tw-placeholder-opacity))
+  }
+
   .md\:focus\:placeholder-transparent:focus::-moz-placeholder {
     color: transparent
   }
@@ -80519,6 +80990,21 @@
   .md\:focus\:placeholder-DOL-theme-darker:focus::placeholder {
     --tw-placeholder-opacity: 1;
     color: rgba(7, 61, 66, var(--tw-placeholder-opacity))
+  }
+
+  .md\:focus\:placeholder-nysds-heading:focus::-moz-placeholder {
+    --tw-placeholder-opacity: 1;
+    color: rgba(36, 56, 126, var(--tw-placeholder-opacity))
+  }
+
+  .md\:focus\:placeholder-nysds-heading:focus:-ms-input-placeholder {
+    --tw-placeholder-opacity: 1;
+    color: rgba(36, 56, 126, var(--tw-placeholder-opacity))
+  }
+
+  .md\:focus\:placeholder-nysds-heading:focus::placeholder {
+    --tw-placeholder-opacity: 1;
+    color: rgba(36, 56, 126, var(--tw-placeholder-opacity))
   }
 
   .md\:placeholder-opacity-0::-moz-placeholder {
@@ -84395,6 +84881,10 @@
     --tw-ring-offset-color: #073d42
   }
 
+  .md\:ring-offset-nysds-heading {
+    --tw-ring-offset-color: #24387E
+  }
+
   .md\:focus-within\:ring-offset-transparent:focus-within {
     --tw-ring-offset-color: transparent
   }
@@ -84739,6 +85229,10 @@
     --tw-ring-offset-color: #073d42
   }
 
+  .md\:focus-within\:ring-offset-nysds-heading:focus-within {
+    --tw-ring-offset-color: #24387E
+  }
+
   .md\:focus\:ring-offset-transparent:focus {
     --tw-ring-offset-color: transparent
   }
@@ -85081,6 +85575,10 @@
 
   .md\:focus\:ring-offset-DOL-theme-darker:focus {
     --tw-ring-offset-color: #073d42
+  }
+
+  .md\:focus\:ring-offset-nysds-heading:focus {
+    --tw-ring-offset-color: #24387E
   }
 
   .md\:ring-offset-0 {
@@ -85571,6 +86069,11 @@
     --tw-ring-color: rgba(7, 61, 66, var(--tw-ring-opacity))
   }
 
+  .md\:ring-nysds-heading {
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgba(36, 56, 126, var(--tw-ring-opacity))
+  }
+
   .md\:focus-within\:ring-transparent:focus-within {
     --tw-ring-color: transparent
   }
@@ -85999,6 +86502,11 @@
     --tw-ring-color: rgba(7, 61, 66, var(--tw-ring-opacity))
   }
 
+  .md\:focus-within\:ring-nysds-heading:focus-within {
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgba(36, 56, 126, var(--tw-ring-opacity))
+  }
+
   .md\:focus\:ring-transparent:focus {
     --tw-ring-color: transparent
   }
@@ -86425,6 +86933,11 @@
   .md\:focus\:ring-DOL-theme-darker:focus {
     --tw-ring-opacity: 1;
     --tw-ring-color: rgba(7, 61, 66, var(--tw-ring-opacity))
+  }
+
+  .md\:focus\:ring-nysds-heading:focus {
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgba(36, 56, 126, var(--tw-ring-opacity))
   }
 
   .md\:ring-opacity-0 {
@@ -87079,6 +87592,11 @@
     color: rgba(7, 61, 66, var(--tw-text-opacity))
   }
 
+  .md\:text-nysds-heading {
+    --tw-text-opacity: 1;
+    color: rgba(36, 56, 126, var(--tw-text-opacity))
+  }
+
   .md\:visited\:text-transparent:visited {
     color: transparent
   }
@@ -87505,6 +88023,11 @@
   .md\:visited\:text-DOL-theme-darker:visited {
     --tw-text-opacity: 1;
     color: rgba(7, 61, 66, var(--tw-text-opacity))
+  }
+
+  .md\:visited\:text-nysds-heading:visited {
+    --tw-text-opacity: 1;
+    color: rgba(36, 56, 126, var(--tw-text-opacity))
   }
 
   .group:hover .md\:group-hover\:text-transparent {
@@ -87935,6 +88458,11 @@
     color: rgba(7, 61, 66, var(--tw-text-opacity))
   }
 
+  .group:hover .md\:group-hover\:text-nysds-heading {
+    --tw-text-opacity: 1;
+    color: rgba(36, 56, 126, var(--tw-text-opacity))
+  }
+
   .md\:focus-within\:text-transparent:focus-within {
     color: transparent
   }
@@ -88361,6 +88889,11 @@
   .md\:focus-within\:text-DOL-theme-darker:focus-within {
     --tw-text-opacity: 1;
     color: rgba(7, 61, 66, var(--tw-text-opacity))
+  }
+
+  .md\:focus-within\:text-nysds-heading:focus-within {
+    --tw-text-opacity: 1;
+    color: rgba(36, 56, 126, var(--tw-text-opacity))
   }
 
   .md\:hover\:text-transparent:hover {
@@ -88791,6 +89324,11 @@
     color: rgba(7, 61, 66, var(--tw-text-opacity))
   }
 
+  .md\:hover\:text-nysds-heading:hover {
+    --tw-text-opacity: 1;
+    color: rgba(36, 56, 126, var(--tw-text-opacity))
+  }
+
   .md\:focus\:text-transparent:focus {
     color: transparent
   }
@@ -89217,6 +89755,11 @@
   .md\:focus\:text-DOL-theme-darker:focus {
     --tw-text-opacity: 1;
     color: rgba(7, 61, 66, var(--tw-text-opacity))
+  }
+
+  .md\:focus\:text-nysds-heading:focus {
+    --tw-text-opacity: 1;
+    color: rgba(36, 56, 126, var(--tw-text-opacity))
   }
 
   .md\:text-opacity-0 {
@@ -95452,6 +95995,11 @@
     border-color: rgba(7, 61, 66, var(--tw-divide-opacity))
   }
 
+  .lg\:divide-nysds-heading > :not([hidden]) ~ :not([hidden]) {
+    --tw-divide-opacity: 1;
+    border-color: rgba(36, 56, 126, var(--tw-divide-opacity))
+  }
+
   .lg\:divide-solid > :not([hidden]) ~ :not([hidden]) {
     border-style: solid
   }
@@ -96064,6 +96612,11 @@
     background-color: rgba(7, 61, 66, var(--tw-bg-opacity))
   }
 
+  .lg\:bg-nysds-heading {
+    --tw-bg-opacity: 1;
+    background-color: rgba(36, 56, 126, var(--tw-bg-opacity))
+  }
+
   .group:hover .lg\:group-hover\:bg-transparent {
     background-color: transparent
   }
@@ -96490,6 +97043,11 @@
   .group:hover .lg\:group-hover\:bg-DOL-theme-darker {
     --tw-bg-opacity: 1;
     background-color: rgba(7, 61, 66, var(--tw-bg-opacity))
+  }
+
+  .group:hover .lg\:group-hover\:bg-nysds-heading {
+    --tw-bg-opacity: 1;
+    background-color: rgba(36, 56, 126, var(--tw-bg-opacity))
   }
 
   .lg\:focus-within\:bg-transparent:focus-within {
@@ -96920,6 +97478,11 @@
     background-color: rgba(7, 61, 66, var(--tw-bg-opacity))
   }
 
+  .lg\:focus-within\:bg-nysds-heading:focus-within {
+    --tw-bg-opacity: 1;
+    background-color: rgba(36, 56, 126, var(--tw-bg-opacity))
+  }
+
   .lg\:hover\:bg-transparent:hover {
     background-color: transparent
   }
@@ -97348,6 +97911,11 @@
     background-color: rgba(7, 61, 66, var(--tw-bg-opacity))
   }
 
+  .lg\:hover\:bg-nysds-heading:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgba(36, 56, 126, var(--tw-bg-opacity))
+  }
+
   .lg\:focus\:bg-transparent:focus {
     background-color: transparent
   }
@@ -97774,6 +98342,11 @@
   .lg\:focus\:bg-DOL-theme-darker:focus {
     --tw-bg-opacity: 1;
     background-color: rgba(7, 61, 66, var(--tw-bg-opacity))
+  }
+
+  .lg\:focus\:bg-nysds-heading:focus {
+    --tw-bg-opacity: 1;
+    background-color: rgba(36, 56, 126, var(--tw-bg-opacity))
   }
 
   .lg\:bg-none {
@@ -98242,6 +98815,11 @@
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(7, 61, 66, 0))
   }
 
+  .lg\:from-nysds-heading {
+    --tw-gradient-from: #24387E;
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(36, 56, 126, 0))
+  }
+
   .lg\:via-transparent {
     --tw-gradient-stops: var(--tw-gradient-from), transparent, var(--tw-gradient-to, rgba(0, 0, 0, 0))
   }
@@ -98586,6 +99164,10 @@
     --tw-gradient-stops: var(--tw-gradient-from), #073d42, var(--tw-gradient-to, rgba(7, 61, 66, 0))
   }
 
+  .lg\:via-nysds-heading {
+    --tw-gradient-stops: var(--tw-gradient-from), #24387E, var(--tw-gradient-to, rgba(36, 56, 126, 0))
+  }
+
   .lg\:to-transparent {
     --tw-gradient-to: transparent
   }
@@ -98928,6 +99510,10 @@
 
   .lg\:to-DOL-theme-darker {
     --tw-gradient-to: #073d42
+  }
+
+  .lg\:to-nysds-heading {
+    --tw-gradient-to: #24387E
   }
 
   .lg\:hover\:from-transparent:hover {
@@ -99360,6 +99946,11 @@
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(7, 61, 66, 0))
   }
 
+  .lg\:hover\:from-nysds-heading:hover {
+    --tw-gradient-from: #24387E;
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(36, 56, 126, 0))
+  }
+
   .lg\:hover\:via-transparent:hover {
     --tw-gradient-stops: var(--tw-gradient-from), transparent, var(--tw-gradient-to, rgba(0, 0, 0, 0))
   }
@@ -99704,6 +100295,10 @@
     --tw-gradient-stops: var(--tw-gradient-from), #073d42, var(--tw-gradient-to, rgba(7, 61, 66, 0))
   }
 
+  .lg\:hover\:via-nysds-heading:hover {
+    --tw-gradient-stops: var(--tw-gradient-from), #24387E, var(--tw-gradient-to, rgba(36, 56, 126, 0))
+  }
+
   .lg\:hover\:to-transparent:hover {
     --tw-gradient-to: transparent
   }
@@ -100046,6 +100641,10 @@
 
   .lg\:hover\:to-DOL-theme-darker:hover {
     --tw-gradient-to: #073d42
+  }
+
+  .lg\:hover\:to-nysds-heading:hover {
+    --tw-gradient-to: #24387E
   }
 
   .lg\:focus\:from-transparent:focus {
@@ -100478,6 +101077,11 @@
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(7, 61, 66, 0))
   }
 
+  .lg\:focus\:from-nysds-heading:focus {
+    --tw-gradient-from: #24387E;
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(36, 56, 126, 0))
+  }
+
   .lg\:focus\:via-transparent:focus {
     --tw-gradient-stops: var(--tw-gradient-from), transparent, var(--tw-gradient-to, rgba(0, 0, 0, 0))
   }
@@ -100822,6 +101426,10 @@
     --tw-gradient-stops: var(--tw-gradient-from), #073d42, var(--tw-gradient-to, rgba(7, 61, 66, 0))
   }
 
+  .lg\:focus\:via-nysds-heading:focus {
+    --tw-gradient-stops: var(--tw-gradient-from), #24387E, var(--tw-gradient-to, rgba(36, 56, 126, 0))
+  }
+
   .lg\:focus\:to-transparent:focus {
     --tw-gradient-to: transparent
   }
@@ -101164,6 +101772,10 @@
 
   .lg\:focus\:to-DOL-theme-darker:focus {
     --tw-gradient-to: #073d42
+  }
+
+  .lg\:focus\:to-nysds-heading:focus {
+    --tw-gradient-to: #24387E
   }
 
   .lg\:bg-opacity-0 {
@@ -101974,6 +102586,11 @@
     border-color: rgba(7, 61, 66, var(--tw-border-opacity))
   }
 
+  .lg\:border-nysds-heading {
+    --tw-border-opacity: 1;
+    border-color: rgba(36, 56, 126, var(--tw-border-opacity))
+  }
+
   .group:hover .lg\:group-hover\:border-transparent {
     border-color: transparent
   }
@@ -102400,6 +103017,11 @@
   .group:hover .lg\:group-hover\:border-DOL-theme-darker {
     --tw-border-opacity: 1;
     border-color: rgba(7, 61, 66, var(--tw-border-opacity))
+  }
+
+  .group:hover .lg\:group-hover\:border-nysds-heading {
+    --tw-border-opacity: 1;
+    border-color: rgba(36, 56, 126, var(--tw-border-opacity))
   }
 
   .lg\:focus-within\:border-transparent:focus-within {
@@ -102830,6 +103452,11 @@
     border-color: rgba(7, 61, 66, var(--tw-border-opacity))
   }
 
+  .lg\:focus-within\:border-nysds-heading:focus-within {
+    --tw-border-opacity: 1;
+    border-color: rgba(36, 56, 126, var(--tw-border-opacity))
+  }
+
   .lg\:hover\:border-transparent:hover {
     border-color: transparent
   }
@@ -103258,6 +103885,11 @@
     border-color: rgba(7, 61, 66, var(--tw-border-opacity))
   }
 
+  .lg\:hover\:border-nysds-heading:hover {
+    --tw-border-opacity: 1;
+    border-color: rgba(36, 56, 126, var(--tw-border-opacity))
+  }
+
   .lg\:focus\:border-transparent:focus {
     border-color: transparent
   }
@@ -103684,6 +104316,11 @@
   .lg\:focus\:border-DOL-theme-darker:focus {
     --tw-border-opacity: 1;
     border-color: rgba(7, 61, 66, var(--tw-border-opacity))
+  }
+
+  .lg\:focus\:border-nysds-heading:focus {
+    --tw-border-opacity: 1;
+    border-color: rgba(36, 56, 126, var(--tw-border-opacity))
   }
 
   .lg\:border-opacity-0 {
@@ -110569,6 +111206,21 @@
     color: rgba(7, 61, 66, var(--tw-placeholder-opacity))
   }
 
+  .lg\:placeholder-nysds-heading::-moz-placeholder {
+    --tw-placeholder-opacity: 1;
+    color: rgba(36, 56, 126, var(--tw-placeholder-opacity))
+  }
+
+  .lg\:placeholder-nysds-heading:-ms-input-placeholder {
+    --tw-placeholder-opacity: 1;
+    color: rgba(36, 56, 126, var(--tw-placeholder-opacity))
+  }
+
+  .lg\:placeholder-nysds-heading::placeholder {
+    --tw-placeholder-opacity: 1;
+    color: rgba(36, 56, 126, var(--tw-placeholder-opacity))
+  }
+
   .lg\:focus\:placeholder-transparent:focus::-moz-placeholder {
     color: transparent
   }
@@ -111851,6 +112503,21 @@
   .lg\:focus\:placeholder-DOL-theme-darker:focus::placeholder {
     --tw-placeholder-opacity: 1;
     color: rgba(7, 61, 66, var(--tw-placeholder-opacity))
+  }
+
+  .lg\:focus\:placeholder-nysds-heading:focus::-moz-placeholder {
+    --tw-placeholder-opacity: 1;
+    color: rgba(36, 56, 126, var(--tw-placeholder-opacity))
+  }
+
+  .lg\:focus\:placeholder-nysds-heading:focus:-ms-input-placeholder {
+    --tw-placeholder-opacity: 1;
+    color: rgba(36, 56, 126, var(--tw-placeholder-opacity))
+  }
+
+  .lg\:focus\:placeholder-nysds-heading:focus::placeholder {
+    --tw-placeholder-opacity: 1;
+    color: rgba(36, 56, 126, var(--tw-placeholder-opacity))
   }
 
   .lg\:placeholder-opacity-0::-moz-placeholder {
@@ -115727,6 +116394,10 @@
     --tw-ring-offset-color: #073d42
   }
 
+  .lg\:ring-offset-nysds-heading {
+    --tw-ring-offset-color: #24387E
+  }
+
   .lg\:focus-within\:ring-offset-transparent:focus-within {
     --tw-ring-offset-color: transparent
   }
@@ -116071,6 +116742,10 @@
     --tw-ring-offset-color: #073d42
   }
 
+  .lg\:focus-within\:ring-offset-nysds-heading:focus-within {
+    --tw-ring-offset-color: #24387E
+  }
+
   .lg\:focus\:ring-offset-transparent:focus {
     --tw-ring-offset-color: transparent
   }
@@ -116413,6 +117088,10 @@
 
   .lg\:focus\:ring-offset-DOL-theme-darker:focus {
     --tw-ring-offset-color: #073d42
+  }
+
+  .lg\:focus\:ring-offset-nysds-heading:focus {
+    --tw-ring-offset-color: #24387E
   }
 
   .lg\:ring-offset-0 {
@@ -116903,6 +117582,11 @@
     --tw-ring-color: rgba(7, 61, 66, var(--tw-ring-opacity))
   }
 
+  .lg\:ring-nysds-heading {
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgba(36, 56, 126, var(--tw-ring-opacity))
+  }
+
   .lg\:focus-within\:ring-transparent:focus-within {
     --tw-ring-color: transparent
   }
@@ -117331,6 +118015,11 @@
     --tw-ring-color: rgba(7, 61, 66, var(--tw-ring-opacity))
   }
 
+  .lg\:focus-within\:ring-nysds-heading:focus-within {
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgba(36, 56, 126, var(--tw-ring-opacity))
+  }
+
   .lg\:focus\:ring-transparent:focus {
     --tw-ring-color: transparent
   }
@@ -117757,6 +118446,11 @@
   .lg\:focus\:ring-DOL-theme-darker:focus {
     --tw-ring-opacity: 1;
     --tw-ring-color: rgba(7, 61, 66, var(--tw-ring-opacity))
+  }
+
+  .lg\:focus\:ring-nysds-heading:focus {
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgba(36, 56, 126, var(--tw-ring-opacity))
   }
 
   .lg\:ring-opacity-0 {
@@ -118411,6 +119105,11 @@
     color: rgba(7, 61, 66, var(--tw-text-opacity))
   }
 
+  .lg\:text-nysds-heading {
+    --tw-text-opacity: 1;
+    color: rgba(36, 56, 126, var(--tw-text-opacity))
+  }
+
   .lg\:visited\:text-transparent:visited {
     color: transparent
   }
@@ -118837,6 +119536,11 @@
   .lg\:visited\:text-DOL-theme-darker:visited {
     --tw-text-opacity: 1;
     color: rgba(7, 61, 66, var(--tw-text-opacity))
+  }
+
+  .lg\:visited\:text-nysds-heading:visited {
+    --tw-text-opacity: 1;
+    color: rgba(36, 56, 126, var(--tw-text-opacity))
   }
 
   .group:hover .lg\:group-hover\:text-transparent {
@@ -119267,6 +119971,11 @@
     color: rgba(7, 61, 66, var(--tw-text-opacity))
   }
 
+  .group:hover .lg\:group-hover\:text-nysds-heading {
+    --tw-text-opacity: 1;
+    color: rgba(36, 56, 126, var(--tw-text-opacity))
+  }
+
   .lg\:focus-within\:text-transparent:focus-within {
     color: transparent
   }
@@ -119693,6 +120402,11 @@
   .lg\:focus-within\:text-DOL-theme-darker:focus-within {
     --tw-text-opacity: 1;
     color: rgba(7, 61, 66, var(--tw-text-opacity))
+  }
+
+  .lg\:focus-within\:text-nysds-heading:focus-within {
+    --tw-text-opacity: 1;
+    color: rgba(36, 56, 126, var(--tw-text-opacity))
   }
 
   .lg\:hover\:text-transparent:hover {
@@ -120123,6 +120837,11 @@
     color: rgba(7, 61, 66, var(--tw-text-opacity))
   }
 
+  .lg\:hover\:text-nysds-heading:hover {
+    --tw-text-opacity: 1;
+    color: rgba(36, 56, 126, var(--tw-text-opacity))
+  }
+
   .lg\:focus\:text-transparent:focus {
     color: transparent
   }
@@ -120549,6 +121268,11 @@
   .lg\:focus\:text-DOL-theme-darker:focus {
     --tw-text-opacity: 1;
     color: rgba(7, 61, 66, var(--tw-text-opacity))
+  }
+
+  .lg\:focus\:text-nysds-heading:focus {
+    --tw-text-opacity: 1;
+    color: rgba(36, 56, 126, var(--tw-text-opacity))
   }
 
   .lg\:text-opacity-0 {
@@ -126784,6 +127508,11 @@
     border-color: rgba(7, 61, 66, var(--tw-divide-opacity))
   }
 
+  .xl\:divide-nysds-heading > :not([hidden]) ~ :not([hidden]) {
+    --tw-divide-opacity: 1;
+    border-color: rgba(36, 56, 126, var(--tw-divide-opacity))
+  }
+
   .xl\:divide-solid > :not([hidden]) ~ :not([hidden]) {
     border-style: solid
   }
@@ -127396,6 +128125,11 @@
     background-color: rgba(7, 61, 66, var(--tw-bg-opacity))
   }
 
+  .xl\:bg-nysds-heading {
+    --tw-bg-opacity: 1;
+    background-color: rgba(36, 56, 126, var(--tw-bg-opacity))
+  }
+
   .group:hover .xl\:group-hover\:bg-transparent {
     background-color: transparent
   }
@@ -127822,6 +128556,11 @@
   .group:hover .xl\:group-hover\:bg-DOL-theme-darker {
     --tw-bg-opacity: 1;
     background-color: rgba(7, 61, 66, var(--tw-bg-opacity))
+  }
+
+  .group:hover .xl\:group-hover\:bg-nysds-heading {
+    --tw-bg-opacity: 1;
+    background-color: rgba(36, 56, 126, var(--tw-bg-opacity))
   }
 
   .xl\:focus-within\:bg-transparent:focus-within {
@@ -128252,6 +128991,11 @@
     background-color: rgba(7, 61, 66, var(--tw-bg-opacity))
   }
 
+  .xl\:focus-within\:bg-nysds-heading:focus-within {
+    --tw-bg-opacity: 1;
+    background-color: rgba(36, 56, 126, var(--tw-bg-opacity))
+  }
+
   .xl\:hover\:bg-transparent:hover {
     background-color: transparent
   }
@@ -128680,6 +129424,11 @@
     background-color: rgba(7, 61, 66, var(--tw-bg-opacity))
   }
 
+  .xl\:hover\:bg-nysds-heading:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgba(36, 56, 126, var(--tw-bg-opacity))
+  }
+
   .xl\:focus\:bg-transparent:focus {
     background-color: transparent
   }
@@ -129106,6 +129855,11 @@
   .xl\:focus\:bg-DOL-theme-darker:focus {
     --tw-bg-opacity: 1;
     background-color: rgba(7, 61, 66, var(--tw-bg-opacity))
+  }
+
+  .xl\:focus\:bg-nysds-heading:focus {
+    --tw-bg-opacity: 1;
+    background-color: rgba(36, 56, 126, var(--tw-bg-opacity))
   }
 
   .xl\:bg-none {
@@ -129574,6 +130328,11 @@
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(7, 61, 66, 0))
   }
 
+  .xl\:from-nysds-heading {
+    --tw-gradient-from: #24387E;
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(36, 56, 126, 0))
+  }
+
   .xl\:via-transparent {
     --tw-gradient-stops: var(--tw-gradient-from), transparent, var(--tw-gradient-to, rgba(0, 0, 0, 0))
   }
@@ -129918,6 +130677,10 @@
     --tw-gradient-stops: var(--tw-gradient-from), #073d42, var(--tw-gradient-to, rgba(7, 61, 66, 0))
   }
 
+  .xl\:via-nysds-heading {
+    --tw-gradient-stops: var(--tw-gradient-from), #24387E, var(--tw-gradient-to, rgba(36, 56, 126, 0))
+  }
+
   .xl\:to-transparent {
     --tw-gradient-to: transparent
   }
@@ -130260,6 +131023,10 @@
 
   .xl\:to-DOL-theme-darker {
     --tw-gradient-to: #073d42
+  }
+
+  .xl\:to-nysds-heading {
+    --tw-gradient-to: #24387E
   }
 
   .xl\:hover\:from-transparent:hover {
@@ -130692,6 +131459,11 @@
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(7, 61, 66, 0))
   }
 
+  .xl\:hover\:from-nysds-heading:hover {
+    --tw-gradient-from: #24387E;
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(36, 56, 126, 0))
+  }
+
   .xl\:hover\:via-transparent:hover {
     --tw-gradient-stops: var(--tw-gradient-from), transparent, var(--tw-gradient-to, rgba(0, 0, 0, 0))
   }
@@ -131036,6 +131808,10 @@
     --tw-gradient-stops: var(--tw-gradient-from), #073d42, var(--tw-gradient-to, rgba(7, 61, 66, 0))
   }
 
+  .xl\:hover\:via-nysds-heading:hover {
+    --tw-gradient-stops: var(--tw-gradient-from), #24387E, var(--tw-gradient-to, rgba(36, 56, 126, 0))
+  }
+
   .xl\:hover\:to-transparent:hover {
     --tw-gradient-to: transparent
   }
@@ -131378,6 +132154,10 @@
 
   .xl\:hover\:to-DOL-theme-darker:hover {
     --tw-gradient-to: #073d42
+  }
+
+  .xl\:hover\:to-nysds-heading:hover {
+    --tw-gradient-to: #24387E
   }
 
   .xl\:focus\:from-transparent:focus {
@@ -131810,6 +132590,11 @@
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(7, 61, 66, 0))
   }
 
+  .xl\:focus\:from-nysds-heading:focus {
+    --tw-gradient-from: #24387E;
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(36, 56, 126, 0))
+  }
+
   .xl\:focus\:via-transparent:focus {
     --tw-gradient-stops: var(--tw-gradient-from), transparent, var(--tw-gradient-to, rgba(0, 0, 0, 0))
   }
@@ -132154,6 +132939,10 @@
     --tw-gradient-stops: var(--tw-gradient-from), #073d42, var(--tw-gradient-to, rgba(7, 61, 66, 0))
   }
 
+  .xl\:focus\:via-nysds-heading:focus {
+    --tw-gradient-stops: var(--tw-gradient-from), #24387E, var(--tw-gradient-to, rgba(36, 56, 126, 0))
+  }
+
   .xl\:focus\:to-transparent:focus {
     --tw-gradient-to: transparent
   }
@@ -132496,6 +133285,10 @@
 
   .xl\:focus\:to-DOL-theme-darker:focus {
     --tw-gradient-to: #073d42
+  }
+
+  .xl\:focus\:to-nysds-heading:focus {
+    --tw-gradient-to: #24387E
   }
 
   .xl\:bg-opacity-0 {
@@ -133306,6 +134099,11 @@
     border-color: rgba(7, 61, 66, var(--tw-border-opacity))
   }
 
+  .xl\:border-nysds-heading {
+    --tw-border-opacity: 1;
+    border-color: rgba(36, 56, 126, var(--tw-border-opacity))
+  }
+
   .group:hover .xl\:group-hover\:border-transparent {
     border-color: transparent
   }
@@ -133732,6 +134530,11 @@
   .group:hover .xl\:group-hover\:border-DOL-theme-darker {
     --tw-border-opacity: 1;
     border-color: rgba(7, 61, 66, var(--tw-border-opacity))
+  }
+
+  .group:hover .xl\:group-hover\:border-nysds-heading {
+    --tw-border-opacity: 1;
+    border-color: rgba(36, 56, 126, var(--tw-border-opacity))
   }
 
   .xl\:focus-within\:border-transparent:focus-within {
@@ -134162,6 +134965,11 @@
     border-color: rgba(7, 61, 66, var(--tw-border-opacity))
   }
 
+  .xl\:focus-within\:border-nysds-heading:focus-within {
+    --tw-border-opacity: 1;
+    border-color: rgba(36, 56, 126, var(--tw-border-opacity))
+  }
+
   .xl\:hover\:border-transparent:hover {
     border-color: transparent
   }
@@ -134590,6 +135398,11 @@
     border-color: rgba(7, 61, 66, var(--tw-border-opacity))
   }
 
+  .xl\:hover\:border-nysds-heading:hover {
+    --tw-border-opacity: 1;
+    border-color: rgba(36, 56, 126, var(--tw-border-opacity))
+  }
+
   .xl\:focus\:border-transparent:focus {
     border-color: transparent
   }
@@ -135016,6 +135829,11 @@
   .xl\:focus\:border-DOL-theme-darker:focus {
     --tw-border-opacity: 1;
     border-color: rgba(7, 61, 66, var(--tw-border-opacity))
+  }
+
+  .xl\:focus\:border-nysds-heading:focus {
+    --tw-border-opacity: 1;
+    border-color: rgba(36, 56, 126, var(--tw-border-opacity))
   }
 
   .xl\:border-opacity-0 {
@@ -141901,6 +142719,21 @@
     color: rgba(7, 61, 66, var(--tw-placeholder-opacity))
   }
 
+  .xl\:placeholder-nysds-heading::-moz-placeholder {
+    --tw-placeholder-opacity: 1;
+    color: rgba(36, 56, 126, var(--tw-placeholder-opacity))
+  }
+
+  .xl\:placeholder-nysds-heading:-ms-input-placeholder {
+    --tw-placeholder-opacity: 1;
+    color: rgba(36, 56, 126, var(--tw-placeholder-opacity))
+  }
+
+  .xl\:placeholder-nysds-heading::placeholder {
+    --tw-placeholder-opacity: 1;
+    color: rgba(36, 56, 126, var(--tw-placeholder-opacity))
+  }
+
   .xl\:focus\:placeholder-transparent:focus::-moz-placeholder {
     color: transparent
   }
@@ -143183,6 +144016,21 @@
   .xl\:focus\:placeholder-DOL-theme-darker:focus::placeholder {
     --tw-placeholder-opacity: 1;
     color: rgba(7, 61, 66, var(--tw-placeholder-opacity))
+  }
+
+  .xl\:focus\:placeholder-nysds-heading:focus::-moz-placeholder {
+    --tw-placeholder-opacity: 1;
+    color: rgba(36, 56, 126, var(--tw-placeholder-opacity))
+  }
+
+  .xl\:focus\:placeholder-nysds-heading:focus:-ms-input-placeholder {
+    --tw-placeholder-opacity: 1;
+    color: rgba(36, 56, 126, var(--tw-placeholder-opacity))
+  }
+
+  .xl\:focus\:placeholder-nysds-heading:focus::placeholder {
+    --tw-placeholder-opacity: 1;
+    color: rgba(36, 56, 126, var(--tw-placeholder-opacity))
   }
 
   .xl\:placeholder-opacity-0::-moz-placeholder {
@@ -147059,6 +147907,10 @@
     --tw-ring-offset-color: #073d42
   }
 
+  .xl\:ring-offset-nysds-heading {
+    --tw-ring-offset-color: #24387E
+  }
+
   .xl\:focus-within\:ring-offset-transparent:focus-within {
     --tw-ring-offset-color: transparent
   }
@@ -147403,6 +148255,10 @@
     --tw-ring-offset-color: #073d42
   }
 
+  .xl\:focus-within\:ring-offset-nysds-heading:focus-within {
+    --tw-ring-offset-color: #24387E
+  }
+
   .xl\:focus\:ring-offset-transparent:focus {
     --tw-ring-offset-color: transparent
   }
@@ -147745,6 +148601,10 @@
 
   .xl\:focus\:ring-offset-DOL-theme-darker:focus {
     --tw-ring-offset-color: #073d42
+  }
+
+  .xl\:focus\:ring-offset-nysds-heading:focus {
+    --tw-ring-offset-color: #24387E
   }
 
   .xl\:ring-offset-0 {
@@ -148235,6 +149095,11 @@
     --tw-ring-color: rgba(7, 61, 66, var(--tw-ring-opacity))
   }
 
+  .xl\:ring-nysds-heading {
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgba(36, 56, 126, var(--tw-ring-opacity))
+  }
+
   .xl\:focus-within\:ring-transparent:focus-within {
     --tw-ring-color: transparent
   }
@@ -148663,6 +149528,11 @@
     --tw-ring-color: rgba(7, 61, 66, var(--tw-ring-opacity))
   }
 
+  .xl\:focus-within\:ring-nysds-heading:focus-within {
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgba(36, 56, 126, var(--tw-ring-opacity))
+  }
+
   .xl\:focus\:ring-transparent:focus {
     --tw-ring-color: transparent
   }
@@ -149089,6 +149959,11 @@
   .xl\:focus\:ring-DOL-theme-darker:focus {
     --tw-ring-opacity: 1;
     --tw-ring-color: rgba(7, 61, 66, var(--tw-ring-opacity))
+  }
+
+  .xl\:focus\:ring-nysds-heading:focus {
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgba(36, 56, 126, var(--tw-ring-opacity))
   }
 
   .xl\:ring-opacity-0 {
@@ -149743,6 +150618,11 @@
     color: rgba(7, 61, 66, var(--tw-text-opacity))
   }
 
+  .xl\:text-nysds-heading {
+    --tw-text-opacity: 1;
+    color: rgba(36, 56, 126, var(--tw-text-opacity))
+  }
+
   .xl\:visited\:text-transparent:visited {
     color: transparent
   }
@@ -150169,6 +151049,11 @@
   .xl\:visited\:text-DOL-theme-darker:visited {
     --tw-text-opacity: 1;
     color: rgba(7, 61, 66, var(--tw-text-opacity))
+  }
+
+  .xl\:visited\:text-nysds-heading:visited {
+    --tw-text-opacity: 1;
+    color: rgba(36, 56, 126, var(--tw-text-opacity))
   }
 
   .group:hover .xl\:group-hover\:text-transparent {
@@ -150599,6 +151484,11 @@
     color: rgba(7, 61, 66, var(--tw-text-opacity))
   }
 
+  .group:hover .xl\:group-hover\:text-nysds-heading {
+    --tw-text-opacity: 1;
+    color: rgba(36, 56, 126, var(--tw-text-opacity))
+  }
+
   .xl\:focus-within\:text-transparent:focus-within {
     color: transparent
   }
@@ -151025,6 +151915,11 @@
   .xl\:focus-within\:text-DOL-theme-darker:focus-within {
     --tw-text-opacity: 1;
     color: rgba(7, 61, 66, var(--tw-text-opacity))
+  }
+
+  .xl\:focus-within\:text-nysds-heading:focus-within {
+    --tw-text-opacity: 1;
+    color: rgba(36, 56, 126, var(--tw-text-opacity))
   }
 
   .xl\:hover\:text-transparent:hover {
@@ -151455,6 +152350,11 @@
     color: rgba(7, 61, 66, var(--tw-text-opacity))
   }
 
+  .xl\:hover\:text-nysds-heading:hover {
+    --tw-text-opacity: 1;
+    color: rgba(36, 56, 126, var(--tw-text-opacity))
+  }
+
   .xl\:focus\:text-transparent:focus {
     color: transparent
   }
@@ -151881,6 +152781,11 @@
   .xl\:focus\:text-DOL-theme-darker:focus {
     --tw-text-opacity: 1;
     color: rgba(7, 61, 66, var(--tw-text-opacity))
+  }
+
+  .xl\:focus\:text-nysds-heading:focus {
+    --tw-text-opacity: 1;
+    color: rgba(36, 56, 126, var(--tw-text-opacity))
   }
 
   .xl\:text-opacity-0 {
@@ -158116,6 +159021,11 @@
     border-color: rgba(7, 61, 66, var(--tw-divide-opacity))
   }
 
+  .\32xl\:divide-nysds-heading > :not([hidden]) ~ :not([hidden]) {
+    --tw-divide-opacity: 1;
+    border-color: rgba(36, 56, 126, var(--tw-divide-opacity))
+  }
+
   .\32xl\:divide-solid > :not([hidden]) ~ :not([hidden]) {
     border-style: solid
   }
@@ -158728,6 +159638,11 @@
     background-color: rgba(7, 61, 66, var(--tw-bg-opacity))
   }
 
+  .\32xl\:bg-nysds-heading {
+    --tw-bg-opacity: 1;
+    background-color: rgba(36, 56, 126, var(--tw-bg-opacity))
+  }
+
   .group:hover .\32xl\:group-hover\:bg-transparent {
     background-color: transparent
   }
@@ -159154,6 +160069,11 @@
   .group:hover .\32xl\:group-hover\:bg-DOL-theme-darker {
     --tw-bg-opacity: 1;
     background-color: rgba(7, 61, 66, var(--tw-bg-opacity))
+  }
+
+  .group:hover .\32xl\:group-hover\:bg-nysds-heading {
+    --tw-bg-opacity: 1;
+    background-color: rgba(36, 56, 126, var(--tw-bg-opacity))
   }
 
   .\32xl\:focus-within\:bg-transparent:focus-within {
@@ -159584,6 +160504,11 @@
     background-color: rgba(7, 61, 66, var(--tw-bg-opacity))
   }
 
+  .\32xl\:focus-within\:bg-nysds-heading:focus-within {
+    --tw-bg-opacity: 1;
+    background-color: rgba(36, 56, 126, var(--tw-bg-opacity))
+  }
+
   .\32xl\:hover\:bg-transparent:hover {
     background-color: transparent
   }
@@ -160012,6 +160937,11 @@
     background-color: rgba(7, 61, 66, var(--tw-bg-opacity))
   }
 
+  .\32xl\:hover\:bg-nysds-heading:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgba(36, 56, 126, var(--tw-bg-opacity))
+  }
+
   .\32xl\:focus\:bg-transparent:focus {
     background-color: transparent
   }
@@ -160438,6 +161368,11 @@
   .\32xl\:focus\:bg-DOL-theme-darker:focus {
     --tw-bg-opacity: 1;
     background-color: rgba(7, 61, 66, var(--tw-bg-opacity))
+  }
+
+  .\32xl\:focus\:bg-nysds-heading:focus {
+    --tw-bg-opacity: 1;
+    background-color: rgba(36, 56, 126, var(--tw-bg-opacity))
   }
 
   .\32xl\:bg-none {
@@ -160906,6 +161841,11 @@
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(7, 61, 66, 0))
   }
 
+  .\32xl\:from-nysds-heading {
+    --tw-gradient-from: #24387E;
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(36, 56, 126, 0))
+  }
+
   .\32xl\:via-transparent {
     --tw-gradient-stops: var(--tw-gradient-from), transparent, var(--tw-gradient-to, rgba(0, 0, 0, 0))
   }
@@ -161250,6 +162190,10 @@
     --tw-gradient-stops: var(--tw-gradient-from), #073d42, var(--tw-gradient-to, rgba(7, 61, 66, 0))
   }
 
+  .\32xl\:via-nysds-heading {
+    --tw-gradient-stops: var(--tw-gradient-from), #24387E, var(--tw-gradient-to, rgba(36, 56, 126, 0))
+  }
+
   .\32xl\:to-transparent {
     --tw-gradient-to: transparent
   }
@@ -161592,6 +162536,10 @@
 
   .\32xl\:to-DOL-theme-darker {
     --tw-gradient-to: #073d42
+  }
+
+  .\32xl\:to-nysds-heading {
+    --tw-gradient-to: #24387E
   }
 
   .\32xl\:hover\:from-transparent:hover {
@@ -162024,6 +162972,11 @@
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(7, 61, 66, 0))
   }
 
+  .\32xl\:hover\:from-nysds-heading:hover {
+    --tw-gradient-from: #24387E;
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(36, 56, 126, 0))
+  }
+
   .\32xl\:hover\:via-transparent:hover {
     --tw-gradient-stops: var(--tw-gradient-from), transparent, var(--tw-gradient-to, rgba(0, 0, 0, 0))
   }
@@ -162368,6 +163321,10 @@
     --tw-gradient-stops: var(--tw-gradient-from), #073d42, var(--tw-gradient-to, rgba(7, 61, 66, 0))
   }
 
+  .\32xl\:hover\:via-nysds-heading:hover {
+    --tw-gradient-stops: var(--tw-gradient-from), #24387E, var(--tw-gradient-to, rgba(36, 56, 126, 0))
+  }
+
   .\32xl\:hover\:to-transparent:hover {
     --tw-gradient-to: transparent
   }
@@ -162710,6 +163667,10 @@
 
   .\32xl\:hover\:to-DOL-theme-darker:hover {
     --tw-gradient-to: #073d42
+  }
+
+  .\32xl\:hover\:to-nysds-heading:hover {
+    --tw-gradient-to: #24387E
   }
 
   .\32xl\:focus\:from-transparent:focus {
@@ -163142,6 +164103,11 @@
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(7, 61, 66, 0))
   }
 
+  .\32xl\:focus\:from-nysds-heading:focus {
+    --tw-gradient-from: #24387E;
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(36, 56, 126, 0))
+  }
+
   .\32xl\:focus\:via-transparent:focus {
     --tw-gradient-stops: var(--tw-gradient-from), transparent, var(--tw-gradient-to, rgba(0, 0, 0, 0))
   }
@@ -163486,6 +164452,10 @@
     --tw-gradient-stops: var(--tw-gradient-from), #073d42, var(--tw-gradient-to, rgba(7, 61, 66, 0))
   }
 
+  .\32xl\:focus\:via-nysds-heading:focus {
+    --tw-gradient-stops: var(--tw-gradient-from), #24387E, var(--tw-gradient-to, rgba(36, 56, 126, 0))
+  }
+
   .\32xl\:focus\:to-transparent:focus {
     --tw-gradient-to: transparent
   }
@@ -163828,6 +164798,10 @@
 
   .\32xl\:focus\:to-DOL-theme-darker:focus {
     --tw-gradient-to: #073d42
+  }
+
+  .\32xl\:focus\:to-nysds-heading:focus {
+    --tw-gradient-to: #24387E
   }
 
   .\32xl\:bg-opacity-0 {
@@ -164638,6 +165612,11 @@
     border-color: rgba(7, 61, 66, var(--tw-border-opacity))
   }
 
+  .\32xl\:border-nysds-heading {
+    --tw-border-opacity: 1;
+    border-color: rgba(36, 56, 126, var(--tw-border-opacity))
+  }
+
   .group:hover .\32xl\:group-hover\:border-transparent {
     border-color: transparent
   }
@@ -165064,6 +166043,11 @@
   .group:hover .\32xl\:group-hover\:border-DOL-theme-darker {
     --tw-border-opacity: 1;
     border-color: rgba(7, 61, 66, var(--tw-border-opacity))
+  }
+
+  .group:hover .\32xl\:group-hover\:border-nysds-heading {
+    --tw-border-opacity: 1;
+    border-color: rgba(36, 56, 126, var(--tw-border-opacity))
   }
 
   .\32xl\:focus-within\:border-transparent:focus-within {
@@ -165494,6 +166478,11 @@
     border-color: rgba(7, 61, 66, var(--tw-border-opacity))
   }
 
+  .\32xl\:focus-within\:border-nysds-heading:focus-within {
+    --tw-border-opacity: 1;
+    border-color: rgba(36, 56, 126, var(--tw-border-opacity))
+  }
+
   .\32xl\:hover\:border-transparent:hover {
     border-color: transparent
   }
@@ -165922,6 +166911,11 @@
     border-color: rgba(7, 61, 66, var(--tw-border-opacity))
   }
 
+  .\32xl\:hover\:border-nysds-heading:hover {
+    --tw-border-opacity: 1;
+    border-color: rgba(36, 56, 126, var(--tw-border-opacity))
+  }
+
   .\32xl\:focus\:border-transparent:focus {
     border-color: transparent
   }
@@ -166348,6 +167342,11 @@
   .\32xl\:focus\:border-DOL-theme-darker:focus {
     --tw-border-opacity: 1;
     border-color: rgba(7, 61, 66, var(--tw-border-opacity))
+  }
+
+  .\32xl\:focus\:border-nysds-heading:focus {
+    --tw-border-opacity: 1;
+    border-color: rgba(36, 56, 126, var(--tw-border-opacity))
   }
 
   .\32xl\:border-opacity-0 {
@@ -173233,6 +174232,21 @@
     color: rgba(7, 61, 66, var(--tw-placeholder-opacity))
   }
 
+  .\32xl\:placeholder-nysds-heading::-moz-placeholder {
+    --tw-placeholder-opacity: 1;
+    color: rgba(36, 56, 126, var(--tw-placeholder-opacity))
+  }
+
+  .\32xl\:placeholder-nysds-heading:-ms-input-placeholder {
+    --tw-placeholder-opacity: 1;
+    color: rgba(36, 56, 126, var(--tw-placeholder-opacity))
+  }
+
+  .\32xl\:placeholder-nysds-heading::placeholder {
+    --tw-placeholder-opacity: 1;
+    color: rgba(36, 56, 126, var(--tw-placeholder-opacity))
+  }
+
   .\32xl\:focus\:placeholder-transparent:focus::-moz-placeholder {
     color: transparent
   }
@@ -174515,6 +175529,21 @@
   .\32xl\:focus\:placeholder-DOL-theme-darker:focus::placeholder {
     --tw-placeholder-opacity: 1;
     color: rgba(7, 61, 66, var(--tw-placeholder-opacity))
+  }
+
+  .\32xl\:focus\:placeholder-nysds-heading:focus::-moz-placeholder {
+    --tw-placeholder-opacity: 1;
+    color: rgba(36, 56, 126, var(--tw-placeholder-opacity))
+  }
+
+  .\32xl\:focus\:placeholder-nysds-heading:focus:-ms-input-placeholder {
+    --tw-placeholder-opacity: 1;
+    color: rgba(36, 56, 126, var(--tw-placeholder-opacity))
+  }
+
+  .\32xl\:focus\:placeholder-nysds-heading:focus::placeholder {
+    --tw-placeholder-opacity: 1;
+    color: rgba(36, 56, 126, var(--tw-placeholder-opacity))
   }
 
   .\32xl\:placeholder-opacity-0::-moz-placeholder {
@@ -178391,6 +179420,10 @@
     --tw-ring-offset-color: #073d42
   }
 
+  .\32xl\:ring-offset-nysds-heading {
+    --tw-ring-offset-color: #24387E
+  }
+
   .\32xl\:focus-within\:ring-offset-transparent:focus-within {
     --tw-ring-offset-color: transparent
   }
@@ -178735,6 +179768,10 @@
     --tw-ring-offset-color: #073d42
   }
 
+  .\32xl\:focus-within\:ring-offset-nysds-heading:focus-within {
+    --tw-ring-offset-color: #24387E
+  }
+
   .\32xl\:focus\:ring-offset-transparent:focus {
     --tw-ring-offset-color: transparent
   }
@@ -179077,6 +180114,10 @@
 
   .\32xl\:focus\:ring-offset-DOL-theme-darker:focus {
     --tw-ring-offset-color: #073d42
+  }
+
+  .\32xl\:focus\:ring-offset-nysds-heading:focus {
+    --tw-ring-offset-color: #24387E
   }
 
   .\32xl\:ring-offset-0 {
@@ -179567,6 +180608,11 @@
     --tw-ring-color: rgba(7, 61, 66, var(--tw-ring-opacity))
   }
 
+  .\32xl\:ring-nysds-heading {
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgba(36, 56, 126, var(--tw-ring-opacity))
+  }
+
   .\32xl\:focus-within\:ring-transparent:focus-within {
     --tw-ring-color: transparent
   }
@@ -179995,6 +181041,11 @@
     --tw-ring-color: rgba(7, 61, 66, var(--tw-ring-opacity))
   }
 
+  .\32xl\:focus-within\:ring-nysds-heading:focus-within {
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgba(36, 56, 126, var(--tw-ring-opacity))
+  }
+
   .\32xl\:focus\:ring-transparent:focus {
     --tw-ring-color: transparent
   }
@@ -180421,6 +181472,11 @@
   .\32xl\:focus\:ring-DOL-theme-darker:focus {
     --tw-ring-opacity: 1;
     --tw-ring-color: rgba(7, 61, 66, var(--tw-ring-opacity))
+  }
+
+  .\32xl\:focus\:ring-nysds-heading:focus {
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgba(36, 56, 126, var(--tw-ring-opacity))
   }
 
   .\32xl\:ring-opacity-0 {
@@ -181075,6 +182131,11 @@
     color: rgba(7, 61, 66, var(--tw-text-opacity))
   }
 
+  .\32xl\:text-nysds-heading {
+    --tw-text-opacity: 1;
+    color: rgba(36, 56, 126, var(--tw-text-opacity))
+  }
+
   .\32xl\:visited\:text-transparent:visited {
     color: transparent
   }
@@ -181501,6 +182562,11 @@
   .\32xl\:visited\:text-DOL-theme-darker:visited {
     --tw-text-opacity: 1;
     color: rgba(7, 61, 66, var(--tw-text-opacity))
+  }
+
+  .\32xl\:visited\:text-nysds-heading:visited {
+    --tw-text-opacity: 1;
+    color: rgba(36, 56, 126, var(--tw-text-opacity))
   }
 
   .group:hover .\32xl\:group-hover\:text-transparent {
@@ -181931,6 +182997,11 @@
     color: rgba(7, 61, 66, var(--tw-text-opacity))
   }
 
+  .group:hover .\32xl\:group-hover\:text-nysds-heading {
+    --tw-text-opacity: 1;
+    color: rgba(36, 56, 126, var(--tw-text-opacity))
+  }
+
   .\32xl\:focus-within\:text-transparent:focus-within {
     color: transparent
   }
@@ -182357,6 +183428,11 @@
   .\32xl\:focus-within\:text-DOL-theme-darker:focus-within {
     --tw-text-opacity: 1;
     color: rgba(7, 61, 66, var(--tw-text-opacity))
+  }
+
+  .\32xl\:focus-within\:text-nysds-heading:focus-within {
+    --tw-text-opacity: 1;
+    color: rgba(36, 56, 126, var(--tw-text-opacity))
   }
 
   .\32xl\:hover\:text-transparent:hover {
@@ -182787,6 +183863,11 @@
     color: rgba(7, 61, 66, var(--tw-text-opacity))
   }
 
+  .\32xl\:hover\:text-nysds-heading:hover {
+    --tw-text-opacity: 1;
+    color: rgba(36, 56, 126, var(--tw-text-opacity))
+  }
+
   .\32xl\:focus\:text-transparent:focus {
     color: transparent
   }
@@ -183213,6 +184294,11 @@
   .\32xl\:focus\:text-DOL-theme-darker:focus {
     --tw-text-opacity: 1;
     color: rgba(7, 61, 66, var(--tw-text-opacity))
+  }
+
+  .\32xl\:focus\:text-nysds-heading:focus {
+    --tw-text-opacity: 1;
+    color: rgba(36, 56, 126, var(--tw-text-opacity))
   }
 
   .\32xl\:text-opacity-0 {

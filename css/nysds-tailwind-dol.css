@@ -30,8 +30,17 @@
   border-color: rgba(156, 163, 175, var(--tw-border-opacity))
 }
 
+.border-gray-500 {
+  --tw-border-opacity: 1;
+  border-color: rgba(107, 114, 128, var(--tw-border-opacity))
+}
+
 .border-solid {
   border-style: solid
+}
+
+.border-none {
+  border-style: none
 }
 
 .border-0 {
@@ -50,6 +59,10 @@
   display: block
 }
 
+.flex {
+  display: flex
+}
+
 .table {
   display: table
 }
@@ -66,8 +79,20 @@
   display: none
 }
 
+.flex-col {
+  flex-direction: column
+}
+
+.flex-wrap {
+  flex-wrap: wrap
+}
+
 .float-right {
   float: right
+}
+
+.font-body {
+  font-family: "Proxima Nova", Arial, sans-serif
 }
 
 .font-bold {
@@ -84,9 +109,18 @@
   line-height: 1.5rem
 }
 
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem
+}
+
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem
+}
+
+.m-1 {
+  margin: 0.25rem
 }
 
 .m-2 {
@@ -130,6 +164,10 @@
   margin-top: 2rem
 }
 
+.mb-8 {
+  margin-bottom: 2rem
+}
+
 .mb-10 {
   margin-bottom: 2.5rem
 }
@@ -156,9 +194,19 @@
   padding: 0.125rem
 }
 
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem
+}
+
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem
 }
 
 .px-8 {
@@ -190,6 +238,11 @@
 .text-white {
   --tw-text-opacity: 1;
   color: rgba(255, 255, 255, var(--tw-text-opacity))
+}
+
+.text-nysds-heading {
+  --tw-text-opacity: 1;
+  color: rgba(36, 56, 126, var(--tw-text-opacity))
 }
 
 .visited\:text-white:visited {
@@ -308,6 +361,18 @@
     display: inline-block
   }
 
+  .md\:flex-row {
+    flex-direction: row
+  }
+
+  .md\:justify-center {
+    justify-content: center
+  }
+
+  .md\:m-2 {
+    margin: 0.5rem
+  }
+
   .md\:mx-2 {
     margin-left: 0.5rem;
     margin-right: 0.5rem
@@ -339,6 +404,9 @@
 }
 
 @media (min-width: 1024px) {
+  .lg\:pl-48 {
+    padding-left: 12rem
+  }
 }
 
 @media (min-width: 1280px) {

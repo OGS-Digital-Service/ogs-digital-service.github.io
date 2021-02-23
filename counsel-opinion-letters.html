@@ -6,8 +6,8 @@
     <link href="./css/nys-global-nav-labor.css" rel="stylesheet" ><!-- NYS CSS Global Navigation Styles  -->
     <link href="./css/uswds-accordion.css" rel="stylesheet">
     <link href="./css/nysds-fonts.css" rel="stylesheet">
-    <link href="./css/tailwind-dev.css" rel="stylesheet"> 
-    <!-- <link href="./css/nysds-tailwind-dol.css" rel="stylesheet">  -->
+    <!-- <link href="./css/tailwind-dev.css" rel="stylesheet">  -->
+    <link href="./css/nysds-tailwind-dol.css" rel="stylesheet"> 
     <script src="https://www.trumba.com/scripts/spuds.js" type="text/javascript"> </script><!-- need this loaded in head -->
    
     <script src="js/uswds.min.js" type="text/javascript"> </script><!-- need this loaded in head -->
@@ -78,12 +78,12 @@
 
 
 
-<div class="mx-auto w-10/12 font-body text-lg leading-7"><!-- START DOL Body html -->
+<div class="mx-auto w-10/12 font-body text-lg"><!-- START DOL Body html -->
 
 <div class="p-2 my-5">
 
 
-<h1 class="text-3xl font-bold ">Counsel Opinion Letters</h1> 
+<h1 class="text-3xl font-bold text-nysds-heading">Counsel Opinion Letters</h1> 
     <p class="my-2 ">
      These opinions represent the views of the Department at the time they were rendered. The opinions may no longer represent those views if, for example, there have been subsequent court cases or statutory amendments that bear on the issues discussed in the opinions. Opinions are no longer rendered by the Department of Labor. 
     </p>
@@ -91,16 +91,15 @@
         Opinions obtained from the Department were given based on the representation, express or implied, that the requestor provided a full and fair description of all the facts and circumstances that would be pertinent to the Department's consideration of the question presented. Existence of any other factual or historical background not contained in the information provided may require a conclusion different from the one expressed in the opinion. 
     </p>
 
-    
-    
         <form action="https://www.search.its.ny.gov/search" class="" id="internal-search-form" method="get" name="internal-search-form" target="_blank">    
-                <label id="search-bar-input-label"><span class="">Search the full text of opinion letters</span> <input class="w-1/2" id="search-bar-input" name="q" type="text" /> </label>
-
-                <input class="block mx-auto max-w-max m-2 px-8 py-4 text-center text-white border-none text-lg bg-DOL-theme-primary hover:bg-DOL-theme-darker no-underline hover:underline" type="submit" value="Search" /> 
-            
+            <label id="search-bar-input-label" class="font-bold">Search opinion letters</label>
+            <div class="flex flex-wrap flex-col mb-8 md:flex-row md:justify-center"> 
+                <input class="py-3 px-4  md:w-3/4 md:m-2 border-gray-500 border-solid text-lg" id="search-bar-input" name="q" type="text" /> 
+                <input class="my-2 md:m-2 px-8 py-4 text-center text-white border-none text-base bg-DOL-theme-primary hover:bg-DOL-theme-darker no-underline hover:underline" type="submit" value="Search" /> 
                 <input name="as_sitesearch" type="hidden" value="statistics.labor.ny.gov/counsel/pdf" />
+            </div> 
         </form>
-       
+      
         
 
   <div class="usa-accordion md:w-3/4 mx-auto font-body"> <!-- first level accordion (a) -->
@@ -392,7 +391,7 @@
                     </h2>
                     <div id="b15" class="usa-accordion__content usa-prose">
                         <ul>
-                            <li><strong class="mx-2">02/06/2009</strong><a href="/sites/legal/counsel/pdf/Medical%20Exam%20Fees%20%28Sec.%20201-b%29/RO-08-0067%20Medical%20Continuation%20Coverage.pdf" target="_blank">RO-08-0067 Medical Continuation Coverage</a></li>
+                            <li><strong class="mx-2">02/06/2009</strong><a href="counsel/pdf/Medical%20Exam%20Fees%20%28Sec.%20201-b%29/RO-08-0067%20Medical%20Continuation%20Coverage.pdf" target="_blank">RO-08-0067 Medical Continuation Coverage</a></li>
                         </ul>
  
                     </div>
