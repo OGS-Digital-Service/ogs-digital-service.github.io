@@ -1,0 +1,125 @@
+<!--#include virtual="/includes/ux_template_upgrade/ux_template_doctype-legal.inc" --> 
+
+<title></title>
+
+
+  <link href="./css/uswds-accordion.css" rel="stylesheet">
+  <link href="./css/nysds-tailwind-dol.css" rel="stylesheet">
+  <link href="./css/nysds-fonts.css" rel="stylesheet">
+  <script src="https://www.trumba.com/scripts/spuds.js" type="text/javascript"> </script>
+  <script src="js/uswds.min.js" type="text/javascript"> </script>
+  <style>
+
+  </style>
+
+
+<!--#include virtual="/includes/ux_template_upgrade/ux_template_header_1.inc" --> 
+	
+	
+<!--#include virtual="/includes/ux_template_upgrade/skip_nav.inc" -->
+	
+<!--#include virtual="/includes/ux_template_upgrade/ux_template_header_2.inc" -->
+	
+	
+<!--#include virtual="/includes/ux_template_upgrade/ux_template_header_3.inc" --> 
+
+	
+<!--#include virtual="/includes/ux_template_upgrade/career_zone-legal.inc" --> 
+					
+
+		<!--#include virtual="/includes/ux_template_upgrade/content_nav_begin.inc" -->
+			<!-- research_and_statistics_nav.html-->
+		<!--#include virtual="/includes/ux_template_upgrade/content_nav_end.inc" -->
+
+
+
+
+
+<body><!-- replace everything in the body of the pages with all of the following code. -->
+
+<div class="mx-auto w-10/12 font-body text-lg"><!-- START DOL Body html -->
+
+    <div class="p-2 my-5">
+        <h1 class="text-3xl font-bold text-nysds-heading">NYS Career Center Events & Recruitments </h1>
+
+        <p class="p-4 text-sm bg-blue-100 border border-solid border-gray-400">
+            <strong> IMPORTANT MESSAGE:</strong> All in-person appointments at all Career Centers in New York State have been canceled until further notice.
+          Unemployment Insurance benefits will NOT be impacted and customers should continue to file for weekly benefits as normal.
+          This is being done out of an abundance of caution based on directives from Governor Cuomo to ensure appropriate measures are being taken for the safety and health of our staff and customers. All appointments will be rescheduled at a later date or offered virtually. Customers will receive a follow-up letter or phone call with additional information at a later date.
+        </p>
+
+        <p class="my-2">New York's Career Centers offer a variety of classes, workshops, job fairs, job clubs including virtual career fairs and virtual workshops, including informational sessions on a variety of topics. They also offer recruitments for numerous companies. Discover what is being offered in your area and take advantage of what your local Career Center has to offer to help you prepare for your next career. Select your Labor Market Region or your local Career Center from the filters on the left to find events and recruitments in your area. If you have any questions about attending any of these events or recruitments, be sure to contact your local Career Center. 
+        </p>
+
+        <a class="block mx-auto max-w-max m-2 px-8 py-4 text-center text-white bg-DOL-theme-primary hover:bg-DOL-theme-darker no-underline hover:underline" href="event-submission.shtml" style="color: #fff !important;">Event Submission Form</a>
+    </div>
+
+
+    <div class="grid grid-cols-4 gap-4 my-8">
+      <div class="grid grid-cols-4 col-span-4 mb-7 gap-5 md:col-span-1">
+        <div class="col-span-2 md:col-span-4">
+          <!-- Calendar Datefinder-->
+          <div class="mb-7 md:mb-2 border border-gray-400 border-solid">
+            <script type="text/javascript">
+            $Trumba.addSpud({
+            webName: "nys-department-of-labor",
+            spudType : "datefinder" ,
+            teaserBase : "http://labor.ny.gov/workforcenypartners/career-center-events.shtm" });</script>
+            </div>
+              <!-- Calendar List -->
+              <script type="text/javascript">
+              $Trumba.addSpud({
+              webName: "nys-department-of-labor",
+              spudType : "mix" });</script>
+            </div>
+              <div class="col-span-2 md:col-span-4">
+              <div class="mb-7 md:mb-2">
+              <!-- Search Widget -->
+              <script type="text/javascript">
+              $Trumba.addSpud({
+              webName: "nys-department-of-labor",
+              spudType : "searchlabeled" });</script>
+              </div>
+
+              <div class="mb-7 md:mb-2">
+                <!-- CC Filter List -->
+                <script type="text/javascript">
+                $Trumba.addSpud({
+                webName: "nys-department-of-labor",
+                spudType : "filter" });</script>
+                </div>
+                  <!-- Event Filter List -->
+                  <script type="text/javascript">
+                  $Trumba.addSpud({
+                  webName: "nys-department-of-labor",
+                  spudType : "filter" ,
+                  spudConfig : "SpudConfig2" });</script>
+          </div>
+        </div>
+
+        <div class="col-span-4 md:col-span-3">
+          <script type="text/javascript">
+            $Trumba.addSpud({
+            webName: "nys-department-of-labor",
+            spudType : "tabchooser" });</script><!-- Month List -->
+            <script type="text/javascript">
+            $Trumba.addSpud({
+            webName: "nys-department-of-labor",
+            spudType : "monthlist" });</script><!-- Calendar Widget -->
+            <script type="text/javascript">
+            $Trumba.addSpud({
+            webName: "nys-department-of-labor",
+            spudType : "main" });</script>
+          </div>
+    </div>
+
+
+</div><!-- END DOL Body html -->
+
+
+</body>
+<!--#include virtual="/includes/ux_template_upgrade/ux_template_footer-legal.inc" -->
+
+
+
+<!--#include virtual="/includes/ux_template_upgrade/ux_template_footer2.inc" -->

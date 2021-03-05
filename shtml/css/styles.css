@@ -1,0 +1,366 @@
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon' !important;
+	speak: none;
+	color: white;
+	/*font-size: x-small;*/
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	padding-right: 20px;
+	padding-left: 20px;
+	vertical-align: middle;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+@font-face {
+	font-family: "D Sari Bold";
+	font-weight: normal;
+	font-style: normal;
+	src: url('fonts/dsari/DSari_Bold-webfont.eot');
+	src: url('fonts/dsari/DSari_Bold-webfont.eot?#iefix') format('embedded-opentype'),
+	url('fonts/dsari/DSari_Bold-webfont.woff2') format('woff2'),
+	url('fonts/dsari/DSari_Bold-webfont.woff') format('woff'),
+	url('fonts/dsari/DSari_Bold-webfont.ttf') format('truetype');
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+@font-face {
+	font-family: "Proxima Nova";
+	font-weight: normal;
+	font-style: normal;
+	src: url('fonts/proximanova/proximanova-regular.eot');
+	src: url('fonts/proximanova/proximanova-regular.eot?#iefix') format('embedded-opentype'),
+	url('fonts/proximanova/proximanova-regular.woff2') format('woff2'),
+	url('fonts/proximanova/proximanova-regular.woff') format('woff'),
+	url('fonts/proximanova/proximanova-regular.ttf') format('truetype');
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+@font-face {
+	font-family: "Proxima Nova";
+	font-weight: bold;
+	font-style: normal;
+	src: url('fonts/proximanova/proximanova-bold.eot');
+	src: url('fonts/proximanova/proximanova-bold.eot?#iefix') format('embedded-opentype'),
+	url('fonts/proximanova/proximanova-bold.woff2') format('woff2'),
+	url('fonts/proximanova/proximanova-bold.woff') format('woff'),
+	url('fonts/proximanova/proximanova-bold.ttf') format('truetype');
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+@font-face {
+	font-family: "Proxima Nova";
+	font-weight: bold;
+	font-style: normal;
+	src: url('fonts/proximanova/proximanova-bold-italic.eot');
+	src: url('fonts/proximanova/proximanova-bold-italic.eot?#iefix') format('embedded-opentype'),
+	url('fonts/proximanova/proximanova-bold-italic.woff2') format('woff2'),
+	url('fonts/proximanova/proximanova-bold-italic.woff') format('woff'),
+	url('fonts/proximanova/proximanova-bold-italic.ttf') format('truetype');
+}
+@font-face {
+	font-family: "icomoon";
+	font-weight: normal;
+	font-style: normal;
+	src:  url('../fonts/icomoon/fonts/icomoon.eot');
+	src:  url('../fonts/icomoon/fonts/icomoon.eot#iefix') format('embedded-opentype'),
+	url('../fonts/icomoon/fonts/icomoon.ttf') format('truetype'),
+	url('../fonts/icomoon/fonts/icomoon.woff') format('woff'),
+	url('../fonts/icomoon/fonts/icomoon.svg#icomoon') format('svg');
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+HTML, body {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+}
+header {
+	width: 100%;
+	background-color:#0B5D66;
+}
+
+.agency-name {
+	font-size: 22px;
+	letter-spacing: .3px;
+	font-weight: 700;
+	font-family: "D Sari Bold",Arial,sans-serif;
+	line-height: 26px;
+	display: table-cell;
+	vertical-align: middle;
+	padding-left: 60px;
+	padding-top: 30px;
+}
+
+.agency-name a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.agency-name a:hover,a:active,a:visited {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.main-page {
+	display: inline-block;
+	vertical-align: middle;
+	padding-left: 60px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	font-size: 16px;
+	letter-spacing: 0.5px;
+	font-weight: 700;
+	font-family: "Proxima Nova Bold",Arial,sans-serif;
+	line-height: 26px;
+}
+.main-page a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.main-page a:hover{
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+.icon-play:before {
+	content: "\e608" !important;
+	font-family: "icomoon";
+	font-size: 1em; 
+	vertical-align: text-top;
+	line-height: 16px;
+	color: #FFFFFF;
+}
+.application-name {
+	display: inline-block;
+	color: #F5A81C;
+	font-size: 16px;
+	letter-spacing: 0.5px;
+	font-weight: 700;
+	font-family: "Proxima Nova Bold",Arial,sans-serif;
+	font-style: italic;
+	vertical-align: middle;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+#content {
+	max-width: 1200px;
+	margin: auto;
+	padding: 60px 60px;
+	font-family: "Proxima Nova",Arial,sans-serif;
+}
+.footer {
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	padding-bottom: 30px;
+	background-color:#E5EEEE;
+}
+.agency-name-footer {
+	float: left;
+	vertical-align: middle;
+	font-size: 22px;
+	font-weight: 700;
+	font-family: "D Sari Bold",Arial,sans-serif;
+	display: inline-block;
+	padding-top: 10px;
+	padding-left: 60px;
+	padding-right: 30px;
+	margin-top:20px;
+	border-right: 1px black solid;
+	line-height: 35px;
+}
+.agency-name-footer a {
+	color: #000000;
+	text-decoration: none;
+}
+.agency-name-footer a:hover,a:active,a:visited {
+	color: #000000;
+	text-decoration: none;
+}
+.footer-links-first {
+	padding-left: 30px;
+	display: inline-block;
+	font-weight: 700;
+	font-size: 14px;
+	font-family: "Proxima Nova Bold",Arial,sans-serif;
+	padding-top:38px;
+	padding-right: 30px;
+	vertical-align: middle;
+	float: left;
+}
+.footer-links {
+	display: inline-block;
+	font-weight: 700;
+	font-size: 14px;
+	font-family: "Proxima Nova Bold",Arial,sans-serif;
+	padding-top:38px;
+	padding-right: 30px;
+	vertical-align: middle;
+	float: left;
+}
+.footer-links a, .footer-links-first a {
+	display: inline-block;
+	text-decoration: none;
+	color: #000000;
+}
+.footer-links
+a:hover {
+	color: #000000;
+	text-decoration: underline;
+}
+.footer-links-first a:hover {
+	color: #000000;
+	text-decoration: underline;
+}
+.social {
+	float: right;
+}
+.social-icons {
+	display: inline-block;
+	padding-top: 33px;
+}
+.social-icons a {
+	text-decoration: none;
+}
+.icon-facebook:before {
+	content: "\f09a";
+	font-family: "icomoon";
+	color: #0B5D66; /* change this hex value to match the header background color */
+	font-size: 22px;
+	padding-left:0px;
+	padding-right: 0px;
+}
+.icon-twitter:before{
+	content: "\f099";
+	font-family: "icomoon";
+	color: #0B5D66 !important;/* change this hex value to match the header background color */
+	font-size: 22px;
+	padding-left:0px;
+	padding-right: 0px;
+}
+.icon-instagram:before{
+	content: "\f16d";
+	font-family: "icomoon";
+	color: #0B5D66; /* change this hex value to match the header background color */
+	font-size: 22px;
+	padding-left:0px;
+	padding-right: 0px;
+}
+
+.icon-youtube:before{
+	content: "\f166";
+	font-family: "icomoon";
+	color: #0B5D66; /* change this hex value to match the header background color */
+	font-size: 22px;
+	padding-left:0px;
+	padding-right:0px;
+}
+
+.icon-linkedin:before{
+	content: "\f08c";
+	font-family: "icomoon";
+	color: #0B5D66; /* change this hex value to match the header background color */
+	font-size: 22px;
+	padding-left:0px;
+	padding-right:0px;
+}
+
+/* DESKTOP */
+@media screen and (max-width: 1335px) {
+
+} /* END DESKTOP */
+
+/* TABLET */
+@media screen and (max-width: 1023px) {
+	.agency-name-footer {
+		border-right: none;
+	}
+	#content {
+		padding-left: 60px;
+	}
+	.hrule {
+		display: inline-block;
+		border-bottom: 1px solid black;
+		width: 80%;
+		margin-left: 60px;
+	}
+	.footer-links-first {
+		padding-left: 60px;
+	}
+	.footer-links {
+		padding-left: 60px;
+	}
+	.social {
+		float: left;
+		display: block;
+		padding-left: 40px;
+
+	}
+} /* END TABLET */
+
+/* MOBILE */
+@media screen and (max-width: 767px) {
+	.agency-name {
+		font-size: 16px;
+		padding-left: 20px;
+		padding-top: 20px;
+	}
+
+	.main-page {
+		padding-left: 20px;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		font-family: "Proxima Nova Bold",Arial,sans-serif;
+		font-size: 14px;
+	}
+
+	.icon-play:before {
+		display: block;
+		padding-left: 40px;
+		line-height: 16px;
+	}
+	.application-name {
+		display: inline;
+		padding-left: 15px;
+		padding-bottom: 20px;
+		line-height: 16px;
+		font-size: 14px;
+		position: absolute;
+		top: 82px;
+		left: 50px;
+	}
+	#content {
+		padding-left: 20px;
+	}
+	.agency-name-footer {
+		font-size: 16px;
+		padding-left: 20px;
+		margin-top: 30px;
+		padding-bottom: 15px;
+		border-right: none;
+	}
+	.hrule {
+		display: inline-block;
+		border-bottom: 1px solid black;
+		width: 92%;
+		margin-left: 20px;
+	}
+	.footer-links-first {
+		display: block;
+		vertical-align: initial;
+		padding-left: 20px;
+		width: 33%;
+	}
+
+	.footer-links {
+		vertical-align: initial;
+		padding-left: 20px;
+		width: 33%;
+	}
+	.social {
+		float: left;
+		display: block;
+		padding-left: 0px;
+	}
+} /* END MOBILE */
