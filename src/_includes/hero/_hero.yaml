@@ -1,0 +1,34 @@
+params:
+- name: link
+  type: string
+  required: false
+  description: 
+- name: buttontext
+  type: string
+  required: true
+  description: 
+- name: arialabel
+  type: string
+  required: false
+  description: 
+- name: link2
+  type: string
+  required: false
+  description: 
+- name: buttontext2
+  type: string
+  required: true
+  description: 
+- name: arialabel2
+  type: string
+  required: false
+  description: 
+- name: subtitle
+  type: string
+  required: false
+  description:  
+- name: title
+  type: string
+  required: true
+  description: 
+
