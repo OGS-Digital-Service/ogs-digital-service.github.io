@@ -1,0 +1,25 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% include '_css-link.njk' %}
+    <title>{{ title }}</title>
+    <style>
+      .markdown p, h1, h2, h3, h4, h5, h6, ol, ul {
+      	grid-column: span 3 / span 3;
+      }
+
+      a {
+        text-decoration: underline;
+      }
+      a:focus {
+        background-color: rgba(96, 165, 250 ,1);
+        border-bottom: 2px solid black;
+      }
+      </style>
+  </head>
+  <body class="mx-auto p-4 md:w-11/12 markdown flex flex-col md:grid md:grid-cols-3">
+   {{ content | safe }}
+   
+  </body>
+</html>
