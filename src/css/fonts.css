@@ -61,7 +61,7 @@
 
 @font-face {
   font-family: 'Oswald';
-  font-weight: normal;
+  font-weight: 200;
   font-style: normal;
   src: url(../fonts/oswald/oswald-light-webfont.eot);
   src: url(../fonts/oswald/oswald-light-webfont.eot?#iefix) format("embedded-opentype"), 
@@ -71,8 +71,8 @@
 }
 
 @font-face {
-  font-family: 'Oswald-bold';
-  font-weight: normal;
+  font-family: 'Oswald';
+  font-weight: 700;
   font-style: normal;
   src: url(../fonts/oswald/oswald-bold-webfont.eot);
   src: url(../fonts/oswald/oswald-bold-webfont.eot?#iefix) format("embedded-opentype"), 
@@ -82,8 +82,8 @@
 }
 
 @font-face {
-  font-family: 'Oswald-book';
-  font-weight: normal;
+  font-family: 'Oswald';
+  font-weight: 400;
   font-style: normal;
   src: url(../fonts/oswald/oswald-regular-webfont.eot);
   src: url(../fonts/oswald/oswald-regular-webfont.eot?#iefix) format("embedded-opentype"), 

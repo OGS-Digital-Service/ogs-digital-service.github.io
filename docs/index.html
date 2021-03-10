@@ -11,11 +11,17 @@
       	grid-column: span 3 / span 3;
       }
 
-      a {
+      p > a {
         text-decoration: underline;
       }
-      
-
+      h1.agencyname {
+        font-family: D Sari Bold, Arial, sans-serif;
+        font-size: 22px;
+        line-height: 27px;
+      }  
+        .oswald {
+        font-family: Oswald, Arial, sans-serif;
+        }
    
 
       </style>
@@ -25,13 +31,14 @@
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,600;0,700;0,800;1,400;1,700;1,800&display=swap" rel="stylesheet"> 
     <title>OGS Digital Service Design Lab</title>
   </head>
+
   <body class="mx-auto w-5/6 markdown flex flex-col md:grid md:grid-cols-3">
   <nav>  </nav>
    <h1>OGS Digital Service Design Lab</h1>
 <p class="text-2xl font-bold"> Now Built using 11ty! </p>
+<p class="oswald font-bold uppercase"> Now Built using 11ty! </p>
 <p>This is a link to <a href="https://ogs.ny.gov">something else</a></p>
-<p>something else</p>
-<p><a href="https://ogs.ny.gov" class="block w-max p-4 m-8 bg-admin-first rounded-xl hover:bg-gray-700 hover:text-underline text-white" aria-label="Office of General Services"> Office of General Services </a></p>
-
+<p><a href="https://ogs.ny.gov" class="block w-max p-4 m-8 bg-admin-first no-underline rounded-xl hover:bg-gray-700 hover:text-underline text-white" aria-label="Office of General Services"> Office of General Services </a></p>
+<h1 class="agencyname">Agency Name in D Sari Bold</h1>
   </body>
 </html>
