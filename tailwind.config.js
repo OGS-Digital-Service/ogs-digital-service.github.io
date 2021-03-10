@@ -2,6 +2,9 @@ module.exports = {
   purge: [],
   darkMode: false, // or 'media' onpm init -yr 'class'
   theme: {
+    fontFamily: {
+      sans: ['Proxima Nova', 'Arial', 'sans-serif']
+     },
     extend: {
       colors: {
         'admin-first': '#ac3f14',
