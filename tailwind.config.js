@@ -1,5 +1,9 @@
 module.exports = {
-  purge: [],
+  purge: [
+    'docs/*.html',
+    'docs/**/*.html'
+
+  ],
   darkMode: false, // or 'media' onpm init -yr 'class'
   theme: {
     fontFamily: {
