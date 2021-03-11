@@ -9,7 +9,7 @@ module.exports = {
       colors: {
         'admin-first': '#ac3f14',
         'admin-second': '#cf7954',
-        'admin-third': '#f3d3cq',
+        'admin-third': '#f3d3c1',
         'ny-accent-first': '#f4a71c',
         'ny-accent-second': '#f3dd6d',
         'ny-links': '#007ac2',
