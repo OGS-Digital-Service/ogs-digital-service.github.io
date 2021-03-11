@@ -1,4 +1,4 @@
-<div class="{%- if params.image %} -mx-20 lg:py-20{% else %} bg-admin-second -mx-20  {% endif -%}" style="{%- if params.image %}background-image:url(img/{{params.image}});background-size:100%;background-repeat: no-repeat;background-position: center; {% else %}{% endif -%}">
+<div class="mb-4 {%- if params.image %} -mx-20 lg:py-20 bg-no-repeat md:bg-center{% else %} bg-admin-second -mx-20{% endif -%}" style="{%- if params.image %}background-image:url(img/{{params.image}});background-size:100%;{% else %}{% endif -%}">
 <div class="mt-4 mb-4 mx-20">
 <div class="md:w-1/2 bg-admin-third">
 <h1 class="text-3xl md:text-4xl font-extrabold text-black p-4 md:leading-tight">{{ params.title | truncate(80) }} </h1>
