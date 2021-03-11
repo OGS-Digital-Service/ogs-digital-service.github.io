@@ -7,7 +7,7 @@ featuring: Now Built using 11ty!
 {{ heroalt({ 
     title: "12th Annual K-8 Empire State Plaza Art Collection Exhibition",
     subtitle: "Empire State Plaza Art Collection-Inspired Artwork by Capital Region School District Students.",
-    image:"office.jpg",
+    image:"office.webp",
     buttontext: "First",
     link: "https://ogs.ny.gov",
     arialabel: "Office of General Services",

@@ -3,7 +3,8 @@ module.exports = function(eleventyConfig){
         "jpg",
         "pdf",
         "md",
-        "njk"
+        "njk",
+        "webp"
       ]);
 
     return {
