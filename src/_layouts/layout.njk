@@ -1,3 +1,4 @@
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -7,13 +8,13 @@
     <title>{{ title }}</title>
   
   </head>
- <body class="mx-8 md:mx-20 flex flex-col md:flex-row">
+  <body class="mx-8 md:mx-20 flex flex-col flex-row">
     {% from '../_includes/_components.njk' import nav %} 
     {{ nav({ 
-    agencyname: "Office of General Services",
-    link: "https://ogs.ny.gov",
-    arialabel: "Office of General Services"
+    agencyname: "Digital Services",
+    link: "/",
+    arialabel: "New York State Digital Services"
       })}}
-   {{ content | safe }}
+      {{ content | safe }}
   </body>
 </html>

@@ -1,0 +1,24 @@
+params:
+- name: link
+  type: string
+  required: false
+- name: intro
+  type: string
+  required: true
+- name: nyslogo
+  type: string
+  required: true
+- name: alert
+  type: string
+  required: false
+- name: alerttext
+  type: string
+  required: false
+- name: warning
+  type: string
+  required: false
+- name: warningtext
+  type: string
+  required: false
+
+
