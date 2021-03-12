@@ -1,24 +1,14 @@
-<div class="bg-admin-third -mx-8 md:-mx-20 md:h-96 pb-12">
-
-<div class="lg:w-5/6 w-full">
-<h1 class="text-3xl md:text-4xl lg:text-5xl  font-extrabold text-black md:ml-12 p-8 lg:leading-normal md:leading-normal">{{ params.title }} </h1>
-{%- if params.subtitle %}
-<p class="text-black ml-8 md:ml-20 md:text-lg"> {{ params.subtitle }}</p>
-{% else %} 
-{% endif -%}
-</div>
-
-<div class="flex md:flex-row flex-col mt-6 md:mt-12 lg:mt-12 md:ml-12">
+<section class="mb-4 {%- if params.image %} -mx-20 py-6 md:py-10 lg:py-20 bg-no-repeat md:bg-center{% else %} bg-admin-second -mx-20{% endif -%}" style="{%- if params.image %}background-image:url(img/{{params.image}});background-size:100%;{% else %}{% endif -%}">
+<div class="mt-4 mb-4 mx-20 rounded-xl">
+<div class="md:w-1/2 bg-admin-third rounded-xl">
+<h1 class="text-3xl md:text-4xl font-extrabold text-black p-4 md:leading-tight">{{ params.title | truncate(80) }} </h1>
+{%- if params.subtitle %}<p class="text-black p-4 md:text-lg">{{ params.subtitle | truncate(200) }}</p>{% else %}{% endif -%}
+<div class="flex flex-col lg:flex-row lg:flex-grow">
 {%- if params.buttontext %}
-<a href="{{ params.link }}" class="block text-center p-2.5 md:p-5 mx-8 my-2 md:mx-8 rounded hover:bg-gray-900 no-underline hover:underline text-black hover:text-white uppercase tracking-widest text-sm font-bold border border-solid border-black" aria-label="{{ params.arialabel }}" style="min-width:300px;"> {{ params.buttontext }} </a> 
-{% else %} 
-{% endif -%}
-
+<a href="{{ params.link }}" class="lg:w-1/2 p-2 my-2 mx-4 whitespace-nowrap bg-admin-first text-center rounded hover:bg-gray-900 no-underline hover:underline text-white hover:text-white uppercase tracking-widest text-sm font-bold border border-solid border-white" aria-label="{{ params.arialabel }}"> {{ params.buttontext | truncate(25) }} </a>{% else %}{% endif -%}
 {%- if params.buttontext2 %}
-<a href="{{ params.link2 }}" class="block text-center p-2.5 md:p-5 mx-8 my-2 md:mx-8 rounded hover:bg-gray-900 no-underline hover:underline text-black hover:text-white uppercase tracking-widest text-sm font-bold border border-solid border-black" aria-label="{{ params.arialabel2 }}" style="min-width:300px;"> {{ params.buttontext2 }} </a> 
-{% else %} 
-{% endif -%}
+<a href="{{ params.link2 }}" class="lg:w-1/2 p-2 my-2 mx-4 whitespace-nowrap bg-admin-first text-center rounded hover:bg-gray-900 no-underline hover:underline text-white hover:text-white uppercase tracking-widest text-sm font-bold border border-solid border-white" aria-label="{{ params.arialabel2 }}"> {{ params.buttontext2 | truncate(25) }} </a>{% else %}{% endif -%}
 </div>
-
 </div>
-
+</div>
+</section>

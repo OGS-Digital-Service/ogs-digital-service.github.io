@@ -1,27 +1,22 @@
 <header class="flex flex-col md:flex-row bg-gray-50 ">
-
 <a href="https://ny.gov" class="hover:underline flex flex-row items-center md:py-0 py-2 min-w-max mr-8 text-xs" title="Link to The Offical Website of the State of New York">
 <img class="h-6 ml-6 md:ml-20 mr-4" src="img/nygov-logo.png" alt="Logo of the State of New York">An Official Website of New York State</a>
-
 {%- if params.warning %}
-
 <div class="flex flex-row items-center bg-yellow-100 border-l-8 border-yellow-500 py-2 w-full">
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-circle-fill noscaleicon" viewBox="0 0 16 16" >
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-circle-fill noscaleicon mx-2" viewBox="0 0 16 16" >
   <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
 </svg>
 <a href="{{params.warninglink}}" class="flex hover:underline oswald text-sm uppercase" title="{{params.warninglinktitle}}">{{params.warning | truncate(100) }}
 </a>
 </div>
 {% elseif params.alert %}
-<div class="bg-red-200 border-l-8 border-red-800 ">
-<a href="{{params.alertlink}}" class="flex hover:underline" title="{{params.alertlinktitle}}">
-<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-exclamation-triangle-fill " viewBox="0 0 16 16">
+<div class="flex flex-row items-center bg-red-100 border-l-8 border-red-600 py-2 w-full">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill noscaleicon mx-2" viewBox="0 0 16 16">
   <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
 </svg>
-<p class="oswald text-sm uppercase">{{params.alert | truncate(100)}}</p>
+<a href="{{params.alertlink}}" class="flex hover:underline oswald text-sm uppercase" title="{{params.alertlinktitle}}">{{params.alert | truncate(100) }}
 </a>
 </div>
 {% else %}
 {% endif %}
-
 </header>

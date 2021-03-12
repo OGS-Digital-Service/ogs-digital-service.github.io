@@ -2,10 +2,10 @@
 layout: layout-homepage.njk
 title: OGS Digital Service Design Lab
 ---
-{% from './_includes/_components.njk' import button,buttonhero,card,hero,heroalt %} 
+{% from './_includes/_components.njk' import button,buttonhero,card,hero,heroold %} 
 
-{{ heroalt({ 
-    title: "The NYS Design System",
+{{ hero({ 
+    title: "The NYS Simplified Design System",
     subtitle: "With an information first approach, the components and design patterns are focused on connecting people to the resources they need.",
     image:"office.webp",
     buttontext: "How to Start",
@@ -17,4 +17,4 @@ title: OGS Digital Service Design Lab
 })}}
 
 With an information first approach, the components and design patterns are focused on connecting people to the resources they need.
-# Now built using 11ty!
+# Now built using 11ty and tailwind

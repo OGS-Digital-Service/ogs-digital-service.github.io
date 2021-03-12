@@ -1,0 +1,24 @@
+<div class="bg-admin-third -mx-8 md:-mx-20 md:h-96 pb-12">
+
+<div class="lg:w-5/6 w-full">
+<h1 class="text-3xl md:text-4xl lg:text-5xl  font-extrabold text-black md:ml-12 p-8 lg:leading-normal md:leading-normal">{{ params.title }} </h1>
+{%- if params.subtitle %}
+<p class="text-black ml-8 md:ml-20 md:text-lg"> {{ params.subtitle }}</p>
+{% else %} 
+{% endif -%}
+</div>
+
+<div class="flex md:flex-row flex-col mt-6 md:mt-12 lg:mt-12 md:ml-12">
+{%- if params.buttontext %}
+<a href="{{ params.link }}" class="block text-center p-2.5 md:p-5 mx-8 my-2 md:mx-8 rounded hover:bg-gray-900 no-underline hover:underline text-black hover:text-white uppercase tracking-widest text-sm font-bold border border-solid border-black" aria-label="{{ params.arialabel }}" style="min-width:300px;"> {{ params.buttontext }} </a> 
+{% else %} 
+{% endif -%}
+
+{%- if params.buttontext2 %}
+<a href="{{ params.link2 }}" class="block text-center p-2.5 md:p-5 mx-8 my-2 md:mx-8 rounded hover:bg-gray-900 no-underline hover:underline text-black hover:text-white uppercase tracking-widest text-sm font-bold border border-solid border-black" aria-label="{{ params.arialabel2 }}" style="min-width:300px;"> {{ params.buttontext2 }} </a> 
+{% else %} 
+{% endif -%}
+</div>
+
+</div>
+

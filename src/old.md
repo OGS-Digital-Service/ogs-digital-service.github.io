@@ -3,9 +3,9 @@ layout: layout.njk
 title: OGS Digital Service Design Lab
 featuring: Now Built using 11ty!
 ---
-{% from './_includes/_components.njk' import button,buttonhero,card,hero,heroalt %} 
+{% from './_includes/_components.njk' import button,buttonhero,card,hero,heroold %} 
 
-{{ hero({ 
+{{ heroold({ 
     title: "12th Annual K-8 Empire State Plaza Art Collection Exhibition",
     subtitle: "Empire State Plaza Art Collection-Inspired Artwork by Capital Region School District Students",
     buttontext: "First Button",
