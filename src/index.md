@@ -1,7 +1,6 @@
 ---
 layout: layout-homepage.njk
 title: OGS Digital Service Design Lab
-featuring: Now Built using 11ty!
 ---
 {% from './_includes/_components.njk' import button,buttonhero,card,hero,heroalt %} 
 
@@ -17,4 +16,5 @@ featuring: Now Built using 11ty!
     arialabel2: "The patterns used in the design system"
 })}}
 
-
+With an information first approach, the components and design patterns are focused on connecting people to the resources they need.
+# Now built using 11ty!

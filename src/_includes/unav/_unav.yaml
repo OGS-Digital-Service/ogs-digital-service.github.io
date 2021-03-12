@@ -1,23 +1,20 @@
 params:
-- name: link
-  type: string
-  required: false
-- name: intro
-  type: string
-  required: true
-- name: nyslogo
-  type: string
-  required: true
 - name: alert
   type: string
   required: false
-- name: alerttext
+- name: altertlink
+  type: string
+  required: false
+- name: alertlinktitle
   type: string
   required: false
 - name: warning
   type: string
   required: false
-- name: warningtext
+- name: warninglink
+  type: string
+  required: false
+- name: warninglinktitle
   type: string
   required: false
 
