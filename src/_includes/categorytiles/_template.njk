@@ -1,0 +1,8 @@
+<div class=" my-6 -mx-8 md:-mx-20 bg-admin-third px-16  py-20">
+    <h2 class="text-2xl font-extrabold text-center">{{params.title}}</h2>
+<ul class="flex flex-row flex-wrap justify-center">
+{% for item in params.items %}
+<li class="mx-2"><a href="{{ item.link }}" class="text-white block text-md rounded-xl uppercase hover:underline hover:bg-white hover:text-admin-first transition-all duration-300 font-bold m-2 p-8 bg-admin-first  w-64 whitespace-nowrap text-center">{{ item.text | truncate(20)}} </a></li>
+{% endfor %}
+</ul>
+</div>

@@ -7,10 +7,6 @@
     <link href="./css/tailwind-dev.css" rel="stylesheet">
     <link href="./css/fonts.css" rel="stylesheet">
          <style>
-      .markdown p, h1, h2, h3, h4, h5, h6, ol, ul {
-      	grid-column: span 3 / span 3;
-      }
-
       p > a {
         text-decoration: underline;
       }
@@ -36,6 +32,16 @@
         min-width: 1.5rem;
         min-height: 1.5rem;
       }
+
+      .caret::after {
+        content: '>';
+        margin-left: 0.5em;
+        margin-right: 0.5em
+      }
+
+      .caret:last-of-type::after{
+        content: none;
+      }
       
       </style>
    
@@ -48,7 +54,7 @@
 
     <header class="flex flex-col md:flex-row bg-gray-50 ">
 <a href="https://ny.gov" class="hover:underline flex flex-row items-center md:py-0 py-2 min-w-max mr-8 text-xs" title="Link to The Offical Website of the State of New York">
-<img class="h-6 ml-6 md:ml-20 mr-4" src="img/nygov-logo.png" alt="Logo of the State of New York">An Official Website of New York State</a>
+<img class="h-6 ml-6 md:ml-20 mr-4" src="/img/nygov-logo.png" alt="Logo of the State of New York">An Official Website of New York State</a>
 <div class="flex flex-row items-center bg-yellow-100 border-l-8 border-yellow-500 py-2 w-full">
 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-circle-fill noscaleicon mx-2" viewBox="0 0 16 16" >
   <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
@@ -73,7 +79,7 @@
 
 
     <main class="mx-8 md:mx-20">
-    <section class="mb-4 py-6 -mx-8 md:-mx-20  md:py-10 lg:py-20 bg-no-repeat md:bg-center" style="background-image:url(img/office.webp);background-size:100%;">
+    <section class="mb-4 bg-admin-second py-4 -mx-8 md:-mx-20 " style="">
 <div class="mt-4 mb-4 mx-8 md:mx-16 rounded-xl">
 <div class="md:w-1/2 bg-admin-third rounded-xl">
 <h1 class="text-3xl md:text-4xl font-extrabold text-black p-4 md:leading-tight">The NYS Simplified Design System </h1><p class="text-black p-4 md:text-lg">With an information first approach, the components and design patterns are focused on connecting people to the resources they need.</p><div class="flex flex-col lg:flex-row lg:flex-grow">
@@ -84,7 +90,19 @@
 </section>
 <p>With an information first approach, the components and design patterns are focused on connecting people to the resources they need.</p>
 <h1>Now built using 11ty and tailwind</h1>
-
+<div class=" my-6 -mx-8 md:-mx-20 bg-admin-third px-16  py-20">
+    <h2 class="text-2xl font-extrabold text-center">This is the title of the area</h2>
+<ul class="flex flex-row flex-wrap justify-center">
+<li class="mx-2"><a href="#" class="text-white block text-md rounded-xl uppercase hover:underline hover:bg-white hover:text-admin-first transition-all duration-300 font-bold m-2 p-8 bg-admin-first  w-64 whitespace-nowrap text-center">Home </a></li>
+<li class="mx-2"><a href="#" class="text-white block text-md rounded-xl uppercase hover:underline hover:bg-white hover:text-admin-first transition-all duration-300 font-bold m-2 p-8 bg-admin-first  w-64 whitespace-nowrap text-center">Passports, travel... </a></li>
+<li class="mx-2"><a href="#" class="text-white block text-md rounded-xl uppercase hover:underline hover:bg-white hover:text-admin-first transition-all duration-300 font-bold m-2 p-8 bg-admin-first  w-64 whitespace-nowrap text-center">Travel abroad </a></li>
+<li class="mx-2"><a href="#" class="text-white block text-md rounded-xl uppercase hover:underline hover:bg-white hover:text-admin-first transition-all duration-300 font-bold m-2 p-8 bg-admin-first  w-64 whitespace-nowrap text-center">Travel again </a></li>
+<li class="mx-2"><a href="#" class="text-white block text-md rounded-xl uppercase hover:underline hover:bg-white hover:text-admin-first transition-all duration-300 font-bold m-2 p-8 bg-admin-first  w-64 whitespace-nowrap text-center">Home </a></li>
+<li class="mx-2"><a href="#" class="text-white block text-md rounded-xl uppercase hover:underline hover:bg-white hover:text-admin-first transition-all duration-300 font-bold m-2 p-8 bg-admin-first  w-64 whitespace-nowrap text-center">Home </a></li>
+<li class="mx-2"><a href="#" class="text-white block text-md rounded-xl uppercase hover:underline hover:bg-white hover:text-admin-first transition-all duration-300 font-bold m-2 p-8 bg-admin-first  w-64 whitespace-nowrap text-center">Home </a></li>
+<li class="mx-2"><a href="#" class="text-white block text-md rounded-xl uppercase hover:underline hover:bg-white hover:text-admin-first transition-all duration-300 font-bold m-2 p-8 bg-admin-first  w-64 whitespace-nowrap text-center">Home </a></li>
+</ul>
+</div>
     </main>
   </body>
 </html>

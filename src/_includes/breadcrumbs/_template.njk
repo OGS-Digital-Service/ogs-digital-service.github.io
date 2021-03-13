@@ -1,0 +1,5 @@
+<ol class="flex flex-row flex-wrap mb-6">
+{% for item in params.items %}
+<li class="caret oswald"><a href="{{ item.link }}" class="oswald text-sm uppercase hover:underline font-bold ">{{ item.text }} </a></li>
+{% endfor %}
+</ol>

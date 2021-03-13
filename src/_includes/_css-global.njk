@@ -1,8 +1,4 @@
      <style>
-      .markdown p, h1, h2, h3, h4, h5, h6, ol, ul {
-      	grid-column: span 3 / span 3;
-      }
-
       p > a {
         text-decoration: underline;
       }
@@ -27,6 +23,16 @@
       .noscaleicon {
         min-width: 1.5rem;
         min-height: 1.5rem;
+      }
+
+      .caret::after {
+        content: '>';
+        margin-left: 0.5em;
+        margin-right: 0.5em
+      }
+
+      .caret:last-of-type::after{
+        content: none;
       }
       
       </style>
