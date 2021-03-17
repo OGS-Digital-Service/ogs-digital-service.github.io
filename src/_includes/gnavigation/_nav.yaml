@@ -11,4 +11,8 @@ params:
   type: string
   required: false
   description: 
+- name: color
+  type: string
+  required: true
+  description: 
 

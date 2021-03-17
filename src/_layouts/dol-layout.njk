@@ -8,21 +8,24 @@
     <link href="./css/fonts.css" rel="stylesheet">
     {% include '_css-global.njk' %}
     <title>{{ title }}</title>
+    
   </head>
-
   <body class="">
-    {% from '../_includes/_components.njk' import unavcurrent,nav %}
+    {% from '../_includes/_components.njk' import unavcurrent,nav,unavcurrentfooter %}
      {{ unavcurrent({ 
       })}}
 
     {{ nav({ 
-    agencyname: "Department of Labor Adjudications Data",
-    link: "/",
-    arialabel: "Department of Labor Adjudications Data"
+    agencyname: "Department of Labor",
+    link: "https://adjudication.labor.ny.gov",
+    arialabel: "Department of Labor Adjudications Data",
+    color: "bg-business-first"
       })}}
    
     <main class="mx-8 md:mx-20">
     {{ content | safe }}
     </main>
+     {{ unavcurrentfooter({ 
+      })}}
   </body>
 </html>
