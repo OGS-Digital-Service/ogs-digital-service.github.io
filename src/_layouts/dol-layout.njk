@@ -11,7 +11,7 @@
     
   </head>
   <body class="">
-    {% from '../_includes/_components.njk' import unavcurrent,nav,unavcurrentfooter %}
+    {% from '../_includes/_components.njk' import unavcurrent,nav,unavcurrentfooter,footer %}
      {{ unavcurrent({ 
       })}}
 
@@ -25,6 +25,39 @@
     <main class="mx-8 md:mx-20">
     {{ content | safe }}
     </main>
+
+    {{ footer({ 
+    agencyname: "Department of Labor",
+    link: "https://adjudication.labor.ny.gov",
+    arialabel: "Department of Labor Adjudications Data",
+    color: "bg-business-third",
+    facebook:"https://www.facebook.com/nyslabor",
+    twitter: "https://twitter.com/nyslabor",
+    instagram:"https://instagram.com/nyslabor",
+    items: [
+    {
+      text: "Accessibility",
+      link: "https://labor.ny.gov/accessibility",
+      arialabel:"Link to Agency's Accessibility statement."
+    },
+     {
+      text: "Contact",
+      link: "https://labor.ny.gov/contact",
+      arialabel:"Link to Agency's contact information."
+    },
+     {
+      text: "Language Access",
+      link: "https://labor.ny.gov/language-access",
+      arialabel:"Link to Agency's language access resources."
+    },
+     {
+      text: "Privacy Policy",
+      link: "https://labor.ny.gov/privacy-policy",
+      arialabel:"Link to Agency's privacy policy."
+    }
+    ]
+      })}}
+    
      {{ unavcurrentfooter({ 
       })}}
   </body>
