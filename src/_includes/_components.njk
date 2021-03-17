@@ -16,6 +16,7 @@
 {% macro nav(params) %}
   {%- include "./gnavigation/_template.njk" -%}
 {% endmacro %}
+
 {% macro unav(params) %}
   {%- include "./unav/_template.njk" -%}
 {% endmacro %}
@@ -23,7 +24,7 @@
   {%- include "./unavcurrent/_template.njk" -%}
 {% endmacro %}
 {% macro unavcurrentfooter(params) %}
-  {%- include "./unavcurrent/_template.njk" -%}
+  {%- include "./unavcurrentfooter/_template.njk" -%}
 {% endmacro %}
 {% macro breadcrumbs(params) %}
   {%- include "./breadcrumbs/_template.njk" -%}
