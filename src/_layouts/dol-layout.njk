@@ -12,7 +12,14 @@
 
   <body class="">
     {% from '../_includes/_components.njk' import unavcurrent,nav %}
+     {{ unavcurrent({ 
+      })}}
 
+    {{ nav({ 
+    agencyname: "Department of Labor Adjudications Data",
+    link: "/",
+    arialabel: "Department of Labor Adjudications Data"
+      })}}
    
     <main class="mx-8 md:mx-20">
     {{ content | safe }}
