@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/tailwind-dev.css" rel="stylesheet">
+    <link href="./css/fonts.css" rel="stylesheet">
+    {% include '_css-global.njk' %}
+    <title>{{ title }}</title>
+  </head>
+
+  <body class="">
+    {% from '../_includes/_components.njk' import unavcurrent,nav %}
+
+   
+    <main class="mx-8 md:mx-20">
+    {{ content | safe }}
+    </main>
+  </body>
+</html>
