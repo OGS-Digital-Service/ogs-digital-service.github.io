@@ -1,15 +1,30 @@
 ---
 layout: layout.njk
-title: Adopt the System Incrementally
+title: Green Cleaning Products
 data: productlist
 ---
 
-{{ productlist.title }}
+<table class="">
+<thead class="">
+<tr>
+<th>Product Type </th>
+<th>Product Manufacturer</th>
+<th>Product Name</th>
+</tr>
+</thead>
+<tbody>
 
-<ol class="list">
-{% for post in collections.green %}
-<li><a href="{{ post.url }}">{{ post.url }}</a></li>
+{% for product in productlist %}
+<tr>
+<td>{{ product.type }}</td>
+<td>{{ product.manufacturer }}</td>
+<td><a href="/green-products/{{ product.type | slug }}/{{ product.category | slug }}/{{ product.manufacturer | slug }}/{{ product.name | slug }}{{ product.approval | slug}}/">{{ product.name }}</a></td>
+</tr>
 {% endfor %}
-</ol>
+
+</tbody>
+</table>
+
+
 
 

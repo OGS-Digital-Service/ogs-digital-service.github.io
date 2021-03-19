@@ -5,7 +5,7 @@ pagination:
     size: 1
     alias: product
     addAllPagesToCollections: true
-permalink: "green-products/{{ product.type | slug }}/{{ product.category | slug }}/{{ product.manufacturer | slug }}/{{ product.name | slug }}{{ product.approval }}/"
+permalink: "green-products/{{ product.type | slug }}/{{ product.category | slug }}/{{ product.manufacturer | slug }}/{{ product.name | slug }}{{ product.approval | slug}}/"
 tags: green
 ---
 {% from './_includes/_components.njk' import button,buttonhero,card,hero,breadcrumbs %} 
