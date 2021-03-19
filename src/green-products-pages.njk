@@ -8,6 +8,7 @@ pagination:
 permalink: "green-products/{{ product.type | slug }}/{{ product.category | slug }}/{{ product.manufacturer | slug }}/{{ product.name | slug }}{{ product.approval }}/"
 tags: green
 ---
+{% from './_includes/_components.njk' import button,buttonhero,card,hero,breadcrumbs %} 
 <ol class="flex flex-row flex-wrap mb-6">
 <li class="caret oswald uppercase">{{ product.type }}</li>
 <li class="caret oswald uppercase">{{ product.category }}</li>
@@ -41,3 +42,4 @@ tags: green
 </tr>
 </table>
 
+<a href="/green-products" class="block w-max p-5 m-8 bg-admin-first no-underline rounded hover:bg-gray-900 hover:text-underline text-white uppercase tracking-widest text-sm font-bold" aria-label="Return to the green products full list"> Return to Green Products List </a> 
