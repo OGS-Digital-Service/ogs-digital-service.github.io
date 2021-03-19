@@ -1,7 +1,7 @@
 ---
 layout: dol-layout.njk
 title: Labor Adjudications
-permalink: /ad-index.html
+permalink: false
 ---
 # {{ title }}
 ## Contents

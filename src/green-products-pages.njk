@@ -1,0 +1,18 @@
+---
+layout: layout.njk
+pagination:
+    data: greenproductlist
+    size: 1
+    alias: product
+    addAllPagesToCollections: true
+permalink: "green-products/{{ product.producttype | slug }}/{{ product.productcategory | slug }}/{{ product.manufacturername | slug }}/{{ product.productmodelname }}.html"
+tags: green
+---
+
+{{ product.producttype }}
+{{ product.productcategory }}
+{{ product.manufacturername }}
+{{ product.productmodelname }}
+{{ product.meetsapprovalstandards }}
+
+
