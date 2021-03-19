@@ -1,16 +1,43 @@
 ---
 layout: layout.njk
 pagination:
-    data: greenproductlist
+    data: productlist
     size: 1
     alias: product
     addAllPagesToCollections: true
-permalink: "green-products/{{ product.producttype | slug }}/{{ product.productcategory | slug }}/{{ product.manufacturername | slug }}/{{ product.productmodelname }}/"
+permalink: "green-products/{{ product.type | slug }}/{{ product.category | slug }}/{{ product.manufacturer | slug }}/{{ product.name | slug }}{{ product.approval }}/"
 tags: green
 ---
+<ol class="flex flex-row flex-wrap mb-6">
+<li class="caret oswald uppercase">{{ product.type }}</li>
+<li class="caret oswald uppercase">{{ product.category }}</li>
+<li class="caret oswald uppercase">{{ product.manufacturer }}</li>
+<li class="caret oswald uppercase">{{ product.name}}</li>
+<li class="caret oswald uppercase">{{ product.approval}}</li>
+</ol>
 
-{{ product.producttype }}
-{{ product.productcategory }}
-{{ product.manufacturername }}
-{{ product.productmodelname }}
-{{ product.meetsapprovalstandards }}
+
+<table class="border-2 border-solid border-gray-500 text-left">
+<caption class="font-bold"> Product Details </caption>
+<tr class="border border-solid border-gray-500">
+    <th scope="row" class="p-3 bg-gray-100">Product Type</th>
+    <td class="p-3">{{ product.type }}</td>
+</tr>
+<tr class="border border-solid border-gray-500">
+    <th scope="row" class="p-3 bg-gray-100">Product Category</th>
+    <td class="p-3">{{ product.category }}</td>
+</tr>
+<tr class="border border-solid border-gray-500">
+    <th scope="row" class="p-3 bg-gray-100">Manufacturer</th>
+    <td class="p-3">{{ product.manufacturer }}</td>
+</tr>
+<tr class="border border-solid border-gray-500">
+    <th scope="row" class="p-3 bg-gray-100">Product or Model Name</th>
+    <td class="p-3">{{ product.name }}</td>
+</tr>
+<tr class="border border-solid border-gray-500">
+    <th scope="row" class="p-3 bg-gray-100">Green Seal Approval</th>
+    <td class="p-3">{{ product.approval }}</td>
+</tr>
+</table>
+

@@ -1,0 +1,702 @@
+[
+  {
+    "type": "Cleaning Products",
+    "category": "Bath Cleaner",
+    "manufacturer": "Bridgepoint Systems",
+    "name": "Green Balance Carpet Extraction Rinse",
+    "approval": "Green Seal Certfiied: GS-41A"
+  },
+  {
+    "type": "Cleaning Products",
+    "category": "Bath Cleaner",
+    "manufacturer": "Buckeye International",
+    "name": "Symmetry Hair, Hand and Body Foaming Wash",
+    "approval": "EcoLogo Certified"
+  },
+  {
+    "type": "Cleaning Products",
+    "category": "Bath Cleaner",
+    "manufacturer": "Corcraft Products",
+    "name": "GreenLine Floor Wax Remover",
+    "approval": ""
+  },
+  {
+    "type": "Cleaning Products",
+    "category": "Bath Cleaner",
+    "manufacturer": "Laboratoires Choisy Ltee",
+    "name": "Choisy Enviro Technik Concentrated Glass Cleaner",
+    "approval": "EcoLogo Certified"
+  },
+  {
+    "type": "Cleaning Products",
+    "category": "Bath Cleaner",
+    "manufacturer": "Snappy Solutions, Inc.",
+    "name": "Green Life/La Vida Verde Liquid Hand Soap",
+    "approval": "EcoLogo Certified"
+  },
+  {
+    "type": "Cleaning Products",
+    "category": "Bath Cleaner",
+    "manufacturer": "U S Chemical",
+    "name": "Surety OneShot Neutral Cleaner",
+    "approval": ""
+  },
+  {
+    "type": "Cleaning Products",
+    "category": "Carpet Cleaner",
+    "manufacturer": "Brulin & Company",
+    "name": "TOPfoam Terragreen Hand Soap",
+    "approval": "Green Seal Certfiied: GS-37 2008"
+  },
+  {
+    "type": "Cleaning Products",
+    "category": "Carpet Cleaner",
+    "manufacturer": "Daycon Products Company",
+    "name": "Spectra System 3 TRIAD Carpet Cleaning Formula",
+    "approval": "Green Seal Certfiied: GS-40"
+  },
+  {
+    "type": "Cleaning Products",
+    "category": "Carpet Cleaner",
+    "manufacturer": "Daycon Products Company",
+    "name": "Spectra System1 TRIAD 5 Carpet Cleaning Formula",
+    "approval": "EcoLogo Certified"
+  },
+  {
+    "type": "Cleaning Products",
+    "category": "Carpet Cleaner",
+    "manufacturer": "Snappy Solutions, Inc.",
+    "name": "Green Life/La Vida Verde All Purpose Cleaner",
+    "approval": "EcoLogo Certified"
+  },
+  {
+    "type": "Cleaning Products",
+    "category": "Carpet Cleaner",
+    "manufacturer": "Snappy Solutions, Inc.",
+    "name": "Green Life/La Vida Verde Glass & Window Cleaner",
+    "approval": "Green Seal Certfiied: GS-37 2008"
+  },
+  {
+    "type": "Cleaning Products",
+    "category": "Carpet Cleaner",
+    "manufacturer": "Snappy Solutions, Inc.",
+    "name": "Green Life/La Vida Verde Tub & Tile Cleaner",
+    "approval": "EcoLogo Certified"
+  },
+  {
+    "type": "Cleaning Products",
+    "category": "Carpet Cleaner",
+    "manufacturer": "SP Richards",
+    "name": "Genuine Joe Green Hand Soap",
+    "approval": "Green Seal Certfiied: GS-40"
+  },
+  {
+    "type": "Cleaning Products",
+    "category": "Carpet Cleaner",
+    "manufacturer": "U S Chemical",
+    "name": "Surety OneShot Glass & Surface Cleaner",
+    "approval": ""
+  },
+  {
+    "type": "Cleaning Products",
+    "category": "Carpet Cleaner",
+    "manufacturer": "Unison Products",
+    "name": "Clea Blue Foaming Hand Wash",
+    "approval": "Green Seal Certfiied: GS-40"
+  },
+  {
+    "type": "Cleaning Products",
+    "category": "General Purpose Cleaner",
+    "manufacturer": "Chemco Corporation",
+    "name": "PURE Lotion Hand Soap",
+    "approval": "Green Seal Certfiied: GS-41A"
+  },
+  {
+    "type": "Cleaning Products",
+    "category": "General Purpose Cleaner",
+    "manufacturer": "Epic Industries",
+    "name": "Swell Foaming Luxury Hand Soap",
+    "approval": "Green Seal Certfiied: GS-37 2008"
+  },
+  {
+    "type": "Cleaning Products",
+    "category": "General Purpose Cleaner",
+    "manufacturer": "Hillyard Industries",
+    "name": "#390 Green Select Foaming Hand Soap",
+    "approval": "Green Seal Certfiied: GS-41A"
+  },
+  {
+    "type": "Cleaning Products",
+    "category": "General Purpose Cleaner",
+    "manufacturer": "Laboratoires Choisy Ltee",
+    "name": "Enviro Technik Bathroom Cleaner",
+    "approval": "EcoLogo Certified"
+  },
+  {
+    "type": "Cleaning Products",
+    "category": "General Purpose Cleaner",
+    "manufacturer": "Snappy Solutions, Inc.",
+    "name": "Green Life/La Vida Verde All Purpose Peroxide Cleaner",
+    "approval": "EcoLogo Certified"
+  },
+  {
+    "type": "Cleaning Products",
+    "category": "General Purpose Cleaner",
+    "manufacturer": "U S Chemical",
+    "name": "Surety OneShot Hydrogen Peroxide General Purpose Cleaner",
+    "approval": ""
+  },
+  {
+    "type": "Cleaning Products",
+    "category": "Glass Cleaner",
+    "manufacturer": "Bridgepoint Systems",
+    "name": "Green Balance Carpet Pre-Spray",
+    "approval": "EcoLogo Certified"
+  },
+  {
+    "type": "Cleaning Products",
+    "category": "Glass Cleaner",
+    "manufacturer": "Cogent Environmental Solutions Ltd.",
+    "name": "ECOgent General Purpose Cleaner",
+    "approval": "EcoLogo Certified"
+  },
+  {
+    "type": "Cleaning Products",
+    "category": "Glass Cleaner",
+    "manufacturer": "Edmar Cleaning Corporation",
+    "name": "Logichem Crystal Clear Green Hand Soap",
+    "approval": ""
+  },
+  {
+    "type": "Cleaning Products",
+    "category": "Glass Cleaner",
+    "manufacturer": "Jon-Don",
+    "name": "Natural Green Degreaser Cleaner",
+    "approval": "EcoLogo Certified"
+  },
+  {
+    "type": "Cleaning Products",
+    "category": "Glass Cleaner",
+    "manufacturer": "Kruger Products Limited",
+    "name": "Hands Fresh Lotion Soap with Moisturizers",
+    "approval": ""
+  },
+  {
+    "type": "Cleaning Products",
+    "category": "Glass Cleaner",
+    "manufacturer": "Laboratoires Choisy Ltee",
+    "name": "Enviro Technik Glass Cleaner",
+    "approval": ""
+  },
+  {
+    "type": "Cleaning Products",
+    "category": "Glass Cleaner",
+    "manufacturer": "Multi-Clean",
+    "name": "Century Maintenance Cleaner",
+    "approval": ""
+  },
+  {
+    "type": "Cleaning Products",
+    "category": "Glass Cleaner",
+    "manufacturer": "Snappy Solutions, Inc.",
+    "name": "Green Life/La Vida Verde Fragrance Free Liquid Hand Soap",
+    "approval": "EcoLogo Certified"
+  },
+  {
+    "type": "Cleaning Products",
+    "category": "Glass Cleaner",
+    "manufacturer": "Unitech Specialty Products",
+    "name": "UNIGREEN Lotionized Hand Cleaner Fragrance Free",
+    "approval": "EcoLogo Certified"
+  },
+  {
+    "type": "Cleaning Products",
+    "category": "Glass Cleaner",
+    "manufacturer": "Woodbine Products Company",
+    "name": "#4500 FoamFresh Luxury Hand Wash",
+    "approval": "EcoLogo Certified"
+  },
+  {
+    "type": "Floor Finish Products",
+    "category": "",
+    "manufacturer": "Dalco Enterprises",
+    "name": "Peach Tree Foaming Hand Soap",
+    "approval": ""
+  },
+  {
+    "type": "Floor Finish Products",
+    "category": "",
+    "manufacturer": "Enviro-Solutions",
+    "name": "Deodorant Lotion Soap",
+    "approval": "Green Seal Certfiied: GS-37 2008"
+  },
+  {
+    "type": "Floor Finish Products",
+    "category": "",
+    "manufacturer": "Kimberly-Clark Corporation",
+    "name": "Kimcare Luxury Foam Fragrance and Dye Free Skin Cleanser",
+    "approval": ""
+  },
+  {
+    "type": "Floor Finish Products",
+    "category": "",
+    "manufacturer": "Multi-Clean",
+    "name": "Green Isle Foaming Hand and Body Wash",
+    "approval": "Green Seal Certfiied: GS-37 2008"
+  },
+  {
+    "type": "Floor Finish Products",
+    "category": "",
+    "manufacturer": "NCH Corporation",
+    "name": "Green Advantage Clean & Clear Foaming Hand Soap",
+    "approval": ""
+  },
+  {
+    "type": "Floor Finish Products",
+    "category": "",
+    "manufacturer": "Palmer Fixture Company",
+    "name": "SaniSuds F7000 Foam Lotion Soap",
+    "approval": "Green Seal Certfiied: GS-37 2008"
+  },
+  {
+    "type": "Floor Finish Products",
+    "category": "",
+    "manufacturer": "Pioneer Eclipse Corp.",
+    "name": "Pioneer Eclipse Envirostar 2000 Floor Sealer",
+    "approval": ""
+  },
+  {
+    "type": "Floor Finish Products",
+    "category": "",
+    "manufacturer": "Plus Manufacturing",
+    "name": "Procyon Plus",
+    "approval": ""
+  },
+  {
+    "type": "Floor Finish Products",
+    "category": "",
+    "manufacturer": "SCA Tissue North America",
+    "name": "Tork Premium Foam Lotion Soap",
+    "approval": "Green Seal Certfiied: GS-40"
+  },
+  {
+    "type": "Floor Finish Products",
+    "category": "",
+    "manufacturer": "Southeast Link",
+    "name": "Foam Soap by Southeast Link",
+    "approval": "Green Seal Certfiied: GS-41A"
+  },
+  {
+    "type": "Floor Finish Products",
+    "category": "",
+    "manufacturer": "Stockhausen, Inc. / STOKO Skin Care",
+    "name": "STOKO Blue Force Medium to Heavy-duty Hand Cleanser",
+    "approval": ""
+  },
+  {
+    "type": "Floor Finish Products",
+    "category": "",
+    "manufacturer": "Sunburst Chemicals",
+    "name": "SunDrops 57 Foaming Lotion Soap",
+    "approval": "EcoLogo Certified"
+  },
+  {
+    "type": "Floor Finish Products",
+    "category": "",
+    "manufacturer": "U. S. Chemical",
+    "name": "Powerfoam Foaming Hand Soap",
+    "approval": "EcoLogo Certified"
+  },
+  {
+    "type": "Floor Finish Products",
+    "category": "",
+    "manufacturer": "Unisan Products",
+    "name": "Clea Blue Foaming Hand Wash",
+    "approval": ""
+  },
+  {
+    "type": "Floor Finish Products",
+    "category": "",
+    "manufacturer": "Zep Inc.",
+    "name": "Sunburst Hand Soap",
+    "approval": ""
+  },
+  {
+    "type": "Floor Finish Stripper Products",
+    "category": "",
+    "manufacturer": "Brulin & Company",
+    "name": "TerraGreen Degreaser SC",
+    "approval": ""
+  },
+  {
+    "type": "Floor Finish Stripper Products",
+    "category": "",
+    "manufacturer": "Brulin & Company",
+    "name": "Terragreen Hyper Maxx 4 Hydrogen Peroxide Cleaner",
+    "approval": "Green Seal Certfiied: GS-37 2008"
+  },
+  {
+    "type": "Floor Finish Stripper Products",
+    "category": "",
+    "manufacturer": "EnvirOx",
+    "name": "EnvirOx Floors",
+    "approval": "Green Seal Certfiied: GS-40"
+  },
+  {
+    "type": "Floor Finish Stripper Products",
+    "category": "",
+    "manufacturer": "Misco Products Corporation",
+    "name": "Elements E05 Prespray Carpet Cleaner",
+    "approval": "Green Seal Certfiied: GS-41A"
+  },
+  {
+    "type": "Floor Finish Stripper Products",
+    "category": "",
+    "manufacturer": "Misco Products Corporation",
+    "name": "Majestic I90 Prespray Carpet Cleaner",
+    "approval": "EcoLogo Certified"
+  },
+  {
+    "type": "Floor Finish Stripper Products",
+    "category": "",
+    "manufacturer": "Wayne Concept Manufacturing",
+    "name": "Harmony NRC-64 Concentrated No Rinse Detergent",
+    "approval": "EcoLogo Certified"
+  },
+  {
+    "type": "Hand Soaps",
+    "category": "",
+    "manufacturer": "Armchem International",
+    "name": "Luxury Foam Up Hand Soap",
+    "approval": "Green Seal Certfiied: GS-37 2008"
+  },
+  {
+    "type": "Hand Soaps",
+    "category": "",
+    "manufacturer": "Armchem International",
+    "name": "No Touch Luxury Foam Up Hand Soap",
+    "approval": "Green Seal Certfiied: GS-41A"
+  },
+  {
+    "type": "Hand Soaps",
+    "category": "",
+    "manufacturer": "Betco",
+    "name": "Clario Clear",
+    "approval": "EcoLogo Certified"
+  },
+  {
+    "type": "Hand Soaps",
+    "category": "",
+    "manufacturer": "Enviro-Solutions",
+    "name": "Soy Waterless",
+    "approval": "Green Seal Certfiied: GS-37 2008"
+  },
+  {
+    "type": "Hand Soaps",
+    "category": "",
+    "manufacturer": "Genlabs",
+    "name": "Certi-Green Citrus Multi \"Per\" Pose Cleaner",
+    "approval": "EcoLogo Certified"
+  },
+  {
+    "type": "Hand Soaps",
+    "category": "",
+    "manufacturer": "Genlabs",
+    "name": "Certi-Green Low pH Soil Extractor",
+    "approval": "Green Seal Certfiied: GS-40"
+  },
+  {
+    "type": "Hand Soaps",
+    "category": "",
+    "manufacturer": "Groupe Jean Coutu",
+    "name": "Eco-Nature All Purpose Cleaner",
+    "approval": ""
+  },
+  {
+    "type": "Hand Soaps",
+    "category": "",
+    "manufacturer": "Groupe Jean Coutu",
+    "name": "Eco-Nature Bathroom Cleaner",
+    "approval": ""
+  },
+  {
+    "type": "Hand Soaps",
+    "category": "",
+    "manufacturer": "Groupe Jean Coutu",
+    "name": "Eco-Nature Window and Glass Cleaner",
+    "approval": ""
+  },
+  {
+    "type": "Hand Soaps",
+    "category": "",
+    "manufacturer": "Savons Prolav Soaps Inc.",
+    "name": "Bio-Vert All Purpose Cleaner",
+    "approval": ""
+  },
+  {
+    "type": "Hand Soaps",
+    "category": "",
+    "manufacturer": "Savons Prolav Soaps Inc.",
+    "name": "Bio-Vert Bathroom Cleaner",
+    "approval": ""
+  },
+  {
+    "type": "Hand Soaps",
+    "category": "",
+    "manufacturer": "ServiceLab Inc.",
+    "name": "Concentrated Descaler and Mutli Purpose Cleaner 950mL",
+    "approval": ""
+  },
+  {
+    "type": "Hand Soaps",
+    "category": "",
+    "manufacturer": "ServiceLab Inc.",
+    "name": "Concentrated Glass and All Surface Cleaner 10L",
+    "approval": ""
+  },
+  {
+    "type": "Hand Soaps",
+    "category": "",
+    "manufacturer": "ServiceLab Inc.",
+    "name": "Concentrated Glass and All Surface Cleaner 205L",
+    "approval": "Green Seal Certfiied: GS-41A"
+  },
+  {
+    "type": "Hand Soaps",
+    "category": "",
+    "manufacturer": "ServiceLab Inc.",
+    "name": "Concentrated Glass and All Surface Cleaner 20L",
+    "approval": "Green Seal Certfiied: GS-37 2008"
+  },
+  {
+    "type": "Hand Soaps",
+    "category": "",
+    "manufacturer": "ServiceLab Inc.",
+    "name": "Concentrated Glass and All Surface Cleaner 4L",
+    "approval": ""
+  },
+  {
+    "type": "Hand Soaps",
+    "category": "",
+    "manufacturer": "ServiceLab Inc.",
+    "name": "Concentrated Glass and All Surface Cleaner 950mL",
+    "approval": "EcoLogo Certified"
+  },
+  {
+    "type": "Hand Soaps",
+    "category": "",
+    "manufacturer": "ServiceLab Inc.",
+    "name": "RTU Glass and All Surface Cleaner 10L",
+    "approval": "Green Seal Certfiied: GS-40"
+  },
+  {
+    "type": "Hand Soaps",
+    "category": "",
+    "manufacturer": "ServiceLab Inc.",
+    "name": "RTU Glass and All Surface Cleaner 10L",
+    "approval": "Green Seal Certfiied: GS-37 2008"
+  },
+  {
+    "type": "Hand Soaps",
+    "category": "",
+    "manufacturer": "ServiceLab Inc.",
+    "name": "RTU Glass and All Surface Cleaner 205L",
+    "approval": ""
+  },
+  {
+    "type": "Hand Soaps",
+    "category": "",
+    "manufacturer": "ServiceLab Inc.",
+    "name": "RTU Glass and All Surface Cleaner 950mL",
+    "approval": "EcoLogo Certified"
+  },
+  {
+    "type": "Hand Soaps",
+    "category": "",
+    "manufacturer": "WAXIE Sanitary Supply",
+    "name": "Waxie Green Citrus Hydroxyclean Multipurpose Cleaner",
+    "approval": "Green Seal Certfiied: GS-37 2008"
+  },
+  {
+    "type": "Hand Soaps",
+    "category": "",
+    "manufacturer": "WAXIE Sanitary Supply",
+    "name": "Waxie Green Fibercare Carpet Soil Extractor",
+    "approval": ""
+  },
+  {
+    "type": "Vacuum Cleaners",
+    "category": "Commercial Backpack",
+    "manufacturer": "Buckeye International, Inc.",
+    "name": "Penetrate Environmental Floor Stripper",
+    "approval": "Green Seal Certfiied: GS-41A"
+  },
+  {
+    "type": "Vacuum Cleaners",
+    "category": "Commercial Backpack",
+    "manufacturer": "Groupe Avmor",
+    "name": "EcoPure EP76 Cream Cleanser",
+    "approval": ""
+  },
+  {
+    "type": "Vacuum Cleaners",
+    "category": "Commercial Backpack",
+    "manufacturer": "Savons Prolav Soaps Inc.",
+    "name": "Bio-Vert Window and Glass Cleaner",
+    "approval": ""
+  },
+  {
+    "type": "Vacuum Cleaners",
+    "category": "Commercial Backpack",
+    "manufacturer": "Tenaquip Industrial Distribution",
+    "name": "RMP-ECO Neutral Cleaner - Pine Oil",
+    "approval": "EcoLogo Certified"
+  },
+  {
+    "type": "Vacuum Cleaners",
+    "category": "Commercial Backpack",
+    "manufacturer": "TriLeaf Distribution Trifeul",
+    "name": "Blue Planet All Purpose Cleaner",
+    "approval": "Green Seal Certfiied: GS-40"
+  },
+  {
+    "type": "Vacuum Cleaners",
+    "category": "Commercial Backpack",
+    "manufacturer": "TriLeaf Distribution Trifeul",
+    "name": "Blue Planet Glass Cleaner",
+    "approval": "Green Seal Certfiied: GS-37 2011"
+  },
+  {
+    "type": "Vacuum Cleaners",
+    "category": "Commercial Canister",
+    "manufacturer": "Groupe Avmor",
+    "name": "Avmor S-22 Cleaner Descaler Brightner for Floors and Bathrooms 10L",
+    "approval": ""
+  },
+  {
+    "type": "Vacuum Cleaners",
+    "category": "Commercial Canister",
+    "manufacturer": "Groupe Avmor",
+    "name": "EcoPure EP77 Heavy Duty Washroom Cleaner RTU 1.8L",
+    "approval": "EcoLogo Certified"
+  },
+  {
+    "type": "Vacuum Cleaners",
+    "category": "Commercial Canister",
+    "manufacturer": "Tenaquip Industrial Distribution",
+    "name": "RMP-ECO Bathroom Cleaner - Tile & Bowl Cleaner",
+    "approval": "Green Seal Certfiied: GS-37 2008"
+  },
+  {
+    "type": "Vacuum Cleaners",
+    "category": "Commercial Canister",
+    "manufacturer": "TriLeaf Distribution Trifeul",
+    "name": "Blue Planet Liquid Dish Soap",
+    "approval": "Green Seal Certfiied: GS-37 2010"
+  },
+  {
+    "type": "Vacuum Cleaners",
+    "category": "Commercial Canister",
+    "manufacturer": "Wildwood Industries Inc.",
+    "name": "Endust Pure Solutions Carpet & Upholstry Cleaner",
+    "approval": "Green Seal Certfiied: GS-37 2008"
+  },
+  {
+    "type": "Vacuum Cleaners",
+    "category": "Commercial Upright",
+    "manufacturer": "Groupe Avmor",
+    "name": "Avmor S-22 Cleaner Descaler Brightner for Floors and Bathrooms 4L",
+    "approval": ""
+  },
+  {
+    "type": "Vacuum Cleaners",
+    "category": "Commercial Upright",
+    "manufacturer": "Groupe Avmor",
+    "name": "EcoPure EP77 Heavy Duty Washroom Cleaner Concentrate 1.8L",
+    "approval": "Green Seal Certfiied: GS-37 2008"
+  },
+  {
+    "type": "Vacuum Cleaners",
+    "category": "Commercial Upright",
+    "manufacturer": "Tenaquip Industrial Distribution",
+    "name": "RMP - ECO Glass & Multi Surface Cleaner",
+    "approval": "EcoLogo Certified"
+  },
+  {
+    "type": "Vacuum Cleaners",
+    "category": "Commercial Upright",
+    "manufacturer": "Tenaquip Industrial Distribution",
+    "name": "RMP - ECO OXY Cleaner & Stain Remover",
+    "approval": "Green Seal Certfiied: GS-37 2012"
+  },
+  {
+    "type": "Vacuum Cleaners",
+    "category": "Commercial Upright",
+    "manufacturer": "TriLeaf Distribution Trifeul",
+    "name": "Blue Planet Multi Surface Cleaner",
+    "approval": "Green Seal Certfiied: GS-37 2008"
+  },
+  {
+    "type": "Vacuum Cleaners",
+    "category": "Commercial Wide Area",
+    "manufacturer": "Bebbington Industries Incorporated",
+    "name": "Green Knight Neutral Cleaner 4L, 20L",
+    "approval": ""
+  },
+  {
+    "type": "Vacuum Cleaners",
+    "category": "Commercial Wide Area",
+    "manufacturer": "Groupe Avmor",
+    "name": "EcoPure EP77 Heavy Duty Washroom Cleaner RTU 4L",
+    "approval": "EcoLogo Certified"
+  },
+  {
+    "type": "Vacuum Cleaners",
+    "category": "Commercial Wide Area",
+    "manufacturer": "State Industrial Products",
+    "name": "Ecolution Carpet Cleaner 15 G, 5 G, 1 G, 3 L",
+    "approval": "Green Seal Certfiied: GS-37 2009"
+  },
+  {
+    "type": "Vacuum Cleaners",
+    "category": "Commercial Wide Area",
+    "manufacturer": "Tenaquip Industrial Distribution",
+    "name": "RMP - ECO Neutral Cleaner",
+    "approval": "Green Seal Certfiied: GS-41A"
+  },
+  {
+    "type": "Vacuum Cleaners",
+    "category": "Household Upright",
+    "manufacturer": "CP Industries",
+    "name": "CP Industries Enviro Glass Cleaner - EC 1L & 4L",
+    "approval": "Green Seal Certfiied: GS-40"
+  },
+  {
+    "type": "Vacuum Cleaners",
+    "category": "Household Upright",
+    "manufacturer": "Groupe Avmor",
+    "name": "Avmor S-22 Cleaner Descaler Brightner for Floors and Bathrooms 20L",
+    "approval": ""
+  },
+  {
+    "type": "Vacuum Cleaners",
+    "category": "Household Upright",
+    "manufacturer": "Groupe Avmor",
+    "name": "EcoPure EP77 Heavy Duty Washroom Cleaner and Concentrate 4L",
+    "approval": "Green Seal Certfiied: GS-41A"
+  },
+  {
+    "type": "Vacuum Cleaners",
+    "category": "Household Upright",
+    "manufacturer": "Tenaquip Industrial Distribution",
+    "name": "RMP - ECO Multi Purpose Bathroom Cleaner Concentrate",
+    "approval": "Green Seal Certfiied: GS-37 2013"
+  },
+  {
+    "type": "Vacuum Cleaners",
+    "category": "Household Upright",
+    "manufacturer": "TriLeaf Distribution Trifeul",
+    "name": "Blue Planet Bathroom Cleaner",
+    "approval": "Green Seal Certfiied: GS-37 2009"
+  }
+]

@@ -4,7 +4,7 @@ params:
   required: true
   params:
   - name: link
-    type: string
+    type: boolean
     required: false
   - name: text
     type: string
