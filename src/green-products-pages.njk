@@ -5,7 +5,7 @@ pagination:
     size: 1
     alias: product
     addAllPagesToCollections: true
-permalink: "green-products/{{ product.producttype | slug }}/{{ product.productcategory | slug }}/{{ product.manufacturername | slug }}/{{ product.productmodelname }}.html"
+permalink: "green-products/{{ product.producttype | slug }}/{{ product.productcategory | slug }}/{{ product.manufacturername | slug }}/{{ product.productmodelname }}/"
 tags: green
 ---
 
@@ -14,5 +14,3 @@ tags: green
 {{ product.manufacturername }}
 {{ product.productmodelname }}
 {{ product.meetsapprovalstandards }}
-
-
