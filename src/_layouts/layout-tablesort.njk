@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% include '_css-link.njk' %}
+    {% include '_css-global.njk' %}
+    <title>{{ title }}</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jq-3.3.1/dt-1.10.24/b-1.7.0/b-html5-1.7.0/sb-1.0.1/sp-1.2.2/datatables.min.css"/>
+ 
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/jq-3.3.1/dt-1.10.24/b-1.7.0/b-html5-1.7.0/sb-1.0.1/sp-1.2.2/datatables.min.js"></script>
+
+
+  </head>
+  <body class="">
+  <script>
+  $(document).ready(function() {
+    $('#example').DataTable( {
+        "paging":   true,
+        "ordering": true,
+        "info":     false
+    } );
+} );
+  </script>
+    {% from '../_includes/_components.njk' import unav,nav,footer  %}
+
+    {{ unav({ 
+    warning:"COVID-19 is still spreading in New York State. Find out how to protect yourself & get a vaccine.",
+    warninglink: "https://covid19vaccine.health.ny.gov/",
+    warninglinktitle: "Link to the New York State COVID 19 Vaccine website",
+    alert:"Winter storm warning for central new york. prepare and find out the timing.",
+    alertlink: "https://ny.gov/",
+    alertlinktitle: "Link to the emergency preparedness for winter storms webpage"
+      })}}
+
+    {{ nav({ 
+    agencyname: "Digital Services",
+    link: "/",
+    arialabel: "New York State Digital Services",
+    color: "bg-admin-first"
+      })}}
+    <main class="mx-8 md:mx-20">
+    {{ content | safe }}
+    </main>
+
+
+    {{ footer({ 
+    agencyname: "Digital Services",
+    link: "/",
+    arialabel: "New York State Digital Services",
+    color: "bg-admin-third",
+    facebook:"",
+    twitter: "",
+    instagram:"",
+    items: [
+    {
+      text: "Accessibility",
+      link: "#",
+      arialabel:"Link to Agency's Accessibility statement."
+    },
+     {
+      text: "Contact",
+      link: "#",
+      arialabel:"Link to Agency's contact information."
+    ]
+    ]
+      })}}
+  </body>
+</html>

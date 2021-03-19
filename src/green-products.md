@@ -1,10 +1,10 @@
 ---
-layout: layout.njk
+layout: layout-tablesort.njk
 title: Green Cleaning Products
 data: productlist
 ---
 
-<table class="">
+<table id="example" class="display">
 <thead class="">
 <tr>
 <th>Product Type </th>

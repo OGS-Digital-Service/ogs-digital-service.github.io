@@ -55,9 +55,22 @@
    
 
     <title>Green Cleaning Products</title>
-  
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jq-3.3.1/dt-1.10.24/b-1.7.0/b-html5-1.7.0/sb-1.0.1/sp-1.2.2/datatables.min.css"/>
+ 
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/jq-3.3.1/dt-1.10.24/b-1.7.0/b-html5-1.7.0/sb-1.0.1/sp-1.2.2/datatables.min.js"></script>
+
+
   </head>
   <body class="">
+  <script>
+  $(document).ready(function() {
+    $('#example').DataTable( {
+        "paging":   true,
+        "ordering": true,
+        "info":     false
+    } );
+} );
+  </script>
     
 
     <header class="flex flex-col md:flex-row bg-gray-50 ">
@@ -85,7 +98,7 @@
 
 
     <main class="mx-8 md:mx-20">
-    <table class="">
+    <table id="example" class="display">
 <thead class="">
 <tr>
 <th>Product Type </th>
