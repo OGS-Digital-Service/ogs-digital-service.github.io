@@ -1,45 +1,61 @@
 ---
 layout: layout.njk
 pagination:
-    data: productlist
+    data: newproductlist
     size: 1
-    alias: product
+    alias: products
     addAllPagesToCollections: true
-permalink: "green-products/{{ product.type | slug }}/{{ product.category | slug }}/{{ product.manufacturer | slug }}/{{ product.name | slug }}{{ product.approval | slug}}/"
+permalink: "green-products/{{ products.category | slug }}/{{ products.subcategory | slug }}/{{ products.manufacturer | slug }}/{{ products.product | slug }}/"
 tags: green
 ---
 {% from './_includes/_components.njk' import button,buttonhero,card,hero,breadcrumbs %} 
 <ol class="flex flex-row flex-wrap mb-6">
-<li class="caret oswald uppercase">{{ product.type }}</li>
-<li class="caret oswald uppercase">{{ product.category }}</li>
-<li class="caret oswald uppercase">{{ product.manufacturer }}</li>
-<li class="caret oswald uppercase">{{ product.name}}</li>
-<li class="caret oswald uppercase">{{ product.approval}}</li>
+<li class="caret oswald uppercase">{{ products.category }}</li>
+<li class="caret oswald uppercase">{{ products.subcategory }}</li>
+<li class="caret oswald uppercase">{{ products.manufacturer }}</li>
+<li class="caret oswald uppercase">{{ products.product}}</li>
 </ol>
 
 
 <table class="border-2 border-solid border-gray-500 text-left">
 <caption class="font-bold"> Product Details </caption>
 <tr class="border border-solid border-gray-500">
-    <th scope="row" class="p-3 bg-gray-100">Product Type</th>
-    <td class="p-3">{{ product.type }}</td>
+    <th scope="row" class="p-3 bg-gray-100">Product Category</th>
+    <td class="p-3">{{ products.category }}</td>
 </tr>
 <tr class="border border-solid border-gray-500">
-    <th scope="row" class="p-3 bg-gray-100">Product Category</th>
-    <td class="p-3">{{ product.category }}</td>
+    <th scope="row" class="p-3 bg-gray-100">Product Type</th>
+    <td class="p-3">{{ products.subcategory }}</td>
 </tr>
 <tr class="border border-solid border-gray-500">
     <th scope="row" class="p-3 bg-gray-100">Manufacturer</th>
-    <td class="p-3">{{ product.manufacturer }}</td>
+    <td class="p-3">{{ products.manufacturer }}</td>
 </tr>
 <tr class="border border-solid border-gray-500">
-    <th scope="row" class="p-3 bg-gray-100">Product or Model Name</th>
-    <td class="p-3">{{ product.name }}</td>
+    <th scope="row" class="p-3 bg-gray-100">Product Name</th>
+    <td class="p-3">{{ products.product }}</td>
 </tr>
 <tr class="border border-solid border-gray-500">
-    <th scope="row" class="p-3 bg-gray-100">Green Seal Approval</th>
-    <td class="p-3">{{ product.approval }}</td>
+    <th scope="row" class="p-3 bg-gray-100">Meets Standard</th>
+    <td class="p-3">{{ products.standard }}</td>
+</tr>
+<tr class="border border-solid border-gray-500">
+    <th scope="row" class="p-3 bg-gray-100">Fragrance</th>
+    <td class="p-3">{{ products.fragrance }}</td>
+</tr>
+<tr class="border border-solid border-gray-500">
+    <th scope="row" class="p-3 bg-gray-100">Dilution Ratio</th>
+    <td class="p-3">{{ products.dilution }}</td>
+</tr>
+<tr class="border border-solid border-gray-500">
+    <th scope="row" class="p-3 bg-gray-100">Website</th>
+    <td class="p-3"><a href="{{products.website}}" aria-label="{{products.manufacturer}}{{ products.product }}"> {{ products.website }} </a></td>
+</tr>
+<tr class="border border-solid border-gray-500">
+    <th scope="row" class="p-3 bg-gray-100">Additional Information</th>
+    <td class="p-3">{{ products.information}}</td>
 </tr>
 </table>
 
 <a href="/green-products" class="block w-max p-5 m-8 bg-admin-first no-underline rounded hover:bg-gray-900 hover:text-underline text-white uppercase tracking-widest text-sm font-bold" aria-label="Return to the green products full list"> Return to Green Products List </a> 
+
