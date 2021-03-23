@@ -3,11 +3,10 @@ layout: layout-tablesort.njk
 title: Green Cleaning Products
 data: newproductlist
 ---
-
+<div class="flex-row">
 <button type="button" id="test" class="border border-solid border-black p-4 m-4">Clear Filters</button>
-<div class="filter1"> Filter 1 </div>
-<div class="filter2"> Filter 1 </div>
-<div class="filter3"> Filter 1 </div>
+<label for="filter1"> Filter by Category </label><span class="filter1 border border-solid border-black p-2 m-2"></span> </div>
+
 
 
 <table id="example" class="display">
@@ -16,8 +15,8 @@ data: newproductlist
 <th>Product Category </th> 
 <th>Product Type</th>
 <th>Product Manufacturer</th>
-<th>Meets Standard</th>
 <th>Product Name</th>
+<th>Meets Standard</th>
 </tr>
 </thead>
 <tbody>
@@ -26,8 +25,8 @@ data: newproductlist
 <td>{{ products.category }}</td>
 <td>{{ products.subcategory }}</td>
 <td>{{ products.manufacturer }}</td>
-<td>{{ products.standard }}</td>
 <td><a href="{{ products.category | slug }}/{{ products.subcategory | slug }}/{{ products.manufacturer | slug }}/{{ products.product | slug }}/">{{ products.product }}</a></td>
+<td>{{ products.standard }}</td>
 </tr>
 {% endfor %}
 </tbody>
@@ -42,10 +41,4 @@ data: newproductlist
 </tfoot>
 </table>
 
-
-category
-subcat
-manufacturer
-product name
-standard
 

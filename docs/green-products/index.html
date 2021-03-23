@@ -67,18 +67,29 @@
   <body class="">
   <script>
  
-
-  $(document).ready(function() {
-     var table = $('#example').DataTable();
-
-
-
-$('#test').click(function() {
-    table.search('').draw();
-    $('#myInputTextField1, #myInputTextField2').val('');
-});
-                                 
-   
+$(document).ready(function() {
+    $('#example').DataTable( {
+        initComplete: function () {
+            this.api().columns(0).every( function () {
+                var column = this;
+                var select = $('<select><option value=""></option></select>')
+                    .appendTo( $(".filter1").empty() )
+                    .on( 'change', function () {
+                        var val = $.fn.dataTable.util.escapeRegex(
+                            $(this).val()
+                        );
+ 
+                        column
+                            .search( val ? '^'+val+'$' : '', true, false )
+                            .draw();
+                    } );
+ 
+                column.data().unique().sort().each( function ( d, j ) {
+                    select.append( '<option value="'+d+'">'+d+'</option>' )
+                } );
+            } );
+        }
+    } );
 } );
 
 
@@ -111,18 +122,17 @@ $('#test').click(function() {
 
 
     <main class="mx-8 md:mx-20">
-    <p><button type="button" id="test" class="border border-solid border-black p-4 m-4">Clear Filters</button></p>
-<div class="filter1"> Filter 1 </div>
-<div class="filter2"> Filter 1 </div>
-<div class="filter3"> Filter 1 </div>
+    <div class="flex-row">
+<button type="button" id="test" class="border border-solid border-black p-4 m-4">Clear Filters</button>
+<label for="filter1"> Filter by Category </label><span class="filter1 border border-solid border-black p-2 m-2"></span> </div>
 <table id="example" class="display">
 <thead class="">
 <tr>
 <th>Product Category </th> 
 <th>Product Type</th>
 <th>Product Manufacturer</th>
-<th>Meets Standard</th>
 <th>Product Name</th>
+<th>Meets Standard</th>
 </tr>
 </thead>
 <tbody>
@@ -130,78 +140,78 @@ $('#test').click(function() {
 <td>Cleaning</td>
 <td>General, Bath, Glass, Carpet</td>
 <td>Snappy Solutions</td>
-<td>Green Seal</td>
 <td><a href="cleaning/general-bath-glass-carpet/snappy-solutions/greenlifela-vita-verde-all-purpose-peroxide-cleaner/">Greenlife/La Vita Verde All-purpose Peroxide Cleaner</a></td>
+<td>Green Seal</td>
 </tr>
 <tr> 
 <td>Floor Finish</td>
 <td></td>
 <td>Hillyard, Inc.</td>
-<td>Green Seal</td>
 <td><a href="floor-finish//hillyard-inc./one-plus-zinc-free-floor-polish/">One Plus Zinc-free Floor Polish</a></td>
+<td>Green Seal</td>
 </tr>
 <tr> 
 <td>Floor Finish</td>
 <td></td>
 <td>CorCraft Products</td>
-<td>Yes</td>
 <td><a href="floor-finish//corcraft-products/corcraft-floor-finish/">CorCraft Floor Finish</a></td>
+<td>Yes</td>
 </tr>
 <tr> 
 <td>Floor Finish Stripper</td>
 <td></td>
 <td>Enviro-Solutions</td>
-<td>Green Seal</td>
 <td><a href="floor-finish-stripper//enviro-solutions/es-90c-clean-cut-concentrated-floor-stripper/">ES-90C Clean Cut Concentrated Floor Stripper</a></td>
+<td>Green Seal</td>
 </tr>
 <tr> 
 <td>Hand Soaps</td>
 <td></td>
 <td>DEB Canada</td>
-<td>ECOLOGO®</td>
 <td><a href="hand-soaps//deb-canada/deb-sunflower-wash/">Deb Sunflower Wash</a></td>
+<td>ECOLOGO®</td>
 </tr>
 <tr> 
 <td>Vacuum Cleaners</td>
 <td>Commercial Backpack</td>
 <td>ProTeam Inc.</td>
-<td>Bronze level</td>
 <td><a href="vacuum-cleaners/commercial-backpack/proteam-inc./proteam-quietpro-hepa-micro-lined-inner-bag/">ProTeam QuietPro HEPA, Micro-lined inner bag</a></td>
+<td>Bronze level</td>
 </tr>
 <tr> 
 <td>Vacuum Cleaners</td>
 <td>Commercial Canister</td>
 <td>Rubbermaid Commercial Products</td>
-<td>Silver Level</td>
 <td><a href="vacuum-cleaners/commercial-canister/rubbermaid-commercial-products/dolly-vac-9vdvpn-4400-with-power-nozzle/">Dolly Vac 9VDVPN 4400 with Power Nozzle</a></td>
+<td>Silver Level</td>
 </tr>
 <tr> 
 <td>Vacuum Cleaners</td>
 <td>Household Upright, Commercial Upright</td>
 <td>Oreck Corporation</td>
-<td>Gold Level</td>
 <td><a href="vacuum-cleaners/household-upright-commercial-upright/oreck-corporation/u2250r-classic-type-cc-inner-bag-hypo-allergenic-cloth-outer-bag-e2-sonicweld-material/">U2250R Classic Type CC Inner Bag Hypo Allergenic, Cloth Outer bag E2 Sonicweld Material</a></td>
+<td>Gold Level</td>
 </tr>
 <tr> 
 <td>Vacuum Cleaners</td>
 <td>Household Upright, Commercial Upright</td>
 <td>Clean Max - Div Tacony Corporation</td>
-<td>Silver Level</td>
 <td><a href="vacuum-cleaners/household-upright-commercial-upright/clean-max-div-tacony-corporation/cleanmax-proseries-cmps-qd/">CleanMax ProSeries CMPS-QD</a></td>
+<td>Silver Level</td>
 </tr>
 <tr> 
 <td>Vacuum Cleaners</td>
 <td>Household Upright</td>
 <td>Riccar Division of Tacony Corporation</td>
-<td>Gold Level</td>
 <td><a href="vacuum-cleaners/household-upright/riccar-division-of-tacony-corporation/riccar-rsl3/">Riccar RSL3</a></td>
+<td>Gold Level</td>
 </tr>
 <tr> 
 <td>Vacuum Cleaners</td>
 <td>Commercial Upright</td>
 <td>Sanitaire by Electrolux Home Care Products</td>
-<td>Silver Level</td>
 <td><a href="vacuum-cleaners/commercial-upright/sanitaire-by-electrolux-home-care-products/sanitaire-s670d-type-st-inner-bagcloth-outer-bag-filter/">Sanitaire S670D Type ST Inner Bag/Cloth Outer Bag Filter</a></td>
+<td>Silver Level</td>
 </tr>
 </tbody>
 <tfoot>
@@ -214,11 +224,6 @@ $('#test').click(function() {
 </tr>
 </tfoot>
 </table>
-<p>category
-subcat
-manufacturer
-product name
-standard</p>
 
     </main>
 
