@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% include '_css-link.njk' %}
+    {% include '_css-global.njk' %}
+    <title>{{ title }}</title>
+  
+  </head>
+  <body class="">
+    {% from '../_includes/_components.njk' import unav,nav,footer  %}
+
+   
+
+    {{ nav({ 
+    agencyname: "Digital Services",
+    link: "/",
+    arialabel: "New York State Digital Services",
+    color: "bg-admin-first"
+      })}}
+    <main class="mx-8 md:mx-20">
+    {{ content | safe }}
+    </main>
+
+
+    {{ footer({ 
+    agencyname: "Digital Services",
+    link: "/",
+    arialabel: "New York State Digital Services",
+    color: "bg-admin-third",
+    facebook:"",
+    twitter: "",
+    instagram:"",
+    items: [
+    {
+      text: "Accessibility",
+      link: "#",
+      arialabel:"Link to Agency's Accessibility statement."
+    },
+     {
+      text: "Contact",
+      link: "#",
+      arialabel:"Link to Agency's contact information."
+    ]
+    ]
+      })}}
+  </body>
+</html>
