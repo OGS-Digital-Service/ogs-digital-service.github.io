@@ -1,6 +1,7 @@
 ---
 layout: layout copy.njk
 title: demo
+permalink: false
 ---
 
 <div class="bg-yellow-400 md:-mx-20 -mx-8">
