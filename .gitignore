@@ -7,7 +7,8 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
-
+.cache
+/cache
 
 /node_modules
 
