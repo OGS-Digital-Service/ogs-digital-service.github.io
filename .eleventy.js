@@ -12,9 +12,9 @@ module.exports = function(eleventyConfig){
     dir: {
         input: "src",
         output: "docs",
-        layouts: "_layouts"
-        
+        layouts: "_layouts",
+        data: "../.cache"
     },
     }
    
-};
+}; 

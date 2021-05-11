@@ -1,7 +1,7 @@
 ---
 layout: layout-tablesort.njk
 title: OPEN DATA API test
-data: office-s
+data: dmv46de4d71
 ---
 {{title}}
 
@@ -15,7 +15,7 @@ data: office-s
 </tr>
 </thead>
 <tbody>
-{% for offices in office-s %} 
+{% for offices in dmv46de4d71 %} 
 <tr> 
 <td>{{ offices.office_name}}</td>
 <td>{{ offices.office_type}}</td>
@@ -25,7 +25,7 @@ data: office-s
 <tr>
 <td></td>
 <td></td>
-<td></td>
+<td></td> 
 <td></td>
 <td></td>
 </tr>
