@@ -19,8 +19,9 @@
   <script>
  
 $(document).ready(function() {
-    $('#example').DataTable( {
-       "scrollX": true,
+    $('#dmv').DataTable( {
+       "paging": true,
+       "pageLength": 10,
         initComplete: function () {
             this.api().columns(0).every( function () {
                 var column = this;
@@ -49,14 +50,14 @@ $(document).ready(function() {
   </script>
     {% from '../_includes/_components.njk' import unav,nav,footer  %}
 
-    {{ unav({ 
+    {# {{ unav({ 
     warning:"COVID-19 is still spreading in New York State. Find out how to protect yourself & get a vaccine.",
     warninglink: "https://covid19vaccine.health.ny.gov/",
     warninglinktitle: "Link to the New York State COVID 19 Vaccine website",
     alert:"Winter storm warning for central new york. prepare and find out the timing.",
     alertlink: "https://ny.gov/",
     alertlinktitle: "Link to the emergency preparedness for winter storms webpage"
-      })}}
+      })}} #}
 
     {{ nav({ 
     agencyname: "Digital Services",

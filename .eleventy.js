@@ -14,6 +14,7 @@ module.exports = function(eleventyConfig){
         output: "docs",
         layouts: "_layouts",
         data: "../.cache"
+
     },
     }
    
