@@ -1,9 +1,10 @@
 ---
 layout: layout-tablesort.njk
 title: OPEN DATA API test
-data: dmv46de4d71copy
+data: dmv46de4d71dmv
 ---
 {{title}}
+
 
 <table id="dmv" class="display">
 <thead class="">
@@ -13,7 +14,7 @@ data: dmv46de4d71copy
 </tr>
 </thead>
 <tbody>
-{% for offices in dmv46de4d71copy %} 
+{% for offices in dmv46de4d71dmv %} 
 <tr> 
 <td>{{ offices.office_name}}</td>
 <td>{{ offices.office_type}}</td>
