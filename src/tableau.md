@@ -1,5 +1,5 @@
 ---
-layout: layout copy.njk
+layout: layout-footercolumns.njk
 title: Tableau Test
 ---
 {{title}}

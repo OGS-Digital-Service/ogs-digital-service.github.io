@@ -39,6 +39,10 @@ With an information first approach, the components and design patterns are focus
     {
       text: "DMV data",
       link: "/dmv-office-locations"
+    },
+    {
+      text: "Jobs Express Demo",
+      link: "/jobs-express"
     }
   ]
 })}}
