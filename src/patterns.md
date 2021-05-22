@@ -1,5 +1,5 @@
 ---
-layout: layout.njk
+layout: layout-footer-col.njk
 title: The NYS Design Patterns
 ---
 {% from './_includes/_components.njk' import button,buttonhero,card,hero,heroold %} 

@@ -15,18 +15,25 @@ params:
   type: string
   required: true
   description:
-- name: items
+- name: column1
   type: array
-  required: true
+  required: false
   params:
   - name: link
     type: string
-    required: false
   - name: text
     type: string
-    required: false
   - name: arialabel
     type: string
-    required: false
+- name: column2
+  type: array
+  required: false
+  params:
+  - name: link
+    type: string
+  - name: text
+    type: string
+  - name: arialabel
+    type: string
   
 

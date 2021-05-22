@@ -33,8 +33,8 @@ With an information first approach, the components and design patterns are focus
       link: "/green-products"
     },
     {
-      text: "TEST this goes no where",
-      link: "#"
+      text: "footercolumns",
+      link: "/patterns"
     },
     {
       text: "DMV data",
