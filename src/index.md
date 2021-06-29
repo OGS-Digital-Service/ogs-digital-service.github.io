@@ -5,7 +5,7 @@ title: OGS Digital Service Design Lab
 {% from './_includes/_components.njk' import button,buttonhero,card,hero,breadcrumbs,categorytiles %} 
 
 {{ hero({ 
-    title: "The NYS Web Design System,",
+    title: "The NYS Web Design System",
     subtitle: "With an information first approach, the components and design patterns are focused on connecting people to the resources they need.",
     image:"",
     buttontext: "How to Start",
