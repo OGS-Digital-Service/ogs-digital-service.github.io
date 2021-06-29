@@ -5,7 +5,7 @@ title: OGS Digital Service Design Lab
 {% from './_includes/_components.njk' import button,buttonhero,card,hero,breadcrumbs,categorytiles %} 
 
 {{ hero({ 
-    title: "The NYS Simplified Design System for Applications",
+    title: "The NYS Web Design System,",
     subtitle: "With an information first approach, the components and design patterns are focused on connecting people to the resources they need.",
     image:"",
     buttontext: "How to Start",
@@ -18,31 +18,21 @@ title: OGS Digital Service Design Lab
 
 
 
-
-
-With an information first approach, the components and design patterns are focused on connecting people to the resources they need.
-# Now built using 11ty and tailwind
+# This Website
+Is in alpha stages and should be considered a work in progess.
 
 
 
 {{ categorytiles({ 
-    title:"This is the title of the category tiles",
+    title:"Demo Content",
      items: [
     {
       text: "Green Products List",
       link: "/green-products"
     },
     {
-      text: "footercolumns",
-      link: "/patterns"
-    },
-    {
       text: "DMV data",
       link: "/dmv-office-locations"
-    },
-    {
-      text: "Jobs Express Demo",
-      link: "/jobs-express"
     }
   ]
 })}}

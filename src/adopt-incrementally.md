@@ -8,19 +8,13 @@ title: Adopt the System Incrementally
      items: [
     {
       text: "Home",
-      link: "#"
+      link: "/"
     },
     {
-      text: "Passports, travel and living abroad",
-      link: "#"
-    },
-    {
-      text: "Travel abroad",
-      link: "#"
-    },
-    {
-      text: "Travel again",
+      text: "How to Start",
       link: "#"
     }
   ]
 })}}
+
+# In Progress

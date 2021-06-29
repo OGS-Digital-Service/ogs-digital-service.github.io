@@ -6,7 +6,7 @@ title: The NYS Design Patterns
 
 
 {{ heroold({ 
-    title: "12th Annual K-8 Empire State Plaza Art Collection Exhibition",
+    title: "Demo Content Page for Testing Only",
     subtitle: "Empire State Plaza Art Collection-Inspired Artwork by Capital Region School District Students.",
     image:"",
     buttontext: "First Button",
