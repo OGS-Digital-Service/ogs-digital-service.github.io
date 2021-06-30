@@ -1,7 +1,8 @@
 module.exports = {
   purge: [
-    'docs/*.html',
-    'docs/**/*.html'
+    'docs/iconframe/*.html'
+    // 'docs/*.html',
+    // 'docs/**/*.html'  
 
   ],
   darkMode: false, // or 'media' onpm init -yr 'class'
