@@ -27,8 +27,8 @@ Is in alpha stages and should be considered a work in progess.
     title:"Demo Content",
      items: [
     {
-      text: "Green Products List",
-      link: "/green-products"
+      text: "Accessibility Remediations Tracker",
+      link: "/accessibility-remediations-tracker"
     },
     {
       text: "DMV data",
