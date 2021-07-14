@@ -18,47 +18,16 @@ title: DMV Accessibility Remediations Tracker
           link:'https://itswebny.atlassian.net/browse/GOV-309',
           complete: true},
         dmvstory: 
-          {title:'the dmv story title',
-          link:'',
+          {title:'DMV-167',
+          link:'https://itswebny.atlassian.net/browse/DMV-167',
           complete: true},
         corestory: 
-          {title:'the core story title',
+          {title:'',
           link:'',
-          complete: true},
+          complete: false},
         status:true,
         reviewlink:''
-    },
-        {
-        cardtitle:'second task',
-        incident:'123123123',
-        severity:'4',
-        govstory: 
-          {title:'the gov story title',
-          complete: false},
-        dmvstory: 
-          {title:'the dmv story title',
-          complete: true},
-        corestory: 
-          {title:'the core story title',
-          complete: true},
-        status:'ready for rescan',
-        reviewlink:'https://html.com'
-    },
-      {
-        cardtitle:'second task',
-        incident:'123123123',
-        severity:'4',
-        govstory: 
-          {title:'the gov story title',
-          complete: false},
-        dmvstory: 
-          {title:'the dmv story title',
-          complete: true},
-        corestory: 
-          {title:'the core story title',
-          complete: true},
-        status:'ready for rescan',
-        reviewlink:'https://html.com'
     }
+      
   ]
 })}}
