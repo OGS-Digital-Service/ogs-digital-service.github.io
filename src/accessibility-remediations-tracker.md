@@ -7,7 +7,7 @@ title: DMV Accessibility Remediations Tracker
 # {{title}}
 
 {{ statuscard({ 
-    heading:'As of 7/14/2021',
+    heading:'Severity 5 and Greater',
     cards: [
     {
         cardtitle:'Tables: remove aria-label from sortable headers and move header text into an <a> element inside <th>',
@@ -22,8 +22,8 @@ title: DMV Accessibility Remediations Tracker
           link:'https://itswebny.atlassian.net/browse/DMV-167',
           complete: true},
         corestory: 
-          {title:'',
-          link:'',
+          {title:'title',
+          link:'link',
           complete: false},
         status:true,
         reviewlink:''
