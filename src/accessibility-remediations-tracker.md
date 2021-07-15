@@ -10,7 +10,7 @@ title: DMV Accessibility Remediations Tracker
     heading:'Severity 5 and Greater',
     cards: [
     {
-        cardtitle:'Tables: remove aria-label from sortable headers and move header text into an <a> element inside <th>',
+        cardtitle:'Tables: remove aria-label from sortable headers and move header text into an a element inside th',
         incident:'1898812747',
         severity:'5',
         govstory: 
@@ -48,16 +48,16 @@ title: DMV Accessibility Remediations Tracker
         reviewlink:'https://nydmvd8dev.prod.acquia-sites.com/upstate-new-york-junior-learner-permit-restrictions'
     },
     {
-        cardtitle:'Sticky Header: add aria-label to TOP link',
-        incident:'1896986111',
+        cardtitle:'Sticky Header: add aria-label to share links',
+        incident:'1896986315',
         severity:'6',
         govstory: 
-          {title:'GOV-311',
-          link:'https://itswebny.atlassian.net/browse/GOV-311',
+          {title:'GOV-312',
+          link:'https://itswebny.atlassian.net/browse/GOV-312',
           complete: true},
         dmvstory: 
-          {title:'DMV-168',
-          link:'https://itswebny.atlassian.net/browse/DMV-168',
+          {title:'DMV-169',
+          link:'https://itswebny.atlassian.net/browse/DMV-169',
           complete: true},
         corestory: 
           {title:'',
@@ -65,6 +65,63 @@ title: DMV Accessibility Remediations Tracker
           complete: false},
         status:true,
         reviewlink:'https://nydmvd8dev.prod.acquia-sites.com/upstate-new-york-junior-learner-permit-restrictions'
+    },
+     {
+        cardtitle:'Photo Gallery: carousel is not well structured',
+        incident:'1898820137',
+        severity:'6',
+        govstory: 
+          {title:'GOV-316',
+          link:'https://itswebny.atlassian.net/browse/GOV-316',
+          complete: true},
+        dmvstory: 
+          {title:'DMV-174',
+          link:'https://itswebny.atlassian.net/browse/DMV-174',
+          complete: false},
+        corestory: 
+          {title:'',
+          link:'',
+          complete: false},
+        status:false,
+        reviewlink:''
+    },
+     {
+        cardtitle:'Navigator: "SECTIONS" text should be an <h2>',
+        incident:'1898206771',
+        severity:'6',
+        govstory: 
+          {title:'GOV-317',
+          link:'https://itswebny.atlassian.net/browse/GOV-316',
+          complete: true},
+        dmvstory: 
+          {title:'DMV-171',
+          link:'https://itswebny.atlassian.net/browse/DMV-171',
+          complete: true},
+        corestory: 
+          {title:'',
+          link:'',
+          complete: false},
+        status:true,
+        reviewlink:'https://nydmvd8dev.prod.acquia-sites.com/upstate-new-york-junior-learner-permit-restrictions'
+    },
+    {
+        cardtitle:'Photo Gallery: previous & next controls need a role and label ',
+        incident:'1898030135',
+        severity:'7',
+        govstory: 
+          {title:'GOV-318',
+          link:'https://itswebny.atlassian.net/browse/GOV-318',
+          complete: true},
+        dmvstory: 
+          {title:'DMV-175',
+          link:'https://itswebny.atlassian.net/browse/DMV-175',
+          complete: false},
+        corestory: 
+          {title:'',
+          link:'',
+          complete: false},
+        status:false,
+        reviewlink:''
     }
       
   ]

@@ -59,9 +59,6 @@ params:
     required: false
   - name: reviewlink
     type: string
-    required: false
-  - name: notes
-    type: string
-    required: false         
+    required: false       
 
 
