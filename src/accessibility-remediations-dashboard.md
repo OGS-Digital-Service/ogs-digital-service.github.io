@@ -1,6 +1,6 @@
 ---
 layout: layout.njk
-title: DMV Accessibility Remediations Tracker
+title: DMV Accessibility Remediations Dashboard
 ---
 {% from './_includes/_components.njk' import statuscard  %}
 
@@ -17,7 +17,7 @@ title: DMV Accessibility Remediations Tracker
           {title:'GOV-309',
           link:'https://itswebny.atlassian.net/browse/GOV-309',
           complete: true},
-        dmvstory: 
+        projectstory: 
           {title:'DMV-167',
           link:'https://itswebny.atlassian.net/browse/DMV-167',
           complete: true},
@@ -36,7 +36,7 @@ title: DMV Accessibility Remediations Tracker
           {title:'GOV-311',
           link:'https://itswebny.atlassian.net/browse/GOV-311',
           complete: true},
-        dmvstory: 
+        projectstory: 
           {title:'DMV-168',
           link:'https://itswebny.atlassian.net/browse/DMV-168',
           complete: true},
@@ -55,7 +55,7 @@ title: DMV Accessibility Remediations Tracker
           {title:'GOV-312',
           link:'https://itswebny.atlassian.net/browse/GOV-312',
           complete: true},
-        dmvstory: 
+        projectstory: 
           {title:'DMV-169',
           link:'https://itswebny.atlassian.net/browse/DMV-169',
           complete: true},
@@ -74,7 +74,7 @@ title: DMV Accessibility Remediations Tracker
           {title:'GOV-316',
           link:'https://itswebny.atlassian.net/browse/GOV-316',
           complete: true},
-        dmvstory: 
+        projectstory: 
           {title:'DMV-174',
           link:'https://itswebny.atlassian.net/browse/DMV-174',
           complete: false},
@@ -93,7 +93,7 @@ title: DMV Accessibility Remediations Tracker
           {title:'GOV-317',
           link:'https://itswebny.atlassian.net/browse/GOV-316',
           complete: true},
-        dmvstory: 
+        projectstory: 
           {title:'DMV-171',
           link:'https://itswebny.atlassian.net/browse/DMV-171',
           complete: true},
@@ -112,7 +112,7 @@ title: DMV Accessibility Remediations Tracker
           {title:'GOV-318',
           link:'https://itswebny.atlassian.net/browse/GOV-318',
           complete: true},
-        dmvstory: 
+        projectstory: 
           {title:'DMV-175',
           link:'https://itswebny.atlassian.net/browse/DMV-175',
           complete: false},
@@ -131,7 +131,7 @@ title: DMV Accessibility Remediations Tracker
           {title:'GOV-320',
           link:'https://itswebny.atlassian.net/browse/GOV-320',
           complete: true},
-        dmvstory: 
+        projectstory: 
           {title:'DMV-172',
           link:'https://itswebny.atlassian.net/browse/DMV-172',
           complete: true},
@@ -141,6 +141,44 @@ title: DMV Accessibility Remediations Tracker
           complete: true},
         status:true,
         reviewlink:'https://nydmvd8dev.prod.acquia-sites.com/upstate-new-york-junior-learner-permit-restrictions'
+    },
+    {
+        cardtitle:'Tables: Sortable header needs to receive focus or state change when sorted',
+        incident:'1898234909',
+        severity:'8',
+        govstory: 
+          {title:'GOV-322',
+          link:'https://itswebny.atlassian.net/browse/GOV-322',
+          complete: true},
+        projectstory: 
+          {title:'DMV-166',
+          link:'https://itswebny.atlassian.net/browse/DMV-166',
+          complete: true},
+        corestory: 
+          {title:'CORE-753',
+          link:'https://itswebny.atlassian.net/browse/CORE-753',
+          complete: false},
+        status:true,
+        reviewlink:'https://nydmvd8dev.prod.acquia-sites.com/new-york-state-license-types-0'
+    },
+    {
+        cardtitle:'Alerts: use proper heading <h2> to indicate importance of main alert text ',
+        incident:'1899058972',
+        severity:'6',
+        govstory: 
+          {title:'GOV-326',
+          link:'https://itswebny.atlassian.net/browse/GOV-326',
+          complete: true},
+        projectstory: 
+          {title:'DMV-164',
+          link:'https://itswebny.atlassian.net/browse/DMV-164',
+          complete: true},
+        corestory: 
+          {title:'',
+          link:'https://itswebny.atlassian.net/browse/CORE-753',
+          complete: false},
+        status:true,
+        reviewlink:'http://nydmvd8dev.prod.acquia-sites.com/'
     }
       
   ]

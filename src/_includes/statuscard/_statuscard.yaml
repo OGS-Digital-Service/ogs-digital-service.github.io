@@ -28,7 +28,7 @@ params:
     - name: complete
       type: boolean
       required: false
-  - name: dmvstory
+  - name: projectstory
     type: string
     required: false
     params:
