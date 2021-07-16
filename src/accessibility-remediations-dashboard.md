@@ -7,7 +7,7 @@ title: DMV Accessibility Remediations Dashboard
 # {{title}}
 
 {{ statuscard({ 
-    heading:'Severity 5 and Greater',
+    heading:'Complete and Ready to Rescan',
     cards: [
     {
         cardtitle:'Tables: remove aria-label from sortable headers and move header text into an a element inside th',

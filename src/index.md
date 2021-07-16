@@ -31,7 +31,7 @@ Is in alpha stages and should be considered a work in progess.
       link: "/accessibility-remediations-dashboard"
     },
     {
-      text: "DMV data",
+      text: "Open data API",
       link: "/dmv-office-locations"
     }
   ]
