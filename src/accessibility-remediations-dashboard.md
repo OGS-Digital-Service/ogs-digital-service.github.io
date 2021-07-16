@@ -7,7 +7,7 @@ title: DMV Accessibility Remediations Dashboard
 # {{title}}
 
 {{ statuscard({ 
-    heading:'Complete and Ready to Rescan',
+    heading:'Needs Vendor Review',
     cards: [
     {
         cardtitle:'Tables: remove aria-label from sortable headers and move header text into an a element inside th',
@@ -27,7 +27,13 @@ title: DMV Accessibility Remediations Dashboard
           complete: false},
         status:'wrong',
         reviewlink:''
-    },
+    }
+    ]
+})}}
+
+{{ statuscard({ 
+    heading:'Complete and Ready to Rescan',
+    cards: [
      {
         cardtitle:'Sticky Header: add aria-label to TOP link',
         incident:'1896986111',
@@ -67,25 +73,6 @@ title: DMV Accessibility Remediations Dashboard
         reviewlink:'https://nydmvd8dev.prod.acquia-sites.com/upstate-new-york-junior-learner-permit-restrictions'
     },
      {
-        cardtitle:'Photo Gallery: carousel is not well structured',
-        incident:'1898820137',
-        severity:'6',
-        govstory: 
-          {title:'GOV-316',
-          link:'https://itswebny.atlassian.net/browse/GOV-316',
-          complete: true},
-        projectstory: 
-          {title:'DMV-174',
-          link:'https://itswebny.atlassian.net/browse/DMV-174',
-          complete: false},
-        corestory: 
-          {title:'',
-          link:'',
-          complete: false},
-        status:false,
-        reviewlink:''
-    },
-     {
         cardtitle:'Navigator: "SECTIONS" text should be an <h2>',
         incident:'1898206771',
         severity:'6',
@@ -103,25 +90,6 @@ title: DMV Accessibility Remediations Dashboard
           complete: false},
         status:true,
         reviewlink:'https://nydmvd8dev.prod.acquia-sites.com/upstate-new-york-junior-learner-permit-restrictions'
-    },
-    {
-        cardtitle:'Photo Gallery: previous & next controls need a role and label ',
-        incident:'1898030135',
-        severity:'7',
-        govstory: 
-          {title:'GOV-318',
-          link:'https://itswebny.atlassian.net/browse/GOV-318',
-          complete: true},
-        projectstory: 
-          {title:'DMV-175',
-          link:'https://itswebny.atlassian.net/browse/DMV-175',
-          complete: false},
-        corestory: 
-          {title:'',
-          link:'',
-          complete: false},
-        status:false,
-        reviewlink:''
     },
     {
         cardtitle:'Page with Navigator: continue next section links need a role and must be keyboard focusable ',
@@ -179,7 +147,110 @@ title: DMV Accessibility Remediations Dashboard
           complete: false},
         status:true,
         reviewlink:'http://nydmvd8dev.prod.acquia-sites.com/'
+    },
+    {
+        cardtitle:"Content Snippet: HTML id's must be unique",
+        incident:'1898296822',
+        severity:'6',
+        govstory: 
+          {title:'GOV-330',
+          link:'https://itswebny.atlassian.net/browse/GOV-330',
+          complete: true},
+        projectstory: 
+          {title:'DMV-159',
+          link:'https://itswebny.atlassian.net/browse/DMV-159',
+          complete: true},
+        corestory: 
+          {title:'',
+          link:'https://itswebny.atlassian.net/browse/CORE-753',
+          complete: false},
+        status:true,
+        reviewlink:'http://nydmvd8dev.prod.acquia-sites.com/test-snippets'
     }
-      
   ]
 })}}
+
+
+  {{ statuscard({ 
+      heading:'Work still in progress',
+      cards: [
+      {
+          cardtitle:'Bio Frame: additional links need to be in a list',
+          incident:'1899027322',
+          severity:'6',
+          govstory: 
+            {title:'GOV-327',
+            link:'https://itswebny.atlassian.net/browse/GOV-327',
+            complete: true},
+          projectstory: 
+            {title:'DMV-178',
+            link:'https://itswebny.atlassian.net/browse/DMV-178',
+            complete: false},
+          corestory: 
+            {title:'',
+            link:'https://itswebny.atlassian.net/browse/CORE-753',
+            complete: false},
+          status:false,
+          reviewlink:''
+      },
+      {
+          cardtitle:'Quick Links: column titles need to be headings h3',
+          incident:'1899037480',
+          severity:'6',
+          govstory: 
+            {title:'GOV-328',
+            link:'https://itswebny.atlassian.net/browse/GOV-328',
+            complete: true},
+          projectstory: 
+            {title:'DMV-177',
+            link:'https://itswebny.atlassian.net/browse/DMV-177',
+            complete: false},
+          corestory: 
+            {title:'',
+            link:'https://itswebny.atlassian.net/browse/CORE-753',
+            complete: false},
+          status:false,
+          reviewlink:''
+      },
+      {
+          cardtitle:'Photo Gallery: previous & next controls need a role and label ',
+          incident:'1898030135',
+          severity:'7',
+          govstory: 
+            {title:'GOV-318',
+            link:'https://itswebny.atlassian.net/browse/GOV-318',
+            complete: true},
+          projectstory: 
+            {title:'DMV-175',
+            link:'https://itswebny.atlassian.net/browse/DMV-175',
+            complete: false},
+          corestory: 
+            {title:'',
+            link:'',
+            complete: false},
+          status:false,
+          reviewlink:''
+      },
+      {
+          cardtitle:'Photo Gallery: carousel is not well structured',
+          incident:'1898820137',
+          severity:'6',
+          govstory: 
+            {title:'GOV-316',
+            link:'https://itswebny.atlassian.net/browse/GOV-316',
+            complete: true},
+          projectstory: 
+            {title:'DMV-174',
+            link:'https://itswebny.atlassian.net/browse/DMV-174',
+            complete: false},
+          corestory: 
+            {title:'',
+            link:'',
+            complete: false},
+          status:false,
+          reviewlink:''
+      }
+      ]
+  })}}
+
+
