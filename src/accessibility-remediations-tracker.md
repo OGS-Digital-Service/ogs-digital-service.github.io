@@ -122,6 +122,25 @@ title: DMV Accessibility Remediations Tracker
           complete: false},
         status:false,
         reviewlink:''
+    },
+    {
+        cardtitle:'Page with Navigator: continue next section links need a role and must be keyboard focusable ',
+        incident:'1898214230, 1898214229, 1898214206',
+        severity:'7 & 8',
+        govstory: 
+          {title:'GOV-320',
+          link:'https://itswebny.atlassian.net/browse/GOV-320',
+          complete: true},
+        dmvstory: 
+          {title:'DMV-172',
+          link:'https://itswebny.atlassian.net/browse/DMV-172',
+          complete: true},
+        corestory: 
+          {title:'CORE-744',
+          link:'https://itswebny.atlassian.net/browse/CORE-744',
+          complete: true},
+        status:true,
+        reviewlink:'https://nydmvd8dev.prod.acquia-sites.com/upstate-new-york-junior-learner-permit-restrictions'
     }
       
   ]
