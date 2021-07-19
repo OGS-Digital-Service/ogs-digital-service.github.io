@@ -65,6 +65,25 @@ title: DMV Accessibility Remediations Dashboard
           complete: false},
         status:'wrong',
         reviewlink:''
+    },
+    {
+        cardtitle:'Ensure custom controls are keyboard accessible for decision tree component',
+        incident:'n/a',
+        severity:'n/a',
+        govstory: 
+          {title:'',
+          link:'https://itswebny.atlassian.net/browse/GOV-314',
+          complete: false},
+        projectstory: 
+          {title:'DMV-91',
+          link:'https://itswebny.atlassian.net/browse/DMV-91',
+          complete: false},
+        corestory: 
+          {title:'',
+          link:'',
+          complete: false},
+        status:'wrong',
+        reviewlink:''
     }
     ]
 })}}
@@ -131,7 +150,7 @@ title: DMV Accessibility Remediations Dashboard
     },
     {
         cardtitle:'Page with Navigator: continue next section links need a role and must be keyboard focusable ',
-        incident:'1898214230, 1898214229, 1898214206',
+        incident:'1898214230, 1898214229, 1898214206,1898214205, 1899053315, 1899053318, 1899053411, 1899052727',
         severity:'7 & 8',
         govstory: 
           {title:'GOV-320',
@@ -284,6 +303,25 @@ title: DMV Accessibility Remediations Dashboard
           corestory: 
             {title:'',
             link:'',
+            complete: false},
+          status:false,
+          reviewlink:''
+      },
+      {
+          cardtitle:'Popular Services: "cards" are not in a list and lose grouped meaning for non-sighted users',
+          incident:'1899017190',
+          severity:'6, 3',
+          govstory: 
+            {title:'GOV-325',
+            link:'https://itswebny.atlassian.net/browse/GOV-325',
+            complete: false},
+          projectstory: 
+            {title:'',
+            link:'https://itswebny.atlassian.net/browse/DMV-174',
+            complete: false},
+          corestory: 
+            {title:'CORE-750',
+            link:'https://itswebny.atlassian.net/browse/CORE-750',
             complete: false},
           status:false,
           reviewlink:''
