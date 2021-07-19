@@ -197,12 +197,12 @@ title: DMV Accessibility Remediations Dashboard
         projectstory: 
           {title:'DMV-164',
           link:'https://itswebny.atlassian.net/browse/DMV-164',
-          complete: true},
+          complete: false},
         corestory: 
           {title:'',
           link:'https://itswebny.atlassian.net/browse/CORE-753',
           complete: false},
-        status:true,
+        status:false,
         reviewlink:'http://nydmvd8dev.prod.acquia-sites.com/'
     },
     {
