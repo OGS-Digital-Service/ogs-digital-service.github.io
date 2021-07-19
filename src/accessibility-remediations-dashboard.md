@@ -314,7 +314,7 @@ title: DMV Accessibility Remediations Dashboard
           govstory: 
             {title:'GOV-325',
             link:'https://itswebny.atlassian.net/browse/GOV-325',
-            complete: false},
+            complete: true},
           projectstory: 
             {title:'',
             link:'https://itswebny.atlassian.net/browse/DMV-174',
@@ -322,6 +322,44 @@ title: DMV Accessibility Remediations Dashboard
           corestory: 
             {title:'CORE-750',
             link:'https://itswebny.atlassian.net/browse/CORE-750',
+            complete: false},
+          status:false,
+          reviewlink:''
+      },
+      {
+          cardtitle:'Call and Response - Ensure Aria roles, states and properties are valid',
+          incident:'1899017650',
+          severity:'5',
+          govstory: 
+            {title:'GOV-310',
+            link:'https://itswebny.atlassian.net/browse/GOV-310',
+            complete: true},
+          projectstory: 
+            {title:'DMV-125',
+            link:'https://itswebny.atlassian.net/browse/DMV-125',
+            complete: false},
+          corestory: 
+            {title:'CORE-708',
+            link:'https://itswebny.atlassian.net/browse/CORE-708',
+            complete: false},
+          status:false,
+          reviewlink:''
+      },
+      {
+          cardtitle:'Alerts - Provide Alternate Text For Images',
+          incident:'n/a',
+          severity:'5',
+          govstory: 
+            {title:'GOV-336',
+            link:'https://itswebny.atlassian.net/browse/GOV-336',
+            complete: true},
+          projectstory: 
+            {title:'DMV-124',
+            link:'https://itswebny.atlassian.net/browse/DMV-124',
+            complete: false},
+          corestory: 
+            {title:'CORE-709',
+            link:'https://itswebny.atlassian.net/browse/CORE-709',
             complete: false},
           status:false,
           reviewlink:''
