@@ -27,6 +27,44 @@ title: DMV Accessibility Remediations Dashboard
           complete: false},
         status:'wrong',
         reviewlink:''
+    },
+    {
+        cardtitle:'Sticky Header: SHARE text should be an h2 not an implicit heading',
+        incident:'1898214322',
+        severity:'6',
+        govstory: 
+          {title:'GOV-314',
+          link:'https://itswebny.atlassian.net/browse/GOV-314',
+          complete: false},
+        projectstory: 
+          {title:'',
+          link:'https://itswebny.atlassian.net/browse/DMV-167',
+          complete: false},
+        corestory: 
+          {title:'',
+          link:'',
+          complete: false},
+        status:'wrong',
+        reviewlink:''
+    },
+    {
+        cardtitle:'Card links provided with h1 incorrectly',
+        incident:'1899017077',
+        severity:'3',
+        govstory: 
+          {title:'',
+          link:'https://itswebny.atlassian.net/browse/GOV-314',
+          complete: false},
+        projectstory: 
+          {title:'',
+          link:'https://itswebny.atlassian.net/browse/DMV-167',
+          complete: false},
+        corestory: 
+          {title:'',
+          link:'',
+          complete: false},
+        status:'wrong',
+        reviewlink:''
     }
     ]
 })}}

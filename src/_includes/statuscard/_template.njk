@@ -36,7 +36,7 @@
 </div>
 </section>
 {% if card.status == true %} <p class="pt-4">This task is complete and ready for rescan at the <a href="{{card.reviewlink}}" aria-label="The development environment for reviewing the issue labeled {{card.cardtitle}}"> DEV Environment </a></p>
-{%elif card.status == 'wrong'%} <p class="pt-4"> This story requires discussion because either the current state is valid and accessible or the provided remediation is incorrect.</p>
+{%elif card.status == 'wrong'%} <p class="pt-4"> This story requires discussion because either the current state is valid or the provided remediation is in question.</p>
 {%else%} <p class="pt-4 mb-4">This task is not complete and requires more work </p>{%endif%}
 
 
