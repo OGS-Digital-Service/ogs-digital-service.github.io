@@ -187,25 +187,6 @@ title: DMV Accessibility Remediations Dashboard
         reviewlink:'https://nydmvd8dev.prod.acquia-sites.com/new-york-state-license-types-0'
     },
     {
-        cardtitle:'Alerts: use proper heading <h2> to indicate importance of main alert text ',
-        incident:'1899058972',
-        severity:'6',
-        govstory: 
-          {title:'GOV-326',
-          link:'https://itswebny.atlassian.net/browse/GOV-326',
-          complete: true},
-        projectstory: 
-          {title:'DMV-164',
-          link:'https://itswebny.atlassian.net/browse/DMV-164',
-          complete: false},
-        corestory: 
-          {title:'',
-          link:'https://itswebny.atlassian.net/browse/CORE-753',
-          complete: false},
-        status:false,
-        reviewlink:'http://nydmvd8dev.prod.acquia-sites.com/'
-    },
-    {
         cardtitle:"Content Snippet: HTML id's must be unique",
         incident:'1898296822',
         severity:'6',
@@ -250,6 +231,25 @@ title: DMV Accessibility Remediations Dashboard
           status:false,
           reviewlink:''
       },
+      {
+        cardtitle:'Alerts: use proper heading h2 to indicate importance of main alert text ',
+        incident:'1899058972',
+        severity:'6',
+        govstory: 
+          {title:'GOV-326',
+          link:'https://itswebny.atlassian.net/browse/GOV-326',
+          complete: true},
+        projectstory: 
+          {title:'DMV-164',
+          link:'https://itswebny.atlassian.net/browse/DMV-164',
+          complete: false},
+        corestory: 
+          {title:'',
+          link:'https://itswebny.atlassian.net/browse/CORE-753',
+          complete: false},
+        status:false,
+        reviewlink:'http://nydmvd8dev.prod.acquia-sites.com/'
+    },
       {
           cardtitle:'Quick Links: column titles need to be headings h3',
           incident:'1899037480',
