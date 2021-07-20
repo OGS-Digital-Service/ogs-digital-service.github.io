@@ -261,14 +261,7 @@ title: DMV Accessibility Remediations Dashboard
             complete: false},
           status:'ready',
           reviewlink:'http://nydmvd8dev.prod.acquia-sites.com/younger-driver/graduated-license-law-and-restrictions-drivers-under-18'
-      }
-  ]
-})}}
-
-
-  {{ statuscard({ 
-      heading:'Work still in progress',
-      cards: [
+      },
       {
           cardtitle:'Bio Frame: additional links need to be in a list',
           incident:'1899027322',
@@ -280,14 +273,21 @@ title: DMV Accessibility Remediations Dashboard
           projectstory: 
             {title:'DMV-178',
             link:'https://itswebny.atlassian.net/browse/DMV-178',
-            complete: false},
+            complete: true},
           corestory: 
-            {title:'',
-            link:'https://itswebny.atlassian.net/browse/CORE-753',
+            {title:'CORE-763',
+            link:'https://itswebny.atlassian.net/browse/CORE-763',
             complete: false},
-          status:false,
-          reviewlink:''
-      },
+          status:'ready',
+          reviewlink:'http://nydmvd8dev.prod.acquia-sites.com/younger-driver/graduated-license-law-and-restrictions-drivers-under-18'
+      }
+  ]
+})}}
+
+
+  {{ statuscard({ 
+      heading:'Work still in progress',
+      cards: [
       {
         cardtitle:'Alerts: use proper heading h2 to indicate importance of main alert text ',
         incident:'1899058972',
