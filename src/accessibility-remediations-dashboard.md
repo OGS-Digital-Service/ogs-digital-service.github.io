@@ -242,6 +242,25 @@ title: DMV Accessibility Remediations Dashboard
             complete: false},
           status: 'ready',
           reviewlink:'https://nydmvd8ode98.prod.acquia-sites.com/test-carousel'
+      },
+      {
+          cardtitle:'Quick Links: column titles need to be headings h3',
+          incident:'1899037480',
+          severity:'6',
+          govstory: 
+            {title:'GOV-328',
+            link:'https://itswebny.atlassian.net/browse/GOV-328',
+            complete: true},
+          projectstory: 
+            {title:'DMV-177',
+            link:'https://itswebny.atlassian.net/browse/DMV-177',
+            complete: true},
+          corestory: 
+            {title:'CORE-763',
+            link:'https://itswebny.atlassian.net/browse/CORE-763',
+            complete: false},
+          status:'ready',
+          reviewlink:'http://nydmvd8dev.prod.acquia-sites.com/younger-driver/graduated-license-law-and-restrictions-drivers-under-18'
       }
   ]
 })}}
@@ -288,25 +307,6 @@ title: DMV Accessibility Remediations Dashboard
         status:false,
         reviewlink:'http://nydmvd8dev.prod.acquia-sites.com/'
     },
-      {
-          cardtitle:'Quick Links: column titles need to be headings h3',
-          incident:'1899037480',
-          severity:'6',
-          govstory: 
-            {title:'GOV-328',
-            link:'https://itswebny.atlassian.net/browse/GOV-328',
-            complete: true},
-          projectstory: 
-            {title:'DMV-177',
-            link:'https://itswebny.atlassian.net/browse/DMV-177',
-            complete: false},
-          corestory: 
-            {title:'',
-            link:'https://itswebny.atlassian.net/browse/CORE-753',
-            complete: false},
-          status:false,
-          reviewlink:''
-      },
       {
           cardtitle:'Popular Services: "cards" are not in a list and lose grouped meaning for non-sighted users',
           incident:'1899017190',
