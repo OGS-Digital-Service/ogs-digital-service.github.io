@@ -1,0 +1,28 @@
+params:
+- name: title
+  type: string
+  required: false
+- name: link
+  type: string
+  required: true
+- name: langauages
+  type: array
+  required: true
+  params:
+  - name: translated
+    type: string
+    required: true
+  - name: lang
+    type: string
+    required: true
+  - name: english
+    type: string
+    required: true
+  - name: link
+    type: string
+    required: true
+  - name: arialabel
+    type: string
+    required: true
+  
+

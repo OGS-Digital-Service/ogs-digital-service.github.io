@@ -204,7 +204,45 @@ title: DMV Accessibility Remediations Dashboard
           complete: false},
         status:true,
         reviewlink:'http://nydmvd8dev.prod.acquia-sites.com/test-snippets'
-    }
+    },
+    {
+          cardtitle:'Photo Gallery: previous & next controls need a role and label ',
+          incident:'1898030135',
+          severity:'7',
+          govstory: 
+            {title:'GOV-318',
+            link:'https://itswebny.atlassian.net/browse/GOV-318',
+            complete: true},
+          projectstory: 
+            {title:'DMV-175',
+            link:'https://itswebny.atlassian.net/browse/DMV-175',
+            complete: true},
+          corestory: 
+            {title:'CORE-762',
+            link:'https://itswebny.atlassian.net/browse/CORE-762',
+            complete: false},
+          status:true,
+          reviewlink:'https://nydmvd8ode98.prod.acquia-sites.com/test-carousel'
+      },
+      {
+          cardtitle:'Photo Gallery: carousel is not well structured',
+          incident:'1898820137',
+          severity:'6',
+          govstory: 
+            {title:'GOV-316',
+            link:'https://itswebny.atlassian.net/browse/GOV-316',
+            complete: true},
+          projectstory: 
+            {title:'DMV-174',
+            link:'https://itswebny.atlassian.net/browse/DMV-174',
+            complete: true},
+          corestory: 
+            {title:'CORE-762',
+            link:'https://itswebny.atlassian.net/browse/CORE-762',
+            complete: false},
+          status:true,
+          reviewlink:'https://nydmvd8ode98.prod.acquia-sites.com/test-carousel'
+      }
   ]
 })}}
 
@@ -265,44 +303,6 @@ title: DMV Accessibility Remediations Dashboard
           corestory: 
             {title:'',
             link:'https://itswebny.atlassian.net/browse/CORE-753',
-            complete: false},
-          status:false,
-          reviewlink:''
-      },
-      {
-          cardtitle:'Photo Gallery: previous & next controls need a role and label ',
-          incident:'1898030135',
-          severity:'7',
-          govstory: 
-            {title:'GOV-318',
-            link:'https://itswebny.atlassian.net/browse/GOV-318',
-            complete: true},
-          projectstory: 
-            {title:'DMV-175',
-            link:'https://itswebny.atlassian.net/browse/DMV-175',
-            complete: false},
-          corestory: 
-            {title:'',
-            link:'',
-            complete: false},
-          status:false,
-          reviewlink:''
-      },
-      {
-          cardtitle:'Photo Gallery: carousel is not well structured',
-          incident:'1898820137',
-          severity:'6',
-          govstory: 
-            {title:'GOV-316',
-            link:'https://itswebny.atlassian.net/browse/GOV-316',
-            complete: true},
-          projectstory: 
-            {title:'DMV-174',
-            link:'https://itswebny.atlassian.net/browse/DMV-174',
-            complete: false},
-          corestory: 
-            {title:'',
-            link:'',
             complete: false},
           status:false,
           reviewlink:''
