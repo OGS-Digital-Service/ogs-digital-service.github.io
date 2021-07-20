@@ -33,6 +33,10 @@ Is in alpha stages and should be considered a work in progess.
     {
       text: "Open data API",
       link: "/dmv-office-locations"
+    },
+    {
+      text: "Tableau Test",
+      link: "/tableau"
     }
   ]
 })}}
