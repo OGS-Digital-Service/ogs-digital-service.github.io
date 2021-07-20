@@ -55,7 +55,7 @@ params:
       type: boolean
       required: false
   - name: status
-    type: boolean
+    type: string
     required: false
   - name: reviewlink
     type: string

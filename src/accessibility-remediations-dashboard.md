@@ -107,7 +107,7 @@ title: DMV Accessibility Remediations Dashboard
           {title:'',
           link:'',
           complete: false},
-        status:true,
+        status: 'ready',
         reviewlink:'https://nydmvd8dev.prod.acquia-sites.com/upstate-new-york-junior-learner-permit-restrictions'
     },
     {
@@ -126,7 +126,7 @@ title: DMV Accessibility Remediations Dashboard
           {title:'',
           link:'',
           complete: false},
-        status:true,
+        status: 'ready',
         reviewlink:'https://nydmvd8dev.prod.acquia-sites.com/upstate-new-york-junior-learner-permit-restrictions'
     },
      {
@@ -145,7 +145,7 @@ title: DMV Accessibility Remediations Dashboard
           {title:'',
           link:'',
           complete: false},
-        status:true,
+        status: 'ready',
         reviewlink:'https://nydmvd8dev.prod.acquia-sites.com/upstate-new-york-junior-learner-permit-restrictions'
     },
     {
@@ -164,7 +164,7 @@ title: DMV Accessibility Remediations Dashboard
           {title:'CORE-744',
           link:'https://itswebny.atlassian.net/browse/CORE-744',
           complete: true},
-        status:true,
+        status: 'ready',
         reviewlink:'https://nydmvd8dev.prod.acquia-sites.com/upstate-new-york-junior-learner-permit-restrictions'
     },
     {
@@ -183,7 +183,7 @@ title: DMV Accessibility Remediations Dashboard
           {title:'CORE-753',
           link:'https://itswebny.atlassian.net/browse/CORE-753',
           complete: false},
-        status:true,
+        status: 'ready',
         reviewlink:'https://nydmvd8dev.prod.acquia-sites.com/new-york-state-license-types-0'
     },
     {
@@ -202,7 +202,7 @@ title: DMV Accessibility Remediations Dashboard
           {title:'',
           link:'https://itswebny.atlassian.net/browse/CORE-753',
           complete: false},
-        status:true,
+        status: 'ready',
         reviewlink:'http://nydmvd8dev.prod.acquia-sites.com/test-snippets'
     },
     {
@@ -221,7 +221,7 @@ title: DMV Accessibility Remediations Dashboard
             {title:'CORE-762',
             link:'https://itswebny.atlassian.net/browse/CORE-762',
             complete: false},
-          status:true,
+          status: 'ready',
           reviewlink:'https://nydmvd8ode98.prod.acquia-sites.com/test-carousel'
       },
       {
@@ -240,7 +240,7 @@ title: DMV Accessibility Remediations Dashboard
             {title:'CORE-762',
             link:'https://itswebny.atlassian.net/browse/CORE-762',
             complete: false},
-          status:true,
+          status: 'ready',
           reviewlink:'https://nydmvd8ode98.prod.acquia-sites.com/test-carousel'
       }
   ]
