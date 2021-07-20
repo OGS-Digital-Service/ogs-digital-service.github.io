@@ -1,12 +1,14 @@
-<section class="flex flex col md:flex-row justify-center">
+<section class="w-full flex flex col md:flex-row justify-center">
 <article class="">
 
-<h1 class="text-base font-bold uppercase text-center"> {{params.title}} </h1>
-<ul class="flex md:flex-row flex-col justify-center">
+<h1 class="horizontal-line text-center text-base font-bold uppercase">  {{params.title}} </h1>
+
+
+<ul class="md:flex md:flex-row grid grid-cols-3 justify-center mx-16 md:mx-0">
 {% for langs in params.languages %}
 
 
-<li class="mx-3 my-1 p-2 text-center font-bold text-sm hover:underline" lang="{{langs.lang}}"><a href="{{langs.link}}" aria-label="{{langs.arialabel}}">{{langs.translated}} <br> {{langs.english}}</a></li>
+<li class="mx-4 my-1 p-2 text-center font-bold text-sm hover:underline" lang="{{langs.lang}}"><a href="{{langs.link}}" aria-label="{{langs.arialabel}}">{{langs.translated}} <br> {{langs.english}}</a></li>
 
 
 {%endfor%}

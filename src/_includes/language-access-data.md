@@ -1,5 +1,5 @@
 {{ languageaccess({ 
-    title: "Language Assistance (DEV feature not for use)",
+    title: "Language Assistance TEST",
     link: '/',
     languages: [
         {
