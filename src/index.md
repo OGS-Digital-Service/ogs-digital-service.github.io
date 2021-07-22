@@ -10,10 +10,10 @@ title: OGS Digital Service Design Lab
     image:"",
     buttontext: "How to Start",
     link: "/adopt-incrementally",
-    arialabel: "How to Start using the Application Design System",
+    arialabel: "How to Start using the Design System",
     buttontext2: "The Patterns",
     link2: "/patterns",
-    arialabel2: "The patterns used in the Application Design System"
+    arialabel2: "The patterns used in the Design System"
 })}}
 
 

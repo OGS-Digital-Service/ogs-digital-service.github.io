@@ -78,4 +78,4 @@ Donec lacinia pretium semper. Morbi a purus consequat, condimentum est at, hendr
 
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.1.0/uuidv4.min.js"></script><shadow-demo bot-message-bg-color="#0b5d66" chat-bot-font-color="#FFFFFF" chat-title="Perkins: The EWF Bot" chat-title-color="#0b5d66" chat-user-font-color="#001B3B" id="shadow" url="https://dol-is-dev.endpoints.dol-ewa-ccai-dev.cloud.goog" user-message-bg-color="#bdbdbd"></shadow-demo><script src="https://storage.googleapis.com/nys-dol-dev-chat-widget-bucket/shadow.js?v=1" type="text/javascript"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.1.0/uuidv4.min.js"></script><shadow-demo bot-message-bg-color="#0b5d66" chat-bot-font-color="#FFFFFF" chat-title="Perkins: The EWF Bot" chat-title-color="#0b5d66" chat-user-font-color="#001B3B" id="shadow" url="https://dol-is-dev.endpoints.dol-ewa-ccai-dev.cloud.goog" user-message-bg-color="#bdbdbd"></shadow-demo><script src="https://storage.googleapis.com/nys-dol-dev-chat-widget-bucket/shadow.js?v=1" type="text/javascript"></script> -->
