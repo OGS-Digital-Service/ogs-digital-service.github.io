@@ -31,10 +31,11 @@ If you have any questions about the content or technical aspects here, please co
         arialabel:'Browse the list of architecture decision reports'
         },
         {
-        title:"A Card",
-        content:"card content",
-        link:"/tableau",
-        linktext:"Linktext"
+        title:"Accessibility Remediations Dashboard",
+        content:"A dashboard to organize outstanding accessibility work being completed for in-flight projects",
+        link:"/accessibility-remediations-dashboard",
+        linktext:"Go to the Dashboard",
+        arialabel:'go to the dashboard of in progress accessibility remediations'
         },
         {
         title:"A Card",
@@ -52,8 +53,8 @@ If you have any questions about the content or technical aspects here, please co
     title:"Demo Content",
      items: [
     {
-      text: "Accessibility Remediations Dashboard",
-      link: "/accessibility-remediations-dashboard"
+      text: "Demo Page",
+      link: "/patterns"
     },
     {
       text: "Tableau Test",
