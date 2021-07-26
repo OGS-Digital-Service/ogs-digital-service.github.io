@@ -1,18 +1,23 @@
 params:
-- name: title
+- name: frametitle
   type: string
+  required: false 
+- name: cards
+  type: array
   required: true
-  description: does this need a thing
-- name: content
-  type: string
-  required: true
-  description: does this need a thing
-- name: link
-  type: string
-  required: true
-  description: does this need a thing
-- name: linktext
-  type: string
-  required: true
-  description: does this need a thing
-
+  params:
+  - name: title
+    type: string
+    required: true  
+  - name: content
+    type: string
+    required: true
+  - name: link
+    type: string
+    required: true
+  - name: linktext
+    type: string
+    required: true
+  - name: arialabel
+    type: string
+    required: true
