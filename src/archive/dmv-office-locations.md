@@ -2,6 +2,7 @@
 layout: layout-tablesort.njk
 title: OPEN DATA API test
 data: dmv46de4d71dmv
+permalink: false
 ---
 {{title}}
 

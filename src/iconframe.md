@@ -1,3 +1,7 @@
+---
+permalink: false
+---
+
 <section class="flex flex-col md:flex-row items-center mt-4 pt-4">
 <article class="md:border-r md:border-dotted mt-8 md:mt-0 w-3/4 md:w-1/4 md:h-64 border-0">
 <div class="flex flex-col items-center">

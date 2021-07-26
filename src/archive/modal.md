@@ -1,6 +1,7 @@
 ---
 layout: layout.njk
 title: modal test
+permalink: false
 ---
 {{title}}
 

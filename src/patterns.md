@@ -2,7 +2,7 @@
 layout: layout.njk
 title: The NYS Design Patterns
 ---
-{% from './_includes/_components.njk' import button,buttonhero,card,hero,heroold,categorytiles %} 
+{% from './_includes/_components.njk' import breadcrumbs,button,buttonhero,card,hero,heroold,categorytiles,iconframe,iconframesix %} 
 
 
 {{ heroold({ 
@@ -39,6 +39,39 @@ title: The NYS Design Patterns
     }
   ]
 })}}
+
+{{ breadcrumbs({ 
+     items: [
+    {
+      text: "Home",
+      link: "/"
+    },
+    {
+      text: "How to Start",
+      link: "#"
+    }
+  ]
+})}}
+
+# In Progress demo page
+
+
+{{ iconframe({ 
+    
+})}}
+
+
+<br>
+<br>
+<br>
+<br>
+
+
+
+{{ iconframesix({ 
+    
+})}}
+
 
 Suspendisse ultrices erat eget lacus molestie, et vestibulum nibh pulvinar. Duis sodales velit eget vehicula egestas. Vestibulum rhoncus, nulla quis fringilla cursus, velit quam interdum nulla, eget vehicula lacus augue sit amet massa. Quisque pellentesque accumsan dolor, quis posuere enim dictum sed. Sed diam quam, ullamcorper vel ultricies eget, placerat sed magna. In dignissim orci sit amet dolor dignissim, a volutpat quam pellentesque.
 

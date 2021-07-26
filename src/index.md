@@ -8,18 +8,20 @@ title: OGS Digital Service Design Lab
     title: "The NYS Web Design System",
     subtitle: "With an information first approach, the components and design patterns are focused on connecting people to the resources they need.",
     image:"",
-    buttontext: "How to Start",
-    link: "/adopt-incrementally",
-    arialabel: "How to Start using the Design System",
-    buttontext2: "The Patterns",
+    buttontext: "Architecture Reports",
+    link: "/architecture-decision-reports",
+    arialabel: "Read about the decisions made about this web archtecture",
+    buttontext2: "Demo Page",
     link2: "/patterns",
-    arialabel2: "The patterns used in the Design System"
+    arialabel2: "A demonstration page"
 })}}
 
 
 
-# This Website
-Is in alpha stages and should be considered a work in progess.
+# An Evolving Sandbox Environment
+This website represents a test and demonstration space for the New York State Digital & Media Services Center to test design system components, integrations, static site implementations, code snippets and other resusable content, among other technical things. 
+
+If you have any questions about the content or technical aspects here, please contact us at <digital.services@ogs.ny.gov>
 
 
 
@@ -29,10 +31,6 @@ Is in alpha stages and should be considered a work in progess.
     {
       text: "Accessibility Remediations Dashboard",
       link: "/accessibility-remediations-dashboard"
-    },
-    {
-      text: "Open data API",
-      link: "/dmv-office-locations"
     },
     {
       text: "Tableau Test",
