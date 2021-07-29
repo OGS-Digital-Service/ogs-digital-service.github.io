@@ -59,6 +59,10 @@ If you have any questions about the content or technical aspects here, please co
     {
       text: "Tableau Test",
       link: "/tableau"
+    },
+    {
+      text: "ACSF Cards",
+      link: "/cards"
     }
   ]
 })}}
