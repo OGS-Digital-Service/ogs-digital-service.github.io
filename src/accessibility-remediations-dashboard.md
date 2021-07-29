@@ -84,25 +84,6 @@ title: DMV Accessibility Remediations Dashboard
           complete: false},
         status:'wrong',
         reviewlink:''
-    },
-    {
-        cardtitle:'Video element should not have role=application',
-        incident:'1898296403',
-        severity:'5',
-        govstory: 
-          {title:'',
-          link:'https://itswebny.atlassian.net/browse/GOV-314',
-          complete: false},
-        projectstory: 
-          {title:'',
-          link:'https://itswebny.atlassian.net/browse/DMV-167',
-          complete: false},
-        corestory: 
-          {title:'',
-          link:'',
-          complete: false},
-        status:'wrong',
-        reviewlink:''
     }
     ]
 })}}
