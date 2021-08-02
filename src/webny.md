@@ -2,7 +2,6 @@
 layout: layout-tablesort.njk
 title: webny
 data: webnysites
-permalink: false
 ---
 {{title}}
  

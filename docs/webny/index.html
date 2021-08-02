@@ -1,0 +1,1067 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/tailwind-dev.css" rel="stylesheet">
+<link href="/css/fonts.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+
+         <style>
+      p > a {
+        text-decoration: underline;
+      }
+      main p {
+        margin-bottom: 1rem;
+      }
+      main a:hover {
+        text-decoration:underline;
+      }
+      main a {
+        color: #007ac2;
+      }
+      main ol.list {
+        list-style-type:numeral;
+      }
+      
+      main h1 {
+          font-size: 2.5em;
+          font-weight: 700;
+        }
+      main h2 {
+          font-size: 1.5em;
+          font-weight: 700;
+        }
+      h1.agencyname {
+        font-family: D Sari Bold, Arial, sans-serif;
+        font-size: 22px;
+      }  
+      .oswald {
+        font-family: Oswald, Arial, sans-serif;
+        }
+      .noscaleicon {
+        min-width: 1.4rem;
+        min-height: 1.4rem;
+      }
+      .caret::after {
+        content: '>';
+        margin-left: 0.5em;
+        margin-right: 0.5em
+      }
+      .caret:last-of-type::after{
+        content: none;
+      }
+      .min-h-1\/5 {
+        min-height: 20%
+      }
+      .horizontal-line::before, .horizontal-line::after {
+          background-color: #000;
+          content: '';
+          display: inline-block;
+          height: 1px;
+          position: relative;
+          vertical-align: middle;
+          min-width: 30vw;
+          
+       
+
+      }
+      </style>
+   
+
+    <title>webny</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jq-3.3.1/dt-1.10.24/b-1.7.0/b-html5-1.7.0/sb-1.0.1/sp-1.2.2/datatables.min.css"/>
+ 
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/jq-3.3.1/dt-1.10.24/b-1.7.0/b-html5-1.7.0/sb-1.0.1/sp-1.2.2/datatables.min.js"></script>
+
+                 
+        
+
+
+  </head>
+  <body class="">
+  <script>
+ 
+$(document).ready(function() {
+    $('#dmv').DataTable( {
+       "paging": true,
+       "pageLength": 10,
+        initComplete: function () {
+            this.api().columns(0).every( function () {
+                var column = this;
+                var select = $('<select><option value=""></option></select>')
+                    .appendTo( $(".filter1").empty() )
+                    .on( 'change', function () {
+                        var val = $.fn.dataTable.util.escapeRegex(
+                            $(this).val()
+                        );
+ 
+                        column
+                            .search( val ? '^'+val+'$' : '', true, false )
+                            .draw();
+                    } );
+ 
+                column.data().unique().sort().each( function ( d, j ) {
+                    select.append( '<option value="'+d+'">'+d+'</option>' )
+                } );
+            } );
+        }
+    } );
+} );
+
+
+
+  </script>
+    
+    <header class="flex flex-col md:flex-row bg-gray-50">
+<a href="https://ny.gov" class="hover:underline flex flex-row items-center md:py-0 py-2 min-w-max mr-8 text-xs" title="Link to The Offical Website of the State of New York"><img class="h-6 ml-6 md:ml-20 mr-4" src="/img/nygov-logo.png" alt="Logo of the State of New York">An Official Website of New York State</a>
+
+<div class="flex flex-row items-center bg-yellow-100 border-l-8 border-yellow-500 py-2 w-full">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-circle-fill noscaleicon mx-2" viewBox="0 0 16 16" >
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+</svg>
+<a href="https://covid19vaccine.health.ny.gov/" class="flex hover:underline oswald text-sm uppercase" title="Link to the New York State COVID 19 Vaccine website">The COVID-19 vaccine is here. It is safe, effective and free. Walk in to get vaccinated at sites across the state.
+</a>
+</div>
+
+</header>
+
+     <header class="bg-admin-first p-4">
+<nav class="flex flex-row">
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="22" fill="currentColor" class="bi bi-list text-white md:hidden mt-1" viewBox="0 0 13 13">
+  <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+</svg>
+<h1 class="agencyname text-white ml-8 md:ml-16"><a href="/" aria-label="New York State Digital Services">Digital Services</a></h1>
+</nav>
+</header>
+
+
+
+
+    <main class="mx-8 md:mx-20">
+    <p>webny</p>
+<table id="dmv" class="display">
+<thead class="">
+<tr>
+<th>Title</th> 
+<th>URL</th>
+<th>Platform</th>
+<th>server</th>
+<th>agency</th>
+<th>cluster</th>
+</tr>
+</thead>
+<tbody>
+<tr> 
+<td>Building a New NY</td>
+<td><a href="https://2012buildinganewny.ny.gov/">https://2012buildinganewny.ny.gov/</a></td>
+<td>HTML</td>
+<td>Linux</td>
+<td>NY.gov Group - Governor Office</td>
+<td>Executive Chamber</td>
+</tr>
+<tr> 
+<td>NYRising</td>
+<td><a href="https://2013nyrising.ny.gov/">https://2013nyrising.ny.gov/</a></td>
+<td>HTML</td>
+<td>Linux</td>
+<td>NY.gov Group - Governor Office</td>
+<td>Executive Chamber</td>
+</tr>
+<tr> 
+<td>Labor - Adjudication</td>
+<td><a href="https://www.adjudication.labor.ny.gov">https://www.adjudication.labor.ny.gov</a></td>
+<td>No CMS</td>
+<td></td>
+<td>Department of Labor (DOL)</td>
+<td>Human Services Cluster</td>
+</tr>
+<tr> 
+<td>Office for the Aging</td>
+<td><a href="http://aging.ny.gov">http://aging.ny.gov</a></td>
+<td>Drupal 8</td>
+<td>Acquia Cloud Hosting</td>
+<td>Office for the Aging</td>
+<td>Disabilities %26 Aging Cluster</td>
+</tr>
+<tr> 
+<td>Department of Agriculture and Markets</td>
+<td><a href="http://agriculture.ny.gov">http://agriculture.ny.gov</a></td>
+<td>Drupal 8</td>
+<td>Acquia Cloud Hosting</td>
+<td>Department of Agriculture and Markets</td>
+<td>Citizen Services Cluster</td>
+</tr>
+<tr> 
+<td>NY Alert</td>
+<td><a href="https://alert.ny.gov/">https://alert.ny.gov/</a></td>
+<td>Drupal 8</td>
+<td>Acquia Cloud Hosting</td>
+<td>Office of Information Technology</td>
+<td></td>
+</tr>
+<tr> 
+<td>Amber Alert System</td>
+<td><a href="http://amber.ny.gov">http://amber.ny.gov</a></td>
+<td>Drupal 8</td>
+<td>Acquia Cloud Hosting</td>
+<td>Division of State Police</td>
+<td>Public Safety Cluster</td>
+</tr>
+<tr> 
+<td>NYS Council on the Arts</td>
+<td><a href="http://www.arts.ny.gov">http://www.arts.ny.gov</a></td>
+<td>Drupal 8</td>
+<td>Acquia Cloud Hosting</td>
+<td>New York State Council on the Arts (NYSCA)</td>
+<td>Unknown</td>
+</tr>
+<tr> 
+<td>Buffalo Fiscal Stability Authority</td>
+<td><a href="http://BFSA.ny.gov">http://BFSA.ny.gov</a></td>
+<td>HTML</td>
+<td>Linux</td>
+<td>Office of General Services (OGS)</td>
+<td>Administrative %26 General Services Cluster</td>
+</tr>
+<tr> 
+<td>NYS OGS Business Services Center</td>
+<td><a href="http://bsc.ogs.ny.gov">http://bsc.ogs.ny.gov</a></td>
+<td>Drupal 8</td>
+<td>Acquia Cloud Hosting</td>
+<td>Office of General Services (OGS)</td>
+<td>Administrative %26 General Services Cluster</td>
+</tr>
+<tr> 
+<td>Buffalo Billion</td>
+<td><a href="http://buffalobillion.ny.gov">http://buffalobillion.ny.gov</a></td>
+<td>Drupal 7</td>
+<td>Acquia</td>
+<td>Department of Economic Development (DED)</td>
+<td>Revenue and Transportation Cluster</td>
+</tr>
+<tr> 
+<td>Campaign Finance Reform</td>
+<td><a href="https://campaignfinancereform.ny.gov/">https://campaignfinancereform.ny.gov/</a></td>
+<td>Drupal 8</td>
+<td>Acquia Cloud Hosting</td>
+<td>NY.gov Group - Governor Office</td>
+<td>Executive Chamber</td>
+</tr>
+<tr> 
+<td>Campus Crime</td>
+<td><a href="http://campuscrime.ny.gov">http://campuscrime.ny.gov</a></td>
+<td>HTML</td>
+<td>Linux</td>
+<td>NY.gov Group - Governor Office</td>
+<td>Executive Chamber</td>
+</tr>
+<tr> 
+<td>Office of Cannabis Management</td>
+<td><a href="https://www.cannabis.ny.gov /">https://www.cannabis.ny.gov /</a></td>
+<td>Drupal 8</td>
+<td>Acquia Cloud Hosting</td>
+<td>NY.gov Group - Governor Office</td>
+<td>Executive Chamber</td>
+</tr>
+<tr> 
+<td>Troopers Centennial</td>
+<td><a href="https://centennial.troopers.ny.gov">https://centennial.troopers.ny.gov</a></td>
+<td>Drupal 7</td>
+<td>Acquia Cloud Hosting</td>
+<td>Division of State Police</td>
+<td>Public Safety Cluster</td>
+</tr>
+<tr> 
+<td>New York State Grown %26 Certified</td>
+<td><a href="http://certified.ny.gov/">http://certified.ny.gov/</a></td>
+<td>Drupal 7</td>
+<td>Acquia Cloud Hosting</td>
+<td>Department of Agriculture and Markets</td>
+<td>Citizen Services Cluster</td>
+</tr>
+<tr> 
+<td>College Goal New York</td>
+<td><a href="http://collegegoal.ny.gov">http://collegegoal.ny.gov</a></td>
+<td>Drupal 8</td>
+<td>Acquia Cloud Hosting</td>
+<td>Higher Education Services Corp (HESC)</td>
+<td>Enterprise Business Solutions</td>
+</tr>
+<tr> 
+<td>Novel Coronavirus (COVID-19)</td>
+<td><a href="https://coronavirus.health.ny.gov">https://coronavirus.health.ny.gov</a></td>
+<td>Drupal 8</td>
+<td>Acquia Cloud Hosting</td>
+<td>Department of Health (DOH)</td>
+<td>Health Cluster</td>
+</tr>
+<tr> 
+<td>Covid19 Vaccine</td>
+<td><a href="https://www.covid19vaccine.health.ny.gov">https://www.covid19vaccine.health.ny.gov</a></td>
+<td>Drupal 8</td>
+<td>Acquia Cloud Hosting</td>
+<td>Department of Health (DOH)</td>
+<td>Health Cluster</td>
+</tr>
+<tr> 
+<td>Division of Criminal Justice Services</td>
+<td><a href="http://criminaljustice.ny.gov/">http://criminaljustice.ny.gov/</a></td>
+<td>HTML</td>
+<td>Linux</td>
+<td>Division of Criminal Justice Services</td>
+<td>Public Safety Cluster</td>
+</tr>
+<tr> 
+<td>Information and Cyber Security Awareness</td>
+<td><a href="https://cybertraining.ny.gov/">https://cybertraining.ny.gov/</a></td>
+<td>HTML</td>
+<td>Linux</td>
+<td>Office of Information Technology</td>
+<td></td>
+</tr>
+<tr> 
+<td>Labor -Data</td>
+<td><a href="https://www.data.labor.ny.gov">https://www.data.labor.ny.gov</a></td>
+<td>No CMS</td>
+<td></td>
+<td>Department of Labor (DOL)</td>
+<td>Human Services Cluster</td>
+</tr>
+<tr> 
+<td>Division of Criminal Justice Services - Intranet</td>
+<td><a href="http://www.dcjs.nys.gov/">http://www.dcjs.nys.gov/</a></td>
+<td>HTML</td>
+<td></td>
+<td>Division of Criminal Justice Services</td>
+<td>Public Safety Cluster</td>
+</tr>
+<tr> 
+<td>Developmental Disabilities Planning Council</td>
+<td><a href="http://ddpc.ny.gov">http://ddpc.ny.gov</a></td>
+<td>Drupal 8</td>
+<td>Acquia Cloud Hosting</td>
+<td>NYS Developmental Disabilities Planning Council</td>
+<td>Disabilities %26 Aging Cluster</td>
+</tr>
+<tr> 
+<td>Deferred Compensation Board</td>
+<td><a href="https://deferredcompboard.ny.gov">https://deferredcompboard.ny.gov</a></td>
+<td>HTML</td>
+<td>Linux</td>
+<td>Deferred Compensation Plan (DCP)</td>
+<td></td>
+</tr>
+<tr> 
+<td>Department of Financial Services</td>
+<td><a href="https://www.dfs.ny.gov">https://www.dfs.ny.gov</a></td>
+<td>Drupal 8</td>
+<td>Acquia Cloud Hosting</td>
+<td>Department of Financial Services</td>
+<td>Revenue and Transportation Cluster</td>
+</tr>
+<tr> 
+<td>Division of Human Rights</td>
+<td><a href="http://dhr.ny.gov">http://dhr.ny.gov</a></td>
+<td>Drupal 8</td>
+<td>Acquia Cloud Hosting</td>
+<td>Division of Human Rights (DHR)</td>
+<td>Human Services Cluster</td>
+</tr>
+<tr> 
+<td>Division of Homeland Security and Emergency Services</td>
+<td><a href="https://www.dhses.ny.gov">https://www.dhses.ny.gov</a></td>
+<td>ColdFusion</td>
+<td>Windows</td>
+<td>Division of Homeland Security and Emergency Services</td>
+<td>Public Safety Cluster</td>
+</tr>
+<tr> 
+<td>Department of Motor Vehicles</td>
+<td><a href="http://dmv.ny.gov">http://dmv.ny.gov</a></td>
+<td>Drupal 7</td>
+<td>Acquia Cloud Hosting</td>
+<td>Department of Motor Vehicles</td>
+<td>Citizen Services Cluster</td>
+</tr>
+<tr> 
+<td>Department of Motor Vehicles - Intranet</td>
+<td><a href="http://dmvintranet.dmv.state.ny.us">http://dmvintranet.dmv.state.ny.us</a></td>
+<td>Drupal 7</td>
+<td></td>
+<td>Department of Motor Vehicles</td>
+<td>Citizen Services Cluster</td>
+</tr>
+<tr> 
+<td>Department of Corrections and Community Supervision</td>
+<td><a href="http://www.doccs.ny.gov">http://www.doccs.ny.gov</a></td>
+<td>Drupal 8</td>
+<td>Acquia Cloud Hosting</td>
+<td>Department of Corrections and Community Supervision</td>
+<td>Public Safety Cluster</td>
+</tr>
+<tr> 
+<td>DOL Intranet</td>
+<td><a href="http://sdolintranet:81">http://sdolintranet:81</a></td>
+<td>HTML</td>
+<td>Windows</td>
+<td>Department of Labor (DOL)</td>
+<td>Human Services Cluster</td>
+</tr>
+<tr> 
+<td>Department of Labor</td>
+<td><a href="https://dol.ny.gov">https://dol.ny.gov</a></td>
+<td>Drupal 8</td>
+<td>Acquia Cloud Hosting</td>
+<td>Department of Labor (DOL)</td>
+<td>Human Services Cluster</td>
+</tr>
+<tr> 
+<td>Department of State</td>
+<td><a href="http://dos.ny.gov">http://dos.ny.gov</a></td>
+<td>Drupal 8</td>
+<td>Acquia Cloud Hosting</td>
+<td>Department of State</td>
+<td>Enterprise Business Solutions</td>
+</tr>
+<tr> 
+<td>Department of State - Intranet</td>
+<td><a href="http://dosintranet.dos.state.ny.gov">http://dosintranet.dos.state.ny.gov</a></td>
+<td>HTML</td>
+<td></td>
+<td>Department of State</td>
+<td>Enterprise Business Solutions</td>
+</tr>
+<tr> 
+<td>Department of Transportation</td>
+<td><a href="http://dot.ny.gov">http://dot.ny.gov</a></td>
+<td>Oracle</td>
+<td>Oracle WebLogic</td>
+<td>Department of Transportation (DOT)</td>
+<td>Revenue and Transportation Cluster</td>
+</tr>
+<tr> 
+<td>Erie County Fiscal Stability Authority</td>
+<td><a href="http://ecfsa.ny.gov">http://ecfsa.ny.gov</a></td>
+<td>HTML</td>
+<td>Linux</td>
+<td>Office of General Services (OGS)</td>
+<td>Administrative %26 General Services Cluster</td>
+</tr>
+<tr> 
+<td>Empire State Plaza</td>
+<td><a href="https://empirestateplaza.ny.gov">https://empirestateplaza.ny.gov</a></td>
+<td>Drupal 8</td>
+<td>Acquia Cloud Hosting</td>
+<td>Office of General Services (OGS)</td>
+<td>Administrative %26 General Services Cluster</td>
+</tr>
+<tr> 
+<td>Empire State Trail</td>
+<td><a href="https://empiretrail.ny.gov">https://empiretrail.ny.gov</a></td>
+<td>Drupal 8</td>
+<td>Acquia Cloud Hosting</td>
+<td>Hudson River Valley Greenway (HRVG)</td>
+<td>Human Services Cluster</td>
+</tr>
+<tr> 
+<td>Empire State Development</td>
+<td><a href="http://esd.ny.gov">http://esd.ny.gov</a></td>
+<td>Drupal 7</td>
+<td>Acquia Cloud Hosting</td>
+<td>Department of Economic Development (DED)</td>
+<td>Revenue and Transportation Cluster</td>
+</tr>
+<tr> 
+<td>Forward NY</td>
+<td><a href="http://forward.ny.gov">http://forward.ny.gov</a></td>
+<td>Drupal 8</td>
+<td>Acquia Cloud Hosting</td>
+<td>NY.gov Group - Governor Office</td>
+<td>Executive Chamber</td>
+</tr>
+<tr> 
+<td>NY Gear Up</td>
+<td><a href="http://gearup.ny.go">http://gearup.ny.go</a></td>
+<td>Drupal 8</td>
+<td>Acquia Cloud Hosting</td>
+<td>Higher Education Services Corp (HESC)</td>
+<td>Enterprise Business Solutions</td>
+</tr>
+<tr> 
+<td>Building on Success - 2014 Initatives</td>
+<td><a href="http://getinvolved.ny.gov">http://getinvolved.ny.gov</a></td>
+<td>HTML</td>
+<td>Linux</td>
+<td>NY.gov Group - Governor Office</td>
+<td>Executive Chamber</td>
+</tr>
+<tr> 
+<td>NYS GIS Clearinghouse</td>
+<td><a href="http://gis.ny.gov/">http://gis.ny.gov/</a></td>
+<td>ColdFusion</td>
+<td>Windows</td>
+<td>Office of Information Technology</td>
+<td>Public Safety Cluster</td>
+</tr>
+<tr> 
+<td>GoCollegeNY</td>
+<td><a href="http://gocollegeny.org">http://gocollegeny.org</a></td>
+<td>Joomla</td>
+<td>Linux</td>
+<td>Higher Education Services Corp (HESC)</td>
+<td>Enterprise Business Solutions</td>
+</tr>
+<tr> 
+<td>NYS GOER</td>
+<td><a href="http://goer.ny.gov">http://goer.ny.gov</a></td>
+<td>Drupal 8</td>
+<td>Acquia Cloud Hosting</td>
+<td>Governor&#39;s Office of Employee Relations (GOER)</td>
+<td>Administrative %26 General Services Cluster</td>
+</tr>
+<tr> 
+<td>Governor Andrew M. Cuomo</td>
+<td><a href="http://governor.ny.gov">http://governor.ny.gov</a></td>
+<td>Drupal 8</td>
+<td>Acquia Cloud Hosting</td>
+<td>NY.gov Group - Governor Office</td>
+<td>Executive Chamber</td>
+</tr>
+<tr> 
+<td>Streamlining State Grant Processes</td>
+<td><a href="http://grantsmanagement.ny.gov">http://grantsmanagement.ny.gov</a></td>
+<td>Drupal 8</td>
+<td>Acquia Cloud Hosting</td>
+<td>Office of Information Technology</td>
+<td>Enterprise Business Solutions</td>
+</tr>
+<tr> 
+<td>Homes and Community Renewal</td>
+<td><a href="http://www.nyshcr.org/">http://www.nyshcr.org/</a></td>
+<td>Drupal 8</td>
+<td>Acquia Cloud Hosting</td>
+<td>NY Homes and Community Renewal (HCR)</td>
+<td>Unknown</td>
+</tr>
+<tr> 
+<td>HESC Public Information Website</td>
+<td><a href="http://www.hesc.ny.gov">http://www.hesc.ny.gov</a></td>
+<td>Joomla</td>
+<td>Linux</td>
+<td>Higher Education Services Corp (HESC)</td>
+<td>Enterprise Business Solutions</td>
+</tr>
+<tr> 
+<td>Hudson River Valley Greenway</td>
+<td><a href="http://www.hudsongreenway.ny.gov">http://www.hudsongreenway.ny.gov</a></td>
+<td>Drupal 8</td>
+<td>Acquia Cloud Hosting</td>
+<td>Hudson River Valley Greenway (HRVG)</td>
+<td>Unknown</td>
+</tr>
+<tr> 
+<td>Inspector General</td>
+<td><a href="http://ig.ny.gov">http://ig.ny.gov</a></td>
+<td>Drupal 8</td>
+<td>Acquia Cloud Hosting</td>
+<td>State Inspector General</td>
+<td>Citizen Services Cluster</td>
+</tr>
+<tr> 
+<td>Industrial Board of Appeals</td>
+<td><a href="http://industrialappeals.ny.gov">http://industrialappeals.ny.gov</a></td>
+<td>Drupal 8</td>
+<td>Acquia Cloud Hosting</td>
+<td>Department of Labor (DOL)</td>
+<td>Human Services Cluster</td>
+</tr>
+<tr> 
+<td>DOT Intranet</td>
+<td><a href="http://axim22.nysdot.private:7779/portal/page?_pageid=39,1,39_161990%26_dad=portal%26_schema=PORTAL">http://axim22.nysdot.private:7779/portal/page?_pageid=39,1,39_161990%26_dad=portal%26_schema=PORTAL</a></td>
+<td>Oracle</td>
+<td></td>
+<td>Department of Transportation (DOT)</td>
+<td>Revenue and Transportation Cluster</td>
+</tr>
+<tr> 
+<td>Office of Information Technology Services</td>
+<td><a href="http://its.ny.gov">http://its.ny.gov</a></td>
+<td>Drupal 7</td>
+<td>Acquia Cloud Hosting</td>
+<td>Office of Information Technology</td>
+<td>Information Technology Services</td>
+</tr>
+<tr> 
+<td>NYS Joint Commission on Public Ethics</td>
+<td><a href="http://jcope.ny.gov">http://jcope.ny.gov</a></td>
+<td>Drupal 8</td>
+<td>Windows</td>
+<td>Joint Commission on Public Ethics (JCOPE)</td>
+<td>Citizen Services Cluster</td>
+</tr>
+<tr> 
+<td>Join the State Police</td>
+<td><a href="http://joinstatepolice.ny.gov">http://joinstatepolice.ny.gov</a></td>
+<td>Drupal 8</td>
+<td>Acquia Cloud Hosting</td>
+<td>Division of State Police</td>
+<td>Public Safety Cluster</td>
+</tr>
+<tr> 
+<td>Justice Center</td>
+<td><a href="http://www.justicecenter.ny.gov">http://www.justicecenter.ny.gov</a></td>
+<td>Drupal 8</td>
+<td>Acquia Cloud Hosting</td>
+<td>Justice Center</td>
+<td>Disabilities %26 Aging Cluster</td>
+</tr>
+<tr> 
+<td>Criminal Justice Knowledge Bank</td>
+<td><a href="https://knowledgebank.criminaljustice.ny.gov">https://knowledgebank.criminaljustice.ny.gov</a></td>
+<td>Drupal 8</td>
+<td></td>
+<td>Division of Criminal Justice Services</td>
+<td>Public Safety Cluster</td>
+</tr>
+<tr> 
+<td>Department of Labor</td>
+<td><a href="https://labor.ny.gov">https://labor.ny.gov</a></td>
+<td>Drupal 8</td>
+<td>Windows</td>
+<td>Department of Labor (DOL)</td>
+<td>Human Services Cluster</td>
+</tr>
+<tr> 
+<td>Lake George Park Commission</td>
+<td><a href="https://lgpc.ny.gov">https://lgpc.ny.gov</a></td>
+<td>Drupal 8</td>
+<td>Acquia Cloud Hosting</td>
+<td>Lake George Park Commission</td>
+<td>Environment %26 Energy Cluster</td>
+</tr>
+<tr> 
+<td>Department of State - Local Laws Search</td>
+<td><a href="http://locallaws.dos.ny.gov">http://locallaws.dos.ny.gov</a></td>
+<td>Drupal 7</td>
+<td>Acquia Cloud Hosting</td>
+<td>Department of State</td>
+<td>Enterprise Business Solutions</td>
+</tr>
+<tr> 
+<td>Mario M Cuomo Bridge</td>
+<td><a href="http://mariomcuomobridge.ny.gov/">http://mariomcuomobridge.ny.gov/</a></td>
+<td>Drupal 8</td>
+<td>Acquia Cloud Hosting</td>
+<td>New York State Thruway Authority</td>
+<td>Authorities</td>
+</tr>
+<tr> 
+<td>Moreland Commision</td>
+<td><a href="http://moreland.ny.gov">http://moreland.ny.gov</a></td>
+<td>HTML</td>
+<td>Linux</td>
+<td></td>
+<td>Revenue and Transportation Cluster</td>
+</tr>
+<tr> 
+<td>Office for New Americans</td>
+<td><a href="http://www.newamericans.ny.gov/">http://www.newamericans.ny.gov/</a></td>
+<td>HTML</td>
+<td>Windows</td>
+<td>Department of State</td>
+<td>Enterprise Business Solutions</td>
+</tr>
+<tr> 
+<td>Commission on National and Community Service</td>
+<td><a href="https://newyorkersvolunteer.ny.gov">https://newyorkersvolunteer.ny.gov</a></td>
+<td>Drupal 8</td>
+<td>Acquia Cloud Hosting</td>
+<td>Office of Children and Family Services (OCFS)</td>
+<td>Human Services Cluster</td>
+</tr>
+<tr> 
+<td>Office of NICS Appeals %26 SAFE Act</td>
+<td><a href="http://nics.ny.gov">http://nics.ny.gov</a></td>
+<td>HTML</td>
+<td>LINUX</td>
+<td>Office of Mental Health (OMH)</td>
+<td>Health Cluster</td>
+</tr>
+<tr> 
+<td>Nassau County  Interim Finance Authority</td>
+<td><a href="http://nifa.ny.gov/">http://nifa.ny.gov/</a></td>
+<td>HTML</td>
+<td>Linux</td>
+<td>Office of General Services (OGS)</td>
+<td>Administrative %26 General Services Cluster</td>
+</tr>
+<tr> 
+<td>New York State Web Site</td>
+<td><a href="http://ny.gov">http://ny.gov</a></td>
+<td>Drupal 7</td>
+<td>Acquia Cloud Hosting</td>
+<td>NY.gov Group - Governor Office</td>
+<td>Executive Chamber</td>
+</tr>
+<tr> 
+<td>New York Employment Services System</td>
+<td><a href="http://www.nyess.ny.gov/">http://www.nyess.ny.gov/</a></td>
+<td>HTML</td>
+<td>LINUX</td>
+<td>Office of Mental Health (OMH)</td>
+<td>Health Cluster</td>
+</tr>
+<tr> 
+<td>New York Lottery</td>
+<td><a href="http://nylottery.ny.gov">http://nylottery.ny.gov</a></td>
+<td>Drupal 8</td>
+<td>Acquia Cloud Hosting</td>
+<td>Gaming Commission</td>
+<td>Revenue and Transportation Cluster</td>
+</tr>
+<tr> 
+<td>NYS Broadband Program Office</td>
+<td><a href="http://nysbroadband.ny.gov">http://nysbroadband.ny.gov</a></td>
+<td>Drupal 7</td>
+<td>Acquia Cloud Hosting</td>
+<td>Department of Economic Development (DED)</td>
+<td>Revenue and Transportation Cluster</td>
+</tr>
+<tr> 
+<td>New York State Compensation Committee 2018</td>
+<td><a href="https://nyscompensation.ny.gov">https://nyscompensation.ny.gov</a></td>
+<td>HTML</td>
+<td></td>
+<td>SUNY</td>
+<td></td>
+</tr>
+<tr> 
+<td>NYSP Intranet</td>
+<td><a href="http://NYSPintranet.state.ny.gov">http://NYSPintranet.state.ny.gov</a></td>
+<td>ColdFusion</td>
+<td>Windows</td>
+<td>Division of State Police</td>
+<td>Public Safety Cluster</td>
+</tr>
+<tr> 
+<td>NYS Storm Recovery Opportunities</td>
+<td><a href="https://nystormrecoveryopps.ny.gov/">https://nystormrecoveryopps.ny.gov/</a></td>
+<td>Drupal 7</td>
+<td>Acquia Cloud Hosting</td>
+<td>NY Homes and Community Renewal (HCR)</td>
+<td>Revenue and Transportation Cluster</td>
+</tr>
+<tr> 
+<td>OASAS Public Web</td>
+<td><a href="http://oasas.ny.gov">http://oasas.ny.gov</a></td>
+<td>Drupal 8</td>
+<td>Acquia Cloud Hosting</td>
+<td>Office of Addiction Services and Supports (OASAS)</td>
+<td>Health Cluster</td>
+</tr>
+<tr> 
+<td>Ocean and Great Lakes Ecosystem Conservation Council</td>
+<td><a href="http://oglecc.ny.gov">http://oglecc.ny.gov</a></td>
+<td>HTML</td>
+<td>Windows</td>
+<td>Department of State</td>
+<td>Enterprise Business Solutions</td>
+</tr>
+<tr> 
+<td>Office of General Services</td>
+<td><a href="http://ogs.ny.gov">http://ogs.ny.gov</a></td>
+<td>Drupal 8</td>
+<td>Acquia Cloud Hosting</td>
+<td>Office of General Services (OGS)</td>
+<td>Administrative %26 General Services Cluster</td>
+</tr>
+<tr> 
+<td>Office of Mental Health</td>
+<td><a href="http://omh.ny.gov">http://omh.ny.gov</a></td>
+<td>HTML</td>
+<td>LINUX</td>
+<td>Office of Mental Health (OMH)</td>
+<td>Health Cluster</td>
+</tr>
+<tr> 
+<td>Office of the Medicaid Inspector General</td>
+<td><a href="https://www/omig.ny.gov">https://www/omig.ny.gov</a></td>
+<td>Drupal 8</td>
+<td>Acquia Cloud Hosting</td>
+<td>Office of the Medicaid Inspector General (OMIG)</td>
+<td>Health Cluster</td>
+</tr>
+<tr> 
+<td>Office for the Prevention of Domestic Violence</td>
+<td><a href="http://opdv.ny.gov/">http://opdv.ny.gov/</a></td>
+<td>HTML</td>
+<td>Linux</td>
+<td>Office for the Prevention of Domestic Violence</td>
+<td>Public Safety Cluster</td>
+</tr>
+<tr> 
+<td>Committee on Open Government</td>
+<td><a href="https://opengovernment.ny.gov/">https://opengovernment.ny.gov/</a></td>
+<td>Drupal 8</td>
+<td>Acquia Cloud Hosting</td>
+<td>Department of State</td>
+<td>Enterprise Business Solutions</td>
+</tr>
+<tr> 
+<td>Office for People with Developmental Disabilities (OPWDD)</td>
+<td><a href="http://opwdd.ny.gov">http://opwdd.ny.gov</a></td>
+<td>Drupal 8</td>
+<td>Acquia Cloud Hosting</td>
+<td>Office for People With Developmental Disabilities</td>
+<td>Disabilities %26 Aging Cluster</td>
+</tr>
+<tr> 
+<td>Office of Renewable Energy %26 Siting</td>
+<td><a href="https://ores.ny.gov">https://ores.ny.gov</a></td>
+<td>Drupal 8</td>
+<td>Acquia Cloud Hosting</td>
+<td>Department of State</td>
+<td>Enterprise Business Solutions</td>
+</tr>
+<tr> 
+<td>Office of Victim Services</td>
+<td><a href="http://www.ovs.ny.gov">http://www.ovs.ny.gov</a></td>
+<td>Drupal 7</td>
+<td>Acquia Cloud Hosting</td>
+<td>Office of Victim Services</td>
+<td>Public Safety Cluster</td>
+</tr>
+<tr> 
+<td>Paid Family Leave</td>
+<td><a href="https://paidfamilyleave.ny.gov">https://paidfamilyleave.ny.gov</a></td>
+<td>Drupal 8</td>
+<td>Acquia Cloud Hosting</td>
+<td>Workers’ Compensation Board</td>
+<td></td>
+</tr>
+<tr> 
+<td>People First</td>
+<td><a href="https://peoplefirst.ny.gov/">https://peoplefirst.ny.gov/</a></td>
+<td>HTML</td>
+<td>Linux</td>
+<td>NY.gov Group - Governor Office</td>
+<td>Executive Chamber</td>
+</tr>
+<tr> 
+<td>Police Reform and Reinvention Collaborative</td>
+<td><a href="https://policereform.ny.gov/">https://policereform.ny.gov/</a></td>
+<td>Drupal 8</td>
+<td>Acquia Cloud Hosting</td>
+<td>Division of Criminal Justice Services</td>
+<td>Public Safety Cluster</td>
+</tr>
+<tr> 
+<td>NYS Prepare</td>
+<td><a href="http://prepare.ny.gov">http://prepare.ny.gov</a></td>
+<td>Drupal 7</td>
+<td>Acquia Cloud Hosting</td>
+<td>NY.gov Group - Governor Office</td>
+<td>Executive Chamber</td>
+</tr>
+<tr> 
+<td>Public Safety Wireless Broadband</td>
+<td><a href="http://psbb.ny.gov">http://psbb.ny.gov</a></td>
+<td>ColdFusion</td>
+<td></td>
+<td>Division of Homeland Security and Emergency Services</td>
+<td>Public Safety Cluster</td>
+</tr>
+<tr> 
+<td>The Moreland Commission to Investigate Public Corruption</td>
+<td><a href="http://publiccorruption.moreland.ny.gov">http://publiccorruption.moreland.ny.gov</a></td>
+<td>HTML</td>
+<td></td>
+<td></td>
+<td>Revenue and Transportation Cluster</td>
+</tr>
+<tr> 
+<td>Reforming Government</td>
+<td><a href="http://reforminggovernment.ny.gov">http://reforminggovernment.ny.gov</a></td>
+<td>HTML</td>
+<td>Linux</td>
+<td>NY.gov Group - Governor Office</td>
+<td>Executive Chamber</td>
+</tr>
+<tr> 
+<td>Regional Economic Development Councils</td>
+<td><a href="http://regionalcouncils.ny.gov">http://regionalcouncils.ny.gov</a></td>
+<td>Drupal 8</td>
+<td>Acquia Cloud Hosting</td>
+<td>NY.gov Group - Governor Office</td>
+<td>Executive Chamber</td>
+</tr>
+<tr> 
+<td>NY Safe Act</td>
+<td><a href="http://safeact.ny.gov">http://safeact.ny.gov</a></td>
+<td>Drupal 8</td>
+<td>Acquia Cloud Hosting</td>
+<td>NY.gov Group - Governor Office</td>
+<td>Executive Chamber</td>
+</tr>
+<tr> 
+<td>NYS Commission of Correction</td>
+<td><a href="http://scoc.ny.gov">http://scoc.ny.gov</a></td>
+<td>HTML</td>
+<td>Linux</td>
+<td>State Commission of Correction</td>
+<td>Public Safety Cluster</td>
+</tr>
+<tr> 
+<td>NYS Department of Labor Intranet Web Site</td>
+<td><a href="http://sdolintranet:81/">http://sdolintranet:81/</a></td>
+<td>ASP</td>
+<td></td>
+<td>Department of Labor (DOL)</td>
+<td>Human Services Cluster</td>
+</tr>
+<tr> 
+<td>NYS Liquor Authority / Division of Alcoholic Beverage Control</td>
+<td><a href="http://sla.ny.gov">http://sla.ny.gov</a></td>
+<td>Drupal 8</td>
+<td>Acquia Cloud Hosting</td>
+<td>State Liquor Authority</td>
+<td>Enterprise Business Solutions</td>
+</tr>
+<tr> 
+<td>Start Here Get There</td>
+<td><a href="http://startheregetthere.ny.gov">http://startheregetthere.ny.gov</a></td>
+<td>Drupal 8</td>
+<td>Acquia Cloud Hosting</td>
+<td>Higher Education Services Corp (HESC)</td>
+<td>Enterprise Business Solutions</td>
+</tr>
+<tr> 
+<td>Labor - Statistics</td>
+<td><a href="https://www.statistics.labor.ny.gov">https://www.statistics.labor.ny.gov</a></td>
+<td>No CMS</td>
+<td></td>
+<td>Department of Labor (DOL)</td>
+<td>Human Services Cluster</td>
+</tr>
+<tr> 
+<td>NYS Storm Recovery</td>
+<td><a href="http://stormrecovery.ny.gov">http://stormrecovery.ny.gov</a></td>
+<td>Drupal 7</td>
+<td>Acquia Cloud Hosting</td>
+<td>NY Homes and Community Renewal (HCR)</td>
+<td>Revenue and Transportation Cluster</td>
+</tr>
+<tr> 
+<td>Taste New York</td>
+<td><a href="http://taste.ny.gov">http://taste.ny.gov</a></td>
+<td>Drupal 8</td>
+<td>Acquia Cloud Hosting</td>
+<td>Department of Agriculture and Markets</td>
+<td>Citizen Services Cluster</td>
+</tr>
+<tr> 
+<td>Tracs Troopers</td>
+<td><a href="https://tracs.troopers.ny.gov/">https://tracs.troopers.ny.gov/</a></td>
+<td>Drupal 7</td>
+<td>Acquia Cloud Hosting</td>
+<td>Division of State Police</td>
+<td>Public Safety Cluster</td>
+</tr>
+<tr> 
+<td>Traffic Safety</td>
+<td><a href="http://trafficsafety.ny.gov">http://trafficsafety.ny.gov</a></td>
+<td>Drupal 8</td>
+<td>Acquia Cloud Hosting</td>
+<td>Department of Motor Vehicles</td>
+<td>Citizen Services Cluster</td>
+</tr>
+<tr> 
+<td>Code of Conduct Training</td>
+<td><a href="https://training.justicecenter.ny.gov">https://training.justicecenter.ny.gov</a></td>
+<td>HTML</td>
+<td></td>
+<td>Justice Center</td>
+<td>Human Services Cluster</td>
+</tr>
+<tr> 
+<td>New York State Police</td>
+<td><a href="https://troopers.ny.gov/">https://troopers.ny.gov/</a></td>
+<td>Drupal 8</td>
+<td>Acquia Cloud Hosting</td>
+<td>Division of State Police</td>
+<td>Public Safety Cluster</td>
+</tr>
+<tr> 
+<td>Unemployment Insurance Appeals Board</td>
+<td><a href="http://uiappeals.ny.gov">http://uiappeals.ny.gov</a></td>
+<td>Drupal 8</td>
+<td>Acquia Cloud Hosting</td>
+<td>Department of Labor (DOL)</td>
+<td>Human Services Cluster</td>
+</tr>
+<tr> 
+<td>The Moreland Commission on Utility Storm Preparation and Response</td>
+<td><a href="http://utilitystormmanagement.moreland.ny.gov">http://utilitystormmanagement.moreland.ny.gov</a></td>
+<td>HTML</td>
+<td></td>
+<td></td>
+<td>Revenue and Transportation Cluster</td>
+</tr>
+<tr> 
+<td>Division of Veterans Affairs</td>
+<td><a href="http://veterans.ny.gov">http://veterans.ny.gov</a></td>
+<td>Drupal 7</td>
+<td>Acquia Cloud Hosting</td>
+<td>Division of Veterans&#39; Affairs (DVA)</td>
+<td>Administrative %26 General Services Cluster</td>
+</tr>
+<tr> 
+<td>Wood Products Development Council</td>
+<td><a href="https://woodproducts.ny.gov">https://woodproducts.ny.gov</a></td>
+<td>Drupal 8</td>
+<td>Acquia Cloud Hosting</td>
+<td>Department of Agriculture and Markets</td>
+<td>Environment %26 Energy Cluster</td>
+</tr>
+<tr> 
+<td>Workforce Development</td>
+<td><a href="https://workforcedevelopment.ny.gov">https://workforcedevelopment.ny.gov</a></td>
+<td>Drupal 8</td>
+<td>Acquia Cloud Hosting</td>
+<td>NY.gov Group - Governor Office</td>
+<td>Executive Chamber</td>
+</tr>
+<tr> 
+<td>Youth In Care</td>
+<td><a href="http://youthincare.ny.gov">http://youthincare.ny.gov</a></td>
+<td>Drupal 8</td>
+<td>Acquia Cloud Hosting</td>
+<td>Higher Education Services Corp (HESC)</td>
+<td>Enterprise Business Solutions</td>
+</tr>
+</tbody>
+<tfoot> 
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tfoot>
+</table>
+    </main>
+    <footer class="bg-admin-third px-4 py-8 flex flex-col md:flex-row md:items-center items-baseline mt-12">
+<h1 class="agencyname text-black ml-8 md:ml-16 mr-4 border-solid border-b border-black md:border-none pr-16 md:pr-0"><a href="/" aria-label="New York State Digital Services" class="">Digital Services</a></h1>
+<span class="hidden md:block md:border-solid md:border-l-2 md:border-black md:py-2 md:ml-2 md:mr-4">&nbsp;</span>
+
+<a href="https://ogs.ny.gov/website-accessibility" aria-label="Link to Agency&#39;s Accessibility statement." class="font-bold hover:underline ml-8 py-2 md:ml-0 md:px-3"> Accessibility </a>
+
+<a href="https://ogs.ny.gov/contact-office-general-services" aria-label="Link to Agency&#39;s contact information." class="font-bold hover:underline ml-8 py-2 md:ml-0 md:px-3"> Contact </a>
+
+<section class="flex flex-row md:ml-auto mt-8 md:mt-0 ml-2" aria-label="social media links">
+<a href="https://www.facebook.com/NewYorkStateOGS/"  title="Facebook" aria-label="Visit us on Facebook."><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook noscaleicon mx-6" viewBox="0 0 16 16"><path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/></svg></a>
+<a href="https://twitter.com/NYS_OGS"  title="Twitter" aria-label="Visit us on Twitter."><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter noscaleicon mx-6" viewBox="0 0 16 16"><path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/></svg></a>
+<a href="https://www.instagram.com/nysgeneralservices/"  title="Instagram" aria-label="Visit us on Instagram."><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram noscaleicon mx-6" viewBox="0 0 16 16"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/></svg></a>
+</section>
+</footer>
+  </body>
+</html>
