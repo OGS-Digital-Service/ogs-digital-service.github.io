@@ -15,9 +15,9 @@ data: webnysites
 <th>Title</th> 
 <th>URL</th>
 <th>Platform</th>
-<th>server</th>
+<!-- <th>server</th>
 <th>agency</th>
-<th>cluster</th>
+<th>cluster</th> -->
 </tr>
 </thead>
 <tbody>
@@ -26,9 +26,9 @@ data: webnysites
 <td>{{ sites.Title }}</td>
 <td><a href="{{ sites.URL }}">{{ sites.URL }}</a></td>
 <td>{{ sites.Platform }}</td>
-<td>{{ sites.Server }}</td>
+<!-- <td>{{ sites.Server }}</td>
 <td>{{ sites.Agency }}</td>
-<td>{{ sites.Cluster }}</td>
+<td>{{ sites.Cluster }}</td> -->
 </tr>
 {% endfor %}
 </tbody>
