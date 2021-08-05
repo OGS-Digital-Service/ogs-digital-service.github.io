@@ -2,7 +2,7 @@
 layout: layout.njk
 title: DMV Accessibility Remediations Dashboard
 ---
-{% from './_includes/_components.njk' import statuscard  %}
+{% from '../_includes/_components.njk' import statuscard  %}
 
 # {{title}}
 

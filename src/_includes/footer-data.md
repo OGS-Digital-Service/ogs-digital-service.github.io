@@ -9,8 +9,8 @@
     items: [
     {
       text: "Accessibility",
-      link: "https://ogs.ny.gov/website-accessibility",
-      arialabel:"Link to Agency's Accessibility statement."
+      link: "/accessibility",
+      arialabel:"Read our accessibility statement"
     },
      {
       text: "Contact",

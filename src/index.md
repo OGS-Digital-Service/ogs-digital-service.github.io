@@ -24,11 +24,11 @@ If you have any questions about the content or technical aspects here, please co
     frametitle:'A Row of Cards',
     cards: [
         {
-        title:"Architecture Decision Reports",
+        title:"Architecture Decision Records",
         content:"Read about the architecture decisions that went into this website as well as other digital web components and integrations.",
-        link:"/architecture-decision-reports",
-        linktext:"Browse the Reports",
-        arialabel:'Browse the list of architecture decision reports'
+        link:"/architecture-decision-records",
+        linktext:"Browse the Records",
+        arialabel:'Browse the list of architecture decision records'
         },
         {
         title:"Accessibility Remediations Dashboard",
@@ -36,12 +36,6 @@ If you have any questions about the content or technical aspects here, please co
         link:"/accessibility-remediations-dashboard",
         linktext:"Go to the Dashboard",
         arialabel:'go to the dashboard of in progress accessibility remediations'
-        },
-        {
-        title:"A Card",
-        content:"card content",
-        link:"/tableau",
-        linktext:"Linktext"
         }
         
         
