@@ -3,9 +3,7 @@
     link: "/",
     arialabel: "New York State Digital Services",
     color: "bg-admin-third",
-    facebook:"https://www.facebook.com/NewYorkStateOGS/",
-    twitter: "https://twitter.com/NYS_OGS",
-    instagram:"https://www.instagram.com/nysgeneralservices/",
+    github:"https://github.com/OGS-Digital-Service/ogs-digital-service.github.io",
     items: [
     {
       text: "Accessibility",
