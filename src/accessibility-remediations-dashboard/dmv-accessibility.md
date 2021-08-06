@@ -2,14 +2,28 @@
 layout: layout.njk
 title: DMV Accessibility Remediations Dashboard
 ---
-{% from '../_includes/_components.njk' import statuscard %}
+{% from '../_includes/_components.njk' import statuscard, categorytiles %}
 
 # {{title}}
 
-## Tickets and Status
-- <a href="#needs-discussion"> Needs Discussion </a> 
-- <a href="#complete-and-ready-to-rescan"> Complete and Ready to Rescan </a>
-- <a href="#work-still-in-progress"> Work Still in Progress</a>
+{{ categorytiles({ 
+    title:"Tickets and Status",
+     items: [
+    {
+      text: "Needs Discussion",
+      link: "#needs-discussion"
+    },
+    {
+      text: "Ready to Rescan",
+      link: "#complete-and-ready-to-rescan"
+    },
+    {
+      text: "In-Progress",
+      link: "#work-still-in-progress"
+    }
+  ]
+})}}
+
 
 {{ statuscard({ 
     heading:'Needs Discussion',
