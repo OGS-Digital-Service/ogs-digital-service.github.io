@@ -303,8 +303,8 @@ title: DMV Accessibility Remediations Dashboard
       },
       {
           cardtitle:'Document download link should be an h3 and combine links for a more well formed element',
-          incident:'',
-          severity:'',
+          incident:'1899017190, 1899017221',
+          severity:'6, 3',
           govstory: 
             {title:'GOV-325',
             link:'https://itswebny.atlassian.net/browse/GOV-325',
@@ -322,7 +322,7 @@ title: DMV Accessibility Remediations Dashboard
       },
       {
           cardtitle:'Contact Frame: titles need to be headings and fieldset',
-          incident:'',
+          incident:'1899039078, 1899039079',
           severity:'6, 3',
           govstory: 
             {title:'GOV-329',
