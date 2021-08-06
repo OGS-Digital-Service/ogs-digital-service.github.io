@@ -2,12 +2,17 @@
 layout: layout.njk
 title: DMV Accessibility Remediations Dashboard
 ---
-{% from '../_includes/_components.njk' import statuscard  %}
+{% from '../_includes/_components.njk' import statuscard %}
 
 # {{title}}
 
+## Tickets and Status
+- <a href="#needs-discussion"> Needs Discussion </a> 
+- <a href="#complete-and-ready-to-rescan"> Complete and Ready to Rescan </a>
+- <a href="#work-still-in-progress"> Work Still in Progress</a>
+
 {{ statuscard({ 
-    heading:'Needs Vendor Review',
+    heading:'Needs Discussion',
     cards: [
     {
         cardtitle:'Tables: remove aria-label from sortable headers and move header text into an a element inside th',
@@ -46,45 +51,8 @@ title: DMV Accessibility Remediations Dashboard
           complete: false},
         status:'wrong',
         reviewlink:''
-    },
-    {
-        cardtitle:'Card links provided with h1 incorrectly',
-        incident:'1899017077',
-        severity:'3',
-        govstory: 
-          {title:'',
-          link:'https://itswebny.atlassian.net/browse/GOV-314',
-          complete: false},
-        projectstory: 
-          {title:'',
-          link:'https://itswebny.atlassian.net/browse/DMV-167',
-          complete: false},
-        corestory: 
-          {title:'',
-          link:'',
-          complete: false},
-        status:'wrong',
-        reviewlink:''
-    },
-    {
-        cardtitle:'Ensure custom controls are keyboard accessible for decision tree component',
-        incident:'n/a',
-        severity:'n/a',
-        govstory: 
-          {title:'',
-          link:'https://itswebny.atlassian.net/browse/GOV-314',
-          complete: false},
-        projectstory: 
-          {title:'DMV-91',
-          link:'https://itswebny.atlassian.net/browse/DMV-91',
-          complete: false},
-        corestory: 
-          {title:'',
-          link:'',
-          complete: false},
-        status:'wrong',
-        reviewlink:''
     }
+ 
     ]
 })}}
 
@@ -280,14 +248,7 @@ title: DMV Accessibility Remediations Dashboard
             complete: false},
           status:'ready',
           reviewlink:'http://nydmvd8dev.prod.acquia-sites.com/younger-driver/graduated-license-law-and-restrictions-drivers-under-18'
-      }
-  ]
-})}}
-
-
-  {{ statuscard({ 
-      heading:'Work still in progress',
-      cards: [
+      },
       {
         cardtitle:'Alerts: use proper heading h2 to indicate importance of main alert text ',
         incident:'1899058972',
@@ -299,14 +260,79 @@ title: DMV Accessibility Remediations Dashboard
         projectstory: 
           {title:'DMV-164',
           link:'https://itswebny.atlassian.net/browse/DMV-164',
-          complete: false},
+          complete: true},
         corestory: 
-          {title:'',
-          link:'https://itswebny.atlassian.net/browse/CORE-753',
+          {title:'CORE-761',
+          link:'https://itswebny.atlassian.net/browse/CORE-761',
           complete: false},
-        status:false,
+        status:'ready',
         reviewlink:'http://nydmvd8dev.prod.acquia-sites.com/'
     },
+    {
+          cardtitle:'Call and Response - Ensure Aria roles, states and properties are valid',
+          incident:'1899017650',
+          severity:'5',
+          govstory: 
+            {title:'GOV-310',
+            link:'https://itswebny.atlassian.net/browse/GOV-310',
+            complete: true},
+          projectstory: 
+            {title:'DMV-125',
+            link:'https://itswebny.atlassian.net/browse/DMV-125',
+            complete: true},
+          corestory: 
+            {title:'CORE-708',
+            link:'https://itswebny.atlassian.net/browse/CORE-708',
+            complete: false},
+          status:'ready',
+          reviewlink:'https://nydmvd8dev.prod.acquia-sites.com/accordion-front-end-test-landing-page-3'
+      },
+      {
+          cardtitle:'Document download link should be an h3 and combine links for a more well formed element',
+          incident:'',
+          severity:'',
+          govstory: 
+            {title:'GOV-325',
+            link:'https://itswebny.atlassian.net/browse/GOV-325',
+            complete: true},
+          projectstory: 
+            {title:'DMV-184',
+            link:'https://itswebny.atlassian.net/browse/DMV-184',
+            complete: true},
+          corestory: 
+            {title:'CORE-769',
+            link:'https://itswebny.atlassian.net/browse/CORE-769',
+            complete: false},
+          status:'ready',
+          reviewlink:'https://nydmvd8dev.prod.acquia-sites.com/news/new-york-state-warns-new-yorkers-risk-heatstroke'
+      },
+      {
+          cardtitle:'Contact Frame: titles need to be headings and fieldset',
+          incident:'',
+          severity:'6, 3',
+          govstory: 
+            {title:'GOV-329',
+            link:'https://itswebny.atlassian.net/browse/GOV-329',
+            complete: true},
+          projectstory: 
+            {title:'DMV-185',
+            link:'https://itswebny.atlassian.net/browse/DMV-185',
+            complete: true},
+          corestory: 
+            {title:'CORE-769',
+            link:'https://itswebny.atlassian.net/browse/CORE-769',
+            complete: false},
+          status:'ready',
+          reviewlink:'https://nydmvd8dev.prod.acquia-sites.com/news/new-york-state-warns-new-yorkers-risk-heatstroke'
+      }
+       
+  ]
+})}}
+
+
+  {{ statuscard({ 
+      heading:'Work still in progress',
+      cards: [
       {
           cardtitle:'Popular Services: "cards" are not in a list and lose grouped meaning for non-sighted users',
           incident:'1899017190',
@@ -327,23 +353,23 @@ title: DMV Accessibility Remediations Dashboard
           reviewlink:''
       },
       {
-          cardtitle:'Call and Response - Ensure Aria roles, states and properties are valid',
-          incident:'1899017650',
-          severity:'5',
+          cardtitle:'Cards: card image link does not have meaningful text in relation to the image and title heading remediation',
+          incident:'1899017077, 1899017078',
+          severity:'6, 3',
           govstory: 
-            {title:'GOV-310',
-            link:'https://itswebny.atlassian.net/browse/GOV-310',
+            {title:'GOV-315',
+            link:'https://itswebny.atlassian.net/browse/GOV-315',
             complete: true},
           projectstory: 
-            {title:'DMV-125',
-            link:'https://itswebny.atlassian.net/browse/DMV-125',
+            {title:'DMV-190',
+            link:'https://itswebny.atlassian.net/browse/DMV-190',
             complete: false},
           corestory: 
-            {title:'CORE-708',
-            link:'https://itswebny.atlassian.net/browse/CORE-708',
+            {title:'',
+            link:'https://itswebny.atlassian.net/browse/CORE-769',
             complete: false},
           status:false,
-          reviewlink:''
+          reviewlink:'https://nydmvd8dev.prod.acquia-sites.com/news/new-york-state-warns-new-yorkers-risk-heatstroke'
       },
       {
           cardtitle:'Alerts - Provide Alternate Text For Images',
@@ -363,7 +389,45 @@ title: DMV Accessibility Remediations Dashboard
             complete: false},
           status:false,
           reviewlink:''
-      }
+      },
+      {
+        cardtitle:'Ensure custom controls are keyboard accessible for decision tree component',
+        incident:'n/a',
+        severity:'n/a',
+        govstory: 
+          {title:'',
+          link:'https://itswebny.atlassian.net/browse/GOV-314',
+          complete: false},
+        projectstory: 
+          {title:'DMV-91',
+          link:'https://itswebny.atlassian.net/browse/DMV-91',
+          complete: false},
+        corestory: 
+          {title:'',
+          link:'',
+          complete: false},
+        status:false,
+        reviewlink:''
+    },
+    {
+        cardtitle:'Navigator: Active section anchor link needs aria-current=true and clicking a section link should change focus in the page ',
+        incident:'1898206902, 1899053688, 1898206903, 1899053995, 1899053993, 1899053994',
+        severity:'8, 7',
+        govstory: 
+          {title:'GOV-323',
+          link:'https://itswebny.atlassian.net/browse/GOV-323',
+          complete: true},
+        projectstory: 
+          {title:'DMV-195',
+          link:'https://itswebny.atlassian.net/browse/DMV-195',
+          complete: false},
+        corestory: 
+          {title:'',
+          link:'',
+          complete: false},
+        status:false,
+        reviewlink:''
+    }
       ]
   })}}
 

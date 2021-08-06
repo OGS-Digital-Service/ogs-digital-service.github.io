@@ -2,7 +2,7 @@
 layout: layout.njk
 title: Accessibility Remediations
 ---
-{% from '../_includes/_components.njk' import categorytiles  %}
+{% from '../_includes/_components.njk' import categorytiles, breadcrumbs  %}
 
 # {{title}}
 
@@ -11,7 +11,7 @@ title: Accessibility Remediations
      items: [
     {
       text: "NYS DMV",
-      link: "/dmv-accessibility"
+      link: "/accessibility-remediations-dashboard/dmv-accessibility"
     },
     {
       text: "ACSF Drupal Cards",

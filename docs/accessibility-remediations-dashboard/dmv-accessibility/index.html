@@ -23,7 +23,10 @@
       main ol.list {
         list-style-type:numeral;
       }
-      
+      main ul {
+        list-style-type:disc;
+        margin-left: 1.5rem;
+      }
       main h1 {
           font-size: 2.5em;
           font-weight: 700;
@@ -100,8 +103,14 @@
 
     <main class="mx-8 md:mx-20">
     <h1>DMV Accessibility Remediations Dashboard</h1>
+<h2>Tickets and Status</h2>
+<ul>
+<li><a href="#needs-discussion"> Needs Discussion </a></li>
+<li><a href="#complete-and-ready-to-rescan"> Complete and Ready to Rescan </a></li>
+<li><a href="#work-still-in-progress"> Work Still in Progress</a></li>
+</ul>
 <section> 
-<h1 class="text-2xl text-center my-4">Needs Vendor Review</h1>
+<h1 class="text-2xl text-center my-4 bg-gray-200 -mx-20" id="needs-discussion">Needs Discussion</h1>
 <div class="grid grid-cols-1 md:grid-cols-3">
 <article class="border-4 border-yellow-600 rounded-xl m-3 px-4 p-2">
 <h2 class="text-base bg-gray-100 border border-black rounded p-1 text-center">Tables: remove aria-label from sortable headers and move header text into an a element inside th </h2>
@@ -132,37 +141,10 @@
 </section>
  <p class="pt-4"> This story requires discussion because either the current state is valid or the provided remediation is in question.</p>
 </article>
-<article class="border-4 border-yellow-600 rounded-xl m-3 px-4 p-2">
-<h2 class="text-base bg-gray-100 border border-black rounded p-1 text-center">Card links provided with h1 incorrectly </h2>
-<ul>
-<li class="my-2"><strong>Instance ID: </strong>1899017077 </li>
-<li class="my-2"><strong>Severity Level: </strong>3 </li>
-</ul>
-<section>
-<h3 class="text-base font-bold">Stories: </h3>
-<div class="flex flex-col justify-center">
-</div>
-</section>
- <p class="pt-4"> This story requires discussion because either the current state is valid or the provided remediation is in question.</p>
-</article>
-<article class="border-4 border-yellow-600 rounded-xl m-3 px-4 p-2">
-<h2 class="text-base bg-gray-100 border border-black rounded p-1 text-center">Ensure custom controls are keyboard accessible for decision tree component </h2>
-<ul>
-<li class="my-2"><strong>Instance ID: </strong>n/a </li>
-<li class="my-2"><strong>Severity Level: </strong>n/a </li>
-</ul>
-<section>
-<h3 class="text-base font-bold">Stories: </h3>
-<div class="flex flex-col justify-center">
-<p class="flex p-2 border border-dashed border-gray-500 rounded-xl mx-2 justify-center"><a href="https://itswebny.atlassian.net/browse/DMV-91">DMV JIRA Story: DMV-91</a> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="red" class="bi bi-x-square-fill mx-2 noscaleicon" viewBox="0 0 16 16"><path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z"/></svg></p>
-</div>
-</section>
- <p class="pt-4"> This story requires discussion because either the current state is valid or the provided remediation is in question.</p>
-</article>
 </div>
 </section>
 <section> 
-<h1 class="text-2xl text-center my-4">Complete and Ready to Rescan</h1>
+<h1 class="text-2xl text-center my-4 bg-gray-200 -mx-20" id="complete-and-ready-to-rescan">Complete and Ready to Rescan</h1>
 <div class="grid grid-cols-1 md:grid-cols-3">
 <article class="border-4  border-green-600  rounded-xl m-3 px-4 p-2">
 <h2 class="text-base bg-gray-100 border border-black rounded p-1 text-center">Sticky Header: add aria-label to TOP link </h2>
@@ -320,12 +302,7 @@
 </section>
  <p class="pt-4">This task is <strong> complete and ready for rescan </strong> at the <a href="http://nydmvd8dev.prod.acquia-sites.com/younger-driver/graduated-license-law-and-restrictions-drivers-under-18" aria-label="The development environment for reviewing the issue labeled Bio Frame: additional links need to be in a list"> Testing Environment </a></p>
 </article>
-</div>
-</section>
-  <section> 
-<h1 class="text-2xl text-center my-4">Work still in progress</h1>
-<div class="grid grid-cols-1 md:grid-cols-3">
-<article class="border-4 border-yellow-600 rounded-xl m-3 px-4 p-2">
+<article class="border-4  border-green-600  rounded-xl m-3 px-4 p-2">
 <h2 class="text-base bg-gray-100 border border-black rounded p-1 text-center">Alerts: use proper heading h2 to indicate importance of main alert text  </h2>
 <ul>
 <li class="my-2"><strong>Instance ID: </strong>1899058972 </li>
@@ -335,11 +312,65 @@
 <h3 class="text-base font-bold">Stories: </h3>
 <div class="flex flex-col justify-center">
 <p class="flex p-2 border border-dashed border-gray-500 rounded-xl mx-2 justify-center"><a href="https://itswebny.atlassian.net/browse/GOV-326">Governance JIRA Story: GOV-326</a> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="green" class="bi bi-check-square-fill mx-2 noscaleicon" viewBox="0 0 16 16"><path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm10.03 4.97a.75.75 0 0 1 .011 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.75.75 0 0 1 1.08-.022z"/> </svg></p>
-<p class="flex p-2 border border-dashed border-gray-500 rounded-xl mx-2 justify-center"><a href="https://itswebny.atlassian.net/browse/DMV-164">DMV JIRA Story: DMV-164</a> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="red" class="bi bi-x-square-fill mx-2 noscaleicon" viewBox="0 0 16 16"><path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z"/></svg></p>
+<p class="flex p-2 border border-dashed border-gray-500 rounded-xl mx-2 justify-center"><a href="https://itswebny.atlassian.net/browse/DMV-164">DMV JIRA Story: DMV-164</a> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="green" class="bi bi-check-square-fill mx-2 noscaleicon" viewBox="0 0 16 16"><path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm10.03 4.97a.75.75 0 0 1 .011 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.75.75 0 0 1 1.08-.022z"/> </svg></p>
+<p class="flex p-2 border border-dashed border-gray-500 rounded-xl mx-2 justify-center"><a href="https://itswebny.atlassian.net/browse/CORE-761">CORE JIRA Story: CORE-761</a> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="red" class="bi bi-x-square-fill mx-2 noscaleicon" viewBox="0 0 16 16"><path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z"/></svg></p>
 </div>
 </section>
- <p class="pt-4 mb-4">This task is not complete and requires more work or is in QA/UAT </p>
+ <p class="pt-4">This task is <strong> complete and ready for rescan </strong> at the <a href="http://nydmvd8dev.prod.acquia-sites.com/" aria-label="The development environment for reviewing the issue labeled Alerts: use proper heading h2 to indicate importance of main alert text "> Testing Environment </a></p>
 </article>
+<article class="border-4  border-green-600  rounded-xl m-3 px-4 p-2">
+<h2 class="text-base bg-gray-100 border border-black rounded p-1 text-center">Call and Response - Ensure Aria roles, states and properties are valid </h2>
+<ul>
+<li class="my-2"><strong>Instance ID: </strong>1899017650 </li>
+<li class="my-2"><strong>Severity Level: </strong>5 </li>
+</ul>
+<section>
+<h3 class="text-base font-bold">Stories: </h3>
+<div class="flex flex-col justify-center">
+<p class="flex p-2 border border-dashed border-gray-500 rounded-xl mx-2 justify-center"><a href="https://itswebny.atlassian.net/browse/GOV-310">Governance JIRA Story: GOV-310</a> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="green" class="bi bi-check-square-fill mx-2 noscaleicon" viewBox="0 0 16 16"><path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm10.03 4.97a.75.75 0 0 1 .011 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.75.75 0 0 1 1.08-.022z"/> </svg></p>
+<p class="flex p-2 border border-dashed border-gray-500 rounded-xl mx-2 justify-center"><a href="https://itswebny.atlassian.net/browse/DMV-125">DMV JIRA Story: DMV-125</a> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="green" class="bi bi-check-square-fill mx-2 noscaleicon" viewBox="0 0 16 16"><path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm10.03 4.97a.75.75 0 0 1 .011 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.75.75 0 0 1 1.08-.022z"/> </svg></p>
+<p class="flex p-2 border border-dashed border-gray-500 rounded-xl mx-2 justify-center"><a href="https://itswebny.atlassian.net/browse/CORE-708">CORE JIRA Story: CORE-708</a> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="red" class="bi bi-x-square-fill mx-2 noscaleicon" viewBox="0 0 16 16"><path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z"/></svg></p>
+</div>
+</section>
+ <p class="pt-4">This task is <strong> complete and ready for rescan </strong> at the <a href="https://nydmvd8dev.prod.acquia-sites.com/accordion-front-end-test-landing-page-3" aria-label="The development environment for reviewing the issue labeled Call and Response - Ensure Aria roles, states and properties are valid"> Testing Environment </a></p>
+</article>
+<article class="border-4  border-green-600  rounded-xl m-3 px-4 p-2">
+<h2 class="text-base bg-gray-100 border border-black rounded p-1 text-center">Document download link should be an h3 and combine links for a more well formed element </h2>
+<ul>
+<li class="my-2"><strong>Instance ID: </strong> </li>
+<li class="my-2"><strong>Severity Level: </strong> </li>
+</ul>
+<section>
+<h3 class="text-base font-bold">Stories: </h3>
+<div class="flex flex-col justify-center">
+<p class="flex p-2 border border-dashed border-gray-500 rounded-xl mx-2 justify-center"><a href="https://itswebny.atlassian.net/browse/GOV-325">Governance JIRA Story: GOV-325</a> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="green" class="bi bi-check-square-fill mx-2 noscaleicon" viewBox="0 0 16 16"><path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm10.03 4.97a.75.75 0 0 1 .011 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.75.75 0 0 1 1.08-.022z"/> </svg></p>
+<p class="flex p-2 border border-dashed border-gray-500 rounded-xl mx-2 justify-center"><a href="https://itswebny.atlassian.net/browse/DMV-184">DMV JIRA Story: DMV-184</a> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="green" class="bi bi-check-square-fill mx-2 noscaleicon" viewBox="0 0 16 16"><path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm10.03 4.97a.75.75 0 0 1 .011 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.75.75 0 0 1 1.08-.022z"/> </svg></p>
+<p class="flex p-2 border border-dashed border-gray-500 rounded-xl mx-2 justify-center"><a href="https://itswebny.atlassian.net/browse/CORE-769">CORE JIRA Story: CORE-769</a> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="red" class="bi bi-x-square-fill mx-2 noscaleicon" viewBox="0 0 16 16"><path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z"/></svg></p>
+</div>
+</section>
+ <p class="pt-4">This task is <strong> complete and ready for rescan </strong> at the <a href="https://nydmvd8dev.prod.acquia-sites.com/news/new-york-state-warns-new-yorkers-risk-heatstroke" aria-label="The development environment for reviewing the issue labeled Document download link should be an h3 and combine links for a more well formed element"> Testing Environment </a></p>
+</article>
+<article class="border-4  border-green-600  rounded-xl m-3 px-4 p-2">
+<h2 class="text-base bg-gray-100 border border-black rounded p-1 text-center">Contact Frame: titles need to be headings and fieldset </h2>
+<ul>
+<li class="my-2"><strong>Instance ID: </strong> </li>
+<li class="my-2"><strong>Severity Level: </strong>6, 3 </li>
+</ul>
+<section>
+<h3 class="text-base font-bold">Stories: </h3>
+<div class="flex flex-col justify-center">
+<p class="flex p-2 border border-dashed border-gray-500 rounded-xl mx-2 justify-center"><a href="https://itswebny.atlassian.net/browse/GOV-329">Governance JIRA Story: GOV-329</a> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="green" class="bi bi-check-square-fill mx-2 noscaleicon" viewBox="0 0 16 16"><path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm10.03 4.97a.75.75 0 0 1 .011 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.75.75 0 0 1 1.08-.022z"/> </svg></p>
+<p class="flex p-2 border border-dashed border-gray-500 rounded-xl mx-2 justify-center"><a href="https://itswebny.atlassian.net/browse/DMV-185">DMV JIRA Story: DMV-185</a> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="green" class="bi bi-check-square-fill mx-2 noscaleicon" viewBox="0 0 16 16"><path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm10.03 4.97a.75.75 0 0 1 .011 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.75.75 0 0 1 1.08-.022z"/> </svg></p>
+<p class="flex p-2 border border-dashed border-gray-500 rounded-xl mx-2 justify-center"><a href="https://itswebny.atlassian.net/browse/CORE-769">CORE JIRA Story: CORE-769</a> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="red" class="bi bi-x-square-fill mx-2 noscaleicon" viewBox="0 0 16 16"><path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z"/></svg></p>
+</div>
+</section>
+ <p class="pt-4">This task is <strong> complete and ready for rescan </strong> at the <a href="https://nydmvd8dev.prod.acquia-sites.com/news/new-york-state-warns-new-yorkers-risk-heatstroke" aria-label="The development environment for reviewing the issue labeled Contact Frame: titles need to be headings and fieldset"> Testing Environment </a></p>
+</article>
+</div>
+</section>
+  <section> 
+<h1 class="text-2xl text-center my-4 bg-gray-200 -mx-20" id="work-still-in-progress">Work still in progress</h1>
+<div class="grid grid-cols-1 md:grid-cols-3">
 <article class="border-4 border-yellow-600 rounded-xl m-3 px-4 p-2">
 <h2 class="text-base bg-gray-100 border border-black rounded p-1 text-center">Popular Services: &quot;cards&quot; are not in a list and lose grouped meaning for non-sighted users </h2>
 <ul>
@@ -356,17 +387,16 @@
  <p class="pt-4 mb-4">This task is not complete and requires more work or is in QA/UAT </p>
 </article>
 <article class="border-4 border-yellow-600 rounded-xl m-3 px-4 p-2">
-<h2 class="text-base bg-gray-100 border border-black rounded p-1 text-center">Call and Response - Ensure Aria roles, states and properties are valid </h2>
+<h2 class="text-base bg-gray-100 border border-black rounded p-1 text-center">Cards: card image link does not have meaningful text in relation to the image and title heading remediation </h2>
 <ul>
-<li class="my-2"><strong>Instance ID: </strong>1899017650 </li>
-<li class="my-2"><strong>Severity Level: </strong>5 </li>
+<li class="my-2"><strong>Instance ID: </strong>1899017077, 1899017078 </li>
+<li class="my-2"><strong>Severity Level: </strong>6, 3 </li>
 </ul>
 <section>
 <h3 class="text-base font-bold">Stories: </h3>
 <div class="flex flex-col justify-center">
-<p class="flex p-2 border border-dashed border-gray-500 rounded-xl mx-2 justify-center"><a href="https://itswebny.atlassian.net/browse/GOV-310">Governance JIRA Story: GOV-310</a> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="green" class="bi bi-check-square-fill mx-2 noscaleicon" viewBox="0 0 16 16"><path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm10.03 4.97a.75.75 0 0 1 .011 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.75.75 0 0 1 1.08-.022z"/> </svg></p>
-<p class="flex p-2 border border-dashed border-gray-500 rounded-xl mx-2 justify-center"><a href="https://itswebny.atlassian.net/browse/DMV-125">DMV JIRA Story: DMV-125</a> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="red" class="bi bi-x-square-fill mx-2 noscaleicon" viewBox="0 0 16 16"><path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z"/></svg></p>
-<p class="flex p-2 border border-dashed border-gray-500 rounded-xl mx-2 justify-center"><a href="https://itswebny.atlassian.net/browse/CORE-708">CORE JIRA Story: CORE-708</a> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="red" class="bi bi-x-square-fill mx-2 noscaleicon" viewBox="0 0 16 16"><path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z"/></svg></p>
+<p class="flex p-2 border border-dashed border-gray-500 rounded-xl mx-2 justify-center"><a href="https://itswebny.atlassian.net/browse/GOV-315">Governance JIRA Story: GOV-315</a> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="green" class="bi bi-check-square-fill mx-2 noscaleicon" viewBox="0 0 16 16"><path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm10.03 4.97a.75.75 0 0 1 .011 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.75.75 0 0 1 1.08-.022z"/> </svg></p>
+<p class="flex p-2 border border-dashed border-gray-500 rounded-xl mx-2 justify-center"><a href="https://itswebny.atlassian.net/browse/DMV-190">DMV JIRA Story: DMV-190</a> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="red" class="bi bi-x-square-fill mx-2 noscaleicon" viewBox="0 0 16 16"><path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z"/></svg></p>
 </div>
 </section>
  <p class="pt-4 mb-4">This task is not complete and requires more work or is in QA/UAT </p>
@@ -383,6 +413,35 @@
 <p class="flex p-2 border border-dashed border-gray-500 rounded-xl mx-2 justify-center"><a href="https://itswebny.atlassian.net/browse/GOV-336">Governance JIRA Story: GOV-336</a> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="green" class="bi bi-check-square-fill mx-2 noscaleicon" viewBox="0 0 16 16"><path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm10.03 4.97a.75.75 0 0 1 .011 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.75.75 0 0 1 1.08-.022z"/> </svg></p>
 <p class="flex p-2 border border-dashed border-gray-500 rounded-xl mx-2 justify-center"><a href="https://itswebny.atlassian.net/browse/DMV-124">DMV JIRA Story: DMV-124</a> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="red" class="bi bi-x-square-fill mx-2 noscaleicon" viewBox="0 0 16 16"><path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z"/></svg></p>
 <p class="flex p-2 border border-dashed border-gray-500 rounded-xl mx-2 justify-center"><a href="https://itswebny.atlassian.net/browse/CORE-709">CORE JIRA Story: CORE-709</a> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="red" class="bi bi-x-square-fill mx-2 noscaleicon" viewBox="0 0 16 16"><path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z"/></svg></p>
+</div>
+</section>
+ <p class="pt-4 mb-4">This task is not complete and requires more work or is in QA/UAT </p>
+</article>
+<article class="border-4 border-yellow-600 rounded-xl m-3 px-4 p-2">
+<h2 class="text-base bg-gray-100 border border-black rounded p-1 text-center">Ensure custom controls are keyboard accessible for decision tree component </h2>
+<ul>
+<li class="my-2"><strong>Instance ID: </strong>n/a </li>
+<li class="my-2"><strong>Severity Level: </strong>n/a </li>
+</ul>
+<section>
+<h3 class="text-base font-bold">Stories: </h3>
+<div class="flex flex-col justify-center">
+<p class="flex p-2 border border-dashed border-gray-500 rounded-xl mx-2 justify-center"><a href="https://itswebny.atlassian.net/browse/DMV-91">DMV JIRA Story: DMV-91</a> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="red" class="bi bi-x-square-fill mx-2 noscaleicon" viewBox="0 0 16 16"><path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z"/></svg></p>
+</div>
+</section>
+ <p class="pt-4 mb-4">This task is not complete and requires more work or is in QA/UAT </p>
+</article>
+<article class="border-4 border-yellow-600 rounded-xl m-3 px-4 p-2">
+<h2 class="text-base bg-gray-100 border border-black rounded p-1 text-center">Navigator: Active section anchor link needs aria-current=true and clicking a section link should change focus in the page  </h2>
+<ul>
+<li class="my-2"><strong>Instance ID: </strong>1898206902, 1899053688, 1898206903, 1899053995, 1899053993, 1899053994 </li>
+<li class="my-2"><strong>Severity Level: </strong>8, 7 </li>
+</ul>
+<section>
+<h3 class="text-base font-bold">Stories: </h3>
+<div class="flex flex-col justify-center">
+<p class="flex p-2 border border-dashed border-gray-500 rounded-xl mx-2 justify-center"><a href="https://itswebny.atlassian.net/browse/GOV-323">Governance JIRA Story: GOV-323</a> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="green" class="bi bi-check-square-fill mx-2 noscaleicon" viewBox="0 0 16 16"><path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm10.03 4.97a.75.75 0 0 1 .011 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.75.75 0 0 1 1.08-.022z"/> </svg></p>
+<p class="flex p-2 border border-dashed border-gray-500 rounded-xl mx-2 justify-center"><a href="https://itswebny.atlassian.net/browse/DMV-195">DMV JIRA Story: DMV-195</a> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="red" class="bi bi-x-square-fill mx-2 noscaleicon" viewBox="0 0 16 16"><path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z"/></svg></p>
 </div>
 </section>
  <p class="pt-4 mb-4">This task is not complete and requires more work or is in QA/UAT </p>
