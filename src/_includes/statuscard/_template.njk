@@ -2,7 +2,7 @@
 <h1 class="text-2xl text-center my-4 border-b-2 border-black py-4" id="{{params.heading | slug}}">{{params.heading}}</h1>
 <div class="grid grid-cols-1 md:grid-cols-3">
 {% for card in params.cards %}
-<article class="border-4 {% if card.status == 'ready' %} border-green-600 {% elif card.status == 'in review' %} border-blue-600
+<article class="border-4 {% if card.status == 'ready' %} border-green-600 {% elif card.status == 'in review' %} border-purple-600
 {%else%}border-yellow-600{%endif%} rounded-xl m-3 px-4 p-2">
 <h2 class="text-base bg-gray-100 border border-black rounded p-1 text-center">{{card.cardtitle}} </h2>
 <ul>
@@ -35,9 +35,9 @@
 {%endif%}
 </div>
 </section>
-{% if card.status == 'ready' %} <p class="pt-4">This task is <strong> complete and ready for rescan </strong> at the <a href="{{card.reviewlink}}" aria-label="The development environment for reviewing the issue labeled {{card.cardtitle}}"> Testing Environment </a></p>
+{% if card.status == 'ready' %} <p class="pt-4">This task is <strong> complete and ready for rescan </strong> at <a href="{{card.reviewlink}}" aria-label="The development environment for reviewing the issue labeled {{card.cardtitle}}"> {{card.reviewlink}} </a></p>
 {%elif card.status == 'wrong'%} <p class="pt-4"> This story requires discussion because either the current state is valid or the provided remediation is in question.</p>
-{%elif card.status == 'in review'%} <p class="pt-4"> This story is <strong>under review </strong> and rescan at the <a href="{{card.reviewlink}}" aria-label="The development environment for reviewing the issue labeled {{card.cardtitle}}"> Testing Environment </a></p>
+{%elif card.status == 'in review'%} <p class="pt-4"> This story is <strong>under review </strong> and rescan at the <a href="{{card.reviewlink}}" aria-label="The development environment for reviewing the issue labeled {{card.cardtitle}}"> {{card.reviewlink}} </a></p>
 {%else%} <p class="pt-4 mb-4">This task is not complete and requires more work or is in QA/UAT </p>{%endif%}
 
 
