@@ -65,9 +65,6 @@
           position: relative;
           vertical-align: middle;
           min-width: 30vw;
-          
-       
-
       }
       </style>
    
@@ -100,7 +97,71 @@
 
 
     <main class="mx-8 md:mx-20">
-    <div class="bg-admin-third -mx-8 md:-mx-20 md:h-96 pb-12">
+    <script>
+function filter(e){
+    search = e.value.toLowerCase();
+    document.querySelectorAll('.filter-card').forEach(function(row){
+        text = row.getAttribute("data-meta").toLowerCase();
+        if(text.match(search)){
+            row.classList.remove("hidden");
+        } else {
+            row.classList.add("hidden");
+        }
+    });
+    filterCount = document.querySelectorAll('.filter-card:not(.hidden)').length;
+    var word = (filterCount === 1) ? "filter" : "filters";
+    document.getElementById("filter-count").innerHTML = `<strong>${filterCount}</strong> ${word} results`
+}
+</script>
+<div role="region" aria-label="Component search" aria-atomic="true" class="">
+    <label for="nysds-filter">Type to filter by keyword</label>
+    <input class="border-2 border-black" id="nysds-filter" class="" type="text" onkeyup="filter(this)"/>
+    <p class="" aria-live="polite"><span id="filter-count"><strong></strong> results</span></p>
+  </div>
+<h2>Simple JS data filter</h2>
+<ul class="list-none">
+<li class="filter-card" role="region" aria-atomic="true" aria-label="nothing" data-meta="nothing">
+    <div class="border-2 rounded border-black">
+      <header class="">
+        <h3 class=""><a href="/">nothing</a></h3>
+      </header>
+      <div class="">
+        <p>nothing</p>
+        </div>
+    </div>
+  </li>
+<li class="filter-card" role="region" aria-atomic="true" aria-label="whatever" data-meta="whatever">
+    <div class="border-2 rounded border-black">
+      <header class="">
+        <h3 class=""><a href="/">whatever</a></h3>
+      </header>
+      <div class="">
+        <p>whatever</p>
+        </div>
+    </div>
+  </li>
+<li class="filter-card" role="region" aria-atomic="true" aria-label="something" data-meta="something">
+    <div class="border-2 rounded border-black">
+      <header class="">
+        <h3 class=""><a href="/">something</a></h3>
+      </header>
+      <div class="">
+        <p>something</p>
+        </div>
+    </div>
+  </li>
+<li class="filter-card" role="region" aria-atomic="true" aria-label="nothing" data-meta="nothing">
+    <div class="border-2 rounded border-black">
+      <header class="">
+        <h3 class=""><a href="/">nothing</a></h3>
+      </header>
+      <div class="">
+        <p>nothing</p>
+        </div>
+    </div>
+  </li>
+</ul>
+<div class="bg-admin-third -mx-8 md:-mx-20 md:h-96 pb-12">
 <div class="lg:w-5/6 w-full">
 <h1 class="text-3xl md:text-4xl lg:text-5xl  font-extrabold text-black md:ml-12 p-8 lg:leading-normal md:leading-normal">Demo Content Page for Testing Only </h1>
 <p class="text-black ml-8 md:ml-20 md:text-lg"> Empire State Plaza Art Collection-Inspired Artwork by Capital Region School District Students.</p>

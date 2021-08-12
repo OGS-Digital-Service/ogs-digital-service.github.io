@@ -1,0 +1,21 @@
+<div role="region" aria-label="Component search" aria-atomic="true" class="">
+    <label for="nysds-filter">Type to filter by keyword</label>
+    <input class="border-2 border-black" id="nysds-filter" class="" type="text" onkeyup="filter(this)"/>
+    <p class="" aria-live="polite"><span id="filter-count"><strong>{{filters.size }}</strong> results</span></p>
+  </div>
+<h2>{{params.heading}}</h2>
+<ul class="list-none">
+{%for filtercard in params.filtercards%}
+<li class="filter-card" role="region" aria-atomic="true" aria-label="{{filtercard.datameta}}" data-meta="{{filtercard.datameta}}">
+    <div class="border-2 rounded border-black">
+      <header class="">
+        <h3 class=""><a href="{{filtercard.link}}">{{filtercard.datameta}}</a></h3>
+      </header>
+      <div class="">
+        <p>{{filtercard.text}}</p>
+        </div>
+    </div>
+  </li>
+
+  {%endfor%}
+</ul>

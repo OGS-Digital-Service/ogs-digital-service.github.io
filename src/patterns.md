@@ -2,8 +2,53 @@
 layout: layout.njk
 title: The NYS Design Patterns
 ---
-{% from './_includes/_components.njk' import breadcrumbs,button,buttonhero,card,hero,heroold,categorytiles,iconframe,iconframesix %} 
+{% from './_includes/_components.njk' import breadcrumbs,button,buttonhero,card,hero,heroold,categorytiles,iconframe,iconframesix,filtercard %} 
 
+<script>
+function filter(e){
+    search = e.value.toLowerCase();
+    document.querySelectorAll('.filter-card').forEach(function(row){
+        text = row.getAttribute("data-meta").toLowerCase();
+        if(text.match(search)){
+            row.classList.remove("hidden");
+        } else {
+            row.classList.add("hidden");
+        }
+    });
+    filterCount = document.querySelectorAll('.filter-card:not(.hidden)').length;
+    var word = (filterCount === 1) ? "filter" : "filters";
+    document.getElementById("filter-count").innerHTML = `<strong>${filterCount}</strong> ${word} results`
+}
+</script>
+
+ 
+{{ filtercard({ 
+    heading:"Simple JS data filter",
+    filtercards: [
+    {
+      text: "nothing",
+      link: "/",
+      datameta:"nothing"
+    },
+    {
+      text: "whatever",
+      link: "/",
+      datameta:"whatever"
+    },
+    {
+      text: "something",
+      link: "/",
+      datameta:"something"
+    },
+    {
+      text: "nothing",
+      link: "/",
+      datameta:"nothing"
+    }
+  
+  ]
+})}}
+  
 
 {{ heroold({ 
     title: "Demo Content Page for Testing Only",
