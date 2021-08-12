@@ -4,52 +4,6 @@ title: The NYS Design Patterns
 ---
 {% from './_includes/_components.njk' import breadcrumbs,button,buttonhero,card,hero,heroold,categorytiles,iconframe,iconframesix,filtercard %} 
 
-<script>
-function filter(e){
-    search = e.value.toLowerCase();
-    document.querySelectorAll('.filter-card').forEach(function(row){
-        text = row.getAttribute("data-meta").toLowerCase();
-        if(text.match(search)){
-            row.classList.remove("hidden");
-        } else {
-            row.classList.add("hidden");
-        }
-    });
-    filterCount = document.querySelectorAll('.filter-card:not(.hidden)').length;
-    var word = (filterCount === 1) ? "filter" : "filters";
-    document.getElementById("filter-count").innerHTML = `<strong>${filterCount}</strong> ${word} results`
-}
-</script>
-
- 
-{{ filtercard({ 
-    heading:"Simple JS data filter",
-    filtercards: [
-    {
-      text: "nothing",
-      link: "/",
-      datameta:"nothing"
-    },
-    {
-      text: "whatever",
-      link: "/",
-      datameta:"whatever"
-    },
-    {
-      text: "something",
-      link: "/",
-      datameta:"something"
-    },
-    {
-      text: "nothing",
-      link: "/",
-      datameta:"nothing"
-    }
-  
-  ]
-})}}
-  
-
 {{ heroold({ 
     title: "Demo Content Page for Testing Only",
     subtitle: "Empire State Plaza Art Collection-Inspired Artwork by Capital Region School District Students.",
@@ -62,28 +16,6 @@ function filter(e){
     arialabel2: "Office of General Services"
 })}}
 
-
-{{ categorytiles({ 
-    title:"This is the title of the category tiles",
-     items: [
-    {
-      text: "Green Products List",
-      link: "/green-products"
-    },
-    {
-      text: "footercolumns",
-      link: "/patterns"
-    },
-    {
-      text: "DMV data",
-      link: "/dmv-office-locations"
-    },
-    {
-      text: "Jobs Express Demo",
-      link: "/jobs-express"
-    }
-  ]
-})}}
 
 {{ breadcrumbs({ 
      items: [
@@ -100,60 +32,29 @@ function filter(e){
 
 # In Progress demo page
 
-
-{{ iconframe({ 
-    
-})}}
-
-
-<br>
-<br>
-<br>
-<br>
-
-
-
-{{ iconframesix({ 
-    
-})}}
-
-
-Suspendisse ultrices erat eget lacus molestie, et vestibulum nibh pulvinar. Duis sodales velit eget vehicula egestas. Vestibulum rhoncus, nulla quis fringilla cursus, velit quam interdum nulla, eget vehicula lacus augue sit amet massa. Quisque pellentesque accumsan dolor, quis posuere enim dictum sed. Sed diam quam, ullamcorper vel ultricies eget, placerat sed magna. In dignissim orci sit amet dolor dignissim, a volutpat quam pellentesque.
-
-Donec lacinia pretium semper. Morbi a purus consequat, condimentum est at, hendrerit lacus. Sed iaculis porttitor tellus nec tristique. Donec nec tempor nisi. Maecenas id feugiat ligula. Fusce non pellentesque enim, eget blandit dolor. In hac habitasse platea dictumst. Sed vitae eros est. Quisque faucibus libero vel lorem aliquet mattis. In tristique scelerisque nisl, ut dignissim arcu fermentum sed. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque imperdiet aliquet interdum. Proin sed purus lectus. 
-
-Suspendisse ultrices erat eget lacus molestie, et vestibulum nibh pulvinar. Duis sodales velit eget vehicula egestas. Vestibulum rhoncus, nulla quis fringilla cursus, velit quam interdum nulla, eget vehicula lacus augue sit amet massa. Quisque pellentesque accumsan dolor, quis posuere enim dictum sed. Sed diam quam, ullamcorper vel ultricies eget, placerat sed magna. In dignissim orci sit amet dolor dignissim, a volutpat quam pellentesque.
-
-Donec lacinia pretium semper. Morbi a purus consequat, condimentum est at, hendrerit lacus. Sed iaculis porttitor tellus nec tristique. Donec nec tempor nisi. Maecenas id feugiat ligula. Fusce non pellentesque enim, eget blandit dolor. In hac habitasse platea dictumst. Sed vitae eros est. Quisque faucibus libero vel lorem aliquet mattis. In tristique scelerisque nisl, ut dignissim arcu fermentum sed. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque imperdiet aliquet interdum. Proin sed purus lectus. 
-
-Suspendisse ultrices erat eget lacus molestie, et vestibulum nibh pulvinar. Duis sodales velit eget vehicula egestas. Vestibulum rhoncus, nulla quis fringilla cursus, velit quam interdum nulla, eget vehicula lacus augue sit amet massa. Quisque pellentesque accumsan dolor, quis posuere enim dictum sed. Sed diam quam, ullamcorper vel ultricies eget, placerat sed magna. In dignissim orci sit amet dolor dignissim, a volutpat quam pellentesque.
-
-Donec lacinia pretium semper. Morbi a purus consequat, condimentum est at, hendrerit lacus. Sed iaculis porttitor tellus nec tristique. Donec nec tempor nisi. Maecenas id feugiat ligula. Fusce non pellentesque enim, eget blandit dolor. In hac habitasse platea dictumst. Sed vitae eros est. Quisque faucibus libero vel lorem aliquet mattis. In tristique scelerisque nisl, ut dignissim arcu fermentum sed. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque imperdiet aliquet interdum. Proin sed purus lectus. 
-
-
-{{ categorytiles({ 
-    title:"This is the title of the category tiles",
-     items: [
+{{ filtercard({ 
+    heading:"Simple JS data filter",
+    filtercards: [
     {
-      text: "Green Products List",
-      link: "/green-products"
+      title: "nothing",
+      link: "/",
+      description:"Use to apply for a learner permit, driver license or non-driver ID. Also use to renew your license or non-driver ID."
     },
     {
-      text: "footercolumns",
-      link: "/patterns"
+      title: "whatever",
+      link: "/",
+      description:"whatever"
     },
     {
-      text: "DMV data",
-      link: "/dmv-office-locations"
+      title: "something",
+      link: "/",
+      description:"something"
     },
     {
-      text: "Jobs Express Demo",
-      link: "/jobs-express"
+      title: "nothing",
+      link: "/",
+      description:"nothing"
     }
+  
   ]
 })}}
-
-
-
-
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.1.0/uuidv4.min.js"></script><shadow-demo bot-message-bg-color="#0b5d66" chat-bot-font-color="#FFFFFF" chat-title="Perkins: The EWF Bot" chat-title-color="#0b5d66" chat-user-font-color="#001B3B" id="shadow" url="https://dol-is-dev.endpoints.dol-ewa-ccai-dev.cloud.goog" user-message-bg-color="#bdbdbd"></shadow-demo><script src="https://storage.googleapis.com/nys-dol-dev-chat-widget-bucket/shadow.js?v=1" type="text/javascript"></script> -->

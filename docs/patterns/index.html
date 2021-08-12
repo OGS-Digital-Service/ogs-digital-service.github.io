@@ -97,7 +97,22 @@
 
 
     <main class="mx-8 md:mx-20">
-    <script>
+    <div class="bg-admin-third -mx-8 md:-mx-20 md:h-96 pb-12">
+<div class="lg:w-5/6 w-full">
+<h1 class="text-3xl md:text-4xl lg:text-5xl  font-extrabold text-black md:ml-12 p-8 lg:leading-normal md:leading-normal">Demo Content Page for Testing Only </h1>
+<p class="text-black ml-8 md:ml-20 md:text-lg"> Empire State Plaza Art Collection-Inspired Artwork by Capital Region School District Students.</p>
+</div>
+<div class="flex md:flex-row flex-col mt-6 md:mt-12 lg:mt-12 md:ml-12">
+<a href="https://ogs.ny.gov" class="block text-center p-2.5 md:p-5 mx-8 my-2 md:mx-8 rounded hover:bg-gray-900 no-underline hover:underline text-black hover:text-white uppercase tracking-widest text-sm font-bold border border-solid border-black" aria-label="Office of General Services" style="min-width:300px;"> First Button </a> 
+<p><a href="https://ogs.ny.gov" class="block text-center p-2.5 md:p-5 mx-8 my-2 md:mx-8 rounded hover:bg-gray-900 no-underline hover:underline text-black hover:text-white uppercase tracking-widest text-sm font-bold border border-solid border-black" aria-label="Office of General Services" style="min-width:300px;"> Second Button </a></p>
+</div>
+</div>
+<ol class="flex flex-row flex-wrap mb-6">
+<li class="caret oswald"><a href="/" class="oswald text-sm uppercase hover:underline font-bold ">Home </a></li>
+<li class="caret oswald"><a href="#" class="oswald text-sm uppercase hover:underline font-bold ">How to Start </a></li>
+</ol>
+<h1>In Progress demo page</h1>
+<script>
 function filter(e){
     search = e.value.toLowerCase();
     document.querySelectorAll('.filter-card').forEach(function(row){
@@ -116,21 +131,21 @@ function filter(e){
 <div role="region" aria-label="Component search" aria-atomic="true" class="">
     <label for="nysds-filter">Type to filter by keyword</label>
     <input class="border-2 border-black" id="nysds-filter" class="" type="text" onkeyup="filter(this)"/>
-    <p class="" aria-live="polite"><span id="filter-count"><strong></strong> results</span></p>
+    <p class="" aria-live="polite"><span id="filter-count"></p>
   </div>
 <h2>Simple JS data filter</h2>
 <ul class="list-none">
-<li class="filter-card" role="region" aria-atomic="true" aria-label="nothing" data-meta="nothing">
+<li class="filter-card" role="region" aria-atomic="true" aria-label="nothing" data-meta="nothing Use to apply for a learner permit, driver license or non-driver ID. Also use to renew your license or non-driver ID.">
     <div class="border-2 rounded border-black">
       <header class="">
         <h3 class=""><a href="/">nothing</a></h3>
       </header>
       <div class="">
-        <p>nothing</p>
+        <p>Use to apply for a learner permit, driver license or non-driver ID. Also use to renew your license or non-driver ID.</p>
         </div>
     </div>
   </li>
-<li class="filter-card" role="region" aria-atomic="true" aria-label="whatever" data-meta="whatever">
+<li class="filter-card" role="region" aria-atomic="true" aria-label="whatever" data-meta="whatever whatever">
     <div class="border-2 rounded border-black">
       <header class="">
         <h3 class=""><a href="/">whatever</a></h3>
@@ -140,7 +155,7 @@ function filter(e){
         </div>
     </div>
   </li>
-<li class="filter-card" role="region" aria-atomic="true" aria-label="something" data-meta="something">
+<li class="filter-card" role="region" aria-atomic="true" aria-label="something" data-meta="something something">
     <div class="border-2 rounded border-black">
       <header class="">
         <h3 class=""><a href="/">something</a></h3>
@@ -150,7 +165,7 @@ function filter(e){
         </div>
     </div>
   </li>
-<li class="filter-card" role="region" aria-atomic="true" aria-label="nothing" data-meta="nothing">
+<li class="filter-card" role="region" aria-atomic="true" aria-label="nothing" data-meta="nothing nothing">
     <div class="border-2 rounded border-black">
       <header class="">
         <h3 class=""><a href="/">nothing</a></h3>
@@ -161,119 +176,7 @@ function filter(e){
     </div>
   </li>
 </ul>
-<div class="bg-admin-third -mx-8 md:-mx-20 md:h-96 pb-12">
-<div class="lg:w-5/6 w-full">
-<h1 class="text-3xl md:text-4xl lg:text-5xl  font-extrabold text-black md:ml-12 p-8 lg:leading-normal md:leading-normal">Demo Content Page for Testing Only </h1>
-<p class="text-black ml-8 md:ml-20 md:text-lg"> Empire State Plaza Art Collection-Inspired Artwork by Capital Region School District Students.</p>
-</div>
-<div class="flex md:flex-row flex-col mt-6 md:mt-12 lg:mt-12 md:ml-12">
-<a href="https://ogs.ny.gov" class="block text-center p-2.5 md:p-5 mx-8 my-2 md:mx-8 rounded hover:bg-gray-900 no-underline hover:underline text-black hover:text-white uppercase tracking-widest text-sm font-bold border border-solid border-black" aria-label="Office of General Services" style="min-width:300px;"> First Button </a> 
-<p><a href="https://ogs.ny.gov" class="block text-center p-2.5 md:p-5 mx-8 my-2 md:mx-8 rounded hover:bg-gray-900 no-underline hover:underline text-black hover:text-white uppercase tracking-widest text-sm font-bold border border-solid border-black" aria-label="Office of General Services" style="min-width:300px;"> Second Button </a></p>
-</div>
-</div>
-<div class=" my-6 -mx-8 md:-mx-20 bg-admin-third px-16  py-20">
-    <h2 class="text-2xl font-extrabold text-center">This is the title of the category tiles</h2>
-<ul class="flex flex-row flex-wrap justify-center list-none" >
-<li class="mx-2"><a href="/green-products" class="text-white block text-md rounded-xl uppercase hover:underline hover:bg-white hover:text-admin-first transition-all duration-300 font-bold m-2 p-8 bg-admin-first  w-64 text-center">Green Products List </a></li>
-<li class="mx-2"><a href="/patterns" class="text-white block text-md rounded-xl uppercase hover:underline hover:bg-white hover:text-admin-first transition-all duration-300 font-bold m-2 p-8 bg-admin-first  w-64 text-center">footercolumns </a></li>
-<li class="mx-2"><a href="/dmv-office-locations" class="text-white block text-md rounded-xl uppercase hover:underline hover:bg-white hover:text-admin-first transition-all duration-300 font-bold m-2 p-8 bg-admin-first  w-64 text-center">DMV data </a></li>
-<li class="mx-2"><a href="/jobs-express" class="text-white block text-md rounded-xl uppercase hover:underline hover:bg-white hover:text-admin-first transition-all duration-300 font-bold m-2 p-8 bg-admin-first  w-64 text-center">Jobs Express Demo </a></li>
-</ul>
-</div>
-<ol class="flex flex-row flex-wrap mb-6">
-<li class="caret oswald"><a href="/" class="oswald text-sm uppercase hover:underline font-bold ">Home </a></li>
-<li class="caret oswald"><a href="#" class="oswald text-sm uppercase hover:underline font-bold ">How to Start </a></li>
-</ol>
-<h1>In Progress demo page</h1>
-<section class="flex flex-col md:flex-row items-center mt-4 pt-4">
-<div class="md:border-r md:border-dotted mt-8 md:mt-0 w-3/4 md:w-1/4 md:h-64 border-0">
-<div class="flex flex-col items-center"><img alt="an icon of a hand that is clicking a button" class="p-2 m-2" src="/sites/g/files/oee1181/files/media/2021/06/nys-ep-icon_web-click.png" />
-<h3 class="text-xl bold text-blue-900 uppercase py-2 my-2">Step 1</h3>
-<p class="text-center w-full md:w-3/4">Visit the Excelsior Pass web portal at <a aria-label="Excelsior Pass Web Portal" href="https://epass.ny.gov/"> epass.ny.gov </a></p>
-</div>
-</div>
-<div class="md:border-r md:border-dotted  mt-8 md:mt-0 w-3/4 md:w-1/4 md:h-64 border-0">
-<div class="flex flex-col items-center"><img alt="Silhouettes of two people" class="p-2 m-2" src="/sites/g/files/oee1181/files/media/2021/06/nys-ep-icon_people.png" />
-<h3 class="text-xl bold text-blue-900 uppercase py-2 my-2">Step 2</h3>
-<p class="text-center w-full md:w-3/4">Answer a few questions to confirm your vaccine or test information to retrieve your Pass</p>
-</div>
-</div>
-<div class="md:border-r md:border-dotted  mt-8 md:mt-0 w-3/4 md:w-1/4 md:h-64 border-0">
-<div class="flex flex-col items-center "><img alt="icon of a QR code on a smart phone" class="p-2 m-2" src="/sites/g/files/oee1181/files/media/2021/06/nys-ep-icon_smartphone-qr-code.png" />
-<h3 class="text-xl bold text-blue-900 uppercase py-2 my-2">Step 3</h3>
-<p class="text-center w-full md:w-3/4 ">Pass retrieved! Print your Pass, take a screenshot, or download the free Wallet App to store your Pass on your phone</p>
-</div>
-</div>
-<div class="md:border-r md:border-dotted  mt-8 md:mt-0 w-3/4 md:w-1/4 md:h-64 border-0">
-<div class="flex flex-col items-center"><img alt="an icon of a smart phone taking a picture of a QR code" class="p-2 m-2" src="/sites/g/files/oee1181/files/media/2021/06/nys-ep-icon_view-qr-code.png" />
-<h3 class="text-xl bold text-blue-900 uppercase py-2 my-2">Step 4</h3>
-<p class="text-center w-full md:w-3/4">Present your Pass at participating organizations to verify your proof of vaccination or negative test result</p>
-</div>
-</div>
-</section>
-<p class="italic text-center pt-12 md:pt-16 md:mt-16 block mt-12"><strong>Excelsior Pass</strong> is a voluntary platform. Your data and information is kept secure at all times.</p>
-<br>
-<br>
-<br>
-<br>
-<section class="mt-4 pt-4">
-<div class="flex flex-col md:grid md:grid-cols-3 justify-items-center">
-<article class="mt-8 md:mt-0 md:border-r md:border-dotted md:border-b border-0">
-<div class="flex flex-col items-center">
-<img src="/img/nygov-logo.png" class="p-2 m-2" />
-<p class="text-center w-3/4"><strong> 1. </strong>Excelsior Pass empowers New Yorkers to easily access and maintain their personal health information and own proof of COVID-19 immunization or testing records.</p>
-</div>
-</article>
-<article class="mt-8 md:mt-0 md:border-r md:border-dotted md:border-b border-0">
-<div class="flex flex-col items-center">
-<img src="/img/nygov-logo.png" class="p-2 m-2" />
-<p class="text-center w-3/4"><strong> 2. </strong>Using secure technology, Excelsior Pass generates a unique, scannable Pass QR code that contains no personal health information in it. It is only used to verify an individual’s vaccination or negative test result <strong>status.</strong></p>
-</div>
-</article>
-<article class="mt-8 md:mt-0 md:border-r md:border-dotted md:border-b border-0">
-<div class="flex flex-col items-center ">
-<img src="/img/nygov-logo.png" class="p-2 m-2" />
-<p class="text-center w-3/4 "><strong> 3. </strong>The Pass QR code is generated and made available to the user based on vaccination and testing information that already exists in the secure New York State and New York City immunization and testing registries.</p>
-</div>
-</article>
-</div>
-<div class="flex flex-col md:grid md:grid-cols-3 justify-items-center">
-<article class="mt-8 md:mt-0 md:border-r md:border-dotted border-0">
-<div class="flex flex-col items-center">
-<img src="/img/nygov-logo.png" class="p-2 m-2" />
-<p class="text-center w-3/4"><strong> 4. </strong>Passes contain cryptographic signatures that ensure each Pass is genuine and that no data-tampering has occurred.</p>
-</div>
-</article>
-<article class="mt-8 md:mt-0 md:border-r md:border-dotted border-0">
-<div class="flex flex-col items-center">
-<img src="/img/nygov-logo.png" class="p-2 m-2" />
-<p class="text-center w-3/4"><strong> 5. </strong>While Excelsior Pass reduces the need to deal with formal test results and vaccination records like a CDC Card, users choose if, how, or when to present their Pass, which can be stored on the free Excelsior Pass Wallet app, or printed from the Excelsior Pass website portal for those who may not own smartphone devices. Individuals can always present alternate forms of vaccination or negative test results if they prefer.</p>
-</div>
-</article>
-<article class="mt-8 md:mt-0 md:border-r md:border-dotted border-0">
-<div class="flex flex-col items-center ">
-<img src="/img/nygov-logo.png" class="p-2 m-2" />
-<p class="text-center w-3/4 "><strong> 6. </strong>It’s convenient and secure. Retrieve digital proof of COVID-19 vaccination or negative test results with Excelsior Pass. Visit <a href="https://epass.ny.gov/" aria-label="Excelsior Pass Web Portal" class=""> epass.ny.gov </a> to get started.</p>
-</div>
-</article>
-</div>
-</section>
-<p>Suspendisse ultrices erat eget lacus molestie, et vestibulum nibh pulvinar. Duis sodales velit eget vehicula egestas. Vestibulum rhoncus, nulla quis fringilla cursus, velit quam interdum nulla, eget vehicula lacus augue sit amet massa. Quisque pellentesque accumsan dolor, quis posuere enim dictum sed. Sed diam quam, ullamcorper vel ultricies eget, placerat sed magna. In dignissim orci sit amet dolor dignissim, a volutpat quam pellentesque.</p>
-<p>Donec lacinia pretium semper. Morbi a purus consequat, condimentum est at, hendrerit lacus. Sed iaculis porttitor tellus nec tristique. Donec nec tempor nisi. Maecenas id feugiat ligula. Fusce non pellentesque enim, eget blandit dolor. In hac habitasse platea dictumst. Sed vitae eros est. Quisque faucibus libero vel lorem aliquet mattis. In tristique scelerisque nisl, ut dignissim arcu fermentum sed. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque imperdiet aliquet interdum. Proin sed purus lectus.</p>
-<p>Suspendisse ultrices erat eget lacus molestie, et vestibulum nibh pulvinar. Duis sodales velit eget vehicula egestas. Vestibulum rhoncus, nulla quis fringilla cursus, velit quam interdum nulla, eget vehicula lacus augue sit amet massa. Quisque pellentesque accumsan dolor, quis posuere enim dictum sed. Sed diam quam, ullamcorper vel ultricies eget, placerat sed magna. In dignissim orci sit amet dolor dignissim, a volutpat quam pellentesque.</p>
-<p>Donec lacinia pretium semper. Morbi a purus consequat, condimentum est at, hendrerit lacus. Sed iaculis porttitor tellus nec tristique. Donec nec tempor nisi. Maecenas id feugiat ligula. Fusce non pellentesque enim, eget blandit dolor. In hac habitasse platea dictumst. Sed vitae eros est. Quisque faucibus libero vel lorem aliquet mattis. In tristique scelerisque nisl, ut dignissim arcu fermentum sed. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque imperdiet aliquet interdum. Proin sed purus lectus.</p>
-<p>Suspendisse ultrices erat eget lacus molestie, et vestibulum nibh pulvinar. Duis sodales velit eget vehicula egestas. Vestibulum rhoncus, nulla quis fringilla cursus, velit quam interdum nulla, eget vehicula lacus augue sit amet massa. Quisque pellentesque accumsan dolor, quis posuere enim dictum sed. Sed diam quam, ullamcorper vel ultricies eget, placerat sed magna. In dignissim orci sit amet dolor dignissim, a volutpat quam pellentesque.</p>
-<p>Donec lacinia pretium semper. Morbi a purus consequat, condimentum est at, hendrerit lacus. Sed iaculis porttitor tellus nec tristique. Donec nec tempor nisi. Maecenas id feugiat ligula. Fusce non pellentesque enim, eget blandit dolor. In hac habitasse platea dictumst. Sed vitae eros est. Quisque faucibus libero vel lorem aliquet mattis. In tristique scelerisque nisl, ut dignissim arcu fermentum sed. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque imperdiet aliquet interdum. Proin sed purus lectus.</p>
-<div class=" my-6 -mx-8 md:-mx-20 bg-admin-third px-16  py-20">
-    <h2 class="text-2xl font-extrabold text-center">This is the title of the category tiles</h2>
-<ul class="flex flex-row flex-wrap justify-center list-none" >
-<li class="mx-2"><a href="/green-products" class="text-white block text-md rounded-xl uppercase hover:underline hover:bg-white hover:text-admin-first transition-all duration-300 font-bold m-2 p-8 bg-admin-first  w-64 text-center">Green Products List </a></li>
-<li class="mx-2"><a href="/patterns" class="text-white block text-md rounded-xl uppercase hover:underline hover:bg-white hover:text-admin-first transition-all duration-300 font-bold m-2 p-8 bg-admin-first  w-64 text-center">footercolumns </a></li>
-<li class="mx-2"><a href="/dmv-office-locations" class="text-white block text-md rounded-xl uppercase hover:underline hover:bg-white hover:text-admin-first transition-all duration-300 font-bold m-2 p-8 bg-admin-first  w-64 text-center">DMV data </a></li>
-<li class="mx-2"><a href="/jobs-express" class="text-white block text-md rounded-xl uppercase hover:underline hover:bg-white hover:text-admin-first transition-all duration-300 font-bold m-2 p-8 bg-admin-first  w-64 text-center">Jobs Express Demo </a></li>
-</ul>
-</div>
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.1.0/uuidv4.min.js"></script><shadow-demo bot-message-bg-color="#0b5d66" chat-bot-font-color="#FFFFFF" chat-title="Perkins: The EWF Bot" chat-title-color="#0b5d66" chat-user-font-color="#001B3B" id="shadow" url="https://dol-is-dev.endpoints.dol-ewa-ccai-dev.cloud.goog" user-message-bg-color="#bdbdbd"></shadow-demo><script src="https://storage.googleapis.com/nys-dol-dev-chat-widget-bucket/shadow.js?v=1" type="text/javascript"></script> -->
+
     </main>
     
     <footer class="bg-admin-third px-4 py-8 flex flex-col md:flex-row md:items-center items-baseline mt-12">
