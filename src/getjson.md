@@ -18,7 +18,7 @@ $.getJSON('https://data.ny.gov/resource/9upz-c7xg.json', function(data){
   
   </script>
   <table class="nysdataTable">
-	<thead class="">
+	<thead class="bg-gray-700 text-white text-center">
 		<th>Office</th>
 		<th>Type</th>
 		<th>Phone Number</th>
