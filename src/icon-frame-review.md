@@ -1,5 +1,6 @@
 ---
 layout: layout.njk
+title: testing the icon frame update
 ---
 <style>
   .arrow-right {
