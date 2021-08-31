@@ -1,63 +1,6 @@
 ---
 layout: layout.njk
-title: The NYS Design Patterns
 ---
-{% from './_includes/_components.njk' import breadcrumbs,button,buttonhero,card,hero,heroold,categorytiles,iconframe,iconframesix,filtercard %} 
-
-{{ heroold({ 
-    title: "Demo Content Page for Testing Only",
-    subtitle: "Empire State Plaza Art Collection-Inspired Artwork by Capital Region School District Students.",
-    image:"",
-    buttontext: "First Button",
-    link: "https://ogs.ny.gov",
-    arialabel: "Office of General Services",
-    buttontext2: "Second Button",
-    link2: "https://ogs.ny.gov",
-    arialabel2: "Office of General Services"
-})}}
-
-
-{{ breadcrumbs({ 
-     items: [
-    {
-      text: "Home",
-      link: "/"
-    },
-    {
-      text: "How to Start",
-      link: "#"
-    }
-  ]
-})}}
-
-# In Progress demo page
-
-{{ filtercard({ 
-    heading:"Simple JS data filter",
-    filtercards: [
-    {
-      title: "nothing",
-      link: "/",
-      description:"Use to apply for a learner permit, driver license or non-driver ID. Also use to renew your license or non-driver ID."
-    },
-    {
-      title: "whatever",
-      link: "/",
-      description:"whatever"
-    },
-    {
-      title: "something",
-      link: "/",
-      description:"something"
-    },
-    {
-      title: "nothing",
-      link: "/",
-      description:"nothing"
-    }
-  
-  ]
-})}}
 <style>
   .arrow-right {
     box-sizing: border-box;
@@ -106,7 +49,8 @@ title: The NYS Design Patterns
     bottom: 0;
     left: -2px
 }
-    </style>
+</style>
+<div style="height:250px;"></div>
 
 <section class="flex flex-col md:flex-row items-center mt-4 pt-4">
 <div class=" mt-8 md:mt-0 w-3/4 md:w-1/4 md:h-64 border-0">
@@ -149,4 +93,5 @@ title: The NYS Design Patterns
 </div>
 </section>
 
-<p class="italic text-center pt-12 md:pt-16 md:mt-16 block mt-12"><strong>Excelsior Pass</strong> is a voluntary platform. Your data and information is kept secure at all times.</p>
+
+<div style="height:250px;"></div>
