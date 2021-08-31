@@ -96,3 +96,51 @@ title: testing the icon frame update
 
 
 <div style="height:250px;"></div>
+
+
+<section class="flex flex-col md:flex-row items-center mt-4 pt-4">
+<div class=" mt-8 md:mt-0 w-3/4 md:w-1/4 md:h-64 border-0">
+<div class="flex flex-col items-center"><img alt="an icon of a hand that is clicking a button" class="w-20 p-2 m-2" src="/img/NYS-EP-Icon_Download.png" />
+<h3 class="text-xl bold text-blue-900 py-2 my-2">Scanner Retrieval</h3>
+<p class="text-center w-full md:w-3/4">Download the NYS Excelsior Pass Scanner app and complete the form
+
+</p>
+</div>
+</div>
+
+<span class="arrow-right md:block hidden"></span>
+<span class="arrow-down md:hidden block"></span>
+
+<div class="mt-8 md:mt-0 w-3/4 md:w-1/4 md:h-64 border-0">
+<div class="flex flex-col items-center"><img alt="Silhouettes of two people" class="w-20 p-2 m-2" src="/img/NYS-EP-Icon_Smartphone-QR-Code.png" />
+<h3 class="text-xl bold text-blue-900 py-2 my-2">Define Scanning Process</h3>
+<p class="text-center w-full md:w-3/4">Notify individuals and prepare technology
+
+</p>
+</div>
+</div>
+
+<span class="arrow-right md:block hidden"></span>
+<span class="arrow-down md:hidden block"></span>
+
+<div class="mt-8 md:mt-0 w-3/4 md:w-1/4 md:h-64 border-0">
+<div class="flex flex-col items-center "><img alt="icon of a QR code on a smart phone" class="w-20 p-2 m-2" src="/img/NYS-EP-Icon_View-QR-Code.png" />
+<h3 class="text-xl bold text-blue-900 py-2 my-2">Scan Pass</h3>
+<p class="text-center w-full md:w-3/4 ">Scan each Excelsior Pass and/or Excelsior Pass <em>Plus</em> and verify photo IDs for adults aged 18+
+ </p>
+</div>
+</div>
+
+<span class="arrow-right md:block hidden"></span>
+<span class="arrow-down md:hidden block"></span>
+
+<div class="mt-8 md:mt-0 w-3/4 md:w-1/4 md:h-64 border-0">
+<div class="flex flex-col items-center"><img alt="an icon of a smart phone taking a picture of a QR code" class="w-20 p-2 m-2" src="/img/NYS-EP-Icon_Gathering.png" />
+<h3 class="text-xl bold text-blue-900 py-2 my-2">Safe Experience</h3>
+<p class="text-center w-full md:w-3/4">Enjoy a safe, secure experience
+</p>
+</div>
+</div>
+</section>
+
+<div style="height:250px;"></div>
