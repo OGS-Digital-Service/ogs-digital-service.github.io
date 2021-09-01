@@ -2,7 +2,7 @@
 layout: layout.njk
 title: The NYS Design Patterns
 ---
-{% from './_includes/_components.njk' import breadcrumbs,button,buttonhero,card,hero,heroold,categorytiles,iconframe,iconframesix,filtercard %} 
+{% from './_includes/_components.njk' import breadcrumbs,button,buttonhero,card,hero,heroold,categorytiles,iconframe,iconframesix,filtercard,languageaccess %} 
 
 {{ heroold({ 
     title: "Demo Content Page for Testing Only",
@@ -31,6 +31,8 @@ title: The NYS Design Patterns
 })}}
 
 # In Progress demo page
+
+
 
 {{ filtercard({ 
     heading:"Simple JS data filter",
