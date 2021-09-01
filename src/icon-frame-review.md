@@ -87,9 +87,9 @@ title: testing the icon frame update
 <span class="arrow-down md:hidden block"></span>
 
 <div class="mt-8 md:mt-0 w-3/4 md:w-1/4 md:h-64 border-0">
-<div class="flex flex-col items-center"><img alt="an icon of a smart phone taking a picture of a QR code" class="w-20 p-2 m-2 mb-4 mt-4" src="/img/NYS-EP-Icon_Gathering.png" />
+<div class="flex flex-col items-center"><img alt="an icon of a smart phone taking a picture of a QR code" class="w-20 p-2 m-2 mb-6 mt-4" src="/img/NYS-EP-Icon_Gathering.png" />
 <h3 class="text-xl bold text-blue-900 py-2 my-2">Safe Experience</h3>
-<p class="text-center w-full md:w-3/4">Present your Pass at participating organizations to verify your proof of vaccination or negative test result</p>
+<p class="text-center w-full md:w-3/4">Enjoy a safe, secure experience</p>
 </div>
 </div>
 </section>
