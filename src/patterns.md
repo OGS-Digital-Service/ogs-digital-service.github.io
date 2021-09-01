@@ -39,17 +39,17 @@ title: The NYS Design Patterns
     filtercards: [
     {
       title: "nothing",
-      link: "/",
+      link: "/tableau",
       description:"Use to apply for a learner permit, driver license or non-driver ID. Also use to renew your license or non-driver ID."
     },
     {
       title: "whatever",
-      link: "/",
+      link: "/icon-frame-review",
       description:"whatever"
     },
     {
       title: "something",
-      link: "/",
+      link: "/language-access",
       description:"something"
     },
     {
