@@ -1,6 +1,6 @@
 module.exports = {
   purge: [
-    'docs/iconframe/*.html'
+    'docs/iconframeexport/*.html'
     // 'docs/*.html',
     // 'docs/**/*.html'  
 
