@@ -16,6 +16,10 @@ title: Accessibility Remediations
     {
       text: "ACSF Drupal Cards",
       link: "../cards"
+    },
+    {
+      text: "ACSF Hero Gradient",
+      link: "../hero"
     }
   ]
 })}}
