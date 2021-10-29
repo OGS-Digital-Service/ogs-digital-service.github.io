@@ -109,8 +109,6 @@ These cards retain the three links for mouse users, but remove the card image an
 This is an accepted way to remove semantic, native focusable elements from the focus order and screen reader view. Using the two techniques in conjunction is the only w3c approved way to use aria-hidden="true" and tabindex="-1" on a native focusable element. 
 See <https://w3c.github.io/using-aria/#4thrule> for more information.
 
-This approach also removes the use of a div with background image and replaces it with an img tag with alt text.
-
 
 
 
@@ -122,7 +120,7 @@ This approach also removes the use of a div with background image and replaces i
 <article class="webny-card">                          
 <div data-history-node-id="386" role="article" about="/excelsior-pass" class="webny-card">
 <a href="https://covid19vaccine.health.ny.gov/excelsior-pass" tabindex="-1" aria-hidden="true"><!-- add tabindex="-1" aria-hidden="true"-->
-<img class="card-image" src="https://covid19vaccine.health.ny.gov/sites/g/files/oee1181/files/styles/card_vertical/public/media/2021/03/excelsiorpass.png?h=b5f6a62e&amp;itok=7kcO1aiA" alt="a cell phone with the excelsior pass visible on the screen">
+<div class="card-image" style="background-image: url('https://covid19vaccine.health.ny.gov/sites/g/files/oee1181/files/styles/card_vertical/public/media/2021/03/excelsiorpass.png?h=b5f6a62e&amp;itok=7kcO1aiA');"></div>
 </a>   
 <div class="card-content">
 <div class="card-content-top">
@@ -143,7 +141,7 @@ This approach also removes the use of a div with background image and replaces i
 <article class="webny-card">                           
 <div data-history-node-id="501" role="article" about="/home-vaccination-program" class="webny-card">
 <a target="_self" href="https://covid19vaccine.health.ny.gov/home-vaccination-program" tabindex="-1" aria-hidden="true"><!-- add tabindex="-1" aria-hidden="true"-->
-<img class="card-image" src="https://covid19vaccine.health.ny.gov/sites/g/files/oee1181/files/styles/card_vertical/public/media/2021/05/vaccination_athome_disabled_covid19_card.jpg?h=854a7be2&amp;itok=vFdqq4b5" alt="a person being vaccinated">
+<div class="card-image" style="background-image: url('https://covid19vaccine.health.ny.gov/sites/g/files/oee1181/files/styles/card_vertical/public/media/2021/05/vaccination_athome_disabled_covid19_card.jpg?h=854a7be2&amp;itok=vFdqq4b5');"></div>
 </a>        
 <div class="card-content">
 <div class="card-content-top">
@@ -166,7 +164,7 @@ This approach also removes the use of a div with background image and replaces i
 <article class="webny-card">                          
 <div data-history-node-id="236" role="article" about="/covid-19-vaccine-tracker-0" class="webny-card">
 <a target="_self" href="https://covid19vaccine.health.ny.gov/covid-19-vaccine-tracker-0" tabindex="-1" aria-hidden="true"><!-- add tabindex="-1" aria-hidden="true"-->
-<img class="card-image" src="https://covid19vaccine.health.ny.gov/sites/g/files/oee1181/files/styles/card_vertical/public/media/2020/12/covid19vaccine.png?h=b5f6a62e&amp;itok=nKpUaAyz" alt="covid 19 vaccine vials on a tray">
+  <div class="card-image" style="background-image: url('https://covid19vaccine.health.ny.gov/sites/g/files/oee1181/files/styles/card_vertical/public/media/2020/12/covid19vaccine.png?h=b5f6a62e&amp;itok=nKpUaAyz');"></div>
 </a>         
 <div class="card-content">
 <div class="card-content-top">                        
