@@ -36,6 +36,13 @@ If you have any questions about the content or technical aspects here, please co
         link:"/accessibility-remediations-dashboard",
         linktext:"Go to the Dashboard",
         arialabel:'go to the dashboard of in progress accessibility remediations'
+        },
+         {
+        title:"NYGov Profile Sanbox",
+        content:"A rapid prototype and design sandbox page for nygov profile updates",
+        link:"/nygov-sandbox",
+        linktext:"See the Designs",
+        arialabel:'go to the sandbox and prototype page to access the new designs for the ny.gov profile'
         }
         
         
@@ -46,18 +53,6 @@ If you have any questions about the content or technical aspects here, please co
 {{ categorytiles({ 
     title:"Demo Content",
      items: [
-    {
-      text: "Demo Page",
-      link: "/patterns"
-    },
-    {
-      text: "Tableau Test",
-      link: "/tableau"
-    },
-    {
-      text: "ACSF Cards",
-      link: "/cards"
-    },
     {
       text: "Language Access",
       link: "/language-access"
