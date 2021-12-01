@@ -3,17 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% include '_css-link.njk' %}
-    {% include '_css-global.njk' %}
+   
     <title>{{ title }}</title>
   </head>
   <body class="">
-    {% from '../_includes/_components.njk' import unav,nav,footer,languageaccess  %}
-    {% include 'unav-data.md' %}
-     {% include 'nav-data.md' %}
-    <main class="mx-8 md:mx-20">
-    {{ content | safe }}
-    </main>
-    {% include 'footer-data.md' %}
+   
   </body>
 </html>
