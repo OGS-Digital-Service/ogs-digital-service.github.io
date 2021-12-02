@@ -14,9 +14,9 @@
   font-size: 16px;
   text-align: center;
   border-radius: 50%;
-  border-color: #128EC3;
+  border-color: #007AC2;
   border-width: 0;
-  background-color: #128EC3;
+  background-color: #007AC2;
   color: #ffffff;
   transition: background-color 150ms ease-in-out;
   padding: 9px 13px;
@@ -51,17 +51,17 @@
   &:focus {
     border-radius: 50%;
     border-width: 1px;
-    border-color: darken($color: #128EC3, $amount: 10);
+    border-color: darken($color: #007AC2, $amount: 10);
     outline: 0;
   }
 
   &:active {
-    background-color: darken($color: #128EC3, $amount: 15)
+    background-color: darken($color: #007AC2, $amount: 15)
   }
 
   &:hover {
     cursor: pointer;
-    background-color: darken($color: #128EC3, $amount: 10)
+    background-color: darken($color: #007AC2, $amount: 10)
   }
 }
 
@@ -73,14 +73,14 @@
   font-size: 16px;
 
   &.active {
-    color: #128EC3;
-    border-bottom: 1px solid #128EC3;
+    color: #007AC2;
+    border-bottom: 1px solid #007AC2;
   }
 
   &:hover {
     cursor: pointer;
-    color: #128EC3;
-    border-bottom: 1px solid #128EC3;
+    color: #007AC2;
+    border-bottom: 1px solid #007AC2;
   }
 }
 
@@ -176,7 +176,7 @@
   }
 
   &:hover {
-    background-color: #f29c23;
+    background-color: #FACE00;
   }
 
   &:visited {
@@ -186,7 +186,7 @@
 
 .a-buttons__cardCat {
   position: absolute;
-  background-color: #d5820d;
+  background-color: #FACE00;
   display: inline-block;
   font-size: 0.8em;
   font-family: "Oswald", sans-serif;
@@ -200,7 +200,7 @@
   @extend .text-bold;
 
   &:hover {
-    background-color: #f29c23;
+    background-color: #FFE396;
   }
 }
 
@@ -236,7 +236,7 @@
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: #24387e;
+  background: #154973;
   padding: 16px 24px;
   text-align: center;
   color: #fff;
@@ -262,13 +262,13 @@
   font-family: arial;
   text-decoration: none;
   vertical-align: middle;
-  border: 1px solid #24387d;
-  background: #24387d;
+  border: 1px solid #154973;
+  background: #154973;
   color: #ffffff;
 
   &:active {
     box-shadow: none;
-    background: #128ec3;
+    background: #007AC2;
   }
 
   @include breakpoint(mobileOnly) {
@@ -289,7 +289,7 @@
   left: 0;
   top: 0;
   color: #ffffff;
-  background-color: #24387e;
+  background-color: #154973;
   font-family: "Oswald", sans-serif;
   padding: 6px 20px;
   font-size: 13px;

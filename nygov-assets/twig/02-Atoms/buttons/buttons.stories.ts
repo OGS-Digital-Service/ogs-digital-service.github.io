@@ -63,7 +63,7 @@ stories
       backgrounds: [
         {
           name: "NYGOV Blue",
-          value: "#128ec3",
+          value: "#007AC2",
           default: true,
         },
       ],
@@ -116,7 +116,7 @@ stories
     {
       backgrounds: [
         {
-          value: "#24387e",
+          value: "#154973",
           default: true,
         },
       ],

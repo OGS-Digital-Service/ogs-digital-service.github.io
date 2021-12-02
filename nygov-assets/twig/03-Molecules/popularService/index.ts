@@ -23,7 +23,7 @@ function draw() {
     const ctx = canvas.getContext('2d');
     if (ctx === null) return false;
     ctx.beginPath();
-    ctx.fillStyle = "#24387E";
+    ctx.fillStyle = "#154973";
     ctx.moveTo(0, 0); // start at top left corner of canvas
     ctx.lineTo(canvas.width, 0);
     ctx.lineTo(canvas.width / 2, height);
@@ -36,7 +36,7 @@ function draw() {
   const ctx = canvas.getContext('2d');
   if (ctx === null) return false;
   ctx.beginPath();
-  ctx.fillStyle = "#24387E";
+  ctx.fillStyle = "#154973";
   ctx.moveTo(0, 0); // start at top left corner of canvas
   ctx.lineTo(50, 100);
   ctx.lineTo(0, canvas.height);

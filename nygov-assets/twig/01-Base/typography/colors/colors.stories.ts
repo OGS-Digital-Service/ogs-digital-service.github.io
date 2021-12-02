@@ -28,37 +28,37 @@ textcolors.add("Font Colors", () =>
         },
         {
           className: "text-primary-blue",
-          hex: "#24387E",
+          hex: "#154973",
           background: "#FCFCFC",
         },
         {
           className: "text-primary-blue-accent",
-          hex: "#1B2A5E",
+          hex: "#457AA5",
           background: "#FCFCFC",
         },
         {
           className: "text-primary-gold",
-          hex: '#D5820D',
+          hex: '#FACE00',
           background: "#FCFCFC",
         },
         {
           className: "text-primary-gold-accent",
-          hex: '#DC9719',
+          hex: '#FFE396',
           background: "#FCFCFC",
         },
         {
           className: "text-primary-gold-light",
-          hex: '#F5A81C',
+          hex: '#FFE396',
           background: "#FCFCFC",
         },
         {
           className: "text-primary-light-blue",
-          hex: '#128EC3',
+          hex: '#EFF6FB',
           background: "#FCFCFC",
         },
         {
           className: "text-primary-light-blue-accent",
-          hex: '#0386BE',
+          hex: '#EFF6FB',
           background: "#FCFCFC",
         },
         {
@@ -68,12 +68,12 @@ textcolors.add("Font Colors", () =>
         },
         {
           className: "text-links",
-          hex: '#0F739D',
+          hex: '#007AC2',
           background: "#FCFCFC",
         },
         {
           className: "text-footer-links",
-          hex: '#24387E',
+          hex: '#154973',
           background: "#EDEDED",
         },
         {

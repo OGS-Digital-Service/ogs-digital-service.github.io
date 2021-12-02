@@ -29,17 +29,17 @@ bgstories.add("Background Colors", () =>
         {
           className: "bg-primary-blue",
           fontColor: "#fff",
-          hex: '#24387E'
+          hex: '#154973'
         },
         {
           className: "bg-primary-light-blue",
           fontColor: "#fff",
-          hex: '#128ec3'
+          hex: '#007AC2'
         },
         {
           className: "bg-primary-blue-accent",
           fontColor: "#fff",
-          hex: '#1B2A5E'
+          hex: '#457AA5'
         },
         {
           className: "bg-primary-links",
@@ -49,17 +49,17 @@ bgstories.add("Background Colors", () =>
         {
           className: "bg-primary-gold",
           fontColor: "#000",
-          hex: '#D5820D'
+          hex: '#FACE00'
         },
         {
           className: "bg-primary-gold-accent",
           fontColor: "#000",
-          hex: '#DC9719'
+          hex: '#FFE396'
         },
         {
           className: "bg-primary-gold-light",
           fontColor: "#000",
-          hex: '#F5A81C'
+          hex: '#FFE396'
         },
         {
           className: "bg-card-cta",

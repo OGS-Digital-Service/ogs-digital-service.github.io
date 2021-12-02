@@ -50,7 +50,7 @@
     .o-milestones__list {
       .m-milestone {
         color: black;
-        border-bottom: 1px solid lighten(#D5820D, 2%);
+        border-bottom: 1px solid lighten(#FACE00, 2%);
         .milestone__checkmark {
           @extend .text-primary-blue;
         }
@@ -294,7 +294,7 @@
     .m-milestone {
       position: relative;
       padding: 30px 0 30px 0;
-      border-bottom: 1px solid #1695cb;
+      border-bottom: 1px solid #007AC2;
       display: flex;
       .milestone__checkmark {
         color: white;

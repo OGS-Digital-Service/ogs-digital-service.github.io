@@ -26,7 +26,7 @@
     position: absolute;
     border-bottom: 17px solid transparent;
     border-top: 17px solid transparent;
-    border-left: 17px solid #d5820d;
+    border-left: 17px solid #FACE00;
     height: 0px;
     width: 0px;
     margin-right: -17px;
@@ -40,7 +40,7 @@
 
     &:after {
       // triangle hover
-      border-left: 17px solid #f5a81c;
+      border-left: 17px solid #FACE00;
     }
   }
 }
@@ -402,7 +402,7 @@
     display: flex;
     flex-flow: column;
     padding-bottom: 25px;
-    border-bottom: 1px solid #d9e2e2;
+    border-bottom: 1px solid #D0D0CE;
 
     @include breakpoint(tablet) {
       width: 65%;
@@ -693,12 +693,12 @@
       display: flex;
       flex-flow: column;
       align-items: center;
-      border-top: 4px solid #d5820d;
+      border-top: 4px solid #FACE00;
       padding: 25px 20px;
 
       @include breakpoint(tablet) {
         border-top: none;
-        border-left: 4px solid #d5820d;
+        border-left: 4px solid #FACE00;
         padding: 25px 0;
         width: 200px;
       }
@@ -871,7 +871,7 @@
     .m-dateLocation__separator {
       margin-left: 8px;
       margin-right: 8px;
-      border-left: 1px solid #d9e2e2;
+      border-left: 1px solid #D0D0CE;
       font-size: 13px;
     }
 
@@ -1465,7 +1465,7 @@
         margin-top: 0px;
         padding-left: 20px;
         padding-right: 20px;
-        border-left: 1px solid #d9e2e2;
+        border-left: 1px solid #D0D0CE;
       }
 
       @include breakpoint(desktop) {
@@ -1503,7 +1503,7 @@
         height: 50px;
         margin-top: 0px;
         padding-left: 20px;
-        border-left: 1px solid #d9e2e2;
+        border-left: 1px solid #D0D0CE;
       }
 
       @include breakpoint(desktop) {

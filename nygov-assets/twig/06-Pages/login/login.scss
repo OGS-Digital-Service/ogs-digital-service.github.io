@@ -2,7 +2,7 @@
 
 .p-login{
   height: 100vh;
-  background: #128ec3;  /* fallback for old browsers */
+  background: #007AC2;  /* fallback for old browsers */
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -68,11 +68,11 @@
       font-size: 20px;
       height: 0;
       width: 0;
-      color: #128ec3;
+      color: #007AC2;
     }
 
     h1{
-      color: #F5A81C;
+      color: #FACE00;
       max-width: 250px;
       text-align: center;
       margin: 20px auto;
@@ -89,7 +89,7 @@
     }
 
     #edit-submit{
-      background: #128ec3;
+      background: #007AC2;
       border-radius: 7px;
       font-weight: bold;
       text-transform: uppercase;

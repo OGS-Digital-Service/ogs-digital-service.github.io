@@ -6,12 +6,12 @@
   @extend .text-proxima;
   padding: 35px 45px;
   height: 320px;
-  border: 1px solid #1eadea;
+  border: 1px solid #457AA5;
   &.bg-primary-gold {
-    border: 1px solid #f79f23;
+    border: 1px solid #FACE00;
   }
   &.bg-primary-gray {
-    border: 1px solid #e3e3e1;
+    border: 1px solid #EDEDED;
   }
   width: 100%;
   display: flex;
@@ -70,7 +70,7 @@
     .fa-quote-left, .fa-quote-right {
       font-size: 32px;
       line-height: 54px;
-      color: #094a66;
+      color: #154973;
       position: absolute;
       @include breakpoint(laptop) {
         font-size: 32px;
@@ -133,7 +133,7 @@
       font-size: 13px;
       font-weight: bold;
       &:hover {
-        color: #24387e;
+        color: #154973;
       }
     }
     .social-links {
@@ -144,7 +144,7 @@
         cursor: pointer;
         text-decoration: none;
         &:hover {
-          color: #24387e;
+          color: #154973;
         }
       }
     }

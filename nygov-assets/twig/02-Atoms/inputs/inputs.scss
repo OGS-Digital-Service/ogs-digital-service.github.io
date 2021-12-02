@@ -27,7 +27,7 @@
       font-family: "Font Awesome 5 Free";
       font-weight: 900;
       content: "\f058";
-      color: #f8a81f;
+      color: #FACE00;
     }
 
     &:checked+.a-checkbox__label:hover::before {
@@ -44,7 +44,7 @@
     cursor: pointer;
 
     &:hover {
-      color: #d5820d;
+      color: #FACE00;
     }
 
     &::before {
@@ -157,7 +157,7 @@ input[type="text"] {
   padding: 16px;
   border: none;
   background: none transparent;
-  color: #128ec3;
+  color: #007AC2;
   cursor: pointer;
 
   &:focus {
@@ -168,7 +168,7 @@ input[type="text"] {
 
   &:hover {
     border: none;
-    background: #128ec3;
+    background: #007AC2;
     ;
     box-shadow: none;
     color: #fff;

@@ -104,7 +104,7 @@ legend {
 
     & a {
         text-decoration: none;
-        color: #128ec3;
+        color: #007AC2;
         background: transparent;
     }
 
@@ -128,7 +128,7 @@ legend {
 .m-resultsCard__separator {
     display: block;
     width: 30px;
-    border-bottom: 1px solid #e4e4e4;
+    border-bottom: 1px solid #EDEDED;
     margin: 12px 0;
 }
 
@@ -162,7 +162,7 @@ legend {
         flex-basis: 0;
         width: auto;
         float: none;
-        border-right: 1px solid #e4e4e4;
+        border-right: 1px solid #EDEDED;
         width: 60%;
 
         @include breakpoint(mobileOnly) {
@@ -210,7 +210,7 @@ legend {
             padding: 0;
 
             & li.m-resultsCard.-time {
-                border-bottom: 1px solid #e4e4e4;
+                border-bottom: 1px solid #EDEDED;
                 padding-bottom: 10px;
                 margin-bottom: 10px;
             }
@@ -232,11 +232,11 @@ legend {
 //Follow 
 .m-resultsCard__footer.-follow {
     background-color: #f6f8f7;
-    border-top: 1px solid #e4e4e4;
+    border-top: 1px solid #EDEDED;
     padding: 14px;
 
     @include breakpoint(mobileOnly) {
-        border-right: 1px solid #e4e4e4;
+        border-right: 1px solid #EDEDED;
     }
 
     & .m-resultsCard__footer.-label {
@@ -259,16 +259,16 @@ legend {
 .m-resultsCard__footer.-share,
 .m-resultsCard__footer.-download {
     background-color: #f6f8f7;
-    border-top: 1px solid #e4e4e4;
+    border-top: 1px solid #EDEDED;
     padding: 14px;
 
     @include breakpoint(mobileOnly) {
-        border-right: 1px solid #e4e4e4;
+        border-right: 1px solid #EDEDED;
     }
 
     & .m-resultsCard__footer.-icon {
         font-size: 17px;
-        color: #d5820d;
+        color: #FACE00;
         vertical-align: middle;
         cursor: pointer;
     }

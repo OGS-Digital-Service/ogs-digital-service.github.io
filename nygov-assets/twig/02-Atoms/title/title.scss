@@ -15,7 +15,7 @@
 }
 
 .a-frame__title {
-  color: #24387e;
+  color: #154973;
   font-family: "Proxima Nova";
   font-weight: 800;
   font-size: 36px;
@@ -63,7 +63,7 @@
 }
 
 .a-card__title {
-  color: #24387E;
+  color: #154973;
   letter-spacing: 2px;
   text-transform: uppercase;
   margin: 0;
@@ -104,7 +104,7 @@
 .a-contact__title {
   font-family: "Proxima Nova", sans-serif;
   font-weight: 900;
-  color: #24387e;
+  color: #154973;
   margin-bottom: 35px;
   font-size: 30px;
   line-height: 34px;
@@ -138,7 +138,7 @@
     font-variant: normal;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
-    color: #128ec3;
+    color: #007AC2;
     margin-right: 4px;
   }
 }
@@ -159,18 +159,18 @@
   font-family: "Proxima Nova";
   font-size: 40px;
   font-weight: bold;
-  color: #24387e;
+  color: #154973;
 }
 
 .a-sidebar__title {
-  color: #d5820d;
+  color: #FACE00;
   font-family: "Oswald", sans-serif;
   font-weight: bold;
   text-transform: uppercase;
 }
 
 .a-sidebar__subTitle {
-  color: #d5820d;
+  color: #FACE00;
   font-family: "Oswald", sans-serif;
   font-weight: bold;
   text-transform: uppercase;
@@ -201,7 +201,7 @@
   font-size: 28px;
   line-height: 27px;
   margin-bottom: 20px;
-  color: #24387e;
+  color: #154973;
 
   @include breakpoint(laptop) {
     font-size: 30px;

@@ -8,7 +8,7 @@
 }
 
 .a-hero__link {
-  color: #d5820d;
+  color: #FACE00;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 16px;
@@ -17,11 +17,11 @@
   font-weight: bold;
 
   &:visited {
-    color: #d5820d;
+    color: #FACE00;
   }
 
   &:hover {
-    color: #f5a81c;
+    color: #FFE396;
     text-decoration: none;
   }
 }
@@ -40,7 +40,7 @@ a {
 .a-card__label {
   font-family: "Proxima Nova", sans-serif;
   font-size: 20px;
-  color: #128ec3;
+  color: #007AC2;
   margin: 20px 0;
   line-height: 1.2em;
   display: block;
@@ -59,7 +59,7 @@ a {
 
 .a-resultsCard__website.-link a {
   text-decoration: none;
-  color: #128ec3;
+  color: #007AC2;
   background: transparent;
 
   &:hover {
@@ -89,7 +89,7 @@ a {
   padding: 22px 40px;
   font-size: 17px;
   cursor: pointer;
-  border: 1px solid #24387E;
+  border: 1px solid #154973;
   text-decoration: none;
   display: inline-block;
   margin: 20px 0;
@@ -121,7 +121,7 @@ a {
   line-height: 15px;
   &:hover {
     border-color: #fff;
-    background-color: #00000060;
+    background-color: #000000;
   }
 }
 

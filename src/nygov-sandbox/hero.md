@@ -20,13 +20,13 @@ title: NYGov Profile test
 		}
 		@media(min-width: 1280px) {
 			.o-hero .o-hero__wrapper {
-				background-image: linear-gradient(to right,#000,rgba(0,0,0,0.25) 50%,rgba(0,0,0,0)), url('https://www.governor.ny.gov/sites/default/files/styles/hero_wide/public/2021-12/Geese_Hunting_Sunset.jpg?h=b5f6a62e&itok=0f7xZuGZ');
+				background-image: url('https://www.governor.ny.gov/sites/default/files/styles/hero_wide/public/2021-12/Geese_Hunting_Sunset.jpg?h=b5f6a62e&itok=0f7xZuGZ');
 			}
 			.o-hero .o-hero__wrapper.-right {
-				background-image: linear-gradient(to left,#000, #000 15%, rgba(0,0,0,0.50) 50%,rgba(0,0,0,0)), url('https://www.governor.ny.gov/sites/default/files/styles/hero_wide/public/2021-12/Geese_Hunting_Sunset.jpg?h=b5f6a62e&itok=0f7xZuGZ');
+				background-image: url('https://www.governor.ny.gov/sites/default/files/styles/hero_wide/public/2021-12/Geese_Hunting_Sunset.jpg?h=b5f6a62e&itok=0f7xZuGZ');
 			}
 			.o-hero .o-hero__wrapper.-bottom {
-				background-image: linear-gradient(to top,#000,rgba(0,0,0,0.25) 50%,rgba(0,0,0,0)), url('https://www.governor.ny.gov/sites/default/files/styles/hero_wide/public/2021-12/Geese_Hunting_Sunset.jpg?h=b5f6a62e&itok=0f7xZuGZ');
+				background-image: url('https://www.governor.ny.gov/sites/default/files/styles/hero_wide/public/2021-12/Geese_Hunting_Sunset.jpg?h=b5f6a62e&itok=0f7xZuGZ');
 			}
 		}
 </style>
@@ -38,7 +38,7 @@ title: NYGov Profile test
 
 <div class="o-hero -landingPage">
 <div class="o-hero__wrapper -left"></div>	
-<div class="bg-black text-white m-hero__meta -landingHero">			
+<div class="bg-black text-white m-hero__meta -landingHero">		 	
 <div class="m-landingHero__contentWrapper -left">
 <div class="m-landingHero__content">
 <!-- <div class="m-landingHero__liveButton">

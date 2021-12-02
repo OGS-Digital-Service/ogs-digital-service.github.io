@@ -27,7 +27,7 @@ storiesOf("02-Atoms/Title", module)
       backgrounds: [
         {
           name: "NYGOV Blue",
-          value: "#128ec3",
+          value: "#007AC2",
           default: true,
         },
       ],

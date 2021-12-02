@@ -1,0 +1,703 @@
+@mixin breakpoint($point) {
+  @if $point==desktop {
+    @media (min-width: 1280px) {
+      @content;
+    }
+  }
+
+  @else if $point==laptop {
+    @media (min-width: 1024px) {
+      @content;
+    }
+  }
+
+  @else if $point==tablet {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+
+  @else if $point==largeMobile {
+    @media (min-width: 425px) {
+      @content;
+    }
+  }
+
+  @else if $point==smallMobile {
+    @media (min-width: 320px) {
+      @content;
+    }
+  }
+
+  @else if $point==smallMobileOnly {
+    @media (max-width: 425px) {
+      @content;
+    }
+  }
+
+  @else if $point==mobileOnly {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
+
+  @else {
+    @warn "Breakpoint mixin supports: desktop, laptop, tablet, largeMobile, smallMobile, mobileOnly";
+  }
+}
+
+
+//Keyword Tag
+@mixin keyword-tag {
+  cursor: pointer;
+  display: inline-block;
+  height: 35px;
+  line-height: 35px;
+  position: relative;
+  padding: 0 15px;
+  font-size: 13px;
+  @extend .text-oswald;
+  @extend .bg-primary-gold;
+  @extend .text-black;
+  @extend .text-bold;
+  @extend .text-1-space;
+
+  &::after {
+    // triangle hover color
+    content: "";
+    position: absolute;
+    border-bottom: 17px solid transparent;
+    border-top: 17px solid transparent;
+    border-left: 17px solid #FACE00;
+    height: 0px;
+    width: 0px;
+    margin-right: -17px;
+    right: 0;
+  }
+
+  &:hover,
+  :active {
+    @extend .bg-primary-gold-light;
+    @extend .text-black;
+
+    &:after {
+      // triangle hover
+      border-left: 17px solid #FACE00;
+    }
+  }
+}
+//Landing Hero
+.m-hero__meta.-landingHero {
+  padding: 40px 20px;
+
+  @include breakpoint(tablet) {
+    padding: 40px 35px;
+  }
+
+  @include breakpoint(desktop) {
+    padding: 0px;
+    width: 100%;
+  }
+
+  .m-nygov__hero.-viewHeader {
+    display: none;
+
+    @include breakpoint(desktop) {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 30px;
+      background-color: rgba(36, 56, 126, 0.3);
+      z-index: 5;
+    }
+  }
+
+  .m-landingHero__contentWrapper {
+    @include breakpoint(desktop) {
+      margin-top: 90px;
+      margin-left: 60px;
+      width: 600px;
+    }
+
+    .m-landingHero__content {
+      .m-landingHero__liveButton {
+        margin-bottom: 15px;
+
+        @include breakpoint(desktop) {
+          margin-bottom: 10px;
+        }
+      }
+
+      .m-landingHero__title {
+        margin-bottom: 25px;
+
+        @include breakpoint(desktop) {
+          margin-bottom: 40px;
+          padding-top: 5px;
+        }
+
+        .a-hero__title {
+          font-size: 26px;
+          line-height: 30px;
+          margin: 0;
+
+          @include breakpoint(tablet) {
+            font-size: 36px;
+            line-height: 38px;
+          }
+
+          @include breakpoint(desktop) {
+            font-size: 48px;
+            line-height: 48px;
+          }
+        }
+      }
+
+      .m-landingHero__date {
+        margin-bottom: 15px;
+      }
+
+      .m-landingHero__description {
+        margin-bottom: 35px;
+
+        @include breakpoint(desktop) {
+          margin-bottom: 40px;
+        }
+
+        .a-hero__description.-text {
+          font-size: 16px;
+          line-height: 22px;
+
+          @include breakpoint(tablet) {
+            font-size: 18px;
+            line-height: 24px;
+          }
+        }
+      }
+    }
+
+    .m-landingHero__buttons {
+      @include breakpoint(largeMobile) {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+      }
+
+      @include breakpoint(tablet) {
+        max-width: 470px;
+      }
+
+      .a-hero__btn.-link {
+        line-height: 15px;
+        white-space: normal;
+        height: 60px;
+        width: 100%;
+
+        @include breakpoint(tablet) {
+          height: 50px;
+        }
+
+        &:hover {
+          @extend .text-black;
+          @extend .bg-white;
+        }
+
+        &:nth-child(2) {
+          margin-top: 20px;
+        }
+
+        &:nth-child(3) {
+          margin-top: 20px;
+        }
+
+        &:nth-child(4) {
+          margin-top: 20px;
+        }
+
+        @include breakpoint(tablet) {
+          width: 225px;
+
+          &:nth-child(2) {
+            margin-top: 0px;
+          }
+        }
+      }
+    }
+  }
+
+  @include breakpoint(desktop) {
+    //Right Placement
+    .m-landingHero__contentWrapper.-right {
+      float: right;
+      margin-right: 60px;
+      margin-left: 0;
+    }
+
+    //Bottom Placement
+    .m-landingHero__contentWrapper.-bottom {
+      display: flex;
+      width: auto;
+      height: 512px;
+      margin-top: 0px;
+
+      .m-landingHero__content {
+        margin-top: 0;
+        width: auto;
+        align-self: flex-end;
+
+        .m-landingHero__title {
+          margin-bottom: 25px;
+          padding-top: 0px;
+        }
+      }
+
+      .m-landingHero__description {
+        margin-bottom: 50px;
+      }
+
+      .m-landingHero__buttons {
+        align-self: flex-end;
+        display: flex;
+        flex-flow: column;
+        margin: 0 60px 50px 60px;
+        max-width: 200px;
+
+        .a-hero__btn.-link {
+          &:nth-child(2) {
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+  }
+  
+  
+}
+//LandingPage
+.o-hero.-landingPage {
+  position: relative;
+
+  .o-hero__wrapper {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    min-height: 256px;
+
+    @include breakpoint(tablet) {
+      min-height: 307px;
+    }
+
+    @include breakpoint(desktop) {
+      min-height: 512px;
+    }
+  }
+
+  .m-hero__meta.-landingHero {
+    @include breakpoint(desktop) {
+      background: none;
+      position: absolute;
+      top: 0;
+    }
+  }
+
+  .o-hero__liveVideo.-iframe {
+    position: absolute;
+    top: 0;
+    z-index: 101;
+    left: 0;
+    min-height: 250px;
+    border: 0;
+    width: 100%;
+
+    @include breakpoint(tablet) {
+      height: 307px;
+      left: 20%;
+      width: 60%;
+    }
+
+    @include breakpoint(desktop) {
+      height: 512px;
+      height: 99%;
+    }
+  }
+
+  .o-hero__liveVideo.-bg {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    min-height: 256px;
+    @extend .bg-black;
+
+    @include breakpoint(tablet) {
+      height: 307px;
+    }
+
+    @include breakpoint(desktop) {
+      height: 512px;
+    }
+  }
+
+  .o-hero__closeVideo {
+    font-size: 45px;
+    position: absolute;
+    top: 1%;
+    z-index: 103;
+    right: 1%;
+    transition: 150ms all ease;
+    @extend .text-white;
+
+    &:hover {
+      cursor: pointer;
+      color: lightgray;
+    }
+  }
+}
+
+
+
+.a-hero__btn.-link {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-flow: column;
+  height: 55px;
+  width: 200px;
+  font-family: "Proxima Nova", sans-serif;
+  font-weight: bold;
+  font-size: 13px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+  cursor: pointer;
+  border: 1px solid;
+  border-color: rgba(255, 255, 255, 0.7);
+  background-color: transparent;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 1;
+  position: relative;
+  transition: 150ms ease-in-out all;
+
+  &.-watchLive,
+  &.-archive {
+    justify-content: center;
+    flex-flow: row;
+    flex-wrap: wrap;
+    background-color: transparent;
+
+    &::before {
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      content: "\f04b";
+      font-size: 10px;
+      margin-right: 10px;
+    }
+  }
+
+  &:hover {
+    border: 1px solid #fff;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+}
+
+.a-hero__btn.-live {
+  text-transform: uppercase;
+  font-family: "Oswald";
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 15px;
+  line-height: 15px;
+  letter-spacing: 2px;
+  background: #b52c2c;
+  color: #fff;
+  width: 85px;
+  height: 35px;
+  cursor: pointer;
+  border: none;
+}
+
+.a-btn__link,
+.a-btn__link-form-embed {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  line-height: 15px;
+  text-align: center;
+  height: 50px;
+  cursor: pointer;
+  background: transparent;
+  width: 100%;
+  font-size: 13px;
+  font-family: "Proxima Nova";
+  font-weight: 600;
+  border: 1px solid;
+  border-color: black;
+  text-decoration: none;
+  transition: 150ms ease-in-out;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 0 20px;
+
+  @include breakpoint(tablet) {
+    width: 31%;
+  }
+
+  &:hover {
+    background-color: #FACE00;
+  }
+
+  &:visited {
+    color: black;
+  }
+}
+
+
+.a-buttons__highlight {
+  border: 1px solid #000000;
+  background-color: transparent;
+  font-size: 14px;
+  text-decoration: none;
+  cursor: pointer;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  @extend .text-black;
+  @extend .text-bold;
+  @extend .text-2-space;
+
+  &:hover {
+    background-color: #000000;
+    border: none;
+    @extend .text-white;
+  }
+}
+
+.a-btn {
+  margin-top: 24px;
+  font-family: "Proxima Nova", sans-serif;
+  font-weight: bold;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: #154973;
+  padding: 16px 24px;
+  text-align: center;
+  color: #fff;
+  border: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+  width: 200px;
+}
+
+
+.a-title {
+    font-size: 13px;
+    line-height: 15px;
+  
+    @include breakpoint(tablet) {
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
+  
+
+
+.a-headline {
+  font-size: 34px;
+  line-height: 36px;
+
+  @include breakpoint(tablet) {
+    font-size: 40px;
+    line-height: 44px;
+  }
+
+  @include breakpoint(laptop) {
+    font-size: 48px;
+    line-height: 48px;
+  }
+
+  .center-layout & {
+    font-weight: 900;
+  }
+}
+
+
+.a-hero__title {
+    font-size: 48px;
+    line-height: 48px;
+    font-family: "Proxima Nova", sans-serif;
+    font-weight: 800;
+  }
+  
+  .a-buttons__title {
+    font-family: "Oswald";
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+  }
+  
+
+
+
+  .text-primary-blue {
+    color: #154973;
+  }
+  
+  .text-primary-blue-accent {
+    color: #154973;
+  }
+  
+  .text-primary-gold {
+    color: #FACE00;
+  }
+  
+  .text-primary-gold-accent {
+    color: #FACE00;
+  }
+  
+  .text-primary-gold-light {
+    color: #FFE396;
+  }
+  
+  .text-primary-light-blue {
+    color: #457AA5;
+  }
+  
+  .text-primary-light-blue-accent {
+    color: #457AA5;
+  }
+  
+  .text-primary-links {
+    color: #007AC2;
+  }
+  
+  .text-links {
+    color: #007AC2;
+  }
+  
+  .text-footer-links {
+    color: #154973;
+  }
+  
+  .text-alerts {
+    color: #B52C2C;
+  }
+  
+  .text-alerts-rollover {
+    color: #8C1C1C;
+  }
+  
+  .text-dark {
+    color: #242424;
+  }
+  
+  .text-black {
+    color: #000000;
+  }
+  
+  .text-white {
+    color: #ffffff;
+  }
+  
+  .text-gray {
+    color: #62666A
+  }
+
+
+.text-proxima{
+    font-family: "Proxima Nova", sans-serif;
+  }
+  
+  .text-d-sari{
+    font-family: "D Sari", sans-serif;
+  }
+  
+  .text-oswald{
+    font-family: "Oswald", sans-serif;
+  }
+
+  .text-1-space{
+    letter-spacing: 1px;
+  }
+  .text-2-space{
+    letter-spacing: 2px;
+  }
+  .text-4-space{
+    letter-spacing: 4px;
+  }
+
+  .text-semi-bold {
+    font-weight: 600;
+  }
+  
+  .text-bold {
+    font-weight: bold;
+  }
+  
+  .text-extra-bold {
+    font-weight: 800;
+  }
+  
+  .text-regular {
+    font-weight: 400;
+  }
+  
+  .text-light {
+    font-weight: 200;
+  }
+
+
+
+.text-proxima{
+    font-family: "Proxima Nova", sans-serif;
+  }
+  
+  .text-d-sari{
+    font-family: "D Sari", sans-serif;
+  }
+  
+  .text-oswald{
+    font-family: "Oswald", sans-serif;
+  }
+
+  .a-hero__description.-text {
+    margin: 0;
+    font-size: 18px;
+    color: #ffffff;
+    font-family: "Proxima Nova", sans-serif;
+  }
+
+  .a-hero__date {
+    font-family: "Proxima Nova", sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .a-date-14 {
+    font-size: 14px;
+  }
+  
+  .a-date-42-extraBold {
+    font-size: 42px;
+    @extend .text-extra-bold;
+  }
+  
+  .a-date-13-semiBold {
+    font-size: 13px;
+    @extend .text-semi-bold;
+  }
+  
+  .a-date-13 {
+    font-size: 13px;
+  }
