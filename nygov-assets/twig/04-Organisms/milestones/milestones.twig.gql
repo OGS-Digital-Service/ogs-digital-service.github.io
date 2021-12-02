@@ -1,0 +1,34 @@
+fragment Milestones on ParagraphMilestones {
+  title: fieldMilestonesTitle
+  headline: fieldMilestonesHeadline
+  whatsnext: fieldMilestonesWhatsNext
+  color: fieldPmColorOptions
+  seemore: fieldMilestonesSeeMore {
+    title
+    url{
+      path
+    }
+  }
+  previewImage: fieldMilestonesImage {
+		entity {
+			... on MediaImage {
+				bgImg: fieldMediaImage {
+					derivative(style: MILESTONEBACKGROUND) {
+						url
+					}
+				}
+			}
+		}
+	}
+  milestoneParagraphs: fieldFinishedMilestones {
+    paragraph: entity{
+      ... on ParagraphMilestone {
+        name: fieldMilestoneName
+        date: fieldMilestoneDate {
+          date
+          value
+        }
+      }
+    }
+  }
+}

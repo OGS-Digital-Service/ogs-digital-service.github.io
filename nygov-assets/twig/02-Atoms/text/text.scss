@@ -1,0 +1,132 @@
+@import "../../01-Base/typography/weight/weight.scss";
+
+.a-text__html {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.a-card__description {
+  margin: 0;
+  line-height: 1.375em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.a-card__links {
+  font-size: 13px;
+  text-transform: uppercase;
+  display: inline-block;
+  letter-spacing: 1px;
+  margin-right: 10px;
+  color: #000000;
+  font-weight: bold;
+}
+
+.a-highlight__subtitle {
+  font-size: 20px;
+  @extend .text-semi-bold;
+}
+
+.a-hero__emergency.-text {
+  font-weight: bold;
+  color: #b52c2c;
+}
+
+.a-hero__agency.-text {
+  font-size: 13px;
+}
+
+.a-hero__description.-text {
+  margin: 0;
+  font-size: 18px;
+  color: #ffffff;
+  font-family: "Proxima Nova", sans-serif;
+}
+
+.a-results__totalRecord.-number {
+  color: #d5820d;
+  font-family: "Proxima Nova", sans-serif;
+  font-weight: 800;
+  font-size: 42px;
+}
+
+.a-results__totalRecord.-label {
+  font-family: "Proxima Nova", sans-serif;
+  font-weight: normal;
+  font-size: 19px;
+}
+
+.a-resultsCard__category {
+  font-family: "Proxima Nova", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.a-resultsCard__description {
+  font-family: "Proxima Nova", sans-serif;
+  font-weight: normal;
+}
+
+.a-resultsCard__footer.-label {
+  font-family: "Proxima Nova", sans-serif;
+  font-weight: 800;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.a-stats__description {
+  font-family: "Proxima Nova", sans-serif;
+  text-align: left;
+  color: #ffffff;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 16px;
+  height: 7.8em;
+
+  p {
+    margin: 0;
+    overflow: hidden;
+  }
+}
+
+.a-stats__stats {
+  color: #ffffff;
+  text-align: center;
+
+  h3 {
+    font-family: "Proxima Nova", sans-serif;
+    margin-bottom: 0;
+    font-size: 3.9em;
+    @extend .text-bold;
+
+    small {
+      font-family: "Proxima Nova", sans-serif;
+      font-size: 20px;
+    }
+  }
+
+  h4 {
+    font-family: "Oswald", sans-serif;
+    font-size: 18px;
+    margin: 0 0 40px;
+    text-transform: uppercase;
+    @extend .text-light;
+  }
+}
+
+.a-photoGallery__description,
+.a-videoEmbed__description {
+  font-family: "Proxima Nova", sans-serif;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.a-documents__description {
+  font-family: "Proxima Nova", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  margin: 16px 0;
+}

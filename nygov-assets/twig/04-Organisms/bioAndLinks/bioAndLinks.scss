@@ -1,0 +1,168 @@
+@import "../../01-Base/breakpoints/breakpoints.scss";
+
+.o-bioCardLogo {
+  display: flex;
+  flex-flow: column;
+  height: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  justify-content: flex-end;
+  width: 100%;
+
+  @media (min-width:525px) {
+    flex-flow: row;
+    height: 200px;
+    background-size: contain;
+    background-position: 0px;
+
+  }
+
+  @media (min-width:800px) {
+    height: 380px;
+    flex-flow: column;
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+
+
+  .o-bioCard_imageLink {
+    min-height: 192px;
+
+    @media (min-width:525px) {
+      height: 200px;
+      width: 37%;
+      position: relative;
+    }
+
+    @media (min-width:800px) {
+      min-height: 55%;
+      width: 100%;
+    }
+
+  }
+
+  .m-card__bioData {
+    @media (min-width:525px) {
+      width: 63%;
+      height: 165px;
+      margin: auto 0;
+      padding: 20px;
+    }
+
+    @media (min-width:800px) {
+      width: 100%;
+      padding: 25px 20px;
+      height: 150px;
+      margin: 0;
+    }
+
+    .a-government__title {
+      @include breakpoint (largeMobile) {
+        font-size: 14px;
+      }
+    }
+
+    .a-government__name {
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      @include breakpoint (largeMobile) {
+        font-size: 24px;
+      }
+    }
+    @media print {
+      a::after{
+        content: " (" attr(href) ")";
+      }
+    }
+  }
+
+}
+
+.o-linkCardLogo {
+  margin-bottom: 20px;
+  min-height: 340px;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-end;
+  background-position: 50%;
+  background-size: cover;
+
+  @media (min-width:525px) {
+    flex-flow: row;
+    min-height: 200px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0px;
+  }
+
+  @media (min-width:800px) {
+    width: 50%;
+    background-size: contain;
+    background-position: -23px;
+    display: flex;
+    flex-flow: row;
+    min-height: 175px;
+    height: 175px;
+    justify-content: flex-end;
+    margin: 0 10px;
+  }
+
+  .m-card__linkData {
+    min-height: 128px;
+    background-color: rgba(34, 34, 34, 0.8);
+    padding: 15px 20px;
+    width: 100%;
+
+    @media (min-width:525px) {
+      width: 63%;
+      height: 165px;
+      margin: auto 0;
+      padding: 20px;
+    }
+
+    @media (min-width:800px) {
+      width: 60.01%;
+      background-color: #222;
+      height: 100%;
+      margin: 0;
+    }
+
+    .a-government__title {
+      @include breakpoint (largeMobile) {
+        font-size: 14px;
+      }
+    }
+
+    .m-card__links {
+      display: flex;
+      margin-bottom: 15px;
+
+      a {
+        &:hover {
+          text-decoration: underline;
+        }
+        @include breakpoint(largeMobile) {
+          font-size: 16px;
+        }
+      }
+
+      @supports (-webkit-line-clamp: 1) {
+        a {
+          display: -webkit-box;
+          overflow: hidden;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 1;
+        }
+      }
+    }
+    @media print {
+      a::after{
+        content: " (" attr(href) ")";
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@import "../../01-Base/breakpoints/breakpoints";
+@import "../../01-Base/backgrounds/colors/colors.scss";
+
+.o-audio-photo {
+  &__content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .a-audio-photo__link:not(:last-child) {
+    margin-right: 4px;
+  }
+}

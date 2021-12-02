@@ -1,0 +1,1 @@
+import "./socialLink.scss";

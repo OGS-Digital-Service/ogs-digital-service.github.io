@@ -1,0 +1,16 @@
+  <style>
+    .text-colors-example{
+      width: 100%;
+      height:75px;
+      font-size: 22px;
+    }
+    p{
+    margin:0;
+    }
+  </style>
+  {% for item in colors %}
+  <div class="text-colors-example {{ item.className }}" style="background-color: {{item.background}};">
+    <p>class: {{ item.className }} </p>
+    <p>hex: {{ item.hex }} </p>
+  </div>
+  {% endfor %}

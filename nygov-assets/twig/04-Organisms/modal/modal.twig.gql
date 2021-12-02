@@ -1,0 +1,35 @@
+fragment Modal on ParagraphModal {
+  id
+  expires: fieldPmodExpires
+  color: fieldPmColorOptions
+  displayType: fieldPmodDisplayOptions
+  title: fieldTitle
+  description: fieldDescription {
+    content: processed
+  }
+  button: fieldLink {
+    title
+    uri
+  }
+	image: fieldImage {
+		entity {
+			... on MediaImage {
+				backgroundImg: fieldMediaImage {
+					derivative(style: GALLERYIMAGE) {
+						url
+					}
+				}
+				logoImg: fieldMediaImage {
+          alt
+					derivative(style: MODALLOGO) {
+						url
+					}
+				}
+			}
+		}
+	}
+  webform: fieldWebform {
+    id: targetId
+    status: status
+  }
+}

@@ -1,0 +1,1 @@
+import "./supporter.scss";

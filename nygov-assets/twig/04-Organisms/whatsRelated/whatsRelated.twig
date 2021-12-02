@@ -1,0 +1,25 @@
+{% set classes = [
+  'o-whats-related',
+  section.partOfNavigator ? 'navigator' : '',
+] %}
+
+<div class="{{classes|join(' ')}}">
+  <div class="o-whats-related__content-wrapper">
+
+    {% if section.partOfNavigator == true %}
+      <h2 class="a-title o-whats-related__title">{{ section.title }}</h2>
+    {% else %}
+      <div class="o-whats-related__title">
+        {{section.title}}
+      </div>
+    {% endif %}
+
+    <div class="o-whats-related__links">
+      {% for item in section.relatedLinks %}
+        <div class="o-whats-related__link-wrap">
+          <a href="{{item.links.contentLink.path}}" class="o-whats-related__link">{{item.links.label}}</a>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

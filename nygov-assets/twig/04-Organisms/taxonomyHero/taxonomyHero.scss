@@ -1,0 +1,147 @@
+@import "../../01-Base/breakpoints/breakpoints";
+
+//Agency Term
+.o-hero.-agencyTerm {
+  .o-hero__wrapper {
+    display: flex;
+    flex-flow: column;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    min-height: 256px;
+    width: 100%;
+
+    @include breakpoint(tablet) {
+      flex-flow: row;
+      min-height: 307px;
+      padding-left: 35px;
+    }
+
+    @include breakpoint(desktop) {
+      min-height: 427px;
+      padding-left: 50px;
+    }
+
+    //Mobile logo 
+    .m-agencyHero__logoWrapper {
+      display: flex;
+      justify-content: center;
+      padding-top: 35px;
+
+      @include breakpoint(tablet) {
+        display: none;
+      }
+
+      .m-agencyHero__logo {
+        width: 130px;
+        height: 130px;
+        background-position: center;
+        background-repeat: no-repeat;
+        border: 5px solid #fff;
+      }
+    }
+
+    .m-hero__meta.-agencyHero {
+      background: none;
+      padding: 35px 20px;
+
+
+      @include breakpoint(tablet) {
+        width: 70%;
+        padding: 0px;
+      }
+    }
+
+    //Tablet and Desktop logo 
+    .m-agencyHero__logoWrapper.-wideScreen {
+      display: none;
+
+      @include breakpoint(tablet) {
+        display: flex;
+        flex-flow: column;
+        align-items: flex-end;
+        padding-right: 35px;
+        padding-top: 0px;
+        width: 30%;
+      }
+
+      @include breakpoint(desktop) {
+        padding-right: 50px;
+      }
+
+      .m-agencyHero__logo {
+        width: 130px;
+        height: 130px;
+        background-position: center;
+        background-repeat: no-repeat;
+        border: 5px solid #fff;
+
+        @include breakpoint(desktop) {
+          width: 160px;
+          height: 160px;
+        }
+      }
+    }
+  }
+}
+
+//AgencyTerm Non-Background Image
+.o-hero.-noImage.-agencyTerm {
+  .o-hero__wrapper {
+    border-bottom: 1px solid #ffffff;
+
+    @include breakpoint(tablet) {
+      min-height: 220px;
+    }
+
+    @include breakpoint(desktop) {
+      min-height: 275px;
+    }
+
+    .m-hero__meta.-agencyHero {
+      .a-hero__title {
+        @include breakpoint(desktop) {
+          width: 800px;
+        }
+      }
+    }
+  }
+}
+
+//County Term
+.o-hero.-countyTerm {
+  .o-hero__wrapper {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    padding: 30px 20px;
+    min-height: 320px;
+
+    @include breakpoint(largeMobile) {
+      display: flex;
+      align-items: center;
+    }
+
+    @include breakpoint(tablet) {
+      align-items: flex-start;
+      padding: 70px 35px 0;
+      min-height: 307px;
+    }
+
+    @include breakpoint(desktop) {
+      padding: 110px 60px 0;
+      min-height: 427px;
+    }
+
+    .m-hero__meta.-countyHero {
+      background: none;
+    }
+  }
+}
+
+//County Non-Image Term
+.o-hero.-noImage.-countyTerm {
+  .o-hero__wrapper {
+    border-bottom: 1px solid #ffffff;
+  }
+}

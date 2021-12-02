@@ -1,0 +1,337 @@
+@import "../../01-Base/breakpoints/breakpoints";
+@import "../../01-Base/typography/fontFamilies/fontFamilies.scss";
+@import '../../01-Base/typography/weight/weight.scss';
+@import '../../01-Base/typography/colors/colors.scss';
+
+.o-milestones{
+  @extend .text-proxima;
+  &.bg-primary-gray {
+    .a-milestones__title {
+      color: black;
+    }
+    .o-milestones__list {
+      .m-milestone {
+        color: black;
+        border-bottom: 1px solid lighten(#D0D0CE, 2%);
+        .milestone__checkmark {
+          @extend .text-primary-blue;
+        }
+        .date {
+          @extend .text-primary-blue;
+        }
+      }
+    }
+
+    .a-milestones__whatsnext {
+      @extend .text-primary-blue;
+    }
+
+    .a-milestones__headline {
+      @extend .text-primary-blue;
+    }
+
+    .o-milestones__flex-inner .o-milestones__latest .latest,
+    .o-milestones__flex-inner .o-milestones__latest .latest-checkmark {
+      @extend .text-primary-blue;
+      .date {
+        @extend .text-primary-blue;
+      }
+    }
+
+    .o-milestones__flex-inner .o-milestones__color-wrap {
+      background-color: rgba(208, 208, 206, .9);
+    }
+
+  }
+  &.bg-primary-gold {
+    .a-milestones__title {
+      color: black;
+    }
+    .o-milestones__list {
+      .m-milestone {
+        color: black;
+        border-bottom: 1px solid lighten(#D5820D, 2%);
+        .milestone__checkmark {
+          @extend .text-primary-blue;
+        }
+        .date {
+          @extend .text-primary-blue;
+        }
+      }
+    }
+
+    .a-milestones__whatsnext {
+      @extend .text-primary-blue;
+    }
+
+    .a-milestones__headline {
+      @extend .text-primary-blue;
+    }
+
+    .o-milestones__flex-inner .o-milestones__latest .latest,
+    .o-milestones__flex-inner .o-milestones__latest .latest-checkmark {
+      @extend .text-primary-blue;
+      .date {
+        @extend .text-primary-blue;
+      }
+    }
+
+    .o-milestones__flex-inner .o-milestones__color-wrap {
+      background-color: rgba(212, 130, 12, .9);
+    }
+  }
+
+  &.whatsnext .o-milestones__list {
+    width: 100%;
+    @include breakpoint(laptop) {
+      width: 37.5%;
+    }
+  }
+  &.whatsnext .in-progress .m-milestone {
+    margin-left: 11%;
+  }
+
+  &.latest .in-progress .m-milestone {
+    margin-left: 11%;
+    @include breakpoint(laptop) {
+      margin-left: 8%;
+    }
+  }
+
+  &.latest .o-milestones__list {
+    width: 100%;
+    @include breakpoint(laptop) {
+      width: 50%;
+    }
+  }
+
+  .o-milestones__flex {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    @include breakpoint(laptop) {
+      flex-direction: row;
+    }
+    .o-milestones__title-wrapper {
+      flex-grow: 4;
+      text-align: center;
+      position: relative;
+      @include breakpoint(laptop) {
+        text-align: left;
+      }
+    }
+    .o-milestones__seemore {
+      padding: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      @include breakpoint(laptop) {
+        width: auto;
+      }
+      .a-hero__btn {
+        margin: auto;
+        //width: 100%;
+        padding: 0px 10px;
+        @include breakpoint(laptop) {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .a-milestones__in-progress-headline {
+    top: 80px;
+    padding-bottom: 42px;
+    border-bottom: 1px solid rgba(255,255,255,0.5);
+    @include breakpoint(laptop) {
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+  }
+  .a-milestones__in-progress-title {
+    top: 50px;
+    margin-bottom: 10px;
+    margin-top: 12px;
+    padding-top: 40px;
+    @include breakpoint(laptop) {
+      padding-top: 0;
+    }
+  }
+  .a-milestones__in-progress-title,
+  .a-milestones__in-progress-headline {
+    position: initial;
+    left: 4%;
+    @include breakpoint(laptop) {
+      flex-direction: row;
+      position: absolute;
+    }
+  }
+  .o-milestones__flex-inner {
+    display: block;
+    @include breakpoint(laptop) {
+      flex-direction: row;
+      display: flex;
+      justify-content: space-between;
+    }
+    .o-milestones__list {
+      padding-top: 10px;
+      padding-bottom: 30px;
+      text-align: left;
+      padding-left: 0px;
+      float: left;
+      @include breakpoint(tablet) {
+        padding-left: 8px;
+      }
+      @include breakpoint(laptop) {
+        margin: 0;
+        padding-left: 0px;
+        padding-top: 150px;
+        float: none;
+      }
+
+      .m-milestone {
+        padding: 25px 8% 20px 0;
+      }
+    }
+
+    .o-milestones__color-wrap {
+      background-color: rgba(18, 142, 195, .9);
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      padding: 50px 8%;
+      height: 100%;
+      @include breakpoint(laptop) {
+        padding: 100px 8%;
+      }
+    }
+
+    .o-milestones__whatsnext {
+      text-align: center;
+      flex-grow: 1;
+      float: right;
+      width: 100%;
+      .a-milestones__title {
+        font-size: 16px;
+        @extend .text-oswald;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+      @include breakpoint(tablet) {
+        text-align: center;
+        margin-top: 0;
+      }
+      @include breakpoint(laptop) {
+        text-align: center;
+        margin: 0;
+        margin-top: 0px;
+        float: none;
+        width: auto;
+      }
+    }
+    .o-milestones__latest {
+      text-align: center;
+      margin: auto;
+      flex-grow: 1;
+      margin-top: 0;
+      float: right;
+      width: 100%;
+      @include breakpoint(laptop) {
+        width: 50%;
+      }
+      .a-milestones__title {
+        font-size: 16px;
+        margin: 10px 0;
+        @extend .text-oswald;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+      .latest {
+        color: white;
+        .date {
+          font-size: 13px;
+          @extend .text-bold;
+        }
+        h4 {
+          margin-top: 20px;
+          margin-bottom: 30px;
+          font-size: 40px;
+        }
+      }
+      .latest-checkmark {
+        font-size: 54px;
+        color: white;
+      }
+      @include breakpoint(tablet) {
+        text-align: center;
+      }
+      @include breakpoint(laptop) {
+        text-align: center;
+        margin: 0;
+        margin-top: 0px;
+        float: none;
+        width: auto;
+      }
+    }
+  }
+  .a-milestones__title {
+    @extend .text-oswald;
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0;
+  }
+  .a-milestones__headline {
+    color: #fff;
+    margin: 0;
+    font-size: 40px;
+    @extend .text-bold;
+    line-height: 1;
+    z-index: 1;
+  }
+  .o-milestones__list {
+    .m-milestone {
+      position: relative;
+      padding: 30px 0 30px 0;
+      border-bottom: 1px solid #1695cb;
+      display: flex;
+      .milestone__checkmark {
+        color: white;
+        margin-right: 10px;
+        font-size: 20px;
+      }
+      .a-milestone__icon {
+        color: #FFF;
+      }
+      .date {
+        display: inline-block;
+        color: #FFF;
+        font-size: 13px;
+        text-transform: uppercase;
+        @extend .text-bold;
+      }
+      h4 {
+        margin-top: 10px;
+        margin-bottom: 0px;
+        font-size: 22px;
+        @extend .text-bold;
+      }
+    }
+  }
+  .a-milestones__whatsnext {
+    text-align: center;
+    color: #FFF;
+    padding: 0 10px;
+    font-size: 40px;
+    margin-top: 55px;
+    margin-bottom: 55px;
+    @extend .text-bold;
+  }
+
+  @media print{
+    a::after{
+      content: " (" attr(href) ")";
+    }
+  }
+}

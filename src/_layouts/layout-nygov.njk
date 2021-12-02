@@ -4,9 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    
+    {% include '_css-linknygov.njk' %}
+    {# {% include '_css-global.njk' %} #}
+    <style>
+    body {margin:0 auto;}
+    </style>
     <title>{{ title }}</title>
   </head>
   <body class="">
-   
+   {{ content | safe }}
   </body>
 </html>

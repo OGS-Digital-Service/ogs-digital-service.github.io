@@ -1,0 +1,124 @@
+@import "../../01-Base/breakpoints/breakpoints";
+@import "../../01-Base/typography/fontFamilies/fontFamilies.scss";
+@import '../../01-Base/typography/weight/weight.scss';
+@import '../../01-Base/typography/textEffects/effects.scss';
+
+.o-quote {
+  @extend .text-proxima;
+
+  .fa-quote-left {
+    z-index: 0;
+    position: relative;
+    color: #d5820d;
+    top: 60px;
+    opacity: 0.3;
+    left: -30px;
+    font-size: 60px;
+    margin-top: -80px;
+
+    @include breakpoint(largeMobile) {
+      font-size: 80px;
+      top: 70px;
+
+      @include breakpoint(tablet) {
+        font-size: 100px;
+        top: 80px;
+      }
+    }
+  }
+
+  max-width: 780px;
+  margin: 0 auto;
+  font-size: 24px;
+  padding: 15px;
+
+  &.navigator {
+    margin: 0;
+    width: 100%;
+  }
+
+  .a-frame__title {
+    margin: auto;
+  }
+
+  .o-quote__description {
+    position: relative;
+    z-index: 1;
+    font-size: 24px;
+    @extend .text-extra-bold;
+    @extend .text-italic;
+
+    @include breakpoint(laptop) {
+      font-size: 30px;
+    }
+  }
+
+  .o-quote__credit {
+    @extend .text-semi-bold;
+    font-size: 21px;
+    margin: 5px;
+  }
+
+  .o-quote__title {
+    @extend .text-italic;
+    font-size: 21px;
+    margin: 5px;
+  }
+
+  .o-quote__content-wrapper {
+    margin: auto;
+    overflow-wrap: break-word;
+  }
+
+}
+
+.node--type-program,
+.node--type-landing-page {
+
+  .o-quote {
+    padding: 15px;
+    max-width: 100%;
+    width: 100%;
+
+    .o-quote__content-wrapper {
+      margin: auto;
+      max-width: 900px;
+      overflow-wrap: break-word;
+
+      .o-quote__description {
+        @extend .text-extra-bold;
+        @extend .text-italic;
+        font-size: 30px;
+      }
+
+      .o-quote__credit {
+        @extend .text-semi-bold;
+        font-size: 21px;
+        margin: 5px;
+      }
+
+      .o-quote__title {
+        @extend .text-italic;
+        font-size: 20px;
+        margin: 5px;
+      }
+    }
+
+    &.bg-primary-blue {
+      color: white;
+
+      .fa-quote-left {
+        color: white;
+      }
+    }
+
+    &.bg-primary-gold {
+      .fa-quote-left {
+        color: white;
+      }
+    }
+    @media print {
+      background-color: unset;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+fragment connectFooterMenu on Menu {
+  name
+  links {
+    label
+    url {
+      path
+      routed
+    }
+  }
+}

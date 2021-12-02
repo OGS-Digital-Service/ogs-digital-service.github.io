@@ -1,0 +1,39 @@
+.p-notFound{
+
+  &__content{
+    max-width: 580px;
+    margin: 60px auto;
+    padding: 0 20px;
+    font-size: 18px;
+  }
+
+  &__logo{
+    display: flex;
+    justify-content: center;
+  }
+
+  .p-notFound__headline{
+    font-family: "Proxima Nova";
+    font-weight: bold;
+    font-size: 32px;
+    color: #24387e;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  ul > li{
+    margin-bottom: 12px;
+  }
+
+  ul > li::before {
+    content: "\2022";
+    color: #128ec3;
+    font-size: 20px;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+  }
+}

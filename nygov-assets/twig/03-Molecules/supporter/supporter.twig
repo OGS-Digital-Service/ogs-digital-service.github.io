@@ -1,0 +1,60 @@
+{% set bg_class = color ? 'bg-primary-' ~ color: '' %}
+{% set classes = [
+  'm-supporter',
+  'supporter_' ~ supporterID,
+  bg_class,
+] %}
+
+{% if image is not empty %}
+	{% set bg_image_desktop = section.image.entity.desktopImg.derivative.url %}
+	{% set bg_image_tablet = section.image.entity.desktopImg.derivative.url %}
+	{% set bg_image_mobile = section.image.entity.desktopImg.derivative.url %}
+{% endif %}
+
+{% set bg_image_desktop = image ? image: '' %}
+<style>
+	.m-supporter.supporter_{{supporterID}}::before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		background: url('{{ bg_image_desktop|raw }}');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		opacity: .15;
+		content: "";
+		z-index: 0;
+	}
+</style>
+
+<div class="{{classes|join(' ')}}">
+	<div class="info">
+		<p class="title">{{ title }}</p>
+		<p class="name">{{ name }}</p>
+	</div>
+	<div class="m-supporter__links">
+		<p class="read-quote">
+			{% include "@storybook/02-Atoms/icons/icons.twig"  with { icon: "quote-left" } %}
+			Read Quote
+		</p>
+		<div class="social-links">
+			{% if twitter %}
+				{% include "@storybook/02-Atoms/link/link.twig" with {url: twitter, icon: "a-twitter -icon", newTab: true} %}
+			{% endif %}
+			{% if facebook %}
+				{% include "@storybook/02-Atoms/link/link.twig" with {url: facebook, icon: "a-facebook -icon", newTab: true} %}
+			{% endif %}
+		</div>
+	</div>
+	<div class="quote-overlay {{ bg_class }}">
+		{% include "@storybook/02-Atoms/icons/icons.twig"  with { icon: "quote-left" } %}
+		<span class="close">
+			{% include "@storybook/02-Atoms/icons/icons.twig"  with { icon: "times-circle" } %}
+		</span>
+		<p class="quote">{{ quote }}</p>
+		<p class="name">{{ name }}</p>
+		{% include "@storybook/02-Atoms/icons/icons.twig"  with { icon: "quote-right" } %}
+	</div>
+</div>

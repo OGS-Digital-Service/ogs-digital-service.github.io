@@ -1,0 +1,49 @@
+fragment CategoriesTiles on ParagraphCategoriesTiles {
+	title: fieldTitle
+  headline: fieldHeadline
+  color: fieldPctBackgroundColor
+  icons: fieldPctIconsOptions
+  description: fieldDescription {
+    content: processed
+  }
+  backgroundImage: fieldPctBackgroundImage {
+    entity {
+      ... on MediaImage {
+        bgImg: fieldMediaImage {
+          derivative(style: SECTIONSBACKGROUNDIMAGE) {
+            url
+          }
+        }
+      }
+    }
+  }
+  linksTilesParagraphs: fieldPctLinksTiles {
+    paragraph: entity {
+      ... on ParagraphCategoriesTilesLinks {
+        link: fieldLink {
+          url {
+            path
+          }
+          title
+        }
+        newWindow: fieldOpenInNewWindow
+      }
+    }
+  }
+  iconTiles: fieldPctTiles {
+    entity {
+      ... on MediaIconImages {
+        iconImg: fieldMediaImage {
+          url
+        }
+        iconLink: fieldMiiLink {
+          url {
+            path
+          }
+          title
+        }
+        newWindow: fieldOpenInNewWindow
+      }
+    }
+  }
+}

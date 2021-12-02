@@ -1,0 +1,25 @@
+fragment Documents on ParagraphDocuments {
+  title: fieldTitle
+  partOfNavigator: fieldPartOfNavigatorSidebar
+  description: fieldDescription {
+    content: processed
+  }
+  documents: fieldPdQueue {
+    document: entity {
+      ... on MediaDocument {
+        name: name
+        altText: fieldMdAltText
+        description: fieldMdDescription {
+          content: processed
+        }
+        media: fieldDocument {
+          file: entity {
+            ... on File {
+              url
+            }
+          }
+        }
+      }
+    }
+  }
+}

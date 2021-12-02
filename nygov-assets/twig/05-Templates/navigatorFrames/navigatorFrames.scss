@@ -1,0 +1,236 @@
+@import "../../01-Base/typography/colors/colors.scss";
+@import "../../01-Base/breakpoints/breakpoints.scss";
+
+.t-navigator__sidebar.-mobile.sticky {
+  position: fixed;
+  top: 50px;
+  width: 100%;
+  z-index: 101;
+}
+
+.t-navigator__sidebar .t-navigator__content.bottomStop {
+  position: relative;
+  width: 100%;
+}
+
+.t-section__container.-navigator {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 20px;
+
+  .t-section__anchor{
+    display: block;
+    position: relative;
+    top: -50px;
+    visibility: hidden;
+  }
+
+  // Make sure that any class title has a .a-title class
+  .a-title,
+  .a-frame__title {
+    display: none;
+  }
+
+  .t-section__title {
+    font-size: 30px;
+    margin: 0;
+
+    @include breakpoint(tablet) {
+      font-size: 36px;
+    }
+  }
+
+  .t-section__wrapper {
+    margin-bottom: 30px;
+  }
+
+  .t-section__content {
+    margin-top: 18px;
+  }
+
+  .a-photoGallery__description {
+    max-width: 630px;
+  }
+
+  @include breakpoint(tablet) {
+    width: 60%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 50px;
+    margin-top: 70px;
+  }
+}
+
+.t-navigator__sidebar.-desktop.-wrapper {
+  display: none;
+  @include breakpoint(tablet) {
+    display: flex;
+    flex-flow: column;
+    min-width: 150px;
+    width: 20%;
+
+    .t-navigator__content.sticky {
+      position: fixed;
+      top: 50px;
+      width: 20%;
+      z-index: 101;
+
+      .t-navigator__arrow {
+        left: 100%;
+      }
+    }
+
+    header {
+      background-color: #1d1d1d;
+      font-size: 0.875em;
+      line-height: 1.5em;
+      font-family: "Oswald";
+      text-transform: uppercase;
+      padding: 24px 20%;
+      color: #cbcbcb;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      font-weight: bold;
+      box-sizing: border-box;
+      border-bottom: 1px solid #404040;
+      letter-spacing: 0.05em;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .t-navigator__list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      .t-navigator__listItem {
+        padding: 24px 20%;
+        border-bottom: 1px solid #404040;
+        line-height: 1.65em;
+
+        &.active .t-navigator__link {
+          color: #d5820d;
+        }
+      }
+
+      .t-navigator__link {
+        text-decoration: none;
+        letter-spacing: 0.01em;
+        padding: 0;
+        border-bottom: none;
+        color: white;
+        font-weight: bold;
+        text-rendering: optimizeLegibility;
+        transition: color 0.3s 0s ease-in-out;
+      }
+    }
+
+    .t-navigator__arrow {
+      display: block;
+      width: 0;
+      height: 0;
+      border-top: 20px solid transparent;
+      border-bottom: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-left: 20px solid #242424;
+      transition: top 0.3s 0s ease-in-out;
+      position: relative;
+      left: 100%;
+    }
+  }
+}
+
+.t-navigator__sidebarWaypoint.-mobile {
+  @include breakpoint(tablet) {
+    display: none;
+  }
+}
+
+.t-navigator__sidebar.-mobile {
+  @include breakpoint(tablet) {
+    display: none;
+  }
+
+  .t-navigator__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .t-navigator__link {
+    text-decoration: none;
+    font-size: 1.05em;
+  }
+
+  .t-navigator__listItem {
+    height: 70px;
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &.active .t-navigator__link {
+      @extend .text-primary-gold;
+    }
+
+    .t-navigator__link {
+      @extend .text-white;
+    }
+  }
+
+  .t-navigator__menuIcons {
+    font-size: 1.5em;
+  }
+
+  &.-closed {
+    .t-navigator__listItem {
+      display: none;
+    }
+    .t-navigator__listItem.active {
+      display: flex;
+
+      .t-navigator__menuIcons {
+        display: flex;
+        .fa-folder-plus {
+          display: flex;
+        }
+        .fa-folder-minus {
+          display: none;
+        }
+      }
+    }
+
+    .t-navigator__menuIcons {
+      display: none;
+    }
+  }
+
+  &.-opened {
+    .t-navigator__listItem.active {
+      .t-navigator__link {
+        @extend .text-primary-gold;
+      }
+    }
+
+    .t-navigator__listItem {
+      .t-navigator__link {
+        @extend .text-white;
+      }
+      .t-navigator__menuIcons {
+        display: none;
+      }
+    }
+
+    .t-navigator__listItem.first {
+      .t-navigator__menuIcons {
+        display: flex;
+        .fa-folder-plus {
+          display: none;
+        }
+        .fa-folder-minus {
+          display: flex;
+        }
+      }
+    }
+  }
+}

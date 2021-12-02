@@ -1,0 +1,50 @@
+fragment ServicePage on NodeService {
+	navigator: fieldSNavigatorToggle
+  dateOption: fieldSDateToggle
+  dateCreated: entityCreated
+  title
+  contentType: entityBundle
+	featuredImage: fieldSFeaturedImage {
+		entity {
+			... on MediaImage {
+				desktopImg: fieldMediaImage {
+					derivative(style: HEROWIDE) {
+						url
+					}
+				}
+				tabletImg: fieldMediaImage {
+					derivative(style: HERONARROW) {
+						url
+					}
+				}
+				mobileImg: fieldMediaImage {
+					derivative(style: HEROMOBILE) {
+						url
+					}
+				}
+			}
+		}
+	}
+	subheadline: fieldSSubHeadline
+	transactionTime: fieldSTransactionTime
+	applyButton: fieldSHowToApply {
+		url: uri
+		linkText: title
+	}
+	sections: fieldSections {
+		section: entity {
+			type: __typename
+			...Buttons
+			...CardsQueue
+			...Documents
+			...TranslatedDocuments
+			...WYSIWYG
+			...Contact
+			...PhotoGallery
+			...Quote
+			...VideoEmbed
+      ...Modal
+      ...WhatsRelated
+		}
+	}
+}

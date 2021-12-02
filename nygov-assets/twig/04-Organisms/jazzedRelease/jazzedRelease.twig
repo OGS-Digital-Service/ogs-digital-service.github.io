@@ -1,0 +1,146 @@
+{% set tableExist1 = '<table' in section.wysiwyg1.processed ? true : false %}
+{% set tableExist2 = '<table' in section.wysiwyg2.processed ? true : false %}
+{% set tableExist3 = '<table' in section.wysiwyg3.processed ? true : false %}
+{% set tableExist4 = '<table' in section.wysiwyg4.processed ? true : false %}
+
+{% set rt_index = tableExist1 or tableExist2 or tableExist3 or tableExist4 ? 'o-jazzed-release__responsive_table_' ~ index : ''  %}
+
+<div class="o-jazzed-release">
+  <div class="o-jazzed-release__content-wrapper">
+    {% if section.wysiwyg1 %}
+      <div class="o-jazzed-release__wysiwyg1 o-wysiwyg {{ rt_index }}">
+        {% include '@storybook/02-Atoms/text/text.twig' with {
+            text: section.wysiwyg1.processed,
+            classNames: "o-jazzed-release__wysiwyg1",
+            variant: "html" } %}
+      </div>
+    {% endif %}
+
+    {% if section.videoEmbed %}
+      <div class="o-jazzed-release__videoEmbed">
+        {% include '@storybook/03-Molecules/video/video.twig' with {
+          videoLink: "https://www.youtube.com/embed/" ~ section.videoEmbed,
+          classNames: "o-jazzed-release__video-embed",
+          variant: "html" }
+        %}
+      </div>
+    {% endif %}
+
+    {% if section.audioLink.linkText or section.photosLink.linkText or section.otherLink.linkText %}
+			<div class="o-jazzed-release__audio-photos-buttons">
+				{% if section.audioLink.linkText and section.audioLink.url.path is not empty %}
+          {% include "@storybook/02-Atoms/link/link.twig" with {url: section.audioLink.url.path, content: section.audioLink.linkText, variant: "a-audio-photo__link", newTab: true} %}
+        {% endif %}
+
+        {% if section.photosLink.linkText and section.photosLink.url.path is not empty %}
+          {% include "@storybook/02-Atoms/link/link.twig" with {url: section.photosLink.url.path, content:  section.photosLink.linkText, variant: "a-audio-photo__link", newTab: true} %}
+        {% endif %}
+
+        {% if section.otherLink.linkText and section.otherLink.url.path is not empty %}
+          {% include "@storybook/02-Atoms/link/link.twig" with {url: section.otherLink.url.path, content:  section.otherLink.linkText, variant: "a-audio-photo__link", newTab: true} %}
+        {% endif %}
+			</div>
+    {% endif %}
+
+    {% if section.wysiwyg2 %}
+      <div class="o-jazzed-release__wysiwyg2 o-wysiwyg {{ rt_index }}">
+        {% include '@storybook/02-Atoms/text/text.twig' with {
+            text: section.wysiwyg2.processed,
+            classNames: "o-jazzed-release__wysiwyg2",
+            variant: "html" } %}
+      </div>
+    {% endif %}
+
+    {% if section.quote %}
+      <div class="o-quote">
+        <div class="o-quote__content-wrapper">
+          <span class="fas fa-quote-left"></span>
+          <div class="o-quote__description">{{ section.quote.processed|raw }}</div>
+          <div class="o-quote__credit">{{ section.quoteCredit }}</div>
+        </div>
+      </div>
+    {% endif %}
+
+    {% if section.wysiwyg3 %}
+      <div class="o-jazzed-release__wysiwyg3 o-wysiwyg {{ rt_index }}">
+        {% include '@storybook/02-Atoms/text/text.twig' with {
+          text: section.wysiwyg3.processed,
+          classNames: "o-jazzed-release__wysiwyg3",
+          variant: "html" } %}
+      </div>
+    {% endif %}
+
+    {% if section.rawHtml %}
+      <div class="o-jazzed-release__flikr-embed">
+        {{ section.rawHtml|raw }}
+      </div>
+    {% endif %}
+
+    {% if section.wysiwyg4 %}
+      <div class="o-jazzed-release__wysiwyg4 o-wysiwyg {{ rt_index }}">
+        {% include '@storybook/02-Atoms/text/text.twig' with {
+          text: section.wysiwyg4.processed,
+          classNames: "o-jazzed-release__wysiwyg4",
+          variant: "html" } %}
+      </div>
+    {% endif %}
+
+    {% if section.contactEmail or section.contactPhone or section.contactTitle %}
+      <div class="o-jazzed-release__contact">
+        <div class="o-contact__wrapper">
+          <div class="o-contact__container">
+
+            {% if section.contactTitle %}
+              {% include '@storybook/02-Atoms/title/title.twig' with { title: section.contactTitle, variant: 'title', classNames: "a-contact__title"} %}
+            {% endif %}
+
+            {% if section.contactPhone or section.contactEmail %}
+              <div class="o-contact__phone-email-container">
+                {% if section.contactPhone %}
+                  <div class="o-contact__phone o-contact__contact-info">
+                    {% include '@storybook/02-Atoms/title/title.twig' with { title: "Contact us by phone:", variant: 'title', classNames: "a-contact__phoneTitle"} %}
+                    {% include '@storybook/02-Atoms/text/text.twig' with { text: section.contactPhone|replace({ '\r\n': '<br />' })|telLinks, variant: 'html', classNames: "a-contactDetail"} %}
+                  </div>
+                {% endif %}
+
+                {% if section.contactEmail %}
+                  <div class="o-contact__email o-contact__contact-info">
+                    {% include '@storybook/02-Atoms/title/title.twig' with { title: "Contact us by email:", variant: 'title', classNames: "a-contact__emailTitle"} %}
+                    {% include '@storybook/02-Atoms/link/link.twig' with { url: 'mailto:' ~ section.contactEmail, content: section.contactEmail, variant: "a-contactDetail"} %}
+                  </div>
+                {% endif %}
+              </div>
+            {% endif %}
+
+          </div>
+        </div>
+      </div>
+    {% endif %}
+
+    {% if section.translations %}
+      <div class="o-jazzed-release__translations">
+        {% include '@storybook/02-Atoms/title/title.twig' with { title: "Translations", variant: 'title', classNames: "a-contact__title"} %}
+          {% for item in section.translations|sortTranslations %}
+            {% include "@storybook/03-Molecules/document/document.twig"  with {
+              item: "downloadLink",
+              url: item.translatedDocument.media.file.url,
+              translated: item.translatedDocument.translated,
+              english: item.translatedDocument.english
+            } %}
+          {% endfor %}
+      </div>
+    {% endif %}
+
+  </div>
+</div>
+
+{% if tableExist1 or tableExist2 or tableExist3 or tableExist4 %}
+  <script>
+    document.addEventListener("DOMContentLoaded", basicTable, false);
+    function basicTable() {
+      jQuery(".{{ rt_index }} table").each(function(){
+        jQuery(this).basictable();
+      })
+    }
+  </script>
+{% endif %}

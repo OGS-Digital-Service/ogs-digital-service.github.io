@@ -1,0 +1,20 @@
+{% set classes = [
+  'o-documents',
+  node.navigator ? 'navigator' : '',
+] %}
+
+<div class="{{classes|join(' ')}}">
+  <h2 class="a-frame__title">{{ section.title }}</h2>
+
+  {% if section.description %}
+    {% include '@storybook/02-Atoms/text/text.twig' with { text: section.description.content, variant: "html", classNames: "a-documents__description"} %}
+  {% endif %}
+  {% for item in section.documents %}
+    {% include "@storybook/03-Molecules/document/document.twig"  with {
+      item: "downloadLink",
+      url: item.document.media.file.url,
+      english: item.document.name,
+      description: item.document.description.content
+    } %}
+  {% endfor %}
+</div>

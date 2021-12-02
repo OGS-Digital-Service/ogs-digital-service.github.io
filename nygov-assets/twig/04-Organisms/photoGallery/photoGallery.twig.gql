@@ -1,0 +1,23 @@
+fragment PhotoGallery on ParagraphPhotoGallery {
+  uuid
+  partOfNavigator: fieldPartOfNavigatorSidebar
+  title: fieldTitle
+  headline: fieldHeadline
+  description: fieldDescription {
+    content: processed
+  }
+  images: fieldPpgImages {
+    entity {
+      entityLabel... on MediaImage {
+        imageDescription: fieldMiDescription {
+          content: processed
+        }
+        img: fieldMediaImage {
+          derivative(style: GALLERYIMAGE) {
+            url
+          }
+        }
+      }
+    }
+  }
+}

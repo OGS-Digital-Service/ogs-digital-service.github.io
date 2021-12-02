@@ -1,0 +1,19 @@
+@import "../../01-Base/breakpoints/breakpoints.scss";
+
+.o-latestUpdates__wrapper {
+  padding: 0 20px;
+
+  @include breakpoint(tablet) {
+    padding: 0 35px;
+  }
+
+  @include breakpoint(desktop) {
+    padding: 0 70px;
+  }
+
+  @media print {
+    a::after {
+      content: " ("attr(href) ")";
+    }
+  }
+}

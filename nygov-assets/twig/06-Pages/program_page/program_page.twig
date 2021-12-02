@@ -1,0 +1,11 @@
+{% if node.sections[1].section.type == "ParagraphNygovFilter" %}
+	{% set checkFilterIndex = "override-margin-top" %}
+{% endif %}
+
+<article class="p-program-page -full-page {{checkFilterIndex}}">
+  {% if node.heroToggle == true %}
+    {% include '@storybook/04-Organisms/hero/hero.twig' with { hero: node, heroType: "programPageHero" } %}
+  {% endif %}
+  {% include "@storybook/05-Templates/frames/frames.twig" with node %}
+</article>
+

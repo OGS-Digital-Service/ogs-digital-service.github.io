@@ -1,0 +1,42 @@
+{% if variant == "m-eventDate" %}
+	<div class="m-eventDate">
+		{% if eventDetails.monthStart %}
+			<div class="start">
+				{% include "@storybook/02-Atoms/date/date.twig" with {date: eventDetails.monthStart, classNames:"a-date-14 -gold", variant: "date"} %}
+				{% include "@storybook/02-Atoms/date/date.twig" with {date: eventDetails.dayStart, classNames:"a-date-42-extraBold", variant: "date"} %}
+				{% include "@storybook/02-Atoms/date/date.twig" with {date: eventDetails.yearStart, classNames:"a-date-13-semiBold -year", variant: "date"} %}
+			</div>
+		{% endif %}
+		{% if eventDetails.end and eventDetails.begin != eventDetails.end %}
+			<span class="dash">
+				—
+			</span>
+			<div class="end">
+				{% include "@storybook/02-Atoms/date/date.twig" with {date: eventDetails.monthEnd, classNames:"a-date-14 -gold", variant: "date"} %}
+				{% include "@storybook/02-Atoms/date/date.twig" with {date: eventDetails.dayEnd, classNames:"a-date-42-extraBold", variant: "date"} %}
+				{% include "@storybook/02-Atoms/date/date.twig" with {date: eventDetails.yearEnd, classNames:"a-date-13-semiBold -year", variant: "date"} %}
+			</div>
+		{% endif %}
+	</div>
+  <ul class="eventTimePlace">
+	{% if eventDetails.timeStart %}
+		<li class="time">
+			<span class="clock icon-clock"></span>
+      <span>{{ eventDetails.timeStart}}</span>
+		{% endif %}
+		{% if eventDetails.timeEnd and eventDetails.timeEnd != eventDetails.timeStart %}
+			<span>
+				—
+			</span>
+			<span>{{eventDetails.timeEnd}}</span>
+		{% endif %}
+	</li>
+	{% if venue %}
+		<li class="location">
+      <span class="mapMarker icon-map-marker"></span>
+			<span>{{venue}}</span>
+		</li>
+	{% endif %}
+  </ul>
+{% endif %}
+

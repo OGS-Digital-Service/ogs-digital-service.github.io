@@ -1,0 +1,62 @@
+@import "../../01-Base/typography/fontFamilies/fontFamilies.scss";
+@import "../../01-Base/typography/weight/weight.scss";
+
+.m-card__footer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 14px;
+  background: #EDEDED;
+  border-top: 1px solid #D0D0CE;
+
+  .a-card__icon,
+  .a-mobile__icon {
+    color: #d5820d;
+  }
+}
+
+.m-card__linkText {
+  color: #000;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "Proxima Nova", sans-serif;
+  margin-left: 8px;
+  vertical-align: middle;
+  letter-spacing: 1px;
+}
+.m-card__quickFooter {
+  display: flex;
+  align-items: center;
+  height:60px;
+  width: 100%;
+  background-color: #128EC3;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 0 20px;
+  @extend .text-proxima;
+  @extend .text-semi-bold;
+
+
+  @supports (-webkit-line-clamp: 1) {
+  .m-card__quickText {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+  }
+}
+
+  .icon-arrow-circle {
+    padding-left: 10px;
+  }
+}
+
+.m-card__statsBar {
+  width: 100%;
+  float: left;
+  background-color: #24387e;
+  padding: 30px 20px;
+  display: flex;
+  justify-content: center;
+}

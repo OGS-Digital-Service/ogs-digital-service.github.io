@@ -1,0 +1,72 @@
+@import "../../01-Base/breakpoints/breakpoints";
+
+.o-popularServices {
+  display: flex;
+  flex-flow: column;
+
+  @include breakpoint(desktop) {
+    flex-flow: row nowrap;
+    height: 220px;
+  }
+
+  .o-popularService__cardsWrapper {
+    padding-top: 25px;
+    padding-bottom: 20px;
+
+    @include breakpoint(tablet) {
+      display: flex;
+      justify-content: center;
+      padding-top: 40px;
+    }
+
+    @include breakpoint(desktop) {
+      justify-content: flex-start;
+      align-items: center;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      padding-right: 50px;
+      width: 80%;
+    }
+
+    .o-popularService__cardsContainer {
+      @include breakpoint(tablet) {
+        display: flex;
+        flex-flow: wrap;
+        justify-content: space-between;
+        width: 600px;
+      }
+
+      @include breakpoint(desktop) {
+        flex-flow: nowrap;
+        justify-content: space-evenly;
+        width: 100%;
+      }
+    }
+  }
+
+  @media print {
+    #popularServicesCanvasSection {
+      display: none;
+    }
+
+    .icon-long-arrow-right {
+      display: none;
+    }
+
+    .m-popularService__icon {
+      display: none;
+    }
+
+    a::after {
+      content: " ("attr(href) ")";
+    }
+
+    .m-popularService__title.-container .m-popularService__title .m-popularService__readMore {
+      a::after {
+        content: " ("attr(href) ")";
+        color: black;
+      }
+    }
+
+  }
+}

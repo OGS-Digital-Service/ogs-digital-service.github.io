@@ -1,0 +1,6 @@
+{% if variant == "m-titleBar" %}
+	<div class="bg-primary-blue m-titleBar">
+		{% include "@storybook/02-Atoms/title/title.twig" with { title:title, classNames:"text-white text-extra-bold m-titleBar__title", variant: "heading" } %}
+		{% include "@storybook/02-Atoms/text/text.twig" with { text:text, classNames:"text-primary-gold-light m-titleBar__subtitle", variant: "string" } %}
+	</div>
+{% endif %}

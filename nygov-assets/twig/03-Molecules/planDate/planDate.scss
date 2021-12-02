@@ -1,0 +1,51 @@
+@import "../../01-Base/breakpoints/breakpoints";
+@import '../../01-Base/typography/weight/weight.scss';
+@import "../../01-Base/typography/fontFamilies/fontFamilies.scss";
+
+.m-plan-date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  padding: 0 25px 50px 25px;
+  width: 100%;
+  @include breakpoint(tablet) {
+    width: 50%;
+  }
+  @include breakpoint(laptop) {
+    width: 33.3333333%;
+    padding: 0 25px 60px 25px;
+  }
+
+  &__date-separator {
+    padding: 0 8px;
+    margin-top: -10px;
+  }
+
+  &__dates {
+    display: flex;
+    align-items: center;
+    @extend .text-oswald;
+    @extend .text-light;
+    font-size: 14px;
+    letter-spacing: 2.1px;
+    padding: 10px 0;
+  }
+
+  &__full-month {
+    font-size: 42px;
+    @extend .text-extra-bold;
+    padding: 10px 0;
+  }
+
+  &__title {
+    padding: 0 0 10px 0;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  &__link-wrap {
+    margin-top: 30px;
+    max-width: 100%;
+  }
+}

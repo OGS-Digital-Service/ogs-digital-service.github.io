@@ -1,0 +1,24 @@
+fragment PopularServices on ParagraphPopularServices {
+	title: fieldTitle
+	readMore: fieldLink {
+		linkText: title
+	  url {
+      path
+    }
+	}
+	queue: fieldPsQueue { 
+		entity {
+			... on MediaIconImages {
+				img: fieldMediaImage {
+					url
+				}
+				button: fieldMiiLink {
+			   url {
+           path
+         }
+				linkText: title
+				}
+			}
+		}
+	}
+}

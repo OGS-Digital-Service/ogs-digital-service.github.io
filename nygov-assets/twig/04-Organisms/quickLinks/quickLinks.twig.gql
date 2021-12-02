@@ -1,0 +1,309 @@
+fragment QuickLinks on ParagraphQuickLinks {
+	title: fieldTitle
+	headline: fieldHeadline
+  colTitleOne: fieldPqlColumnTitle1
+	colTitleTwo: fieldPqlColumnTitle2
+  colButtonOne: fieldPqlColumnButton1{
+    title
+    url{
+      path
+    }
+  }
+  colButtonTwo: fieldPqlColumnButton2{
+    title
+    url{
+      path
+    }
+  }
+  colLinksOne: fieldPqlColumn1 {
+    quickLinks: entity {
+      ... on ParagraphQuickLinksEntity {
+        newWindow: fieldOpenInNewWindow
+        linksContent: fieldPqleContent {
+          id: targetId
+          link: entity {
+            label: entityLabel
+            type: entityType
+            referenceType: __typename
+            ...FieldDocumentQuickLinks
+            ...FieldArticleQuickLinks
+            ...FieldExecutiveOrderQuickLinks
+            ...FieldEmergencyQuickLinks
+            ...FieldGovernorPhotosQuickLinks
+            ...FieldLegislationQuickLinks
+            ...FieldLandingPageQuickLinks
+            ...FieldNewsQuickLinks
+            ...FieldProgramQuickLinks
+            ...FieldScheduledEventQuickLinks
+            ...FieldServiceQuickLinks
+          }
+        }
+      }
+    }
+    quickLinksCustom: entity {
+      ...on ParagraphQuickLinksCustomLink {
+        title: fieldTitle
+        caption: fieldPqlcCaption {
+          content: processed
+        }
+        newWindow: fieldOpenInNewWindow
+        url: fieldLink {
+          linkText: title
+          url {
+            path
+          }
+        }
+        image: fieldPqlcImage {
+          entity {
+            ... on MediaImage {
+              quickLinkImage: fieldMediaImage {
+                derivative (style:SQUARESMALLPLUS){
+                  url
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  colLinksTwo: fieldPqlColumn2 {
+		quickLinks: entity {
+      ... on ParagraphQuickLinksEntity {
+        newWindow: fieldOpenInNewWindow
+        linksContent: fieldPqleContent {
+          id: targetId
+          link: entity {
+            label: entityLabel
+            type: entityType
+            referenceType: __typename
+            ...FieldDocumentQuickLinks
+            ...FieldArticleQuickLinks
+            ...FieldExecutiveOrderQuickLinks
+            ...FieldEmergencyQuickLinks
+            ...FieldGovernorPhotosQuickLinks
+            ...FieldLegislationQuickLinks
+            ...FieldLandingPageQuickLinks
+            ...FieldNewsQuickLinks
+            ...FieldProgramQuickLinks
+            ...FieldScheduledEventQuickLinks
+            ...FieldServiceQuickLinks
+          }
+        }
+      }
+    }
+    quickLinksCustom: entity {
+      ...on ParagraphQuickLinksCustomLink {
+        title: fieldTitle
+        caption: fieldPqlcCaption {
+          content: processed
+        }
+        newWindow: fieldOpenInNewWindow
+        url: fieldLink {
+          linkText: title
+          url {
+            path
+          }
+        }
+        image: fieldPqlcImage {
+          entity {
+            ... on MediaImage {
+              quickLinkImage: fieldMediaImage {
+                derivative (style:SQUARESMALLPLUS){
+                  url
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+fragment FieldDocumentQuickLinks on MediaDocument {
+  entityType
+	fieldDocument {
+    file: entity {
+      ... on File {
+        entityLabel
+        url
+      }
+    }
+  }
+}
+
+fragment FieldArticleQuickLinks on NodeArticlePage {
+  image: fieldApFeaturedImage{
+    entity {
+      ... on MediaImage {
+        image: fieldMediaImage {
+          derivative(style: SQUARESMALLPLUS) {
+            url
+          }
+        }
+      }
+    }
+  }
+  description: fieldApDescription {
+    processed
+  }
+  contentLink: entityUrl {
+    path
+  }
+}
+
+fragment FieldEmergencyQuickLinks on NodeEmergency {
+  contentLink: entityUrl{
+    path
+  }
+}
+
+fragment FieldExecutiveOrderQuickLinks on NodeExecutiveOrder {
+  image: fieldEoFeaturedImage{
+    entity {
+      ... on MediaImage {
+        image: fieldMediaImage {
+          derivative(style: SQUARESMALLPLUS) {
+            url
+          }
+        }
+      }
+    }
+  }
+  contentLink: entityUrl{
+    path
+  }
+}
+
+fragment FieldGovernorPhotosQuickLinks on NodeGovernorPhotos {
+  description: fieldGpDescription {
+    processed
+  }
+  contentLink: entityUrl{
+    path
+  }
+}
+
+fragment FieldLegislationQuickLinks on NodeLegislation {
+  contentLink: entityUrl{
+    path
+  }
+}
+
+fragment FieldLandingPageQuickLinks on NodeLandingPage {
+  description: fieldLpDescription {
+    processed
+  }
+  contentLink: entityUrl{
+    path
+  }
+   paragraphs: fieldSections{
+
+    entity{
+      paragraphType: __typename
+      ... on ParagraphHeroQueue {
+        type {
+          targetId
+        }
+        queue: fieldPhQueue {
+          hero: entity {
+            ... on MediaHero {
+              image: fieldMhImage {
+                entity {
+                  ... on MediaImage {
+                    image: fieldMediaImage {
+                      derivative(style: SQUARESMALLPLUS) {
+                        url
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+fragment FieldNewsQuickLinks on NodeNews {
+  image: fieldNFeaturedImage{
+    entity {
+      ... on MediaImage {
+        image: fieldMediaImage {
+          derivative(style: SQUARESMALLPLUS) {
+            url
+          }
+        }
+      }
+    }
+  }
+  description: fieldNDescription {
+    processed
+  }
+  contentLink: entityUrl{
+    path
+  }
+}
+
+fragment FieldProgramQuickLinks on NodeProgram {
+  image: fieldPFeaturedImage{
+    entity {
+      ... on MediaImage {
+        image: fieldMediaImage {
+          derivative(style: SQUARESMALLPLUS) {
+            url
+          }
+        }
+      }
+    }
+  }
+  description: fieldPDescription {
+    processed
+  }
+  contentLink: entityUrl{
+    path
+  }
+}
+
+fragment FieldScheduledEventQuickLinks on NodeScheduledEvent {
+  image: fieldSeFeaturedImage{
+    entity {
+      ... on MediaImage {
+        image: fieldMediaImage {
+          derivative(style: SQUARESMALLPLUS) {
+            url
+          }
+        }
+      }
+    }
+  }
+  description: fieldSeDescription {
+    processed
+  }
+  contentLink: entityUrl{
+    path
+  }
+}
+
+fragment FieldServiceQuickLinks on NodeService {
+  image: fieldSFeaturedImage{
+    entity {
+      ... on MediaImage {
+        image: fieldMediaImage {
+          derivative(style: SQUARESMALLPLUS) {
+            url
+          }
+        }
+      }
+    }
+  }
+  description: fieldSDescription {
+    processed
+  }
+  contentLink: entityUrl{
+    path
+  }
+}

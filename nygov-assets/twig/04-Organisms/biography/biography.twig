@@ -1,0 +1,82 @@
+{% set bio_image = section.bioImage.entity.bioImg.derivative.url %}
+
+{% set classes = [
+  'o-biography',
+  bio_image ? 'has-bio-image' : '',
+  node.navigator ? 'navigator' : '',
+] %}
+
+<div class="{{classes|join(' ')}}">
+  <div class="o-biography__wrap">
+    {% if bio_image %}
+      <div class="o-biography__image-col">
+        <img src="{{ bio_image }}" alt="bio-image"/>
+      </div>
+    {% endif %}
+    <div class="o-biography__text-col">
+      <div class="o-biography__bio-content-top">
+        {% if section.bioName %}
+          <div class="o-biography__bio-name">
+            {{ section.bioName }}
+          </div>
+        {% endif %}
+        {% if section.bioTitle %}
+          <div class="o-biography__bio-title">
+            {{ section.bioTitle }}
+          </div>
+        {% endif %}
+        {% if (section.dateOfBirth or section.dateOfDeath) %}
+          <div class="o-biography__dates">
+            <div class="o-biography__birth-date">
+              <strong>Born: </strong>{{ section.dateOfBirth }}
+            </div>
+            <div class="o-biography__death-date">
+              <strong>Died: </strong>{{ section.dateOfDeath }}
+            </div>
+          </div>
+        {% endif %}
+      </div>
+      <div class="o-biography__bio-content-bottom">
+        {% if section.textFirst.content %}
+          {% include "@storybook/02-Atoms/text/text.twig" with { text: section.textFirst.content, classNames: "o-biography__text-first", variant: "html"} %}
+        {% endif %}
+        {% if section.bioQuote %}
+          <div class="o-quote">
+            <div class="o-quote__content-wrapper">
+              <span class="fas fa-quote-left"></span>
+              <div class="o-quote__credit">{{ section.bioQuote }}</div>
+              {% if section.bioQuoteCredit %}
+                <div class="o-quote__title">{{ section.bioQuoteCredit }}</div>
+              {% endif %}
+            </div>
+          </div>
+        {% endif %}
+        {% if section.textSecond.content %}
+          {% include "@storybook/02-Atoms/text/text.twig" with { text: section.textSecond.content, classNames: "o-biography__text-second", variant: "html"} %}
+        {% endif %}
+        {% if section.video %}
+          {% include "@storybook/03-Molecules/video/video.twig" with { videoLink: section.video, classNames: "o-biography__video", variant: "html"} %}
+        {% endif %}
+        {% if section.textThird.content %}
+          {% include "@storybook/02-Atoms/text/text.twig" with { text: section.textThird.content, classNames: "o-biography__text-third", variant: "html"} %}
+        {% endif %}
+        {% if section.bioLinkTitle %}
+          <div class="o-biography__bio-link-title">
+            {{ section.bioLinkTitle }}
+          </div>
+        {% endif %}
+        {% if section.bioLink %}
+          <div class="o-biography__bio-links">
+            {% for item in section.bioLink %}
+              <a class="o-biography__bio-link" href="{{ item.url.path }}">
+                <span class="icon">{% include "@storybook/02-Atoms/icons/icons.twig" with { icon: "icon-arrow-circle"} %}</span>
+                <span class="title">{{ item.title }}</span>
+              </a>
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+</div>

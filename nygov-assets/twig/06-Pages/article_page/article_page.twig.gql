@@ -1,0 +1,52 @@
+fragment ArticlePage on NodeArticlePage {
+	navigator: fieldApNavigatorToggle
+	title
+  contentType: entityBundle
+	dateOption: fieldApDateToggle
+  dateCreated: entityCreated
+	featuredImage: fieldApFeaturedImage {
+		entity {
+			... on MediaImage {
+				desktopImg: fieldMediaImage {
+					derivative(style: HEROWIDE) {
+						url
+					}
+				}
+				tabletImg: fieldMediaImage {
+					derivative(style: HERONARROW) {
+						url
+					}
+				}
+				mobileImg: fieldMediaImage {
+					derivative(style: HEROMOBILE) {
+						url
+					}
+				}
+			}
+		}
+	}
+	programReference: fieldApProgramReference {
+		entity {
+			keyword: entityLabel
+			url: entityUrl {
+				path
+			}
+		}
+	}
+	sections: fieldSections {
+		section: entity {
+			type: __typename
+			...WYSIWYG
+			...Buttons
+			...Documents
+			...TranslatedDocuments
+			...CardsQueue
+			...Contact
+			...PhotoGallery
+			...Quote
+      ...VideoEmbed
+      ...Biography
+      ...Modal
+		}
+	}
+}

@@ -1,0 +1,31 @@
+{% set nodeUrl = url ? url|url_encode : '' %}
+
+{# Build Twitter share link #}
+{% set twitterText = section.twitterText ? section.twitterText|url_encode : '' %}
+{% set twitterShareLink = 'https://twitter.com/intent/tweet?text=' ~ twitterText ~ '+' ~ site_host ~ nodeUrl %}
+
+{# Build Facebook share link #}
+{% set facebookShareLink = 'https://www.facebook.com/sharer/sharer.php?u=' ~ site_host ~ nodeUrl %}
+
+{# Build Linkedin share link #}
+{% set linkedInText = section.linkedInText ? section.linkedInText|url_encode : '' %}
+{% set linkedInShareLink = 'https://www.linkedin.com/shareArticle?mini=true&url=' ~ site_host ~ nodeUrl ~ '&title=' ~ linkedInText %}
+
+<div class="o-social-media-share">
+  <div class="o-social-media-share__content-wrap">
+    <p class="o-social-media-share__share-text">SHARE</p>
+
+    {% if section.twitterToggle %}
+      <a href="{{twitterShareLink}}" target="_blank" class="o-social-media-share__twitter"></a>
+    {% endif %}
+
+    {% if section.facebookToggle %}
+      <a href="{{facebookShareLink}}" target="_blank" class="o-social-media-share__facebook"></a>
+    {% endif %}
+
+    {% if section.linkedinToggle %}
+      <a href="{{linkedInShareLink}}" target="_blank" class="o-social-media-share__linkedin"></a>
+    {% endif %}
+
+  </div>
+</div>

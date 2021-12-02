@@ -1,0 +1,27 @@
+<div class="t-hero">
+	{% include '@storybook/04-Organisms/hero/hero.twig' with { hero: node, heroType: "emergencyPageHero" } %}
+</div>
+
+<div class="t-emergency-body">
+	<div class="t-emergency-body-wrap">
+		<div class="t-sections {{alerts is  empty and mtaToggle == false ? '-noAlert' : ''}}">
+			{% include '@storybook/05-Templates/frames/frames.twig' with { node: node } %}
+		</div>
+
+		{% if alerts or mtaToggle %}
+			<div class="t-alerts">
+				{% if alerts  %}
+					{% include '@storybook/04-Organisms/alerts/alerts.twig' with {section: node } %}
+				{% endif %}
+
+				{% if mtaToggle %}
+					{% include '@storybook/04-Organisms/mtaWidget/mtaWidget.twig' %}
+				{% endif %}
+			</div>
+		{% endif %}
+	</div>
+</div>
+
+<div class="t-latestUpdates">
+	{% include '@storybook/04-Organisms/latestUpdates/latestUpdates.twig' with {section: node } %}
+</div>

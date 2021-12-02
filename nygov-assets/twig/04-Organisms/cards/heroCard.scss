@@ -1,0 +1,137 @@
+@import "../../01-Base/breakpoints/breakpoints";
+@import "../../01-Base/typography/weight/weight.scss";
+
+
+
+.o-cardHeroContainer {
+  position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
+
+  @include breakpoint(tablet) {
+    display: flex;
+    width: auto;
+  }
+
+  .o-cardLogo {
+    height: auto;
+    min-height: 394px;
+
+    @include breakpoint(tablet) {
+      width: auto;
+      min-height: 280px;
+      min-width: 280px;
+    }
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    display: block;
+    overflow: hidden;
+  }
+
+  .o-cardContent {
+    background-color: #128ec3;
+    color: #ffffff;
+    position: relative;
+    width: 100%;
+    display: flex;
+
+    @include breakpoint(tablet) {
+      display: flex;
+      padding: 0;
+      flex-flow: column;
+      justify-content: center;
+    }
+    @media print {
+      a::after{
+        content: " (" attr(href) ")";
+      }
+    }
+  }
+
+  .o-cardKeyword {
+    .a-buttons__cardCat {
+      background-color: #0386be;
+      color: #ffffff;
+      position: absolute;
+      top: 0;
+    }
+  }
+
+  .o-cardHeroDescription {
+    margin-bottom: 50px;
+    padding: 40px 20px;
+
+    @include breakpoint(tablet) {
+      width: 100%;
+      float: left;
+    }
+
+    a {
+      color: #ffffff;
+      font-size: 36px;
+      @extend .text-extra-bold;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    .m-card__data {
+      padding: 0;
+    }
+
+    @supports (-webkit-line-clamp: 4) {
+      .a-card__label {
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+      }
+
+      .a-card__description p {
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 4;
+      }
+
+      @include breakpoint(tablet) {
+        .a-card__label {
+          display: -webkit-box;
+          overflow: hidden;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 1;
+        }
+
+        .a-card__description p {
+          display: -webkit-box;
+          overflow: hidden;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+        }
+      }
+    }
+  }
+
+  .o-cardFooter {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+
+    .m-card__footer {
+      background-color: #0386be;
+      color: #ffffff;
+      border-top: none;
+
+      span {
+        color: #ffffff;
+      }
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+}

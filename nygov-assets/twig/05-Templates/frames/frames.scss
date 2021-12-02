@@ -1,0 +1,262 @@
+@import "../../01-Base/breakpoints/breakpoints";
+@import "../../01-Base/backgrounds/colors/colors.scss";
+@import "../../01-Base/typography/weight/weight.scss";
+
+.t-section.-container{
+
+  .t-section__content {
+    margin-top: 60px;
+  }
+
+    > :first-child{
+        margin-top: 30px;
+    }
+
+    > :last-child {
+      margin-bottom: 60px;
+    }
+
+    &.-no-margin-top.section__filter {
+      margin-bottom: 0!important;
+    }
+
+  .t-section__content.-no-margin-top {
+    margin-top: 0;
+    &.section__filter {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.-t_wrap {
+  .t-headline {
+    text-align: center;
+  }
+
+  .t_cardsWrap {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+    @include breakpoint(tablet) {
+      display: block;
+    }
+
+    @include breakpoint(desktop) {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+    }
+
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 78em;
+
+    .t_cardContainer {
+      width: 100%;
+
+      @include breakpoint(desktop) {
+        width: 32.20339%;
+        margin-right: 1.69492%;
+        float: left;
+        height: 587px;
+      }
+
+      margin-bottom: 15px;
+    }
+
+    .t_cardContainerRight {
+      width: 100%;
+
+      @include breakpoint(desktop) {
+        width: 32.20339%;
+        float: right;
+        margin-right: 0;
+      }
+
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.t_statsWrap {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+
+  @include breakpoint(desktop) {
+    margin-right: 150px;
+  }
+
+  .t_statsLM {
+    width: 100%;
+
+    @include breakpoint(desktop) {
+      display: inline-block;
+      right: 0;
+      position: absolute;
+    }
+
+    .m-card__statsBar {
+      @include breakpoint(desktop) {
+        width: 160px;
+        height: 380px;
+        position: absolute;
+        right: 0;
+        padding: 175px 20px 197px;
+        display: inline-block;
+      }
+
+      .a-buttons__statsLM {
+        @include breakpoint(desktop) {
+          padding: 0 10px;
+        }
+      }
+    }
+    @media print {
+      a::after{
+        content: " (" attr(href) ")";
+      }
+    }
+  }
+}
+
+.t_heroCardWrap {
+  background-color: #24265F;
+  position: relative;
+
+  @include breakpoint(tablet) {
+    padding: 50px;
+  }
+}
+
+.t_quickCardWrap {
+  display: flex;
+  flex-flow: column;
+  padding: 40px 20px 10px;
+  @extend .bg-primary-blue;
+
+  @include breakpoint(tablet) {
+    padding: 60px 20px 40px;
+  }
+
+  .t_quickCard__content {
+    margin: 0 auto;
+    max-width: 320px;
+
+    @include breakpoint(tablet) {
+      max-width: 1024px;
+    }
+
+    @include breakpoint(laptop) {
+      max-width: 960px;
+    }
+  }
+
+  .t_quickCardTileWrapper {
+    max-width: 300px;
+    margin: 0 auto;
+
+    @include breakpoint(tablet) {
+      max-width: 1024px;
+    }
+
+    @include breakpoint(laptop) {
+      max-width: 960px;
+    }
+  }
+
+  .t_quickCardContainer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  .a-quickCard__title {
+    margin: 0;
+    text-transform: uppercase;
+    @extend .text-regular;
+  }
+
+  .t_line {
+    content: ' ';
+    display: block;
+    width: 20px;
+    border-top: 1px solid #fff;
+    position: relative;
+    margin: 15px 0;
+  }
+
+  .t_cardContainer {
+    max-width: 300px;
+    width: 100%;
+    margin-bottom: 30px;
+
+    @include breakpoint(tablet) {
+      width: 344px;
+      max-width: 344px;
+      margin: 0 10px 20px;
+    }
+
+    @include breakpoint(laptop) {
+      width: 300px;
+      max-width: 300px;
+      margin: 0 10px 20px;
+    }
+  }
+}
+
+.t-card__featuredWrap {
+
+  @extend .bg-primary-gold;
+}
+
+
+
+.t_bioAndLinks-wrap {
+  max-width: 78em;
+  padding: 16px;
+  margin: auto;
+
+  .t_headline{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+
+  .t_bio-content {
+    display: flex;
+    flex-flow: column;
+
+    @media (min-width:800px) {
+      flex-flow: row;
+      justify-content: center;
+    }
+
+    .t_bioCard-wrap {
+      display: flex;
+      flex-flow: row;
+      margin: 0 0 20px;
+
+      @media (min-width:800px) {
+      width: 35%;
+      margin: 0 10px 20px;
+      align-content: center;
+      }
+    }
+  }
+
+  .t_link-content{
+    display: flex;
+    flex-flow: column;
+    @media (min-width:800px) {
+      flex-flow: row;
+      justify-content: center;
+    }
+  }
+
+}
+

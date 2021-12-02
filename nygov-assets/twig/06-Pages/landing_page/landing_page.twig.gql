@@ -1,0 +1,30 @@
+fragment LandingPage on NodeLandingPage {
+  contentType: entityBundle
+  sections: fieldSections {
+    section: entity {
+      type: __typename
+      bundle: entityBundle
+      ...TitleBar
+      ...BioLinks
+      ...CardsQueue
+      ...HeroQueue
+      ...Highlight
+      ...WYSIWYG
+      ...Buttons
+      ...TranslatedDocuments
+      ...PhotoGallery
+      ...Quote
+      ...PopularServices
+      ...Milestones
+      ...Connect
+      ...ProgramSupporter
+      ...VideoEmbed
+      ...CategoriesTiles
+      ...PlanAhead
+      ...PlanSummary
+      ...Modal
+      ...QuickLinks
+      ...SocialMediasShare
+    }
+  }
+}

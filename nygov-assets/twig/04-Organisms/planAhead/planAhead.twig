@@ -1,0 +1,32 @@
+{% set classes = [
+  'o-plan-ahead',
+  section.color ? 'bg-primary-' ~ section.color: '',
+] %}
+
+<div class="{{classes|join(' ')}}">
+  <div class= "o-plan-ahead__content-wrapper">
+    <div class= "o-plan-ahead__titles">
+      {% if section.title %}
+        {% include '@storybook/02-Atoms/title/title.twig' with { title: section.title, variant: 'title', classNames: "o-plan-ahead__title"} %}
+      {% endif %}
+
+      {% if section.headline %}
+        {% include '@storybook/02-Atoms/title/title.twig' with { headline: section.headline, variant: 'headline', classNames: "o-plan-ahead__headline"} %}
+      {% endif %}
+    </div>
+
+    <div class= "o-plan-ahead__dates">
+      {% for item in section.datesParagraphs %}
+        {% include "@storybook/03-Molecules/planDate/planDate.twig"  with {
+          title: item.paragraph.title,
+          startDate: item.paragraph.startDate.value,
+          endDate: item.paragraph.endDate.value,
+          link: item.paragraph.link.url.path,
+          linkTitle: item.paragraph.link.title,
+          newTab: item.paragraph.newWindow,
+          toggleEndDate: item.paragraph.toggleDate,
+        } %}
+      {% endfor %}
+    </div>
+  </div>
+</div>

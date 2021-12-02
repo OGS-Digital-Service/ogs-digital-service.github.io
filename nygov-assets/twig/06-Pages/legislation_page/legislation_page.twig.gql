@@ -1,0 +1,31 @@
+fragment LegislationPage on NodeLegislation {
+	title
+  legislationID: fieldLLegislationId
+  legislationDescription: fieldLDescription
+	bill: fieldLLegislationBill {
+		document: entity {
+			... on MediaDocument {
+				media: fieldDocument {
+          file: entity {
+            ... on File {
+              url
+            }
+          }
+        }
+			}
+		}
+	}
+  memo: fieldLMemo {
+		document: entity {
+			... on MediaDocument {
+				media: fieldDocument {
+          file: entity {
+            ... on File {
+              url
+            }
+          }
+        }
+			}
+		}
+	}
+}

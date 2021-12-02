@@ -1,0 +1,75 @@
+{% if variant == "a-hero__btn -live" or variant == "a-hero__btn -link -watchLive" %}
+	<button class="{{variant}}" data-stream="{{url}}">{{title}}</button>
+{% elseif variant == "a-hero__btn -link" or variant == "a-hero__btn -link -archive"%}
+	<a href="{{url}}" class="{{variant}}">{{ title }}</a>
+{% elseif variant == "a-btn__link-form-embed" %}
+	<a href="{{url}}" class="{{variant}}" id="{{id}}">{{ title }}</a>
+{% elseif variant == "a-paginate__btn" %}
+	<a href="{{url}}" class="{{variant}}">
+		<span class="a-paginate__btn -label">
+			{{label}}
+		</span>
+		{% include "@storybook/02-Atoms/icons/icons.twig" with { icon:"a-longRightArrow -icon" } %}
+	</a>
+	{# stats card button #}
+{% elseif variant == "paragraph-learn-more" %}
+  {# allows for opening in a new window option to be passed #}
+	{% set buttonTarget = newWindow ? "_blank" : "_self" %}
+	<a class={{ classNames }} {{ url is not empty ? 'href=' ~ url : "#" }} aria-label="{{ aria }}" target={{ buttonTarget }}>
+		{{ title }}</a>
+
+{% elseif (url is not empty) and (variant is not empty) %}
+	<a class="{{ variant }}" {{ url is not empty ? 'href=' ~ url : "#" }}>{{ title }}</a>
+{% endif %}
+
+{# Start: Filters Related buttons #}
+
+{# Large #}
+{% if variant == 'paginate-next-large' %}
+	<button role="button" class="a-btn__paginate -next -large" aria-label="Next Page Button"></button>
+{% endif %}
+
+{% if variant == 'paginate-next-large-disabled' %}
+	<button role="button" class="a-btn__paginate -next -disabled -large" aria-label="Disabled Next Page Button"></button>
+{% endif %}
+
+{% if variant == 'paginate-previous-large' %}
+	<button role="button" class="a-btn__paginate -previous -large" aria-label="Previous Page Button"></button>
+{% endif %}
+
+{% if variant == 'paginate-previous-large-disabled' %}
+	<button role="button" class="a-btn__paginate -previous -disabled -large" aria-label="Disabled Previous Page Button"></button>
+{% endif %}
+
+{# Medium #}
+{% if variant == 'paginate-next' %}
+	<button role="button" class="a-btn__paginate -next" aria-label="Next Page Button"></button>
+{% endif %}
+
+{% if variant == 'paginate-next-disabled' %}
+	<button role="button" class="a-btn__paginate -next -disabled" aria-label="Disabled Next Page Button"></button>
+{% endif %}
+
+{% if variant == 'paginate-previous' %}
+	<button role="button" class="a-btn__paginate -previous" aria-label="Previous Page Button"></button>
+{% endif %}
+
+{% if variant == 'paginate-previous-disabled' %}
+	<button role="button" class="a-btn__paginate -previous -disabled" aria-label="Disabled Previous Page Button"></button>
+{% endif %}
+
+{% if variant == 'paginate-page' %}
+
+	<style>
+		.a-btn__page {
+			margin-left: 40px;
+		}
+	</style>
+
+	{% for pageNumber in pageNumbers %}
+		<button role="button" class="a-btn__page text-gray text-proxima-bold {{ pageNumber == 2 ? 'active' : '' }}" aria-label="Page Number {{pageNumber}}">{{ pageNumber }}</button>
+	{% endfor %}
+
+{% endif %}
+
+{# End: Filters Related buttons #}

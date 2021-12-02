@@ -1,0 +1,21 @@
+
+<div class="bg-card-cta o-popularServices">
+	{% include '@storybook/03-Molecules/popularService/popularService.twig' with { 	
+		title: section.title, 
+		linkText: section.readMore.linkText,
+		url: section.readMore.url.path, 
+		variant: "m-popularService__title"}
+	%}
+	<div class="o-popularService__cardsWrapper">
+		<div class="o-popularService__cardsContainer">
+			{% for card in section.queue|slice(0, 4) %}
+				{% include '@storybook/03-Molecules/popularService/popularService.twig' with {
+				img: section.queue.entity.img.url, 
+				title: section.queue.entity.button.linkText,
+				url: section.queue.entity.button.url.path,
+				variant: "m-popularService__card" } 
+			%}
+			{% endfor %}
+		</div>
+	</div>
+</div>

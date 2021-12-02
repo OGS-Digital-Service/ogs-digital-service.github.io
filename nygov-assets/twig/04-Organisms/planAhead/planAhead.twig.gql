@@ -1,0 +1,28 @@
+fragment PlanAhead on ParagraphPlanAhead {
+  title: fieldTitle
+  headline: fieldHeadline
+  color: fieldPpaColorsOptions
+  datesParagraphs: fieldPpaPlan {
+    paragraph: entity {
+      ... on ParagraphPlanAheadPlan {
+        title: fieldPpaPlanTitle
+        startDate: fieldPpaPlanStartDate {
+          date
+          value
+        }
+        endDate: fieldPpaPlanEndDate {
+          date
+          value
+        }
+        link: fieldLink {
+          url {
+            path
+          }
+          title
+        }
+        newWindow: fieldPpaPlanOpenNewWindow
+        toggleDate: fieldPpaPlanToggleEndDate
+      }
+    }
+  }
+}

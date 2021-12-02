@@ -1,0 +1,50 @@
+@import "../../01-Base/breakpoints/breakpoints";
+@import '../../01-Base/typography/weight/weight.scss';
+@import "../../01-Base/backgrounds/colors/colors.scss";
+
+.m-category-tile {
+  &__icon {
+    min-height: 50px;
+    line-height: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include breakpoint(mobileOnly) {
+      display: none;
+    }
+    img {
+      filter:  brightness(0) invert(1);
+      width: 50px;
+      height: auto;
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    padding: 20px 5%;
+    min-height: 145px;
+    text-align: center;
+    text-decoration: none;
+    @extend .bg-primary-blue;
+    color: #FFFFFF;
+    margin: 10px 0;
+    &:hover {
+      background-color: #000;
+    }
+    @include breakpoint(mobileOnly) {
+      margin: 5px 0;
+      min-height: 122px;
+    }
+  }
+
+  &__title {
+    font-size: 14px;
+    letter-spacing: 1px;
+    @extend .text-bold;
+    @include breakpoint(laptop) {
+      font-size: 18px;
+    }
+  }
+}

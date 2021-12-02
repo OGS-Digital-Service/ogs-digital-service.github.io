@@ -1,0 +1,116 @@
+{% set classes = [
+  'o-quick-links'
+] %}
+
+<div class="{{classes|join(' ')}}">
+	<div class="o-quick-links__content-wrapper">
+		<div class="o-quick-links__titles">
+			{% if section.title %}
+				{% include '@storybook/02-Atoms/title/title.twig' with { title: section.title, variant: 'title', classNames: "o-quick-links__title"} %}
+			{% endif %}
+
+			{% if section.headline %}
+				{% include '@storybook/02-Atoms/title/title.twig' with { headline: section.headline, variant: 'headline', classNames: "o-quick-links__headline"} %}
+			{% endif %}
+		</div>
+
+		<div class="o-quick-links__columns">
+			<div class="o-quick-links__links-col-1">
+				{% if section.colTitleOne %}
+					<div class="o-quick-links__col-title">
+						{{ section.colTitleOne }}
+					</div>
+				{% endif %}
+
+				<div class="o-quick-links__links">
+					{% for item in section.colLinksOne %}
+						{% set heroQueueImage = '' %}
+						{% if item.quickLinks.linksContent.link.referenceType == "NodeLandingPage" %}
+							{% for paragraph in item.quickLinks.linksContent.link.paragraphs %}
+								{% if paragraph.entity.paragraphType == "ParagraphHeroQueue"%}
+									{% set heroQueueImage = paragraph.entity.queue[0].hero.image.entity.image.derivative.url %}
+								{% endif %}
+							{% endfor %}
+						{% endif %}
+						{% set imageHero = item.quickLinks.linksContent.link.image.entity.image.derivative.url %}
+						{% set image = imageHero ? imageHero : heroQueueImage %}
+						{% if item.quickLinks|length > 1 %}
+							{% include "@storybook/03-Molecules/quickLink/quickLink.twig"  with {
+                image: image,
+                title: item.quickLinks.linksContent.link.label,
+                description: item.quickLinks.linksContent.link.description.processed,
+                link: item.quickLinks.linksContent.link.contentLink.path,
+                newTab: item.quickLinks.newWindow,
+                nodeType: item.quickLinks.linksContent.link.referenceType
+              } %}
+						{% endif %}
+
+						{% if item.quickLinksCustom|length > 1 %}
+							{% include "@storybook/03-Molecules/quickLink/quickLink.twig"  with {
+                image: item.quickLinksCustom.image.entity.quickLinkImage.derivative.url,
+                title: item.quickLinksCustom.title,
+                description: item.quickLinksCustom.caption.content,
+                link: item.quickLinksCustom.url.url.path,
+                newTab: item.quickLinksCustom.newWindow
+              } %}
+						{% endif %}
+					{% endfor %}
+				</div>
+				{% if section.colButtonOne %}
+					<div class="o-quick-links__col-button">
+						<a class="a-btn__link" href={{section.colButtonOne.url.path}}>{{section.colButtonOne.title}}</a>
+					</div>
+				{% endif %}
+			</div>
+
+			<div class="o-quick-links__links-col-2">
+				{% if section.colTitleTwo %}
+					<div class="o-quick-links__col-title">
+						{{ section.colTitleTwo }}
+					</div>
+				{% endif %}
+
+				<div class="o-quick-links__links">
+					{% for item in section.colLinksTwo %}
+						{% set heroQueueImage = '' %}
+						{% if item.quickLinks.linksContent.link.referenceType == "NodeLandingPage" %}
+							{% for paragraph in item.quickLinks.linksContent.link.paragraphs %}
+								{% if paragraph.entity.paragraphType == "ParagraphHeroQueue"%}
+									{% set heroQueueImage = paragraph.entity.queue[0].hero.image.entity.image.derivative.url %}
+								{% endif %}
+							{% endfor %}
+						{% endif %}
+						{% set imageHero = item.quickLinks.linksContent.link.image.entity.image.derivative.url %}
+						{% set image = imageHero ? imageHero : heroQueueImage %}
+						{% if item.quickLinks|length > 1 %}
+							{% include "@storybook/03-Molecules/quickLink/quickLink.twig"  with {
+                image: image,
+                title: item.quickLinks.linksContent.link.label,
+                description: item.quickLinks.linksContent.link.description.processed,
+                link: item.quickLinks.linksContent.link.contentLink.path,
+                newTab: item.quickLinks.newWindow,
+                nodeType: item.quickLinks.linksContent.link.referenceType
+              } %}
+						{% endif %}
+
+						{% if item.quickLinksCustom|length > 1 %}
+							{% include "@storybook/03-Molecules/quickLink/quickLink.twig"  with {
+                image: item.quickLinksCustom.image.entity.quickLinkImage.derivative.url,
+                title: item.quickLinksCustom.title,
+                description: item.quickLinksCustom.caption.content,
+                link: item.quickLinksCustom.url.url.path,
+                newTab: item.quickLinksCustom.newWindow
+              } %}
+						{% endif %}
+					{% endfor %}
+				</div>
+				{% if section.colButtonTwo %}
+					<div class="o-quick-links__col-button">
+						<a class="a-btn__link" href={{section.colButtonTwo.url.path}}>{{section.colButtonTwo.title}}</a>
+					</div>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+</div>
+
