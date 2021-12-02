@@ -1,23 +1,14 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
-    <link href="/css/tailwind-dev.css" rel="stylesheet">
-<link href="/css/nygovstyles.css" rel="stylesheet">
-<link href="/css/fonts.css" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<style>
-    body {margin:0 auto;}
-    </style>
-  
-    
-    <title>NYGov Profile test</title>
-  </head>
-  <body class="">
-   <article class="p-landing-page -full-page ">
+---
+layout: layout-nygov.njk
+title: NYGov Profile test
+---
+
+<article class="p-landing-page -full-page ">
 <div class="t-section -container">
+													
+			
+
+
 <style>
 		.o-hero .o-hero__wrapper {
 			background-image: url('https://www.governor.ny.gov/sites/default/files/styles/hero_mobile/public/2021-12/Geese_Hunting_Sunset.jpg?h=b5f6a62e&itok=3Cc-SLhH');
@@ -39,15 +30,19 @@
 			}
 		}
 </style>
+
+
 <!-- hero LEFT --> 
 <h2 class="font-bold text-3xl text-red-500 mt-16" > Landing Hero Left </h2>
+
+
 <div class="o-hero -landingPage">
 <div class="o-hero__wrapper -left"></div>	
 <div class="bg-black text-white m-hero__meta -landingHero">			
 <div class="m-landingHero__contentWrapper -left">
 <div class="m-landingHero__content">
 <!-- <div class="m-landingHero__liveButton">
-						<button class="a-hero__btn -live" data-stream="">Watch live</button>
+						<button class="a-hero__btn -live" data-stream="{{url}}">Watch live</button>
 </div> -->
 <div class="m-landingHero__title">				
 <h2 class="a-title a-hero__title">
@@ -70,15 +65,18 @@
 </div>
 </div>
 <!-- hero LEFT --> 
+
 <!-- hero BOTTOM --> 
 <h2 class="font-bold text-3xl text-red-500 mt-16" > Landing Hero bottom</h2>
+
+
 <div class="o-hero -landingPage">
 <div class="o-hero__wrapper -bottom"></div>	
 <div class="bg-black text-white m-hero__meta -landingHero">			
 <div class="m-landingHero__contentWrapper -bottom">
 <div class="m-landingHero__content">
 <!-- <div class="m-landingHero__liveButton">
-						<button class="a-hero__btn -live" data-stream="">Watch live</button>
+						<button class="a-hero__btn -live" data-stream="{{url}}">Watch live</button>
 </div> -->
 <div class="m-landingHero__title">				
 <h2 class="a-title a-hero__title">
@@ -101,15 +99,18 @@
 </div>
 </div>
 <!-- hero BOTTOM --> 
+
 <!-- hero RIGHT --> 
 <h2 class="font-bold text-3xl text-red-500 mt-16" > Landing Hero right </h2>
+
+
 <div class="o-hero -landingPage">
 <div class="o-hero__wrapper -right"></div>	
 <div class="bg-black text-white m-hero__meta -landingHero">			
 <div class="m-landingHero__contentWrapper -right">
 <div class="m-landingHero__content">
 <!-- <div class="m-landingHero__liveButton">
-						<button class="a-hero__btn -live" data-stream="">Watch live</button>
+						<button class="a-hero__btn -live" data-stream="{{url}}">Watch live</button>
 </div> -->
 <div class="m-landingHero__title">				
 <h2 class="a-title a-hero__title">
@@ -132,6 +133,6 @@
 </div>
 </div>
 <!-- hero RIGHT --> 
+
+
 </article> <!-- end of main article enclosing -->
-  </body>
-</html>
