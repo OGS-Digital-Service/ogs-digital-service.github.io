@@ -1,0 +1,73 @@
+{% set classes = [
+  'o-modal',
+  'o-modal-inner',
+  section.displayType ? 'modal-type-' ~ section.displayType: '',
+] %}
+
+{% set color_option = [
+  'o-modal-inner__color-option',
+  section.color ? 'bg-primary-' ~ section.color: '',
+] %}
+
+<div class="{{classes|join(' ')}}" data-id="{{ section.id }}" data-expires="{{ section.expires }}">
+
+  {% if section.displayType == "logo" %}
+    {% if section.image %}
+      <div class="o-modal-inner__logo-image">
+        <img src="{{ section.image.entity.logoImg.derivative.url }}" alt="{{ section.image.entity.logoImg.alt }}">
+      </div>
+    {% endif %}
+    {% if section.title %}
+      <div class="o-modal-inner__title">
+        {{ section.title }}
+      </div>
+    {% endif %}
+  {% endif %}
+
+  {% if section.displayType == "background" %}
+    {% set bg_image = section.image.entity.backgroundImg.derivative.url %}
+    <div class="o-modal-inner__logo-image" {% if bg_image %} style="background: url({{ bg_image }}) no-repeat center center; background-size: cover;" {% endif %}>
+      <div class="o-modal-inner__bg-tint">
+        {% if section.title %}
+          <div class="o-modal-inner__title">
+            {{ section.title }}
+          </div>
+        {% endif %}
+      </div>
+
+    </div>
+  {% endif %}
+
+  {% if section.displayType == "logo" or section.displayType == "background" %}
+    <div class="o-modal-inner__lower-wrap">
+      {% if section.description.content %}
+        {% include '@storybook/02-Atoms/text/text.twig' with { text: section.description.content, variant: 'html'} %}
+      {% endif %}
+
+      {% if section.button.uri %}
+        {% include '@storybook/02-Atoms/link/link.twig' with { content: section.button.title, url: section.button.uri.path, variant: 'a-modal__link' } %}
+      {% endif %}
+    </div>
+  {% endif %}
+
+  {% if section.displayType == "webform" %}
+    <div class="{{color_option|join(' ')}}">
+      {% if section.title %}
+        <div class="o-modal-inner__title">
+          {{ section.title }}
+        </div>
+      {% endif %}
+
+      <div class="o-modal-inner__lower-wrap">
+        {% if section.webform %}
+          {% if section.webform.status == "open" %}
+            <div class="o-modal-inner__group -attachedForm" data-form="{{ section.webform.id is not empty ? section.webform.id : "" }}">
+              {{ drupal_entity('webform', section.webform.id) }}
+            </div>
+          {% endif %}
+        {% endif %}
+      </div>
+    </div>
+  {% endif %}
+
+</div>

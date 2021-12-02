@@ -1,0 +1,66 @@
+fragment DocumentMedia on MediaDocument {
+  name
+  description: fieldMdDescription {
+    value
+  }
+  document: fieldDocument {
+    file: entity {
+      ... on File {
+        url
+      }
+    }
+  }
+}
+
+fragment ExecutiveOrderPage on NodeExecutiveOrder {
+  contentType: entityBundle
+  dateOption: fieldEoDateToggle
+  dateCreated: entityCreated
+  dateDisplay: fieldEoDisplayDate {
+    value
+    date
+  }
+  englishEo: fieldEoEnglishEo {
+    eo: entity {
+      ...DocumentMedia
+    }
+  }
+  title
+  keywords: fieldEoKeywords {
+    entity {
+      keyword: entityLabel
+      url: entityUrl {
+        path
+      }
+    }
+  }
+  featuredImage: fieldEoFeaturedImage {
+    entity {
+      ... on MediaImage {
+        desktopImg: fieldMediaImage {
+          derivative(style: HEROWIDE) {
+            url
+          }
+        }
+        tabletImg: fieldMediaImage {
+          derivative(style: HERONARROW) {
+            url
+          }
+        }
+        mobileImg: fieldMediaImage {
+          derivative(style: HEROMOBILE) {
+            url
+          }
+        }
+      }
+    }
+  }
+  sections: fieldSections {
+    section: entity {
+      type: __typename
+      ...WYSIWYG
+      ...TranslatedDocuments
+      ...Documents
+    }
+  }
+}

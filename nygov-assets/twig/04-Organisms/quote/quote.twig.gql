@@ -1,0 +1,10 @@
+fragment Quote on ParagraphQuote {
+  partOfNavigator: fieldPartOfNavigatorSidebar
+  title: fieldTitle
+  quote: fieldPqQuote {
+    processed
+  }
+  quoteTitle: fieldPqQuoteTitle
+  quoteCredit: fieldPqQuoteCredit
+  color: fieldPqColorsOptions
+}

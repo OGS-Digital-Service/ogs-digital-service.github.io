@@ -1,0 +1,11 @@
+fragment Connect on ParagraphConnect {
+  title: fieldTitle
+  headline: fieldHeadline
+  socials: fieldPcSocialMediaLinks {
+    uri
+  }
+  other: fieldOtherSocialMedia {
+    uri
+    title
+  }
+}

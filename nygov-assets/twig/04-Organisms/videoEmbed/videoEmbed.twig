@@ -1,0 +1,27 @@
+{% set useCenterLayout = (node.bundle == 'program')
+  or (node.bundle == 'landing_page')
+%}
+
+{% set classes = [
+  'o-videoEmbed',
+  node.navigator ? 'navigator' : '',
+  useCenterLayout ? 'center-layout' : '',
+] %}
+
+<div class="{{classes|join(' ')}}">
+  <!-- Program or Landing Page -->
+  {% if useCenterLayout %}
+    {% include '@storybook/02-Atoms/title/title.twig' with { title: section.title, variant: 'title', classNames: "a-card__title"} %}
+    {% if section.headline %}
+      {% include '@storybook/02-Atoms/title/title.twig' with { headline: section.headline, variant: 'headline' } %}
+    {% endif %}
+  {% else %}
+    {% include '@storybook/02-Atoms/title/title.twig' with { title: section.title, variant: 'title', classNames: "a-frame__title"} %}
+  {% endif %}
+
+  {% if section.description %}
+    {% include '@storybook/02-Atoms/text/text.twig' with { text: section.description.content, variant: "html", classNames: "a-videoEmbed__description" } %}
+  {% endif %}
+
+  {% include '@storybook/03-Molecules/video/video.twig' with { videoLink: section.videoLink, coverImageUrl: section.coverImage.entity.img.derivative.url, coverText: section.videoTitle } %}
+</div>

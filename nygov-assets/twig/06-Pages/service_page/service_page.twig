@@ -1,0 +1,15 @@
+{% include '@storybook/04-Organisms/hero/hero.twig' with { hero: node, heroType: "servicePageHero"  } %}
+{% if node.navigator == true %}
+  <div class="p-service__wrapper -navigatorContainer">
+    <article class="p-service__content flex flex-col tablet:flex-row">
+      {% include "@storybook/05-Templates/navigatorFrames/navigatorFrames.twig" with node %}
+    </article>
+  </div>
+{% else %}
+  <div class="p-service__wrapper">
+    <article class="p-service__content flex flex-col">
+      {% include "@storybook/05-Templates/frames/frames.twig" with node %}
+    </article>
+  </div>
+{% endif %}
+

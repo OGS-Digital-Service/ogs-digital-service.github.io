@@ -1,0 +1,155 @@
+{# Sidebar Section #}
+{% if variant == "m-sidebar__title" %}
+  <div class= "m-sidebar__title">
+    {% include "@storybook/02-Atoms/title/title.twig" with { title, classNames: "a-sidebar__title", variant: "title" } %}
+  </div>
+{% endif %}
+
+{% if variant == "m-sidebar__label" %}
+  <div class= "m-sidebar__label">
+    {% for label in label %}
+      {% include "@storybook/02-Atoms/inputs/inputs.twig" with { label, variant: "a-sidebar__label -option" } %}
+    {% endfor %}
+  </div>
+{% endif %}
+
+{% if variant == "m-sidebar__subTitle" %}
+  <div class= "m-sidebar__title">
+    {% include "@storybook/02-Atoms/title/title.twig" with { subheadline: subheadline, classNames: "a-sidebar__subTitle", variant: "subheadline" } %}
+  </div>
+{% endif %}
+
+{% if variant == "m-sidebar__search" %}
+  <div class= "m-sidebar__search -container">
+    <span class= "m-sidebar__searchbar">
+      {% include "@storybook/02-Atoms/inputs/inputs.twig" with { variant: "a-sidebar__searchbar" } %}
+      <span class= "m-sidebar__search -icon">
+        {% include "@storybook/02-Atoms/icons/icons.twig" with { icon: "a-search -icon" } %}
+      </span>
+    </span>
+  </div>
+{% endif %}
+
+{% if variant == "m-sidebar__selectAll" %}
+  <div class = "m-sidebar__label">
+    {% include "@storybook/02-Atoms/inputs/inputs.twig" with { label, variant: "a-sidebar__label -option" } %}
+  </div>
+{% endif %}
+
+{% if variant == "m-sidebar__date" %}
+  <legend class="m-sidebar__date -legend">{{label}}</legend>
+  <div class="m-sidebar__date -wrapper">
+    <div class = "start">
+      {% include "@storybook/02-Atoms/inputs/inputs.twig" with { label: "From", variant: "a-sidebar__date" } %}
+    </div>
+    <div class = "end">
+      {% include "@storybook/02-Atoms/inputs/inputs.twig" with { label: "To", variant: "a-sidebar__date" } %}
+    </div>
+  </div>
+{% endif %}
+
+{# Results Card Section #}
+{% if variant == "m-sidebar__search -info"%}
+  <div class = "m-results__search -info">
+    <span class= "m-results__totalRecords -number">{% include '@storybook/02-Atoms/text/text.twig' with { text, classNames: "a-results__totalRecord -number", variant: "number" } %} </span>
+    {% include "@storybook/02-Atoms/text/text.twig" with { text: label, classNames: "a-results__totalRecord -label", variant: "label" } %}
+  </div>
+{% endif %}
+
+  {# Agency #}
+{% if variant == "m-resultsCard__content" %}
+  <div class = "m-resultsCard__data">
+    {% include "@storybook/02-Atoms/text/text.twig" with { text: category, classNames: "a-resultsCard__category", variant: "category" } %}
+    <span class="m-resultsCard__separator"></span>
+    <div class="m-resultsCard__title">
+      <a href="{{url}}">{% include "@storybook/02-Atoms/title/title.twig" with { title, classNames: "a-resultsCard__title", variant: subheadline } %}</a>
+    </div>
+    {% include "@storybook/02-Atoms/text/text.twig" with { text: description, variant: "description" } %}
+
+    <p class="a-resultsCard__website -link">
+      <span>Website: </span>
+      {% include "@storybook/02-Atoms/link/link.twig" with { url, content: url } %}
+    </p>
+
+  </div>
+{% endif %}
+
+  {# Scheduled Event #}
+{% if variant == "m-resultsCard__scheduledEvent" %}
+  <div class = "m-resultsCard__scheduledEvent -wrapper">
+    <div class = "m-resultsCard__scheduledEvent -data">
+      {% include "@storybook/02-Atoms/text/text.twig" with {text: category, classNames: "a-resultsCard__category", variant: "category" } %}
+      <span class="m-resultsCard__separator"></span>
+      <a href="{{url}}">{% include "@storybook/02-Atoms/title/title.twig" with { title, classNames: "a-resultsCard__title", variant: subheadline } %}</a>
+    </div>
+
+    <div class = "m-resultsCard__option -links">
+      <div class="date">{% include "@storybook/02-Atoms/inputs/inputs.twig" with { month, day, year, variant: "a-resultsCard__date" } %}   </div>
+        <ul class = "m-resultsCard__time -location">
+          <li class = "m-resultsCard -time"> {% include "@storybook/02-Atoms/inputs/inputs.twig" with { time, variant: "a-resultsCard__time" } %} </li>
+          <li class = "m-resultsCard -location"> {% include "@storybook/02-Atoms/inputs/inputs.twig" with { location, variant: "a-resultsCard__location" } %} </li>
+        </ul>
+      </div>
+    </div>
+{% endif %}
+
+{% if variant == "m-resultsCard__scheduledEvent -option" %}
+  <div class = "m-resultsCard__scheduledEvent -wrapper">
+    <div class = "m-resultsCard__scheduledEvent -data">
+      {% include "@storybook/02-Atoms/text/text.twig" with { text: category, classNames: "a-resultsCard__category", variant: "category" } %}
+      <span class="m-resultsCard__separator"></span>
+      <a href="{{url}}">{% include "@storybook/02-Atoms/title/title.twig" with { title, classNames: "a-resultsCard__title", variant: subheadline } %}</a>
+    </div>
+
+    <div class = "m-resultsCard__option -links">
+      <div class="date">{% include "@storybook/02-Atoms/inputs/inputs.twig" with { month, day, year, variant: "a-resultsCard__date" } %}   </div>
+        <ul class = "m-resultsCard__time -location">
+          <li class = "m-resultsCard__timeOption"> {% include "@storybook/02-Atoms/inputs/inputs.twig" with { time, variant: "a-resultsCard__time" } %} <li>
+        </ul>
+      </div>
+    </div>
+{% endif %}
+
+{# Footer Section #}
+  {# Agencies Social Media #}
+{% if variant == "m-resultsCard__footer -follow" %}
+  <div class="m-resultsCard__footer -follow">
+    <span class="m-resultsCard__footer -label">{% include "@storybook/02-Atoms/text/text.twig" with { label: "Follow", classNames: "a-resultsCard__footer -label", variant: "label" } %}</span>
+    <ul class="m-resultsCard__footer -socialLinks">
+      <li><a href = url.facebook> {% include "@storybook/02-Atoms/icons/icons.twig" with { icon:"a-facebook -icon" } %} </a></li>
+      <li><a href = url.twitter> {% include "@storybook/02-Atoms/icons/icons.twig" with { icon:"a-twitter -icon" } %} </a></li>
+      <li><a href = url.youtube> {% include "@storybook/02-Atoms/icons/icons.twig" with { icon:"a-youtube -icon" } %} </a></li>
+      <li><a href = url.flickr> {% include "@storybook/02-Atoms/icons/icons.twig" with { icon:"a-flickr -icon" } %} </a></li>
+      <li><a href = url.pinterest> {% include "@storybook/02-Atoms/icons/icons.twig" with { icon:"a-pinterest -icon" } %} </a></li>
+    </ul>
+  </div>
+{% endif %}
+
+  {# Share #}
+{% if variant == "m-resultsCard__footer -share" %}
+  <div class="m-resultsCard__footer -share">
+    <span class="m-resultsCard__footer -icon">{% include "@storybook/02-Atoms/icons/icons.twig" with { icon: "a-share -icon" } %}</span>
+    <span class="m-resultsCard__footer -label">{% include "@storybook/02-Atoms/text/text.twig" with { label: "Share", classNames: "a-resultsCard__footer -label", variant: "label" } %}</span>
+  </div>
+{% endif %}
+
+  {# Download #}
+{% if variant == "m-resultsCard__footer -download" %}
+  <div class="m-resultsCard__footer -download">
+    <span class="m-resultsCard__footer -icon">{% include "@storybook/02-Atoms/icons/icons.twig" with { icon: "a-download -icon" } %}</span>
+    <span class="m-resultsCard__footer -label">{% include "@storybook/02-Atoms/text/text.twig" with { label: "Download", classNames: "a-resultsCard__footer -label", variant: "label" } %}</span>
+  </div>
+{% endif %}
+
+{# Pagination Section #}
+{% if variant == "m-results__pagination" %}
+  <span class= "m-results__btn -previous">
+    {% include "@storybook/02-Atoms/buttons/buttons.twig" with { variant: 'paginate-previous' } %}
+  </span>
+
+    {% include "@storybook/02-Atoms/buttons/buttons.twig" with { index, variant: "a--paginate__index" } %}
+
+  <span class= "m-results__btn -next">
+    {% include "@storybook/02-Atoms/buttons/buttons.twig" with { variant: 'paginate-next' } %}
+  </span>
+{% endif %}

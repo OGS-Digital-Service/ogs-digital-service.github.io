@@ -1,0 +1,61 @@
+@import "../../01-Base/breakpoints/breakpoints";
+
+.o-videoEmbed {
+  margin: 0 auto;
+  max-width: 780px;
+
+  @include breakpoint(desktop) {
+    max-width: 1160px;
+  }
+
+  &.center-layout {
+    text-align: center;
+
+    .a-headline {
+      display: block;
+    }
+
+    .m-video {
+      margin: auto;
+    }
+  }
+
+  &.navigator {
+    padding: 0;
+    margin: 0;
+  }
+
+  .a-headline {
+    margin-top: 0;
+    margin-bottom: 20px;
+    display: none;
+  }
+
+  .a-videoEmbed__description {
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+
+
+
+  @media print {
+    iframe{
+      visibility: hidden;
+    }
+    .m-video__coverOverlay{
+      display: none;
+    }
+    .m-video__print{
+      display: block;
+    }
+  }
+}
+.m-video__print{
+  display: none;
+}
+@media print {
+
+  .m-video__print{
+    display: block;
+  }
+}

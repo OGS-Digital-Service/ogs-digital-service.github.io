@@ -1,0 +1,5 @@
+<div class="t-section">
+	{% if term.type == "TaxonomyTermAgency"%}
+		{% include '@storybook/04-Organisms/taxonomyHero/taxonomyHero.twig' with { hero: term, heroType:"agencyTermHero" } %}
+	{% endif %}
+</div>

@@ -1,0 +1,567 @@
+{# Heroes Variables #}
+{% set learnMoreTitle = hero.learnMore.title %}
+{% set relatedContentTitle = hero.relatedContent.title %}
+{% set description = hero.description.processed|length > 187 ? hero.description.processed|slice(0,187) ~ '...' : hero.description.processed %}
+{% set date = hero.date.date|date("F d, Y") %}
+{% set time = hero.date.date|date("g:i A T") %}
+
+{% set placement = hero.placement %}
+
+{# Landing Hero #}
+{% if variant == "m-landingPage__hero -items" %}
+
+	{% if not hero.learnMore.title %}
+		{% set learnMoreTitle = "Learn More" %}
+	{% endif %}
+
+	{% if not hero.relatedContent.title %}
+		{% set relatedContentTitle = "Related Content" %}
+	{% endif %}
+
+	{% set description = hero.description|length > 187 ? hero.description|slice(0,187) ~ '...' : hero.description %}
+
+	<div
+		class="bg-black text-white m-hero__meta -landingHero">
+		{# Only displays on ny.gov #}
+		{% if current_site == 'nygov' and is_front %}
+			<div class="m-nygov__hero -viewHeader">
+				{% include '@storybook/02-Atoms/title/title.twig' with {
+					title: "The Official Website of New York State",
+					classNames: "a-nygov__hero -slogan",
+					variant: "title"
+					}
+				%}
+			</div>
+		{% endif %}
+
+		<div class="m-landingHero__contentWrapper -{{placement}}">
+			<div class="m-landingHero__content">
+				{% if hero.stream.url.path %}
+					<div class="m-landingHero__liveButton">
+						{% include '@storybook/02-Atoms/buttons/buttons.twig' with { title: "Live Now", url: hero.stream.url.path, variant: "a-hero__btn -live" } %}
+					</div>
+				{% endif %}
+				<div class="m-landingHero__title">
+					{% include "@storybook/02-Atoms/title/title.twig" with { title: hero.headline, classNames: "a-hero__title", variant: "title" } %}
+				</div>
+				<div class="m-landingHero__date">
+					{% include "@storybook/02-Atoms/date/date.twig" with { date: date, classNames: "text-primary-gold-light text-extra-bold a-hero__date", variant: "date" } %}
+				</div>
+				<div class="m-landingHero__description">
+					{% include "@storybook/02-Atoms/text/text.twig" with { text: description, classNames: "a-hero__description -text", variant: "string" } %}
+				</div>
+			</div>
+
+			{% if hero.learnMore.url.path or hero.relatedContent.url.path or hero.archived.url.path or hero.stream.url.path %}
+				<div class="m-landingHero__buttons">
+					{% if hero.learnMore.url.path %}
+						{% include '@storybook/02-Atoms/buttons/buttons.twig' with { title: learnMoreTitle, url: hero.learnMore.url.path, variant: "a-hero__btn -link" } %}
+					{% endif %}
+					{% if hero.relatedContent.url.path %}
+						{% include '@storybook/02-Atoms/buttons/buttons.twig' with { title: relatedContentTitle, url: hero.relatedContent.url.path, variant: "a-hero__btn -link" } %}
+					{% endif %}
+					{% if hero.archived.url.path %}
+						{% include '@storybook/02-Atoms/buttons/buttons.twig' with { title: hero.archived.title is not empty ? hero.archived.title :"Archived Video", url: hero.archived.url.path, variant: "a-hero__btn -link -archive" } %}
+					{% endif %}
+					{% if hero.stream.url.path %}
+						{% include '@storybook/02-Atoms/buttons/buttons.twig' with { title: hero.stream.title is not empty ? hero.stream.title :"Watch Live", url: hero.stream.url.path, variant: "a-hero__btn -link -watchLive" } %}
+					{% endif %}
+				</div>
+			{% endif %}
+		</div>
+	</div>
+{% endif %}
+
+{# Article Hero #}
+{% if variant == "m-articlePage__hero -items" %}
+	{% set dateCreated = hero.dateCreated|date("F j, Y") %}
+	<div class="bg-black text-white m-hero__meta -articleHero">
+		{% if hero.programReference is not empty %}
+			<div class="m-articleHero__programReference">
+				{% include '@storybook/02-Atoms/icons/icons.twig' with { icon: "a-leftArrow -icon" } %}
+				{% include '@storybook/02-Atoms/link/link.twig' with { content: hero.programReference.entity.keyword, url: hero.programReference.entity.url.path, variant: "a-body__link" } %}
+			</div>
+		{% endif %}
+		{% if hero.dateOption == true %}
+			<div class="m-articleHero__dateCreated">
+				{% include '@storybook/02-Atoms/date/date.twig' with { date: dateCreated, classNames: "a-hero__date", variant: "date" } %}
+			</div>
+		{% endif %}
+		<div class="m-articleHero__title">
+			{% include '@storybook/02-Atoms/title/title.twig' with { title: hero.title, classNames: "a-hero__title", variant: "heading" } %}
+		</div>
+	</div>
+{% endif %}
+
+{# Program Hero #}
+{% if variant == "m-programPage__hero -items" %}
+	{% set description = hero.description.processed|length > 120 ? hero.description.processed|slice(0,120) ~ '...' : hero.description.processed %}
+
+	<div class="bg-black text-white m-hero__meta -programHero">
+		{% if hero.label.linkText is not empty %}
+			<div class="m-programHero__link">
+				{% include '@storybook/02-Atoms/link/link.twig' with {content: hero.label.linkText, url: hero.label.url.path, variant: "a-hero__link" } %}
+			</div>
+		{% endif %}
+
+		<div class="m-programHero__title">
+			{% include '@storybook/02-Atoms/title/title.twig' with { title: hero.title, classNames: "a-hero__title", variant: "heading" } %}
+		</div>
+		{% if description is not empty %}
+			{% include '@storybook/02-Atoms/text/text.twig' with { text: description, classNames: "a-hero__description -text", variant: "html" } %}
+		{% endif %}
+	</div>
+{% endif %}
+
+{# Emergency Hero #}
+{% if variant == "m-emergencyPage__hero -items" %}
+	{% set date = hero.lastUpdate.date|date("F j, Y") %}
+	{% set time = hero.lastUpdate.date|date("g:i A T") %}
+
+	<div
+		class="bg-white text-black m-hero__meta -emergencyHero">
+
+		{# Summary Info #}
+		<div class="m-emergencyHero__summary">
+			<div class="m-emergencyHero__title">
+				{% include '@storybook/02-Atoms/icons/icons.twig' with { icon: "a-alert -icon" } %}
+				{% include '@storybook/02-Atoms/title/title.twig' with { title: hero.title, classNames: "a-hero__emergency -title", variant: "heading" } %}
+			</div>
+			<div class="text-bold m-emergencyHero__dateTime">
+				<div class="m-emergencyHero__label">
+					{% include '@storybook/02-Atoms/text/text.twig' with { text: "Last Updated:", classNames: "a-hero__emergency -text", variant: "string" } %}
+				</div>
+				<div class="m-emergencyHero__date">
+					{% include '@storybook/02-Atoms/date/date.twig' with { date: date, classNames: "text-bold a-hero__date", variant: "date" } %}
+					<div class="m-dateTime__separator"></div>
+					{% include '@storybook/02-Atoms/date/date.twig' with { date: time,  classNames: "a-hero__time", variant: "date" } %}
+				</div>
+			</div>
+			{% include '@storybook/02-Atoms/text/text.twig' with { text: description, classNames: "a-hero__description -text", variant: "html" } %}
+		</div>
+
+		{# Contact Info #}
+		<div class="m-emergencyHero__contactInfo">
+			{% include '@storybook/02-Atoms/title/title.twig' with { title: "Emergency Contact Information", classNames: "text-alerts text-extra-bold a-hero__title", variant: "title" } %}
+			{% if hero.twitter is not empty %}
+				<span class="m-emergencyHero__socialMedia">
+					{% include '@storybook/02-Atoms/text/text.twig' with { text: "Follow:", classNames: "a-hero__follow -text", variant: "string" } %}
+					<a class="text-semi-bold m-emergencyHero__twitter" href="https://twitter.com/{{hero.twitter}}">
+            {% if hero.twitter matches '/^@.*/i' %}
+              {{hero.twitter}}
+            {% else %}
+              @{{hero.twitter}}
+            {% endif %}
+          </a>
+				</span>
+			{% endif %}
+			{% if hero.phone is not empty %}
+				<div class="m-emergencyHero__phone">
+					<label>{% include '@storybook/02-Atoms/text/text.twig' with { text: "Contact by Phone:", variant: "string" } %}</label>
+					{% include '@storybook/02-Atoms/text/text.twig' with { text: hero.phone, variant: "string" } %}
+				</div>
+			{% endif %}
+			{% if hero.updateLink.title is not empty %}
+				{% include '@storybook/02-Atoms/link/link.twig' with { content: hero.updateLink.title, url: hero.updateLink.url.path, variant: "a-alert__link" } %}
+			{% endif %}
+		</div>
+	</div>
+{% endif %}
+
+{# Service Hero #}
+{% if variant == "m-servicePage__hero -items" %}
+	{% set dateCreated = hero.dateCreated|date("F j, Y") %}
+
+	{# Content Section #}
+	<div class="bg-primary-light-blue text-white m-hero__meta -serviceHero">
+		<div class="m-serviceHero__contentWrapper">
+			<div class="m-serviceHero__contentContainer">
+				{% if hero.dateOption == true %}
+					<div class="m-serviceHero__dateCreated">
+						{% include '@storybook/02-Atoms/date/date.twig' with { date: dateCreated, classNames: "a-hero__date", variant: "date" } %}
+					</div>
+				{% endif %}
+				{% include '@storybook/02-Atoms/title/title.twig' with { title: hero.title, variant: "heading" } %}
+				{% if hero.subheadline is not empty %}
+					{% include '@storybook/02-Atoms/title/title.twig' with { headline: hero.subheadline, variant: "headline" } %}
+				{% endif %}
+			</div>
+		</div>
+
+		{# Transaction Section #}
+		{% if hero.transactionTime is not empty %}
+			<div class="m-serviceHero__transactionWrapper">
+				<div class="bg-white text-black m-serviceHero__transactionContainer">
+					<div class="m-serviceHero__transactionContent">
+						<div class="m-serviceHero__clockIcon">
+							{% include '@storybook/02-Atoms/icons/icons.twig' with {icon: "a-clock -icon" } %}
+						</div>
+						<div class="text-bold text-2-space m-serviceHero__transactionTitle">
+							<div class="m-serviceHero__title">
+								{% include '@storybook/02-Atoms/text/text.twig' with { text: "Average Time of Transaction", variant: "string" } %}
+							</div>
+							<div class="m-serviceHero__iconMinutes">
+								<div class="m-serviceHero__clockIcon">
+									{% include '@storybook/02-Atoms/icons/icons.twig' with {icon: "a-clock -icon" } %}
+								</div>
+								<div class="text-extra-bold m-serviceHero__minutes">
+									{% include '@storybook/02-Atoms/text/text.twig' with { text: hero.transactionTime, variant: "string" } %}
+								</div>
+							</div>
+							<div class="m-serviceHero__minutesLabel">
+								{% include '@storybook/02-Atoms/text/text.twig' with { text: "Minutes", variant: "string" } %}
+							</div>
+						</div>
+					</div>
+					{% if hero.applyButton is not empty %}
+						<div class="m-serviceHero__button">
+							{% include '@storybook/02-Atoms/buttons/buttons.twig' with { title: hero.applyButton.linkText, url: hero.applyButton.url, variant: "a-hero__btn -link" } %}
+						</div>
+					{% endif %}
+				</div>
+			</div>
+		{% endif %}
+	</div>
+{% endif %}
+
+{# News Hero #}
+{% if variant == "m-newsPage__hero -items" %}
+	{% set dateCreated = hero.dateCreated|date("F j, Y") %}
+
+	<div class="bg-black text-white m-hero__meta -newsHero">
+		{% if hero.dateCreated is not empty or hero.location is not empty %}
+			<div class="m-newsHero__dateLocation">
+				{% if hero.dateOption == true %}
+					<div class="m-newsHero__dateCreated">
+						{% include '@storybook/02-Atoms/date/date.twig' with { date: dateCreated, classNames: "text-extra-bold a-hero__date", variant: "date" } %}
+					</div>
+				{% endif %}
+				{% if hero.dateCreated is not empty and hero.location is not empty and hero.dateOption == true %}
+					<div class="m-dateLocation__separator"></div>
+				{% endif %}
+				{% if hero.location is not empty %}
+					<div class="m-newsHero__location">
+						{% include '@storybook/02-Atoms/text/text.twig' with { text: hero.location,  variant: "string" } %}
+					</div>
+				{% endif %}
+			</div>
+		{% endif %}
+		<div class="m-newsHero__title">
+			{% include '@storybook/02-Atoms/title/title.twig' with { title: hero.title, variant: "heading" } %}
+		</div>
+		{% if hero.keywords is not empty %}
+			<div class="m-newsHero__keyword">
+				{% for keyword in hero.keywords %}
+					<div class="m-newsHero__tags">
+						{% include '@storybook/02-Atoms/link/link.twig' with { content: keyword.entity.keyword, url: keyword.entity.url.path, variant: "a-hero__link"} %}
+					</div>
+				{% endfor %}
+			</div>
+		{% endif %}
+	</div>
+{% endif %}
+
+{# Executive Order Hero #}
+{% if variant == "m-executiveOrderPage__hero -items" %}
+
+	{% set dateDisplay = hero.dateDisplay.date|date("F j, Y") %}
+
+	<div class="bg-black text-white m-hero__meta -executiveOrderHero">
+		{% if hero.dateDisplay.date is not empty %}
+			<div class="m-executiveOrderHero__date">
+				{% if hero.dateOption == true %}
+					<div class="m-executiveOrderHero__dateDisplay">
+						{% include '@storybook/02-Atoms/date/date.twig' with { date: dateDisplay, classNames: "text-extra-bold a-hero__date", variant: "date" } %}
+					</div>
+				{% endif %}
+			</div>
+		{% endif %}
+		<div class="m-executiveOrderHero__title">
+			{% include '@storybook/02-Atoms/title/title.twig' with { title: hero.title, variant: "heading" } %}
+		</div>
+		{% if hero.keywords is not empty %}
+			<div class="m-executiveOrderHero__keyword">
+				{% for keyword in hero.keywords %}
+					<div class="m-executiveOrderHero__tags">
+						{% include '@storybook/02-Atoms/link/link.twig' with { content: keyword.entity.keyword, url: keyword.entity.url.path, variant: "a-hero__link"} %}
+					</div>
+				{% endfor %}
+			</div>
+		{% endif %}
+	</div>
+{% endif %}
+
+{# ScheduledEvent Hero #}
+{% if variant == "m-scheduledEventPage__hero -items" %}
+
+	{# Start Date #}
+	{% set startDate = hero.dateRange.startDate|date("m/d/Y") %}
+	{% set startMonth = hero.dateRange.startDate|date("F") %}
+	{% set startDay = hero.dateRange.startDate|date("j") %}
+	{% set startYear = hero.dateRange.startDate|date("Y") %}
+	{% set startTime = hero.dateRange.startDate|date('h:i a') %}
+
+	{# End Date #}
+	{% set endDate = hero.dateRange.endDate|date("m/d/Y") %}
+	{% set endMonth = hero.dateRange.endDate|date("F") %}
+	{% set endDay = hero.dateRange.endDate|date("j") %}
+	{% set endYear = hero.dateRange.endDate|date("Y") %}
+	{% set endTime = hero.dateRange.endDate|date('h:i a') %}
+
+	<div class="bg-black text-white m-hero__meta -scheduledEventHero">
+		<div class="m-scheduledEventHero__content -container">
+			{% include '@storybook/02-Atoms/title/title.twig' with { title: hero.title, classNames: "a-hero__title", variant: "heading" } %}
+
+			{% if hero.keywords is not empty %}
+				<div class="m-scheduledEventHero__keyword">
+					{% for keyword in hero.keywords %}
+						<div class="m-scheduledEventHero__tags">
+							{% include '@storybook/02-Atoms/link/link.twig' with { content: keyword.entity.keyword, url: keyword.entity.url.path, variant: "a-hero__link"} %}
+						</div>
+					{% endfor %}
+				</div>
+			{% endif %}
+		</div>
+
+		{# Event Info #}
+		<div class="m-scheduledEventHero__event -container">
+			<div class="m-scheduledEventHero__event">
+				<div
+					class="m-scheduledEventHero__dateContainer">
+
+					{# Start Date #}
+					{% if startDate is not empty %}
+						<div class="m-scheduledEventHero__date">
+							<div class="m-scheduledEventHero__month">
+								{% include '@storybook/02-Atoms/date/date.twig' with { date: startMonth|slice(0,3), classNames: "text-extra-bold a-hero__date", variant: "date" } %}
+							</div>
+							<div class="m-scheduledEventHero__day">
+								{% include '@storybook/02-Atoms/date/date.twig' with { date: startDay|slice(0,2), classNames: "text-primary-gold-light text-extra-bold a-hero__date", variant: "date" } %}
+							</div>
+							<div class="m-scheduledEventHero__year">
+								{% include '@storybook/02-Atoms/date/date.twig' with { date: startYear|slice(0,4), classNames: "text-semi-bold a-hero__date", variant: "date" } %}
+							</div>
+						</div>
+					{% endif %}
+
+					{# Start, End Date Separator #}
+					{% if startDate != endDate  %}
+						<div class="m-scheduledEventHero__dateSeparator"></div>
+					{% endif %}
+
+					{# End Date #}
+					{% if startDate != endDate %}
+						<div class="m-scheduledEventHero__date">
+							<div class="m-scheduledEventHero__month">
+								{% include '@storybook/02-Atoms/date/date.twig' with { date: endMonth|slice(0,3), classNames: "text-extra-bold a-hero__date", variant: "date" } %}
+							</div>
+							<div class="m-scheduledEventHero__day">
+								{% include '@storybook/02-Atoms/date/date.twig' with { date: endDay|slice(0,2), classNames: "text-primary-gold-light text-extra-bold a-hero__date", variant: "date" } %}
+							</div>
+							<div class="m-scheduledEventHero__year">
+								{% include '@storybook/02-Atoms/date/date.twig' with { date: endYear|slice(0,4), classNames: "text-semi-bold a-hero__date", variant: "date" } %}
+							</div>
+						</div>
+					{% endif %}
+				</div>
+
+				{# Venue #}
+				{% if startDate is not empty or hero.venue is not empty %}
+					<div class="m-scheduledEventHero__timeVenue -container">
+						<div
+							class="m-scheduledEventHero__timeContainer">
+
+							{# Start Date Time #}
+							{% if startDate is not empty %}
+								<div class="text-semi-bold m-scheduledEventHero__time">
+									<div class="text-primary-gold-light icon-clock m-scheduledEventHero__clockIcon"></div>
+									{% include '@storybook/02-Atoms/text/text.twig' with { text: startTime,  variant: "string" } %}
+								</div>
+							{% endif %}
+
+							{# Start, End Date Time Separator #}
+							{% if startTime != endTime %}
+								<div class="m-scheduledEventHero__timeSeparator"></div>
+							{% endif %}
+
+							{# End Date Time #}
+							{% if startTime != endTime %}
+								<div class="text-semi-bold m-scheduledEventHero__time">
+									{% include '@storybook/02-Atoms/text/text.twig' with { text: endTime,  variant: "string" } %}
+								</div>
+							{% endif %}
+						</div>
+
+						{# Time and Venue Separator #}
+						{% if startDate is not empty and hero.venue is not empty %}
+							<div class="m-scheduledEventHero__timeVenue -separator"></div>
+						{% endif %}
+
+						{% if hero.venue is not empty %}
+							<div class="text-semi-bold m-scheduledEventHero__venue">
+								<div class="text-primary-gold-light icon-map-marker m-scheduledEventHero__pinIcon"></div>
+								{% include '@storybook/02-Atoms/text/text.twig' with { text: hero.venue,  variant: "string" } %}
+							</div>
+						{% endif %}
+					</div>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+{% endif %}
+
+{# Biography Hero #}
+{% if variant == "m-bioPage__hero -items" %}
+	{% set socialMedias = [
+  {
+    name: 'facebook',
+    regex: '/facebook\.com/i',
+    icon: 'icon-facebook'
+  },
+  {
+    name: 'twitter',
+    regex: '/twitter\.com/i',
+    icon: 'icon-twitter'
+  },
+  {
+    name: 'youtube',
+    regex: '/youtube\.com/i',
+    icon: 'icon-youtube'
+  },
+  {
+    name: 'instagram',
+    regex: '/instagram\.com/i',
+    icon: 'icon-instagram'
+  },
+  {
+    name: 'flickr',
+    regex: '/flickr\.com/i',
+    icon: 'icon-flickr'
+  },
+  {
+    name: 'rss feed',
+    regex: '/rss/i',
+    icon: 'icon-rss'
+  },
+  {
+    name: 'linkedIn',
+    regex: '/linkedin\.com/i',
+    icon: 'icon-linkedin'
+  },
+  {
+    name: 'soundcloud',
+    regex: '/soundcloud\.com/i',
+    icon: 'icon-soundcloud'
+  },
+  {
+    name: 'vimeo',
+    regex: '/vimeo\.com/i',
+    icon: 'icon-vimeo'
+  },
+  {
+    name: 'tumblr',
+    regex: '/tumblr\.com/i',
+    icon: 'icon-tumblr'
+  },
+  {
+    name: 'pinterest',
+    regex: '/pinterest\.com/i',
+    icon: 'icon-pinterest'
+  },
+  {
+    name: 'google play',
+    regex: '/google\.com/i',
+    icon: 'icon-google-play'
+  },
+  {
+    name: 'apple store',
+    regex: '/apple\.com/i',
+    icon: 'icon-apple'
+  },
+  {
+    name: 'snapchat',
+    regex: '/snapchat\.com/i',
+    icon: 'icon-snapchat'
+  }
+] %}
+
+	<div class="bg-black m-hero__meta -bioHero">
+		<p class="text-primary-gold text-oswald text-1-space m-bioHero__headline">
+			{{ hero.bioTitle }}</p>
+		{% include '@storybook/02-Atoms/title/title.twig' with { title: hero.bioName, classNames:"text-white text-extra-bold text-1-space m-bioHero__title", variant: "heading" } %}
+
+		{% if hero.socials %}
+			<div
+				class="m-bioHero__social">
+
+				{# Loop through social medias links field #}
+				{% for social in hero.socials %}
+					{% if social.uri %}
+						{% set socialLinkClasses = [
+            'm-bioHero__socialLinks',
+            loop.first ? '-first' : loop.last ? '-last' : '',
+          ] %}
+						{# Output of each social media links #}
+						{% for socialMedia in socialMedias %}
+							{% if social.uri matches socialMedia.regex %}
+								<div class="text-white   {{ socialLinkClasses|join(' ')|trim }}">
+									{% include "@storybook/03-Molecules/socialLink/socialLink.twig" with {
+                  link: social.uri,  iconClass: socialMedia.icon
+                } %}
+								</div>
+							{% endif %}
+						{% endfor %}
+						{# End of social media links#}
+					{% endif %}
+				{% endfor %}
+				{# End of social media links field loop #}
+			</div>
+		{% endif %}
+
+	</div>
+{% endif %}{# Agency Term Hero #}{% if variant == "m-agencyTerm__hero -items" %}
+	<div class="bg-black text-white m-hero__meta -agencyHero">
+		<div class="m-agencyHero__category">
+			{% include '@storybook/02-Atoms/text/text.twig' with { text: hero.category[0].entity.keyword, classNames: "a-hero__agency -text text-semi-bold", variant: "string"} %}
+		</div>
+		{% if hero.category is not empty %}
+			<div class="m-agencyHero__category -separator"></div>
+		{% endif %}
+		{% include '@storybook/02-Atoms/title/title.twig' with { title: hero.title, classNames: "a-hero__title", variant: "heading" } %}
+	</div>
+{% endif %}{# County Term Hero #}{% if variant == "m-countyTerm__hero -items" %}
+	<div class="bg-black text-white m-hero__meta -countyHero">
+		<div class="m-countyHero__region">
+			{% include '@storybook/02-Atoms/text/text.twig' with { text: hero.region.entity.keyword, classNames: "a-hero__agency -text text-semi-bold", variant: "string"} %}
+		</div>
+		{% if hero.region is not empty %}
+			<div class="m-countyHero__region -separator"></div>
+		{% endif %}
+		{% include '@storybook/02-Atoms/title/title.twig' with { title: hero.title, classNames: "a-hero__title", variant: "heading" } %}
+		{% if hero.area is not empty or hero.founded is not empty  or hero.population is not empty %}
+			<div class="text-primary-gold-light m-countyHero__info">
+				{% if hero.area is not empty %}
+					<div class="m-countyHero__area">
+						<label>Area</label>
+						<div class="text-white m-countyArea__inputContainer">
+							{% include '@storybook/02-Atoms/text/text.twig' with { text: hero.area, classNames: "text-extra-bold text-white m-countyArea__input", variant: "string"} %}
+							<span class="text-bold m-countyHero__sqMiles">sq miles</span>
+						</div>
+					</div>
+				{% endif %}
+				{% if hero.founded is not empty %}
+					<div class="m-countyHero__founded">
+						<label>Founded</label>
+						{% include '@storybook/02-Atoms/text/text.twig' with { text: hero.founded, classNames: "text-extra-bold text-white m-countyFounded__input", variant: "string"} %}
+					</div>
+				{% endif %}
+				{% if hero.population is not empty %}
+					<div class="m-countyHero__population">
+						<label>Population</label>
+						{% include '@storybook/02-Atoms/text/text.twig' with { text: hero.population, classNames: "text-extra-bold text-white m-countyPopulation__input", variant: "string"} %}
+					</div>
+				{% endif %}
+			</div>
+		{% endif %}
+	</div>
+{% endif %}

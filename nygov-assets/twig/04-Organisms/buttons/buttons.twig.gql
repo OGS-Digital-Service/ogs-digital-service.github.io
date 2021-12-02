@@ -1,0 +1,27 @@
+fragment Buttons on ParagraphButtons {
+  title: fieldTitle
+  headline: fieldHeadline
+  color: fieldPbStyles
+  description: fieldDescription {
+    processed
+  }
+  buttons: fieldPbButtons {
+    button: entity {
+      ... on ParagraphButtonsWebform {
+        webform: fieldWebform {
+          id: targetId
+          status: status
+        }
+        label: fieldLabel
+      }
+      ... on ParagraphButtonsLink {
+        link: fieldLink {
+          title: title
+          url: url {
+            path: path
+          }
+        }
+      }
+    }
+  }
+}

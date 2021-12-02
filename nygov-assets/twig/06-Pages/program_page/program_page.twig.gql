@@ -1,0 +1,60 @@
+fragment ProgramPage on NodeProgram {
+	contentType: entityBundle
+	heroToggle: fieldPToggleHero
+	label: fieldPLabel {
+		url {
+			path
+		}
+		linkText: title
+	}
+	title: entityLabel
+	description: fieldPDescription {
+		processed
+	}
+	featuredImage: fieldPFeaturedImage {
+		entity {
+			... on MediaImage {
+				desktopImg: fieldMediaImage {
+					derivative(style: HEROWIDE) {
+						url
+					}
+				}
+				tabletImg: fieldMediaImage {
+					derivative(style: HERONARROW) {
+						url
+					}
+				}
+				mobileImg: fieldMediaImage {
+					derivative(style: HEROMOBILE) {
+						url
+					}
+				}
+			}
+		}
+	}
+	sections: fieldSections {
+		section: entity {
+			type: __typename
+			bundle: entityBundle
+      ...TitleBar
+      ...BioLinks
+			...CardsQueue
+      ...Highlight
+			...WYSIWYG
+			...Buttons
+			...PhotoGallery
+			...Quote
+			...PopularServices
+			...Connect
+			...Milestones
+			...ProgramSupporter
+			...VideoEmbed
+      ...CategoriesTiles
+      ...PlanAhead
+      ...PlanSummary
+      ...Modal
+      ...QuickLinks
+      ...SocialMediasShare
+		}
+	}
+}

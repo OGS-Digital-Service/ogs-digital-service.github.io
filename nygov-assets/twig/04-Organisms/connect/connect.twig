@@ -1,0 +1,132 @@
+{% set socialMedias = [
+  {
+    name: 'facebook',
+    regex: '/facebook\.com/i',
+    icon: 'icon-facebook'
+  },
+  {
+    name: 'twitter',
+    regex: '/twitter\.com/i',
+    icon: 'icon-twitter'
+  },
+  {
+    name: 'youtube',
+    regex: '/youtube\.com/i',
+    icon: 'icon-youtube'
+  },
+  {
+    name: 'instagram',
+    regex: '/instagram\.com/i',
+    icon: 'icon-instagram'
+  },
+  {
+    name: 'flickr',
+    regex: '/flickr\.com/i',
+    icon: 'icon-flickr'
+  },
+  {
+    name: 'rss feed',
+    regex: '/rss/i',
+    icon: 'icon-rss'
+  },
+  {
+    name: 'linkedIn',
+    regex: '/linkedin\.com/i',
+    icon: 'icon-linkedin'
+  },
+  {
+    name: 'soundcloud',
+    regex: '/soundcloud\.com/i',
+    icon: 'icon-soundcloud'
+  },
+  {
+    name: 'vimeo',
+    regex: '/vimeo\.com/i',
+    icon: 'icon-vimeo'
+  },
+  {
+    name: 'tumblr',
+    regex: '/tumblr\.com/i',
+    icon: 'icon-tumblr'
+  },
+  {
+    name: 'pinterest',
+    regex: '/pinterest\.com/i',
+    icon: 'icon-pinterest'
+  },
+  {
+    name: 'google play',
+    regex: '/google\.com/i',
+    icon: 'icon-google-play'
+  },
+  {
+    name: 'apple store',
+    regex: '/apple\.com/i',
+    icon: 'icon-apple'
+  },
+  {
+    name: 'snapchat',
+    regex: '/snapchat\.com/i',
+    icon: 'icon-snapchat'
+  }
+] %}
+
+<div class="o-connect__wrapper">
+
+  {% if section.title or section.headline %}
+    <div class="o-connect__header">
+      {# Frame Title (required) #}
+      {% if section.title %}
+        <h2 class="text-primary-blue text-oswald text-bold text-2-space">{{ section.title }}</h2>
+      {% endif %}
+
+      {# Frame Headline (optional) #}
+      {% if section.headline %}
+        <h3 class="text-extra-bold">{{ section.headline }}</h3>
+      {% endif %}
+    </div>
+  {% endif %}
+
+  {# Social Media Links (optional) #}
+  {% if section.socials %}
+    <div class="o-connect__socials">
+
+      {# Loop through social medias links field #}
+      {% for social in section.socials %}
+        {% if social.uri %}
+
+          {% set socialLinkClasses = [
+            'o-connect__socialLink',
+            loop.first ? '-first' : loop.last ? '-last' : '',
+          ] %}
+
+          {# Output of each social media links #}
+          {% for socialMedia in socialMedias %} 
+            {% if social.uri matches socialMedia.regex %}
+              <div class="{{ socialLinkClasses|join(' ')|trim }}">
+                {% include "@storybook/03-Molecules/socialLink/socialLink.twig" with {
+                  link: social.uri, name: socialMedia.name, iconClass: socialMedia.icon
+                } %}
+              </div>
+            {% endif %}
+          {% endfor %}
+          {# End of social media links#}
+        {% endif %}
+      {% endfor %}
+      {# End of social media links field loop #}
+
+      {# Other Social media link field (optional) #}
+
+      {% if section.other %}
+        {% for other in section.other %} 
+          <div class="o-connect__socialLink -other">
+              {% include "@storybook/03-Molecules/socialLink/socialLink.twig" with {
+                link: other.uri , name: other.title, iconClass: 'icon-ellipsis'
+              } %}
+            </div>
+        {% endfor %}
+      {% endif %}
+
+    </div>
+  {% endif %}
+</div>

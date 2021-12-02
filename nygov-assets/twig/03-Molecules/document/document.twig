@@ -1,0 +1,22 @@
+<div class="m-document {{ class }}">
+  {% include "@storybook/02-Atoms/icons/icons.twig"  with { icon: "a-file -icon" } %}
+  <div class="m-document__titles">
+    <div class="englishTitle">
+      {% include "@storybook/02-Atoms/link/link.twig" with {url: url, content: english, newTab: true} %}
+    </div>
+    {% if translated %}
+    <div class="translated-title">
+      {{translated}}
+    </div>
+    {% endif %}
+    {% if description %}
+    <div class="description">
+      {{description|raw}}
+    </div>
+    {% endif %}
+  </div>
+  <a class="m-document__download -link" href={{ url }} target="_blank">
+    {% include "@storybook/02-Atoms/icons/icons.twig" with { icon: "a-download -icon" } %}
+    <span class="m-document__download__text">Download</span>
+  </a>
+</div>

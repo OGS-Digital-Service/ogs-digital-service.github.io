@@ -1,0 +1,146 @@
+@import '../../01-Base/breakpoints/breakpoints.scss';
+
+.p-login{
+  height: 100vh;
+  background: #128ec3;  /* fallback for old browsers */
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+
+  &__svg{
+    display: none;
+    flex-flow: column;
+    justify-content: center;
+    margin-right: 50px;
+  }
+
+  @include breakpoint(tablet) {
+    flex-flow: row;
+
+    &__svg {
+      min-width: 50%;
+      margin-left: 20px;
+      display: flex;
+    }
+  }
+
+  @include breakpoint(desktop) {
+    &__svg {
+      min-width: 500px;
+      margin-left: 20px;
+      display: flex;
+    }
+  }
+
+  .messages {
+    max-width: 350px;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 7px;
+    top: 100px;
+
+    a {
+      display: none;
+    }
+  }
+
+  .region-content {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+  }
+
+  form{
+    background-color: #FCFCFC;
+    padding: 40px 60px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    border-radius: 7px;
+    margin: 0 20px;
+
+    .fas.fa-user, .fas.fa-lock{
+      display: flex;
+      position: relative;
+      top: 33px;
+      left: 15px;
+      font-size: 20px;
+      height: 0;
+      width: 0;
+      color: #128ec3;
+    }
+
+    h1{
+      color: #F5A81C;
+      max-width: 250px;
+      text-align: center;
+      margin: 20px auto;
+      font-family: "Oswald";
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    #edit-actions{
+      margin: 20px auto;
+      width: 100%;
+      max-width: 350px;
+    }
+
+    #edit-submit{
+      background: #128ec3;
+      border-radius: 7px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #FCFCFC;
+      width: 100%;
+      padding: 13px 20px;
+      letter-spacing: 1px;
+      border-color: transparent;
+      transition: background-color 250ms ease-in-out;
+      max-width: 350px;
+  
+      &:hover{
+        background: #333333;
+      }
+    }
+
+    .form-item--error-message{
+      display: none;
+    }
+
+    .form-item{
+      margin: 20px auto;
+      display: flex;
+      flex-flow: column;
+      max-width: 350px;
+      
+      input {
+        font-size: 20px;
+        padding: 10px;
+        border-radius: 7px;
+        border-color: transparent;
+        background: #e6e6e6;
+        color: #666666;
+        font-weight: bold;
+        letter-spacing: 1px;
+        width: 100%;
+        padding-left: 45px;
+
+        &::placeholder{
+          opacity: 0.7;
+        }
+      }
+
+
+      & > label::after {
+        display: none;
+      }
+    }
+
+    .description {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+@import "../../01-Base/breakpoints/breakpoints";
+@import "../../01-Base/icons/icons.scss";
+@import "../../01-Base/typography/colors/colors.scss";
+
+//Default Title Bar
+.m-titleBar {
+  padding: 18px 30px;
+
+  @include breakpoint(tablet) {
+    padding: 40px 30px;
+  }
+  @include breakpoint(desktop) {
+    padding: 48px 30px;
+    display: flex;
+  }
+
+  .m-titleBar__title {
+    font-size: 24px;
+    line-height: 24px;
+    margin: 0;
+    @include breakpoint(tablet) {
+      font-size: 42px;
+    }
+    @include breakpoint(desktop) {
+      font-size: 48px;
+    }
+  }
+
+  .m-titleBar__subtitle {
+    display: none;
+    @include breakpoint(tablet) {
+      display: block;
+      font-size: 21px;
+      margin-top: 15px;
+    }
+    @include breakpoint(desktop) {
+      font-size: 24px;
+      margin-top: 0;
+      margin-left: 30px;
+    }
+  }
+}

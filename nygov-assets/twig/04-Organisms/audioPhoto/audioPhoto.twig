@@ -1,0 +1,17 @@
+<div class="o-audio-photo">
+  <div class="o-audio-photo__content">
+
+    {% if section.audio.url.path %}
+      {% include "@storybook/02-Atoms/link/link.twig" with {url: section.audio.url.path, content: section.audio.title, variant: "a-audio-photo__link", newTab: true} %}
+    {% endif %}
+
+    {% if section.photos.url.path %}
+      {% include "@storybook/02-Atoms/link/link.twig" with {url: section.photos.url.path, content:  section.photos.title, variant: "a-audio-photo__link", newTab: true} %}
+    {% endif %}
+
+    {% if section.otherLink.url.path %}
+      {% include "@storybook/02-Atoms/link/link.twig" with {url: section.otherLink.url.path, content:  section.otherLink.title, variant: "a-audio-photo__link", newTab: true} %}
+    {% endif %}
+
+  </div>
+</div>

@@ -1,0 +1,11 @@
+.p-agency__wrapper {
+  width: 80%;
+  max-width: 780px;
+  margin: 0 auto 60px;
+
+  &.-navigatorContainer {
+    width: inherit;
+    max-width: none;
+    margin: 0;
+  }
+}

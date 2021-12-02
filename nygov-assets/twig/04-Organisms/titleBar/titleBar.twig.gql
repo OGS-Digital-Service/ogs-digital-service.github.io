@@ -1,0 +1,4 @@
+fragment TitleBar on ParagraphTitleBar {
+  title: fieldTitle
+  subtitle: fieldHeadline
+}

@@ -1,0 +1,385 @@
+@import "../../01-Base/breakpoints/breakpoints";
+
+.o-cardGlobalTablet {
+  @include breakpoint(desktop) {
+    max-width: 450px;
+  }
+
+  overflow: hidden;
+  border: 1px solid #D0D0CE;
+  position: relative;
+  margin-bottom: 18px;
+
+  .o-cardLogo {
+    height: 220px;
+
+    @include breakpoint(tablet) {
+      float: left;
+      width: 33.3%;
+      border-right: 1px solid #D0D0CE;
+    }
+
+    @include breakpoint(desktop) {
+      float: none;
+      width: 100%;
+      border-right: none;
+    }
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    display: block;
+    overflow: hidden;
+  }
+
+  .o-cardContent {
+    @include breakpoint(tablet) {
+      float: left;
+      width: 66.6%;
+      min-height: 0;
+      height: 180px;
+    }
+
+    @include breakpoint(desktop) {
+      min-height: 365px;
+      float: none;
+      width: 100%;
+      height: auto;
+    }
+
+    width: 100%;
+    min-height: 365px;
+    display: inline-block;
+  }
+
+  .m-card__data {
+    @include breakpoint(tablet) {
+      width: 100%;
+      float: left;
+    }
+
+    @include breakpoint(desktop) {
+      width: auto;
+      float: none;
+    }
+
+    .a-card__label {
+      height: 48px;
+    }
+
+    @supports (-webkit-line-clamp: 2) {
+      .a-card__label {
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+      }
+
+      @include breakpoint(tablet) {
+        .a-card__label {
+          display: -webkit-box;
+          overflow: hidden;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 1;
+          height: 24px;
+        }
+      }
+
+      @include breakpoint(desktop) {
+        .a-card__label {
+          display: -webkit-box;
+          overflow: hidden;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+          height: 48px;
+        }
+      }
+    }
+  }
+
+  .a-card__description {
+    margin: 1em 0;
+    height: 5.5em;
+
+    @include breakpoint(tablet) {
+      height: 2.75em;
+    }
+
+    @include breakpoint(desktop) {
+      height: 5.5em;
+    }
+
+    p {
+      margin: 0;
+    }
+
+  }
+
+  @supports (-webkit-line-clamp: 4) {
+    .a-card__description {
+      display: -webkit-box;
+      overflow: hidden;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 4;
+    }
+
+    @include breakpoint(tablet) {
+      .a-card__description {
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+      }
+    }
+
+    @include breakpoint(desktop) {
+      .a-card__description {
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 4;
+      }
+    }
+  }
+
+  .linkDescription {
+    @include breakpoint(tablet) {
+      width: 60%;
+      float: left;
+    }
+
+    @include breakpoint(desktop) {
+      width: auto;
+      float: none;
+    }
+
+    .a-card__description {
+      margin-bottom: 0;
+
+      @include breakpoint(tablet) {
+        height: 2.75em;
+      }
+
+      @include breakpoint(desktop) {
+        height: 5.5em;
+      }
+    }
+
+    @supports (-webkit-line-clamp: 4) {
+      .a-card__description {
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 4;
+      }
+
+      @include breakpoint(tablet) {
+        .a-card__description {
+          display: -webkit-box;
+          overflow: hidden;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+        }
+      }
+
+      @include breakpoint(desktop) {
+        .a-card__description {
+          display: -webkit-box;
+          overflow: hidden;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 4;
+        }
+      }
+    }
+  }
+
+  .o-cardLinksWrapper {
+    width: auto;
+    float: none;
+
+    @include breakpoint(tablet) {
+      width: 40%;
+      float: left;
+    }
+
+    @include breakpoint(desktop) {
+      width: auto;
+      float: none;
+    }
+
+    padding: 20px 15px 0;
+  }
+
+  .o-cardFooter {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .eventDescription {
+    height: 100%;
+
+    .a-card__label {
+      margin: 20px 0 15px;
+      height: 48px;
+    }
+
+    h3 {
+      margin: 0;
+    }
+
+    @include breakpoint(tablet) {
+      width: 55%;
+      float: left;
+      border-right: 1px solid #D0D0CE;
+
+      .a-card__label {
+        margin: 20px 0 20px;
+      }
+    }
+
+    @include breakpoint(desktop) {
+      width: auto;
+      float: none;
+      border-right: none;
+
+      .a-card__label {
+        margin: 20px 0 20px;
+      }
+
+      @supports (-webkit-line-clamp: 2) {
+        .a-card__label {
+          display: -webkit-box;
+          overflow: hidden;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+        }
+      }
+    }
+
+    .a-card__description {
+      margin: 0;
+      height: 4.0em;
+
+      @include breakpoint(tablet) {
+        height: 2.75em;
+      }
+
+      @include breakpoint(desktop) {
+        height: 4.0em;
+      }
+    }
+
+    @supports (-webkit-line-clamp: 3) {
+      .a-card__description {
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+      }
+
+      @include breakpoint(tablet) {
+        .a-card__description {
+          display: -webkit-box;
+          overflow: hidden;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+        }
+      }
+
+      @include breakpoint(desktop) {
+        .a-card__description {
+          display: -webkit-box;
+          overflow: hidden;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 3;
+        }
+      }
+    }
+
+  }
+
+  .eventDetails {
+    width: auto;
+    float: none;
+
+    @include breakpoint(tablet) {
+      width: 45%;
+      float: left;
+
+      .m-eventDate {
+        justify-content: center;
+      }
+    }
+
+    @include breakpoint(desktop) {
+      width: auto;
+      float: none;
+
+      .m-eventDate {
+        justify-content: left;
+      }
+    }
+
+    @supports (-webkit-line-clamp: 1) {
+      span {
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+      }
+    }
+
+    padding: 15px 15px 0;
+  }
+
+  @media print {
+    max-width: 450px;
+    break-inside: avoid;
+    margin: auto;
+    .a-buttons__cardCat{
+      display: none;
+    }
+    .o-cardLogo{
+      display: none;
+    }
+    
+    a::after{
+      content: " (" attr(href) ")";
+    }
+  }
+
+
+}
+
+.o-stats {
+  @include breakpoint(tablet) {
+    width: 33.33%;
+  }
+
+  background-repeat: no-repeat;
+  width: 100%;
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 380px;
+  position: relative;
+
+  @supports (-webkit-line-clamp: 5) {
+    .a-stats__description {
+      display: -webkit-box;
+      overflow: hidden;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 5;
+      height: unset;
+    }
+  }
+  @media print {
+    a::after{
+      content: " (" attr(href) ")";
+    }
+  }
+}

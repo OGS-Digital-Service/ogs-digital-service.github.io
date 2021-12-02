@@ -1,0 +1,54 @@
+{% set col_count = 0 %}
+{% for item in section.plans %}
+    {% set col_count = col_count + 1 %}
+{% endfor %}
+
+{% set classes = [
+  'o-plan-summary',
+  section.color ? 'bg-primary-' ~ section.color: '',
+  col_count == 2 ? 'two-col' : ''
+] %}
+
+<div class="{{classes|join(' ')}}">
+  <div class= "o-plan-summary__content-wrapper">
+    <div class= "o-plan-summary__titles">
+      {% if section.title %}
+        {% include '@storybook/02-Atoms/title/title.twig' with { title: section.title, variant: 'title', classNames: "o-plan-summary__title"} %}
+      {% endif %}
+
+      {% if section.headline %}
+        {% include '@storybook/02-Atoms/title/title.twig' with { headline: section.headline, variant: 'headline', classNames: "o-plan-summary__headline"} %}
+      {% endif %}
+    </div>
+
+    {% if section.plans %}
+      <div class= "o-plan-summary__plans">
+        {% for item in section.plans %}
+          <div class= "o-plan-summary__plan">
+            {% if item.paragraph.keyPoint is not empty %}
+              <div class= "o-plan-summary__key-point">
+                {{ item.paragraph.keyPoint }}
+              </div>
+            {% endif %}
+            {% if item.paragraph.supportingArgument is not empty %}
+              <div class= "o-plan-summary__supporting-argument">
+                {{ item.paragraph.supportingArgument }}
+              </div>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {% if section.moreLink %}
+      <div class ="o-plan-summary__more-link">
+        {% set buttonTarget = section.newWindow ? "_blank" : "_self" %}
+        {% set ariaLabel = section.ariaLabel ? section.ariaLabel : "Read more about " ~ section.headline %}
+        <a class="a-btn__link" href="{{ section.moreLink.url.path }}" aria-label="{{ ariaLabel }}" target={{ buttonTarget }}>
+          {{ section.moreLink.title }}
+        </a>
+      </div>
+    {% endif %}
+
+  </div>
+</div>

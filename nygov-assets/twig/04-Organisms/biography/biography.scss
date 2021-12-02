@@ -1,0 +1,147 @@
+@import "../../01-Base/breakpoints/breakpoints";
+
+.o-biography {
+  border-bottom: 2px solid #cccccc;
+  padding-bottom: 50px;
+  width: 100%;
+  margin: 0 auto;
+
+  &.navigator {
+    margin: 0;
+    border-bottom: none;
+  }
+
+  @include breakpoint(desktop) {
+    max-width: 1160px;
+  }
+
+  &__wrap {
+    display: initial;
+    @include breakpoint(laptop) {
+      display: flex;
+    }
+    @media print {
+      display: block;
+    }
+  }
+
+  &.has-bio-image {
+    .o-biography__text-col {
+      display: block;
+      @include breakpoint(tablet) {
+        display: inline;
+      }
+      @include breakpoint(laptop) {
+        display: inline-block;
+        vertical-align: top;
+      }
+      @media print {
+        display: inline;
+        vertical-align: top;
+      }
+      .o-biography__bio-content-top {
+        vertical-align: bottom;
+        display: inline-block;
+        .o-biography__bio-name {
+          margin-top: 20px;
+          @include breakpoint(laptop) {
+            margin-top: 0;
+          }
+          @media print {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &__image-col {
+    margin-right: 0;
+    text-align: center;
+    margin-bottom: 8px;
+    @include breakpoint(tablet) {
+      margin-right: 44px;
+      display: inline-block;
+      margin-bottom: 0;
+    }
+    @media print {
+      margin-right: 44px;
+      display: block;
+      // margin-bottom: 0;
+      float: left;
+    }
+  }
+
+  &__text-col {
+    font-size: 18px;
+  }
+
+  &__bio-name {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  &__bio-title {
+    font-style: italic;
+    margin-top: 20px;
+  }
+
+  &__dates {
+    margin-top: 20px;
+  }
+
+  .o-quote {
+    margin: 0 0 0 18px;
+  }
+
+  .a-text__html {
+    font-size: 18px;
+    line-height: 27px;
+    margin-top: 30px;
+  }
+
+  .m-video {
+    margin-top: 30px;
+  }
+
+  &__bio-link-title {
+    margin-bottom: 5px;
+    margin-top: 30px;
+  }
+
+  &__bio-links {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__bio-link {
+    text-decoration: none;
+    color: #1d8ec3;
+    margin: 6px 0;
+    display: flex;
+    align-items: center;
+    .icon {
+      align-self: baseline;
+      padding: 0 10px;
+      i {
+        color: #1d8ec3;
+      }
+    }
+  }
+
+  .m-video__print{
+    display: none;
+  }
+
+  @media print {
+    a::after{
+      content: " (" attr(href) ")";
+    }
+    .m-video__videoWrapper{
+      display: none;  
+    }
+    .m-video__print{
+      display: block;
+    }
+  }
+}

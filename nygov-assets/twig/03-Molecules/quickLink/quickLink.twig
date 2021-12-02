@@ -1,0 +1,54 @@
+{% if newTab %}
+  {% set target = 'target="_blank"' %}
+{% else %}
+  {% set target = '' %}
+{% endif %}
+
+{% set default_image =  (url('<front>')|render ~ directory~"/../storybook/assets/placeholders/NYGov_NYS_Square_small.png") %}
+
+{% if description|length > 111 %}
+  {% set description =  description|slice(0, 111)  ~ '...' %}
+{% endif %}
+
+{% if title|length > 48 %}
+  {% set title =  title|slice(0, 48)  ~ '...' %}
+{% endif %}
+
+
+<div class="m-quick-link">
+  <div class="m-quick-link__image">
+   <div class="field-content">
+      {% if image %}
+        {% if link %} <a href="{{ link }}" class="m-quick-link__link" {{ target }}>{% endif %}
+          <div class="m-quick-link__icon">
+            <img src="{{image}}" alt="quick-link-image">
+          </div>
+        {% if link %}</a>{% endif %}
+        {% else %}
+          {% if link %} <a href="{{ link }}" class="m-quick-link__link" {{ target }}>{% endif %}
+            <div class="m-quick-link__icon m-quick-link__default-image">
+              <img src="{{ default_image }}" alt="quick-link-image">
+            </div>
+          {% if link %}</a>{% endif %}
+        {% endif %}
+    </div>
+  </div>
+  <div class="m-quick-link__title">
+    <span class="field-content">
+      {% if title %}
+        {% if link %}
+          <a href="{{ link }}" class="m-quick-link__link" {{ target }}>{{title}}</a>
+        {% endif %}
+      {% endif %}
+    </span>
+  </div>
+  <div class="m-quick-link__description">
+    <div class="field-content">
+        {% if description %}
+          {{ description|striptags }}
+        {% endif %}
+      </div>
+  </div>
+
+</div>
+

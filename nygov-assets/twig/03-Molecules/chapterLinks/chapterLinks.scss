@@ -1,0 +1,39 @@
+.m-card__chapterLinks {
+  list-style-type: none;
+  padding: 0;
+  line-height: 18px;
+
+  a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e4e4e4;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+  }
+
+  .m-card__lastLink {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: none;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+  }
+  @supports (-webkit-line-clamp: 1){
+    .a-card__links{
+      display: -webkit-box;
+      overflow: hidden;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 1;
+      height: unset;
+    }
+  }
+}
+
+.a-link__icon {
+  float: right;
+  color: #128ec3;
+}

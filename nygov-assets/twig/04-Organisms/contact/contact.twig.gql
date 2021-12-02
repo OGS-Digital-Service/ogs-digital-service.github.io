@@ -1,0 +1,22 @@
+fragment Contact on ParagraphContact {
+  title: fieldTitle
+  partOfNavigator: fieldPartOfNavigatorSidebar
+  description: fieldContactDescription {
+    content: processed
+    summary: summaryProcessed
+  }
+  address: fieldContactAddress
+  email: fieldContactEmail
+  phone: fieldContactPhone
+  socialMedias: fieldPcSocialMediaLinks{
+    url{
+      path
+    }
+  }
+  other: fieldOtherSocialMedia {
+    url {
+      path
+    }
+    title: title
+  }
+}

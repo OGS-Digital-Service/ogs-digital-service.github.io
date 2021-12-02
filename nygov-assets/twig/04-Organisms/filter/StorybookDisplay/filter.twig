@@ -1,0 +1,159 @@
+{% if section.results.card.logo.entity.desktopImg.derivative.img is not empty %}
+{% set resultsCard_logoImgDesktop = section.results.card.logo.entity.desktopImg.derivative.img %}
+{% set resultsCard_logoImgTablet = section.results.card.logo.entity.tabletImg.derivative.img %}
+{% set resultsCard_logoImgMobile =  section.results.card.logo.entity.mobileImg.derivative.img %}
+{% endif %}
+
+<style>
+	.o-resultsCard__logoImg {
+	background-image: url("{{resultsCard_logoImgDesktop|raw}}");
+}
+@media (min-width: 320px) {
+	.o-resultsCard__logoImg {
+		background-image: url("{{resultsCard_logoImgMobile|raw}}");
+		height: 278px;
+	}
+}
+@media (min-width: 768px){
+	.o-resultsCard__logoImg {
+		background-image: url("{{resultsCard_logoImgTablet|raw}}");
+		height: 240px;
+	}
+}
+</style>
+
+{# Sidebar Section #}
+<div class = "o-filter__container">
+	<div class= "o-sidebar__toggle -title" id="{{id}}">Filter</div>
+	<div class= "o-sidebar__toggle -refine" id="{{id}}">Refine</div>
+	<div class= "o-sidebar__container">
+		<div> 
+			<div class= "o-sidebar__title"> {% include "@storybook/03-Molecules/filterItems/filterItems.twig" with { title:section.sidebar.title, variant: "m-sidebar__title" } %} </div>
+			<div class= "o-sidebar__label" id="{{id}}"> {% include '@storybook/03-Molecules/filterItems/filterItems.twig' with { label: section.sidebar.text.labels, variant: "m-sidebar__label" } %} </div>
+			<div class= "o-sidebar__title"> {% include "@storybook/03-Molecules/filterItems/filterItems.twig" with { subTitle: section.sidebar.subTitle, variant: "m-sidebar__subTitle" } %} </div> 
+			<div class= "o-sidebar__search" id="{{id}}"> {% include '@storybook/03-Molecules/filterItems/filterItems.twig' with { variant: "m-sidebar__search" } %} </div>
+			<div class= "o-sidebar__legend"  id="{{id}}"> {% include '@storybook/03-Molecules/filterItems/filterItems.twig' with { label: "Date Range", variant: "m-sidebar__date" } %} </div>
+			<div class= "o-sidebar__label -selectAll" id="{{id}}"> {% include '@storybook/03-Molecules/filterItems/filterItems.twig' with { label: section.sidebar.text.label, variant: "m-sidebar__selectAll" } %} </div>
+		</div> 
+	</div>
+
+{# Results Section #}	
+	<div class="o-results__container">
+		<div class="o-results__search -info"> 
+			{% include '@storybook/03-Molecules/filterItems/filterItems.twig' with { text:section.results.text, label:section.results.label, variant: "m-sidebar__search -info" } %}
+		</div>
+
+{# Card Section #}
+	{# Agencies Cards #}
+		<div class ="o-resultsCard__frame">
+			<article class="o-resultsCard__container">
+				<a href ="{{url}}" class="o-resultsCard__logoImg"></a>
+				<div class="o-resultsCard__content -wrapper">
+					{% include '@storybook/03-Molecules/filterItems/filterItems.twig' with { 
+						category: section.results.card.content.category[0], 
+						title: section.results.card.content.title, 
+						description: section.results.card.content.description, 
+						url:  section.results.card.content.url, 
+						variant: "m-resultsCard__content" } %}
+					{% include "@storybook/03-Molecules/filterItems/filterItems.twig" with { text:"Follow", variant: "m-resultsCard__footer -follow" } %}
+				</div> 
+			</article>  
+		</div> 
+	{# without the footer #}		
+		<div class ="o-resultsCard__frame">
+			<article id="noFooter" class="o-resultsCard__container">
+				<a href ="{{url}}" class="o-resultsCard__logoImg"></a>
+				<div class="o-resultsCard__content -wrapper">
+					{% include '@storybook/03-Molecules/filterItems/filterItems.twig' with { 
+						category: section.results.card.content.category[0], 
+						title: section.results.card.content.title, 
+						description: section.results.card.content.description, 
+						url: section.results.card.content.url, 
+						variant: "m-resultsCard__content" }
+					%}
+				</div> 
+			</article>  
+		</div>
+
+{# News Item Card #}
+	{# Share Footer #}
+		<div class ="o-resultsCard__frame">
+			<article class="o-resultsCard__container">
+				<a  href ="{{url}}" class="o-resultsCard__logoImg"></a>
+				<div class="o-resultsCard__content -wrapper">
+					{% include '@storybook/03-Molecules/filterItems/filterItems.twig' with { 
+						category: section.results.card.content.category[1], 
+						title: section.results.card.content.title, 
+						description: section.results.card.content.description, 
+						url: section.results.card.content.url, 
+						variant: "m-resultsCard__content" } 
+					%}
+					{% include "@storybook/03-Molecules/filterItems/filterItems.twig" with { variant: "m-resultsCard__footer -share" } %}
+				</div> 
+			</article>  
+		</div>
+
+	{# Download Footer #}
+		<div class ="o-resultsCard__frame">
+			<article class="o-resultsCard__container">
+				<a href ="{{url}}" class="o-resultsCard__logoImg"></a>
+				<div class="o-resultsCard__content -wrapper">
+					{% include '@storybook/03-Molecules/filterItems/filterItems.twig' with { 
+						category:section.results.card.content.category[1], 
+						title:section.results.card.content.title, 
+						description: section.results.card.content.description, 
+						url:section.results.card.content.url, 
+						variant: "m-resultsCard__content" } 
+					%}
+					{% include "@storybook/03-Molecules/filterItems/filterItems.twig" with { variant: "m-resultsCard__footer -download" } %}
+				</div> 
+			</article>  
+		</div>
+
+{# Scheduled Event Card #}
+		<div class ="o-resultsCard__frame">
+			<article class="o-resultsCard__container">
+				<a href ="{{url}}" class="o-resultsCard__logoImg"></a>
+				<div class="o-resultsCard__content -wrapper">
+					{% include "@storybook/03-Molecules/filterItems/filterItems.twig" with { 
+						category:section.results.card.content.category[2], 
+						title:section.results.card.content.title, 
+						month:section.results.card.content.date.month, 
+						day:section.results.card.content.date.day, 
+						year:section.results.card.content.date.year, 
+						time:section.results.card.content.timeLocation.time, 
+						location:section.results.card.content.timeLocation.location, 
+						variant:"m-resultsCard__scheduledEvent" } 
+					%}
+				{% include "@storybook/03-Molecules/filterItems/filterItems.twig" with { variant: "m-resultsCard__footer -share" } %}
+				</div> 
+			</article>  
+		</div>
+
+	{# without Location #}
+		<div class ="o-resultsCard__frame">
+			<article class="o-resultsCard__container">
+				<a href ="{{url}}" class="o-resultsCard__logoImg"></a>
+				<div class="o-resultsCard__content -wrapper">
+					{% include "@storybook/03-Molecules/filterItems/filterItems.twig" with { 
+						category: section.results.card.content.category[2], 
+						title: section.results.card.content.title, 
+						month: "Month", 
+						day: "00", 
+						year: "2020", 
+						time: "01:00 am", 
+						variant: "m-resultsCard__scheduledEvent -option" } 
+					%}
+				{% include "@storybook/03-Molecules/filterItems/filterItems.twig" with { variant: "m-resultsCard__footer -share" } %}
+				</div> 
+			</article>  
+		</div>
+
+{# Pagination #}		
+		<div class="o-results__pagination">
+			{% include "@storybook/03-Molecules/filterItems/filterItems.twig" with { index: section.results.paginate.index, variant: "m-results__pagination" } %}
+		</div> 
+	</div> 
+</div>
+
+

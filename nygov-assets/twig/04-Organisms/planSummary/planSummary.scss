@@ -1,0 +1,203 @@
+@import "../../01-Base/typography/fontFamilies/fontFamilies.scss";
+@import "../../01-Base/breakpoints/breakpoints";
+@import "../../01-Base/backgrounds/colors/colors.scss";
+@import "../../01-Base/typography/colors/colors.scss";
+@import '../../01-Base/typography/weight/weight.scss';
+
+.o-plan-summary {
+  @extend .bg-primary-blue;
+
+  &.bg-primary-midgray,
+  &.bg-primary-gold {
+    .a-title {
+      color: black;
+    }
+
+    .a-headline {
+      @extend .text-primary-blue;
+    }
+
+    .o-plan-summary__key-point {
+      @extend .text-primary-blue;
+    }
+
+    .o-plan-summary__supporting-argument {
+      color: #000;
+    }
+
+    .o-plan-summary__plan {
+      border-color: #000;
+    }
+
+    .a-btn__link {
+      border-color: black;
+      color: black;
+      &:hover {
+        background-color: #000;
+        color: #fff;
+      }
+    }
+
+  }
+
+  &.bg-primary-midgray {
+    @extend .bg-primary-gray;
+  }
+
+  &.bg-primary-gold {
+    @extend .bg-primary-gold;
+  }
+
+  &.two-col {
+    .o-plan-summary__plan {
+      @include breakpoint(tablet) {
+        width: 48%;
+      }
+      @include breakpoint(desktop) {
+        width: 31%;
+      }
+    }
+  }
+
+  &__content-wrapper {
+    padding: 50px 30px;
+    margin-left: auto;
+    margin-right: auto;
+    @include breakpoint(laptop) {
+      padding: 60px 16px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    @extend .text-oswald;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    @extend .text-primary-gold;
+    line-height: 16px;
+    @include breakpoint(tablet) {
+      line-height: 20px;
+    }
+  }
+
+  &__headline {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    @extend .text-white;
+    @extend .text-extra-bold;
+    @include breakpoint(tablet) {
+      padding: 0 40px;
+    }
+  }
+
+  &__titles {
+    margin-bottom: 40px;
+  }
+
+  &__plans {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    @include breakpoint(tablet) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+
+  &__plan {
+    vertical-align: top;
+    padding: 0;
+    border-style: none;
+    border-width: 0;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 30px;
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    border-color: #fff;
+    @include breakpoint(tablet) {
+      width: 33.3333%;
+      border-width: 0 1px 0 0;
+      margin-bottom: 0;
+      padding: 0 20px;
+    }
+    @include breakpoint(laptop) {
+      width: 31%;
+    }
+  }
+
+  &__plan:last-child {
+    border-width: 0 0 0 0;
+    margin-bottom: 0;
+    .o-plan-summary__supporting-argument {
+      margin-bottom: 0;
+    }
+  }
+
+  &__key-point {
+    font-size: 18px;
+    @extend .text-bold;
+    text-align: center;
+    margin-bottom: 10px;
+    line-height: 20px;
+    @extend .text-primary-gold;
+    @include breakpoint(laptop) {
+      font-size: 22px;
+      line-height: 25px;
+    }
+  }
+
+  &__supporting-argument {
+    text-align: center;
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 30px;
+    @extend .text-semi-bold;
+    color: #fff;
+    @include breakpoint(tablet) {
+      font-size: 16px;
+      line-height: 20px;
+      margin-bottom: 0;
+    }
+    @include breakpoint(laptop) {
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__more-link {
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+    @include breakpoint(laptop) {
+      padding-top: 50px;
+    }
+    .a-btn__link {
+      width: auto;
+      padding: 0 20px;
+      @extend .text-bold;
+      color: #fff;
+      border: 1px solid #fff;
+      width: 100%;
+      @include breakpoint(tablet) {
+        width: auto;
+      }
+      &:hover {
+        background-color: #fff;
+        color: #000;
+      }
+    }
+  }
+
+}
+

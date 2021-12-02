@@ -1,0 +1,239 @@
+@import "../../01-Base/breakpoints/breakpoints";
+@import "../../01-Base/typography/fontFamilies/fontFamilies.scss";
+@import "../../01-Base/typography/colors/colors.scss";
+@import "../../01-Base/backgrounds/colors/colors.scss";
+@import "../../01-Base/typography/weight/weight.scss";
+.o-buttons__wrapper {
+  padding: 0 8% 50px 8%;
+  @include breakpoint(tablet) {
+    padding: 0 8% 60px 8%;
+  }
+  &.has-webform {
+    .-buttonGroup {
+      display: none;
+    }
+    .-attachedForm.show-form {
+      display: block;
+    }
+  }
+  &.no-webform {
+    .-buttonGroup {
+      display: flex;
+    }
+  }
+  &.bg-primary-midgray,
+  &.bg-primary-gold {
+    .a-title,
+    .a-text__html,
+    .a-buttons__description {
+      color: black;
+    }
+    .a-headline {
+      @extend .text-primary-blue;
+    }
+    .o-buttons__group {
+      .a-btn__link,
+      .a-btn__link-form-embed {
+        border-color: black;
+        color: black;
+        &:hover {
+          background-color: #000;
+          color: #fff;
+        }
+      }
+    }
+    .-attachedForm {
+      .webform-submission-form {
+        .webform-actions,
+        .form-actions {
+          .button {
+            border-color: black;
+            color: black;
+            &:hover {
+              background-color: #000;
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+  &.bg-primary-midgray {
+    @extend .bg-primary-gray;
+  }
+  &.bg-primary-gold {
+    @extend .bg-primary-gold;
+  }
+  .o-buttons__titles {
+    position: relative;
+    margin-bottom: 30px;
+  }
+  .o-buttons__title {
+    margin: 0 0 10px 0;
+    padding: 0;
+    text-align: center;
+    padding-top: 50px;
+    @extend .text-oswald;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    @extend .text-primary-gold-light;
+    line-height: 20px;
+    @include breakpoint(tablet) {
+      padding-top: 60px;
+    }
+  }
+  .o-buttons__headline {
+    margin: 0 0 30px 0;
+    padding: 0;
+    text-align: center;
+    color: #fff;
+    @extend .text-extra-bold;
+  }
+  .a-buttons__description {
+    text-align: center;
+    margin: 0 0 30px 0;
+    line-height: 22px;
+    @extend .text-primary-gold-light;
+  }
+  .o-buttons__group {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    .a-btn__link,
+    .a-btn__link-form-embed {
+      &:hover {
+        background-color: #fff;
+        color: #000;
+      }
+    }
+    &.-buttonGroup {
+      flex-direction: column;
+      @include breakpoint(tablet) {
+        flex-direction: row;
+      }
+    }
+    a {
+      margin: 0 0 20px 0;
+      text-transform: uppercase;
+      color: #fff;
+      border-color: #fff;
+      @extend .text-bold;
+      @include breakpoint(tablet) {
+        margin: 0 7px;
+      }
+      &:hover {
+        background-color: #00000060;
+      }
+    }
+    a:last-child {
+      margin: 0;
+      @include breakpoint(tablet) {
+        margin: 0 7px;
+      }
+    }
+  }
+  .-attachedForm {
+    max-width: 662px;
+    margin: 0 auto;
+    display: block;
+    display: none;
+    .btnWrapper {
+      display: flex;
+      justify-content: center;
+
+      .-close-btn {
+        text-decoration: underline;
+        text-transform: none;
+        margin-top: 15px;
+        cursor: pointer;
+      }
+    }
+    .webform-submission-form {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      @include breakpoint(tablet) {
+        flex-direction: row;
+        margin: 0 -15px;
+      }
+      @include breakpoint(laptop) {
+        margin: 0;
+      }
+      .js-form-item {
+        margin: 10px;
+        label {
+          display: none;
+        }
+        input,
+        textarea,
+        select {
+          height: 60px;
+          width: 100%;
+          padding: 15px;
+          border: none;
+          @include breakpoint(tablet) {
+            width: 310px;
+            height: 50px;
+          }
+        }
+        input[name="zip_code"],
+        input.narrow-input {
+          width: 100%;
+          @include breakpoint(tablet) {
+            width: 310px;
+          }
+        }
+      }
+      .webform-actions,
+      .form-actions {
+        margin: 10px;
+        .button {
+          padding: 0 16px;
+          display: inline-flex;
+          height: 60px;
+          cursor: pointer;
+          background: transparent;
+          line-height: 48px;
+          justify-content: center;
+          font-size: 13px;
+          font-family: "Proxima Nova";
+          @extend .text-bold;
+          border: 1px solid;
+          border-color: white;
+          color: #fff;
+          text-decoration: none;
+          transition: 150ms ease-in-out;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          width: 100%;
+          @include breakpoint(tablet) {
+            width: 310px;
+            height: 50px;
+          }
+          &:hover {
+            background-color: #fff;
+            color: #000;
+          }
+        }
+        @include breakpoint(desktop) {
+          .webformBtn-fields--3 {
+            width: 100px;
+          }
+        }
+      }
+    }
+  }
+  @include breakpoint(desktop) {
+    .webform-fields--3 {
+      max-width: 780px;
+    }
+  }
+
+  @media print {
+    .o-buttons__group{
+      a::after{
+        content: " (" attr(href) ")";
+      }
+    }
+  }
+}

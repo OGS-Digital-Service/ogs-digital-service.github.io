@@ -1,0 +1,94 @@
+@import "../../01-Base/breakpoints/breakpoints";
+
+.t-emergency-body {
+  display: flex;
+  padding: 0 20px;
+
+  @include breakpoint(tablet) {
+    padding: 0 35px;
+  }
+
+  @include breakpoint(desktop) {
+    padding: 0 70px;
+  }
+
+  .t-emergency-body-wrap {
+    display: flex;
+    flex-flow: column;
+
+    @include breakpoint(tablet) {
+      flex-flow: row;
+      max-width: 1248px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .t-sections {
+      max-width: 100%;
+      margin-top: 30px;
+      @include breakpoint(tablet) {
+        margin-top: 60px;
+        max-width: calc(65% - 35px);
+      }
+
+      @include breakpoint(desktop) {
+        max-width: calc(65% - 60px);
+      }
+      &.-noAlert {
+        max-width: 1248px;
+      }
+
+      .o-photoGallery.center-layout {
+        text-align: left;
+      }
+
+      .o-documents,
+      .o-wysiwyg,
+      .o-photoGallery,
+      .o-videoEmbed {
+        max-width: none;
+      }
+      .o-videoEmbed .m-video {
+        margin: auto;
+      }
+
+      .o-wysiwyg .a-title,
+      .o-photoGallery .a-card__title,
+      .o-documents .a-frame__title,
+      .o-videoEmbed .a-title {
+        font-family: "Proxima Nova";
+        font-weight: 800;
+        font-size: 30px;
+        margin-bottom: 20px;
+        margin-top: 0;
+        line-height: 42px;
+        color: black;
+        text-transform: none;
+        letter-spacing: normal;
+        @include breakpoint(desktop) {
+          font-size: 36px;
+        }
+      }
+    }
+
+    .t-alerts {
+      margin-top: 30px;
+      max-width: 100%;
+
+      @include breakpoint(tablet) {
+        max-width: 35%;
+        padding: 0 0 0 35px;
+        margin-top: 60px;
+      }
+
+      @include breakpoint(desktop) {
+        padding: 0 0 0 60px;
+      }
+    }
+  }
+}
+
+.t-latestUpdates {
+  margin-top: 60px;
+  margin-bottom: 40px;
+}

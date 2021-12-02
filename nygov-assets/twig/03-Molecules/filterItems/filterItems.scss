@@ -1,0 +1,290 @@
+@import "../../01-Base/breakpoints/breakpoints";
+
+//Filter Sidebar Section
+.m-sidebar__label {
+    display: block;
+
+    @include breakpoint(tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 0;
+    }
+
+    @include breakpoint(desktop) {
+        display: block;
+    }
+}
+
+@include breakpoint(tablet) {
+    .m-sidebar__label>* {
+        flex: 0 0 33%;
+    }
+}
+
+.m-sidebar__search.-container {
+    margin-bottom: 1.5em;
+    width: auto;
+    right: 0;
+    top: 0;
+    padding: 1.45em;
+    margin-bottom: 0;
+
+    @include breakpoint(tablet) {
+        margin-bottom: 0;
+    }
+
+    @include breakpoint(desktop) {
+        margin-bottom: 1.5em;
+    }
+
+    & .m-sidebar__searchbar {
+        position: relative;
+    }
+
+    & .m-sidebar__search.-icon {
+        position: absolute;
+        left: 12px;
+        top: -1px;
+    }
+}
+
+legend {
+    border: 0;
+    padding: 0;
+}
+
+.m-sidebar__date.-legend {
+    padding-top: 1em;
+
+    @include breakpoint(mobileOnly) {
+        padding-top: 0;
+    }
+}
+
+.m-sidebar__date.-wrapper {
+    & .start {
+        margin-top: 10px;
+        clear: none;
+
+        @include breakpoint(tablet) {
+            margin-top: 0;
+            width: 50%;
+            float: left;
+        }
+
+        @include breakpoint(desktop) {
+            margin-top: 10px;
+            width: auto;
+            float: none;
+        }
+    }
+
+    & .end {
+        margin-top: 10px;
+    }
+}
+
+//Results Card Section
+.m-results__search.-info {
+    overflow: hidden;
+    text-align: left;
+    margin-bottom: 1.5em;
+
+    & .m-results__totalRecords.-number {
+        margin-right: 15px;
+
+        @include breakpoint(mobileOnly) {
+            font-size: 30px;
+        }
+    }
+}
+
+.m-resultsCard__title {
+    text-decoration: none;
+
+    & a {
+        text-decoration: none;
+        color: #128ec3;
+        background: transparent;
+    }
+
+    & h3 {
+        font-family: "Proxima Nova", sans-serif;
+        font-weight: normal;
+        margin: 0 0 12px;
+    }
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.m-resultsCard__data {
+    padding: 1em 15px 0;
+    min-height: 192px;
+}
+
+//Card Separator
+.m-resultsCard__separator {
+    display: block;
+    width: 30px;
+    border-bottom: 1px solid #e4e4e4;
+    margin: 12px 0;
+}
+
+//Scheduled Event Card 
+.m-resultsCard__scheduledEvent.-wrapper {
+    padding: 0;
+    flex-flow: row nowrap;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include breakpoint(mobileOnly) {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    @include breakpoint(tablet) {
+        max-height: 193px;
+        display: flex;
+    }
+
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    & .m-resultsCard__scheduledEvent.-data {
+        padding: 15px;
+        flex-grow: 1.5;
+        margin-right: 0;
+        flex-basis: 0;
+        width: auto;
+        float: none;
+        border-right: 1px solid #e4e4e4;
+        width: 60%;
+
+        @include breakpoint(mobileOnly) {
+            padding: 1em 0 0;
+            border-right: none;
+            width: auto;
+        }
+
+        @include breakpoint(tablet) {
+            min-height: 192px
+        }
+    }
+
+    & .m-resultsCard__option.-links {
+        padding: 15px;
+        flex-grow: 1;
+        flex-basis: 0;
+        float: none;
+        width: auto;
+        display: flex;
+        flex-flow: column nowrap;
+        margin-right: 0;
+
+        @include breakpoint(mobileOnly) {
+            padding: 0;
+        }
+
+        & .date {
+            float: none;
+            flex-flow: row nowrap;
+            display: flex;
+            margin-top: 0;
+            justify-content: center;
+            text-align: center;
+
+            @include breakpoint(mobileOnly) {
+                justify-content: left;
+            }
+        }
+
+        & ul.m-resultsCard__time.-location {
+            display: block;
+            margin-left: 0;
+            list-style-type: none;
+            padding: 0;
+
+            & li.m-resultsCard.-time {
+                border-bottom: 1px solid #e4e4e4;
+                padding-bottom: 10px;
+                margin-bottom: 10px;
+            }
+
+            & li.m-resultsCard.-location {
+                border-bottom: none;
+            }
+
+            & li {
+                position: relative;
+                display: inline-flex;
+                width: 100%;
+            }
+        }
+    }
+}
+
+//Footer Section
+//Follow 
+.m-resultsCard__footer.-follow {
+    background-color: #f6f8f7;
+    border-top: 1px solid #e4e4e4;
+    padding: 14px;
+
+    @include breakpoint(mobileOnly) {
+        border-right: 1px solid #e4e4e4;
+    }
+
+    & .m-resultsCard__footer.-label {
+        float: left;
+        margin-top: 2px;
+    }
+
+    & ul.m-resultsCard__footer.-socialLinks {
+        list-style-type: none;
+        margin: 0 0 0 30px;
+    }
+
+    & li {
+        display: inline-block;
+        margin-left: 40px;
+    }
+}
+
+//Share
+.m-resultsCard__footer.-share,
+.m-resultsCard__footer.-download {
+    background-color: #f6f8f7;
+    border-top: 1px solid #e4e4e4;
+    padding: 14px;
+
+    @include breakpoint(mobileOnly) {
+        border-right: 1px solid #e4e4e4;
+    }
+
+    & .m-resultsCard__footer.-icon {
+        font-size: 17px;
+        color: #d5820d;
+        vertical-align: middle;
+        cursor: pointer;
+    }
+
+    & .m-resultsCard__footer.-label {
+        font-size: 13px;
+        margin-left: 8px;
+        cursor: pointer;
+    }
+}
+
+//Pagination Section
+.m-results__btn.-previous {
+    float: left;
+}
+
+.m-results__btn.-next {
+    float: right;
+}

@@ -1,0 +1,10 @@
+@import "../../01-Base/layout/layout";
+
+.p-executive-order__wrapper {
+  @extend .inner-page-spacing;
+}
+@media print {
+.o-hero.-executiveOrderPage{
+  color: #000;
+}
+}

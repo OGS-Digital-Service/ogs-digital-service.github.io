@@ -1,0 +1,16 @@
+ <style>
+    .text-weight-example{
+      width: 100%;
+      height:75px;
+      font-size: 22px;
+    }
+    p{
+    margin:0;
+    }
+  </style>
+  {% for item in weights %}
+  <div class="text-weight-example {{ item.className }}">
+    <p>Class: {{ item.className }}</p>
+    <p>Font Weight: {{ item.weight }} </p>
+  </div>
+  {% endfor %}

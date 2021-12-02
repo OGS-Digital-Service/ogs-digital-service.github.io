@@ -1,0 +1,22 @@
+{% if newTab %}
+  {% set target = 'target="_blank"' %}
+{% else %}
+  {% set target = '' %}
+{% endif %}
+
+{% set classes = [
+  'm-category-tile'
+] %}
+
+<div class="{{classes|join(' ')}}">
+  <a href="{{ link }}" class="m-category-tile__link" {{target}}>
+    {% if image %}
+      <div class="m-category-tile__icon">
+        <img src="{{image}}" alt="tile-icon">
+      </div>
+    {% endif %}
+    <div class ="m-category-tile__title">
+      <span>{{ title }}</span>
+    </div>
+  </a>
+</div>

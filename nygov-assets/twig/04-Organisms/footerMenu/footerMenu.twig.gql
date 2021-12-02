@@ -1,0 +1,10 @@
+fragment footerMenu on Menu {
+  name
+  links {
+    label
+    url {
+      path
+      routed
+    }
+  }
+}

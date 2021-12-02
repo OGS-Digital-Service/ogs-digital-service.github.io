@@ -1,0 +1,21 @@
+fragment PlanSummary on ParagraphPlanSummary {
+  title: fieldTitle
+  headline: fieldHeadline
+  color: fieldPpsColors
+  plans: fieldPpsPlans {
+    paragraph: entity {
+      ... on ParagraphPlan {
+      	keyPoint: fieldPlanKeyPoint
+      	supportingArgument: fieldPlanSupportingArgument
+      }
+    }
+  }
+  moreLink: fieldPpsLearnMore {
+    url {
+      path
+    }
+    title
+  }
+  ariaLabel: fieldPpsAriaLabel
+  newWindow: fieldPpsOpenInNewWindow
+}

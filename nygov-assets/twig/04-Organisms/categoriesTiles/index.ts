@@ -1,0 +1,1 @@
+import "./categoriesTiles.scss";

@@ -1,0 +1,95 @@
+<div class="p-service-categories__wrapper">
+  <div class="p-service-categories__menu bg-primary-blue">
+  {% include "@storybook/04-Organisms/serviceMenu/serviceMenu.twig" with { variant: "o-service-categories__menu", servicePage: term.serviceTerm, serviceCategories: service_categories } %}
+  </div>
+
+  {% for index, item in term.sections %}
+  	{% if item.section.type == "ParagraphNygovFilter" %}
+			<div class="t-section__content -no-margin-top">
+				{% include '@storybook/04-Organisms/filter/filter.twig' with { section: item.section } %}
+			</div>
+		{% endif %}
+
+    {% if item.section.type == "ParagraphWysiwyg" %}
+			<div class="t-section__content">
+				{% include '@storybook/04-Organisms/wysiwyg/wysiwyg.twig' with { section: item.section } %}
+			</div>
+		{% endif %}
+
+    {% if item.section.type == "ParagraphCardsQueue" %}
+			{% set paragraphNumber = loop.index %}
+			<div class="t-section__content -t_wrap">
+
+				{% if (item.section.cardType == "default_card") or (item.section.cardType == "mobile_app_card") or (item.section.cardType == "stats_card") %}
+					<div class="t-headline">
+						<div>{% include "@storybook/02-Atoms/title/title.twig" with { title: item.section.title, classNames:"a-card__title", variant:"title" } %}</div>
+						<div>{% include "@storybook/02-Atoms/title/title.twig" with { headline: item.section.subheadline, classNames:"a-card__subHeadline", variant:"headline" } %}</div>
+					</div>
+				{% endif %}
+
+				{% if (item.section.cardType == "default_card") or (item.section.cardType == "mobile_app_card") %}
+					<div class="t_cardsWrap">
+						{% for card in item.section.cardQueue %}
+							<div {{ (( loop.length % 3 == 1 ) and (loop.last) ? "class=t_cardContainerRight") or (loop.index % 3 == 0) ? "class=t_cardContainerRight" : "class=t_cardContainer" }}>
+								{% include '@storybook/04-Organisms/cards/cards.twig' with { card: card.card, cardNumber:loop.index, cardType: item.section.cardType, paragraphNumber: paragraphNumber } %}
+							</div>
+						{% endfor %}
+					</div>
+				{% endif %}
+
+				{% if item.section.cardType == "stats_card" %}
+					{% set ariaLabel = item.section.ariaLabel %}
+					<div class="t_statsWrap">
+						{% for card in item.section.cardQueue %}
+							{% include '@storybook/04-Organisms/cards/cards.twig' with { card: card.card, cardNumber: loop.index, cardType: item.section.cardType, paragraphNumber: paragraphNumber } %}
+						{% endfor %}
+						<div class="t_statsLM">
+							{% include '@storybook/03-Molecules/bar/footer.twig' with { learnMore: item.section.learnMore, aria: ariaLabel, variant: "m-card__statsBar" } %}
+						</div>
+					</div>
+				{% endif %}
+
+				{% if (item.section.cardType == "quick_card") %}
+					<div class="t_quickCardWrap">
+						<div class="t_quickCard__content">
+							<div class="t_quickCardTileWrapper">
+								<div class="t_quickCardContainer">
+									{% for card in item.section.cardQueue %}
+										{% if loop.first %}
+											<div class="t_cardContainer">
+												<div class="t_quickCardTitle">{% include "@storybook/02-Atoms/title/title.twig" with { title: item.section.title, classNames: "a-quickCard__title", variant: "title" } %}</div>
+												{% if item.section.title %}
+													<div class="t_line"></div>
+												{% endif %}
+												{% include '@storybook/04-Organisms/cards/cards.twig' with { card: card.card, cardNumber:loop.index, cardType: item.section.cardType, paragraphNumber: paragraphNumber } %}
+											</div>
+										{% endif %}
+										{% if not loop.first %}
+											<div class="t_cardContainer">
+												{% include '@storybook/04-Organisms/cards/cards.twig' with { card: card.card, cardNumber:loop.index, cardType: item.section.cardType, paragraphNumber: paragraphNumber } %}
+											</div>
+										{% endif %}
+									{% endfor %}
+								</div>
+							</div>
+						</div>
+					</div>
+				{% endif %}
+
+
+				{% if (item.section.cardType == "hero_card") %}
+					<div class="t_heroCardWrap">
+						{% include "@storybook/04-Organisms/cards/cards.twig" with {card: item.section.cardQueue[0].card, cardNumber:"1", cardType: item.section.cardType, paragraphNumber: paragraphNumber} %}
+					</div>
+				{% endif %}
+
+				{# {% if (item.section.cardType == "featured_card") %}
+					<div class="t-card__featuredWrap">
+						{% include "@storybook/04-Organisms/cards/cards.twig" with {card: item.section.cardQueue[0].card, cardNumber:"1", cardType: item.section.cardType, paragraphNumber: paragraphNumber} %}
+					</div>
+				{% endif %} #}
+
+			</div>
+		{% endif %}
+  {% endfor %}
+</div>

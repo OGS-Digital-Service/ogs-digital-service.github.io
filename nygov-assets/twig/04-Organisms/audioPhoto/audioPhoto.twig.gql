@@ -1,0 +1,21 @@
+fragment AudiosPhotosButtons on ParagraphAudiosPhotosButtons {
+  title: fieldTitle
+  audio: fieldPapbAudio {
+    url {
+      path
+    }
+    title
+  }
+  photos: fieldPapbPhotos {
+    url {
+      path
+    }
+    title
+  }
+  otherLink: fieldLink {
+    url {
+      path
+    }
+    title
+  }
+}

@@ -1,0 +1,361 @@
+{% if card.image.entity.desktopImg.derivative.url is  empty %}
+	{% set card_logo_desktop =  (url('<front>')|render ~ directory~"/../storybook/assets/placeholders/NYGov_NYS_16x9.png") %}
+	{% set card_logo_tablet = (url('<front>')|render ~ directory~"/../storybook/assets/placeholders/NYGov_NYS_Square.png") %}
+	{% set card_logo_mobile = (url('<front>')|render ~ directory~"/../storybook/assets/placeholders/NYGov_NYS_16x9.png") %}
+{% endif %}
+
+
+{% if card.image.entity.desktopImg.derivative.url is not empty %}
+	{% set card_logo_desktop = card.image.entity.desktopImg.derivative.url %}
+	{% set card_logo_tablet = card.image.entity.tabletImg.derivative.url %}
+	{% set card_logo_mobile = card.image.entity.mobileImg.derivative.url %}
+	{% set card_logo_stats = card.image.entity.statsImg.derivative.url %}
+{% endif %}
+
+
+<style>
+	.o-cardLogo.-index{{cardNumber}}.-paragraph{{paragraphNumber}}{
+		background-image: url("{{card_logo_mobile|raw}}");
+	}
+	.o-quickCardLogo.-index{{cardNumber}}.-paragraph{{paragraphNumber}}{
+		background-image: url("{{card_logo_mobile|raw}}");
+	}
+	.o-stats.-index{{cardNumber}}.-paragraph{{paragraphNumber}}{
+		background-image: url("{{card_logo_stats|raw}}");
+	}
+	@media(min-width: 768px) {
+		.o-cardLogo.-index{{cardNumber}}.-paragraph{{paragraphNumber}}{
+			background-image: url("{{card_logo_tablet|raw}}");
+		}
+	}
+	@media(min-width: 1024px) {
+		.o-cardLogo.-index{{cardNumber}}.-paragraph{{paragraphNumber}}{
+			background-image: url("{{card_logo_desktop|raw}}");
+		}
+	}
+</style>
+
+{# Media Card #}
+{% if cardType =="default_card" and card.referenceType =="MediaCard" %}
+	{% set label = card.label %}
+	{% set description = card.description.processed %}
+	{% set footerText = card.learnMore.linkText ? card.learnMore.linkText : "Learn More" %}
+	{% set aria = footerText == "Learn More" ? 'Learn More' ~ ' about ' ~ card.label : footerText  %}
+
+	<article class="o-cardGlobalTablet">
+		{% if card.keywords[0].entity.keyword %}
+			{% include "@storybook/02-Atoms/buttons/buttons.twig" with {title: card.keywords[0].entity.keyword, url: card.keywords[0].entity.url.path, variant: "a-buttons__cardCat"} %}
+		{% endif %}
+		<a href="{{card.learnMore.url.path}}" class="o-cardLogo -index{{cardNumber}} -paragraph{{paragraphNumber}}" aria-label="{{aria}}"></a>
+		<div class="o-cardContent">
+			{% if card.chapterLinks is empty %}
+				{% include "@storybook/03-Molecules/cardContent/cardData.twig" with { content: label, url: card.learnMore.url.path, text: description, variant: "m-card__default"} %}
+			{% endif %}
+			{% if card.chapterLinks %}
+				<div class="linkDescription">
+					{% include "@storybook/03-Molecules/cardContent/cardData.twig" with { content: label, url: card.learnMore.url.path, text: description, variant: "m-card__default"} %}
+				</div>
+				<div class="o-cardLinksWrapper">
+					{% include "@storybook/03-Molecules/chapterLinks/chapterLinks.twig" with { chapterLinks: card.chapterLinks, variant: "m-card__chapterLinks" } %}
+				</div>
+			{% endif %}
+			{% if card.androidLink.url.path or card.iosLink.url.path %}
+				<div class="o-cardFooter">
+					<a class="mobileLink" href="{{card.androidLink.url.path}}" data-ios="{{card.iosLink.url.path}}" data-iostext="{{card.iosLink.linkText}}" data-android="{{card.androidLink.url.path}}" data-androidtext="{{card.androidLink.linkText}}" aria-label="Download the {{ label }} Application">
+						{% include "@storybook/03-Molecules/bar/footer.twig" with {text: "Download App", variant: "m-card__mobileFooter"} %}
+					</a>
+				</div>
+			{% endif %}
+
+			{% if card.learnMore and card.androidLink.url.path is empty and card.iosLink.url.path is empty %}
+				<div class="o-cardFooter">
+					<a href="{{card.learnMore.url.path}}" aria-label="{{aria}}">
+						{% include "@storybook/03-Molecules/bar/footer.twig" with {text: footerText, variant: "m-card__footer"} %}
+					</a>
+				</div>
+			{% endif %}
+		</div>
+	</article>
+{% endif %}
+
+
+{# Service Content Card #}
+
+{% if cardType =="default_card" and  card.referenceType == "NodeService" %}
+	{% set label = card.label %}
+	{% set description = card.description.processed %}
+	{% set aria = card.footerText == "Learn More" or card.footerText is empty ? 'Learn More' ~ ' about ' ~ card.label : card.footerText  %}
+
+	{% if card.navigator == false or card.whiteList %}
+		{% set chapterLinks = null %}
+	{% endif %}
+
+	{% if card.navigator == true and card.whiteList is empty%}
+		{% set cardChapters = [] %}
+		{% set navChapters = [] %}
+		{% set allChapters = [] %}
+		{% for paragraph in card.paragraphs %}
+			{% for item in paragraph %}
+				{% if item.navAdd and item.cardAdd %}
+					{% set cardChapters = cardChapters|merge(
+            [{chapterLink:
+            [{ linkText: item.title,
+              url: {
+              path: card.contentLink.path ~ '#' ~ item.title|cleanString()
+              }
+            }]
+            }]
+          )%}
+				{% endif %}
+				{% if item.navAdd and item.cardAdd is empty %}
+					{% set navChapters = navChapters|merge(
+            [{chapterLink:
+            [{ linkText: item.title,
+              url: {
+              path: card.contentLink.path ~ '#' ~ item.title|cleanString()
+              }
+            }]
+            }]
+          )%}
+				{% endif %}
+			{% endfor %}
+		{% endfor %}
+    
+    {# if the add to card toggle is checked only display those titles #}
+		{% if cardChapters is not empty %}
+			{% set chapterLinks = [] %}
+			{% for item in cardChapters %}
+				{% if loop.index <= 3 %}
+					{% set chapterLinks = chapterLinks|merge(item.chapterLink) %}
+				{% endif %}
+			{% endfor %}
+		{% endif %}
+
+    {# otherwise show the first 3 titles with add to navigator checked #}
+		{% if cardChapters is empty %}
+			{% set chapterLinks = [] %}
+			{% for item in navChapters %}
+				{% if loop.index <= 3 %}
+					{% set chapterLinks = chapterLinks|merge(item.chapterLink) %}
+				{% endif %}
+			{% endfor %}
+		{% endif %}
+
+	{% endif %}
+
+
+	<article class="o-cardGlobalTablet">
+		{% if card.keywords[0].entity.keyword %}
+			{% include "@storybook/02-Atoms/buttons/buttons.twig" with {title: card.keywords[0].entity.keyword, url: card.keywords[0].entity.url.path, variant: "a-buttons__cardCat"} %}
+		{% endif %}
+		<a href="{{card.contentLink.path}}" class="o-cardLogo -index{{cardNumber}} -paragraph{{paragraphNumber}}" aria-label="{{aria}}"></a>
+		<div class="o-cardContent">
+			<div class="innerWrap">
+				{% if chapterLinks is empty %}
+					{% include "@storybook/03-Molecules/cardContent/cardData.twig" with { content: label, url: card.contentLink.path, text: description, variant: "m-card__default"} %}
+				{% endif %}
+				{% if chapterLinks %}
+					<div class="linkDescription">
+						{% include "@storybook/03-Molecules/cardContent/cardData.twig" with { content: label, url: card.contentLink.path, text: description, variant: "m-card__default"} %}
+					</div>
+					<div class="o-cardLinksWrapper">
+						{% include "@storybook/03-Molecules/chapterLinks/chapterLinks.twig" with { chapterLinks: chapterLinks, variant: "m-card__chapterLinks" } %}
+					</div>
+				{% endif %}
+			</div>
+			<div class="o-cardFooter">
+				{% if card.footerText is empty %}
+					<a href="{{card.contentLink.path}}" aria-label="{{aria}}">
+						{% include "@storybook/03-Molecules/bar/footer.twig" with {text: "Learn More", variant: "m-card__footer"} %}
+					</a>
+				{% endif %}
+				{% if card.footerText %}
+					<a href="{{card.contentLink.path}}" aria-label="{{aria}}">
+						{% include "@storybook/03-Molecules/bar/footer.twig" with {text: card.footerText, variant: "m-card__footer"} %}
+					</a>
+				{% endif %}
+			</div>
+		</div>
+	</article>
+{% endif %}
+
+{# News Content Card #}
+
+{% if cardType =="default_card" and card.referenceType =="NodeNews" %}
+	{% set dateBold = card.date|date("F j, Y")  %}
+	{% set time = card.date|date("| g:i A T") %}
+	{% set label = card.cardNLabel ? card.cardNLabel : card.label %}
+	{% set description = card.description.processed %}
+	<article class="o-cardGlobalTablet">
+		{% if card.keywords[0].entity.keyword %}
+			{% include "@storybook/02-Atoms/buttons/buttons.twig" with {title: card.keywords[0].entity.keyword, url: card.keywords[0].entity.url.path, variant: "a-buttons__cardCat"} %}
+		{% endif %}
+		<a href="{{card.contentLink.path}}" class="o-cardLogo -index{{cardNumber}} -paragraph{{paragraphNumber}}" aria-label="Read the press release titled {{label}} "></a>
+		<div class="o-cardContent">
+			{% include "@storybook/03-Molecules/cardContent/cardData.twig" with { content: card.cardNLabel, url: card.contentLink.path, text: description, contentDate: dateBold, dateTime:time, variant: "m-card__default"} %}
+			<div class="o-cardFooter">
+				<a href="{{card.contentLink.path}}" aria-label="Read the press release titled {{label}} ">
+					{% include "@storybook/03-Molecules/bar/footer.twig" with {text: "Read More", variant: "m-card__footer"} %}
+				</a>
+			</div>
+		</div>
+	</article>
+{% endif %}
+
+{# Article Content Card #}
+
+{% if cardType =="default_card" and card.referenceType =="NodeArticlePage" %}
+	{% set label = card.label %}
+	{% set description = card.description.processed %}
+	{% set aria = card.footerText == "Learn More" or card.footerText is empty ? 'Learn More' ~ ' about ' ~ card.label : card.footerText  %}
+	{% set footerText = card.footerText is empty ? 'Learn More' : card.footerText %}
+
+	<article class="o-cardGlobalTablet">
+		{% if card.keywords[0].entity.keyword %}
+			{% include "@storybook/02-Atoms/buttons/buttons.twig" with {title: card.keywords[0].entity.keyword, url: card.keywords[0].entity.url.path, variant: "a-buttons__cardCat"} %}
+		{% endif %}
+		<a href="{{card.contentLink.path}}" class="o-cardLogo -index{{cardNumber}} -paragraph{{paragraphNumber}}" aria-label="{{aria}}"></a>
+		<div class="o-cardContent">
+			{% include "@storybook/03-Molecules/cardContent/cardData.twig" with { content: label, url: card.contentLink.path, text: description, variant: "m-card__default"} %}
+			<div class="o-cardFooter">
+				<a href="{{card.contentLink.path}}" aria-label="{{aria}}">
+					{% include "@storybook/03-Molecules/bar/footer.twig" with {text: footerText, variant: "m-card__footer"} %}
+				</a>
+			</div>
+		</div>
+	</article>
+{% endif %}
+
+{# Program Content Card #}
+
+{% if cardType =="default_card" and card.referenceType =="NodeProgram" %}
+	{% set label = card.label %}
+	{% set description = card.description.processed %}
+	{% set aria = card.footerText == "Learn More" or card.footerText is empty ? 'Learn More' ~ ' about ' ~ card.label : card.footerText  %}
+	{% set footerText = card.footerText is empty ? 'Learn More' : card.footerText %}
+
+	<article class="o-cardGlobalTablet">
+		{% if card.keywords[0].entity.keyword %}
+			{% include "@storybook/02-Atoms/buttons/buttons.twig" with {title: card.keywords[0].entity.keyword, url: card.keywords[0].entity.url.path, variant: "a-buttons__cardCat"} %}
+		{% endif %}
+		<a href="{{card.contentLink.path}}" class="o-cardLogo -index{{cardNumber}} -paragraph{{paragraphNumber}}" aria-label="{{aria}}"></a>
+		<div class="o-cardContent">
+			{% include "@storybook/03-Molecules/cardContent/cardData.twig" with { content: label, url: card.contentLink.path, text: description, variant: "m-card__default"} %}
+			<div class="o-cardFooter">
+				<a href="{{card.contentLink.path}}" aria-label="{{aria}}">
+					{% include "@storybook/03-Molecules/bar/footer.twig" with {text: footerText, variant: "m-card__footer"} %}
+				</a>
+			</div>
+		</div>
+	</article>
+{% endif %}
+
+{# Scheduled Event Content Card #}
+
+{% if cardType =="default_card" and card.referenceType =="NodeScheduledEvent" %}
+
+	{% set eventDetails = {
+    monthStart: card.dateRange.startDate|date("M"),
+    dayStart: card.dateRange.startDate|date("d"),
+    yearStart: card.dateRange.startDate|date("Y"),
+    timeStart: card.dateRange.startDate|date("g:i A"),
+    monthEnd: card.dateRange.endDate|date("M"),
+    dayEnd: card.dateRange.endDate|date("d"),
+    yearEnd: card.dateRange.endDate|date("Y"),
+    timeEnd: card.dateRange.endDate|date("g:i A"),
+    begin: card.dateRange.startDate|date("M d Y"),
+    end: card.dateRange.endDate|date("M d Y"),
+    updated: card.lastUpdated|date("M d, Y")
+  } %}
+
+	{% set label = card.label %}
+	{% set description = card.description.processed %}
+	<article class="o-cardGlobalTablet">
+		{% if card.keywords[0].entity.keyword %}
+			{% include "@storybook/02-Atoms/buttons/buttons.twig" with {title: card.keywords[0].entity.keyword, url: card.keywords[0].entity.url.path, variant: "a-buttons__cardCat"} %}
+		{% endif %}
+		<a href="{{card.contentLink.path}}" class="o-cardLogo -index{{cardNumber}} -paragraph{{paragraphNumber}}" aria-label="View Event Details for {{label}} Event"></a>
+		<div class="o-cardContent">
+			{% if card.dateRange is empty %}
+				{% include "@storybook/03-Molecules/cardContent/cardData.twig" with { content: label, url: card.contentLink.path, text: description, variant: "m-card__default"} %}
+			{% endif %}
+			{% if card.dateRange %}
+				<div class="eventDescription">
+					{% include "@storybook/03-Molecules/cardContent/cardData.twig" with { content: label, url: card.contentLink.path, text: description, variant: "m-card__default"} %}
+				</div>
+				<div class="eventDetails">
+					{% include "@storybook/03-Molecules/eventDate/eventDate.twig" with { eventDetails: eventDetails, venue: card.venue, variant:"m-eventDate" } %}
+				</div>
+			{% endif %}
+			<div class="o-cardFooter">
+				<a href="{{card.contentLink.path}}" aria-label="View Event Details for {{label}} Event">
+					{% include "@storybook/03-Molecules/bar/footer.twig" with {text: "View Event Details", variant: "m-card__footer"} %}
+				</a>
+			</div>
+		</div>
+	</article>
+{% endif %}
+
+{# Hero Card #}
+
+{% if cardType =="hero_card" %}
+	{% set label = card.label %}
+	{% set description = card.description.processed %}
+	{% set url = card.learnMore.url.path ? card.learnMore.url.path : card.contentLink.path %}
+	{% set footerText = card.footerText ? card.footerText : card.learnMore.linkText %}
+	{% set aria = footerText == "Learn More" ? 'Learn More' ~ ' about ' ~ card.label : footerText  %}
+
+
+	<article class="o-cardHero">
+		<div class="o-cardHeroContainer">
+			<a href="{{url}}" class="o-cardLogo -index{{cardNumber}} -paragraph{{paragraphNumber}}" aria-label="{{aria}}"></a>
+			<div class="o-cardContent">
+				{% if card.keywords[0].entity.keyword %}
+					<span class="o-cardKeyword">
+						{% include "@storybook/02-Atoms/buttons/buttons.twig" with {title: card.keywords[0].entity.keyword, url: card.keywords[0].entity.url.path, variant: "a-buttons__cardCat"} %}
+					</span>
+				{% endif %}
+				<div class="o-cardHeroDescription">
+					{% include "@storybook/03-Molecules/cardContent/cardData.twig" with { content: label, url: card.learnMore.url.path, text: description, variant: "m-card__hero"} %}
+				</div>
+				<div class="o-cardFooter">
+					{% if card.androidLink is empty and card.iosLink is empty %}
+						<a href="{{url}}" aria-label="{{aria}}">
+							{% include "@storybook/03-Molecules/bar/footer.twig" with {text: footerText, variant: "m-card__heroFooter"} %}
+						</a>
+					{% endif %}
+					{% if card.androidLink or card.iosLink %}
+						<a class="mobileLink" href="{{card.androidLink.url.path}}" data-ios="{{card.iosLink.url.path}}" data-iostext="{{card.iosLink.linkText}}" data-android="{{card.androidLink.url.path}}" data-androidtext="{{card.androidLink.linkText}}" aria-label="Download the {{ label }} Application">
+							{% include "@storybook/03-Molecules/bar/footer.twig" with {text: "Download App", variant: "m-card__mobileFooter"} %}
+						</a>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</article>
+{% endif %}
+
+{# Quick Card #}
+
+{% if cardType == "quick_card" %}
+	{% set footerText = card.footerText ? card.footerText : card.learnMore.linkText %}
+	{% set aria = footerText == "Learn More" ? 'Learn More' ~ ' about ' ~ card.label : footerText  %}
+	{% set url = card.learnMore.url.path ? card.learnMore.url.path : card.contentLink.path %}
+
+	<article class="o-quickCard">
+		<a href="{{url}}" class="o-quickCardLogo -index{{cardNumber}} -paragraph{{paragraphNumber}}" aria-label="{{aria}}"></a>
+		<a href="{{url}}" aria-label="{{aria}}">
+			{% include "@storybook/03-Molecules/bar/footer.twig" with {text: footerText, variant: "m-card__quickFooter"} %}
+		</a>
+	</article>
+{% endif %}
+
+{# Stats Card #}
+
+{% if cardType == "stats_card" %}
+	{% set description = card.description.processed %}
+	<div class="o-stats -index{{cardNumber}} -paragraph{{paragraphNumber}}">
+		{% include "@storybook/03-Molecules/cardContent/cardData.twig" with {keyword: card.keywords[0], stats: card.fieldStats, statsLabel: card.fieldStatsLabel, text: description, variant: "m-card__stats"} %}
+	</div>
+{% endif %}
+

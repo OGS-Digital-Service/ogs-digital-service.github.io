@@ -1,0 +1,17 @@
+fragment LatestUpdates on ParagraphEmergencyUpdate {
+	type: __typename
+	timeOption: fieldPeuTogglePublishedTime
+	date: fieldPeuPublishedDate {
+		date
+	}
+	title: fieldPeuTitle
+	description: fieldDescription {
+		processed
+	}
+	learnMore: fieldPeuLearnMore {
+		linkText: title
+		url {
+			path
+		}
+	}
+}

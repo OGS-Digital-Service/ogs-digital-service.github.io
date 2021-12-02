@@ -1,0 +1,54 @@
+fragment ScheduledEventPage on NodeScheduledEvent {
+  contentType: entityBundle
+  navigator: fieldSeNavigatorToggle
+  title
+  keywords: fieldSeKeywords {
+    entity {
+      keyword: entityLabel
+      url: entityUrl {
+        path
+      }
+    }
+  }
+  venue: fieldSeVenue
+  dateRange: fieldSeDateRange {
+    startDate
+    value
+    endDate
+    endValue
+  }
+  featuredImage: fieldSeFeaturedImage {
+    entity {
+      ... on MediaImage {
+        desktopImg: fieldMediaImage {
+          derivative(style: HEROWIDE) {
+            url
+          }
+        }
+        tabletImg: fieldMediaImage {
+          derivative(style: HERONARROW) {
+            url
+          }
+        }
+        mobileImg: fieldMediaImage {
+          derivative(style: HEROMOBILE) {
+            url
+          }
+        }
+      }
+    }
+  }
+  sections: fieldSections {
+    section: entity {
+      type: __typename
+      ...WYSIWYG
+      ...Documents
+      ...TranslatedDocuments
+      ...Contact
+      ...PhotoGallery
+      ...Quote
+      ...VideoEmbed
+      ...TitleBar
+    }
+  }
+}

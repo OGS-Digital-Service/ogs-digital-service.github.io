@@ -1,0 +1,18 @@
+fragment governorGlobalMenu on Menu {
+  name
+  links {
+    expanded
+    label
+    url {
+      path
+      routed
+    }
+    links {
+      label
+      url {
+        path
+        routed
+      }
+    }
+  }
+}

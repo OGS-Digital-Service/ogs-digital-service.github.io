@@ -1,0 +1,9 @@
+fragment WYSIWYG on ParagraphWysiwyg {
+  partOfNavigator: fieldPartOfNavigatorSidebar
+  title: fieldTitle
+  headline: fieldHeadline
+  body: fieldPwBody {
+    summary: summaryProcessed
+    value
+  }
+}

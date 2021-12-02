@@ -1,0 +1,37 @@
+{% include '@storybook/04-Organisms/hero/hero.twig' with { hero: node, heroType: "executiveOrderPageHero"  } %}
+
+{% set hasDocuments = false %}
+{% set fileArgs = {
+  url: node.englishEo.eo.document.file.url,
+  english: node.englishEo.eo.name,
+  description: node.englishEo.eo.description.value
+} %}
+
+{# For legacy reasons, when there's a document paragraph as the first index, don't display EO #}
+
+{% for index, item in node.sections %}
+  {% if item.section.type == "ParagraphDocuments" and index == 0 %}
+      {% set hasDocuments = true %}
+	{% endif %}
+{% endfor %}
+
+{% macro eodisplay(document, url, english, description) %}
+  {% if document == false and url is not null %}
+    <div class="t-section -container">
+      <div class="t-section__content">
+        <div class="o-documents">
+          {% include "@storybook/03-Molecules/document/document.twig" with {
+            item: "downloadLink", url: url, english: english, description: description
+          } %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+{% endmacro %}
+
+<div class="p-executive-order__wrapper">
+  <article class="p-executive-order__content flex flex-col">
+    {{ _self.eodisplay(hasDocuments, fileArgs.url, fileArgs.english, fileArgs.description) }}
+    {% include "@storybook/05-Templates/frames/frames.twig" with node %}
+  </article>
+</div>

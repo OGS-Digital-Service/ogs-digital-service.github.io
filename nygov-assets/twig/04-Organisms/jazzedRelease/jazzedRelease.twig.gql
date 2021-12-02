@@ -1,0 +1,58 @@
+fragment JazzedRelease on ParagraphJazzedRelease {
+  audioLink: fieldPapbAudio {
+    url {
+			path
+		}
+		linkText: title
+  }
+  photosLink: fieldPapbPhotos {
+    url {
+			path
+		}
+		linkText: title
+  }
+  otherLink: fieldLink {
+    url {
+			path
+		}
+		linkText: title
+  }
+  contactEmail: fieldContactEmail
+	contactPhone: fieldContactPhone
+  contactTitle: fieldPjrContactTitle
+  quote: fieldPqQuote {
+    processed
+  }
+  quoteCredit: fieldPqQuoteCredit
+  contactTitle: fieldPjrContactTitle
+  rawHtml: fieldRawHtml
+  translations: fieldPtdTranslations {
+    translatedDocument: entity {
+      ... on MediaTranslation {
+        name: name
+        english: fieldMtEnglishTitle
+        translated: fieldMtTranslatedTitle
+        media: fieldMediaFile {
+          file: entity {
+            ... on File {
+              url
+            }
+          }
+        }
+      }
+    }
+  }
+  videoEmbed: fieldPjrVideoEmbed
+  wysiwyg1: fieldPjrWysiwyg1 {
+    processed: value
+  }
+  wysiwyg2: fieldPjrWysiwyg2 {
+    processed: value
+  }
+  wysiwyg3: fieldPjrWysiwyg3 {
+    processed: value
+  }
+  wysiwyg4: fieldPjrWysiwyg4 {
+    processed: value
+  }
+}

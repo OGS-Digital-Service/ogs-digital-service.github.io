@@ -1,0 +1,13 @@
+fragment Alerts on ParagraphAlerts {
+  title: fieldTitle
+  status: fieldPaStatus
+  description: fieldDescription {
+    content: processed
+  }
+  link: fieldLink {
+    title
+    url {
+      path
+    }
+  }
+}

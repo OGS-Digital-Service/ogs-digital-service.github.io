@@ -1,0 +1,19 @@
+fragment Resources on ParagraphResources {
+	type: __typename
+	title: fieldTitle
+  headline: fieldHeadline
+  color: fieldPrColors
+  links: fieldPrResources {
+  	paragraph: entity {
+      ... on ParagraphResourcesLinks {
+        link: fieldLink {
+          title
+          url {
+            path
+          }
+        }
+        newTab: fieldOpenInNewWindow
+      }
+    }
+  }
+}

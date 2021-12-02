@@ -1,0 +1,11 @@
+{% set description = section.description.processed %}
+
+<div class="o-highlight__container">
+	<div class="o-highlight__image">
+		<img alt="{{ section.image.entity.highlightImage.alt }}" src="{{ section.image.entity.highlightImage.derivative.url|raw }}" class="o-highlightLogo">
+	</div>
+	<div class="o-highlight__content">
+		{% include "@storybook/03-Molecules/cardContent/cardData.twig" with { title: section.title, headline: section.headline, learnMore: section.link, newWindow: section.newWindowToggle,label: section.subtitle, text: description, variant: "m-card__featured"} %}
+	</div>
+</div>
+

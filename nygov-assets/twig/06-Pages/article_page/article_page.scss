@@ -1,0 +1,77 @@
+@import "../../01-Base/breakpoints/breakpoints";
+@import "../../01-Base/layout/layout";
+
+.p-article__wrapper {
+  @extend .inner-page-spacing;
+  @include breakpoint(desktop) {
+    max-width: 780px;
+  }
+  .m-video {
+    margin: 40px auto 0;
+  }
+}
+
+.p-article__contentWrapper {
+  display: flex;
+}
+
+.node--type-article-page {
+  display: flex;
+  flex-flow: column;
+
+  .sectionTitle {
+    color: #24387e;
+    font-size: 2.25em;
+    font-family: "Proxima Nova";
+    font-weight: 700;
+  }
+
+  .p-article__wrapper {
+    display: flex;
+    flex-flow: column;
+
+    &.-navigatorContainer {
+      @include breakpoint(tablet) {
+        flex-flow: row;
+        .p-article__content {
+          margin: 0;
+          display: flex;
+          flex-flow: row;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .m-nextSection__content {
+    margin-top: 45vh;
+    margin-bottom: 10vh;
+    font-family: "Proxima Nova";
+    font-weight: bold;
+    font-size: 0.875em;
+    text-transform: uppercase;
+
+    div {
+      font-family: "Proxima Nova";
+      font-weight: normal;
+      font-size: 1.875em;
+      color: #128ec3;
+      margin-bottom: 75px;
+    }
+  }
+}
+@media print {
+  .t-navigator__sidebar {
+    display: none;
+  }
+
+  .o-hero {
+    .m-separator {
+      display: none;
+    }
+  }
+
+  .footer-navigations {
+    display: none;
+  }
+}

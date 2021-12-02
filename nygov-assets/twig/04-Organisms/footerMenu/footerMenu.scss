@@ -1,0 +1,124 @@
+@import "../../01-Base/breakpoints/breakpoints.scss";
+@import "../../01-Base/typography/colors/colors.scss";
+@import "../../01-Base/typography/fontFamilies/fontFamilies.scss";
+
+.o-footerMenu {
+
+  &__wrapper {
+    padding: 24px;
+    background-color: #EDEDED;
+  }
+  &__title {
+    margin-left: 2%;
+    margin-bottom: 0;
+  }
+  &__links {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 16px;
+  }
+  &__link {
+    list-style: none;
+    display: inline-block;
+    margin-left: 2%;
+    margin-right: 0;
+    margin-top: 2em;
+    width: 9em;
+    vertical-align: top;
+    a {
+      @extend .text-footer-links;
+      text-decoration: none;
+      font-weight: 600;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.o-nygovFooterMenu{
+  &__wrapper{
+  background: #333333;
+  min-height: 353px;
+  z-index: 11;
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  margin-top: 60px;
+  @include breakpoint(tablet){
+    min-height: 100px;
+  }
+  }
+  &__content{
+    display: flex;
+    max-width: 78em;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+    width: 100%;
+    flex-flow: column;
+    @include breakpoint(tablet){
+      flex-flow: row;
+    }
+  }
+  &__image {
+    width: 80px;
+    height: 50px;
+    z-index: 100;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    overflow: hidden;
+    display: flex;
+    margin-right: 1.69492%;
+    margin-top: 10px;
+    @include breakpoint(tablet){
+      align-self: center;
+    }
+  }
+  &__links {
+    padding: 0;
+    display: flex;
+    align-self: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    @include breakpoint(tablet){
+      margin: auto;
+      width: 83.05085%;
+      margin-top: 16px;
+      margin-bottom: 16px;
+    }
+  }
+  &__link {
+    margin-left: 0;
+    margin-right: 0;
+    width: 49.15254%;
+    display: inline;
+    margin-top: 15px;
+    padding-right: 8px;
+    list-style: none;
+    @include breakpoint(tablet){
+      width: 16.36735%;
+      margin-right: 1.69492%;
+      display: inline-block;
+    }
+   
+    a {
+      color: #ffffff;
+      font-size: 14px;
+      @extend .text-proxima;
+      letter-spacing: 0.5px;
+      text-decoration: none;
+      font-weight: 600;
+      &:hover {
+        color: #D5820D;
+      }
+      @include breakpoint(tablet){
+        font-size: 16px;
+      }
+    }
+  }
+}

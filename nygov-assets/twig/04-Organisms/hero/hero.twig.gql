@@ -1,0 +1,67 @@
+fragment HeroQueue on ParagraphHeroQueue {
+  heroOption: fieldPhHeroOptions 
+	queue: fieldPhQueue {
+		hero: entity {
+			... on MediaHero {
+				headline: name
+				description: fieldMhDescription
+				date: fieldMhDate {
+					date
+					value
+				}
+				image: fieldMhImage {
+					entity {
+						... on MediaImage {
+							desktopImg: fieldMediaImage {
+								derivative(style: HEROWIDE) {
+									url
+								}
+							}
+							tabletImg: fieldMediaImage {
+								derivative(style: HERONARROW) {
+									url
+								}
+							}
+							mobileImg: fieldMediaImage {
+								derivative(style: HEROMOBILE) {
+									url
+								}
+							}
+						}
+					}
+				}
+				learnMore: fieldMhLearnMore {
+					title
+					url {
+            path
+          }
+				}
+				relatedContent: fieldMhRelatedContent {
+					title
+					url {
+            path
+          }
+				}
+				archived: fieldMhArchivedLink {
+	        url {
+            path
+          }					
+          title
+				}
+				stream: fieldMhLiveStream {
+					url {
+            path
+          }
+					title
+				}
+				placement: fieldMhPlacement 
+        bioTitle: fieldMhBioTitle
+        bioName: fieldMhBioName
+        socials: fieldMhSocialMedias {
+          uri
+        }
+			}
+		}
+	}
+}
+

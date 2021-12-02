@@ -1,0 +1,104 @@
+{% if variant =="m-card__default" %}
+  <div class="m-card__data">
+    <h3>
+    {% include '@storybook/02-Atoms/link/link.twig' with { content: label, url:url, variant: "a-card__label"} %}
+    </h3>
+    {% if contentDate %}
+    {% include '@storybook/02-Atoms/date/date.twig' with {date: contentDate, classNames: "a-date-14", variant: "date" } %}
+    {% endif %}
+    {% if dateTime %}
+    {% include '@storybook/02-Atoms/date/date.twig' with {date: dateTime, classNames: "a-date-14", variant: "date" } %}
+    {% endif %}
+
+    {% include "@storybook/02-Atoms/text/text.twig" with { text: description, classNames: "a-card__description", variant: "html"} %}
+  </div>
+{% endif %}
+
+{% if variant =="m-card__featured" %}
+	<div class="m-card__data">
+		<div>{% include "@storybook/02-Atoms/title/title.twig" with { title: title, classNames:"a-highlight__title", variant:"title" } %}</div>
+		<div>{% include "@storybook/02-Atoms/title/title.twig" with { headline: headline, classNames:"a-card__subHeadline", variant:"headline" } %}</div>
+		{% include "@storybook/02-Atoms/text/text.twig" with { text: label, classNames: "a-highlight__subtitle", variant: "html"} %}
+		{% include "@storybook/02-Atoms/text/text.twig" with { text: description, classNames: "a-card__description", variant: "html"} %}
+    <div class="m-highlight__button">
+    {% include "@storybook/02-Atoms/buttons/buttons.twig" with { title: learnMore.title, url: learnMore.url.path, newWindow: newWindow, variant: "paragraph-learn-more", classNames: "a-buttons__highlight" } %}
+    </div>
+  </div>
+{% endif %}
+
+
+{% if variant =="m-card__hero" %}
+  <div class="m-card__data">
+    <h2>
+    {% include '@storybook/02-Atoms/link/link.twig' with { content: label, url:url, variant: "a-card__label"} %}
+    </h2>
+    {% include "@storybook/02-Atoms/text/text.twig" with { text: description, classNames: "a-card__description", variant: "html"} %}
+  </div>
+{% endif %}
+
+{% if variant =="m-card__stats" %}
+	<div class="m-card__statsBKG"></div>
+	<div class="m-card__stats">
+		{% if keyword.entity.keyword %}
+			{% include "@storybook/02-Atoms/buttons/buttons.twig" with {title: keyword.entity.keyword, url: keyword.entity.url.path, variant: "a-buttons__stats"} %}
+		{% endif %}
+		{% if stats %}
+			{% include "@storybook/02-Atoms/text/text.twig" with { stats: stats, statsLabel: statsLabel, variant: "a-stats__stats"} %}
+		{% endif %}
+		{% if description %}
+			{% include "@storybook/02-Atoms/text/text.twig" with { text: description, classNames:"a-stats__description", variant: "html"} %}
+		{% endif %}
+	</div>
+{% endif %}
+
+{# Per Jess H. Limited to 5 social media links #}
+{% if variant =="m-card__bio" %}
+	<div class="m-card__bioData">
+		<div class="m-card__bioTitle">
+			{% include "@storybook/02-Atoms/title/title.twig" with { headline: headline, classNames:"a-government__title", variant:"headline" } %}
+		</div>
+		<div class="m-card__bioName">
+			{% include "@storybook/02-Atoms/link/link.twig" with { content: name, url: url, variant: "a-government__name"} %}
+		</div>
+		<div class="m-card__bioSocial">
+			{% if socialMedia %}
+				{% for socialLink in socialMedia %}
+					{% if socialLink.url.path and loop.index <= 5 %}
+						{% for socialMedias in socialMediaArray %}
+							{% if socialMedias.name in socialLink.url.path or socialMedias.url in socialLink.url.path or socialMedias.shortUrl in socialLink.url.path %}
+								<a href="{{ socialLink.url.path }}"><span class="{{ socialMedias.className }}"></span></a>
+							{% endif %}
+						{% endfor %}
+					{% endif %}
+				{% endfor %}
+			{% endif %}
+		</div>
+	</div>
+{% endif %}
+
+
+
+
+{% if variant =="m-card__link" %}
+	<div class="m-card__linkData">
+		<div class="m-card__linkTitle">
+			<div>{% include "@storybook/02-Atoms/title/title.twig" with { headline: headline, classNames:"a-government__title", variant:"headline" } %}</div>
+		</div>
+		<div class="m-card__linkLinks">
+			{% for link in links %}
+				{% set target = link.entity.newWindowToggle ? "_blank" : "_self" %}
+				<div class="m-card__links">
+					<a href="{{ link.entity.fieldLink.url.path }}" target={{target}}>
+						{{ link.entity.fieldLink.linkText }}
+					</a>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+{% endif %}
+
+
+
+
+
+

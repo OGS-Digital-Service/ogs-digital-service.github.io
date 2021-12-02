@@ -1,0 +1,1 @@
+import './service_categories.scss';

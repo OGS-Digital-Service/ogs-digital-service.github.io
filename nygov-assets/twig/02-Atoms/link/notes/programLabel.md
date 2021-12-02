@@ -1,0 +1,1 @@
+### Label for the program content type hero banner.

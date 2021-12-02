@@ -1,0 +1,1 @@
+import './heroSeparator.scss';

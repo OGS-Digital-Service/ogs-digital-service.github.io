@@ -1,0 +1,84 @@
+<div class="mobile-nav">
+  <h2 class="o-governorGlobalMenu__title">
+   <a href="/">
+    <span>
+     GOVERNOR &nbsp
+     <span class="name">HOME</span>
+    </span>
+    <span class="icon-right-chevron"></span>
+   </a>
+  </h2>
+  <div class="o-governorGlobalMenu__menu">
+   <ul class="menu">
+    {% for link in menu.links %}
+
+     {% set leaf_classes = ['leaf'] %}
+
+     <li class="{{ leaf_classes|join(' ') }}">
+      <span class="menuItems closed">
+       {% if link.links %}
+        <span class="noLink">
+         {{ link.label }}
+        </span>
+       {% else %}
+        {% include "@storybook/02-Atoms/link/link.twig" with {url: link.url.path, content: link.label} %}
+       {% endif %}
+       <span class="icon-right-chevron"></span>
+      </span>
+      {% if link.links %}
+       <ul class="submenu">
+        {% for sublink in link.links %}
+         <li>
+          <span>
+           {% include "@storybook/02-Atoms/link/link.twig" with {url: sublink.url.path, content: sublink.label} %}
+           <span class="icon-right-chevron"></span>
+          </span>
+         </li>
+        {% endfor %}
+       </ul>
+      {% endif %}
+     </li>
+
+    {% endfor %}
+   </ul>
+
+  </div>
+ </div>
+ <div class="o-governorGlobalMenu__wrapper">
+  <div class="o-governorGlobalMenu__offcanvas-trigger icon-bars"></div>
+  <h2 class="o-governorGlobalMenu__title">
+   <a href="/">
+    GOVERNOR
+    <span class="name">KATHY HOCHUL</span>
+   </a>
+  </h2>
+  <div class="o-governorGlobalMenu__menu">
+   <ul class="menu">
+    {% for link in menu.links %}
+
+     {% set leaf_classes = ['leaf'] %}
+
+     <li class="{{ leaf_classes|join(' ') }}" {% if link.links %} tabindex="0" {% endif %}>
+      {% if link.links %}
+       <span class="noLink">
+        {{ link.label }}
+       </span>
+      {% else %}
+       {% include "@storybook/02-Atoms/link/link.twig" with {url: link.url.path, content: link.label} %}
+      {% endif %}
+      {% if link.links %}
+       <ul class="submenu">
+        {% for sublink in link.links %}
+         <li>
+          {% include "@storybook/02-Atoms/link/link.twig" with {url: sublink.url.path, content: sublink.label} %}
+         </li>
+        {% endfor %}
+       </ul>
+      {% endif %}
+     </li>
+
+    {% endfor %}
+   </ul>
+
+  </div>
+ </div>

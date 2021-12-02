@@ -1,0 +1,55 @@
+@import "../../01-Base/breakpoints/breakpoints";
+@import "../../01-Base/typography/fontFamilies/fontFamilies.scss";
+@import "../../01-Base/typography/colors/colors.scss";
+@import "../../01-Base/backgrounds/colors/colors.scss";
+@import "../../01-Base/typography/weight/weight.scss";
+
+.o-jazzed-release {
+  &__flikr-embed {
+    text-align: center;
+    margin: 2rem 0;
+    iframe {
+      max-width: 100% !important;
+    }
+  }
+
+  &__translations {
+    margin-bottom: 2rem;
+    .a-contact__title {
+      margin: 0;
+    }
+  }
+
+  &__audio-photos-buttons {
+    text-align: center;
+  }
+
+  &__videoEmbed {
+    margin: 2rem 0;
+  }
+
+  &__audio-photos-buttons {
+    margin-bottom: 1rem;
+  }
+  .o-jazzed-release__content-wrapper .o-wysiwyg {
+    p,
+    div {
+      line-height: 1.7em;
+    }
+  }
+  .m-video__print{
+    display: none;
+  }
+
+  @media print {
+    .m-video__videoWrapper{
+      display: none;  
+    }
+    .m-video__print{
+      display: block;
+    }
+    .o-jazzed-release__flikr-embed{
+      display: none;
+    }
+  }
+}
