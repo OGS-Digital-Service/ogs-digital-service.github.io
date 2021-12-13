@@ -2,7 +2,7 @@
 	<div class="m-eventDate">
 		{% if eventDetails.monthStart %}
 			<div class="start">
-				{% include "@storybook/02-Atoms/date/date.twig" with {date: eventDetails.monthStart, classNames:"a-date-14 -gold", variant: "date"} %}
+				{% include "@storybook/02-Atoms/date/date.twig" with {date: eventDetails.monthStart, classNames:"a-date-14 -blue", variant: "date"} %}
 				{% include "@storybook/02-Atoms/date/date.twig" with {date: eventDetails.dayStart, classNames:"a-date-42-extraBold", variant: "date"} %}
 				{% include "@storybook/02-Atoms/date/date.twig" with {date: eventDetails.yearStart, classNames:"a-date-13-semiBold -year", variant: "date"} %}
 			</div>
@@ -12,7 +12,7 @@
 				—
 			</span>
 			<div class="end">
-				{% include "@storybook/02-Atoms/date/date.twig" with {date: eventDetails.monthEnd, classNames:"a-date-14 -gold", variant: "date"} %}
+				{% include "@storybook/02-Atoms/date/date.twig" with {date: eventDetails.monthEnd, classNames:"a-date-14 -blue", variant: "date"} %}
 				{% include "@storybook/02-Atoms/date/date.twig" with {date: eventDetails.dayEnd, classNames:"a-date-42-extraBold", variant: "date"} %}
 				{% include "@storybook/02-Atoms/date/date.twig" with {date: eventDetails.yearEnd, classNames:"a-date-13-semiBold -year", variant: "date"} %}
 			</div>

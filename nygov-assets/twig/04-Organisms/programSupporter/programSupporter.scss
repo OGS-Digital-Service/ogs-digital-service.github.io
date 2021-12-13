@@ -52,6 +52,10 @@
         margin: 10%;
         white-space: normal;
       }
+      .a-hero__btn:hover {
+        color: #000;
+        background-color: #fff;
+      }
 
       @include breakpoint(laptop) {
         height: 640px;

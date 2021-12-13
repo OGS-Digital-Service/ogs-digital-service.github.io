@@ -12,7 +12,7 @@
     .o-milestones__list {
       .m-milestone {
         color: black;
-        border-bottom: 1px solid lighten(#D0D0CE, 2%);
+        border-bottom: 1px solid #fff;
         .milestone__checkmark {
           @extend .text-primary-blue;
         }
@@ -50,7 +50,7 @@
     .o-milestones__list {
       .m-milestone {
         color: black;
-        border-bottom: 1px solid lighten(#FACE00, 2%);
+        border-bottom: 1px solid #fff;
         .milestone__checkmark {
           @extend .text-primary-blue;
         }
@@ -77,7 +77,7 @@
     }
 
     .o-milestones__flex-inner .o-milestones__color-wrap {
-      background-color: rgba(212, 130, 12, .9);
+      background-color: rgba(255, 227, 150, .9);
     }
   }
 
@@ -136,6 +136,10 @@
         @include breakpoint(laptop) {
           width: 100%;
         }
+      &:hover {
+        color: #000;
+        background-color: #fff !important;
+      }  
       }
     }
   }
@@ -195,7 +199,7 @@
     }
 
     .o-milestones__color-wrap {
-      background-color: rgba(18, 142, 195, .9);
+      background-color: rgba(69, 122, 165, .9);
       display: flex;
       align-items: center;
       flex-direction: column;
@@ -294,7 +298,7 @@
     .m-milestone {
       position: relative;
       padding: 30px 0 30px 0;
-      border-bottom: 1px solid #007AC2;
+      border-bottom: 1px solid #fff;
       display: flex;
       .milestone__checkmark {
         color: white;

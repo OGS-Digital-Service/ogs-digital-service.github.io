@@ -30,6 +30,12 @@
     @extend .text-extra-bold;
   }
 
+  .-blue {
+    text-transform: uppercase;
+    @extend .text-primary-light-blue;
+    @extend .text-extra-bold;
+  }
+
   .-year {
     margin-top: -5px;
   }

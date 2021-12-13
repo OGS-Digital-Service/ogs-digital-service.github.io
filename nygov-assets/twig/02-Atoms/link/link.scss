@@ -86,17 +86,24 @@ a {
   text-transform: uppercase;
   @extend .bg-primary-blue;
   color: #fff;
-  padding: 22px 40px;
-  font-size: 17px;
+  padding: 20px 20px;
+  font-size: 13px;
+  line-height: 15px;
+  font-weight: bold;
   cursor: pointer;
+  letter-spacing: 2px;
   border: 1px solid #154973;
   text-decoration: none;
   display: inline-block;
-  margin: 20px 0;
+  margin: 20px 10px;
   text-align: center;
+  width: 150px;
   &:hover {
-    @extend .text-primary-blue;
-    background-color: #fff;
+    background-color: #000;
+  }
+  @include breakpoint(largeMobile) {
+    width: 250px;
+    padding: 22px 20px;
   }
 }
 
@@ -110,18 +117,17 @@ a {
   letter-spacing: 2px;
   vertical-align: middle;
   padding: 0 20px;
-  color: #fff;
   cursor: pointer;
-  border: 2px solid;
-  border-color: #9899bf;
+  border: 1px solid;
+  border-color: #fff;
   background-color: transparent;
   text-align: center;
   font-size: 13px;
   @extend .text-bold;
   line-height: 15px;
   &:hover {
-    border-color: #fff;
-    background-color: #000000;
+    color: #000;
+    background-color: #fff;
   }
 }
 

@@ -20,6 +20,14 @@
   line-height: normal;
   width: 80%;
   margin: 60px auto;
+
+  p a {
+    color: #007AC2;
+
+    &:hover {
+      color: #154973;
+    }
+  }
 }
 @media print {
   .o-hero {

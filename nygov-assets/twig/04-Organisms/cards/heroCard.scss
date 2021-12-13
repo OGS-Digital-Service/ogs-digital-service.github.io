@@ -31,7 +31,7 @@
   }
 
   .o-cardContent {
-    background-color: #007AC2;
+    background-color: #457AA5;
     color: #ffffff;
     position: relative;
     width: 100%;
@@ -52,10 +52,14 @@
 
   .o-cardKeyword {
     .a-buttons__cardCat {
-      background-color: #007AC2;
+      background-color: #154973;
       color: #ffffff;
       position: absolute;
       top: 0;
+
+      &:hover {
+        background-color: #000;
+      }
     }
   }
 
@@ -121,7 +125,7 @@
     width: 100%;
 
     .m-card__footer {
-      background-color: #007AC2;
+      background-color: #154973;
       color: #ffffff;
       border-top: none;
 

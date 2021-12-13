@@ -27,8 +27,9 @@
 
   &__link {
     text-decoration: none;
-    color: #007AC2;
+    color: #154973;
     font-size: 18px;
+    font-weight:bold;
     &:hover {
       text-decoration: underline;
     }
@@ -36,7 +37,7 @@
 
   &__link-wrap {
     padding: 30px;
-    background: #f1f5f6;
+    background: #ededed;
     max-width: 768px;
   }
 

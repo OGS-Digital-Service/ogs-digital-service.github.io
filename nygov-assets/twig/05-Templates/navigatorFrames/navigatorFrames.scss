@@ -102,7 +102,7 @@
       list-style: none;
       margin: 0;
       padding: 0;
-
+      
       .t-navigator__listItem {
         padding: 24px 20%;
         border-bottom: 1px solid #62666A;
@@ -122,6 +122,10 @@
         font-weight: bold;
         text-rendering: optimizeLegibility;
         transition: color 0.3s 0s ease-in-out;
+
+        &:hover {
+          color:#FACE00;
+        }
       }
     }
 

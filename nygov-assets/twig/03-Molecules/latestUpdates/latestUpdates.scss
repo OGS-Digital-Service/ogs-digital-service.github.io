@@ -89,7 +89,7 @@
 
         .a-label__link {
           font-size: 13px;
-          @extend .text-primary-light-blue;
+          @extend .text-primary-links;
           @extend .text-semi-bold;
 
           @include breakpoint(tablet) {

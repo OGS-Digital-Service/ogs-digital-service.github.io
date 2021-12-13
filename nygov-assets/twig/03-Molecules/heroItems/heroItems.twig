@@ -21,7 +21,7 @@
 	{% set description = hero.description|length > 187 ? hero.description|slice(0,187) ~ '...' : hero.description %}
 
 	<div
-		class="bg-primary-blue text-white m-hero__meta -landingHero">
+		class="bg-black text-white m-hero__meta -landingHero">
 		{# Only displays on ny.gov #}
 		{% if current_site == 'nygov' and is_front %}
 			<div class="m-nygov__hero -viewHeader">
@@ -336,7 +336,7 @@
 								{% include '@storybook/02-Atoms/date/date.twig' with { date: startMonth|slice(0,3), classNames: "text-extra-bold a-hero__date", variant: "date" } %}
 							</div>
 							<div class="m-scheduledEventHero__day">
-								{% include '@storybook/02-Atoms/date/date.twig' with { date: startDay|slice(0,2), classNames: "text-primary-gold-light text-extra-bold a-hero__date", variant: "date" } %}
+								{% include '@storybook/02-Atoms/date/date.twig' with { date: startDay|slice(0,2), classNames: "text-primary-gold text-extra-bold a-hero__date", variant: "date" } %}
 							</div>
 							<div class="m-scheduledEventHero__year">
 								{% include '@storybook/02-Atoms/date/date.twig' with { date: startYear|slice(0,4), classNames: "text-semi-bold a-hero__date", variant: "date" } %}
@@ -356,7 +356,7 @@
 								{% include '@storybook/02-Atoms/date/date.twig' with { date: endMonth|slice(0,3), classNames: "text-extra-bold a-hero__date", variant: "date" } %}
 							</div>
 							<div class="m-scheduledEventHero__day">
-								{% include '@storybook/02-Atoms/date/date.twig' with { date: endDay|slice(0,2), classNames: "text-primary-gold-light text-extra-bold a-hero__date", variant: "date" } %}
+								{% include '@storybook/02-Atoms/date/date.twig' with { date: endDay|slice(0,2), classNames: "text-primary-gold text-extra-bold a-hero__date", variant: "date" } %}
 							</div>
 							<div class="m-scheduledEventHero__year">
 								{% include '@storybook/02-Atoms/date/date.twig' with { date: endYear|slice(0,4), classNames: "text-semi-bold a-hero__date", variant: "date" } %}
@@ -374,7 +374,7 @@
 							{# Start Date Time #}
 							{% if startDate is not empty %}
 								<div class="text-semi-bold m-scheduledEventHero__time">
-									<div class="text-primary-gold-light icon-clock m-scheduledEventHero__clockIcon"></div>
+									<div class="text-primary-gold icon-clock m-scheduledEventHero__clockIcon"></div>
 									{% include '@storybook/02-Atoms/text/text.twig' with { text: startTime,  variant: "string" } %}
 								</div>
 							{% endif %}
@@ -399,7 +399,7 @@
 
 						{% if hero.venue is not empty %}
 							<div class="text-semi-bold m-scheduledEventHero__venue">
-								<div class="text-primary-gold-light icon-map-marker m-scheduledEventHero__pinIcon"></div>
+								<div class="text-primary-gold icon-map-marker m-scheduledEventHero__pinIcon"></div>
 								{% include '@storybook/02-Atoms/text/text.twig' with { text: hero.venue,  variant: "string" } %}
 							</div>
 						{% endif %}
@@ -539,7 +539,7 @@
 		{% endif %}
 		{% include '@storybook/02-Atoms/title/title.twig' with { title: hero.title, classNames: "a-hero__title", variant: "heading" } %}
 		{% if hero.area is not empty or hero.founded is not empty  or hero.population is not empty %}
-			<div class="text-primary-gold-light m-countyHero__info">
+			<div class="text-primary-gold m-countyHero__info">
 				{% if hero.area is not empty %}
 					<div class="m-countyHero__area">
 						<label>Area</label>

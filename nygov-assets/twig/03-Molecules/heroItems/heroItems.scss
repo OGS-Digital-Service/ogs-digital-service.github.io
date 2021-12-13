@@ -40,7 +40,7 @@
 
     &:after {
       // triangle hover
-      border-left: 17px solid #FACE00;
+      border-left: 17px solid #FFE396;
     }
   }
 }
@@ -328,7 +328,7 @@
 
     .a-hero__link {
       font-size: 13px;
-      @extend .text-primary-gold-light;
+      @extend .text-primary-gold;
 
       @include breakpoint(tablet) {
         font-size: 16px;
