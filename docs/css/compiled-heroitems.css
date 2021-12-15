@@ -235,7 +235,7 @@
 @media (min-width: 1280px) {
 	.m-hero__meta.-landingHero .m-landingHero__contentWrapper .m-landingHero__content .m-landingHero__title {
 		margin-bottom: 40px;
-		padding-top: 5px;
+		padding-top: 0px;
 	}
 }
 
