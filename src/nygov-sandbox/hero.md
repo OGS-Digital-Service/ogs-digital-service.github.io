@@ -37,7 +37,7 @@ title: NYGov Profile test
 			padding:45px;
 		} 
 
-		.a_hero__dateLanding {
+		.a-hero__dateLanding {
   			font-family: "Proxima Nova", sans-serif;
   			font-size: 14px;
   			text-transform: uppercase;
@@ -58,7 +58,7 @@ title: NYGov Profile test
 <button class="a-hero__btn -live" data-stream="{{url}}">Watch live</button>
 </div> -->
 <div class="m-landingHero__date">
-<span class="a_hero__dateLanding">December 01, 2021</span>
+<span class="a-hero__dateLanding">December 01, 2021</span>
 </div>
 <div class="m-landingHero__title">				
 <h2 class="a-title a-hero__title">
