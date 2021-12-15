@@ -42,6 +42,12 @@ title: NYGov Profile test
   			font-size: 14px;
   			text-transform: uppercase;
 		}
+		.a-hero__titleLanding {
+			font-size: 36px;
+			line-height: 1.15em;
+			font-family: "Proxima Nova", sans-serif;
+			font-weight: 800;
+		}
 </style>
 
 
@@ -61,8 +67,8 @@ title: NYGov Profile test
 <span class="a-hero__dateLanding">December 01, 2021</span>
 </div>
 <div class="m-landingHero__title">				
-<h2 class="a-title a-hero__title">
-'Take Your Shot for an Outdoor Adventure' Sweepstakes Open
+<h2 class="a-title a-hero__titleLanding">
+Hero Title Lorem Ipsum Atlas Dolor Amet Tempor Magnar Aliqua
 </h2>
 </div>
 
