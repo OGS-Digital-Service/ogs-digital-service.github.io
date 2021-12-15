@@ -48,6 +48,13 @@ title: NYGov Profile test
 			font-family: "Proxima Nova", sans-serif;
 			font-weight: 800;
 		}
+		.m-landingHero__title h2 {
+			margin: 0px;
+		}
+
+		.m-landingHero__title {
+			margin-bottom: 35px !important;
+		}
 </style>
 
 
