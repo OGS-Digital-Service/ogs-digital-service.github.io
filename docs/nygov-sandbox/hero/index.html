@@ -85,9 +85,44 @@
 		}
 		}
 
-	
-	
 
+		.a-hero__btn.-linkLanding {
+			display: flex;
+			align-content: center;
+			justify-content: end;
+			flex-flow: column;
+			font-family: "Proxima Nova", sans-serif;
+			font-weight: bold;
+			font-size: 14px;
+			text-decoration: none;
+			text-transform: uppercase;
+			border-bottom: 1px solid #FACE00;
+			letter-spacing: 2px;
+			color: #FACE00;
+			cursor: pointer;
+			white-space: nowrap;
+			z-index: 1;
+			position: relative;
+			margin-right:45px;
+			}
+
+		.a-hero__btn.-linkLanding:hover {
+			border-bottom: 3px solid #FACE00;
+		}
+
+		/* .a-hero__btn.-linkLanding::after {
+			content: "\F30B" !important;
+  			font-family: "Font Awesome 5 Free" !important;
+  			font-weight: 900 !important;
+		} */
+		@media (min-width: 425px){
+	.m-hero__meta.-landingHero .m-landingHero__contentWrapper .m-landingHero__buttons {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content:flex-start;
+}
+		}	
+		
 </style>
 <!-- hero LEFT --> 
 <h2 class="font-bold text-3xl text-red-500 mt-16" > Landing Hero Left </h2>
@@ -112,8 +147,8 @@ Hero Title Lorem Ipsum Atlas Dolor Amet Tempor Magnar Aliqua
 </div>
 </div>
 <div class="m-landingHero__buttons">
-<a href="https://www.governor.ny.gov/news/governor-hochul-announces-take-your-shot-outdoor-adventure-covid-19-vaccine-incentive" class="a-hero__btn -link">Learn More</a>
-<a href="https://www.dec.ny.gov/outdoor/124251.html" class="a-hero__btn -link">Enter Sweepstakes</a>
+<a href="https://www.governor.ny.gov/news/governor-hochul-announces-take-your-shot-outdoor-adventure-covid-19-vaccine-incentive" class="a-hero__btn -linkLanding">Learn More</a>
+<a href="https://www.dec.ny.gov/outdoor/124251.html" class="a-hero__btn -linkLanding">Enter Sweepstakes</a>
 </div>
 </div>
 </div>
