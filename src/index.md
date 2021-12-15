@@ -38,7 +38,7 @@ If you have any questions about the content or technical aspects here, please co
         arialabel:'go to the dashboard of in progress accessibility remediations'
         },
          {
-        title:"NYGov Profile Sanbox",
+        title:"NYGov Profile Sandbox",
         content:"A rapid prototype and design sandbox page for nygov profile updates",
         link:"/nygov-sandbox",
         linktext:"See the Designs",

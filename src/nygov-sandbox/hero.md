@@ -29,6 +29,19 @@ title: NYGov Profile test
 				background-image: url('/img/Hochul_WebsiteHero.png');
 			}
 		}
+
+		.m-landingHero__contentWrapper.-left {
+			background: #154973;
+			opacity: 90%;
+			border-radius: 30px;
+			padding:45px;
+		} 
+
+		.a_hero__dateLanding {
+  			font-family: "Proxima Nova", sans-serif;
+  			font-size: 14px;
+  			text-transform: uppercase;
+		}
 </style>
 
 
@@ -42,16 +55,17 @@ title: NYGov Profile test
 <div class="m-landingHero__contentWrapper -left">
 <div class="m-landingHero__content">
 <!-- <div class="m-landingHero__liveButton">
-						<button class="a-hero__btn -live" data-stream="{{url}}">Watch live</button>
+<button class="a-hero__btn -live" data-stream="{{url}}">Watch live</button>
 </div> -->
+<div class="m-landingHero__date">
+<span class="a_hero__dateLanding">December 01, 2021</span>
+</div>
 <div class="m-landingHero__title">				
 <h2 class="a-title a-hero__title">
 'Take Your Shot for an Outdoor Adventure' Sweepstakes Open
 </h2>
 </div>
-<div class="m-landingHero__date">
-<span class="a-date text-primary-gold-light text-extra-bold a-hero__date">December 01, 2021</span>
-</div>
+
 <div class="m-landingHero__description">
 <div class="a-text__string a-hero__description -text">New Yorkers who enjoy the great outdoors and receive their first COVID-19 vaccine dose in December can enter to win prizes tailored to anglers, hunters &amp; outdoor enthusiasts.</div>
 </div>
