@@ -55,6 +55,11 @@ title: NYGov Profile test
 		.m-landingHero__title {
 			margin-bottom: 35px !important;
 		}
+
+		@media (min-width: 1280px) {
+		.m-hero__meta.-landingHero .m-landingHero__contentWrapper {
+   		 width: 580px;
+			}
 </style>
 
 
