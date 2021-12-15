@@ -128,9 +128,9 @@
           font-size: 16px;
           line-height: 22px;
 
-          @include breakpoint(tablet) {
+          @include breakpoint(desktop) {
             font-size: 18px;
-            line-height: 24px;
+            line-height: 25px;
           }
         }
       }

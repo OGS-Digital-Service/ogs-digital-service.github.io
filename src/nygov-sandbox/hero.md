@@ -61,6 +61,17 @@ title: NYGov Profile test
 		margin-top: 55px;	
    		 width: 580px;
 			}
+		}
+
+		@media (min-width: 768px) {
+		.-text {
+			font-size: 18px;
+            line-height: 25px !important;
+		}
+		}
+
+	
+	
 
 </style>
 
