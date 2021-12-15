@@ -120,10 +120,6 @@
       .m-landingHero__description {
         margin-bottom: 35px;
 
-        @include breakpoint(desktop) {
-          margin-bottom: 40px;
-        }
-
         .a-hero__description.-text {
           font-size: 16px;
           line-height: 22px;

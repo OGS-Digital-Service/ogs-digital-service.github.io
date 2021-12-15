@@ -61,10 +61,14 @@ title: NYGov Profile test
 		margin-top: 55px;	
    		 width: 580px;
 			}
+		.m-landingHero__description {
+        margin-bottom: 35px !important;
 		}
 
-		@media (min-width: 768px) {
-		.-text {
+		}
+
+		@media (min-width: 1280px) {
+		.a-hero__description.-text {
 			font-size: 18px;
             line-height: 25px !important;
 		}
