@@ -147,6 +147,7 @@ title: NYGov Profile test
     		position: absolute;
     		top: 50%;
     		transform: translateY(-50%);
+			right:0;
 			}		
 		.m-landingHero__description {
         	margin-bottom: 35px !important;
@@ -194,39 +195,7 @@ Hero Title Lorem Ipsum Atlas Dolor Amet Tempor Magnar Aliqua
 </div>
 <!-- hero LEFT --> 
 
-<!-- hero BOTTOM --> 
-<h2 class="font-bold text-3xl text-red-500 mt-16" > Landing Hero bottom</h2>
 
-
-<div class="o-hero -landingPage">
-<div class="o-hero__wrapper -bottom"></div>	
-<div class="bg-primary-blue text-white m-hero__meta -landingHero">			
-<div class="m-landingHero__contentWrapper -bottom">
-<div class="m-landingHero__content">
-<!-- <div class="m-landingHero__liveButton">
-						<button class="a-hero__btn -live" data-stream="{{url}}">Watch live</button>
-</div> -->
-<div class="m-landingHero__title">				
-<h2 class="a-title a-hero__title">
-'Take Your Shot for an Outdoor Adventure' Sweepstakes Open
-</h2>
-</div>
-<div class="m-landingHero__date">
-<span class="a-date text-primary-gold-light text-extra-bold a-hero__date">December 01, 2021</span>
-</div>
-<div class="m-landingHero__description">
-<div class="a-text__string a-hero__description -text">New Yorkers who enjoy the great outdoors and receive their first COVID-19 vaccine dose in December can enter to win prizes tailored to anglers, hunters &amp; outdoor enthusiasts.</div>
-</div>
-</div>
-<div class="m-landingHero__buttons">
-<a href="https://www.governor.ny.gov/news/governor-hochul-announces-take-your-shot-outdoor-adventure-covid-19-vaccine-incentive" class="a-hero__btn -link">Learn More</a>
-<a href="https://www.dec.ny.gov/outdoor/124251.html" class="a-hero__btn -link">Enter Sweepstakes</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- hero BOTTOM --> 
 
 <!-- hero RIGHT --> 
 <h2 class="font-bold text-3xl text-red-500 mt-16" > Landing Hero right </h2>
@@ -266,4 +235,45 @@ Hero Title Lorem Ipsum Atlas Dolor Amet Tempor Magnar Aliqua
 <!-- hero RIGHT --> 
 
 
+
+
+
+
+
+
+<!-- hero BOTTOM --> 
+<h2 class="font-bold text-3xl text-red-500 mt-16" > Landing Hero bottom</h2>
+
+
+<div class="o-hero -landingPage">
+<div class="o-hero__wrapper -bottom"></div>	
+<div class="bg-primary-blue text-white m-hero__meta -landingHero">			
+<div class="m-landingHero__contentWrapper -bottom">
+<div class="m-landingHero__content">
+<!-- <div class="m-landingHero__liveButton">
+						<button class="a-hero__btn -live" data-stream="{{url}}">Watch live</button>
+</div> -->
+<div class="m-landingHero__title">				
+<h2 class="a-title a-hero__title">
+'Take Your Shot for an Outdoor Adventure' Sweepstakes Open
+</h2>
+</div>
+<div class="m-landingHero__date">
+<span class="a-date text-primary-gold-light text-extra-bold a-hero__date">December 01, 2021</span>
+</div>
+<div class="m-landingHero__description">
+<div class="a-text__string a-hero__description -text">New Yorkers who enjoy the great outdoors and receive their first COVID-19 vaccine dose in December can enter to win prizes tailored to anglers, hunters &amp; outdoor enthusiasts.</div>
+</div>
+</div>
+<div class="m-landingHero__buttons">
+<a href="https://www.governor.ny.gov/news/governor-hochul-announces-take-your-shot-outdoor-adventure-covid-19-vaccine-incentive" class="a-hero__btn -link">Learn More</a>
+<a href="https://www.dec.ny.gov/outdoor/124251.html" class="a-hero__btn -link">Enter Sweepstakes</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- hero BOTTOM --> 
+
+<div style="height: 800px;"> fake content div</div>
 </article> <!-- end of main article enclosing -->

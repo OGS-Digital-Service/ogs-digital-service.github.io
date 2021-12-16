@@ -177,9 +177,14 @@
   @include breakpoint(desktop) {
     //Right Placement
     .m-landingHero__contentWrapper.-right {
-      float: right;
       margin-right: 60px;
       margin-left: 0;
+      margin-top: 0px;	
+   		width: 580px;
+    	position: absolute;
+    	top: 50%;
+    	transform: translateY(-50%);
+			right:0;
     }
 
     //Bottom Placement
