@@ -34,7 +34,7 @@ title: NYGov Profile test
 
 		.m-landingHero__contentWrapper {
 			background: #154973;
-			opacity: 90%;
+			opacity: 0.9;
 			border-radius: 30px;
 			padding:0px 0px;
 		} 
@@ -140,7 +140,14 @@ title: NYGov Profile test
     		position: absolute;
     		top: 50%;
     		transform: translateY(-50%);
-			}	
+			}
+		.m-hero__meta.-landingHero .m-landingHero__contentWrapper.-right {
+			margin-top: 0px;	
+   			width: 580px;
+    		position: absolute;
+    		top: 50%;
+    		transform: translateY(-50%);
+			}		
 		.m-landingHero__description {
         	margin-bottom: 35px !important;
 			}
