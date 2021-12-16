@@ -55,16 +55,28 @@
 			{% if hero.learnMore.url.path or hero.relatedContent.url.path or hero.archived.url.path or hero.stream.url.path %}
 				<div class="m-landingHero__buttons">
 					{% if hero.learnMore.url.path %}
+					<div class="m-landingHero__buttonsRow">
 						{% include '@storybook/02-Atoms/buttons/buttons.twig' with { title: learnMoreTitle, url: hero.learnMore.url.path, variant: "a-hero__btn -link" } %}
+						<span class="text-primary-gold" aria-hidden="true"></span>
+					</div>
 					{% endif %}
 					{% if hero.relatedContent.url.path %}
+					<div class="m-landingHero__buttonsRow">
 						{% include '@storybook/02-Atoms/buttons/buttons.twig' with { title: relatedContentTitle, url: hero.relatedContent.url.path, variant: "a-hero__btn -link" } %}
+						<span class="text-primary-gold" aria-hidden="true"></span>
+					</div>
 					{% endif %}
 					{% if hero.archived.url.path %}
+					<div class="m-landingHero__buttonsRow">
 						{% include '@storybook/02-Atoms/buttons/buttons.twig' with { title: hero.archived.title is not empty ? hero.archived.title :"Archived Video", url: hero.archived.url.path, variant: "a-hero__btn -link -archive" } %}
+						<span class="text-primary-gold" aria-hidden="true"></span>
+					</div>
 					{% endif %}
 					{% if hero.stream.url.path %}
+					<div class="m-landingHero__buttonsRow">
 						{% include '@storybook/02-Atoms/buttons/buttons.twig' with { title: hero.stream.title is not empty ? hero.stream.title :"Watch Live", url: hero.stream.url.path, variant: "a-hero__btn -link -watchLive" } %}
+						<span class="text-primary-gold" aria-hidden="true"></span>
+					</div>
 					{% endif %}
 				</div>
 			{% endif %}

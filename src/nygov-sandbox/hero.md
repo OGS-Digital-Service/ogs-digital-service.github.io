@@ -38,11 +38,6 @@ title: NYGov Profile test
 			border-radius: 30px;
 			padding:0px 0px;
 		} 
-
-
-
-
-
 		.a-hero__dateLanding {
   			font-family: "Proxima Nova", sans-serif;
   			font-size: 14px;
@@ -61,42 +56,6 @@ title: NYGov Profile test
 		.m-landingHero__title {
 			margin-bottom: 35px !important;
 		}
-
-		@media (min-width: 1280px) {
-		.m-hero__meta.-landingHero .m-landingHero__contentWrapper {
-			margin-top: 0px;	
-   			width: 580px;
-    		/* position: absolute;
-    		top: 50%;
-    		transform: translateY(-50%); */
-			}
-		.m-hero__meta.-landingHero .m-landingHero__contentWrapper.-left {
-			margin-top: 0px;	
-   			width: 580px;
-    		position: absolute;
-    		top: 50%;
-    		transform: translateY(-50%);
-			}	
-		.m-landingHero__description {
-        margin-bottom: 35px !important;
-		}
-
-		}
-
-		@media (min-width: 1280px) {
-		.a-hero__description.-text {
-			font-size: 18px;
-            line-height: 25px !important;
-		}
-		.m-hero__meta.-landingHero {
-			padding:0px;
-			min-height: 512px;
-		}
-		.m-landingHero__contentWrapper {
-			padding:45px 45px;
-		} 
-		}
-
 
 		.a-hero__btn.-linkLanding {
 			display: flex;
@@ -128,15 +87,6 @@ title: NYGov Profile test
   			font-family: "Font Awesome 5 Free" !important;
   			font-weight: 900 !important;
 		}
-
-		@media (min-width: 425px){
-			.m-hero__meta.-landingHero .m-landingHero__contentWrapper .m-landingHero__buttons {
-			display: flex;
-			flex-flow: row wrap;
-			justify-content:flex-start;
-		}
-		}	
-
 		.m-hero__meta.-landingHero .m-landingHero__contentWrapper .m-landingHero__buttons {
 			max-width: 100%;
 		}
@@ -147,14 +97,55 @@ title: NYGov Profile test
 			align-items: center;
 		}
 
-		@media (max-width: 680px){
+
+		@media (min-width: 425px){
+			.m-hero__meta.-landingHero .m-landingHero__contentWrapper .m-landingHero__buttons {
+			display: flex;
+			flex-flow: row wrap;
+			justify-content:flex-start;
+		}
+		}	
+
+		
+		@media (max-width: 590px){
 			.m-landingHero__buttonsRow:nth-child(2) {
 				margin-top: 35px;
 			}
 		
 		}
+		@media (min-width: 1280px) {
+		.a-hero__description.-text {
+			font-size: 18px;
+            line-height: 25px !important;
+		}
+		.m-hero__meta.-landingHero {
+			padding:0px;
+			min-height: 512px;
+		}
+		.m-landingHero__contentWrapper {
+			padding:45px 45px;
+		} 
+		}
+		@media (min-width: 1280px) {
+		.m-hero__meta.-landingHero .m-landingHero__contentWrapper {
+			margin-top: 0px;	
+   			width: 580px;
+    		/* position: absolute;
+    		top: 50%;
+    		transform: translateY(-50%); */
+			}
+		.m-hero__meta.-landingHero .m-landingHero__contentWrapper.-left {
+			margin-top: 0px;	
+   			width: 580px;
+    		position: absolute;
+    		top: 50%;
+    		transform: translateY(-50%);
+			}	
+		.m-landingHero__description {
+        	margin-bottom: 35px !important;
+			}
 
-		
+		}
 		
 </style>
 
