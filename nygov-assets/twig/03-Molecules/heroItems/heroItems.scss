@@ -74,12 +74,19 @@
       background: #154973;
 			opacity: 90%;
 			border-radius: 30px;
-			padding:45px 45px;
+			padding:0px 0px;
       
     @include breakpoint(desktop) {
       margin-top: 55px;
       margin-left: 60px;
       width: 580px;
+      padding:45px 45px;
+
+      &.-left {
+        position: absolute;
+    		top: 50%;
+    		transform: translateY(-50%);
+      }
     }
 
     .m-landingHero__content {

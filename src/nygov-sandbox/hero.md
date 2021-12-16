@@ -29,13 +29,19 @@ title: NYGov Profile test
 				background-image: url('/img/Hochul_WebsiteHero.png');
 			}
 		}
+/* start of local styling */
+		 
 
 		.m-landingHero__contentWrapper {
 			background: #154973;
 			opacity: 90%;
 			border-radius: 30px;
-			padding:45px 45px;
+			padding:0px 0px;
 		} 
+
+
+
+
 
 		.a-hero__dateLanding {
   			font-family: "Proxima Nova", sans-serif;
@@ -58,9 +64,19 @@ title: NYGov Profile test
 
 		@media (min-width: 1280px) {
 		.m-hero__meta.-landingHero .m-landingHero__contentWrapper {
-		margin-top: 55px;	
-   		 width: 580px;
+			margin-top: 0px;	
+   			width: 580px;
+    		/* position: absolute;
+    		top: 50%;
+    		transform: translateY(-50%); */
 			}
+		.m-hero__meta.-landingHero .m-landingHero__contentWrapper.-left {
+			margin-top: 0px;	
+   			width: 580px;
+    		position: absolute;
+    		top: 50%;
+    		transform: translateY(-50%);
+			}	
 		.m-landingHero__description {
         margin-bottom: 35px !important;
 		}
@@ -72,6 +88,13 @@ title: NYGov Profile test
 			font-size: 18px;
             line-height: 25px !important;
 		}
+		.m-hero__meta.-landingHero {
+			padding:0px;
+			min-height: 512px;
+		}
+		.m-landingHero__contentWrapper {
+			padding:45px 45px;
+		} 
 		}
 
 
@@ -131,9 +154,7 @@ title: NYGov Profile test
 		
 		}
 
-		.m-hero__meta.-landingHero {
-			padding:0px;
-		}
+		
 		
 </style>
 
