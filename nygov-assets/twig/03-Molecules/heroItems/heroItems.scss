@@ -46,10 +46,10 @@
 }
 //Landing Hero
 .m-hero__meta.-landingHero {
-  padding: 40px 20px;
+  padding: 0px;
 
   @include breakpoint(tablet) {
-    padding: 40px 35px;
+    padding: 0px;
   }
 
   @include breakpoint(desktop) {
@@ -71,6 +71,11 @@
   }
 
   .m-landingHero__contentWrapper {
+      background: #154973;
+			opacity: 90%;
+			border-radius: 30px;
+			padding:45px 45px;
+      
     @include breakpoint(desktop) {
       margin-top: 55px;
       margin-left: 60px;
@@ -159,39 +164,6 @@
           }
         }        
       }
-
-      // .a-hero__btn.-link {
-
-
-      //   @include breakpoint(tablet) {
-      //     height: 50px;
-      //   }
-
-      //   &:hover {
-      //     @extend .text-black;
-      //     @extend .bg-white;
-      //   }
-
-      //   &:nth-child(2) {
-      //     margin-top: 20px;
-      //   }
-
-      //   &:nth-child(3) {
-      //     margin-top: 20px;
-      //   }
-
-      //   &:nth-child(4) {
-      //     margin-top: 20px;
-      //   }
-
-      //   @include breakpoint(tablet) {
-      //     width: 225px;
-
-      //     &:nth-child(2) {
-      //       margin-top: 0px;
-      //     }
-      //   }
-      // }
     }
   }
 

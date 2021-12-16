@@ -30,11 +30,11 @@ title: NYGov Profile test
 			}
 		}
 
-		.m-landingHero__contentWrapper.-left {
+		.m-landingHero__contentWrapper {
 			background: #154973;
 			opacity: 90%;
 			border-radius: 30px;
-			padding:45px;
+			padding:45px 45px;
 		} 
 
 		.a-hero__dateLanding {
@@ -129,6 +129,10 @@ title: NYGov Profile test
 				margin-top: 35px;
 			}
 		
+		}
+
+		.m-hero__meta.-landingHero {
+			padding:0px;
 		}
 		
 </style>
