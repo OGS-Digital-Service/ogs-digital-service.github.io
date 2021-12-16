@@ -97,31 +97,40 @@
 			text-decoration: none;
 			text-transform: uppercase;
 			border-bottom: 1px solid #FACE00;
+			padding-bottom: 0px;
 			letter-spacing: 2px;
 			color: #FACE00;
 			cursor: pointer;
 			white-space: nowrap;
 			z-index: 1;
 			position: relative;
-			margin-right:45px;
 			}
 
 		.a-hero__btn.-linkLanding:hover {
 			border-bottom: 3px solid #FACE00;
 		}
 
-		/* .a-hero__btn.-linkLanding::after {
+		.m-landingHero__buttons span::after {
 			content: "\F30B" !important;
   			font-family: "Font Awesome 5 Free" !important;
   			font-weight: 900 !important;
-		} */
+		}
+
 		@media (min-width: 425px){
-	.m-hero__meta.-landingHero .m-landingHero__contentWrapper .m-landingHero__buttons {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content:flex-start;
-}
+			.m-hero__meta.-landingHero .m-landingHero__contentWrapper .m-landingHero__buttons {
+			display: flex;
+			flex-flow: row wrap;
+			justify-content:flex-start;
+		}
 		}	
+
+		.temp-button {
+			width: 200px;
+			height: 35px;
+			margin-right: 45px;
+			display: inline-flex;
+			align-items: center;
+		}
 		
 </style>
 <!-- hero LEFT --> 
@@ -147,8 +156,10 @@ Hero Title Lorem Ipsum Atlas Dolor Amet Tempor Magnar Aliqua
 </div>
 </div>
 <div class="m-landingHero__buttons">
-<a href="https://www.governor.ny.gov/news/governor-hochul-announces-take-your-shot-outdoor-adventure-covid-19-vaccine-incentive" class="a-hero__btn -linkLanding">Learn More</a>
-<a href="https://www.dec.ny.gov/outdoor/124251.html" class="a-hero__btn -linkLanding">Enter Sweepstakes</a>
+<div class="temp-button">
+<a href="https://www.governor.ny.gov/news/governor-hochul-announces-take-your-shot-outdoor-adventure-covid-19-vaccine-incentive" class="a-hero__btn -linkLanding">Learn More</a><span class="text-primary-gold" aria-hidden="true"></span></div>
+<div class="temp-button">
+<a href="https://www.dec.ny.gov/outdoor/124251.html" class="a-hero__btn -linkLanding">Watch Live </a><span class="text-primary-gold" aria-hidden="true"></span></div>
 </div>
 </div>
 </div>
