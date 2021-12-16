@@ -96,7 +96,7 @@ title: NYGov Profile test
 			}
 
 		.a-hero__btn.-linkLanding:hover {
-			border-bottom: 3px solid #FACE00;
+			border-bottom: 2px solid #FACE00;
 		}
 
 		.m-landingHero__buttons span::after {
@@ -113,12 +113,16 @@ title: NYGov Profile test
 		}
 		}	
 
+		.m-hero__meta.-landingHero .m-landingHero__contentWrapper .m-landingHero__buttons {
+			max-width: 100%;
+		}
+
 		.temp-button {
-			width: 200px;
 			height: 35px;
 			margin-right: 45px;
 			display: inline-flex;
 			align-items: center;
+			flex-wrap: nowrap;
 		}
 		
 </style>
@@ -153,7 +157,7 @@ Hero Title Lorem Ipsum Atlas Dolor Amet Tempor Magnar Aliqua
 <div class="temp-button">
 <a href="https://www.governor.ny.gov/news/governor-hochul-announces-take-your-shot-outdoor-adventure-covid-19-vaccine-incentive" class="a-hero__btn -linkLanding">Learn More</a><span class="text-primary-gold" aria-hidden="true"></span></div>
 <div class="temp-button">
-<a href="https://www.dec.ny.gov/outdoor/124251.html" class="a-hero__btn -linkLanding">Watch Live </a><span class="text-primary-gold" aria-hidden="true"></span></div>
+<a href="https://www.dec.ny.gov/outdoor/124251.html" class="a-hero__btn -linkLanding">Watch Live and some more stuff </a><span class="text-primary-gold" aria-hidden="true"></span></div>
 </div>
 </div>
 </div>

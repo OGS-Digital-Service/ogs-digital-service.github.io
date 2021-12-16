@@ -140,7 +140,7 @@
       }
 
       @include breakpoint(tablet) {
-        max-width: 470px;
+        max-width: 100%;
       }
 
       .a-hero__btn.-link {
