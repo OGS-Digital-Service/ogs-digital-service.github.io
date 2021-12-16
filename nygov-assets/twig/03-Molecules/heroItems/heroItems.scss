@@ -136,48 +136,62 @@
       @include breakpoint(largeMobile) {
         display: flex;
         flex-flow: row wrap;
-        justify-content: space-between;
+        justify-content: flex-start;
       }
 
       @include breakpoint(tablet) {
         max-width: 100%;
       }
 
-      .a-hero__btn.-link {
-        line-height: 15px;
-        white-space: normal;
-        height: 60px;
-        width: 100%;
-
-        @include breakpoint(tablet) {
-          height: 50px;
-        }
-
-        &:hover {
-          @extend .text-black;
-          @extend .bg-white;
-        }
-
-        &:nth-child(2) {
-          margin-top: 20px;
-        }
-
-        &:nth-child(3) {
-          margin-top: 20px;
-        }
-
-        &:nth-child(4) {
-          margin-top: 20px;
-        }
-
-        @include breakpoint(tablet) {
-          width: 225px;
-
-          &:nth-child(2) {
-            margin-top: 0px;
-          }
-        }
+      & span::after {
+        content: "\F30B" !important;
+          font-family: "Font Awesome 5 Free" !important;
+          font-weight: 900 !important;
       }
+      .m-landingHero__buttonsRow {
+        margin-right: 45px;
+        display: inline-flex;
+        align-items: center;
+
+        @include breakpoint(smallTabletOnly) {
+          &:nth-child(2){
+            margin-top: 35px;
+          }
+        }        
+      }
+
+      // .a-hero__btn.-link {
+
+
+      //   @include breakpoint(tablet) {
+      //     height: 50px;
+      //   }
+
+      //   &:hover {
+      //     @extend .text-black;
+      //     @extend .bg-white;
+      //   }
+
+      //   &:nth-child(2) {
+      //     margin-top: 20px;
+      //   }
+
+      //   &:nth-child(3) {
+      //     margin-top: 20px;
+      //   }
+
+      //   &:nth-child(4) {
+      //     margin-top: 20px;
+      //   }
+
+      //   @include breakpoint(tablet) {
+      //     width: 225px;
+
+      //     &:nth-child(2) {
+      //       margin-top: 0px;
+      //     }
+      //   }
+      // }
     }
   }
 

@@ -132,6 +132,31 @@
   }
 }
 
+  .a-hero__btn.-linkLanding {
+    display: flex;
+    align-content: center;
+    justify-content: end;
+    flex-flow: column;
+    font-family: "Proxima Nova", sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-bottom: 1px solid #FACE00;
+    padding-bottom: 0px;
+    margin-right: 5px;
+    letter-spacing: 2px;
+    color: #FACE00;
+    cursor: pointer;
+    white-space: nowrap;
+    z-index: 1;
+    position: relative;
+
+    &:hover {
+      border-bottom: 3px solid #FACE00;
+      margin-bottom: -2px;
+    } 
+  }
 
 
 .a-hero__btn.-live {
