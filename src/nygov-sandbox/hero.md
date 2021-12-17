@@ -69,7 +69,7 @@ title: NYGov Profile test
 			text-transform: uppercase;
 			border-bottom: 1px solid #FACE00;
 			margin-right: 5px;
-			letter-spacing: 2px;
+			letter-spacing: 1px;
 			color: #FACE00;
 			cursor: pointer;
 			white-space: nowrap;
