@@ -31,7 +31,7 @@ title: NYGov Profile test
 		}
 /* start of local styling */
 		 
-
+/* 
 		.m-landingHero__contentWrapper {
 			background: #154973;
 			opacity: 0.9;
@@ -130,9 +130,7 @@ title: NYGov Profile test
 		.m-hero__meta.-landingHero .m-landingHero__contentWrapper {
 			margin-top: 0px;	
    			width: 580px;
-    		/* position: absolute;
-    		top: 50%;
-    		transform: translateY(-50%); */
+    		
 			}
 		.m-hero__meta.-landingHero .m-landingHero__contentWrapper.-left {
 			margin-top: 0px;	
@@ -153,7 +151,7 @@ title: NYGov Profile test
         	margin-bottom: 35px !important;
 			}
 
-		}
+		} */
 		
 </style>
 
