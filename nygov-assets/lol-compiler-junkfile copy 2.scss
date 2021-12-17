@@ -420,7 +420,7 @@
     .m-landingHero__contentWrapper.-bottom {
       display: flex;
       width: auto;
-      height: 512px;
+      max-width: 1160px;
       margin-top: 0px;
 
       .m-landingHero__content {
