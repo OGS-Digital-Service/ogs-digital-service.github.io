@@ -54,7 +54,7 @@ title: NYGov Profile test
 		}
 
 		.m-landingHero__title {
-			margin-bottom: 35px !important;
+			margin-bottom: 30px !important;
 		}
 
 		.a-hero__btn.-linkLanding {
