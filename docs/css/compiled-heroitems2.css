@@ -410,6 +410,11 @@
 		top: 0;
 		min-height: 512px;
 	}
+
+	.o-hero.-landingPage .m-hero__meta.-landingHero.-bottom {
+		top: 412px;
+		min-height: 0px;
+	}
 }
 
 .o-hero.-landingPage .o-hero__liveVideo.-iframe {

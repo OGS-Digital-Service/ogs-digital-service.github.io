@@ -479,6 +479,12 @@
       position: absolute;
       top: 0;
       min-height: 512px;
+
+      &.-bottom {
+      top: 412px;
+      min-height: 0px;
+      }
+
     }
   }
 

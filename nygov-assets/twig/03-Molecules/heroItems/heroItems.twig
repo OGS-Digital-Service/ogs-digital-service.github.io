@@ -21,7 +21,7 @@
 	{% set description = hero.description|length > 187 ? hero.description|slice(0,187) ~ '...' : hero.description %}
 
 	<div
-		class="bg-black text-white m-hero__meta -landingHero">
+		class="bg-black text-white m-hero__meta -landingHero -{{placement}}">
 		{# Only displays on ny.gov #}
 		{% if current_site == 'nygov' and is_front %}
 			<div class="m-nygov__hero -viewHeader">
