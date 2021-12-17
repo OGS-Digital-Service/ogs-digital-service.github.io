@@ -337,19 +337,19 @@
         & h2 {
           margin: 0px;
         }
-        .a-hero__title {
-          font-size: 26px;
-          line-height: 30px;
-          margin: 0;
+        .a-hero__titleLanding {
+          font-size: 28px;
+          line-height: 1.15em;
+          
 
           @include breakpoint(tablet) {
-            font-size: 36px;
-            line-height: 38px;
+            font-size: 32px;
+            line-height: 1.15em;
           }
 
           @include breakpoint(desktop) {
-            font-size: 48px;
-            line-height: 48px;
+            font-size: 36px;
+            line-height: 1.15em;
           }
         }
       }

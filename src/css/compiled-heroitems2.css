@@ -262,23 +262,22 @@
 	margin: 0px;
 }
 
-.m-hero__meta.-landingHero .m-landingHero__contentWrapper .m-landingHero__content .m-landingHero__title .a-hero__title {
-	font-size: 26px;
-	line-height: 30px;
-	margin: 0;
+.m-hero__meta.-landingHero .m-landingHero__contentWrapper .m-landingHero__content .m-landingHero__title .a-hero__titleLanding {
+	font-size: 28px;
+	line-height: 1.15em;
 }
 
 @media (min-width: 768px) {
-	.m-hero__meta.-landingHero .m-landingHero__contentWrapper .m-landingHero__content .m-landingHero__title .a-hero__title {
-		font-size: 36px;
-		line-height: 38px;
+	.m-hero__meta.-landingHero .m-landingHero__contentWrapper .m-landingHero__content .m-landingHero__title .a-hero__titleLanding {
+		font-size: 32px;
+		line-height: 1.15em;
 	}
 }
 
 @media (min-width: 1280px) {
-	.m-hero__meta.-landingHero .m-landingHero__contentWrapper .m-landingHero__content .m-landingHero__title .a-hero__title {
-		font-size: 48px;
-		line-height: 48px;
+	.m-hero__meta.-landingHero .m-landingHero__contentWrapper .m-landingHero__content .m-landingHero__title .a-hero__titleLanding {
+		font-size: 36px;
+		line-height: 1.15em;
 	}
 }
 
@@ -1417,7 +1416,6 @@ a {
 	font-family: "Proxima Nova";
 	font-weight: normal;
 }
-
 
 /*!
  * Font Awesome Free 5.10.1 by @fontawesome - https://fontawesome.com
