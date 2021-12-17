@@ -349,7 +349,7 @@
 		display: flex;
 		width: auto;
 		max-width: 1160px;
-		margin: 0 auto;
+		margin: 0px 60px;
 	}
 
 	.m-hero__meta.-landingHero .m-landingHero__contentWrapper.-bottom .m-landingHero__content {
@@ -412,7 +412,9 @@
 	}
 
 	.o-hero.-landingPage .m-hero__meta.-landingHero.-bottom {
-		top: 412px;
+		position: initial;
+		display: flex;
+		justify-content: center;
 		min-height: 0px;
 	}
 }

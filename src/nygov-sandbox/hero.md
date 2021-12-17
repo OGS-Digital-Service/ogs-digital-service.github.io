@@ -38,9 +38,9 @@ title: NYGov Profile test
 <h2 class="font-bold text-3xl text-red-500 mt-16" > Landing Hero Left </h2>
 
 
-<div class="o-hero -landingPage">
+<div class="o-hero -landingPage -left">
 <div class="o-hero__wrapper -left"></div>	
-<div class="bg-primary-blue text-white m-hero__meta -landingHero">		 	
+<div class="bg-primary-blue text-white m-hero__meta -landingHero -left">		 	
 <div class="m-landingHero__contentWrapper -left">
 <div class="m-landingHero__content">
 <!-- <div class="m-landingHero__liveButton">
@@ -77,9 +77,9 @@ Hero Title Lorem Ipsum Atlas Dolor Amet Tempor Magnar Aliqua
 <h2 class="font-bold text-3xl text-red-500 mt-16" > Landing Hero right </h2>
 
 
-<div class="o-hero -landingPage">
+<div class="o-hero -landingPage -right">
 <div class="o-hero__wrapper -right"></div>	
-<div class="bg-primary-blue text-white m-hero__meta -landingHero">		 	
+<div class="bg-primary-blue text-white m-hero__meta -landingHero -right">		 	
 <div class="m-landingHero__contentWrapper -right">
 <div class="m-landingHero__content">
 <!-- <div class="m-landingHero__liveButton">
@@ -122,7 +122,7 @@ Hero Title Lorem Ipsum Atlas Dolor Amet Tempor Magnar Aliqua
 
 
 
-<div class="o-hero -landingPage">
+<div class="o-hero -landingPage -bottom">
 <div class="o-hero__wrapper -bottom"></div>	
 <div class="bg-primary-blue text-white m-hero__meta -landingHero -bottom">		 	
 <div class="m-landingHero__contentWrapper -bottom">

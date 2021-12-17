@@ -421,7 +421,7 @@
       display: flex;
       width: auto;
       max-width: 1160px;
-      margin: 0 auto;
+      margin: 0px 60px;
 
       .m-landingHero__content {
         margin-top: 0;
@@ -481,7 +481,9 @@
       min-height: 512px;
 
       &.-bottom {
-      top: 412px;
+      position: initial;  
+      display: flex;
+      justify-content: center;
       min-height: 0px;
       }
 

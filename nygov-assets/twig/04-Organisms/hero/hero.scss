@@ -29,7 +29,9 @@
       min-height: 512px;
 
       &.-bottom {
-      top: 412px;
+      position: initial;  
+      display: flex;
+      justify-content: center;
       min-height: 0px;
       }
 
