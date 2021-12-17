@@ -155,5 +155,5 @@ Hero Title Lorem Ipsum Atlas Dolor Amet Tempor Magnar Aliqua
 </div>
 <!-- hero BOTTOM --> 
 
-<div style="height: 800px; margin-top: 60px;" class="bg-primary-blue"> fake content div</div>
+<div style="height: 800px; margin-top: 60px;" class="bg-primary-gold"> fake content div</div>
 </article> <!-- end of main article enclosing -->

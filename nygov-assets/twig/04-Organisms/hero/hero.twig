@@ -28,20 +28,20 @@
 		}
 		@media(min-width: 1280px) {
 			.o-hero .o-hero__wrapper {
-				background-image: linear-gradient(to right,#000,rgba(0,0,0,0.25) 50%,rgba(0,0,0,0)), url('{{ bg_image_desktop|raw }}');
+				background-image: url('{{ bg_image_desktop|raw }}');
 			}
 			.o-hero .o-hero__wrapper.-right {
-				background-image: linear-gradient(to left,#000, #000 15%, rgba(0,0,0,0.50) 50%,rgba(0,0,0,0)), url('{{ bg_image_desktop|raw }}');
+				background-image: url('{{ bg_image_desktop|raw }}');
 			}
 			.o-hero .o-hero__wrapper.-bottom {
-				background-image: linear-gradient(to top,#000,rgba(0,0,0,0.25) 50%,rgba(0,0,0,0)), url('{{ bg_image_desktop|raw }}');
+				background-image: url('{{ bg_image_desktop|raw }}');
 			}
 		}
 	</style>
 
 	{% set placement = hero.placement %}
 
-	<div class="o-hero -landingPage">
+	<div class="o-hero -landingPage -{{placement}}">
 		<div class="o-hero__wrapper -{{placement}}"></div>
 		{% include '@storybook/03-Molecules/heroItems/heroItems.twig' with {
 			title: hero.headline,
