@@ -346,7 +346,7 @@
 	}
 
 	.m-hero__meta.-landingHero .m-landingHero__contentWrapper.-bottom {
-		display: flex;
+		display: block;
 		width: auto;
 		max-width: 1160px;
 		margin: -100px 60px 0px 60px;
@@ -365,14 +365,14 @@
 	}
 
 	.m-hero__meta.-landingHero .m-landingHero__contentWrapper.-bottom .m-landingHero__description {
-		margin-bottom: 50px;
+		margin-bottom: 35px;
 	}
 
 	.m-hero__meta.-landingHero .m-landingHero__contentWrapper.-bottom .m-landingHero__buttons {
 		align-self: flex-end;
 		display: flex;
-		flex-flow: column;
-		margin: 0 60px 50px 60px;
+		flex-flow: row;
+		margin: 0px;
 		max-width: 200px;
 	}
 
