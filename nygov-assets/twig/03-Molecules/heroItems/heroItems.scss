@@ -64,6 +64,7 @@
       display: block;
       position: absolute;
       width: 100%;
+      top:0;
       height: 30px;
       background-color: rgba(36, 56, 126, 0.3);
       z-index: 5;
@@ -71,14 +72,12 @@
   }
 
   .m-landingHero__contentWrapper {
-      background: #154973;
-			opacity: 0.9;
-			border-radius: 30px;
+      background: rgba(21, 73, 115, 0.9);
+			border-radius: 0px;
 			padding:40px 20px;
 
       &.-video {
-        background: #000;
-			  opacity: 0.8;
+        background: rgba(0, 0, 0, 0.8);
       }
 
       @include breakpoint(tablet){
@@ -88,8 +87,9 @@
     @include breakpoint(desktop) {
       margin-top: 0px;
       margin-left: 60px;
-      width: 580px;
+      width: 670px;
       padding:45px 45px;
+      border-radius: 30px;
 
       &.-left {
         position: absolute;
@@ -211,7 +211,7 @@
       margin-right: 60px;
       margin-left: 0;
       margin-top: 0px;	
-   		width: 580px;
+   		width: 670px;
     	position: absolute;
     	top: 50%;
     	transform: translateY(-50%);

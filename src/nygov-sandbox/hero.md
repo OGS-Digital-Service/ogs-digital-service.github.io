@@ -31,6 +31,18 @@ title: NYGov Profile test
 		}
 /* start of local styling */
 
+.m-nygov__hero.-viewHeader {
+      display: block;
+      position: absolute;
+      width: 100%;
+      top:0;
+      height: 30px;
+      background-color: rgba(36, 56, 126, 0.3);
+      z-index: 5;
+  }
+
+  
+
 </style>
 
 <!-- hero LIVE --> 
@@ -39,7 +51,8 @@ title: NYGov Profile test
 
 <div class="o-hero -landingPage -left">
 <div class="o-hero__wrapper -left"></div>	
-<div class="bg-primary-blue text-white m-hero__meta -landingHero -left">		 	
+<div class="bg-primary-blue text-white m-hero__meta -landingHero -left">
+<div class="m-nygov__hero -viewHeader"></div>		 	
 <div class="m-landingHero__contentWrapper -left -video">
 <div class="m-landingHero__content">
 <div class="m-landingHero__liveButton">

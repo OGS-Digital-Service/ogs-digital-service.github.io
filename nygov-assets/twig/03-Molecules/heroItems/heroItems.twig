@@ -21,7 +21,7 @@
 	{% set description = hero.description|length > 187 ? hero.description|slice(0,187) ~ '...' : hero.description %}
 
 	<div
-		class="bg-black text-white m-hero__meta -landingHero -{{placement}}">
+		class="bg-primary-blue text-white m-hero__meta -landingHero -{{placement}}">
 		{# Only displays on ny.gov #}
 		{% if current_site == 'nygov' and is_front %}
 			<div class="m-nygov__hero -viewHeader">
@@ -34,7 +34,7 @@
 			</div>
 		{% endif %}
 
-		<div {% if hero.stream.url.path %} class="m-landingHero__contentWrapper -{{placement}}" -video {% else %} class="m-landingHero__contentWrapper -{{placement}}"{% endif %} >
+		<div {% if hero.stream.url.path %} class="m-landingHero__contentWrapper -{{placement}}" -video {% else %} class="m-landingHero__contentWrapper -{{placement}}"{% endif %} > {# need to test this conditional to see if it does what is expected #}
 			<div class="m-landingHero__content">
 				{% if hero.stream.url.path %}
 					<div class="m-landingHero__liveButton">
@@ -45,7 +45,7 @@
 					{% include "@storybook/02-Atoms/date/date.twig" with { date: date, classNames: "a-hero__dateLanding", variant: "date" } %}
 				</div>
 				<div class="m-landingHero__title">
-					{% include "@storybook/02-Atoms/title/title.twig" with { title: hero.headline, classNames: "a-hero__title", variant: "title" } %}
+					{% include "@storybook/02-Atoms/title/title.twig" with { title: hero.headline, classNames: "a-hero__titleLanding", variant: "title" } %}
 				</div>
 				<div class="m-landingHero__description">
 					{% include "@storybook/02-Atoms/text/text.twig" with { text: description, classNames: "a-hero__description -text", variant: "string" } %}

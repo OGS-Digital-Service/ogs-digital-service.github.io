@@ -11,6 +11,20 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <style>
     body {margin:0 auto;}
+
+    html {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+    *,
+    *::before,
+    *::after {
+        -webkit-box-sizing: inherit;
+           -moz-box-sizing: inherit;
+                box-sizing: inherit;
+    }
     </style>
   
     
@@ -42,12 +56,25 @@
 		}
 /* start of local styling */
 
+.m-nygov__hero.-viewHeader {
+      display: block;
+      position: absolute;
+      width: 100%;
+      top:0;
+      height: 30px;
+      background-color: rgba(36, 56, 126, 0.3);
+      z-index: 5;
+  }
+
+  
+
 </style>
 <!-- hero LIVE --> 
 <h2 class="font-bold text-3xl text-red-500 mt-16" > Landing Hero Left </h2>
 <div class="o-hero -landingPage -left">
 <div class="o-hero__wrapper -left"></div>	
-<div class="bg-primary-blue text-white m-hero__meta -landingHero -left">		 	
+<div class="bg-primary-blue text-white m-hero__meta -landingHero -left">
+<div class="m-nygov__hero -viewHeader"></div>		 	
 <div class="m-landingHero__contentWrapper -left -video">
 <div class="m-landingHero__content">
 <div class="m-landingHero__liveButton">

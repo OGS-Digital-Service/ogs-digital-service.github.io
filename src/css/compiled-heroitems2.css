@@ -204,6 +204,7 @@
 		display: block;
 		position: absolute;
 		width: 100%;
+		top: 0;
 		height: 30px;
 		background-color: rgba(36, 56, 126, 0.3);
 		z-index: 5;
@@ -211,15 +212,13 @@
 }
 
 .m-hero__meta.-landingHero .m-landingHero__contentWrapper {
-	background: #154973;
-	opacity: 0.9;
-	border-radius: 30px;
+	background: rgba(21, 73, 115, 0.9);
+	border-radius: 0px;
 	padding: 40px 20px;
 }
 
 .m-hero__meta.-landingHero .m-landingHero__contentWrapper.-video {
-	background: #000;
-	opacity: 0.8;
+	background: rgba(0, 0, 0, 0.8);
 }
 
 @media (min-width: 768px) {
@@ -232,8 +231,9 @@
 	.m-hero__meta.-landingHero .m-landingHero__contentWrapper {
 		margin-top: 0px;
 		margin-left: 60px;
-		width: 580px;
+		width: 670px;
 		padding: 45px 45px;
+		border-radius: 30px;
 	}
 
 	.m-hero__meta.-landingHero .m-landingHero__contentWrapper.-left {
@@ -362,7 +362,7 @@
 		margin-right: 60px;
 		margin-left: 0;
 		margin-top: 0px;
-		width: 580px;
+		width: 670px;
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
@@ -658,14 +658,13 @@
 	text-transform: uppercase;
 	font-family: "Oswald";
 	font-weight: bold;
-	font-size: 13px;
+	font-size: 14px;
 	line-height: 15px;
-	line-height: 15px;
-	letter-spacing: 2px;
-	background: #b52c2c;
+	letter-spacing: 1px;
+	background: #C12727;
 	color: #fff;
-	width: 85px;
-	height: 35px;
+	width: 90px;
+	height: 30px;
 	cursor: pointer;
 	border: none;
 }
