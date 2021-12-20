@@ -34,7 +34,7 @@
 			</div>
 		{% endif %}
 
-		<div class="m-landingHero__contentWrapper -{{placement}}">
+		<div {% if hero.stream.url.path %} class="m-landingHero__contentWrapper -{{placement}}" -video {% else %} class="m-landingHero__contentWrapper -{{placement}}"{% endif %} >
 			<div class="m-landingHero__content">
 				{% if hero.stream.url.path %}
 					<div class="m-landingHero__liveButton">
