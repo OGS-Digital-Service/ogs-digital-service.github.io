@@ -315,16 +315,35 @@
 	}
 }
 
-.m-hero__meta.-landingHero .m-landingHero__contentWrapper .m-landingHero__buttons span::after {
+.m-hero__meta.-landingHero .m-landingHero__contentWrapper .m-landingHero__buttons .m-landingHero__buttonsRow {
+	margin-right: 45px;
+	display: inline-flex;
+	align-items: center;
+}
+
+.m-hero__meta.-landingHero .m-landingHero__contentWrapper .m-landingHero__buttons .m-landingHero__buttonsRow span::after {
 	content: "\F30B" !important;
 	font-family: "Font Awesome 5 Free" !important;
 	font-weight: 900 !important;
 }
 
-.m-hero__meta.-landingHero .m-landingHero__contentWrapper .m-landingHero__buttons .m-landingHero__buttonsRow {
+.m-hero__meta.-landingHero .m-landingHero__contentWrapper .m-landingHero__buttons .m-landingHero__buttonsRow-heroVideo {
 	margin-right: 45px;
 	display: inline-flex;
 	align-items: center;
+}
+
+.m-hero__meta.-landingHero .m-landingHero__contentWrapper .m-landingHero__buttons .m-landingHero__buttonsRow-heroVideo span {
+	border-bottom: 3px solid transparent;
+	margin-right: 5px;
+}
+
+.m-hero__meta.-landingHero .m-landingHero__contentWrapper .m-landingHero__buttons .m-landingHero__buttonsRow-heroVideo span::before {
+	content: "\F04B" !important;
+	font-family: "Font Awesome 5 Free" !important;
+	font-weight: 900 !important;
+	font-size: 12px;
+	margin-right: 3px;
 }
 
 @media (max-width: 590px) {

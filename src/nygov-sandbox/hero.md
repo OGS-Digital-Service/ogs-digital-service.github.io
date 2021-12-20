@@ -33,6 +33,47 @@ title: NYGov Profile test
 
 </style>
 
+<!-- hero LIVE --> 
+<h2 class="font-bold text-3xl text-red-500 mt-16" > Landing Hero Left </h2>
+
+
+<div class="o-hero -landingPage -left">
+<div class="o-hero__wrapper -left"></div>	
+<div class="bg-primary-blue text-white m-hero__meta -landingHero -left">		 	
+<div class="m-landingHero__contentWrapper -left">
+<div class="m-landingHero__content">
+<div class="m-landingHero__liveButton">
+<button class="a-hero__btn -live" data-stream="{{url}}">Live Now</button>
+</div>
+<div class="m-landingHero__date">
+<span class="a-hero__dateLanding">December 01, 2021</span>
+</div>
+<div class="m-landingHero__title">				
+<h2 class="a-title a-hero__titleLanding">
+Live Webcast
+</h2>
+</div>
+
+<div class="m-landingHero__description">
+<div class="a-text__string a-hero__description -text">At 9:30 AM, Governor Hochul visits a vaccination site and thanks healthcare workers at Wyoming County Community Health System.</div>
+</div>
+</div>
+<div class="m-landingHero__buttons">
+<!-- <div class="m-landingHero__buttonsRow">
+<a href="https://www.governor.ny.gov/news/governor-hochul-announces-take-your-shot-outdoor-adventure-covid-19-vaccine-incentive" class="a-hero__btn -linkLanding">Find a Booster Shot Location</a><span class="text-primary-gold" aria-hidden="true"></span></div> -->
+<div class="m-landingHero__buttonsRow-heroVideo">
+<span class="text-primary-gold" aria-hidden="true"></span>
+<a href="https://www.dec.ny.gov/outdoor/124251.html" class="a-hero__btn -linkLanding -watchLive">Watch Live </a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- hero LIVE --> 
+
+
+
+
 
 <!-- hero LEFT --> 
 <h2 class="font-bold text-3xl text-red-500 mt-16" > Landing Hero Left </h2>

@@ -56,26 +56,28 @@
 				<div class="m-landingHero__buttons">
 					{% if hero.learnMore.url.path %}
 					<div class="m-landingHero__buttonsRow">
-						{% include '@storybook/02-Atoms/buttons/buttons.twig' with { title: learnMoreTitle, url: hero.learnMore.url.path, variant: "a-hero__btn -link" } %}
+						{% include '@storybook/02-Atoms/buttons/buttons.twig' with { title: learnMoreTitle, url: hero.learnMore.url.path, variant: "a-hero__btn -linkLanding" } %}
 						<span class="text-primary-gold" aria-hidden="true"></span>
 					</div>
 					{% endif %}
 					{% if hero.relatedContent.url.path %}
 					<div class="m-landingHero__buttonsRow">
-						{% include '@storybook/02-Atoms/buttons/buttons.twig' with { title: relatedContentTitle, url: hero.relatedContent.url.path, variant: "a-hero__btn -link" } %}
+						{% include '@storybook/02-Atoms/buttons/buttons.twig' with { title: relatedContentTitle, url: hero.relatedContent.url.path, variant: "a-hero__btn -linkLanding" } %}
 						<span class="text-primary-gold" aria-hidden="true"></span>
 					</div>
 					{% endif %}
 					{% if hero.archived.url.path %}
-					<div class="m-landingHero__buttonsRow">
-						{% include '@storybook/02-Atoms/buttons/buttons.twig' with { title: hero.archived.title is not empty ? hero.archived.title :"Archived Video", url: hero.archived.url.path, variant: "a-hero__btn -link -archive" } %}
+					<div class="m-landingHero__buttonsRow -heroVideo">
 						<span class="text-primary-gold" aria-hidden="true"></span>
+						{% include '@storybook/02-Atoms/buttons/buttons.twig' with { title: hero.archived.title is not empty ? hero.archived.title :"Archived Video", url: hero.archived.url.path, variant: "a-hero__btn -linkLanding -archive" } %}
+						
 					</div>
 					{% endif %}
 					{% if hero.stream.url.path %}
-					<div class="m-landingHero__buttonsRow">
-						{% include '@storybook/02-Atoms/buttons/buttons.twig' with { title: hero.stream.title is not empty ? hero.stream.title :"Watch Live", url: hero.stream.url.path, variant: "a-hero__btn -link -watchLive" } %}
+					<div class="m-landingHero__buttonsRow -heroVideo">
 						<span class="text-primary-gold" aria-hidden="true"></span>
+						{% include '@storybook/02-Atoms/buttons/buttons.twig' with { title: hero.stream.title is not empty ? hero.stream.title :"Watch Live", url: hero.stream.url.path, variant: "a-hero__btn -linkLanding -watchLive" } %}
+						
 					</div>
 					{% endif %}
 				</div>

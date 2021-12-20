@@ -159,16 +159,37 @@
       @include breakpoint(tablet) {
         max-width: 100%;
       }
-
-      & span::after {
-        content: "\F30B" !important;
-          font-family: "Font Awesome 5 Free" !important;
-          font-weight: 900 !important;
-      }
+      
       .m-landingHero__buttonsRow {
         margin-right: 45px;
         display: inline-flex;
         align-items: center;
+
+      & span::after {
+          content: "\F30B" !important;
+          font-family: "Font Awesome 5 Free" !important;
+          font-weight: 900 !important;
+        }
+
+      &-heroVideo {
+        margin-left: 45px;
+        display: inline-flex;
+        align-items: center;
+
+          span {
+            border-bottom: 3px solid transparent;
+            margin-right: 5px;
+          
+          &::before {
+            content: "\F04B" !important;
+            font-family: "Font Awesome 5 Free" !important;
+            font-weight: 900 !important;
+            font-size: 12px;
+          }
+        }  
+      }
+      
+     
 
         @include breakpoint(smallTabletOnly) {
           &:nth-child(2){
