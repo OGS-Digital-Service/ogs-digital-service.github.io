@@ -76,6 +76,11 @@
 			border-radius: 30px;
 			padding:40px 20px;
 
+      &.-video {
+        background: #000;
+			  opacity: 0.8;
+      }
+
       @include breakpoint(tablet){
         padding:45px 35px;
       }

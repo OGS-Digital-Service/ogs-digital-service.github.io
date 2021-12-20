@@ -217,6 +217,11 @@
 	padding: 40px 20px;
 }
 
+.m-hero__meta.-landingHero .m-landingHero__contentWrapper.-video {
+	background: #000;
+	opacity: 0.8;
+}
+
 @media (min-width: 768px) {
 	.m-hero__meta.-landingHero .m-landingHero__contentWrapper {
 		padding: 45px 35px;

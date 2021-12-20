@@ -40,7 +40,7 @@ title: NYGov Profile test
 <div class="o-hero -landingPage -left">
 <div class="o-hero__wrapper -left"></div>	
 <div class="bg-primary-blue text-white m-hero__meta -landingHero -left">		 	
-<div class="m-landingHero__contentWrapper -left">
+<div class="m-landingHero__contentWrapper -left -video">
 <div class="m-landingHero__content">
 <div class="m-landingHero__liveButton">
 <button class="a-hero__btn -live" data-stream="{{url}}">Live Now</button>
@@ -50,7 +50,7 @@ title: NYGov Profile test
 </div>
 <div class="m-landingHero__title">				
 <h2 class="a-title a-hero__titleLanding">
-Live Webcast
+Launch of “Boost Up, New York” Campaign
 </h2>
 </div>
 
@@ -63,7 +63,7 @@ Live Webcast
 <a href="https://www.governor.ny.gov/news/governor-hochul-announces-take-your-shot-outdoor-adventure-covid-19-vaccine-incentive" class="a-hero__btn -linkLanding">Find a Booster Shot Location</a><span class="text-primary-gold" aria-hidden="true"></span></div> -->
 <div class="m-landingHero__buttonsRow-heroVideo">
 <span class="text-primary-gold" aria-hidden="true"></span>
-<a href="https://www.dec.ny.gov/outdoor/124251.html" class="a-hero__btn -linkLanding -watchLive">Watch Live </a></div>
+<a href="#" class="a-hero__btn -linkLanding -watchLive">Watch Live </a></div>
 </div>
 </div>
 </div>
