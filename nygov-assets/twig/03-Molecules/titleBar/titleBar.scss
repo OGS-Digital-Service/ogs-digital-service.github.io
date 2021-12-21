@@ -5,6 +5,7 @@
 //Default Title Bar
 .m-titleBar {
   padding: 18px 30px;
+  border-top: 1px solid #fff;
 
   @include breakpoint(tablet) {
     padding: 40px 30px;
