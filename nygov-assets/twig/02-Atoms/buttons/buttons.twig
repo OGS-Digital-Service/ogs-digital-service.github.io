@@ -1,4 +1,4 @@
-{% if variant == "a-hero__btn -live" or variant == "a-hero__btn -link -watchLive" %}
+{% if variant == "a-hero__btn -live" or variant == "a-hero__btn -link -watchLive" or variant == "a-hero__btn -linkLanding -watchLive" %}
 	<button class="{{variant}}" data-stream="{{url}}">{{title}}</button>
 {% elseif variant == "a-hero__btn -link" or variant == "a-hero__btn -link -archive"%}
 	<a href="{{url}}" class="{{variant}}">{{ title }}</a>

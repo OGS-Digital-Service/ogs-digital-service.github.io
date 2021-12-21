@@ -34,7 +34,7 @@
 			</div>
 		{% endif %}
 
-		<div {% if hero.stream.url.path %} class="m-landingHero__contentWrapper -{{placement}}" -video {% else %} class="m-landingHero__contentWrapper -{{placement}}"{% endif %} > {# need to test this conditional to see if it does what is expected #}
+		<div {% if hero.stream.url.path %} class="m-landingHero__contentWrapper -{{placement}} -video" {% else %} class="m-landingHero__contentWrapper -{{placement}}"{% endif %} > {# need to test this conditional to see if it does what is expected #}
 			<div class="m-landingHero__content">
 				{% if hero.stream.url.path %}
 					<div class="m-landingHero__liveButton">
@@ -67,14 +67,14 @@
 					</div>
 					{% endif %}
 					{% if hero.archived.url.path %}
-					<div class="m-landingHero__buttonsRow -heroVideo">
+					<div class="m-landingHero__buttonsRow-heroVideo">
 						<span class="text-primary-gold" aria-hidden="true"></span>
 						{% include '@storybook/02-Atoms/buttons/buttons.twig' with { title: hero.archived.title is not empty ? hero.archived.title :"Archived Video", url: hero.archived.url.path, variant: "a-hero__btn -linkLanding -archive" } %}
 						
 					</div>
 					{% endif %}
 					{% if hero.stream.url.path %}
-					<div class="m-landingHero__buttonsRow -heroVideo">
+					<div class="m-landingHero__buttonsRow-heroVideo">
 						<span class="text-primary-gold" aria-hidden="true"></span>
 						{% include '@storybook/02-Atoms/buttons/buttons.twig' with { title: hero.stream.title is not empty ? hero.stream.title :"Watch Live", url: hero.stream.url.path, variant: "a-hero__btn -linkLanding -watchLive" } %}
 						
