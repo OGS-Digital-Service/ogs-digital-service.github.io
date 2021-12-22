@@ -150,7 +150,7 @@
       }
 
       .m-landingHero__description {
-        margin-bottom: 35px;
+        margin-bottom: 0px;
 
         .a-hero__description.-text {
           font-size: 16px;
@@ -187,11 +187,8 @@
         margin-right: 45px;
         display: inline-flex;
         align-items: center;
-        
+        margin-top: 35px;
 
-        // &:nth-child(1){
-        //   padding-bottom: 35px;
-        // }
 
       & span::after {
           content: "\F30B" !important;
@@ -201,6 +198,7 @@
 
       &-heroVideo {
         margin-right: 45px;
+        margin-top: 35px;
         display: inline-flex;
         align-items: center;
 
@@ -219,11 +217,11 @@
       
      
 
-        @include breakpoint(smallTabletOnly) {
-          &:nth-child(2){
-            margin-top: 35px;
-          }
-        }        
+        // @include breakpoint(smallTabletOnly) {
+        //   &:nth-child(2){
+        //     margin-top: 35px;
+        //   }
+        // }        
       }
     }
   }
@@ -261,7 +259,7 @@
       }
 
       .m-landingHero__description {
-        margin-bottom: 35px;
+        margin-bottom: 0px;
       }
 
       .m-landingHero__buttons {
