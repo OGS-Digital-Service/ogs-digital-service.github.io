@@ -76,7 +76,7 @@ Launch of “Boost Up, New York” Campaign
 <a href="https://www.governor.ny.gov/news/governor-hochul-announces-take-your-shot-outdoor-adventure-covid-19-vaccine-incentive" class="a-hero__btn -linkLanding">Find a Booster Shot Location</a><span class="text-primary-gold" aria-hidden="true"></span></div> -->
 <div class="m-landingHero__buttonsRow-heroVideo">
 <span class="text-primary-gold" aria-hidden="true"></span>
-<button class="a-hero__btn -linkLanding -watchLive" data-stream="https://players.brightcove.net/2886492229001/default_default/index.html?videoId=5452960876001">Watch Live</button></div>
+<a href="#" class="a-hero__btn -linkLanding -watchLive">Watch Live </a></div>
 </div>
 </div>
 </div>

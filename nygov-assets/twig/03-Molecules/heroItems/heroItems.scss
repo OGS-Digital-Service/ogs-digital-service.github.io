@@ -80,6 +80,10 @@
         background: rgba(0, 0, 0, 0.8);
       }
 
+      &.-bottom.-video {
+        background: rgba(0, 0, 0, 1.0);
+      }
+
       @include breakpoint(tablet){
         padding:45px 35px;
       }
@@ -163,6 +167,14 @@
 
       @include breakpoint(tablet) {
         max-width: 100%;
+      }
+
+      & button {
+        background-color: transparent;
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+        padding: 0;
       }
       
       .m-landingHero__buttonsRow {
