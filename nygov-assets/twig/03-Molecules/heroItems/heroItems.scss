@@ -47,6 +47,7 @@
 //Landing Hero
 .m-hero__meta.-landingHero {
   padding: 0px;
+  border-bottom: 1px solid #fff;
 
   @include breakpoint(tablet) {
     padding: 0px;
@@ -55,6 +56,11 @@
   @include breakpoint(desktop) {
     padding: 0px;
     width: 100%;
+    border-bottom: none;
+
+    &.-bottom {
+      border-bottom: 1px solid #fff;
+    }
   }
 
   .m-nygov__hero.-viewHeader {
@@ -66,7 +72,7 @@
       width: 100%;
       top:0;
       height: 30px;
-      background-color: rgba(36, 56, 126, 0.3);
+      background-color: rgba(21,73,115,0.3);
       z-index: 5;
     }
   }
@@ -181,6 +187,11 @@
         margin-right: 45px;
         display: inline-flex;
         align-items: center;
+        
+
+        // &:nth-child(1){
+        //   padding-bottom: 35px;
+        // }
 
       & span::after {
           content: "\F30B" !important;
@@ -236,7 +247,7 @@
       width: auto;
       max-width: 1160px;
       margin: -100px 60px 0px 60px;
-      opacity: 1;
+      background: rgba(21,73,115,1.0);
 
       .m-landingHero__content {
         margin-top: 0;

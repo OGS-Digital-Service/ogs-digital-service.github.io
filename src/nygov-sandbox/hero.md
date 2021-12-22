@@ -117,7 +117,7 @@ Hero Title Lorem Ipsum Atlas Dolor Amet Tempor Magnar Aliqua
 <div class="m-landingHero__buttonsRow">
 <a href="https://www.governor.ny.gov/news/governor-hochul-announces-take-your-shot-outdoor-adventure-covid-19-vaccine-incentive" class="a-hero__btn -linkLanding">Find a Booster Shot Location</a><span class="text-primary-gold" aria-hidden="true"></span></div>
 <div class="m-landingHero__buttonsRow">
-<a href="https://www.dec.ny.gov/outdoor/124251.html" class="a-hero__btn -linkLanding">Hero Link Text that is much longer why would you do this </a><span class="text-primary-gold" aria-hidden="true"></span></div>
+<a href="https://www.dec.ny.gov/outdoor/124251.html" class="a-hero__btn -linkLanding">Hero Link Text that is much longer why would you do this  </a><span class="text-primary-gold" aria-hidden="true"></span></div>
 </div>
 </div>
 </div>
@@ -154,9 +154,9 @@ Hero Title Lorem Ipsum Atlas Dolor Amet Tempor Magnar Aliqua
 </div>
 <div class="m-landingHero__buttons">
 <div class="m-landingHero__buttonsRow">
-<a href="https://www.governor.ny.gov/news/governor-hochul-announces-take-your-shot-outdoor-adventure-covid-19-vaccine-incentive" class="a-hero__btn -linkLanding">Find a Booster Shot Location</a><span class="text-primary-gold" aria-hidden="true"></span></div>
+<a href="https://www.governor.ny.gov/news/governor-hochul-announces-take-your-shot-outdoor-adventure-covid-19-vaccine-incentive" class="a-hero__btn -linkLanding">Learn More </a><span class="text-primary-gold" aria-hidden="true"></span></div>
 <div class="m-landingHero__buttonsRow">
-<a href="https://www.dec.ny.gov/outdoor/124251.html" class="a-hero__btn -linkLanding">Hero Link Text </a><span class="text-primary-gold" aria-hidden="true"></span></div>
+<a href="https://www.dec.ny.gov/outdoor/124251.html" class="a-hero__btn -linkLanding">Hero Link Text that is long </a><span class="text-primary-gold" aria-hidden="true"></span></div>
 </div>
 </div>
 </div>
