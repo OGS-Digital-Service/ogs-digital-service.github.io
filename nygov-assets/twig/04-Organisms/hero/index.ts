@@ -24,16 +24,19 @@ function disableAddFramesButton() {
   const iframe = document.getElementsByClassName("o-hero__liveVideo -iframe");
   const live = document.getElementsByClassName("-live");
   const watchLive = document.getElementsByClassName("-watchLive");
+  const bottomLive = document.getElementsByClassName("-bottomLive");
 
   if (iframe.length > 0) {
     live[0].setAttribute("style", "pointer-events:none;");
     watchLive[0].setAttribute("style", "pointer-events:none;");
+    bottomLive[0].setAttribute("style", "display:none;");
     return false;
   }
 
   if (iframe.length == 0) {
     live[0].removeAttribute("style");
     watchLive[0].removeAttribute("style");
+    bottomLive[0].removeAttribute("style");
     return true;
   }
 }
