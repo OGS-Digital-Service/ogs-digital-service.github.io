@@ -36,19 +36,16 @@
     @include breakpoint(tablet) {
       float: left;
       width: 66.6%;
-      min-height: 0;
-      // height: 180px; 
+      min-height: 0; 
     }
 
     @include breakpoint(desktop) {
-      // min-height: 365px;
       float: none;
       width: 99%;
       height: auto;
     }
 
     width: 100%;
-    // min-height: 365px;
     display: inline-block; 
   }
 
@@ -99,14 +96,14 @@
 
   .a-card__description {
     margin: 1em 0;
-    height: 5.5em;
+    // height: 5.5em;
 
     @include breakpoint(tablet) {
-      height: 2.75em;
+      // height: 2.75em;
     }
 
     @include breakpoint(desktop) {
-      height: 5.5em;
+      // height: 5.5em;
     }
 
     p {
