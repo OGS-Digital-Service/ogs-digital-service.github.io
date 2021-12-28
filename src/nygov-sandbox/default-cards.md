@@ -22,45 +22,48 @@ title: NYGov Profile test
             </div>
             <div class="t_cardsWrap">
                 <div class="t_cardContainer">
-                    <style>
-                        .o-cardLogo.-index1.-paragraph3 {
-                            background-image: url("https://www.governor.ny.gov/sites/default/files/styles/card_vertical/public/2021-09/flood_damage_ida_yonkers_1280.jpg?h=b5f6a62e&itok=nZa3KhWW");
-                        }
-                        .o-quickCardLogo.-index1.-paragraph3 {
-                            background-image: url("https://www.governor.ny.gov/sites/default/files/styles/card_vertical/public/2021-09/flood_damage_ida_yonkers_1280.jpg?h=b5f6a62e&itok=nZa3KhWW");
-                        }
-                        .o-stats.-index1.-paragraph3 {
-                            background-image: url("https://www.governor.ny.gov/sites/default/files/styles/square_extra_large/public/2021-09/flood_damage_ida_yonkers_1280.jpg?h=b5f6a62e&itok=fsDRgnTt");
-                        }
-                        @media (min-width: 768px) {
-                            .o-cardLogo.-index1.-paragraph3 {
-                                background-image: url("https://www.governor.ny.gov/sites/default/files/styles/card_horizontal/public/2021-09/flood_damage_ida_yonkers_1280.jpg?itok=QWy_aM-_");
-                            }
-                        }
-                        @media (min-width: 1024px) {
-                            .o-cardLogo.-index1.-paragraph3 {
-                                background-image: url("https://www.governor.ny.gov/sites/default/files/styles/card_vertical/public/2021-09/flood_damage_ida_yonkers_1280.jpg?h=b5f6a62e&itok=nZa3KhWW");
-                            }
-                        }
-                    </style>
-                    <article class="o-cardGlobalTablet">
-                        <!-- <a class="a-buttons__cardCat" href="/keywords/disaster-relief">Disaster Relief</a> -->
-                        <a href="https://www.governor.ny.gov/programs/governors-relief-and-response-resources" class="o-cardLogo -index1 -paragraph3" aria-label="Find Assistance"></a>
-                        <div class="o-cardContent">
-                            <div class="m-card__data">
-                                <h3>
-                                    <a class="a-card__label" href="https://www.governor.ny.gov/programs/governors-relief-and-response-resources">Ida Relief and Response Resources</a>
-                                </h3>
-                                <div class="a-text__html a-card__description">
-                                    <p>
-                                        Find information on available disaster assistance programs for individuals and communities impacted by Hurricane Ida. Find information on available disaster assistance programs for individuals and
-                                        communities impacted by Hurricane Ida. Find information on available disaster assistance programs for individuals and communities impacted by Hurricane Ida.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                </div>
+					<style>
+						.o-cardLogo.-index1.-paragraph3 {
+							background-image: url("https://www.governor.ny.gov/sites/default/files/styles/card_vertical/public/thumbnails/image/SSSS-HImage.jpg?h=b5f6a62e&itok=dPRR6Bwa");
+						}
+						.o-quickCardLogo.-index1.-paragraph3 {
+							background-image: url("https://www.governor.ny.gov/sites/default/files/styles/card_vertical/public/thumbnails/image/SSSS-HImage.jpg?h=b5f6a62e&itok=dPRR6Bwa");
+						}
+						.o-stats.-index1.-paragraph3 {
+							background-image: url("");
+						}
+						@media (min-width: 768px) {
+							.o-cardLogo.-index1.-paragraph3 {
+								background-image: url("https://www.governor.ny.gov/sites/default/files/styles/card_horizontal/public/thumbnails/image/SSSS-HImage.jpg?itok=br4nbeva");
+							}
+						}
+						@media (min-width: 1024px) {
+							.o-cardLogo.-index1.-paragraph3 {
+								background-image: url("https://www.governor.ny.gov/sites/default/files/styles/card_vertical/public/thumbnails/image/SSSS-HImage.jpg?h=b5f6a62e&itok=dPRR6Bwa");
+							}
+						}
+					</style>
+					<article class="o-cardGlobalTablet">
+						<a class="a-buttons__cardCat" href="/keywords/public-safety">Public Safety</a>
+						<a
+							href="/news/governor-hochul-announces-completion-more-600-joint-counter-terrorism-exercises-across-new"
+							class="o-cardLogo -index1 -paragraph3"
+							aria-label="Read the press release titled Completion of More than 600 Joint Counter Terrorism Exercises "
+						></a>
+						<div class="o-cardContent">
+							<div class="m-card__data">
+								<h3>
+									<a class="a-card__label" href="/news/governor-hochul-announces-completion-more-600-joint-counter-terrorism-exercises-across-new">Completion of More than 600 Joint Counter Terrorism Exercises</a>
+								</h3>
+								<span class="a-date a-date-14">December 28, 2021</span>
+								<span class="a-date a-date-14">| 2:50 PM EST</span>
+								<div class="a-text__html a-card__description">
+									<p>Governor&nbsp;Hochul&nbsp;announced the State Division of Homeland Security and Emergency Services’ (DHSES) Office of Counter Terrorism conducted training exercises at more than 600 locations statewide in 2021.</p>
+								</div>
+							</div>
+						</div>
+					</article>
+				</div>
                 <div class="t_cardContainer">
                     <style>
                         .o-cardLogo.-index2.-paragraph3 {
@@ -177,45 +180,73 @@ title: NYGov Profile test
                 </div>
                 <div class="t_cardsWrap">
                     <div class="t_cardContainer">
-                        <style>
-                            .o-cardLogo.-index1.-paragraph3 {
-                                background-image: url("https://www.governor.ny.gov/sites/default/files/styles/card_vertical/public/2021-09/flood_damage_ida_yonkers_1280.jpg?h=b5f6a62e&itok=nZa3KhWW");
-                            }
-                            .o-quickCardLogo.-index1.-paragraph3 {
-                                background-image: url("https://www.governor.ny.gov/sites/default/files/styles/card_vertical/public/2021-09/flood_damage_ida_yonkers_1280.jpg?h=b5f6a62e&itok=nZa3KhWW");
-                            }
-                            .o-stats.-index1.-paragraph3 {
-                                background-image: url("https://www.governor.ny.gov/sites/default/files/styles/square_extra_large/public/2021-09/flood_damage_ida_yonkers_1280.jpg?h=b5f6a62e&itok=fsDRgnTt");
-                            }
-                            @media (min-width: 768px) {
-                                .o-cardLogo.-index1.-paragraph3 {
-                                    background-image: url("https://www.governor.ny.gov/sites/default/files/styles/card_horizontal/public/2021-09/flood_damage_ida_yonkers_1280.jpg?itok=QWy_aM-_");
-                                }
-                            }
-                            @media (min-width: 1024px) {
-                                .o-cardLogo.-index1.-paragraph3 {
-                                    background-image: url("https://www.governor.ny.gov/sites/default/files/styles/card_vertical/public/2021-09/flood_damage_ida_yonkers_1280.jpg?h=b5f6a62e&itok=nZa3KhWW");
-                                }
-                            }
-                        </style>
-                        <article class="o-cardGlobalTablet">
-                            <!-- <a class="a-buttons__cardCat" href="/keywords/disaster-relief">Disaster Relief</a> -->
-                            <a href="https://www.governor.ny.gov/programs/governors-relief-and-response-resources" class="o-cardLogo -index1 -paragraph3" aria-label="Find Assistance"></a>
-                            <div class="o-cardContent">
-                                <div class="m-card__data">
-                                    <h3>
-                                        <a class="a-card__label" href="https://www.governor.ny.gov/programs/governors-relief-and-response-resources">Ida Relief and Response Resources</a>
-                                    </h3>
-                                    <div class="a-text__html a-card__description">
-                                        <p>
-                                            Find information on available disaster assistance programs for individuals and communities impacted by Hurricane Ida. Find information on available disaster assistance programs for individuals and
-                                            communities impacted by Hurricane Ida. Find information on available disaster assistance programs for individuals and communities impacted by Hurricane Ida.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
+						<style>
+							.o-cardLogo.-index4.-paragraph1 {
+								background-image: url("https://nygovd8ode549.prod.acquia-sites.com/sites/default/files/styles/card_vertical/public/2021-12/AlbanyCapitol.jpg?h=31c0c765&itok=CIsvKmSv");
+							}
+							.o-quickCardLogo.-index4.-paragraph1 {
+								background-image: url("https://nygovd8ode549.prod.acquia-sites.com/sites/default/files/styles/card_vertical/public/2021-12/AlbanyCapitol.jpg?h=31c0c765&itok=CIsvKmSv");
+							}
+							.o-stats.-index4.-paragraph1 {
+								background-image: url("");
+							}
+							@media (min-width: 768px) {
+								.o-cardLogo.-index4.-paragraph1 {
+									background-image: url("https://nygovd8ode549.prod.acquia-sites.com/sites/default/files/styles/card_horizontal/public/2021-12/AlbanyCapitol.jpg?itok=iJAuYFbI");
+								}
+							}
+							@media (min-width: 1024px) {
+								.o-cardLogo.-index4.-paragraph1 {
+									background-image: url("https://nygovd8ode549.prod.acquia-sites.com/sites/default/files/styles/card_vertical/public/2021-12/AlbanyCapitol.jpg?h=31c0c765&itok=CIsvKmSv");
+								}
+							}
+						</style>
+						<article class="o-cardGlobalTablet">
+							<a href="/services/service-card-style-navigator" class="o-cardLogo -index4 -paragraph1" aria-label="Card Footer Label"></a>
+							<div class="o-cardContent">
+								<div class="innerWrap">
+									<div class="linkDescription">
+										<div class="m-card__data">
+											<h3>
+												<a class="a-card__label" href="/services/service-card-style-navigator">Service Card Style (Navigator On)</a>
+											</h3>
+											<div class="a-text__html a-card__description"><p>This is the service card style.</p></div>
+										</div>
+									</div>
+									<div class="o-cardLinksWrapper">
+										<div>
+											<ul class="m-card__chapterLinks">
+												<li>
+													<a href="/services/service-card-style-navigator#chapter_1">
+														<div class="a-text__string a-card__links">Chapter 1</div>
+														<span class="a-link__icon">
+															<span class="fas fa-caret-right" aria-hidden="true"></span>
+														</span>
+													</a>
+												</li>
+												<li>
+													<a href="/services/service-card-style-navigator#chapter_2">
+														<div class="a-text__string a-card__links">Chapter 2</div>
+														<span class="a-link__icon">
+															<span class="fas fa-caret-right" aria-hidden="true"></span>
+														</span>
+													</a>
+												</li>
+												<li>
+													<a href="/services/service-card-style-navigator#chapter_3" class="m-card__lastLink">
+														<div class="a-text__string a-card__links">Chapter 3</div>
+														<span class="a-link__icon">
+															<span class="fas fa-caret-right" aria-hidden="true"></span>
+														</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
                     <div class="t_cardContainer">
                         <style>
                             .o-cardLogo.-index2.-paragraph2 {
