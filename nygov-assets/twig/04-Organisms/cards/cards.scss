@@ -6,23 +6,27 @@
   }
 
   overflow: hidden;
-  border: 1px solid #D0D0CE;
+  background: #EDEDED;
+  border-radius: 30px;
   position: relative;
-  margin-bottom: 18px;
 
   .o-cardLogo {
     height: 220px;
+    width: 100%;
+    border-radius:0px 0px 30px 30px;
 
     @include breakpoint(tablet) {
       float: left;
-      width: 33.3%;
-      border-right: 1px solid #D0D0CE;
+      height: 240px;
+      width: 240px;
+      border-radius:0px 30px 30px 0px;
     }
 
     @include breakpoint(desktop) {
       float: none;
+      height: 220px;
       width: 100%;
-      border-right: none;
+      border-radius:0px 0px 30px 30px;
     }
 
     background-repeat: no-repeat;
@@ -96,14 +100,14 @@
 
   .a-card__description {
     margin: 1em 0;
-    // height: 5.5em;
+   
 
     @include breakpoint(tablet) {
-      // height: 2.75em;
+      
     }
 
     @include breakpoint(desktop) {
-      // height: 5.5em;
+     
     }
 
     p {
