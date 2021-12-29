@@ -65,7 +65,7 @@
     }
 
     .a-card__label {
-      height: 48px;
+     
     }
 
     @supports (-webkit-line-clamp: 2) {
@@ -81,8 +81,7 @@
           display: -webkit-box;
           overflow: hidden;
           -webkit-box-orient: vertical;
-          -webkit-line-clamp: 1;
-          height: 24px;
+          -webkit-line-clamp: 2;
         }
       }
 
@@ -92,7 +91,6 @@
           overflow: hidden;
           -webkit-box-orient: vertical;
           -webkit-line-clamp: 2;
-          height: 48px;
         }
       }
     }
@@ -226,7 +224,6 @@
 
     .a-card__label {
       margin: 20px 0 15px;
-      height: 48px;
     }
 
     h3 {

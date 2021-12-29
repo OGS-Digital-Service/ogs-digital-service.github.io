@@ -53,7 +53,7 @@ title: NYGov Profile test
 						<div class="o-cardContent">
 							<div class="m-card__data">
 								<h3>
-									<a class="a-card__label" href="/news/governor-hochul-announces-completion-more-600-joint-counter-terrorism-exercises-across-new">Completion of More than 600 Joint Counter Terrorism Exercises</a>
+									<a class="a-card__label" href="/news/governor-hochul-announces-completion-more-600-joint-counter-terrorism-exercises-across-new">Completion of More than 600 Joint Counter Terrorism Exercises Completion of More than 600 Joint Counter Terrorism Exercises</a>
 								</h3>
 								<span class="a-date a-date-14">December 28, 2021</span>
 								<span class="a-date a-date-14">| 2:50 PM EST</span>
