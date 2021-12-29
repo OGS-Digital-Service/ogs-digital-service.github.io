@@ -44,7 +44,6 @@ title: NYGov Profile test
 						}
 					</style>
 					<article class="o-cardGlobalTablet">
-						<a class="a-buttons__cardCat" href="/keywords/public-safety">Public Safety</a>
 						<a
 							href="/news/governor-hochul-announces-completion-more-600-joint-counter-terrorism-exercises-across-new"
 							class="o-cardLogo -index1 -paragraph3"
@@ -270,7 +269,6 @@ title: NYGov Profile test
                             }
                         </style>
                         <article class="o-cardGlobalTablet">
-                            <a class="a-buttons__cardCat" href="/keywords/lieutenant-governor">Lieutenant Governor</a>
                             <a href="/schedule/lieutenant-governor-benjamin-new-york-city-32" class="o-cardLogo -index2 -paragraph2" aria-label="View Event Details for Lieutenant Governor Benjamin is in New York City Event"></a>
                             <div class="o-cardContent">
                                 <div class="eventDescription">
