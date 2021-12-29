@@ -137,7 +137,7 @@
       padding: 5px 0;
       top: 80px;
       width: 200px;
-      border-top: 1px solid #fff;
+      border: 1px solid #fff;
       @extend .bg-primary-blue-accent;
       display: flex;
       flex-flow: column;
@@ -301,7 +301,7 @@
         padding: 5px 0;
         top: 80px;
         width: 200px;
-        border-top: none;
+        border: none;
         display: contents;
         @extend .bg-primary-blue-accent;
         li {
