@@ -7,7 +7,11 @@
 .m-card__data {
   overflow: hidden;
   max-width: 100%;
-  padding: 0 20px;
+  padding: 30px 25px;
+
+  h3 {
+    margin: 0;
+  }
 }
 .m-card__stats{
   padding: 25px 0 25px 0;
