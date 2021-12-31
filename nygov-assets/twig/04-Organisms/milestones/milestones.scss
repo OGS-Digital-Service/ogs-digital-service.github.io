@@ -13,10 +13,6 @@
       .m-milestone {
         color: black;
         border-bottom: 1px solid #fff;
-
-        &:last-of-type {
-          border-bottom: none;
-        }
         
         .milestone__checkmark {
           @extend .text-primary-blue;
@@ -200,6 +196,11 @@
 
       .m-milestone {
         padding: 25px 8% 20px 0;
+
+        &:last-of-type {
+          border-bottom: none;
+        }
+        
       }
     }
 
