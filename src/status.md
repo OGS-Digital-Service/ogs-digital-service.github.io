@@ -9,13 +9,6 @@ title: Status.ny.gov
 Is this NYS website down?
 
 
-<label class="usa-label" for="fruit">Select a fruit</label>
-<div class="usa-combo-box">
-  <select class="usa-select" name="fruit" id="fruit">
-    <option value>Select a fruit</option>
-    <option value="apple">Apple</option>
-    <option value="apricot">Apricot</option>
-    <option value="avocado">Avocado</option>
-    <option value="banana">Banana</option>
-  </select>
-  </div>  
+<span> https://ogs.ny.gov </span> 
+
+<img src="https://ogs.ny.gov/profiles/custom/webny/themes/custom/webny_theme/icons/icon-32x32.png" alt="NYS outline" />

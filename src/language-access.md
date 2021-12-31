@@ -1,5 +1,5 @@
 ---
-layout: layout.njk
+layout: language.njk
 title: Language Access
 ---
 {% from './_includes/_components.njk' import languageaccess %} 
@@ -29,4 +29,5 @@ title: Language Access
        document.documentElement.setAttribute("lang", languageCode);
       };
 </script>
+
 
