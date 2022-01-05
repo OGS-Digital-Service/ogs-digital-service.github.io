@@ -24,7 +24,7 @@ function closetranslate () {
 
 
 
-## disregard this section
+## Testing some stuff
 
 I built a simple page language html lang attribute changer to try and force the browser into detecting a language and translating. Browsers are hard though so this doesn't work the way I thought it might.
 <!-- 
