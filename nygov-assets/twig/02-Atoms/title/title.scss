@@ -23,17 +23,17 @@
 }
 
 .a-headline {
-  font-size: 34px;
-  line-height: 36px;
+  font-size: 28px;
+  line-height: 1.15em;
 
   @include breakpoint(tablet) {
-    font-size: 40px;
-    line-height: 44px;
+    font-size: 32px;
+    line-height: 1.15em;
   }
 
   @include breakpoint(laptop) {
-    font-size: 48px;
-    line-height: 48px;
+    font-size: 36px;
+    line-height: 1.15em;
   }
 
   .center-layout & {
@@ -65,13 +65,13 @@
   font-family: "Oswald";
   font-size: 16px;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   font-weight: bold;
 }
 
 .a-card__title {
   color: #154973;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   text-transform: uppercase;
   margin: 0;
   display: inline-block;

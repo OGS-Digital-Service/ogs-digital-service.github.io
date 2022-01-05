@@ -4,10 +4,10 @@
     {% include '@storybook/02-Atoms/link/link.twig' with { content: label, url:url, variant: "a-card__label"} %}
     </h3>
     {% if contentDate %}
-    {% include '@storybook/02-Atoms/date/date.twig' with {date: contentDate, classNames: "a-date-14", variant: "date" } %}
+    {% include '@storybook/02-Atoms/date/date.twig' with {date: contentDate, classNames: "a-date-14 text-bold text-uppercase", variant: "date" } %}
     {% endif %}
     {% if dateTime %}
-    {% include '@storybook/02-Atoms/date/date.twig' with {date: dateTime, classNames: "a-date-14", variant: "date" } %}
+    {% include '@storybook/02-Atoms/date/date.twig' with {date: dateTime, classNames: "a-date-14 text-uppercase", variant: "date" } %}
     {% endif %}
 
     {% include "@storybook/02-Atoms/text/text.twig" with { text: description, classNames: "a-card__description", variant: "html"} %}
