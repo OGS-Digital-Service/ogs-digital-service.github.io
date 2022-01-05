@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fr" xml:lang="fr" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -78,6 +78,10 @@
         margin: 1em 1em;
       }
 
+      .z-501 {
+        z-index: 501;
+      }
+
       </style>
    
 
@@ -85,18 +89,30 @@
   </head>
   <body class="">
     
-     <header class="flex flex-col md:flex-row bg-gray-50">
-<a href="https://ny.gov" class="hover:underline flex flex-row items-center md:py-0 py-2 min-w-max mr-8 text-xs" title="Link to The Offical Website of the State of New York"><img class="h-6 ml-6 md:ml-20 mr-4" src="/img/nygov-logo.png" alt="Logo of the State of New York">An Official Website of New York State</a>
-
-<div class="flex flex-row items-center bg-yellow-100 border-l-8 border-yellow-500 py-2 w-full">
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-circle-fill noscaleicon mx-2" viewBox="0 0 16 16" >
-  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
-</svg>
-<a href="https://covid19vaccine.health.ny.gov/" class="flex hover:underline oswald text-sm uppercase" title="Link to the New York State COVID 19 Vaccine website">The COVID-19 vaccine is here. It is safe, effective and free. Get the facts.
-</a>
+    
+     <div id="nygov-universal-navigation" class="nygov-universal-container" data-iframe="true" data-updated="2014-11-07 08:30">
+    <noscript>
+        <iframe width="100%" height="86px" src="//static-assets.ny.gov/load_global_menu/ajax?iframe=true" frameborder="0" style="border:none; overflow:hidden; width:100%; height:86px;" scrolling="no">
+            Your browser does not support iFrames
+        </iframe>
+    </noscript>
+    <script type="text/javascript">
+        var _NY = {
+            HOST: "static-assets.ny.gov",
+            BASE_HOST: "www.ny.gov",
+            hideSettings: false,
+            hideSearch: false
+        };
+        (function (document, bundle, head) {
+            head = document.getElementsByTagName('head')[0];
+            bundle = document.createElement('script');
+            bundle.type = 'text/javascript';
+            bundle.async = true;
+            bundle.src = "//static-assets.ny.gov/sites/all/widgets/universal-navigation/js/dist/global-nav-bundle.js";
+            head.appendChild(bundle);
+        }(document));
+    </script>
 </div>
-
-</header>
 
      <header class="bg-admin-first p-4">
 <nav class="flex flex-row">
@@ -109,18 +125,46 @@
 
 
     <main class="mx-8 md:mx-20">
-    <p>Language Access</p>
-<p><label class="nys-label pb-4 font-bold text-xl" for="languages">Select a language</label></p>
-<div class="nys-combo-box border border-black w-max m-4 p-2 rounded-xl">
-  <select class="usa-select" name="languages" id="languages">
+    <script>
+var translatebanner = document.getElementById('nygov-universal-navigation');
+translatebanner.insertAdjacentHTML('afterbegin', '<div id="translate-banner" class="relative top-0 p-4 bg-ny-dark z-auto w-full"><div class="flex justify-center"><span class="font-bold text-white">This page is available in other languages</span><label class="nys-label font-bold text-white ml-6" for="langs">Translate this page into</label><div class="nys-combo-box rounded mx-2 bg-white"><select class="usa-select bg-white" name="languages" id="langs"><option value>Select a language</option><option value="en">English</option><option value="fr">French</option><option value="es">Spanish</option></select></div><button id="close" class="font-bold text-white ml-8">X</button></div></div>');
+document.getElementById("langs").addEventListener("change", changelang);
+function changelang() {
+  var x = document.getElementById("langs").value;
+  document.documentElement.setAttribute("lang", x);
+}
+document.getElementById("close").addEventListener("click", closetranslate);
+function closetranslate () {
+  document.getElementById("translate-banner").style.display = "none";
+}
+</script>
+<h1>Language Access</h1>
+<h2>disregard this section</h2>
+<p>I built a simple page language html lang attribute changer to try and force the browser into detecting a language and translating. Browsers are hard though so this doesn't work the way I thought it might.</p>
+<!-- 
+<div id="translate-banner" class="relative top-0 p-4 bg-ny-dark z-auto w-full">
+<div class="flex justify-center">
+<span class="font-bold text-white "> This page is available in other languages</span>
+<label class="nys-label font-bold text-white ml-6" for="langs">Translate this page into</label>
+<div class="nys-combo-box rounded mx-2 bg-white">
+  <select class="usa-select bg-white" name="languages" id="langs">
     <option value>Select a language</option>
-    <option value="english">English</option>
-    <option value="french">French</option>
-    <option value="spanish">Spanish</option>
-    <option value="polish">Polish</option>
+    <option value="en">English</option>
+    <option value="fr">French</option>
+    <option value="es">Spanish</option>
   </select>
-  </div>  
-  <button type="submit" class="bg-yellow-100 w-max border border-black p-2 m-4 rounded-xl font-bold"> Translate this page </button>
+  </div>
+  <button id="close" class="font-bold text-white ml-8"> X </button>
+  </div>
+  </div>
+  
+  <script>
+  document.getElementById("langs").addEventListener("change", changelang);
+function changelang() {
+  var x = document.getElementById("langs").value;
+  document.documentElement.setAttribute("lang", x);
+}
+</script> -->
 <section class="flex flex col md:flex-row justify-center bg-gray-300 md:-mx-20 -mx-8 py-6">
 <article class="">
 <h1 class="text-center text-base font-bold uppercase">  Language Translations </h1>
@@ -139,15 +183,6 @@
 </article>
 </section> 
 <div class="h-48" data-purposelabel="a spacer for demo yo"> </div>
-<p><button onclick="changeLang('es')">Espanol</button>
-<button onclick="changeLang('en')">English</button>
-<button onclick="changeLang('fr')">French</button></p>
-<script>
-    const changeLang = (languageCode) => {
-       document.documentElement.setAttribute("lang", languageCode);
-      };
-</script>
-
     </main>
     
     <footer class="bg-admin-third px-4 py-8 flex flex-col md:flex-row md:items-center items-baseline mt-12">

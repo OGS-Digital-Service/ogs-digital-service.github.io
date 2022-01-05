@@ -43,9 +43,6 @@
 	{% set aria = footerText == "Learn More" ? 'Learn More' ~ ' about ' ~ card.label : footerText  %}
 
 	<article class="o-cardGlobalTablet">
-		{% if card.keywords[0].entity.keyword %}
-			{% include "@storybook/02-Atoms/buttons/buttons.twig" with {title: card.keywords[0].entity.keyword, url: card.keywords[0].entity.url.path, variant: "a-buttons__cardCat"} %}
-		{% endif %}
 		<a href="{{card.learnMore.url.path}}" class="o-cardLogo -index{{cardNumber}} -paragraph{{paragraphNumber}}" aria-label="{{aria}}"></a>
 		<div class="o-cardContent">
 			{% if card.chapterLinks is empty %}
@@ -145,9 +142,6 @@
 
 
 	<article class="o-cardGlobalTablet">
-		{% if card.keywords[0].entity.keyword %}
-			{% include "@storybook/02-Atoms/buttons/buttons.twig" with {title: card.keywords[0].entity.keyword, url: card.keywords[0].entity.url.path, variant: "a-buttons__cardCat"} %}
-		{% endif %}
 		<a href="{{card.contentLink.path}}" class="o-cardLogo -index{{cardNumber}} -paragraph{{paragraphNumber}}" aria-label="{{aria}}"></a>
 		<div class="o-cardContent">
 			<div class="innerWrap">
@@ -187,9 +181,6 @@
 	{% set label = card.cardNLabel ? card.cardNLabel : card.label %}
 	{% set description = card.description.processed %}
 	<article class="o-cardGlobalTablet">
-		{% if card.keywords[0].entity.keyword %}
-			{% include "@storybook/02-Atoms/buttons/buttons.twig" with {title: card.keywords[0].entity.keyword, url: card.keywords[0].entity.url.path, variant: "a-buttons__cardCat"} %}
-		{% endif %}
 		<a href="{{card.contentLink.path}}" class="o-cardLogo -index{{cardNumber}} -paragraph{{paragraphNumber}}" aria-label="Read the press release titled {{label}} "></a>
 		<div class="o-cardContent">
 			{% include "@storybook/03-Molecules/cardContent/cardData.twig" with { content: card.cardNLabel, url: card.contentLink.path, text: description, contentDate: dateBold, dateTime:time, variant: "m-card__default"} %}
@@ -211,9 +202,6 @@
 	{% set footerText = card.footerText is empty ? 'Learn More' : card.footerText %}
 
 	<article class="o-cardGlobalTablet">
-		{% if card.keywords[0].entity.keyword %}
-			{% include "@storybook/02-Atoms/buttons/buttons.twig" with {title: card.keywords[0].entity.keyword, url: card.keywords[0].entity.url.path, variant: "a-buttons__cardCat"} %}
-		{% endif %}
 		<a href="{{card.contentLink.path}}" class="o-cardLogo -index{{cardNumber}} -paragraph{{paragraphNumber}}" aria-label="{{aria}}"></a>
 		<div class="o-cardContent">
 			{% include "@storybook/03-Molecules/cardContent/cardData.twig" with { content: label, url: card.contentLink.path, text: description, variant: "m-card__default"} %}
@@ -234,10 +222,7 @@
 	{% set aria = card.footerText == "Learn More" or card.footerText is empty ? 'Learn More' ~ ' about ' ~ card.label : card.footerText  %}
 	{% set footerText = card.footerText is empty ? 'Learn More' : card.footerText %}
 
-	<article class="o-cardGlobalTablet">
-		{% if card.keywords[0].entity.keyword %}
-			{% include "@storybook/02-Atoms/buttons/buttons.twig" with {title: card.keywords[0].entity.keyword, url: card.keywords[0].entity.url.path, variant: "a-buttons__cardCat"} %}
-		{% endif %}
+	<article class="o-cardGlobalTablet">	
 		<a href="{{card.contentLink.path}}" class="o-cardLogo -index{{cardNumber}} -paragraph{{paragraphNumber}}" aria-label="{{aria}}"></a>
 		<div class="o-cardContent">
 			{% include "@storybook/03-Molecules/cardContent/cardData.twig" with { content: label, url: card.contentLink.path, text: description, variant: "m-card__default"} %}
@@ -271,9 +256,6 @@
 	{% set label = card.label %}
 	{% set description = card.description.processed %}
 	<article class="o-cardGlobalTablet">
-		{% if card.keywords[0].entity.keyword %}
-			{% include "@storybook/02-Atoms/buttons/buttons.twig" with {title: card.keywords[0].entity.keyword, url: card.keywords[0].entity.url.path, variant: "a-buttons__cardCat"} %}
-		{% endif %}
 		<a href="{{card.contentLink.path}}" class="o-cardLogo -index{{cardNumber}} -paragraph{{paragraphNumber}}" aria-label="View Event Details for {{label}} Event"></a>
 		<div class="o-cardContent">
 			{% if card.dateRange is empty %}

@@ -3,31 +3,55 @@ layout: language.njk
 title: Language Access
 ---
 {% from './_includes/_components.njk' import languageaccess %} 
-{{title}}
-
-<label class="nys-label pb-4 font-bold text-xl" for="languages">Select a language</label>
-<div class="nys-combo-box border border-black w-max m-4 p-2 rounded-xl">
-  <select class="usa-select" name="languages" id="languages">
-    <option value>Select a language</option>
-    <option value="english">English</option>
-    <option value="french">French</option>
-    <option value="spanish">Spanish</option>
-    <option value="polish">Polish</option>
-  </select>
-  </div>  
-  <button type="submit" class="bg-yellow-100 w-max border border-black p-2 m-4 rounded-xl font-bold"> Translate this page </button>
-{% include 'language-access-data.md' %} 
-<div class="h-48" data-purposelabel="a spacer for demo yo"> </div>
-
-
-<button onclick="changeLang('es')">Espanol</button>
-<button onclick="changeLang('en')">English</button>
-<button onclick="changeLang('fr')">French</button>
 
 <script>
-    const changeLang = (languageCode) => {
-       document.documentElement.setAttribute("lang", languageCode);
-      };
+var translatebanner = document.getElementById('nygov-universal-navigation');
+translatebanner.insertAdjacentHTML('afterbegin', '<div id="translate-banner" class="relative top-0 p-4 bg-ny-dark z-auto w-full"><div class="flex justify-center"><span class="font-bold text-white">This page is available in other languages</span><label class="nys-label font-bold text-white ml-6" for="langs">Translate this page into</label><div class="nys-combo-box rounded mx-2 bg-white"><select class="usa-select bg-white" name="languages" id="langs"><option value>Select a language</option><option value="en">English</option><option value="fr">French</option><option value="es">Spanish</option></select></div><button id="close" class="font-bold text-white ml-8">X</button></div></div>');
+document.getElementById("langs").addEventListener("change", changelang);
+function changelang() {
+  var x = document.getElementById("langs").value;
+  document.documentElement.setAttribute("lang", x);
+}
+document.getElementById("close").addEventListener("click", closetranslate);
+function closetranslate () {
+  document.getElementById("translate-banner").style.display = "none";
+}
 </script>
 
 
+
+# {{title}}
+
+
+
+## disregard this section
+
+I built a simple page language html lang attribute changer to try and force the browser into detecting a language and translating. Browsers are hard though so this doesn't work the way I thought it might.
+<!-- 
+<div id="translate-banner" class="relative top-0 p-4 bg-ny-dark z-auto w-full">
+<div class="flex justify-center">
+<span class="font-bold text-white "> This page is available in other languages</span>
+<label class="nys-label font-bold text-white ml-6" for="langs">Translate this page into</label>
+<div class="nys-combo-box rounded mx-2 bg-white">
+  <select class="usa-select bg-white" name="languages" id="langs">
+    <option value>Select a language</option>
+    <option value="en">English</option>
+    <option value="fr">French</option>
+    <option value="es">Spanish</option>
+  </select>
+  </div>
+  <button id="close" class="font-bold text-white ml-8"> X </button>
+  </div>
+  </div>
+  
+  <script>
+  document.getElementById("langs").addEventListener("change", changelang);
+function changelang() {
+  var x = document.getElementById("langs").value;
+  document.documentElement.setAttribute("lang", x);
+}
+</script> -->
+
+
+{% include 'language-access-data.md' %} 
+<div class="h-48" data-purposelabel="a spacer for demo yo"> </div>
