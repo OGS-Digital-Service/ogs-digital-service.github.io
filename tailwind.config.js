@@ -1,6 +1,6 @@
 module.exports = {
   purge: [
-    'docs/iconframeexport/*.html'
+    'src/translate-banner.md'
     // 'docs/*.html',
     // 'docs/**/*.html'  
 
