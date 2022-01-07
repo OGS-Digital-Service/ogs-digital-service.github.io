@@ -33,6 +33,7 @@ I built a simple page language html lang attribute changer to try and force the 
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     max-width: 100%;
+    min-width: 9em;
     padding: 3px;
     margin-left: 5px;
     border: none;
@@ -40,6 +41,7 @@ I built a simple page language html lang attribute changer to try and force the 
     background-repeat: no-repeat;
     background-size: auto 1.5rem;
     background-position:right;
+    background-color: #fff;
     -webkit-appearance: none;
 }
 
