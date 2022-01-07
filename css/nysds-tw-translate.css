@@ -1,4 +1,17 @@
 
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
 .relative {
   position: relative;
 }
@@ -10,6 +23,18 @@
 .mx-2 {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
+}
+
+.mt-0 {
+  margin-top: 0px;
+}
+
+.mt-0\.5 {
+  margin-top: 0.125rem;
+}
+
+.ml-3 {
+  margin-left: 0.75rem;
 }
 
 .ml-6 {
@@ -41,6 +66,19 @@
   border-radius: 0.25rem;
 }
 
+.border {
+  border-width: 1px;
+}
+
+.border-b {
+  border-bottom-width: 1px;
+}
+
+.border-gray-100 {
+  --tw-border-opacity: 1;
+  border-color: rgba(243, 244, 246, var(--tw-border-opacity));
+}
+
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
@@ -49,6 +87,10 @@
 .bg-ny-dark {
   --tw-bg-opacity: 1;
   background-color: rgba(98, 102, 106, var(--tw-bg-opacity));
+}
+
+.p-1 {
+  padding: 0.25rem;
 }
 
 .p-4 {
@@ -62,4 +104,58 @@
 .text-white {
   --tw-text-opacity: 1;
   color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+
+.nysds-select {
+  font-family: "Proxima Nova",arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 600;
+  font-size: 0.85rem;
+  line-height: 1.25;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  max-width: 100%;
+  min-width: 7.5em;
+  padding: 3px;
+  margin-left: 5px;
+  border: none;
+  background-image: url(/img/expand_more.svg),linear-gradient(transparent,transparent);
+  background-repeat: no-repeat;
+  background-size: auto 1.5rem;
+  background-position:right;
+  background-color: #fff;
+  -webkit-appearance: none;
+}
+
+.nysds-translate-group {
+display: flex;
+justify-content: center;
+}
+
+.nysds-highlight-language {
+border-right: 1px solid #000;
+font-size: 0.85rem;
+line-height: 1.25;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+padding: 3px 12px;
+
+}
+
+.nysds-highlight-language a:visited {
+color: #007AC2;
+}
+
+.nysds-highlight-language a:hover {
+filter: brightness(0.8);
+}
+
+.nysds-highlight-language::after {
+content:"";
 }
