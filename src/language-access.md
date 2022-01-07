@@ -38,6 +38,7 @@ I built a simple page language html lang attribute changer to try and force the 
     margin-right: 4%;
     border: none;
     background: #fff;
+    -webkit-appearance: none;
 }
 
 .nysds-translate-group {
