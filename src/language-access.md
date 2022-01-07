@@ -35,15 +35,17 @@ I built a simple page language html lang attribute changer to try and force the 
     max-width: 100%;
     padding: 3px;
     margin-left: 5px;
-    margin-right: 4%;
     border: none;
-    background: #fff;
+    background-image: url(/img/expand_more.svg),linear-gradient(transparent,transparent);
+    background-repeat: no-repeat;
+    background-size: auto 1.5rem;
+    background-position:right;
     -webkit-appearance: none;
 }
 
 .nysds-translate-group {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 .nysds-highlight-language {
