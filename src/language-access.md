@@ -12,17 +12,6 @@ title: Language Access
 I built a simple page language html lang attribute changer to try and force the browser into detecting a language and translating. Browsers are hard though so this doesn't work the way I thought it might.
 
 <style>
-/* .nysds-label {
-    font-family: "Proxima Nova",arial,sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-weight: 600;
-    font-size: 0.85rem;
-    line-height: 1.25;
-    color: #000;
-    display: block;
-    margin-bottom: 5px;
-} */
 .nysds-select {
     font-family: "Proxima Nova",arial,sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -33,7 +22,7 @@ I built a simple page language html lang attribute changer to try and force the 
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     max-width: 100%;
-    min-width: 9em;
+    min-width: 7.5em;
     padding: 3px;
     margin-left: 5px;
     border: none;
@@ -108,6 +97,11 @@ function closetranslate () {
   document.getElementById("translate-banner").style.display = "none";
 }
 </script>
+
+
+
+
+
 <div class="h-48" data-purposelabel="a spacer for demo yo"> </div>
 {% include 'language-access-data.md' %}
 
