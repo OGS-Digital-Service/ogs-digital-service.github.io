@@ -106,17 +106,18 @@
   }
 
   .a-card__description {
-    margin: 1em 0;
+    margin: 25px 0 30px;
     font-size: 16px;
     line-height: 22px;
 
     @include breakpoint(tablet) {
-      
+      margin: 20px 0 35px;
     }
 
     @include breakpoint(desktop) {
       font-size: 18px;
       line-height: 25px;
+      margin: 25px 0 35px;
     }
 
     p {
