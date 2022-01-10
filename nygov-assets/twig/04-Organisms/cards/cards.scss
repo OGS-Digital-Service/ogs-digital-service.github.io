@@ -10,6 +10,11 @@
   background: #EDEDED;
   border-radius: 30px;
   position: relative;
+  border: 1px solid transparent;
+
+  &:hover {
+    border: 1px solid #D0D0CE;
+  }
 
   .o-cardLogo {
     height: 220px;
