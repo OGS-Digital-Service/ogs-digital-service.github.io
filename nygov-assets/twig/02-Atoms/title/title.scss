@@ -71,7 +71,7 @@
 
 .a-card__title {
   color: #154973;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   text-transform: uppercase;
   margin: 0;
   display: inline-block;
@@ -87,7 +87,7 @@
 }
 
 .a-card__subHeadline {
-  margin: 15px 0 40px;
+  margin: 10px 0 40px;
   @extend .text-proxima;
   @extend .text-extra-bold;
 }
