@@ -54,40 +54,36 @@
 
     .t_cardContainer {
       width: 100%;
-      margin: 0px 35px 15px 35px;
-
-
+      margin: 0px 35px 30px 35px;
+      
       @include breakpoint(tablet) {
         width: 95%;
-        
-        margin: 0px 0px 15px 0px;
+        margin: 0px 0px 30px 0px;
         float: left;
       }
 
       @include breakpoint(desktop) {
         width: 360px;
-        margin: 0px 40px 15px 0px;
+        margin: 0px 40px 30px 0px;
         float: left;
       }
 
-      margin-bottom: 15px;
     }
 
     .t_cardContainerRight {
       width: 100%;
-      margin: 0px 35px 15px 35px;
+      margin: 0px 35px 30px 35px;
 
       @include breakpoint(tablet) {
         width: 95%;
-        
-        margin: 0px 0px 15px 0px;
+        margin: 0px 0px 30px 0px;
         float: left;
       }
 
       @include breakpoint(desktop) {
         width: 360px;
         float: right;
-        margin: 0px 0px 15px 0px;
+        margin: 0px 0px 30px 0px;
       }
 
       
