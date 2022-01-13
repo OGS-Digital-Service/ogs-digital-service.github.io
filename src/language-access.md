@@ -63,7 +63,7 @@ I built a simple page language html lang attribute changer to try and force the 
 
   </style>
 
-<div id="translate-banner" class="fixed bottom-0 z-501 bg-white p-1 w-full border-b border-gray-100">
+<div id="translate-banner" class="relative z-501 bg-white p-1 w-full border-b border-gray-100">
 <div class="nysds-translate-group">
 <div class="nysds-highlight-language"> <a href="" class="underline" lang="es"> Español </a>
 </div>

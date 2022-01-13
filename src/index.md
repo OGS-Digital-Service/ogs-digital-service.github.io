@@ -56,6 +56,10 @@ If you have any questions about the content or technical aspects here, please co
     {
       text: "Language Access",
       link: "/language-access"
+    },
+    {
+      text: "Language Access Cookie Banner ",
+      link: "/language-access-alt"
     }
   ]
 })}}
