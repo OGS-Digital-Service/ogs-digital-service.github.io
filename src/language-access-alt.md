@@ -9,8 +9,6 @@ title: Language Access Cookie Banner
 
 ## This one uses the cookie banner
 
-
-
 <style>
 .nysds-cookie-banner {
   position: fixed;
@@ -42,7 +40,7 @@ title: Language Access Cookie Banner
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     max-width: 100%;
-    min-width: 9em;
+    min-width: 7em;
     border: none;
     background-image: url(data:image/svg+xml,%3Csvg%20aria-hidden%3D%22true%22%20focusable%3D%22false%22%20data-prefix%3D%22fas%22%20data-icon%3D%22angle-down%22%20class%3D%22svg-inline--fa%20fa-angle-down%20fa-w-10%22%20role%3D%22img%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20320%20512%22%3E%3Cpath%20fill%3D%22white%22%20d%3D%22M143%20352.3L7%20216.3c-9.4-9.4-9.4-24.6%200-33.9l22.6-22.6c9.4-9.4%2024.6-9.4%2033.9%200l96.4%2096.4%2096.4-96.4c9.4-9.4%2024.6-9.4%2033.9%200l22.6%2022.6c9.4%209.4%209.4%2024.6%200%2033.9l-136%20136c-9.2%209.4-24.4%209.4-33.8%200z%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E);
     background-repeat: no-repeat;
@@ -81,7 +79,16 @@ title: Language Access Cookie Banner
   margin-left: auto;
 }
 
-  </style>
+.nysds-footer-insert-wrap {
+  background-color: #333;
+  text-align: right;
+  position: relative;
+  padding: 5px;
+  z-index: 600;
+  width: auto;
+}
+
+</style>
 
 <div id="translate-banner" class="nysds-cookie-banner -mx-8 md:-mx-20">
 <div class="nysds-translate-group">
@@ -99,15 +106,13 @@ title: Language Access Cookie Banner
   </select>
   <button id="close" class="nysds-close-button"><span class="nysds-close-icon"></span><span class="sr-only">Close this translate banner</span></button>
 </div>
-
 </div>
 
 
+
+
+
 <script>
-var translatebanner = document.getElementById('nygov-universal-navigation');
-translatebanner.insertAdjacentHTML('afterbegin', '');
-
-
 document.getElementById("close").addEventListener("click", closetranslate);
 function closetranslate () {
   document.getElementById("translate-banner").style.display = "none";
@@ -116,11 +121,29 @@ function closetranslate () {
 
 
 
+<script>
+window.onload = function () {
+let t5 = document.querySelector('#nygov-universal-footer');
+t5.insertAdjacentHTML('afterend', '<div class="nysds-footer-insert-wrap"><span class="globe-icon"></span><label class="sr-only"for="langs"id="translate-label">Select your language preference</label><select aria-labelledby="translate-label"class="nysds-select"id="langs"name="languages"><option value="en"selected>English<option value="fr">French<option value="po">Polish<option value="hc">Haitan-Creole</select></div>');
+}
+</script>
 
 
 
-
-
+<!-- 
+<div class="nysds-footer-insert-wrap">
+<span class="globe-icon">
+</span>
+  <label class="sr-only" id="translate-label" for="langs">
+   Select your language preference
+  </label>
+  <select class="nysds-select" id="langs" name="languages" aria-labelledby="translate-label">
+      <option value="en" selected>English</option>
+      <option value="fr">French</option>
+      <option value="po">Polish</option>
+      <option value="hc">Haitan-Creole</option>
+  </select>
+  </div> -->
 
 
 
