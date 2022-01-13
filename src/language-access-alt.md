@@ -88,6 +88,10 @@ title: Language Access Cookie Banner
   width: auto;
 }
 
+.nysds-footer-insert-wrap p {
+  margin: 0;
+}
+
 </style>
 
 <div id="translate-banner" class="nysds-cookie-banner -mx-8 md:-mx-20">
@@ -108,7 +112,7 @@ title: Language Access Cookie Banner
 </div>
 </div>
 
-
+<div class="lolz">something</div>
 
 
 
@@ -125,6 +129,8 @@ function closetranslate () {
 window.onload = function () {
 let t5 = document.querySelector('#nygov-universal-footer');
 t5.insertAdjacentHTML('afterend', '<div class="nysds-footer-insert-wrap"><span class="globe-icon"></span><label class="sr-only"for="langs"id="translate-label">Select your language preference</label><select aria-labelledby="translate-label"class="nysds-select"id="langs"name="languages"><option value="en"selected>English<option value="fr">French<option value="po">Polish<option value="hc">Haitan-Creole</select></div>');
+
+
 }
 </script>
 
