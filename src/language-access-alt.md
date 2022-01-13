@@ -12,75 +12,84 @@ title: Language Access Cookie Banner
 
 
 <style>
+.nysds-cookie-banner {
+  position: fixed;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.9);
+  width: 100%;
+  padding: 2.5rem;
+  font-size: 1rem;
+  z-index: 1000;
+}
+
+.globe-icon::after {
+  content: "\F0AC" !important;
+  font-family: "Font Awesome 5 Free" !important;
+  font-weight: 900 !important;
+  color: #fff;
+}
+
+.globe-icon {
+  margin-left:20px;
+}
+
 .nysds-select {
     font-family: "Proxima Nova",arial,sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-weight: 600;
-    font-size: 0.85rem;
-    line-height: 1.25;
+    font-size: 1rem;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     max-width: 100%;
-    min-width: 7.5em;
-    padding: 3px;
-    margin-left: 5px;
+    min-width: 9em;
     border: none;
-    background-image: url(/img/expand_more.svg),linear-gradient(transparent,transparent);
+    background-image: url(data:image/svg+xml,%3Csvg%20aria-hidden%3D%22true%22%20focusable%3D%22false%22%20data-prefix%3D%22fas%22%20data-icon%3D%22angle-down%22%20class%3D%22svg-inline--fa%20fa-angle-down%20fa-w-10%22%20role%3D%22img%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20320%20512%22%3E%3Cpath%20fill%3D%22white%22%20d%3D%22M143%20352.3L7%20216.3c-9.4-9.4-9.4-24.6%200-33.9l22.6-22.6c9.4-9.4%2024.6-9.4%2033.9%200l96.4%2096.4%2096.4-96.4c9.4-9.4%2024.6-9.4%2033.9%200l22.6%2022.6c9.4%209.4%209.4%2024.6%200%2033.9l-136%20136c-9.2%209.4-24.4%209.4-33.8%200z%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E);
     background-repeat: no-repeat;
     background-size: auto 1.5rem;
     background-position:right;
-    background-color: #fff;
+    background-color: transparent;
     -webkit-appearance: none;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+    text-transform: uppercase;
+    margin: 0px 10px;
+}
+
+.nysds-select option {
+  color: #000;
 }
 
 .nysds-translate-group {
-  display: flex;
-  justify-content: center;
-}
-
-.nysds-highlight-language {
-  border-right: 1px solid #000;
-  font-size: 0.85rem;
-  line-height: 1.25;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  padding: 3px 12px;
-  
-}
-
-.nysds-highlight-language a:visited {
-  color: #007AC2;
-}
-
-.nysds-highlight-language a:hover {
-  filter: brightness(0.8);
-}
-
-.nysds-highlight-language::after {
-  content:"";
-}
-
-.nysds-cookie-banner {
-  position: fixed;
-  bottom: 0;
-  background-color: rgba(0,0,0,0.8);
+  display: inline-flex;
+  color: #fff;
   width: 100%;
+}
+
+.nysds-close-icon:before {
+  content: "\F00D" !important;
+  font-family: "Font Awesome 5 Free" !important;
+  font-weight: 900 !important;
+  color: #fff;
+}
+
+.nysds-close-icon {
+  padding:0px 15px;
+}
+
+.nysds-close-button{
+  margin-left: auto;
 }
 
   </style>
 
 <div id="translate-banner" class="nysds-cookie-banner -mx-8 md:-mx-20">
 <div class="nysds-translate-group">
-<div class="nysds-highlight-language"> <a href="" class="underline" lang="es"> Español </a>
-</div>
-<span class="mt-0.5 ml-3">
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-globe" viewBox="0 0 16 16">
-  <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4a9.267 9.267 0 0 1 .64-1.539 6.7 6.7 0 0 1 .597-.933A7.025 7.025 0 0 0 2.255 4H4.09zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a6.958 6.958 0 0 0-.656 2.5h2.49zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5H4.847zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5H4.51zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12c.138.386.295.744.468 1.068.552 1.035 1.218 1.65 1.887 1.855V12H5.145zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11a13.652 13.652 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5H3.82zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855.173-.324.33-.682.468-1.068H8.5zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5a6.959 6.959 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5h2.49zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4a7.966 7.966 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4h2.355z"/>
-</svg>
+<p> This page is available in other languages. Select your language preference </p>
+<span class="globe-icon">
 </span>
   <label class="sr-only" id="translate-label" for="langs">
-   Translate this page into
+   Select your language preference
   </label>
   <select class="nysds-select" id="langs" name="languages" aria-labelledby="translate-label">
       <option value="en" selected>English</option>
@@ -88,18 +97,17 @@ title: Language Access Cookie Banner
       <option value="po">Polish</option>
       <option value="hc">Haitan-Creole</option>
   </select>
+  <button id="close" class="nysds-close-button"><span class="nysds-close-icon"></span><span class="sr-only">Close this translate banner</span></button>
 </div>
+
 </div>
+
 
 <script>
 var translatebanner = document.getElementById('nygov-universal-navigation');
 translatebanner.insertAdjacentHTML('afterbegin', '');
 
-document.getElementById("langs").addEventListener("change", changelang);
-function changelang() {
-  var x = document.getElementById("langs").value;
-  document.documentElement.setAttribute("lang", x);
-}
+
 document.getElementById("close").addEventListener("click", closetranslate);
 function closetranslate () {
   document.getElementById("translate-banner").style.display = "none";
