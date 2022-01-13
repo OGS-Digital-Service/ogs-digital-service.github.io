@@ -1,6 +1,7 @@
 module.exports = {
   purge: [
-    'src/translate-banner.md'
+    'src/translate-banner.md',
+    'src/language-access-alt.md'
     // 'docs/*.html',
     // 'docs/**/*.html'  
 
