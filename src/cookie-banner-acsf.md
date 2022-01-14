@@ -160,7 +160,7 @@ permalink: false
 <script>
 window.onload = function () {
 let t5 = document.querySelector('#nygov-universal-footer');
-t5.insertAdjacentHTML('afterend', '<div class="nysds-footer-insert-wrap"><div class="nysds-translate-group"><p>This page is available in other languages. Select your language preference</p><div class="globe-icon" aria-hidden="true"></div><label class="sr-only" id="translate-label" for="langs">Select your language preference</label><select class="nysds-select" id="langs" name="languages" aria-labelledby="translate-label"><option value="en" selected="selected">English</option><option value="fr">French</option><option value="po">Polish</option><option value="hc">Haitan-Creole</option></select></div></div>');
+t5.insertAdjacentHTML('afterend', '<div class="nysds-footer-insert-wrap"><div class="nysds-translate-group"><div class="nysds-caption-text">This page is available in other languages. Select your language preference</div><div class="inline-flex"><div class="globe-icon" aria-hidden="true"></div><label class="sr-only" id="translate-label" for="langs">Select your language preference</label><select class="nysds-select" id="langs" name="languages" aria-labelledby="translate-label"><option value="en" selected="selected">English</option><option value="fr">French</option><option value="po">Polish</option><option value="hc">Haitan-Creole</option></select></div></div></div>');
 }
 </script>
 
@@ -168,16 +168,18 @@ t5.insertAdjacentHTML('afterend', '<div class="nysds-footer-insert-wrap"><div cl
 
 <div class="nysds-footer-insert-wrap">
 <div class="nysds-translate-group">
-<p> This page is available in other languages. Select your language preference </p>
-<div class="globe-icon" aria-hidden="true"></div>
-  <label class="sr-only" id="translate-label" for="langs">
-   Select your language preference
-  </label>
-  <select class="nysds-select" id="langs" name="languages" aria-labelledby="translate-label">
-      <option value="en" selected>English</option>
-      <option value="fr">French</option>
-      <option value="po">Polish</option>
-      <option value="hc">Haitan-Creole</option>
-  </select>
-</div>
+        <div class="nysds-caption-text">This page is available in other languages. Select your language preference</div>
+        <div class="inline-flex">
+            <div class="globe-icon" aria-hidden="true"></div>
+            <label class="sr-only" id="translate-label" for="langs">
+                Select your language preference
+            </label>
+            <select class="nysds-select" id="langs" name="languages" aria-labelledby="translate-label">
+                <option value="en" selected>English</option>
+                <option value="fr">French</option>
+                <option value="po">Polish</option>
+                <option value="hc">Haitan-Creole</option>
+            </select>
+        </div>
+    </div>
 </div>
