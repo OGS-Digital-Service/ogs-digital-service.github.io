@@ -44,7 +44,7 @@ a {
   line-height: 1.15em;
   display: block;
   text-decoration: none;
-  @extend .text-semi-bold;
+  @extend .text-bold;
 
   &:hover {
     text-decoration: underline;
