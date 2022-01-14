@@ -6,10 +6,9 @@ permalink: false
 
 <!-- cookie style after here -->
 
-
 <style>
 .globe-icon {
-  margin-left:20px;
+  
   background: url(data:image/svg+xml,%3Csvg%20aria-hidden%3D%22true%22%20focusable%3D%22false%22%20data-prefix%3D%22fas%22%20data-icon%3D%22globe%22%20class%3D%22svg-inline--fa%20fa-globe%20fa-w-16%22%20role%3D%22img%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20496%20512%22%3E%3Cpath%20fill%3D%22white%22%20d%3D%22M336.5%20160C322%2070.7%20287.8%208%20248%208s-74%2062.7-88.5%20152h177zM152%20256c0%2022.2%201.2%2043.5%203.3%2064h185.3c2.1-20.5%203.3-41.8%203.3-64s-1.2-43.5-3.3-64H155.3c-2.1%2020.5-3.3%2041.8-3.3%2064zm324.7-96c-28.6-67.9-86.5-120.4-158-141.6%2024.4%2033.8%2041.2%2084.7%2050%20141.6h108zM177.2%2018.4C105.8%2039.6%2047.8%2092.1%2019.3%20160h108c8.7-56.9%2025.5-107.8%2049.9-141.6zM487.4%20192H372.7c2.1%2021%203.3%2042.5%203.3%2064s-1.2%2043-3.3%2064h114.6c5.5-20.5%208.6-41.8%208.6-64s-3.1-43.5-8.5-64zM120%20256c0-21.5%201.2-43%203.3-64H8.6C3.2%20212.5%200%20233.8%200%20256s3.2%2043.5%208.6%2064h114.6c-2-21-3.2-42.5-3.2-64zm39.5%2096c14.5%2089.3%2048.7%20152%2088.5%20152s74-62.7%2088.5-152h-177zm159.3%20141.6c71.4-21.2%20129.4-73.7%20158-141.6h-108c-8.8%2056.9-25.6%20107.8-50%20141.6zM19.3%20352c28.6%2067.9%2086.5%20120.4%20158%20141.6-24.4-33.8-41.2-84.7-50-141.6h-108z%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E);
   background-repeat: no-repeat;
   background-size: auto 16px;
@@ -28,6 +27,11 @@ permalink: false
   background-color: transparent;
   border: none;
   margin-left: auto;
+  min-height: 24px;
+  position: absolute;
+  right: 4%;
+  bottom: 30%;
+  padding: 28px;
 }
 
 .sr-only {
@@ -40,6 +44,10 @@ permalink: false
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border-width: 0;
+}
+
+.inline-flex {
+  display: inline-flex;
 }
 
 .nysds-translate-group select {
@@ -85,7 +93,7 @@ permalink: false
   display: flex;
   color: #fff;
   width: 95%;
-  
+  flex-direction: column;
 }
 .nysds-cookie-banner {
   position: fixed;
@@ -98,13 +106,38 @@ permalink: false
   z-index: 1000;
   display: flex;
   justify-content: center;
-  
 }
 
-.nysds-cookie-banner p {
-  margin: 0;
-  line-height: 35px;
+
+.nysds-caption-text {
+  margin: 0 3em 1em 0;
 }
+
+@media (min-width: 768px) {
+  .globe-icon {
+    margin-left:20px;
+  }
+  .nysds-caption-text {
+    margin-bottom: 0;
+}
+
+  .nysds-translate-group {
+    flex-direction: row;
+  }
+
+  .nysds-close-button {
+    position: relative;
+    right: 2%;
+    bottom: 0;
+    padding: 4px;
+}
+
+.nysds-caption-text {
+  margin: 0 ;
+}
+
+}
+
 
 /* nygov only */
 .o-wysiwyg .a-text__html div:not(.field--type-image) {
@@ -121,31 +154,29 @@ permalink: false
   border-top: 2px solid #ccc;
 }
 
-.nysds-footer-insert-wrap p {
-  margin: 0;
-}
-
 </style>
 
-<div id="nysds-translate-banner" class="nysds-cookie-banner">
-<div class="nysds-translate-group">
-<p> This page is available in other languages. Select your language preference </p>
-<div class="globe-icon" aria-hidden="true">
-</div>
-  <label class="sr-only" id="translate-label" for="langs">
-   Select your language preference
-  </label>
-  <select class="nysds-select" id="langs" name="languages" aria-labelledby="translate-label">
-      <option value="en" selected>English</option>
-      <option value="fr">French</option>
-      <option value="po">Polish</option>
-      <option value="hc">Haitan-Creole</option>
-  </select>
-  <button id="nysds-close" class="nysds-close-button nysds-close-icon" aria-labelledby="close-button-label">
-  <span class="sr-only" id="close-button-label" >Close this translate banner</span>
-  </button>
-</div>
-</div>
+<article id="nysds-translate-banner" class="nysds-cookie-banner">
+    <div class="nysds-translate-group">
+        <div class="nysds-caption-text">This page is available in other languages. Select your language preference</div>
+        <div class="inline-flex">
+            <div class="globe-icon" aria-hidden="true"></div>
+            <label class="sr-only" id="translate-label" for="langs">
+                Select your language preference
+            </label>
+            <select class="nysds-select" id="langs" name="languages" aria-labelledby="translate-label">
+                <option value="en" selected>English</option>
+                <option value="fr">French</option>
+                <option value="po">Polish</option>
+                <option value="hc">Haitan-Creole</option>
+            </select>
+        </div>
+        <button id="nysds-close" class="nysds-close-button nysds-close-icon" aria-labelledby="close-button-label">
+            <span class="sr-only" id="close-button-label">Close this translate banner</span>
+        </button>
+    </div>
+</article>
+
 <script>
   var closeclose = document.getElementById("nysds-close");
   if(closeclose){
@@ -160,26 +191,6 @@ permalink: false
 <script>
 window.onload = function () {
 let t5 = document.querySelector('#nygov-universal-footer');
-t5.insertAdjacentHTML('afterend', '<div class="nysds-footer-insert-wrap"><div class="nysds-translate-group"><div class="nysds-caption-text">This page is available in other languages. Select your language preference</div><div class="inline-flex"><div class="globe-icon" aria-hidden="true"></div><label class="sr-only" id="translate-label" for="langs">Select your language preference</label><select class="nysds-select" id="langs" name="languages" aria-labelledby="translate-label"><option value="en" selected="selected">English</option><option value="fr">French</option><option value="po">Polish</option><option value="hc">Haitan-Creole</option></select></div></div></div>');
+t5.insertAdjacentHTML('afterend', '<div class="nysds-footer-insert-wrap"><div class="nysds-translate-group"><div class="nysds-caption-text">This page is available in other languages. Select your language preference</div><div class="inline-flex"><div class="globe-icon" aria-hidden="true"></div><label class="sr-only" id="translate-label-footer" for="langs-footer">Select your language preference</label><select class="nysds-select" id="langs-footer" name="languages" aria-labelledby="translate-label-footer"><option value="en" selected="selected">English</option><option value="fr">French</option><option value="po">Polish</option><option value="hc">Haitan-Creole</option></select></div></div></div>');
 }
 </script>
-
-
-
-<div class="nysds-footer-insert-wrap">
-<div class="nysds-translate-group">
-        <div class="nysds-caption-text">This page is available in other languages. Select your language preference</div>
-        <div class="inline-flex">
-            <div class="globe-icon" aria-hidden="true"></div>
-            <label class="sr-only" id="translate-label" for="langs">
-                Select your language preference
-            </label>
-            <select class="nysds-select" id="langs" name="languages" aria-labelledby="translate-label">
-                <option value="en" selected>English</option>
-                <option value="fr">French</option>
-                <option value="po">Polish</option>
-                <option value="hc">Haitan-Creole</option>
-            </select>
-        </div>
-    </div>
-</div>
