@@ -40,7 +40,7 @@ Enim nunc faucibus a pellentesque sit amet. Consectetur purus ut faucibus pulvin
   margin-left: auto;
   min-height: 24px;
   position: absolute;
-  right: 0;
+  right: 5%;
   bottom: 50%;
 }
 
@@ -116,7 +116,7 @@ Enim nunc faucibus a pellentesque sit amet. Consectetur purus ut faucibus pulvin
 
 
 .nysds-caption-text {
-  margin: 0 2em 1em 0;
+  margin: 0 3em 1em 0;
 }
 
 @media (min-width: 768px) {
@@ -133,7 +133,7 @@ Enim nunc faucibus a pellentesque sit amet. Consectetur purus ut faucibus pulvin
 
   .nysds-close-button {
     position: relative;
-    right: 0;
+    right: 2%;
     bottom: 0;
 }
 
