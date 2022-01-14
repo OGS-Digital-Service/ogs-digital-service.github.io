@@ -36,7 +36,7 @@ I built a simple page language html lang attribute changer to try and force the 
 
 .nysds-translate-group {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 .nysds-highlight-language {
