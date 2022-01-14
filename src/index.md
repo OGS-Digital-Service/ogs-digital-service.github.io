@@ -54,12 +54,12 @@ If you have any questions about the content or technical aspects here, please co
     title:"Demo Content",
      items: [
     {
-      text: "Language Access",
+      text: "UX Team Language Switcher",
       link: "/language-access"
     },
     {
-      text: "Language Access Cookie Banner ",
-      link: "/language-access-alt"
+      text: "Cookie Banner and Footer Switcher ",
+      link: "/language-access-cookie-banner"
     }
   ]
 })}}
