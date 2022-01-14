@@ -7,9 +7,11 @@ title: Language Access
 
 # {{title}}
 
-## Testing some stuff
+## Demo of the UX team's Language Switcher
 
-I built a simple page language html lang attribute changer to try and force the browser into detecting a language and translating. Browsers are hard though so this doesn't work the way I thought it might.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Porta non pulvinar neque laoreet suspendisse interdum. Non odio euismod lacinia at quis risus sed vulputate. Mattis aliquam faucibus purus in. Mauris rhoncus aenean vel elit scelerisque mauris pellentesque. Cursus vitae congue mauris rhoncus aenean. Nulla facilisi nullam vehicula ipsum a arcu cursus vitae. Sed enim ut sem viverra aliquet eget sit. Vitae aliquet nec ullamcorper sit. In fermentum posuere urna nec tincidunt. Dignissim enim sit amet venenatis urna. Mi ipsum faucibus vitae aliquet nec. Aliquet sagittis id consectetur purus. Magna etiam tempor orci eu lobortis elementum nibh tellus. Enim ut tellus elementum sagittis vitae et leo duis. Enim sit amet venenatis urna cursus eget nunc scelerisque viverra. Eget dolor morbi non arcu risus.
+
+Enim nunc faucibus a pellentesque sit amet. Consectetur purus ut faucibus pulvinar elementum integer enim neque. Sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula. Sed blandit libero volutpat sed cras. Curabitur gravida arcu ac tortor dignissim convallis. Amet tellus cras adipiscing enim. Dignissim convallis aenean et tortor at. Facilisi morbi tempus iaculis urna id volutpat. Aliquam vestibulum morbi blandit cursus risus at ultrices mi. Erat velit scelerisque in dictum. Malesuada pellentesque elit eget gravida cum sociis natoque penatibus et. Id faucibus nisl tincidunt eget nullam. Etiam erat velit scelerisque in dictum non consectetur a erat. Morbi leo urna molestie at elementum.
 
 <style>
 .nysds-select {
@@ -63,7 +65,7 @@ I built a simple page language html lang attribute changer to try and force the 
 
   </style>
 
-<div id="translate-banner" class="relative z-501 bg-white p-1 w-full border-b border-gray-100">
+<!-- <div id="translate-banner" class="relative z-501 bg-white p-1 w-full border-b border-gray-100">
 <div class="nysds-translate-group">
 <div class="nysds-highlight-language"> <a href="" class="underline" lang="es"> Español </a>
 </div>
@@ -82,7 +84,7 @@ I built a simple page language html lang attribute changer to try and force the 
       <option value="hc">Haitan-Creole</option>
   </select>
 </div>
-</div>
+</div> -->
 
 <script>
 var translatebanner = document.getElementById('nygov-universal-navigation');
