@@ -38,6 +38,10 @@ Enim nunc faucibus a pellentesque sit amet. Consectetur purus ut faucibus pulvin
   background-color: transparent;
   border: none;
   margin-left: auto;
+  min-height: 24px;
+  position: absolute;
+  right: 0;
+  bottom: 50%;
 }
 
 .sr-only {
@@ -112,7 +116,7 @@ Enim nunc faucibus a pellentesque sit amet. Consectetur purus ut faucibus pulvin
 
 
 .nysds-caption-text {
-  margin-bottom: 1.2em;
+  margin: 0 2em 1em 0;
 }
 
 @media (min-width: 768px) {
@@ -126,6 +130,16 @@ Enim nunc faucibus a pellentesque sit amet. Consectetur purus ut faucibus pulvin
   .nysds-translate-group {
     flex-direction: row;
   }
+
+  .nysds-close-button {
+    position: relative;
+    right: 0;
+    bottom: 0;
+}
+
+.nysds-caption-text {
+  margin: 0 ;
+}
 
 }
 
@@ -152,41 +166,25 @@ Enim nunc faucibus a pellentesque sit amet. Consectetur purus ut faucibus pulvin
 </style>
 
 <article id="nysds-translate-banner" class="nysds-cookie-banner">
-
-
-<div class="nysds-translate-group">
-
-<div class="nysds-caption-text"> This page is available in other languages. Select your language preference </div>
-
-<div class="inline-flex">
-<div class="globe-icon" aria-hidden="true">
-</div>
-  <label class="sr-only" id="translate-label" for="langs">
-   Select your language preference
-  </label>
-  <select class="nysds-select" id="langs" name="languages" aria-labelledby="translate-label">
-      <option value="en" selected>English</option>
-      <option value="fr">French</option>
-      <option value="po">Polish</option>
-      <option value="hc">Haitan-Creole</option>
-  </select>
-  <button id="nysds-close" class="nysds-close-button nysds-close-icon" aria-labelledby="close-button-label">
-  <span class="sr-only" id="close-button-label" >Close this translate banner</span>
-  </button>
-  </div>
-
-
-  
-
-
-</div>
-
-
-
+    <div class="nysds-translate-group">
+        <div class="nysds-caption-text">This page is available in other languages. Select your language preference</div>
+        <div class="inline-flex">
+            <div class="globe-icon" aria-hidden="true"></div>
+            <label class="sr-only" id="translate-label" for="langs">
+                Select your language preference
+            </label>
+            <select class="nysds-select" id="langs" name="languages" aria-labelledby="translate-label">
+                <option value="en" selected>English</option>
+                <option value="fr">French</option>
+                <option value="po">Polish</option>
+                <option value="hc">Haitan-Creole</option>
+            </select>
+        </div>
+        <button id="nysds-close" class="nysds-close-button nysds-close-icon" aria-labelledby="close-button-label">
+            <span class="sr-only" id="close-button-label">Close this translate banner</span>
+        </button>
+    </div>
 </article>
-
-
-
 
 <script>
   var closeclose = document.getElementById("nysds-close");
