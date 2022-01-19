@@ -365,6 +365,24 @@ title: NYGov Profile test
                                 </h3>
                                 <div class="a-text__html a-card__description"><p>Get up to the minute, real time traffic and transit information for NYS with 511NY.</p></div>
                             </div>
+                            <div class="o-cardFooter">
+                            <a
+                                class="mobileLink"
+                                href="https://itunes.apple.com/us/app/grand-central-tour-official/id1082342671?mt=8"
+                                data-ios="https://itunes.apple.com/us/app/grand-central-tour-official/id1082342671?mt=8"
+                                data-iostext=""
+                                data-android="https://play.google.com/store/apps/details?id=com.myorpheo.gct2"
+                                data-androidtext=""
+                                aria-label="Download the Grand Central Tour (Official) Application"
+                            >
+                                <div class="m-card__footer">
+                                    <span class="a-mobile__icon">
+                                        <span class="fas fa-download" aria-hidden="true"></span>
+                                    </span>
+                                    <span class="m-card__linkText" id="mobileText">Download App</span>
+                                </div>
+                            </a>
+                        </div>
                         </div>
                     </article>
                 </div>

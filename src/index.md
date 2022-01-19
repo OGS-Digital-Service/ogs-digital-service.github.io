@@ -54,7 +54,7 @@ If you have any questions about the content or technical aspects here, please co
     title:"Demo Content",
      items: [
     {
-      text: "UX Team Language Switcher",
+      text: "Updated Language Switcher",
       link: "/language-access"
     },
     {

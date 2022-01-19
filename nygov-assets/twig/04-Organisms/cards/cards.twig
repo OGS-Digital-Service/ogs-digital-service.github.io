@@ -56,6 +56,13 @@
 					{% include "@storybook/03-Molecules/chapterLinks/chapterLinks.twig" with { chapterLinks: card.chapterLinks, variant: "m-card__chapterLinks" } %}
 				</div>
 			{% endif %}
+			{% if card.androidLink.url.path or card.iosLink.url.path %}
+				<div class="o-cardFooter">
+					<a class="mobileLink" href="{{card.androidLink.url.path}}" data-ios="{{card.iosLink.url.path}}" data-iostext="{{card.iosLink.linkText}}" data-android="{{card.androidLink.url.path}}" data-androidtext="{{card.androidLink.linkText}}" aria-label="Download the {{ label }} Application">
+						{% include "@storybook/03-Molecules/bar/footer.twig" with {text: "Download App", variant: "m-card__mobileFooter"} %}
+					</a>
+				</div>
+			{% endif %}
 		</div>
 	</article>
 {% endif %}
@@ -253,6 +260,13 @@
 				<div class="o-cardHeroDescription">
 					{% include "@storybook/03-Molecules/cardContent/cardData.twig" with { content: label, url: card.learnMore.url.path, text: description, variant: "m-card__hero"} %}
 				</div>
+					{% if card.androidLink or card.iosLink %}
+					<div class="o-cardFooter">
+						<a class="mobileLink" href="{{card.androidLink.url.path}}" data-ios="{{card.iosLink.url.path}}" data-iostext="{{card.iosLink.linkText}}" data-android="{{card.androidLink.url.path}}" data-androidtext="{{card.androidLink.linkText}}" aria-label="Download the {{ label }} Application">
+							{% include "@storybook/03-Molecules/bar/footer.twig" with {text: "Download App", variant: "m-card__mobileFooter"} %}
+						</a>
+					</div>
+					{% endif %}
 			</div>
 		</div>
 	</article>

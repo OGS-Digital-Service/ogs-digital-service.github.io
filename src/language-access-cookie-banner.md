@@ -105,6 +105,7 @@ Enim nunc faucibus a pellentesque sit amet. Consectetur purus ut faucibus pulvin
   color: #fff;
   width: 95%;
   flex-direction: column;
+  
 }
 .nysds-cookie-banner {
   position: fixed;
@@ -149,12 +150,6 @@ Enim nunc faucibus a pellentesque sit amet. Consectetur purus ut faucibus pulvin
 
 }
 
-
-/* nygov only */
-.o-wysiwyg .a-text__html div:not(.field--type-image) {
-  margin: 0 !important;
-}
-
 /* footer insert wrap */
 .nysds-footer-insert-wrap {
   background-color: #333;
@@ -163,10 +158,6 @@ Enim nunc faucibus a pellentesque sit amet. Consectetur purus ut faucibus pulvin
   z-index: 600;
   width: auto;
   border-top: 2px solid #ccc;
-}
-
-.nysds-footer-insert-wrap p {
-  margin: 0;
 }
 
 </style>
@@ -209,10 +200,6 @@ let t5 = document.querySelector('#nygov-universal-footer');
 t5.insertAdjacentHTML('afterend', '<div class="nysds-footer-insert-wrap"><div class="nysds-translate-group"><div class="nysds-caption-text">This page is available in other languages. Select your language preference</div><div class="inline-flex"><div class="globe-icon" aria-hidden="true"></div><label class="sr-only" id="translate-label-footer" for="langs-footer">Select your language preference</label><select class="nysds-select" id="langs-footer" name="languages" aria-labelledby="translate-label-footer"><option value="en" selected="selected">English</option><option value="fr">French</option><option value="po">Polish</option><option value="hc">Haitan-Creole</option></select></div></div></div>');
 }
 </script>
-
-
-
-
 
 
 <div class="h-48" data-purposelabel="a spacer for demo yo"> </div>
