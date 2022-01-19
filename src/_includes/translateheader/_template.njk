@@ -5,7 +5,8 @@
             <label class="sr-only" id="translate-label" for="langs">
                 Select your language preference
             </label>
-            <select class="nysds-select" id="langs" name="languages" aria-labelledby="translate-label">
+            <select class="nysds-select" id="langs" name="languages" aria-labelledby="translate-label" autocomplete="off">
+                <option lang="en" aria-label="Select a Language to translate" value="" disabled selected hidden>Translate</option>
                 <option lang="en"  aria-label="English" value="en">English</option>
                 <option lang="es"  aria-label="Spanish" value="es">Español</option>
                 <option lang="ar"  aria-label="Arabic" value="ar">عربى</option>
