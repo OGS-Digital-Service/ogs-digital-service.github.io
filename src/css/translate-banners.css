@@ -236,5 +236,7 @@
     .nysds-translation-services {
       display: inline-flex;
       margin: 0;
+      border-left: none;
+      padding-left: 0;
     }
 }
