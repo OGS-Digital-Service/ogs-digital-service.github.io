@@ -127,13 +127,16 @@
 <li class="caret oswald"><a href="#" class="oswald text-sm uppercase hover:underline font-bold ">How to Start </a></li>
 </ol>
 <h1>In Progress demo page</h1>
-<p><a href="" id="demo"></a></p>
+<p><a href="" id="es-spanish">Spanish</a>
+<a href="" id="fr-french">French</a></p>
 <script>
-var newURL = window.location.protocol + "//" + window.location.host + window.location.pathname + window.location.search
-var otherURL = window.location.protocol + "//" + 'ogs.ny.gov' + window.location.pathname + window.location.search
-document.getElementById("demo").innerHTML = otherURL;
-document.getElementById("demo").setAttribute('href', otherURL);
+var esURL = window.location.protocol + "//" + "es." + window.location.host + window.location.pathname + window.location.search
+document.getElementById("es-spanish").setAttribute('value', esURL);
+var frURL = window.location.protocol + "//" + "fr." + window.location.host + window.location.pathname + window.location.search
+document.getElementById("fr-french").setAttribute('value', frURL);
 </script>
+<p>var frURL = window.location.protocol + &quot;//&quot; + &quot;fr.&quot; + window.location.host + window.location.pathname + window.location.search
+document.getElementById(&quot;fr-french&quot;).setAttribute('value', frURL);</p>
 <p>var url = window.location.protocol + &quot;//&quot; + location.host.split(&quot;:&quot;)[0];</p>
 <script>
 function filter(e){

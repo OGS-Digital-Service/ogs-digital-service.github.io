@@ -34,16 +34,19 @@ title: The NYS Design Patterns
 # In Progress demo page
 
 
-<a href="" id="demo"></a>
+<a href="" id="es-spanish">Spanish</a>
+<a href="" id="fr-french">French</a>
+
 <script>
-var newURL = window.location.protocol + "//" + window.location.host + window.location.pathname + window.location.search
-var otherURL = window.location.protocol + "//" + 'ogs.ny.gov' + window.location.pathname + window.location.search
-document.getElementById("demo").innerHTML = otherURL;
-document.getElementById("demo").setAttribute('href', otherURL);
+var esURL = window.location.protocol + "//" + "es." + window.location.host + window.location.pathname + window.location.search
+document.getElementById("es-spanish").setAttribute('value', esURL);
+var frURL = window.location.protocol + "//" + "fr." + window.location.host + window.location.pathname + window.location.search
+document.getElementById("fr-french").setAttribute('value', frURL);
 </script>
 
 
-
+var frURL = window.location.protocol + "//" + "fr." + window.location.host + window.location.pathname + window.location.search
+document.getElementById("fr-french").setAttribute('value', frURL);
 
 var url = window.location.protocol + "//" + location.host.split(":")[0];
 

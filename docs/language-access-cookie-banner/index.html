@@ -97,23 +97,59 @@
             </label>
             <select class="nysds-select" id="langs" name="languages" aria-labelledby="translate-label" autocomplete="off">
                 <option lang="en" value="" disabled selected hidden>Translate</option>
-                <option lang="en"  aria-label="English" value="en">English</option>
-                <option lang="es"  aria-label="Spanish" value="es">Español</option>
-                <option lang="ar"  aria-label="Arabic" value="ar">عربى</option>
-                <option lang="bn"  aria-label="Bengali" value="bn">বাঙালি</option>
-                <option lang="zh"  aria-label="Chinese" value="zh">中文</option>
-                <option lang="fr"  aria-label="French " value="fr">Français</option>
-                <option lang="ht"  aria-label="Haitian-Creole" value="ht">Kreyòl ayisyen</option>
-                <option lang="it"  aria-label="Italian" value="it">Italiano</option>
-                <option lang="ko"  aria-label="Korean" value="ko">한국어</option>
-                <option lang="pl"  aria-label="Polish" value="pl">Polski</option>
-                <option lang="ru"  aria-label="Russian" value="ru">Русскийy</option>
-                <option lang="ur"  aria-label="Urdu" value="ur">اردو</option>
-                <option lang="yi"  aria-label="Yiddish" value="yi">יידיש</option>
+                <option lang="en" aria-label="English" value="en" class="en-english">English</option>
+                <option lang="es" aria-label="Spanish" value="es" class="es-spanish">Español</option>
+                <option lang="ar" aria-label="Arabic" value="ar" class="ar-arabic">عربى</option>
+                <option lang="bn" aria-label="Bengali" value="bn" class="bn-bengali">বাঙালি</option>
+                <option lang="zh" aria-label="Chinese" value="zh" class="zh-chinese">中文</option>
+                <option lang="fr" aria-label="French " value="fr" class="fr-french">Français</option>
+                <option lang="ht" aria-label="Haitian-Creole" value="ht" class="ht-haitian-creole">Kreyòl ayisyen</option>
+                <option lang="it" aria-label="Italian" value="it" class="it-italian">Italiano</option>
+                <option lang="ko" aria-label="Korean" value="ko" class="ko-korean">한국어</option>
+                <option lang="pl" aria-label="Polish" value="pl" class="pl-polish">Polski</option>
+                <option lang="ru" aria-label="Russian" value="ru" class="ru-russian">Русскийy</option>
+                <option lang="ur" aria-label="Urdu" value="ur" class="ur-urdu">اردو</option>
+                <option lang="yi" aria-label="Yiddish" value="yi" class="yi-yiddish">יידיש</option>
             </select>
         </div>
     </div>
 </article>
+
+
+<script>
+
+
+
+
+
+
+window.onload = function () {
+var esURL = window.location.protocol + "//" + "es." + window.location.host + window.location.pathname + window.location.search
+var optionlinks = document.getElementsByClassName("es-spanish");
+        for(var x=0; x < optionlinks.length; x++)
+        {optionlinks[x].setAttribute('value', esURL);}
+var footerlinks = document.getElementsByClassName("es-spanish-a");
+        for(var x=0; x < footerlinks.length; x++)
+        { footerlinks[x].setAttribute('href', esURL);}
+var frURL = window.location.protocol + "//" + "fr." + window.location.host + window.location.pathname + window.location.search
+var optionlinks = document.getElementsByClassName("fr-french");
+        for(var x=0; x < optionlinks.length; x++)
+        {optionlinks[x].setAttribute('value', frURL);}
+var footerlinks = document.getElementsByClassName("fr-french-a");
+        for(var x=0; x < footerlinks.length; x++)
+        { footerlinks[x].setAttribute('href', frURL);}                  
+
+document.getElementById("langs").addEventListener('change', function () {
+    window.location = this.value;
+});
+document.getElementById("langs-footer").addEventListener('change', function () {
+    window.location = this.value;
+});
+}
+
+
+
+</script>
 
      <div id="nygov-universal-navigation" class="nygov-universal-container" data-iframe="true" data-updated="2014-11-07 08:30">
     <noscript>
@@ -383,19 +419,19 @@ t5.insertAdjacentHTML('afterend', '<div class="nysds-footer-insert-wrap"><div cl
         <section class="nysds-inline-languages">
         <div class="nysds-caption-text">This page is available in other languages. Select your language preference</div>
               <ul>
-                <li><a lang="en"  href="#" title="English" aria-label="English" value="en">English</a></li>
-                <li><a lang="es"  href="#" title="Spanish" aria-label="Spanish" value="es">Español</a></li>
-                <li><a lang="ar"  href="#" title="Arabic" aria-label="Arabic" value="ar">عربى</a></li>
-                <li><a lang="bn"  href="#" title="Bengali" aria-label="Bengali" value="bn">বাঙালি</a></li>
-                <li><a lang="zh"  href="#" title="Chinese" aria-label="Chinese" value="zh">中文</a></li>
-                <li><a lang="fr"  href="#" title="French" aria-label="French " value="fr">Français</a></li>
-                <li><a lang="ht"  href="#" title="Haitian-Creole" aria-label="Haitian-Creole" value="ht">Kreyòl ayisyen</a></li>
-                <li><a lang="it"  href="#" title="Italian" aria-label="Italian" value="it">Italiano</a></li>
-                <li><a lang="ko"  href="#" title="Korean" aria-label="Korean" value="ko">한국어</a></li>
-                <li><a lang="pl"  href="#" title="Polish" aria-label="Polish" value="pl">Polski</a></li>
-                <li><a lang="ru"  href="#" title="Russian" aria-label="Russian" value="ru">Русскийy</a></li>
-                <li><a lang="ur"  href="#" title="Urdu" aria-label="Urdu" value="ur">اردو</a></li>
-                <li><a lang="yi"  href="#" title="Yiddish" aria-label="Yiddish" value="yi">יידיש</a></li>
+                <li><a lang="en"  href="#" title="English" aria-label="English" value="en" class="en-english-a">English</a></li>
+                <li><a lang="es"  href="#" title="Spanish" aria-label="Spanish" value="es" class="es-spanish-a">Español</a></li>
+                <li><a lang="ar"  href="#" title="Arabic" aria-label="Arabic" value="ar" class="ar-arabic-a">عربى</a></li>
+                <li><a lang="bn"  href="#" title="Bengali" aria-label="Bengali" value="bn" class="bn-bengali-a">বাঙালি</a></li>
+                <li><a lang="zh"  href="#" title="Chinese" aria-label="Chinese" value="zh" class="zh-chinese-a">中文</a></li>
+                <li><a lang="fr"  href="#" title="French" aria-label="French " value="fr" class="fr-french-a">Français</a></li>
+                <li><a lang="ht"  href="#" title="Haitian-Creole" aria-label="Haitian-Creole" value="ht" class="ht-haitian-creole-a">Kreyòl ayisyen</a></li>
+                <li><a lang="it"  href="#" title="Italian" aria-label="Italian" value="it" class="it-italian-a">Italiano</a></li>
+                <li><a lang="ko"  href="#" title="Korean" aria-label="Korean" value="ko" class="ko-korean-a">한국어</a></li>
+                <li><a lang="pl"  href="#" title="Polish" aria-label="Polish" value="pl" class="pl-polish-a">Polski</a></li>
+                <li><a lang="ru"  href="#" title="Russian" aria-label="Russian" value="ru" class="ru-russian-a">Русскийy</a></li>
+                <li><a lang="ur"  href="#" title="Urdu" aria-label="Urdu" value="ur" class="ur-urdu-a">اردو</a></li>
+                <li><a lang="yi"  href="#" title="Yiddish" aria-label="Yiddish" value="yi" class="yi-yiddish-a">יידיש</a></li>
               <ul>
         <div class="nysds-translation-services"><div class="globe-icon" aria-hidden="true"></div><a href="#" class="mx-2"> Translation Services </a></div>
         </section>
@@ -407,19 +443,20 @@ t5.insertAdjacentHTML('afterend', '<div class="nysds-footer-insert-wrap"><div cl
                 Select your language preference
             </label>
             <select class="nysds-select" id="langs-footer" name="languages" aria-labelledby="translate-label-footer">
-                <option lang="en"  aria-label="English" value="en">English</option>
-                <option lang="es"  aria-label="Spanish" value="es">Español</option>
-                <option lang="ar"  aria-label="Arabic" value="ar">عربى</option>
-                <option lang="bn"  aria-label="Bengali" value="bn">বাঙালি</option>
-                <option lang="zh"  aria-label="Chinese" value="zh">中文</option>
-                <option lang="fr"  aria-label="French " value="fr">Français</option>
-                <option lang="ht"  aria-label="Haitian-Creole" value="ht">Kreyòl ayisyen</option>
-                <option lang="it"  aria-label="Italian" value="it">Italiano</option>
-                <option lang="ko"  aria-label="Korean" value="ko">한국어</option>
-                <option lang="pl"  aria-label="Polish" value="pl">Polski</option>
-                <option lang="ru"  aria-label="Russian" value="ru">Русскийy</option>
-                <option lang="ur"  aria-label="Urdu" value="ur">اردو</option>
-                <option lang="yi"  aria-label="Yiddish" value="yi">יידיש</option>
+                <option lang="en" value="" disabled selected hidden>Translate</option>
+                <option lang="en" aria-label="English" value="en" class="en-english">English</option>
+                <option lang="es" aria-label="Spanish" value="es" class="es-spanish">Español</option>
+                <option lang="ar" aria-label="Arabic" value="ar" class="ar-arabic">عربى</option>
+                <option lang="bn" aria-label="Bengali" value="bn" class="bn-bengali">বাঙালি</option>
+                <option lang="zh" aria-label="Chinese" value="zh" class="zh-chinese">中文</option>
+                <option lang="fr" aria-label="French " value="fr" class="fr-french">Français</option>
+                <option lang="ht" aria-label="Haitian-Creole" value="ht" class="ht-haitian-creole">Kreyòl ayisyen</option>
+                <option lang="it" aria-label="Italian" value="it" class="it-italian">Italiano</option>
+                <option lang="ko" aria-label="Korean" value="ko" class="ko-korean">한국어</option>
+                <option lang="pl" aria-label="Polish" value="pl" class="pl-polish">Polski</option>
+                <option lang="ru" aria-label="Russian" value="ru" class="ru-russian">Русскийy</option>
+                <option lang="ur" aria-label="Urdu" value="ur" class="ur-urdu">اردو</option>
+                <option lang="yi" aria-label="Yiddish" value="yi" class="yi-yiddish">יידיש</option>
             </select>
             <div class="nysds-translation-services"><a href="#" class="mx-2"> Translation Services </a></div>
         </div>

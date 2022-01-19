@@ -7,20 +7,56 @@
             </label>
             <select class="nysds-select" id="langs" name="languages" aria-labelledby="translate-label" autocomplete="off">
                 <option lang="en" value="" disabled selected hidden>Translate</option>
-                <option lang="en"  aria-label="English" value="en">English</option>
-                <option lang="es"  aria-label="Spanish" value="es">Español</option>
-                <option lang="ar"  aria-label="Arabic" value="ar">عربى</option>
-                <option lang="bn"  aria-label="Bengali" value="bn">বাঙালি</option>
-                <option lang="zh"  aria-label="Chinese" value="zh">中文</option>
-                <option lang="fr"  aria-label="French " value="fr">Français</option>
-                <option lang="ht"  aria-label="Haitian-Creole" value="ht">Kreyòl ayisyen</option>
-                <option lang="it"  aria-label="Italian" value="it">Italiano</option>
-                <option lang="ko"  aria-label="Korean" value="ko">한국어</option>
-                <option lang="pl"  aria-label="Polish" value="pl">Polski</option>
-                <option lang="ru"  aria-label="Russian" value="ru">Русскийy</option>
-                <option lang="ur"  aria-label="Urdu" value="ur">اردو</option>
-                <option lang="yi"  aria-label="Yiddish" value="yi">יידיש</option>
+                <option lang="en" aria-label="English" value="en" class="en-english">English</option>
+                <option lang="es" aria-label="Spanish" value="es" class="es-spanish">Español</option>
+                <option lang="ar" aria-label="Arabic" value="ar" class="ar-arabic">عربى</option>
+                <option lang="bn" aria-label="Bengali" value="bn" class="bn-bengali">বাঙালি</option>
+                <option lang="zh" aria-label="Chinese" value="zh" class="zh-chinese">中文</option>
+                <option lang="fr" aria-label="French " value="fr" class="fr-french">Français</option>
+                <option lang="ht" aria-label="Haitian-Creole" value="ht" class="ht-haitian-creole">Kreyòl ayisyen</option>
+                <option lang="it" aria-label="Italian" value="it" class="it-italian">Italiano</option>
+                <option lang="ko" aria-label="Korean" value="ko" class="ko-korean">한국어</option>
+                <option lang="pl" aria-label="Polish" value="pl" class="pl-polish">Polski</option>
+                <option lang="ru" aria-label="Russian" value="ru" class="ru-russian">Русскийy</option>
+                <option lang="ur" aria-label="Urdu" value="ur" class="ur-urdu">اردو</option>
+                <option lang="yi" aria-label="Yiddish" value="yi" class="yi-yiddish">יידיש</option>
             </select>
         </div>
     </div>
 </article>
+
+
+<script>
+
+
+
+
+
+
+window.onload = function () {
+var esURL = window.location.protocol + "//" + "es." + window.location.host + window.location.pathname + window.location.search
+var optionlinks = document.getElementsByClassName("es-spanish");
+        for(var x=0; x < optionlinks.length; x++)
+        {optionlinks[x].setAttribute('value', esURL);}
+var footerlinks = document.getElementsByClassName("es-spanish-a");
+        for(var x=0; x < footerlinks.length; x++)
+        { footerlinks[x].setAttribute('href', esURL);}
+var frURL = window.location.protocol + "//" + "fr." + window.location.host + window.location.pathname + window.location.search
+var optionlinks = document.getElementsByClassName("fr-french");
+        for(var x=0; x < optionlinks.length; x++)
+        {optionlinks[x].setAttribute('value', frURL);}
+var footerlinks = document.getElementsByClassName("fr-french-a");
+        for(var x=0; x < footerlinks.length; x++)
+        { footerlinks[x].setAttribute('href', frURL);}                  
+
+document.getElementById("langs").addEventListener('change', function () {
+    window.location = this.value;
+});
+document.getElementById("langs-footer").addEventListener('change', function () {
+    window.location = this.value;
+});
+}
+
+
+
+</script>
