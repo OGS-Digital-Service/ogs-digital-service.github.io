@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/tailwind-dev.css" rel="stylesheet">
+<link href="/css/fonts.css" rel="stylesheet">
+<link href="/css/fa.css" rel="stylesheet">
+<link href="/css/translate-banners.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+
+         <style>
+      p > a {
+        text-decoration: underline;
+      }
+      main a:hover {
+        text-decoration:underline;
+      }
+      main a {
+        color: #007ac2;
+      }
+      main ol {
+        list-style-type:decimal;
+       
+      }
+      main ul {
+        list-style-type:disc;
+        
+      }
+      main h1 {
+          font-size: 2.5em;
+          font-weight: 700;
+        }
+      main h2 {
+          font-size: 1.5em;
+          font-weight: 700;
+        }
+      h1.agencyname {
+        font-family: D Sari Bold, Arial, sans-serif;
+        font-size: 22px;
+      }  
+      .oswald {
+        font-family: Oswald, Arial, sans-serif;
+        }
+      .noscaleicon {
+        min-width: 1.4rem;
+        min-height: 1.4rem;
+      }
+      .caret::after {
+        content: '>';
+        margin-left: 0.5em;
+        margin-right: 0.5em
+      }
+      .caret:last-of-type::after{
+        content: none;
+      }
+      .min-h-1\/5 {
+        min-height: 20%
+      }
+      .horizontal-line::before, .horizontal-line::after {
+          background-color: #000;
+          content: '';
+          display: inline-block;
+          height: 1px;
+          position: relative;
+          vertical-align: middle;
+          min-width: 30vw;
+      }
+      .nysdataTable td, th {
+        border: 1px solid black;
+        padding: 0.5em 0.5em;
+      }
+
+      .nysdataTable {
+        width:100%;
+        padding: 0.5em 0.5em;
+        margin: 1em 1em;
+      }
+
+      .z-501 {
+        z-index: 501;
+      }
+
+      </style>
+   
+
+    <title>The NYS Design Patterns</title>
+  </head>
+  <body class="">
+    
+     <header class="flex flex-col md:flex-row bg-gray-50">
+<a href="https://ny.gov" class="hover:underline flex flex-row items-center md:py-0 py-2 min-w-max mr-8 text-xs" title="Link to The Offical Website of the State of New York"><img class="h-6 ml-6 md:ml-20 mr-4" src="/img/nygov-logo.png" alt="Logo of the State of New York">An Official Website of New York State</a>
+
+<div class="flex flex-row items-center bg-yellow-100 border-l-8 border-yellow-500 py-2 w-full">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-circle-fill noscaleicon mx-2" viewBox="0 0 16 16" >
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+</svg>
+<a href="https://covid19vaccine.health.ny.gov/" class="flex hover:underline oswald text-sm uppercase" title="Link to the New York State COVID 19 Vaccine website">The COVID-19 vaccine is here. It is safe, effective and free. Get the facts.
+</a>
+</div>
+
+</header>
+
+     <header class="bg-admin-first p-4">
+<nav class="flex flex-row">
+
+<h1 class="agencyname text-white ml-8 md:ml-16"><a href="/" aria-label="New York State Digital Services">Digital Services</a></h1>
+</nav>
+</header>
+
+
+
+
+    <main class="mx-8 md:mx-20">
+    <div class="bg-admin-third -mx-8 md:-mx-20 md:h-96 pb-12">
+<div class="lg:w-5/6 w-full">
+<h1 class="text-3xl md:text-4xl lg:text-5xl  font-extrabold text-black md:ml-12 p-8 lg:leading-normal md:leading-normal">Demo Content Page for Testing Only </h1>
+<p class="text-black ml-8 md:ml-20 md:text-lg"> Empire State Plaza Art Collection-Inspired Artwork by Capital Region School District Students.</p>
+</div>
+<div class="flex md:flex-row flex-col mt-6 md:mt-12 lg:mt-12 md:ml-12">
+<a href="https://ogs.ny.gov" class="block text-center p-2.5 md:p-5 mx-8 my-2 md:mx-8 rounded hover:bg-gray-900 no-underline hover:underline text-black hover:text-white uppercase tracking-widest text-sm font-bold border border-solid border-black" aria-label="Office of General Services" style="min-width:300px;"> First Button </a> 
+<p><a href="https://ogs.ny.gov" class="block text-center p-2.5 md:p-5 mx-8 my-2 md:mx-8 rounded hover:bg-gray-900 no-underline hover:underline text-black hover:text-white uppercase tracking-widest text-sm font-bold border border-solid border-black" aria-label="Office of General Services" style="min-width:300px;"> Second Button </a></p>
+</div>
+</div>
+<ol class="flex flex-row flex-wrap mb-6">
+<li class="caret oswald"><a href="/" class="oswald text-sm uppercase hover:underline font-bold ">Home </a></li>
+<li class="caret oswald"><a href="#" class="oswald text-sm uppercase hover:underline font-bold ">How to Start </a></li>
+</ol>
+<h1>In Progress demo page</h1>
+<p><a href="" id="demo"></a></p>
+<script>
+var newURL = window.location.protocol + "//" + window.location.host + window.location.pathname + window.location.search
+var otherURL = window.location.protocol + "//" + 'ogs.ny.gov' + window.location.pathname + window.location.search
+document.getElementById("demo").innerHTML = otherURL;
+document.getElementById("demo").setAttribute('href', otherURL);
+</script>
+<p>var url = window.location.protocol + &quot;//&quot; + location.host.split(&quot;:&quot;)[0];</p>
+<script>
+function filter(e){
+    search = e.value.toLowerCase();
+    document.querySelectorAll('.filter-card').forEach(function(row){
+        text = row.getAttribute("data-meta").toLowerCase();
+        if(text.match(search)){
+            row.classList.remove("hidden");
+        } else {
+            row.classList.add("hidden");
+        }
+    });
+    filterCount = document.querySelectorAll('.filter-card:not(.hidden)').length;
+    var word = (filterCount === 1) ? "filter" : "filters";
+    document.getElementById("filter-count").innerHTML = `<strong>${filterCount}</strong> ${word} results`
+}
+</script>
+<div role="region" aria-label="Component search" aria-atomic="true" class="">
+    <label for="nysds-filter">Type to filter by keyword</label>
+    <input class="border-2 border-black" id="nysds-filter" class="" type="text" onkeyup="filter(this)"/>
+    <p class="" aria-live="polite"><span id="filter-count"></p>
+  </div>
+<h2>Simple JS data filter</h2>
+<ul class="list-none">
+<li class="filter-card" role="region" aria-atomic="true" aria-label="nothing" data-meta="nothing Use to apply for a learner permit, driver license or non-driver ID. Also use to renew your license or non-driver ID.">
+    <div class="border-2 rounded border-black">
+      <header class="">
+        <h3 class=""><a href="/tableau">nothing</a></h3>
+      </header>
+      <div class="">
+        <p>Use to apply for a learner permit, driver license or non-driver ID. Also use to renew your license or non-driver ID.</p>
+        </div>
+    </div>
+  </li>
+<li class="filter-card" role="region" aria-atomic="true" aria-label="whatever" data-meta="whatever whatever">
+    <div class="border-2 rounded border-black">
+      <header class="">
+        <h3 class=""><a href="/icon-frame-review">whatever</a></h3>
+      </header>
+      <div class="">
+        <p>whatever</p>
+        </div>
+    </div>
+  </li>
+<li class="filter-card" role="region" aria-atomic="true" aria-label="something" data-meta="something something">
+    <div class="border-2 rounded border-black">
+      <header class="">
+        <h3 class=""><a href="/language-access">something</a></h3>
+      </header>
+      <div class="">
+        <p>something</p>
+        </div>
+    </div>
+  </li>
+<li class="filter-card" role="region" aria-atomic="true" aria-label="nothing" data-meta="nothing nothing">
+    <div class="border-2 rounded border-black">
+      <header class="">
+        <h3 class=""><a href="/">nothing</a></h3>
+      </header>
+      <div class="">
+        <p>nothing</p>
+        </div>
+    </div>
+  </li>
+</ul>
+
+    </main>
+    
+    <footer class="bg-admin-third px-4 py-8 flex flex-col md:flex-row md:items-center items-baseline mt-12">
+<h1 class="agencyname text-black ml-8 md:ml-16 mr-4 border-solid border-b border-black md:border-none pr-16 md:pr-0"><a href="/" aria-label="New York State Digital Services" class="">Digital Services</a></h1>
+<span class="hidden md:block md:border-solid md:border-l-2 md:border-black md:py-2 md:ml-2 md:mr-4">&nbsp;</span>
+
+<a href="/accessibility" aria-label="Read our accessibility statement" class="font-bold hover:underline ml-8 py-2 md:ml-0 md:px-3"> Accessibility </a>
+
+<a href="https://ogs.ny.gov/contact-office-general-services" aria-label="Link to Agency&#39;s contact information." class="font-bold hover:underline ml-8 py-2 md:ml-0 md:px-3"> Contact </a>
+
+<section class="flex flex-row md:ml-auto mt-8 md:mt-0 ml-8 mr-8" aria-label="social media links">
+
+<a href="https://github.com/OGS-Digital-Service/ogs-digital-service.github.io" title="Github" class="font-bold hover:underline" aria-label="Check out our github repos.">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-github m-auto" viewBox="0 0 16 16">
+  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/> 
+</svg>GitHub</a>
+
+</section>
+</footer>
+  </body>
+</html>
