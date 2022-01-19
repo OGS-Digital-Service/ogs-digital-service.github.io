@@ -34,7 +34,12 @@ title: The NYS Design Patterns
 # In Progress demo page
 
 
-
+<p id="demo"></p>
+<script>
+var url = window.location.protocol + "//" + location.host.split(":")[0];
+var newURL = window.location.protocol + "//" + window.location.host + "/" + window.location.pathname + window.location.search
+document.getElementById("demo").innerHTML = newURL;
+</script>
 
 
 

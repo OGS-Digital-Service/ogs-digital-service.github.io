@@ -127,6 +127,12 @@
 <li class="caret oswald"><a href="#" class="oswald text-sm uppercase hover:underline font-bold ">How to Start </a></li>
 </ol>
 <h1>In Progress demo page</h1>
+<p id="demo"></p>
+<script>
+var url = window.location.protocol + "//" + location.host.split(":")[0];
+var newURL = window.location.protocol + "//" + window.location.host + "/" + window.location.pathname + window.location.search
+document.getElementById("demo").innerHTML = newURL;
+</script>
 <script>
 function filter(e){
     search = e.value.toLowerCase();
