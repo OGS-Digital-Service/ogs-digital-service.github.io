@@ -180,24 +180,24 @@
   padding: 1em 2em 1em 0;
 }
 
-.nysds-inline-languages a {
+.nysds-footer-insert-banner a {
   color: #fff;
   border-bottom: 1px solid #fff;
   text-decoration: none;
 }
 
-.nysds-inline-languages a:hover {
+.nysds-footer-insert-banner a:hover {
   color: #FACE00;
   border-bottom: 1px solid #FACE00;
   text-decoration: none;
 }
 
-.nysds-inline-languages a:focus {
+.nysds-footer-insert-banner a:focus {
   outline: 2px solid #FACE00;
   outline-offset: 5px;
 }
 
-.nysds-inline-languages a:focus-within {
+.nysds-footer-insert-banner a:focus-within {
   color: #FACE00;
   border-bottom: 1px solid #FACE00;
   text-decoration: none;
