@@ -34,17 +34,18 @@ title: The NYS Design Patterns
 # In Progress demo page
 
 
-<p id="demo"></p>
+<a href="" id="demo"></a>
 <script>
-var url = window.location.protocol + "//" + location.host.split(":")[0];
-var newURL = window.location.protocol + "//" + window.location.host + "/" + window.location.pathname + window.location.search
-document.getElementById("demo").innerHTML = newURL;
+var newURL = window.location.protocol + "//" + window.location.host + window.location.pathname + window.location.search
+var otherURL = window.location.protocol + "//" + 'ogs-digital-services.github.io' + window.location.pathname + window.location.search
+document.getElementById("demo").innerHTML = otherURL;
+document.getElementById("demo").setAttribute('href', otherURL);
 </script>
 
 
 
 
-
+var url = window.location.protocol + "//" + location.host.split(":")[0];
 
 
 
