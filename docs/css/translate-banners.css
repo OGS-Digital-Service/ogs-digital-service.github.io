@@ -119,6 +119,10 @@
   color: #000;
 }
 
+.nysds-select option[value=""][disabled] {
+  display: none;
+}
+
 .nysds-translate-group {
   display: flex;
   flex-direction: column;
