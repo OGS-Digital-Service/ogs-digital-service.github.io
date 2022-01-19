@@ -165,6 +165,9 @@
 
 .nysds-translation-services {
   display: inline-flex;
+  margin-left: 0.5em;
+  border-left: 2px solid #fff;
+  padding-left: 0.5em;
 }
 
 .nysds-inline-languages {
@@ -229,5 +232,9 @@
     }
     .nysds-footer-insert-banner .nysds-translate-group {
       display: none;
+    }
+    .nysds-translation-services {
+      display: inline-flex;
+      margin: 0;
     }
 }
