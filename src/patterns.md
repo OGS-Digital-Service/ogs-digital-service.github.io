@@ -4,6 +4,7 @@ title: The NYS Design Patterns
 ---
 {% from './_includes/_components.njk' import breadcrumbs,button,buttonhero,card,hero,heroold,categorytiles,iconframe,iconframesix,filtercard,languageaccess %} 
 
+
 {{ heroold({ 
     title: "Demo Content Page for Testing Only",
     subtitle: "Empire State Plaza Art Collection-Inspired Artwork by Capital Region School District Students.",
@@ -31,6 +32,16 @@ title: The NYS Design Patterns
 })}}
 
 # In Progress demo page
+
+
+
+
+
+
+
+
+
+
 
 
 

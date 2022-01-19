@@ -1,0 +1,64 @@
+params:
+- name: heading
+  type: string
+  required: true
+- name: cards
+  type: array
+  required: true
+  params:
+  - name: cardtitle
+    type: string
+    required: false
+  - name: incident
+    type: string
+    required: false
+  - name: severity
+    type: string
+    required: false
+  - name: govstory
+    type: array
+    required: false
+    params:
+    - name: title
+      type: string
+      required: false
+    - name: link
+      type: string
+      required: false
+    - name: complete
+      type: boolean
+      required: false
+  - name: projectstory
+    type: string
+    required: false
+    params:
+    - name: title
+      type: string
+      required: false
+    - name: link
+      type: string
+      required: false
+    - name: complete
+      type: boolean
+      required: false
+  - name: corestory
+    type: string
+    required: false
+    params:
+    - name: title
+      type: string
+      required: false
+    - name: link
+      type: string
+      required: false
+    - name: complete
+      type: boolean
+      required: false
+  - name: status
+    type: string
+    required: false
+  - name: reviewlink
+    type: string
+    required: false       
+
+

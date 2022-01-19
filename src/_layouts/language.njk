@@ -8,17 +8,19 @@
     <title>{{ title }}</title>
   </head>
   <body class="">
-    {% from '../_includes/_components.njk' import unav,nav,footer,languageaccess,unavcurrent,unavcurrentfooter  %}
-    {# {% include 'unav-data.md' %} #}
+    {% from '../_includes/_components.njk' import unav,nav,footer,languageaccess,unavcurrent,unavcurrentfooter,translatefooter,translateheader  %}
+    {{ translateheader({ 
+      })}}
      {{ unavcurrent({ 
       })}}
      {% include 'nav-data.md' %}
     <main class="mx-8 md:mx-20">
     {{ content | safe }}
     </main>
-    {# {% include 'language-access-data.md' %} #}
     {% include 'footer-data.md' %}
      {{ unavcurrentfooter({ 
+      })}}
+      {{ translatefooter({ 
       })}}
   </body>
 </html>

@@ -31,18 +31,18 @@ If you have any questions about the content or technical aspects here, please co
         arialabel:'Browse the list of architecture decision records'
         },
         {
-        title:"Accessibility Remediations Dashboard",
-        content:"A dashboard to organize outstanding accessibility work being completed for in-flight projects",
-        link:"/accessibility-remediations-dashboard",
-        linktext:"Go to the Dashboard",
-        arialabel:'go to the dashboard of in progress accessibility remediations'
-        },
-         {
         title:"NYGov Profile Sandbox",
         content:"A rapid prototype and design sandbox page for nygov profile updates",
         link:"/nygov-sandbox",
         linktext:"See the Designs",
         arialabel:'go to the sandbox and prototype page to access the new designs for the ny.gov profile'
+        },
+        {
+        title:"Language Switcher",
+        content:"A functional demo of the language switcher component",
+        link:"/language-access",
+        linktext:"See the Translation Banner",
+        arialabel:'go to the page with the demonstration language switcher'
         }
         
         
@@ -53,10 +53,6 @@ If you have any questions about the content or technical aspects here, please co
 {{ categorytiles({ 
     title:"Demo Content",
      items: [
-    {
-      text: "Updated Language Switcher",
-      link: "/language-access"
-    },
     {
       text: "Cookie Banner and Footer Switcher ",
       link: "/language-access-cookie-banner"
