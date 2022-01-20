@@ -1,35 +1,3 @@
-<article id="nysds-translate-banner" class="nysds-unav-translate-banner">
-    <div class="nysds-translate-group">
-        <div class="inline-flex">
-            <div class="globe-icon" aria-hidden="true"></div>
-            <label class="sr-only" id="translate-label" for="langs">
-                Select your language preference
-            </label>
-            <select class="nysds-select" id="langs" name="languages" aria-labelledby="translate-label" autocomplete="off">
-                <option lang="en" value="" disabled selected hidden>Translate</option>
-                <option lang="en" aria-label="English" value="en" class="en-english" >English</option>
-                <option lang="es" aria-label="Spanish" value="es" class="es-spanish">Español</option>
-                <option lang="ar" aria-label="Arabic" value="ar" class="ar-arabic">عربى</option>
-                <option lang="bn" aria-label="Bengali" value="bn" class="bn-bengali">বাঙালি</option>
-                <option lang="zh" aria-label="Chinese" value="zh" class="zh-chinese">中文</option>
-                <option lang="fr" aria-label="French " value="fr" class="fr-french">Français</option>
-                <option lang="ht" aria-label="Haitian-Creole" value="ht" class="ht-haitian-creole">Kreyòl ayisyen</option>
-                <option lang="it" aria-label="Italian" value="it" class="it-italian">Italiano</option>
-                <option lang="ko" aria-label="Korean" value="ko" class="ko-korean">한국어</option>
-                <option lang="pl" aria-label="Polish" value="pl" class="pl-polish">Polski</option>
-                <option lang="ru" aria-label="Russian" value="ru" class="ru-russian">Русскийy</option>
-                <option lang="ur" aria-label="Urdu" value="ur" class="ur-urdu">اردو</option>
-                <option lang="yi" aria-label="Yiddish" value="yi" class="yi-yiddish">יידיש</option>
-            </select>
-        </div>
-    </div>
-</article>
-
-
-
-
-
-<script>
 window.onload = function () {
 
 function getHostName(url) {
@@ -51,7 +19,7 @@ function getDomain(url) {
         if (parts != null && parts.length > 1) {
             domain = parts[1] + '.' + parts[0];
                 
-            if (hostName.toLowerCase().indexOf('.github.io') != -1 && parts.length > 2) {
+            if (hostName.toLowerCase().indexOf('.ny.gov') != -1 && parts.length > 2) {
               domain = parts[2] + '.' + domain;
             }
         }
@@ -111,4 +79,3 @@ document.getElementById("langs-footer").addEventListener('change', function () {
     window.location = this.value;
 });
 }
-</script>
