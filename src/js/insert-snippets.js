@@ -13,6 +13,13 @@ var footerlinks = document.getElementsByClassName("fr-french-a");
         });
         var esURL = window.location.protocol + "//" + "es." + window.location.host + window.location.pathname + window.location.search
         var frURL = window.location.protocol + "//" + "fr." + window.location.host + window.location.pathname + window.location.search
+
+
+
+
+        var esa = document.getElementsByClassName("es-spanish-a"); 
+        for(var x=0; x < esa.length; x++)
+        {esa[x].setAttribute('href', window.location.protocol + "//" + "es." + getDomain(window.location.href) + window.location.pathname + window.location.search);}
         
 
 
