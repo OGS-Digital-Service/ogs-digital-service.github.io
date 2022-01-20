@@ -120,6 +120,16 @@
 
 
 <script>
+
+function removeLangurl (){
+var separate = window.location.href.split('.');
+separate.shift();
+var currentdomain = separate.join('.');
+}
+
+
+
+
 window.onload = function () {
 
 function getHostName(url) {
@@ -141,7 +151,7 @@ function getDomain(url) {
         if (parts != null && parts.length > 1) {
             domain = parts[1] + '.' + parts[0];
                 
-            if (hostName.toLowerCase().indexOf('.github.io') != -1 && parts.length > 2) {
+            if (hostName.toLowerCase().indexOf('.ny.gov') != -1 && parts.length > 2) {
               domain = parts[2] + '.' + domain;
             }
         }
@@ -149,9 +159,10 @@ function getDomain(url) {
     
     return domain;
 }
+    
 
-    var enUrl = window.location.protocol + "//" + getDomain(window.location.href) + window.location.pathname + window.location.search
-    var esUrl = window.location.protocol + "//" + "es." + getDomain(window.location.href) + window.location.pathname + window.location.search
+    var enUrl = window.location.protocol + "//" + window.location.host + window.location.pathname + window.location.search
+    var esUrl = window.location.protocol + "//" + "es." + removeLangurl(window.location.href) + window.location.pathname + window.location.search
     var arUrl = window.location.protocol + "//" + "ar." + getDomain(window.location.href) + window.location.pathname + window.location.search
     var bnUrl = window.location.protocol + "//" + "bn." + getDomain(window.location.href) + window.location.pathname + window.location.search
     var zhUrl = window.location.protocol + "//" + "zh." + getDomain(window.location.href) + window.location.pathname + window.location.search
