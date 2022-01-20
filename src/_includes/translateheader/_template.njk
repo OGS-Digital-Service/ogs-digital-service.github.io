@@ -30,24 +30,38 @@
 
 
 
+function domain_from_url(url) {
+    var result
+    var match
+    if (match = url.match(/^(?:https?:\/\/)?(?:[^@\n]+@)?(?:www\.)?([^:\/\n\?\=]+)/im)) {
+        result = match[0]
+        if (match = result.match(/^[^\.]+\.(.+\..+)$/)) {
+            result = match[0]
+        }
+    }
+    return result
+}
+
+console.log(domain_from_url(window.location.host))
+
 
 
 
 window.onload = function () {
-var esURL = window.location.protocol + "//" + "es." + window.location.host + window.location.pathname + window.location.search
-var optionlinks = document.getElementsByClassName("es-spanish");
-        for(var x=0; x < optionlinks.length; x++)
-        {optionlinks[x].setAttribute('value', esURL);}
-var footerlinks = document.getElementsByClassName("es-spanish-a");
-        for(var x=0; x < footerlinks.length; x++)
-        { footerlinks[x].setAttribute('href', esURL);}
-var frURL = window.location.protocol + "//" + "fr." + window.location.host + window.location.pathname + window.location.search
-var optionlinks = document.getElementsByClassName("fr-french");
-        for(var x=0; x < optionlinks.length; x++)
-        {optionlinks[x].setAttribute('value', frURL);}
-var footerlinks = document.getElementsByClassName("fr-french-a");
-        for(var x=0; x < footerlinks.length; x++)
-        { footerlinks[x].setAttribute('href', frURL);}                  
+
+var es = document.getElementsByClassName("es-spanish"); 
+        for(var x=0; x < es.length; x++)
+        {es[x].setAttribute('value', window.location.protocol + "//" + "es." + domain_from_url(window.location.host) + window.location.pathname + window.location.search);}
+var esa = document.getElementsByClassName("es-spanish-a"); 
+        for(var x=0; x < esa.length; x++)
+        {esa[x].setAttribute('href', window.location.protocol + "//" + "es." + domain_from_url(window.location.host) + window.location.pathname + window.location.search);}
+var fr = document.getElementsByClassName("fr-french"); 
+        for(var x=0; x < fr.length; x++)
+        {fr[x].setAttribute('value', window.location.protocol + "//" + "fr." + domain_from_url(window.location.host) + window.location.pathname + window.location.search);}
+var fra = document.getElementsByClassName("fr-french-a"); 
+        for(var x=0; x < fra.length; x++)
+        {fra[x].setAttribute('href', window.location.protocol + "//" + "fr." + domain_from_url(window.location.host) + window.location.pathname + window.location.search);}
+
 
 document.getElementById("langs").addEventListener('change', function () {
     window.location = this.value;

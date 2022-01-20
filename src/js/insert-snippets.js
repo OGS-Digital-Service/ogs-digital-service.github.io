@@ -1,4 +1,19 @@
+var optionlinks = document.getElementsByClassName("fr-french");
+        for(var x=0; x < optionlinks.length; x++)
+        {optionlinks[x].setAttribute('value', frURL);}
+var footerlinks = document.getElementsByClassName("fr-french-a");
+        for(var x=0; x < footerlinks.length; x++)
+        { footerlinks[x].setAttribute('href', frURL);}          
 
+        document.getElementById("langs").addEventListener('change', function () {
+            window.location = this.value;
+        });
+        document.getElementById("langs-footer").addEventListener('change', function () {
+            window.location = this.value;
+        });
+        var esURL = window.location.protocol + "//" + "es." + window.location.host + window.location.pathname + window.location.search
+        var frURL = window.location.protocol + "//" + "fr." + window.location.host + window.location.pathname + window.location.search
+        
 
 
 window.onload = function () {
