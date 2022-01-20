@@ -26,23 +26,44 @@
 </article>
 
 
+
+
+
 <script>
 
 
-
-function domain_from_url(url) {
-    var result
-    var match
-    if (match = url.match(/^(?:https?:\/\/)?(?:[^@\n]+@)?(?:www\.)?([^:\/\n\?\=]+)/im)) {
-        result = match[1]
-        if (match = result.match(/^[^\.]+\.(.+\..+)$/)) {
-            result = match[1]
-        }
+function getHostName(url) {
+    var match = url.match(/:\/\/(www[0-9]?\.)?(.[^/:]+)/i);
+    if (match != null && match.length > 2 && typeof match[2] === 'string' && match[2].length > 0) {
+    return match[2];
     }
-    return result
+    else {
+        return null;
+    }
 }
 
-console.log(domain_from_url(window.location.host))
+function getDomain(url) {
+    var hostName = getHostName(url);
+    var domain = hostName;
+    
+    if (hostName != null) {
+        var parts = hostName.split('.').reverse();
+        
+        if (parts != null && parts.length > 1) {
+            domain = parts[1] + '.' + parts[0];
+                
+            if (hostName.toLowerCase().indexOf('.ny.gov') != -1 && parts.length > 2) {
+              domain = parts[2] + '.' + domain;
+            }
+        }
+    }
+    
+    return domain;
+}
+
+console.log(getDomain(window.location.href))
+console.log(getDomain('https://es.distro.ny.gov'))
+console.log(getDomain('https://es.statistics.labor.ny.gov'))
 
 
 
@@ -51,16 +72,16 @@ window.onload = function () {
 
 var es = document.getElementsByClassName("es-spanish"); 
         for(var x=0; x < es.length; x++)
-        {es[x].setAttribute('value', window.location.protocol + "//" + "es." + domain_from_url(window.location.host) + window.location.pathname + window.location.search);}
+        {es[x].setAttribute('value', window.location.protocol + "//" + "es." + getDomain(window.location.href) + window.location.pathname + window.location.search);}
 var esa = document.getElementsByClassName("es-spanish-a"); 
         for(var x=0; x < esa.length; x++)
-        {esa[x].setAttribute('href', window.location.protocol + "//" + "es." + domain_from_url(window.location.host) + window.location.pathname + window.location.search);}
+        {esa[x].setAttribute('href', window.location.protocol + "//" + "es." + getDomain(window.location.href) + window.location.pathname + window.location.search);}
 var fr = document.getElementsByClassName("fr-french"); 
         for(var x=0; x < fr.length; x++)
-        {fr[x].setAttribute('value', window.location.protocol + "//" + "fr." + domain_from_url(window.location.host) + window.location.pathname + window.location.search);}
+        {fr[x].setAttribute('value', window.location.protocol + "//" + "fr." + getDomain(window.location.href) + window.location.pathname + window.location.search);}
 var fra = document.getElementsByClassName("fr-french-a"); 
         for(var x=0; x < fra.length; x++)
-        {fra[x].setAttribute('href', window.location.protocol + "//" + "fr." + domain_from_url(window.location.host) + window.location.pathname + window.location.search);}
+        {fra[x].setAttribute('href', window.location.protocol + "//" + "fr." + getDomain(window.location.href) + window.location.pathname + window.location.search);}
 
 
 document.getElementById("langs").addEventListener('change', function () {
