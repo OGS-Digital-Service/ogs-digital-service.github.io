@@ -97,19 +97,19 @@
             </label>
             <select class="nysds-select" id="langs" name="languages" aria-labelledby="translate-label" autocomplete="off">
                 <option lang="en" value="" disabled selected hidden>Translate</option>
-                <option lang="en" aria-label="English" value="en" class="en-english" >English</option>
-                <option lang="es" aria-label="Spanish" value="es" class="es-spanish">Español</option>
-                <option lang="ar" aria-label="Arabic" value="ar" class="ar-arabic">عربى</option>
-                <option lang="bn" aria-label="Bengali" value="bn" class="bn-bengali">বাঙালি</option>
-                <option lang="zh" aria-label="Chinese" value="zh" class="zh-chinese">中文</option>
-                <option lang="fr" aria-label="French " value="fr" class="fr-french">Français</option>
-                <option lang="ht" aria-label="Haitian-Creole" value="ht" class="ht-haitian-creole">Kreyòl ayisyen</option>
-                <option lang="it" aria-label="Italian" value="it" class="it-italian">Italiano</option>
-                <option lang="ko" aria-label="Korean" value="ko" class="ko-korean">한국어</option>
-                <option lang="pl" aria-label="Polish" value="pl" class="pl-polish">Polski</option>
-                <option lang="ru" aria-label="Russian" value="ru" class="ru-russian">Русскийy</option>
-                <option lang="ur" aria-label="Urdu" value="ur" class="ur-urdu">اردو</option>
-                <option lang="yi" aria-label="Yiddish" value="yi" class="yi-yiddish">יידיש</option>
+                <option lang="en" value="en" class="en-english" >English</option>
+                <option lang="es" value="es" class="es-spanish">Español</option>
+                <option lang="ar" value="ar" class="ar-arabic">عربى</option>
+                <option lang="bn" value="bn" class="bn-bengali">বাঙালি</option>
+                <option lang="zh" value="zh" class="zh-chinese">中文</option>
+                <option lang="fr" value="fr" class="fr-french">Français</option>
+                <option lang="ht" value="ht" class="ht-haitian-creole">Kreyòl ayisyen</option>
+                <option lang="it" value="it" class="it-italian">Italiano</option>
+                <option lang="ko" value="ko" class="ko-korean">한국어</option>
+                <option lang="pl" value="pl" class="pl-polish">Polski</option>
+                <option lang="ru" value="ru" class="ru-russian">Русскийy</option>
+                <option lang="ur" value="ur" class="ur-urdu">اردو</option>
+                <option lang="yi" value="yi" class="yi-yiddish">יידיש</option>
             </select>
         </div>
     </div>
@@ -117,16 +117,12 @@
 
 
 
+<p id="demo"></p>
+
+
 
 
 <script>
-
-function removeLangurl (){
-var separate = window.location.href.split('.');
-separate.shift();
-var currentdomain = separate.join('.');
-}
-
 
 
 
@@ -144,25 +140,55 @@ function getHostName(url) {
 function getDomain(url) {
     var hostName = getHostName(url);
     var domain = hostName;
-    
+    var langPrefix = ["es", "fr", "ur"];
+
+
     if (hostName != null) {
         var parts = hostName.split('.').reverse();
+        var partsPrefix = hostName.split('.')
         
+
         if (parts != null && parts.length > 1) {
             domain = parts[1] + '.' + parts[0];
+
+
+                    if (partsPrefix[0].indexOf("es.")) {
+
+                        if (partsPrefix != null && parts.length > 1) {
+                        domain = parts[2] + '.' + parts[1];
+                        }
+                    }
+
+                    else {
                 
-            if (hostName.toLowerCase().indexOf('.ny.gov') != -1 && parts.length > 2) {
-              domain = parts[2] + '.' + domain;
-            }
+                        if (hostName.toLowerCase().indexOf('.ny.gov') != -1 && parts.length > 2) {
+                        domain = parts[2] + '.' + domain;
+                        }
+
+                        if (hostName.toLowerCase().indexOf('.ny.gov') != -1 && parts.length > 3) {
+                        domain = parts[3] + '.' + domain;
+                        }
+                    }
         }
     }
     
     return domain;
 }
     
+console.log(getDomain("https://es.covid19vaccine.health.ny.gov/"))
+console.log(getDomain("https://fr.health.ny.gov/"))
+console.log(getDomain("https://health.ny.gov/"))
 
-    var enUrl = window.location.protocol + "//" + window.location.host + window.location.pathname + window.location.search
-    var esUrl = window.location.protocol + "//" + "es." + removeLangurl(window.location.href) + window.location.pathname + window.location.search
+
+
+
+
+
+
+
+
+    var enUrl = window.location.protocol + "//" + getDomain(window.location.href) + window.location.pathname + window.location.search
+    var esUrl = window.location.protocol + "//" + "es." + getDomain(window.location.href) + window.location.pathname + window.location.search
     var arUrl = window.location.protocol + "//" + "ar." + getDomain(window.location.href) + window.location.pathname + window.location.search
     var bnUrl = window.location.protocol + "//" + "bn." + getDomain(window.location.href) + window.location.pathname + window.location.search
     var zhUrl = window.location.protocol + "//" + "zh." + getDomain(window.location.href) + window.location.pathname + window.location.search
@@ -288,19 +314,19 @@ document.getElementById("langs-footer").addEventListener('change', function () {
         <section class="nysds-inline-languages">
         <div class="nysds-caption-text">This page is available in other languages. Select your language preference</div>
               <ul>
-                <li><a lang="en"  href="#" title="English" aria-label="English" class="en-english">English</a></li>
-                <li><a lang="es"  href="#" title="Spanish" aria-label="Spanish" class="es-spanish">Español</a></li>
-                <li><a lang="ar"  href="#" title="Arabic" aria-label="Arabic" class="ar-arabic">عربى</a></li>
-                <li><a lang="bn"  href="#" title="Bengali" aria-label="Bengali" class="bn-bengali">বাঙালি</a></li>
-                <li><a lang="zh"  href="#" title="Chinese" aria-label="Chinese" class="zh-chinese">中文</a></li>
-                <li><a lang="fr"  href="#" title="French" aria-label="French " class="fr-french">Français</a></li>
-                <li><a lang="ht"  href="#" title="Haitian-Creole" aria-label="Haitian-Creole" class="ht-haitian-creole">Kreyòl ayisyen</a></li>
-                <li><a lang="it"  href="#" title="Italian" aria-label="Italian" class="it-italian">Italiano</a></li>
-                <li><a lang="ko"  href="#" title="Korean" aria-label="Korean" class="ko-korean">한국어</a></li>
-                <li><a lang="pl"  href="#" title="Polish" aria-label="Polish" class="pl-polish">Polski</a></li>
-                <li><a lang="ru"  href="#" title="Russian" aria-label="Russian" class="ru-russian">Русскийy</a></li>
-                <li><a lang="ur"  href="#" title="Urdu" aria-label="Urdu" class="ur-urdu">اردو</a></li>
-                <li><a lang="yi"  href="#" title="Yiddish" aria-label="Yiddish" class="yi-yiddish">יידיש</a></li>
+                <li><a lang="en"  href="#" title="English" class="en-english">English</a></li>
+                <li><a lang="es"  href="#" title="Spanish" class="es-spanish">Español</a></li>
+                <li><a lang="ar"  href="#" title="Arabic" class="ar-arabic">عربى</a></li>
+                <li><a lang="bn"  href="#" title="Bengali" class="bn-bengali">বাঙালি</a></li>
+                <li><a lang="zh"  href="#" title="Chinese" class="zh-chinese">中文</a></li>
+                <li><a lang="fr"  href="#" title="French" class="fr-french">Français</a></li>
+                <li><a lang="ht"  href="#" title="Haitian-Creole" class="ht-haitian-creole">Kreyòl ayisyen</a></li>
+                <li><a lang="it"  href="#" title="Italian" class="it-italian">Italiano</a></li>
+                <li><a lang="ko"  href="#" title="Korean" class="ko-korean">한국어</a></li>
+                <li><a lang="pl"  href="#" title="Polish" class="pl-polish">Polski</a></li>
+                <li><a lang="ru"  href="#" title="Russian" class="ru-russian">Русскийy</a></li>
+                <li><a lang="ur"  href="#" title="Urdu" class="ur-urdu">اردو</a></li>
+                <li><a lang="yi"  href="#" title="Yiddish" class="yi-yiddish">יידיש</a></li>
               <ul>
         <div class="nysds-translation-services"><div class="globe-icon" aria-hidden="true"></div><a href="#" class="mx-2"> Translation Services </a></div>
         </section>
@@ -313,19 +339,19 @@ document.getElementById("langs-footer").addEventListener('change', function () {
             </label>
             <select class="nysds-select" id="langs-footer" name="languages" aria-labelledby="translate-label-footer">
                 <option lang="en" value="" disabled selected hidden>Translate</option>
-                <option lang="en" aria-label="English" value="en" class="en-english">English</option>
-                <option lang="es" aria-label="Spanish" value="es" class="es-spanish">Español</option>
-                <option lang="ar" aria-label="Arabic" value="ar" class="ar-arabic">عربى</option>
-                <option lang="bn" aria-label="Bengali" value="bn" class="bn-bengali">বাঙালি</option>
-                <option lang="zh" aria-label="Chinese" value="zh" class="zh-chinese">中文</option>
-                <option lang="fr" aria-label="French " value="fr" class="fr-french">Français</option>
-                <option lang="ht" aria-label="Haitian-Creole" value="ht" class="ht-haitian-creole">Kreyòl ayisyen</option>
-                <option lang="it" aria-label="Italian" value="it" class="it-italian">Italiano</option>
-                <option lang="ko" aria-label="Korean" value="ko" class="ko-korean">한국어</option>
-                <option lang="pl" aria-label="Polish" value="pl" class="pl-polish">Polski</option>
-                <option lang="ru" aria-label="Russian" value="ru" class="ru-russian">Русскийy</option>
-                <option lang="ur" aria-label="Urdu" value="ur" class="ur-urdu">اردو</option>
-                <option lang="yi" aria-label="Yiddish" value="yi" class="yi-yiddish">יידיש</option>
+                <option lang="en" value="en" class="en-english">English</option>
+                <option lang="es" value="es" class="es-spanish">Español</option>
+                <option lang="ar" value="ar" class="ar-arabic">عربى</option>
+                <option lang="bn" value="bn" class="bn-bengali">বাঙালি</option>
+                <option lang="zh" value="zh" class="zh-chinese">中文</option>
+                <option lang="fr" value="fr" class="fr-french">Français</option>
+                <option lang="ht" value="ht" class="ht-haitian-creole">Kreyòl ayisyen</option>
+                <option lang="it" value="it" class="it-italian">Italiano</option>
+                <option lang="ko" value="ko" class="ko-korean">한국어</option>
+                <option lang="pl" value="pl" class="pl-polish">Polski</option>
+                <option lang="ru" value="ru" class="ru-russian">Русскийy</option>
+                <option lang="ur" value="ur" class="ur-urdu">اردو</option>
+                <option lang="yi" value="yi" class="yi-yiddish">יידיש</option>
             </select>
             <div class="nysds-translation-services"><a href="#" class="mx-2"> Translation Services </a></div>
         </div>
