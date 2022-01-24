@@ -120,7 +120,6 @@
 
 
 <script>
-
 window.onload = function () {
 
 function getHostName(url) {
@@ -135,87 +134,53 @@ function getHostName(url) {
 function getDomain(url) {
     var hostName = getHostName(url);
     var domain = hostName;
-    var parts = hostName.split('.')
-    var partsReverse = hostName.split('.').reverse()
-    var govDomain = partsReverse[1] + partsReverse[0]
+    var parts = hostName.split('.');
 
     if (hostName != null) {
        
-
-        if (partsReverse != null && ["nygov"].includes(govDomain)) {
-            
-    
-            
-             if (parts != null && parts.length > 2 && ["es","fr","ht"].includes(parts[0])) {
-            
-                domain = parts[1] + '.' + parts[2];
-                        
-                }
-
-            if (parts != null && parts.length > 3 && ["es","fr","ht"].includes(parts[0])) {
-            
-                domain = parts[1] + '.' + parts[2] + "." + parts[3];
-                        
-                }
-
-              
-        }
-
+        if (["es","ar","bn","zh","fr","ht","it","ko","pl","ru","ur","yi"].includes(parts[0])){
+          let urlArray = parts.slice(1,20);
+          domain = urlArray.join(".")
+            }
 
     }
-
-
     return domain;
-
 }
 
+const prot = window.location.protocol;
+const hre = window.location.href;
+const path = window.location.pathname;
+const search = window.location.search; 
+const getd = getDomain(hre);
+const makeprot = prot + "//";
+const makeurl =  getd + path + search;
 
-
-    
-console.log(getDomain("https://covid19vaccine.health.ny.gov/"))
-console.log(getDomain("https://es.covid19vaccine.health.ny.gov/"))
-console.log(getDomain("https://health.ny.gov/"))
-console.log(getDomain("https://es.health.ny.gov/"))
-console.log(getDomain("https://ny.gov/"))
-console.log(getDomain("https://es.ny.gov/"))
-
-
-
-
-
-
-
-
-
-
-
-
-    var enUrl = window.location.protocol + "//" + getDomain(window.location.href) + window.location.pathname + window.location.search
-    var esUrl = window.location.protocol + "//" + "es." + getDomain(window.location.href) + window.location.pathname + window.location.search
-    var arUrl = window.location.protocol + "//" + "ar." + getDomain(window.location.href) + window.location.pathname + window.location.search
-    var bnUrl = window.location.protocol + "//" + "bn." + getDomain(window.location.href) + window.location.pathname + window.location.search
-    var zhUrl = window.location.protocol + "//" + "zh." + getDomain(window.location.href) + window.location.pathname + window.location.search
-    var frUrl = window.location.protocol + "//" + "fr." + getDomain(window.location.href) + window.location.pathname + window.location.search
-    var htUrl = window.location.protocol + "//" + "ht." + getDomain(window.location.href) + window.location.pathname + window.location.search
-    var itUrl = window.location.protocol + "//" + "it." + getDomain(window.location.href) + window.location.pathname + window.location.search
-    var koUrl = window.location.protocol + "//" + "ko." + getDomain(window.location.href) + window.location.pathname + window.location.search
-    var plUrl = window.location.protocol + "//" + "pl." + getDomain(window.location.href) + window.location.pathname + window.location.search
-    var ruUrl = window.location.protocol + "//" + "ru." + getDomain(window.location.href) + window.location.pathname + window.location.search
-    var urUrl = window.location.protocol + "//" + "ur." + getDomain(window.location.href) + window.location.pathname + window.location.search
-    var yiUrl = window.location.protocol + "//" + "yi." + getDomain(window.location.href) + window.location.pathname + window.location.search
-    var en = document.getElementsByClassName("en-english");
-    var es = document.getElementsByClassName("es-spanish");
-    var ar = document.getElementsByClassName("ar-arabic");
-    var bn = document.getElementsByClassName("bn-bengali");
-    var zh = document.getElementsByClassName("zh-chinese");
-    var fr = document.getElementsByClassName("fr-french");
-    var ht = document.getElementsByClassName("ht-haitian-creole");
-    var it = document.getElementsByClassName("it-italian");
-    var ko = document.getElementsByClassName("ko-korean");
-    var pl = document.getElementsByClassName("pl-polish");
-    var ru = document.getElementsByClassName("ru-russian");
-    var ur = document.getElementsByClassName("ur-urdu");
-    var yi = document.getElementsByClassName("yi-yiddish");  
+var enUrl = makeprot + makeurl;
+var esUrl = makeprot + "es." + makeurl
+var arUrl = makeprot + "ar." + makeurl;
+var bnUrl = makeprot + "bn." + makeurl;
+var zhUrl = makeprot + "zh." + makeurl;
+var frUrl = makeprot + "fr." + makeurl;
+var htUrl = makeprot + "ht." + makeurl;
+var itUrl = makeprot + "it." + makeurl;
+var koUrl = makeprot + "ko." + makeurl;
+var plUrl = makeprot + "pl." + makeurl;
+var ruUrl = makeprot + "ru." + makeurl;
+var urUrl = makeprot + "ur." + makeurl;
+var yiUrl = makeprot + "yi." + makeurl;
+var en = document.getElementsByClassName("en-english");
+var es = document.getElementsByClassName("es-spanish");
+var ar = document.getElementsByClassName("ar-arabic");
+var bn = document.getElementsByClassName("bn-bengali");
+var zh = document.getElementsByClassName("zh-chinese");
+var fr = document.getElementsByClassName("fr-french");
+var ht = document.getElementsByClassName("ht-haitian-creole");
+var it = document.getElementsByClassName("it-italian");
+var ko = document.getElementsByClassName("ko-korean");
+var pl = document.getElementsByClassName("pl-polish");
+var ru = document.getElementsByClassName("ru-russian");
+var ur = document.getElementsByClassName("ur-urdu");
+var yi = document.getElementsByClassName("yi-yiddish");  
         for (var x=0; x < en.length, x < es.length, x < ar.length, x < bn.length, x < zh.length, x < fr.length, x < ht.length, x < it.length, x < ko.length, x < pl.length, x < ru.length, x < ur.length, x < yi.length; x++) {
             
             if (en[x].value == null ){en[x].setAttribute('href', enUrl);} else {en[x].setAttribute('value', enUrl);}
@@ -240,7 +205,20 @@ document.getElementById("langs").addEventListener('change', function () {
 document.getElementById("langs-footer").addEventListener('change', function () {
     window.location = this.value;
 });
+
+
+console.log(getDomain("https://covid19vaccine.health.ny.gov/"))
+console.log(getDomain("https://es.covid19vaccine.health.ny.gov/"))
+console.log(getDomain("https://ht.covid19vaccine.health.ny.gov/"))
+console.log(getDomain("https://health.ny.gov/"))
+console.log(getDomain("https://es.health.ny.gov/"))
+console.log(getDomain("https://ny.gov/"))
+console.log(getDomain("https://es.ny.gov/")) 
+console.log(getDomain("https://yi.ny.gov/"))
+console.log(getDomain("https://yi.something.lol.whatever.cool.ny.gov/"))
 }
+
+
 </script>
 
      <div id="nygov-universal-navigation" class="nygov-universal-container" data-iframe="true" data-updated="2014-11-07 08:30">
