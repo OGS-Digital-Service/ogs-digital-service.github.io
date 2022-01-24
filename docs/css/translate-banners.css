@@ -1,6 +1,5 @@
 .nysds-normalize {
   font-size: 16px;
-
 }
 
 .nysds-close-icon {
@@ -79,7 +78,6 @@
     background-position:right;
     background-color: transparent;
     -webkit-appearance: none;
-    border-bottom: 2px solid #000;
     margin: 0px 10px;
     width: auto !important;
     height: auto !important;
@@ -120,6 +118,9 @@
 
 .nysds-select option {
   color: #000;
+  background-color: #ededed;
+  font-weight: bold;
+  padding: 10px;
 }
 
 .nysds-select option[value=""][disabled] {
@@ -150,7 +151,8 @@
   position: relative;
   z-index: 501;
   color: #000;
-  background-color: #fff;
+  background-color: #ededed;
+  height: 35px;
 }
 
 .nysds-unav-translate-banner .nysds-translate-group {
