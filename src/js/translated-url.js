@@ -1,4 +1,3 @@
-window.onload = function () {
 
     function getHostName(url) {
         var match = url.match(/:\/\/(www[0-9]?\.)?(.[^/:]+)/i);
@@ -83,5 +82,5 @@ window.onload = function () {
     document.getElementById("langs-footer").addEventListener('change', function () {
         window.location = this.value;
     });
-    }
+    
     
