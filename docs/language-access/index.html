@@ -88,7 +88,7 @@
   </head>
   <body class="">
     
-    <article id="nysds-translate-banner" class="nysds-unav-translate-banner">
+    <article class="nysds-unav-translate-banner nysds-normalize">
     <div class="nysds-translate-group">
         <div class="inline-flex">
             <div class="globe-icon" aria-hidden="true"></div>
@@ -121,8 +121,6 @@
 
 <script>
 
-
-
 window.onload = function () {
 
 function getHostName(url) {
@@ -137,44 +135,52 @@ function getHostName(url) {
 function getDomain(url) {
     var hostName = getHostName(url);
     var domain = hostName;
-    var langPrefix = ["es", "fr", "ur"];
-
+    var parts = hostName.split('.')
+    var partsReverse = hostName.split('.').reverse()
+    var govDomain = partsReverse[1] + partsReverse[0]
 
     if (hostName != null) {
-        var parts = hostName.split('.').reverse();
-        var partsPrefix = hostName.split('.')
-        
+       
 
-        if (parts != null && parts.length > 1) {
-            domain = parts[1] + '.' + parts[0];
+        if (partsReverse != null && ["nygov"].includes(govDomain)) {
+            
+    
+            
+             if (parts != null && parts.length > 2 && ["es","fr","ht"].includes(parts[0])) {
+            
+                domain = parts[1] + '.' + parts[2];
+                        
+                }
 
+            if (parts != null && parts.length > 3 && ["es","fr","ht"].includes(parts[0])) {
+            
+                domain = parts[1] + '.' + parts[2] + "." + parts[3];
+                        
+                }
 
-                    if (partsPrefix[0].indexOf("es.")) {
-
-                        if (partsPrefix != null && parts.length > 1) {
-                        domain = parts[2] + '.' + parts[1];
-                        }
-                    }
-
-                    else {
-                
-                        if (hostName.toLowerCase().indexOf('.ny.gov') != -1 && parts.length > 2) {
-                        domain = parts[2] + '.' + domain;
-                        }
-
-                        if (hostName.toLowerCase().indexOf('.ny.gov') != -1 && parts.length > 3) {
-                        domain = parts[3] + '.' + domain;
-                        }
-                    }
+              
         }
+
+
     }
-    
+
+
     return domain;
+
 }
+
+
+
     
+console.log(getDomain("https://covid19vaccine.health.ny.gov/"))
 console.log(getDomain("https://es.covid19vaccine.health.ny.gov/"))
-console.log(getDomain("https://fr.health.ny.gov/"))
 console.log(getDomain("https://health.ny.gov/"))
+console.log(getDomain("https://es.health.ny.gov/"))
+console.log(getDomain("https://ny.gov/"))
+console.log(getDomain("https://es.ny.gov/"))
+
+
+
 
 
 
@@ -307,7 +313,7 @@ document.getElementById("langs-footer").addEventListener('change', function () {
     </noscript>
 </div>
 
-      <article id="nysds-translate-banner" class="nysds-footer-insert-banner">
+      <article class="nysds-footer-insert-banner nysds-normalize">
         <section class="nysds-inline-languages">
         <div class="nysds-caption-text">This page is available in other languages. Select your language preference</div>
               <ul>
