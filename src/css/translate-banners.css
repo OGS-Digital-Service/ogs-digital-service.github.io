@@ -165,7 +165,7 @@
   padding: 24px;
   z-index: 600;
   width: auto;
-  border-top: 2px solid #ccc;
+  border-top: 2px solid #62666A;
   color: #fff;
 }
 
@@ -201,6 +201,7 @@
   border-bottom: 1px solid #fff;
   text-decoration: none;
   margin-right: 2em;
+  font-weight: bold;
 }
 
 .nysds-footer-insert-banner a:hover {
