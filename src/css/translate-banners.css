@@ -182,8 +182,15 @@
 }
 
 .nysds-translation-services {
-  display: block;
+  display: flex;
   margin-bottom: 1.5em;
+  flex-direction: column;
+}
+ 
+.nysds-globe-icon-wrap {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .nysds-globe-icon-wrap:hover {
@@ -290,7 +297,8 @@
       display: none;
     }
     .nysds-translation-services {
-      display: inline-flex;
+      flex-direction: row;
       margin-bottom: 0.25em;
+
     }
 }
