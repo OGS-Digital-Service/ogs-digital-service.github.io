@@ -41,13 +41,7 @@
     }
   }
 
-  @else if $point==smallTabletOnly {
-    @media (max-width: 590px) {
-      @content;
-    }
-  }
-
   @else {
-    @warn "Breakpoint mixin supports: desktop, laptop, tablet, largeMobile, smallMobile, mobileOnly, smallTabletOnly";
+    @warn "Breakpoint mixin supports: desktop, laptop, tablet, largeMobile, smallMobile, mobileOnly";
   }
 }
