@@ -429,5 +429,13 @@ t5.insertAdjacentHTML('afterend', '<div class="nysds-footer-insert-wrap"><div cl
         </div>
     </section> 
 </article>
+<script>
+  document.getElementById("langs").addEventListener('change', function () {
+        window.location = this.value;
+    });
+    document.getElementById("langs-footer").addEventListener('change', function () {
+        window.location = this.value;
+    });
+</script>
   </body>
 </html>

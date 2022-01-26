@@ -5,8 +5,8 @@ title: OGS Digital Service Design Lab
 {% from './_includes/_components.njk' import button,buttonhero,card,hero,breadcrumbs,categorytiles %} 
 
 {{ hero({ 
-    title: "The NYS Web Design System",
-    subtitle: "With an information first approach, the components and design patterns are focused on connecting people to the resources they need.",
+    title: "The NYS Utility Design System",
+    subtitle: "",
     image:"",
     buttontext: "Demo Page",
     link: "/patterns",
@@ -23,13 +23,6 @@ If you have any questions about the content or technical aspects here, please co
 {{ card({ 
     frametitle:'A Row of Cards',
     cards: [
-        {
-        title:"Architecture Decision Records",
-        content:"Read about the architecture decisions that went into this website as well as other digital web components and integrations.",
-        link:"/architecture-decision-records",
-        linktext:"Browse the Records",
-        arialabel:'Browse the list of architecture decision records'
-        },
         {
         title:"NYGov Profile Sandbox",
         content:"A rapid prototype and design sandbox page for nygov profile updates",

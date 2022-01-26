@@ -13,16 +13,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 Enim nunc faucibus a pellentesque sit amet. Consectetur purus ut faucibus pulvinar elementum integer enim neque. Sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula. Sed blandit libero volutpat sed cras. Curabitur gravida arcu ac tortor dignissim convallis. Amet tellus cras adipiscing enim. Dignissim convallis aenean et tortor at. Facilisi morbi tempus iaculis urna id volutpat. Aliquam vestibulum morbi blandit cursus risus at ultrices mi. Erat velit scelerisque in dictum. Malesuada pellentesque elit eget gravida cum sociis natoque penatibus et. Id faucibus nisl tincidunt eget nullam. Etiam erat velit scelerisque in dictum non consectetur a erat. Morbi leo urna molestie at elementum.
 
-<script>
 
-
-  document.getElementById("langs").addEventListener('change', function () {
-        window.location = this.value;
-    });
-    document.getElementById("langs-footer").addEventListener('change', function () {
-        window.location = this.value;
-    });
-  </script>
 
 <div class="h-48" data-purposelabel="a spacer for demo yo"> </div>
 
