@@ -4,10 +4,6 @@
 .m-card__footer {
   display: flex;
   align-items: center;
-  width: 100%;
-  padding: 14px;
-  background: #EDEDED;
-  border-top: 1px solid #D0D0CE;
 
   .a-card__icon,
   .a-mobile__icon {
@@ -24,6 +20,13 @@
   margin-left: 8px;
   vertical-align: middle;
   letter-spacing: 1px;
+  border-bottom: 1px solid #154973;
+
+  &:hover {
+    border-bottom: 3px solid #154973;
+    margin-bottom: -2px;
+  }
+
 }
 .m-card__quickFooter {
   display: flex;

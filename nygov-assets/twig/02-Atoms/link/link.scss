@@ -29,6 +29,11 @@
 a {
   font-family: "Proxima Nova";
   font-weight: normal;
+
+  &:focus {
+    outline: 2px solid #457AA5;
+    outline-offset: 1px;
+  }
 }
 
 .a-alert__link {
