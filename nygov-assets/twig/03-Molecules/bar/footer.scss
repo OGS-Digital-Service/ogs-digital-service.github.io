@@ -9,17 +9,26 @@
   .a-mobile__icon {
     color: #154973;
   }
+ 
+}
+
+.mobileLink:nth-child(even) {
+  margin-top: 25px;
+
+  @include breakpoint(desktop) {
+    margin-top: 30px;
+  }
 }
 
 .m-card__linkText {
   color: #000;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
   font-family: "Proxima Nova", sans-serif;
   margin-left: 8px;
   vertical-align: middle;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   border-bottom: 1px solid #154973;
 
   &:hover {
