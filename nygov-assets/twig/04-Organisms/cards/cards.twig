@@ -43,7 +43,11 @@
 	{% set aria = footerText == "Learn More" ? 'Learn More' ~ ' about ' ~ card.label : footerText  %}
 
 	<article class="o-cardGlobalTablet">
-		<a href="{{card.learnMore.url.path}}" class="o-cardLogo -index{{cardNumber}} -paragraph{{paragraphNumber}}" aria-label="{{aria}}"></a>
+		{% if card.androidLink.url.path or card.iosLink.url.path %}
+			<div class="o-cardLogo -index{{cardNumber}} -paragraph{{paragraphNumber}}" aria-label="{{aria}}"></div>
+		{% else %}	
+			<a href="{{card.learnMore.url.path}}" class="o-cardLogo -index{{cardNumber}} -paragraph{{paragraphNumber}}" aria-label="{{aria}}"></a>
+		{% endif %}	
 		<div class="o-cardContent">
 			{% if card.chapterLinks is empty %}
 				{% include "@storybook/03-Molecules/cardContent/cardData.twig" with { content: label, url: card.learnMore.url.path, text: description, variant: "m-card__default"} %}
@@ -243,7 +247,11 @@
 
 	<article class="o-cardHero">
 		<div class="o-cardHeroContainer">
-			<a href="{{url}}" class="o-cardLogo -index{{cardNumber}} -paragraph{{paragraphNumber}}" aria-label="{{aria}}"></a>
+			{% if card.androidLink.url.path or card.iosLink.url.path %}
+				<div class="o-cardLogo -index{{cardNumber}} -paragraph{{paragraphNumber}}" aria-label="{{aria}}"></div>
+			{% else %}	
+				<a href="{{url}}" class="o-cardLogo -index{{cardNumber}} -paragraph{{paragraphNumber}}" aria-label="{{aria}}"></a>
+			{% endif %}	
 			<div class="o-cardContent">
 				{% if card.keywords[0].entity.keyword %}
 					<span class="o-cardKeyword">

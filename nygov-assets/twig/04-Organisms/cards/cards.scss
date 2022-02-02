@@ -40,6 +40,20 @@
     background-position: 50% 50%;
     display: block;
     overflow: hidden;
+
+    .eventDateOverlay {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      border-radius: 15px;
+      right: 9%;
+      bottom: 68%;
+      text-align: center;
+      color: #000;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
   }
 
   .o-cardContent {

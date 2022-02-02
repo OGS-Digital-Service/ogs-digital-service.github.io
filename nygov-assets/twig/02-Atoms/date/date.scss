@@ -30,3 +30,13 @@
 .a-date-13 {
   font-size: 13px;
 }
+
+.a-date-13-extraBold {
+  font-size: 13px;
+  @extend .text-extra-bold;
+}
+
+.a-date-24-extraBold {
+  font-size: 24px;
+  @extend .text-extra-bold;
+}

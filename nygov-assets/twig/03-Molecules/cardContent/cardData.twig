@@ -1,15 +1,18 @@
 {% if variant =="m-card__default" %}
   <div class="m-card__data">
+  	{% if card.androidLink.url.path or card.iosLink.url.path %}
+		<h3> {{label}} </h3>
+	{% else %}  
     <h3>
     {% include '@storybook/02-Atoms/link/link.twig' with { content: label, url:url, variant: "a-card__label"} %}
     </h3>
+	{% endif %}
     {% if contentDate %}
     {% include '@storybook/02-Atoms/date/date.twig' with {date: contentDate, classNames: "a-date-14 text-bold text-uppercase", variant: "date" } %}
     {% endif %}
     {% if dateTime %}
     {% include '@storybook/02-Atoms/date/date.twig' with {date: dateTime, classNames: "a-date-14 text-uppercase", variant: "date" } %}
     {% endif %}
-
     {% include "@storybook/02-Atoms/text/text.twig" with { text: description, classNames: "a-card__description", variant: "html"} %}
 	{% if card.androidLink.url.path or card.iosLink.url.path %}
 		<div class="o-cardFooter">
@@ -43,9 +46,13 @@
 
 {% if variant =="m-card__hero" %}
   <div class="m-card__data">
+	{% if card.androidLink.url.path or card.iosLink.url.path %}
+		<h2> {{label}} </h2>
+	{% else %}  
     <h2>
     {% include '@storybook/02-Atoms/link/link.twig' with { content: label, url:url, variant: "a-card__label"} %}
     </h2>
+	{% endif %}
     {% include "@storybook/02-Atoms/text/text.twig" with { text: description, classNames: "a-card__description", variant: "html"} %}
   </div>
 {% endif %}
