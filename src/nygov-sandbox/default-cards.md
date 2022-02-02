@@ -120,7 +120,7 @@ title: NYGov Profile test
                     <article class="o-cardGlobalTablet"><!-- EVENT CARD -->
                         <a href="/events/scheduled-event-card-style" class="o-cardLogo -index3 -paragraph1" aria-label="View Event Details for Scheduled Event Card Style Event">
                                 <div class="bg-primary-gold eventDateOverlay" aria-hidden="true"> 
-                                <span class="a-date-13-extraBold text-uppercase">Jan </span> <br>
+                                <span class="a-date-13-extraBold text-uppercase">Jan </span>
                                 <span class="a-date-24-extraBold ">27  </span>
                                 </div>
                         </a>
