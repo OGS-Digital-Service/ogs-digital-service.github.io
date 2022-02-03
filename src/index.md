@@ -5,7 +5,7 @@ title: OGS Digital Service Design Lab
 {% from './_includes/_components.njk' import button,buttonhero,card,hero,breadcrumbs,categorytiles %} 
 
 {{ hero({ 
-    title: "The NYS Utility Design System",
+    title: "OGS Digital Service Design Lab",
     subtitle: "",
     image:"",
     buttontext: "Demo Page",
