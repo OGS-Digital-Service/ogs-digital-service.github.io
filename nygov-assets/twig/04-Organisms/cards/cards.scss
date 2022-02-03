@@ -40,8 +40,9 @@
     background-position: 50% 50%;
     display: block;
     overflow: hidden;
+    text-decoration: none !important;
 
-    .eventDateOverlay {
+    .o-eventDateOverlay {
       position: absolute;
       width: 60px;
       height: 60px;
@@ -53,6 +54,24 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      
+
+      @include breakpoint(tablet) {
+        position: relative;
+        right: unset;
+        bottom: unset;
+        left: 65%;
+        top: 65%;
+      }
+  
+      @include breakpoint(desktop) {
+        position: absolute;
+        right: 9%;
+        bottom: 68%;
+        left: unset;
+        top: unset;
+      }      
+
     }
   }
 

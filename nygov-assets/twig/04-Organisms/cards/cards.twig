@@ -218,7 +218,12 @@
 	{% set label = card.label %}
 	{% set description = card.description.processed %}
 	<article class="o-cardGlobalTablet">
-		<a href="{{card.contentLink.path}}" class="o-cardLogo -index{{cardNumber}} -paragraph{{paragraphNumber}}" aria-label="View Event Details for {{label}} Event"></a>
+		<a href="{{card.contentLink.path}}" class="o-cardLogo -index{{cardNumber}} -paragraph{{paragraphNumber}}" aria-label="View Event Details for {{label}} Event">
+			<div class="bg-primary-gold o-eventDateOverlay" aria-hidden="true"> 
+				<span class="a-date-13-extraBold text-uppercase">{{monthStart}}</span>
+				<span class="a-date-24-extraBold ">{{dayStart}}</span>
+			</div>
+		</a>
 		<div class="o-cardContent">
 			{% if card.dateRange is empty %}
 				{% include "@storybook/03-Molecules/cardContent/cardData.twig" with { content: label, url: card.contentLink.path, text: description, variant: "m-card__default"} %}
