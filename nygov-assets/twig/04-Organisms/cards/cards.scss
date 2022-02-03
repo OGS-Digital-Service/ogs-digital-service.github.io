@@ -149,6 +149,46 @@
     }
   }
 
+  .m-cardTabletWrap {
+    display: flex;
+    flex-direction: column;
+    @include breakpoint(tablet) {
+      flex-direction: row;
+    }
+
+    @include breakpoint(desktop) {
+      flex-direction: column;
+    }
+  }
+
+  .m-eventDescription {
+    width:100%;
+
+    @include breakpoint(tablet) {
+      width: 55%;
+    }
+
+    @include breakpoint(desktop) {
+      width: 100%
+    }
+
+  }
+
+  .m-eventDetails {
+    width: 100%;
+
+    @include breakpoint(tablet) {
+      width: 45%;
+      border-left: 1px solid #D0D0CE;
+      padding-left: 20px;
+      margin-left: 20px;
+    }
+
+    @include breakpoint(desktop) {
+      width: 100%
+    }
+  }
+
   .a-card__description {
     margin: 25px 0 30px;
     font-size: 16px;
