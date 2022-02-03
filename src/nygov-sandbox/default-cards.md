@@ -120,8 +120,8 @@ title: NYGov Profile test
                     <article class="o-cardGlobalTablet"><!-- EVENT CARD -->
                         <a href="/events/scheduled-event-card-style" class="o-cardLogo -index3 -paragraph1" aria-label="View Event Details for Scheduled Event Card Style Event">
                                 <div class="bg-primary-gold o-eventDateOverlay" aria-hidden="true"> 
-                                <span class="a-date-13-extraBold text-uppercase">Jan </span>
-                                <span class="a-date-24-extraBold ">27  </span>
+                                <span class="a-date-13-extraBold text-uppercase">Feb </span>
+                                <span class="a-date-24-extraBold ">3  </span>
                                 </div>
                         </a>
                         <div class="o-cardContent">
@@ -131,39 +131,16 @@ title: NYGov Profile test
                                         <a class="a-card__label" href="/events/scheduled-event-card-style">Scheduled Event Card Style</a>
                                     </h3>
                                     <div class="a-text__html a-card__description"><p>This is where the description goes for the scheduled event.</p></div>
+                                    <div class="eventDetails"><!-- EVENT info -->
+                                        <div class="m-eventInfo">
+                                            <ul class="">
+                                                <li class="text-bold"><span class="icon-calendar text-primary-blue" aria-hidden="true"></span> Feb 3, 2022 — Feb 15, 2022</li>
+                                                <li class=""><span class="icon-clock text-primary-blue" aria-hidden="true"></span>8:00 AM — 12:00 PM</li>
+                                                <li class=""><span class="icon-map-marker text-primary-blue" aria-hidden="true"></span>Javits Center, 445 11th Avenue, Floor 3, Suite 303, New York, NY 10001</li>
+                                            </ul> 
+                                        </div>   
+                                    </div><!-- EVENT info -->
                                 </div>
-                            </div>
-                            <div class="eventDetails">
-                                <div class="m-eventDate">
-                                    <span class="icon-calendar text-primary-blue" aria-hidden="true"></span>
-                                    <div class="start">
-                                        <span class="a-date a-date-14 -blue">Jan</span>
-                                        <span class="a-date a-date-42-extraBold">27</span>
-                                        <span class="a-date a-date-13-semiBold -year">2022</span>
-                                    </div>
-                                    <span class="dash">
-                                        —
-                                    </span>
-                                    <div class="end">
-                                        <span class="a-date a-date-14 -blue">Feb</span>
-                                        <span class="a-date a-date-42-extraBold">27</span>
-                                        <span class="a-date a-date-13-semiBold -year">2022</span>
-                                    </div>
-                                </div>
-                                <ul class="eventTimePlace">
-                                    <li class="time">
-                                        <span class="clock icon-clock"></span>
-                                        <span>9:00 AM</span>
-                                        <span>
-                                            —
-                                        </span>
-                                        <span>6:00 PM</span>
-                                    </li>
-                                    <li class="location">
-                                        <span class="mapMarker icon-map-marker"></span>
-                                        <span>This is the Venue</span>
-                                    </li>
-                                </ul>
                             </div>
                         </div>
                     </article>

@@ -78,3 +78,35 @@
   }
 }
 }
+
+.m-eventInfo {
+
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: flex;
+      font-size: 14px;
+      line-height: 1rem;
+      padding: 20px 0px;
+      border-top: 1px solid #D0D0CE;
+    }
+
+    li:first-of-type {
+      border: none;
+    }
+
+  }
+
+  span {
+    margin-right: 14px;
+    width: 20px;
+  }
+
+
+  
+
+}
