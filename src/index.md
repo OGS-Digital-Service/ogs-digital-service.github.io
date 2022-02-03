@@ -18,7 +18,16 @@ title: OGS Digital Service Design Lab
 # An Evolving Sandbox Environment
 This website represents a test and demonstration space for the New York State Digital & Media Services Center to test design system components, integrations, static site implementations, code snippets and other resusable content, among other technical things. All the work here is to be considered in-progress and in alpha stages.
 
-If you have any questions about the content or technical aspects here, please contact us at <digital.services@ogs.ny.gov>
+If you have any questions about the content or technical aspects here, please contact us at <digital.services@ogs.ny.gov>. Or if you want to collaborate in any way - we're super cool people who want the web to work best for real people.
+
+## Government as a Service
+We're going to be building some pretty awesome utilities here for the people of the State of New York. Government Digital services are an amazing way to innovate for the greater good. 
+
+Upcoming things for NYS:
+- Well formatted and accessible form input library including accessible validation and error states.
+- A content publishing pipeline for jamstack sites.
+- Jamstack sites!
+- Components you can just use anywhere.
 
 {{ card({ 
     frametitle:'A Row of Cards',
