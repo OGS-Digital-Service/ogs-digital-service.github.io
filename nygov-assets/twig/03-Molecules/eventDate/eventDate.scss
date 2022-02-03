@@ -97,6 +97,11 @@
 
     li:first-of-type {
       border: none;
+      padding-top: 0px;
+    }
+
+    li:last-of-type {
+      padding-bottom:0px;
     }
 
   }

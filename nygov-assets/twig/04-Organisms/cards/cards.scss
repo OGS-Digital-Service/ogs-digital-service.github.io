@@ -1,16 +1,27 @@
 @import "../../01-Base/breakpoints/breakpoints";
 
 .o-cardGlobalTablet {
-  @include breakpoint(desktop) {
-    max-width: 450px;
-    height: 100%;
-  }
-
+  display:flex;
+  flex-direction: column;
   overflow: hidden;
   background: #EDEDED;
   border-radius: 30px;
   position: relative;
   border: 1px solid transparent;
+
+  @include breakpoint(tablet) {
+    height: 100%;
+    flex-direction: row;
+  }
+
+  @include breakpoint(desktop) {
+    height: 100%;
+    flex-direction: column;
+  }
+
+  
+
+  
 
   &:hover {
     border: 1px solid #D0D0CE;
@@ -22,7 +33,6 @@
     border-radius:0px 0px 30px 30px;
 
     @include breakpoint(tablet) {
-      float: left;
       height: 240px;
       width: 240px;
       border-radius:0px 30px 30px 0px;
@@ -48,7 +58,7 @@
       height: 60px;
       border-radius: 15px;
       right: 6%;
-      bottom: 66%;
+      bottom: 64%;
       text-align: center;
       color: #000;
       display: flex;
@@ -67,7 +77,7 @@
       @include breakpoint(desktop) {
         position: absolute;
         right: 9%;
-        bottom: 68%;
+        bottom: 66%;
         left: unset;
         top: unset;
       }      
@@ -77,25 +87,21 @@
 
   .o-cardContent {
     @include breakpoint(tablet) {
-      float: left;
-      width: 66.6%;
-      min-height: 0; 
+     
     }
 
     @include breakpoint(desktop) {
-      float: none;
-      width: 99%;
-      height: auto;
+      
+     
     }
 
-    width: 100%;
-    display: inline-block; 
+   
+    display: block; 
   }
 
   .m-card__data {
     @include breakpoint(tablet) {
       width: 100%;
-      float: left;
       padding: 25px 25px;
     }
 
@@ -266,122 +272,6 @@
     a {
       text-decoration: none;
     }
-  }
-
-  .eventDescription {
-    height: 100%;
-
-    .a-card__label {
-      margin: 0 0 25px;
-    }
-
-    h3 {
-      margin: 0;
-    }
-
-    @include breakpoint(tablet) {
-      width: 55%;
-      float: left;
-      border-right: 1px solid #D0D0CE;
-
-      .a-card__label {
-        margin: 0 0 25px;
-      }
-    }
-
-    @include breakpoint(desktop) {
-      width: auto;
-      float: none;
-      border-right: none;
-
-      .a-card__label {
-        margin: 0 0 25px;
-      }
-
-      @supports (-webkit-line-clamp: 2) {
-        .a-card__label {
-          display: -webkit-box;
-          overflow: hidden;
-          -webkit-box-orient: vertical;
-          -webkit-line-clamp: 2;
-        }
-      }
-    }
-
-    .a-card__description {
-      margin: 0;
-      height: 4.0em;
-
-      @include breakpoint(tablet) {
-        height: 2.75em;
-      }
-
-      @include breakpoint(desktop) {
-        height: 4.0em;
-      }
-    }
-
-    @supports (-webkit-line-clamp: 3) {
-      .a-card__description {
-        display: -webkit-box;
-        overflow: hidden;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 3;
-      }
-
-      @include breakpoint(tablet) {
-        .a-card__description {
-          display: -webkit-box;
-          overflow: hidden;
-          -webkit-box-orient: vertical;
-          -webkit-line-clamp: 2;
-        }
-      }
-
-      @include breakpoint(desktop) {
-        .a-card__description {
-          display: -webkit-box;
-          overflow: hidden;
-          -webkit-box-orient: vertical;
-          -webkit-line-clamp: 3;
-        }
-      }
-    }
-
-  }
-
-  .eventDetails {
-    width: auto;
-    float: none;
-
-    @include breakpoint(tablet) {
-      width: 45%;
-      float: left;
-
-      .m-eventDate {
-        justify-content: center;
-      }
-    }
-
-    @include breakpoint(desktop) {
-      width: auto;
-      float: none;
-
-      .m-eventDate {
-        justify-content: left;
-      }
-    }
-
-    @supports (-webkit-line-clamp: 1) {
-      span {
-        display: -webkit-box;
-        overflow: hidden;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 1;
-      }
-    }
-
-    padding: 0;
   }
 
   @media print {

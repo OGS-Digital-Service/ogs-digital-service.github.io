@@ -39,13 +39,15 @@ title: NYGov Profile test
                         }
                     </style>
                     <article class="o-cardGlobalTablet">
+                        <div>
                         <a href="/article-page-test-card-style" class="o-cardLogo -index1 -paragraph1" aria-label="Card Footer Label for Test Article Page"></a>
+                        </div>
                         <div class="o-cardContent">
                             <div class="m-card__data">
                                 <h3>
                                     <a class="a-card__label" href="/article-page-test-card-style">Article page to test the card style</a>
                                 </h3>
-                                <div class="a-text__html a-card__description"><p>This is where the description goes for the article page. This will appear on the card.&nbsp;</p></div>
+                                <div class="a-text__html a-card__description"><p>This is where the description goes for the article page. This will appear on the card. his is where the description goes for the article page. This will appear on the card.</p></div>
                             </div>
                         </div>
                     </article>
@@ -73,11 +75,13 @@ title: NYGov Profile test
                         }
                     </style>
                     <article class="o-cardGlobalTablet">
+                        <div>
                         <a
                             href="/news/governor-hochul-announces-eight-counties-received-more-27-million-state-matching-funds-through"
                             class="o-cardLogo -index1 -paragraph3"
                             aria-label="Read the press release titled Counties Received Over $2.7M through Shared Services Initiative  "
                         ></a>
+                        </div>
                         <div class="o-cardContent">
                             <div class="m-card__data">
                                 <h3>
@@ -118,12 +122,14 @@ title: NYGov Profile test
                         }
                     </style>
                     <article class="o-cardGlobalTablet"><!-- EVENT CARD -->
+                        <div>
                         <a href="/events/scheduled-event-card-style" class="o-cardLogo -index3 -paragraph1" aria-label="View Event Details for Scheduled Event Card Style Event">
                                 <div class="bg-primary-gold o-eventDateOverlay" aria-hidden="true"> 
                                 <span class="a-date-13-extraBold text-uppercase">Feb </span>
                                 <span class="a-date-24-extraBold ">3  </span>
                                 </div>
                         </a>
+                        </div>
                         <div class="o-cardContent">
                             <div class="eventDescription">
                                 <div class="m-card__data">
@@ -168,7 +174,9 @@ title: NYGov Profile test
                         }
                     </style>
                     <article class="o-cardGlobalTablet">
+                        <div>
                         <a href="/services/service-card-style-navigator" class="o-cardLogo -index4 -paragraph1" aria-label="Card Footer Label"></a>
+                        </div>
                         <div class="o-cardContent">
                             <div class="innerWrap">
                                 <div class="linkDescription">
@@ -236,7 +244,9 @@ title: NYGov Profile test
                         }
                     </style>
                     <article class="o-cardGlobalTablet">
+                        <div>
                         <a href="/services/service-whitelisted" class="o-cardLogo -index5 -paragraph1" aria-label="Card Footer Label"></a>
+                        </div>
                         <div class="o-cardContent">
                             <div class="innerWrap">
                                 <div class="m-card__data">
@@ -306,7 +316,9 @@ title: NYGov Profile test
                         }
                     </style>
                     <article class="o-cardGlobalTablet">
+                        <div>
                         <a href="/programs/whitelisted-program-page" class="o-cardLogo -index7 -paragraph1" aria-label="Card Footer Label"></a>
+                        </div>
                         <div class="o-cardContent">
                             <div class="m-card__data">
                                 <h3>
@@ -340,7 +352,7 @@ title: NYGov Profile test
                         }
                     </style>
                     <article class="o-cardGlobalTablet">
-                        <div class="o-cardLogo -index8 -paragraph1" aria-label="Learn More about 511NY Mobile"></div>
+                        <div><div class="o-cardLogo -index8 -paragraph1" aria-label="Learn More about 511NY Mobile"></div></div>
                         <div class="o-cardContent">
                             <div class="m-card__data">
                                 <h3>
@@ -408,7 +420,7 @@ title: NYGov Profile test
                         }
                     </style>
                     <article class="o-cardGlobalTablet">
-                        <div class="o-cardLogo -index8 -paragraph1" aria-label="Learn More about 511NY Mobile"></div>
+                        <div><div class="o-cardLogo -index8 -paragraph1" aria-label="Learn More about 511NY Mobile"></div></div>
                         <div class="o-cardContent">
                             <div class="m-card__data">
                                 <h3>
