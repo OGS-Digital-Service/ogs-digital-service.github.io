@@ -176,6 +176,9 @@
 
   .m-eventDetails {
     width: 100%;
+    border: none;
+    padding-left:0;
+    margin-left:0;
 
     @include breakpoint(tablet) {
       width: 45%;
@@ -185,7 +188,10 @@
     }
 
     @include breakpoint(desktop) {
-      width: 100%
+      width: 100%;
+      border:none;
+      padding-left:0;
+      margin-left:0;
     }
   }
 
