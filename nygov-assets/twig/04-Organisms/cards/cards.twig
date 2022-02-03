@@ -46,7 +46,7 @@
 		{% if card.androidLink.url.path or card.iosLink.url.path %}
 			<div class="o-cardLogo -index{{cardNumber}} -paragraph{{paragraphNumber}}" aria-label="{{aria}}"></div>
 		{% else %}	
-			<a href="{{card.learnMore.url.path}}" class="o-cardLogo -index{{cardNumber}} -paragraph{{paragraphNumber}}" aria-label="{{aria}}"></a>
+			<div><a href="{{card.contentLink.path}}" class="o-cardLogo -index{{cardNumber}} -paragraph{{paragraphNumber}}" aria-label="{{aria}}"></a></div>
 		{% endif %}	
 		<div class="o-cardContent">
 			{% if card.chapterLinks is empty %}
@@ -131,7 +131,7 @@
 
 
 	<article class="o-cardGlobalTablet">
-		<a href="{{card.contentLink.path}}" class="o-cardLogo -index{{cardNumber}} -paragraph{{paragraphNumber}}" aria-label="{{aria}}"></a>
+		<div><a href="{{card.contentLink.path}}" class="o-cardLogo -index{{cardNumber}} -paragraph{{paragraphNumber}}" aria-label="{{aria}}"></a></div>
 		<div class="o-cardContent">
 			<div class="innerWrap">
 				{% if chapterLinks is empty %}
@@ -158,7 +158,7 @@
 	{% set label = card.cardNLabel ? card.cardNLabel : card.label %}
 	{% set description = card.description.processed %}
 	<article class="o-cardGlobalTablet">
-		<a href="{{card.contentLink.path}}" class="o-cardLogo -index{{cardNumber}} -paragraph{{paragraphNumber}}" aria-label="Read the press release titled {{label}} "></a>
+		<div><a href="{{card.contentLink.path}}" class="o-cardLogo -index{{cardNumber}} -paragraph{{paragraphNumber}}" aria-label="Read the press release titled {{label}} "></a></div>
 		<div class="o-cardContent">
 			{% include "@storybook/03-Molecules/cardContent/cardData.twig" with { content: card.cardNLabel, url: card.contentLink.path, text: description, contentDate: dateBold, dateTime:time, variant: "m-card__default"} %}
 		</div>
@@ -174,7 +174,7 @@
 	{% set footerText = card.footerText is empty ? 'Learn More' : card.footerText %}
 
 	<article class="o-cardGlobalTablet">
-		<a href="{{card.contentLink.path}}" class="o-cardLogo -index{{cardNumber}} -paragraph{{paragraphNumber}}" aria-label="{{aria}}"></a>
+		<div><a href="{{card.contentLink.path}}" class="o-cardLogo -index{{cardNumber}} -paragraph{{paragraphNumber}}" aria-label="{{aria}}"></a></div>
 		<div class="o-cardContent">
 			{% include "@storybook/03-Molecules/cardContent/cardData.twig" with { content: label, url: card.contentLink.path, text: description, variant: "m-card__default"} %}
 		</div>
@@ -190,7 +190,7 @@
 	{% set footerText = card.footerText is empty ? 'Learn More' : card.footerText %}
 
 	<article class="o-cardGlobalTablet">	
-		<a href="{{card.contentLink.path}}" class="o-cardLogo -index{{cardNumber}} -paragraph{{paragraphNumber}}" aria-label="{{aria}}"></a>
+		<div><a href="{{card.contentLink.path}}" class="o-cardLogo -index{{cardNumber}} -paragraph{{paragraphNumber}}" aria-label="{{aria}}"></a></div>
 		<div class="o-cardContent">
 			{% include "@storybook/03-Molecules/cardContent/cardData.twig" with { content: label, url: card.contentLink.path, text: description, variant: "m-card__default"} %}
 		</div>
@@ -218,23 +218,18 @@
 	{% set label = card.label %}
 	{% set description = card.description.processed %}
 	<article class="o-cardGlobalTablet">
-		<a href="{{card.contentLink.path}}" class="o-cardLogo -index{{cardNumber}} -paragraph{{paragraphNumber}}" aria-label="View Event Details for {{label}} Event">
+		<div><a href="{{card.contentLink.path}}" class="o-cardLogo -index{{cardNumber}} -paragraph{{paragraphNumber}}" aria-label="View Event Details for {{label}} Event">
 			<div class="bg-primary-gold o-eventDateOverlay" aria-hidden="true"> 
 				<span class="a-date-13-extraBold text-uppercase">{{monthStart}}</span>
 				<span class="a-date-24-extraBold ">{{dayStart}}</span>
 			</div>
-		</a>
+		</a></div>
 		<div class="o-cardContent">
 			{% if card.dateRange is empty %}
 				{% include "@storybook/03-Molecules/cardContent/cardData.twig" with { content: label, url: card.contentLink.path, text: description, variant: "m-card__default"} %}
 			{% endif %}
 			{% if card.dateRange %}
-				<div class="eventDescription">
-					{% include "@storybook/03-Molecules/cardContent/cardData.twig" with { content: label, url: card.contentLink.path, text: description, variant: "m-card__default"} %}
-				</div>
-				<div class="eventDetails">
-					{% include "@storybook/03-Molecules/eventDate/eventDate.twig" with { eventDetails: eventDetails, venue: card.venue, variant:"m-eventDate" } %}
-				</div>
+				{% include "@storybook/03-Molecules/cardContent/cardData.twig" with { content: label, url: card.contentLink.path, text: description, variant: "m-card__event"} %}
 			{% endif %}
 		</div>
 	</article>

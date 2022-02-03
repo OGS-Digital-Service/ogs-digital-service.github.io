@@ -31,6 +31,24 @@
   </div>
 {% endif %}
 
+
+{% if variant =="m-card__event" %} 
+	<div class="m-card__data"> 
+		<div class="m-cardTabletWrap">
+			<div class="eventDescription">
+			<h3>
+				{% include '@storybook/02-Atoms/link/link.twig' with { content: label, url:url, variant: "a-card__label"} %}
+			</h3>
+				{% include "@storybook/02-Atoms/text/text.twig" with { text: description, classNames: "a-card__description", variant: "html"} %}
+			</div>
+			<div class="eventDetails">
+				{% include "@storybook/03-Molecules/eventDate/eventDate.twig" with { eventDetails: eventDetails, venue: card.venue, variant:"m-eventDate" } %}
+			</div>
+		</div>
+	</div>
+{% endif %}
+
+
 {% if variant =="m-card__featured" %}
 	<div class="m-card__data">
 		<div>{% include "@storybook/02-Atoms/title/title.twig" with { title: title, classNames:"a-highlight__title", variant:"title" } %}</div>
