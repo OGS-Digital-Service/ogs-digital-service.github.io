@@ -138,12 +138,7 @@
 					{% include "@storybook/03-Molecules/cardContent/cardData.twig" with { content: label, url: card.contentLink.path, text: description, variant: "m-card__default"} %}
 				{% endif %}
 				{% if chapterLinks %}
-					<div class="linkDescription">
-						{% include "@storybook/03-Molecules/cardContent/cardData.twig" with { content: label, url: card.contentLink.path, text: description, variant: "m-card__default"} %}
-					</div>
-					<div class="o-cardLinksWrapper">
-						{% include "@storybook/03-Molecules/chapterLinks/chapterLinks.twig" with { chapterLinks: chapterLinks, variant: "m-card__chapterLinks" } %}
-					</div>
+					{% include "@storybook/03-Molecules/cardContent/cardData.twig" with { content: label, url: card.contentLink.path, text: description, variant: "m-card__service"} %}
 				{% endif %}
 			</div>
 		</div>

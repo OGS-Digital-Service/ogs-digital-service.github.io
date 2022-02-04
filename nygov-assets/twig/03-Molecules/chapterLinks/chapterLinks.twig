@@ -1,8 +1,8 @@
 {% if variant == "m-card__chapterLinks" %}
-  <div>
+  <div> 
     <ul class= "m-card__chapterLinks">
     {% for item in chapterLinks %}
-      <li><a href="{{item.url.path}}" {{ (loop.index == 3) ? "class=m-card__lastLink" : ""}}>{% include "@storybook/02-Atoms/text/text.twig" with { text: item.linkText, classNames:"a-card__links", variant: "string" } %} {% include "@storybook/02-Atoms/icons/icons.twig" with { icon: "link" } %} </a></li>
+      <li><a href="{{item.url.path}}" aria-label="{{item.linkText}} quicklink for {{card.label}}" {{ (loop.index == 3) ? "class=m-card__lastLink" : ""}}> {{item.linkText}} <span class="icon-play-button-arrow text-primary-blue" aria-hidden="true"></span></a></li>
     {% endfor %}
     </ul>
   </div>

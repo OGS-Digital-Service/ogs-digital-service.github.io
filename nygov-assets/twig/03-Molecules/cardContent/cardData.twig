@@ -32,16 +32,33 @@
 {% endif %}
 
 
-{% if variant =="m-card__event" %} 
-	<div class="m-card__data"> 
+{% if variant =="m-card__service" %}
+	<div class="m-card__data">
 		<div class="m-cardTabletWrap">
-			<div class="eventDescription">
+			<div class="m-cardSectionDescription">
 			<h3>
 				{% include '@storybook/02-Atoms/link/link.twig' with { content: label, url:url, variant: "a-card__label"} %}
 			</h3>
 				{% include "@storybook/02-Atoms/text/text.twig" with { text: description, classNames: "a-card__description", variant: "html"} %}
 			</div>
-			<div class="eventDetails">
+			<div class="m-cardSectionDetails">
+				{% include "@storybook/03-Molecules/chapterLinks/chapterLinks.twig" with { chapterLinks: chapterLinks, variant: "m-card__chapterLinks" } %}
+			</div>
+		</div>
+	</div>
+{% endif %}
+
+
+{% if variant =="m-card__event" %} 
+	<div class="m-card__data"> 
+		<div class="m-cardTabletWrap">
+			<div class="m-cardSectionDescription">
+			<h3>
+				{% include '@storybook/02-Atoms/link/link.twig' with { content: label, url:url, variant: "a-card__label"} %}
+			</h3>
+				{% include "@storybook/02-Atoms/text/text.twig" with { text: description, classNames: "a-card__description", variant: "html"} %}
+			</div>
+			<div class="m-cardSectionDetails">
 				{% include "@storybook/03-Molecules/eventDate/eventDate.twig" with { eventDetails: eventDetails, venue: card.venue, variant:"m-eventDate" } %}
 			</div>
 		</div>

@@ -133,13 +133,13 @@ title: NYGov Profile test
                         <div class="o-cardContent">
                                 <div class="m-card__data">
                                     <div class="m-cardTabletWrap"><!-- wrap the inner card details -->
-                                        <div class="m-eventDescription"><!-- event description -->
+                                        <div class="m-cardSectionDescription"><!-- event description -->
                                             <h3>
                                                 <a class="a-card__label" href="/events/scheduled-event-card-style">Scheduled Event Card Style</a>
                                             </h3>
                                             <div class="a-text__html a-card__description"><p>This is where the description goes for the scheduled event.</p></div>
                                         </div><!-- event description -->
-                                        <div class="m-eventDetails"><!-- EVENT info -->
+                                        <div class="m-cardSectionDetails"><!-- EVENT info -->
                                             <div class="m-eventInfo">
                                                 <ul class="">
                                                     <li class="text-bold"><span class="icon-calendar text-primary-blue" aria-hidden="true"></span> Feb 3, 2022 — Feb 15, 2022</li>
@@ -180,43 +180,37 @@ title: NYGov Profile test
                         <a href="/services/service-card-style-navigator" class="o-cardLogo -index4 -paragraph1" aria-label="Card Footer Label"></a>
                         </div>
                         <div class="o-cardContent">
-                            <div class="innerWrap">
-                                <div class="linkDescription">
-                                    <div class="m-card__data">
+                            <div class="m-card__data">
+                                <div class="m-cardTabletWrap"><!-- wrap the inner card details -->
+                                    <div class="m-cardSectionDescription"><!-- event description -->
                                         <h3>
                                             <a class="a-card__label" href="/services/service-card-style-navigator">Service Card Style (Navigator On)</a>
                                         </h3>
                                         <div class="a-text__html a-card__description"><p>This is the service card style.</p></div>
                                     </div>
-                                </div>
-                                <div class="o-cardLinksWrapper">
-                                    <div>
-                                        <ul class="m-card__chapterLinks">
-                                            <li>
-                                                <a href="/services/service-card-style-navigator#chapter_1">
-                                                    <div class="a-text__string a-card__links">Chapter 1</div>
-                                                    <span class="a-link__icon">
-                                                        <span class="fas fa-caret-right" aria-hidden="true"></span>
-                                                    </span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/services/service-card-style-navigator#chapter_2">
-                                                    <div class="a-text__string a-card__links">Chapter 2</div>
-                                                    <span class="a-link__icon">
-                                                        <span class="fas fa-caret-right" aria-hidden="true"></span>
-                                                    </span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/services/service-card-style-navigator#chapter_3" class="m-card__lastLink">
-                                                    <div class="a-text__string a-card__links">Chapter 3</div>
-                                                    <span class="a-link__icon">
-                                                        <span class="fas fa-caret-right" aria-hidden="true"></span>
-                                                    </span>
-                                                </a>
-                                            </li>
-                                        </ul>
+                                    <div class="m-cardSectionDetails">
+                                        <div class="m-card__chapterLinks">
+                                            <ul class="">
+                                                <li>
+                                                    <a href="/services/service-card-style-navigator#chapter_1" aria-label="Chapter 1 quicklink for Service Card Style (Navigator On)">
+                                                        Chapter 1
+                                                        <span class="icon-play-button-arrow text-primary-blue" aria-hidden="true"></span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="/services/service-card-style-navigator#chapter_2" aria-label="Chapter 2 quicklink for Service Card Style (Navigator On)">
+                                                        Chapter 2
+                                                        <span class="icon-play-button-arrow text-primary-blue" aria-hidden="true"></span>
+                                                    </a>   
+                                                </li>
+                                                <li>
+                                                    <a href="/services/service-card-style-navigator#chapter_3" aria-label="Chapter 3 quicklink for Service Card Style (Navigator On)">
+                                                        Chapter 3
+                                                        <span class="icon-play-button-arrow text-primary-blue" aria-hidden="true"></span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -284,7 +278,7 @@ title: NYGov Profile test
                         }
                     </style>
                     <article class="o-cardGlobalTablet">
-                        <a href="/programs/program-page-card-style" class="o-cardLogo -index6 -paragraph1" aria-label="Card Footer Label"></a>
+                        <div><a href="/programs/program-page-card-style" class="o-cardLogo -index6 -paragraph1" aria-label="Card Footer Label"></a></div>
                         <div class="o-cardContent">
                             <div class="m-card__data">
                                 <h3>
