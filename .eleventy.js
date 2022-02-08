@@ -1,3 +1,4 @@
+const yaml = require("js-yaml");
 module.exports = function(eleventyConfig){
     eleventyConfig.setTemplateFormats([
         "jpg",
@@ -8,6 +9,8 @@ module.exports = function(eleventyConfig){
         "png",
         "css"
       ]);
+
+      eleventyConfig.addDataExtension("yaml", contents => yaml.load(contents));
 
     return {
         markdownTemplateEngine: "njk",    
@@ -20,4 +23,4 @@ module.exports = function(eleventyConfig){
     },
     }
    
-}; 
+};

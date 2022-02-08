@@ -1,6 +1,8 @@
 ---
 layout: layout.njk
 title: The NYS Design Patterns
+data: datatest
+overridecolor:
 ---
 {% from './_includes/_components.njk' import breadcrumbs,button,buttonhero,card,hero,heroold,categorytiles,iconframe,iconframesix,filtercard,languageaccess %} 
 
@@ -34,18 +36,18 @@ title: The NYS Design Patterns
 # In Progress demo page
 
 
-<a href="" id="demo"></a>
-<script>
-var newURL = window.location.protocol + "//" + window.location.host + window.location.pathname + window.location.search
-var otherURL = window.location.protocol + "//" + 'ogs-digital-services.github.io' + window.location.pathname + window.location.search
-document.getElementById("demo").innerHTML = otherURL;
-document.getElementById("demo").setAttribute('href', otherURL);
-</script>
+
+A list of buildings
+<ul>
+
+{% for b in datatest %}
+
+<li>{% if overridecolor != null %} {{overridecolor}}{% else %} {{b.color}} {% endif %}</li>
 
 
+{% endfor %}
 
-
-var url = window.location.protocol + "//" + location.host.split(":")[0];
+</ul>
 
 
 
