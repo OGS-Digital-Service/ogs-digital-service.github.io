@@ -23,12 +23,6 @@ If you have any questions about the content or technical aspects here, please co
 ## Government as a Service
 We're going to be building some pretty awesome utilities here for the people of the State of New York. Government Digital services are an amazing way to innovate for the greater good. 
 
-<!-- Upcoming things for NYS:
-- Well formatted and accessible form input library including accessible validation and error states.
-- A content publishing pipeline for jamstack sites.
-- Jamstack sites!
-- Components you can just use anywhere. -->
-
 {{ card({ 
     frametitle:'A Row of Cards',
     cards: [
