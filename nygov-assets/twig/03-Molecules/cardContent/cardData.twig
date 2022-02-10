@@ -122,7 +122,7 @@
 					{% if socialLink.url.path and loop.index <= 5 %}
 						{% for socialMedias in socialMediaArray %}
 							{% if socialMedias.name in socialLink.url.path or socialMedias.url in socialLink.url.path or socialMedias.shortUrl in socialLink.url.path %}
-								<a href="{{ socialLink.url.path }}"><span class="{{ socialMedias.className }}"></span></a>
+								<a href="{{ socialLink.url.path }}"><span class="{{ socialMedias.className }}"></span><span class="visually-hidden">this is a link to {{socialMedias.className}}</span></a>
 							{% endif %}
 						{% endfor %}
 					{% endif %}
