@@ -195,15 +195,23 @@
   font-family: "Proxima Nova";
   font-weight: 600;
   border: 1px solid;
+  border-radius: 15px;
   border-color: black;
   text-decoration: none;
   transition: 150ms ease-in-out;
   text-transform: uppercase;
   letter-spacing: 2px;
   padding: 0 20px;
+  max-width: 250px;
+  
 
   @include breakpoint(tablet) {
-    width: 31%;
+    
+    
+  }
+
+  @include breakpoint(desktop) {
+    
   }
 
   &:hover {

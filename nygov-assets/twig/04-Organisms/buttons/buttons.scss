@@ -4,10 +4,9 @@
 @import "../../01-Base/backgrounds/colors/colors.scss";
 @import "../../01-Base/typography/weight/weight.scss";
 .o-buttons__wrapper {
-  padding: 0 8% 50px 8%;
-  @include breakpoint(tablet) {
-    padding: 0 8% 60px 8%;
-  }
+  display: flex;
+  justify-content: center;
+
   &.has-webform {
     .-buttonGroup {
       display: none;
@@ -49,6 +48,7 @@
           .button {
             border-color: black;
             color: black;
+            border-radius: 15px;
             &:hover {
               background-color: #000;
               color: #fff;
@@ -66,7 +66,6 @@
   }
   .o-buttons__titles {
     position: relative;
-    margin-bottom: 30px;
   }
   .o-buttons__title {
     margin: 0 0 10px 0;
@@ -108,28 +107,52 @@
     }
     &.-buttonGroup {
       flex-direction: column;
+      align-items: center;
       @include breakpoint(tablet) {
         flex-direction: row;
       }
     }
     a {
-      margin: 0 0 20px 0;
+      margin: 0;
+      margin-top: 25px;
       text-transform: uppercase;
       color: #fff;
       border-color: #fff;
       @extend .text-bold;
-      @include breakpoint(tablet) {
-        margin: 0 7px;
-      }
       &:hover {
         background-color: #00000060;
       }
-    }
-    a:last-child {
-      margin: 0;
-      @include breakpoint(tablet) {
-        margin: 0 7px;
+      &:first-of-type {
+        margin-right: 0px;
+        margin-top: 0px;
       }
+
+      &:last-of-type {
+        margin-left: 0px;
+      }
+      @include breakpoint(tablet) {
+        &:first-of-type {
+          margin-right: 40px;
+        }
+  
+        &:last-of-type {
+          margin-left: 40px;
+        }
+        margin-top: 0px;
+      }
+      @include breakpoint(desktop) {
+        &:first-of-type {
+          margin-right: 50px;
+        }
+  
+        &:last-of-type {
+          margin-left: 50px;
+        }
+        margin-top: 0px;
+      }
+
+
+
     }
   }
   .-attachedForm {

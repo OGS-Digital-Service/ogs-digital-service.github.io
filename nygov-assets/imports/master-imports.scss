@@ -24,6 +24,7 @@
 @import "../twig/04-Organisms/cards/cards";
 @import "../twig/04-Organisms/cards/heroCard";
 @import "../twig/04-Organisms/cards/quickCard";
+@import "../twig/04-Organisms/buttons/buttons";
 @import "../twig/05-Templates/frames/frames";
 
 html {
@@ -33,6 +34,16 @@ html {
     font-weight: normal;
     box-sizing: border-box;
   }
+ 
+
+.visually-hidden {
+    position: absolute !important;
+    overflow: hidden;
+    clip: rect(1px,1px,1px,1px);
+    width: 1px;
+    height: 1px;
+    word-wrap: normal;
+} 
 
 
 /*!
