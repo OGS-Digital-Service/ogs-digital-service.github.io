@@ -52,7 +52,6 @@ A list of buildings
 
 
 
-
 {{ filtercard({ 
     heading:"Simple JS data filter",
     filtercards: [
