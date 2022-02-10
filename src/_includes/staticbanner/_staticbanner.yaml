@@ -1,0 +1,16 @@
+params:
+- name: title
+  type: string
+  required: true
+- name: items
+  type: array
+  required: true
+  params:
+  - name: link
+    type: string
+    required: false
+  - name: text
+    type: string
+    required: false
+  
+

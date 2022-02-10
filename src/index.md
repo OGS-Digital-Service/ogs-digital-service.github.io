@@ -2,7 +2,7 @@
 layout: layout-homepage.njk
 title: OGS Digital Service Design Lab
 ---
-{% from './_includes/_components.njk' import button,buttonhero,card,hero,breadcrumbs,categorytiles %} 
+{% from './_includes/_components.njk' import button,buttonhero,card,hero,breadcrumbs,categorytiles,staticbanner %} 
 
 {{ hero({ 
     title: "OGS Digital Service Design Lab",
@@ -54,4 +54,7 @@ We're going to be building some pretty awesome utilities here for the people of 
       link: "/language-access-cookie-banner"
     }
   ]
+})}}
+
+{{ staticbanner({ 
 })}}
