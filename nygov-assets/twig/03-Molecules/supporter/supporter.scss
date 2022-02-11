@@ -6,13 +6,7 @@
   @extend .text-proxima;
   padding: 35px 45px;
   height: 320px;
-  border: 1px solid #457AA5;
-  &.bg-primary-gold {
-    border: 1px solid #FACE00;
-  }
-  &.bg-primary-gray {
-    border: 1px solid #EDEDED;
-  }
+  border: 1px solid #ededed;
   width: 100%;
   display: flex;
   flex-direction: column;
