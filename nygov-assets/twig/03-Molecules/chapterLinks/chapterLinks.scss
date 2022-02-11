@@ -46,14 +46,20 @@
 
       &:hover {
         color:#007AC2;
+        text-decoration: underline;
       }
 
       &:focus {
         color:#007AC2;
+        text-decoration: underline;
       }
 
       span {
         margin-left: auto;
+
+        &:before {
+          display: inline-block;
+        }
       }
     }
 
