@@ -92,7 +92,14 @@
     text-align: center;
     margin: 0 0 30px 0;
     line-height: 22px;
+    font-size: 16px;
     @extend .text-primary-gold-light;
+
+    @include breakpoint(desktop) {
+      line-height: 25px;
+      font-size: 18px;
+    }
+
   }
   .o-buttons__group {
     display: flex;
@@ -155,6 +162,21 @@
 
     }
   }
+
+  .o-buttons.-content {
+    padding-bottom: 60px;
+    margin: 0 25px;
+
+    @include breakpoint(tablet) {
+      margin: 0 35px;
+      }
+
+    @include breakpoint(desktop) {
+      margin: 0 60px;
+      }
+
+  }
+
   .-attachedForm {
     max-width: 662px;
     margin: 0 auto;
