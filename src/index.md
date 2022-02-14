@@ -1,5 +1,5 @@
 ---
-layout: layout-homepage.njk
+layout: layout.njk
 title: OGS Digital Service Design Lab
 ---
 {% from './_includes/_components.njk' import button,buttonhero,card,hero,breadcrumbs,categorytiles,staticbanner %} 

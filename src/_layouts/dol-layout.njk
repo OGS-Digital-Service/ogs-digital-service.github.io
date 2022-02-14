@@ -14,6 +14,7 @@
     
   </head>
   <body class="">
+  <a href="#main-site-content-for-skiplink" class="sr-only focus:not-sr-only text-blue-700 underline">Skip to Main Content</a>
     {% from '../_includes/_components.njk' import unavcurrent,nav,unavcurrentfooter,footer %}
      {{ unavcurrent({ 
       })}}
@@ -25,7 +26,7 @@
     color: "bg-business-first"
       })}}
    
-    <main class="mx-8 md:mx-20">
+    <main class="mx-8 md:mx-20" id="main-site-content-for-skiplink">
     {{ content | safe }}
     </main>
 
