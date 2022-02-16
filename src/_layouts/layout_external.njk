@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% include '_css-link.njk' %}
+    {% include '_js-link.njk' %}
+    <title>{{ title }}</title>
+  </head>
+  <body class="">
+    <a href="#main-site-content-for-skiplink" class="sr-only focus:not-sr-only text-blue-700 underline">Skip to Main Content</a>
+  
+    <main class="mx-8 md:mx-20" id="main-site-content-for-skiplink">
+    {{ content | safe }}
+    </main>
+   
+  </body>
+</html>

@@ -1,14 +1,5 @@
-<section class="mb-4{%- if params.image %} py-6 -mx-8 md:-mx-20  md:py-10 lg:py-20 bg-no-repeat md:bg-center{% else %} bg-admin-second py-4 -mx-8 md:-mx-20 {% endif -%}" style="{%- if params.image %}background-image:url(img/{{params.image}});background-size:100%;{% else %}{% endif -%}">
-<div class="mt-4 mb-4 mx-8 md:mx-16 rounded-xl">
-<div class="md:w-1/2 bg-admin-third rounded-xl">
-<h1 class="text-3xl md:text-4xl font-extrabold text-black p-4 md:leading-tight">{{ params.title | truncate(80) }} </h1>
-{%- if params.subtitle %}<p class="text-black p-4 md:text-lg">{{ params.subtitle | truncate(200) }}</p>{% else %}{% endif -%}
-<div class="flex flex-col lg:flex-row lg:flex-grow">
-{%- if params.buttontext %}
-<a href="{{ params.link }}" class="lg:w-1/2 p-2 my-2 mx-4 whitespace-nowrap bg-admin-first text-center rounded hover:bg-gray-900 no-underline hover:underline text-white hover:text-white uppercase tracking-widest text-sm font-bold border border-solid border-white" aria-label="{{ params.arialabel }}"> {{ params.buttontext | truncate(25) }} </a>{% else %}{% endif -%}
-{%- if params.buttontext2 %}
-<a href="{{ params.link2 }}" class="lg:w-1/2 p-2 my-2 mx-4 whitespace-nowrap bg-admin-first text-center rounded hover:bg-gray-900 no-underline hover:underline text-white hover:text-white uppercase tracking-widest text-sm font-bold border border-solid border-white" aria-label="{{ params.arialabel2 }}"> {{ params.buttontext2 | truncate(25) }} </a>{% else %}{% endif -%}
-</div>
-</div>
-</div>
+<section class="flex bg-admin-first">
+    <div class="">
+    <h2 class="">Main Hero Title Text</h2>
+    </div>
 </section>
