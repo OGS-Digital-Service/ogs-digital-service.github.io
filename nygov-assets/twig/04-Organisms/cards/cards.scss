@@ -58,7 +58,7 @@
       height: 60px;
       border-radius: 15px;
       right: 6%;
-      bottom: 64%;
+      bottom: 60%;
       text-align: center;
       color: #000;
       display: flex;
@@ -77,7 +77,7 @@
       @include breakpoint(desktop) {
         position: absolute;
         right: 9%;
-        bottom: 66%;
+        bottom: 60%;
         left: unset;
         top: unset;
       }      
