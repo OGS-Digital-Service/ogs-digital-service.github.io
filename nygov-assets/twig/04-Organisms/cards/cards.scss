@@ -8,10 +8,13 @@
   border-radius: 30px;
   position: relative;
   border: 1px solid transparent;
+  max-width: 400px;
+  margin: 0 auto;
 
   @include breakpoint(tablet) {
     height: 100%;
     flex-direction: row;
+    max-width: 100%;
   }
 
   @include breakpoint(desktop) {
@@ -53,12 +56,14 @@
     text-decoration: none !important;
 
     .o-eventDateOverlay {
-      position: absolute;
+      position: relative;
       width: 60px;
       height: 60px;
       border-radius: 15px;
-      right: 6%;
-      bottom: 60%;
+      right: 0;
+      bottom: 0;
+      top:60%;
+      left: 78%;
       text-align: center;
       color: #000;
       display: flex;
@@ -67,20 +72,18 @@
       
 
       @include breakpoint(tablet) {
-        position: relative;
-        right: unset;
-        bottom: unset;
         left: 65%;
         top: 65%;
       }
   
       @include breakpoint(desktop) {
-        position: absolute;
-        right: 9%;
-        bottom: 60%;
-        left: unset;
-        top: unset;
-      }      
+        left: 75%;
+        top: 60%;
+      } 
+      
+      @include breakpoint(smallMobileOnly) {
+        left: 71%;
+      }
 
     }
   }

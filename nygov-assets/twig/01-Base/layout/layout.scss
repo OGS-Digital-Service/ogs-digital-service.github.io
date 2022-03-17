@@ -63,6 +63,22 @@
   overflow: hidden;
 }
 
+.aboslute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.w-full {
+  width: 100%;
+}
+
 // Flexbox - Tablet
 
 .tablet\:flex-row {

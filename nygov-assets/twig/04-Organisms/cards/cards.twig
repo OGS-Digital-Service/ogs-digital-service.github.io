@@ -214,9 +214,11 @@
 	{% set description = card.description.processed %}
 	<article class="o-cardGlobalTablet">
 		<div><a href="{{card.contentLink.path}}" class="o-cardLogo -index{{cardNumber}} -paragraph{{paragraphNumber}}" aria-label="View Event Details for {{label}} Event">
+			<div class="absolute h-full">
 			<div class="bg-primary-gold o-eventDateOverlay" aria-hidden="true"> 
 				<span class="a-date-13-extraBold text-uppercase">{{eventDetails.monthStart}}</span>
 				<span class="a-date-24-extraBold ">{{eventDetails.dayStart}}</span>
+			</div>
 			</div>
 		</a></div>
 		<div class="o-cardContent">
