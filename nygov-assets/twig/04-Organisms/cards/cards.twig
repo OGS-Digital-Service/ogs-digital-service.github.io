@@ -46,7 +46,7 @@
 		{% if card.androidLink.url.path or card.iosLink.url.path %}
 			<div class="o-cardLogo -index{{cardNumber}} -paragraph{{paragraphNumber}}" aria-label="{{aria}}"></div>
 		{% else %}	
-			<div><a href="{{card.contentLink.path}}" class="o-cardLogo -index{{cardNumber}} -paragraph{{paragraphNumber}}" aria-label="{{aria}}"></a></div>
+			<div><a href="{{card.contentLink.path}}" class="o-cardLogo -index{{cardNumber}} -paragraph{{paragraphNumber}}" aria-label="{{aria}}" aria-hidden="true" tabindex="-1"></a></div>
 		{% endif %}	
 		<div class="o-cardContent">
 			{% if card.chapterLinks is empty %}
@@ -131,7 +131,7 @@
 
 
 	<article class="o-cardGlobalTablet">
-		<div><a href="{{card.contentLink.path}}" class="o-cardLogo -index{{cardNumber}} -paragraph{{paragraphNumber}}" aria-label="{{aria}}"></a></div>
+		<div><a href="{{card.contentLink.path}}" class="o-cardLogo -index{{cardNumber}} -paragraph{{paragraphNumber}}" aria-label="{{aria}}" aria-hidden="true" tabindex="-1"></a></div>
 		<div class="o-cardContent">
 			<div class="innerWrap">
 				{% if chapterLinks is empty %}
@@ -153,7 +153,7 @@
 	{% set label = card.cardNLabel ? card.cardNLabel : card.label %}
 	{% set description = card.description.processed %}
 	<article class="o-cardGlobalTablet">
-		<div><a href="{{card.contentLink.path}}" class="o-cardLogo -index{{cardNumber}} -paragraph{{paragraphNumber}}" aria-label="Read the press release titled {{label}} "></a></div>
+		<div><a href="{{card.contentLink.path}}" class="o-cardLogo -index{{cardNumber}} -paragraph{{paragraphNumber}}" aria-label="Read the press release titled {{label}} " aria-hidden="true" tabindex="-1"></a></div>
 		<div class="o-cardContent">
 			{% include "@storybook/03-Molecules/cardContent/cardData.twig" with { content: card.cardNLabel, url: card.contentLink.path, text: description, contentDate: dateBold, dateTime:time, variant: "m-card__default"} %}
 		</div>
@@ -169,7 +169,7 @@
 	{% set footerText = card.footerText is empty ? 'Learn More' : card.footerText %}
 
 	<article class="o-cardGlobalTablet">
-		<div><a href="{{card.contentLink.path}}" class="o-cardLogo -index{{cardNumber}} -paragraph{{paragraphNumber}}" aria-label="{{aria}}"></a></div>
+		<div><a href="{{card.contentLink.path}}" class="o-cardLogo -index{{cardNumber}} -paragraph{{paragraphNumber}}" aria-label="{{aria}}" aria-hidden="true" tabindex="-1"></a></div>
 		<div class="o-cardContent">
 			{% include "@storybook/03-Molecules/cardContent/cardData.twig" with { content: label, url: card.contentLink.path, text: description, variant: "m-card__default"} %}
 		</div>
@@ -185,7 +185,7 @@
 	{% set footerText = card.footerText is empty ? 'Learn More' : card.footerText %}
 
 	<article class="o-cardGlobalTablet">	
-		<div><a href="{{card.contentLink.path}}" class="o-cardLogo -index{{cardNumber}} -paragraph{{paragraphNumber}}" aria-label="{{aria}}"></a></div>
+		<div><a href="{{card.contentLink.path}}" class="o-cardLogo -index{{cardNumber}} -paragraph{{paragraphNumber}}" aria-label="{{aria}}" aria-hidden="true" tabindex="-1"></a></div>
 		<div class="o-cardContent">
 			{% include "@storybook/03-Molecules/cardContent/cardData.twig" with { content: label, url: card.contentLink.path, text: description, variant: "m-card__default"} %}
 		</div>
@@ -213,7 +213,7 @@
 	{% set label = card.label %}
 	{% set description = card.description.processed %}
 	<article class="o-cardGlobalTablet">
-		<div><a href="{{card.contentLink.path}}" class="o-cardLogo -index{{cardNumber}} -paragraph{{paragraphNumber}}" aria-label="View Event Details for {{label}} Event">
+		<div><a href="{{card.contentLink.path}}" class="o-cardLogo -index{{cardNumber}} -paragraph{{paragraphNumber}}" aria-label="View Event Details for {{label}} Event" tabindex="-1" aria-hidden="true">
 			<div class="absolute h-full">
 			<div class="bg-primary-gold o-eventDateOverlay" aria-hidden="true"> 
 				<span class="a-date-13-extraBold text-uppercase">{{eventDetails.monthStart}}</span>
@@ -247,7 +247,7 @@
 			{% if card.androidLink.url.path or card.iosLink.url.path %}
 				<div class="o-cardLogo -index{{cardNumber}} -paragraph{{paragraphNumber}}" aria-label="{{aria}}"></div>
 			{% else %}	
-				<a href="{{url}}" class="o-cardLogo -index{{cardNumber}} -paragraph{{paragraphNumber}}" aria-label="{{aria}}"></a>
+				<a href="{{url}}" class="o-cardLogo -index{{cardNumber}} -paragraph{{paragraphNumber}}" aria-label="{{aria}}" aria-hidden="true" tabindex="-1"></a>
 			{% endif %}	
 			<div class="o-cardContent">
 				{% if card.keywords[0].entity.keyword %}

@@ -40,7 +40,7 @@ title: NYGov Profile test
                     </style>
                     <article class="o-cardGlobalTablet">
                         <div>
-                        <a href="/article-page-test-card-style" class="o-cardLogo -index1 -paragraph1" aria-label="Card Footer Label for Test Article Page"></a>
+                        <a href="/article-page-test-card-style" class="o-cardLogo -index1 -paragraph1" aria-label="Card Footer Label for Test Article Page" aria-hidden="true" tabindex="-1"></a>
                         </div>
                         <div class="o-cardContent">
                             <div class="m-card__data">
@@ -80,6 +80,7 @@ title: NYGov Profile test
                             href="/news/governor-hochul-announces-eight-counties-received-more-27-million-state-matching-funds-through"
                             class="o-cardLogo -index1 -paragraph3"
                             aria-label="Read the press release titled Counties Received Over $2.7M through Shared Services Initiative  "
+                            aria-hidden="true" tabindex="-1"
                         ></a>
                         </div>
                         <div class="o-cardContent">
@@ -123,7 +124,7 @@ title: NYGov Profile test
                     </style>
                     <article class="o-cardGlobalTablet"><!-- EVENT CARD -->
                         <div>
-                        <a href="/events/scheduled-event-card-style" class="o-cardLogo -index3 -paragraph1" aria-label="View Event Details for Scheduled Event Card Style Event">
+                        <a href="/events/scheduled-event-card-style" class="o-cardLogo -index3 -paragraph1" aria-label="View Event Details for Scheduled Event Card Style Event" aria-hidden="true" tabindex="-1">
                                 <div class="absolute h-full">
                                 <div class="bg-primary-gold o-eventDateOverlay" aria-hidden="true"> 
                                 <span class="a-date-13-extraBold text-uppercase">Feb </span>
@@ -179,7 +180,7 @@ title: NYGov Profile test
                     </style>
                     <article class="o-cardGlobalTablet">
                         <div>
-                        <a href="/services/service-card-style-navigator" class="o-cardLogo -index4 -paragraph1" aria-label="Card Footer Label"></a>
+                        <a href="/services/service-card-style-navigator" class="o-cardLogo -index4 -paragraph1" aria-label="Card Footer Label" aria-hidden="true" tabindex="-1"></a>
                         </div>
                         <div class="o-cardContent">
                             <div class="m-card__data">
@@ -243,7 +244,7 @@ title: NYGov Profile test
                     </style>
                     <article class="o-cardGlobalTablet">
                         <div>
-                        <a href="/services/service-whitelisted" class="o-cardLogo -index5 -paragraph1" aria-label="Card Footer Label"></a>
+                        <a href="/services/service-whitelisted" class="o-cardLogo -index5 -paragraph1" aria-label="Card Footer Label" aria-hidden="true" tabindex="-1"></a>
                         </div>
                         <div class="o-cardContent">
                             <div class="innerWrap">
@@ -280,7 +281,7 @@ title: NYGov Profile test
                         }
                     </style>
                     <article class="o-cardGlobalTablet">
-                        <div><a href="/programs/program-page-card-style" class="o-cardLogo -index6 -paragraph1" aria-label="Card Footer Label"></a></div>
+                        <div><a href="/programs/program-page-card-style" class="o-cardLogo -index6 -paragraph1" aria-label="Card Footer Label" aria-hidden="true" tabindex="-1"></a></div>
                         <div class="o-cardContent">
                             <div class="m-card__data">
                                 <h3>
@@ -315,7 +316,7 @@ title: NYGov Profile test
                     </style>
                     <article class="o-cardGlobalTablet">
                         <div>
-                        <a href="/programs/whitelisted-program-page" class="o-cardLogo -index7 -paragraph1" aria-label="Card Footer Label"></a>
+                        <a href="/programs/whitelisted-program-page" class="o-cardLogo -index7 -paragraph1" aria-label="Card Footer Label" aria-hidden="true" tabindex="-1"></a>
                         </div>
                         <div class="o-cardContent">
                             <div class="m-card__data">
