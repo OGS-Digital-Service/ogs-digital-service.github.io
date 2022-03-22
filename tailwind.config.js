@@ -1,12 +1,10 @@
 module.exports = {
-  purge: [
-    'src/translate-banner.md',
-    'src/language-access-alt.md'
-    // 'docs/*.html',
-    // 'docs/**/*.html'  
-
+  content: [
+     'docs/*.html',
+     'docs/**/*.html',
+     'docs/**/**/*.html',
+     'docs/**/**/**/*.html'  
   ],
-  darkMode: false, // or 'media' onpm init -yr 'class'
   theme: {
     fontFamily: {
       sans: ['Proxima Nova', 'Arial', 'sans-serif']
@@ -27,9 +25,6 @@ module.exports = {
         'ny-light': '#ededed'
       }
     }
-  },
-  variants: {
-    extend: {},
   },
   plugins: [],
 }
