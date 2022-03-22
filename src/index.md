@@ -4,15 +4,6 @@ title: OGS Digital Service Design Lab
 ---
 {% from './_includes/_components.njk' import button,buttonhero,card,hero,breadcrumbs,categorytiles,staticbanner %} 
 
-<!-- {{ hero({ 
-    title: "OGS Digital Service Design Lab",
-    subtitle: "",
-    image:"",
-    buttontext: "Demo Page",
-    link: "/patterns",
-    arialabel: "A demonstration page"
-})}} -->
-
 
 
 # An Evolving Sandbox Environment
