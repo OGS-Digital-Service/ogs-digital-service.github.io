@@ -2,7 +2,7 @@
   <div class="m-card__chapterLinks"> 
     <ul>
     {% for item in chapterLinks %}
-      <li><a href="{{item.url.path}}" aria-label="{{item.linkText}} quicklink for {{card.label}}" {{ (loop.index == 3) ? "class=m-card__lastLink" : ""}}> {{item.linkText}} <span class="icon-play-button-arrow text-primary-blue" aria-hidden="true"></span></a></li>
+      <li><a href="{{item.url.path}}" aria-label="{{item.linkText}} quicklink for {{card.label}}" {{ (loop.index == 3) ? "class=m-card__lastLink" : ""}}> {{item.linkText}} <span class="icon-play-button-arrow text-primary-links" aria-hidden="true"></span></a></li>
     {% endfor %}
     </ul>
   </div>

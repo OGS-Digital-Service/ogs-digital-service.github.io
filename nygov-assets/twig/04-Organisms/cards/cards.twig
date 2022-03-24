@@ -133,14 +133,12 @@
 	<article class="o-cardGlobalTablet">
 		<div><a href="{{card.contentLink.path}}" class="o-cardLogo -index{{cardNumber}} -paragraph{{paragraphNumber}}" aria-label="{{aria}}" aria-hidden="true" tabindex="-1"></a></div>
 		<div class="o-cardContent">
-			<div class="innerWrap">
 				{% if chapterLinks is empty %}
 					{% include "@storybook/03-Molecules/cardContent/cardData.twig" with { content: label, url: card.contentLink.path, text: description, variant: "m-card__default"} %}
 				{% endif %}
 				{% if chapterLinks %}
 					{% include "@storybook/03-Molecules/cardContent/cardData.twig" with { content: label, url: card.contentLink.path, text: description, variant: "m-card__service"} %}
 				{% endif %}
-			</div>
 		</div>
 	</article>
 {% endif %}
