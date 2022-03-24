@@ -49,6 +49,20 @@
   justify-content: center;
 }
 
+.line-clamp-4 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 .line-clamp-2 {
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -77,6 +91,10 @@
 
 .w-full {
   width: 100%;
+}
+
+.pl-5 {
+  padding-left: 1.25rem;
 }
 
 // Flexbox - Tablet

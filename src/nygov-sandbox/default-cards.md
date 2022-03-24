@@ -195,21 +195,23 @@ title: NYGov Profile test
                                         <div class="m-card__chapterLinks">
                                             <ul class="">
                                                 <li>
-                                                    <a href="/services/service-card-style-navigator#chapter_1" aria-label="Chapter 1 quicklink for Service Card Style (Navigator On)">
-                                                        Chapter 1
-                                                        <span class="icon-play-button-arrow text-primary-links" aria-hidden="true"></span>
+                                                    <a  href="/services/service-card-style-navigator#chapter_1" aria-label="Chapter 1 quicklink for Service Card Style (Navigator On)">
+                                                    <span class="line-clamp-2">
+                                                        Chapter 1 that has so much text that you would never ever do this but we have to develop for weird edge cases that couldn't really happen ever on a real website. Why would you ever do this?
+                                                    </span>    
+                                                        <span class="icon-play-button-arrow text-primary-links pl-5" aria-hidden="true"></span>
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a href="/services/service-card-style-navigator#chapter_2" aria-label="Chapter 2 quicklink for Service Card Style (Navigator On)">
                                                         Chapter 2
-                                                        <span class="icon-play-button-arrow text-primary-links" aria-hidden="true"></span>
+                                                        <span class="icon-play-button-arrow text-primary-links pl-5" aria-hidden="true"></span>
                                                     </a>   
                                                 </li>
                                                 <li>
                                                     <a href="/services/service-card-style-navigator#chapter_3" aria-label="Chapter 3 quicklink for Service Card Style (Navigator On)">
                                                         Chapter 3
-                                                        <span class="icon-play-button-arrow text-primary-links" aria-hidden="true"></span>
+                                                        <span class="icon-play-button-arrow text-primary-links pl-5" aria-hidden="true"></span>
                                                     </a>
                                                 </li>
                                             </ul>
