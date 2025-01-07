@@ -9,7 +9,7 @@ module.exports = function(eleventyConfig){
         "png",
         "css"
       ]);
-
+      eleventyConfig.addPassthroughCopy("src/calendar/");
       eleventyConfig.addDataExtension("yaml", contents => yaml.load(contents));
 
     return {

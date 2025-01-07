@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+BEGIN:VEVENT
+SUMMARY:Gov. Hochul's 2025 State of the State Address
+URL:https://www.governor.ny.gov
+DTSTART:20250114T180000Z
+DTEND:20250114T190000Z
+DTSTAMP:20250107T150939Z
+UID:1736262579837-GovHochuls2025StateoftheStateAddress
+DESCRIPTION:On January 14, 2025, Governor Hochul is delivering her 2025 State of the State Address! Tune in to governor.ny.gov to watch Governor Hochul unveil her Affordability Agenda on January 14 -- and invite your friends to tune in, too! 
+LOCATION:Virtual
+ORGANIZER:Governor Kathy Hochul
+STATUS:CONFIRMED
+PRIORITY:0
+END:VEVENT
+END:VCALENDAR

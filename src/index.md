@@ -12,7 +12,7 @@ This website represents a test and demonstration space for the New York State Di
 If you have any questions about the content or technical aspects here, please contact us at <digital.services@ogs.ny.gov>. Or if you want to collaborate in any way - we're super cool people who want the web to work best for real people.
 
 ## Government as a Service
-We're going to be building some pretty awesome utilities here for the people of the State of New York. Government Digital services are an amazing way to innovate for the greater good. 
+We're going to be building some pretty awesome utilities here for the people of the State of New York. Government Digital services are an amazing way to innovate for the greater good.  
 
 {{ card({ 
     frametitle:'A Row of Cards',
