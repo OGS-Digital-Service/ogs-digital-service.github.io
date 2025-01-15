@@ -1,1 +1,0 @@
-import './agency_term.scss';

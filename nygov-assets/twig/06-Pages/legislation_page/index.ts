@@ -1,1 +1,0 @@
-import './legislation_page.scss';

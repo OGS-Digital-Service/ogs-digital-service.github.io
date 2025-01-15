@@ -1,1 +1,0 @@
-import "./serviceMenuItems.scss";

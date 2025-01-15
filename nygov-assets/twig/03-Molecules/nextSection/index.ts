@@ -1,1 +1,0 @@
-import "./nextSection.scss";

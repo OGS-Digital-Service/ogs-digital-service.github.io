@@ -1,1 +1,0 @@
-import "./planAhead.scss";

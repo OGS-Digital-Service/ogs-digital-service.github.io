@@ -1,1 +1,0 @@
-import "./latestUpdates.scss";

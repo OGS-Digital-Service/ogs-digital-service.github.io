@@ -1,7 +1,0 @@
-{% if node.sections[1].section.type == "ParagraphNygovFilter" %}
-	{% set checkFilterIndex = "override-margin-top" %}
-{% endif %}
-
-<article class="p-landing-page -full-page {{checkFilterIndex}}">
-	{% include "@storybook/05-Templates/frames/frames.twig" with node %}
-</article>

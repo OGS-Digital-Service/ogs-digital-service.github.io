@@ -1,1 +1,0 @@
-import './emergency_page.scss';

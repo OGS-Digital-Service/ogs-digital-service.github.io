@@ -1,26 +1,20 @@
-const yaml = require("js-yaml");
 module.exports = function(eleventyConfig){
     eleventyConfig.setTemplateFormats([
-        "jpg",
-        "pdf",
         "md",
-        "njk",
-        "webp",
-        "png",
-        "css"
+        "njk"
       ]);
-      eleventyConfig.addPassthroughCopy("src/calendar/");
-      eleventyConfig.addDataExtension("yaml", contents => yaml.load(contents));
+
+      eleventyConfig.addPassthroughCopy("img");
+      eleventyConfig.addPassthroughCopy("fonts");
+      eleventyConfig.addPassthroughCopy("js");
+      eleventyConfig.addPassthroughCopy("css");
+    
 
     return {
         markdownTemplateEngine: "njk",    
     dir: {
-        input: "src",
-        output: "docs",
-        layouts: "_layouts",
-        data: "../.cache"
-
-    },
+        layouts: "_layouts"
+    }
     }
    
 };
