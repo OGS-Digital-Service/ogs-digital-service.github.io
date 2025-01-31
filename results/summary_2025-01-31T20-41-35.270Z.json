@@ -1,0 +1,47 @@
+{
+    "counts": {
+        "ignored": 0,
+        "violation": 5,
+        "recommendation": 2,
+        "pass": 165,
+        "potentialviolation": 3,
+        "potentialrecommendation": 1,
+        "manual": 3,
+        "elements": 13,
+        "elementsViolation": 5,
+        "elementsViolationReview": 10
+    },
+    "startReport": 1738356095270,
+    "endReport": 1738356096304,
+    "toolID": "accessibility-checker-v3.1.79",
+    "policies": [
+        "IBM_Accessibility"
+    ],
+    "reportLevels": [
+        "violation"
+    ],
+    "labels": [
+        null
+    ],
+    "failLevels": [
+        "violation"
+    ],
+    "scanID": "5cb1d4c9-4349-46ff-8abb-1bc64436fa2e",
+    "pageScanSummary": [
+        {
+            "label": "ny.gov",
+            "counts": {
+                "ignored": 0,
+                "elements": 13,
+                "elementsViolation": 5,
+                "elementsViolationReview": 10,
+                "violation": 5,
+                "potentialviolation": 3,
+                "recommendation": 2,
+                "potentialrecommendation": 1,
+                "manual": 3,
+                "pass": 165
+            }
+        }
+    ]
+}
