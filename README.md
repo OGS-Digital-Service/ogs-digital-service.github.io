@@ -3,7 +3,11 @@ OGS Digital Service Accessibility & Performance Testing and Reporting Environmen
 
 ## Available tests
 - Pa11y CI - html reporter
-- IBM Equal Access Acc
+- Lighthouse
+
+## In progress
+- IBM Equal access accessibility checker
+- Lighthouse CI
 
 
 

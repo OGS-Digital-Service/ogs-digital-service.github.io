@@ -4,11 +4,7 @@ module.exports = {
     failLevels: ["violation", "potentialviolation"],
     reportLevels: [
         "violation",
-        "potentialviolation",
-        "recommendation",
-        "potentialrecommendation",
-        "manual",
-        "pass",
+        "potentialviolation"
     ],
     outputFormat: ["json"],
     outputFilenameTimestamp: true,
