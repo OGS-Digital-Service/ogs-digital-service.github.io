@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>
+		Pa11y results for "https://www.ny.gov/"
+	</title>
+	<style>
+		html, body {
+			background-color: #ffffff;
+			color: rgb(51 51 51);
+			font-family: system-ui, sans-serif;
+			font-size: 16px;
+			line-height: 1.3rem;
+			margin: 0;
+			padding: 0;
+		}
+
+		main {
+			margin-block: 0;
+			margin-inline: auto;
+			max-inline-size: 900px;
+			padding: 1.25rem;
+		}
+
+		h1 {
+			font-size: 1.5rem;
+			line-height: 1.5rem;
+			margin: 0;
+			margin-block-end: 0.5rem;
+		}
+
+		h2, h3 {
+			font-size: 1.15rem;
+			font-weight: normal;
+			margin: 0;
+			padding-block-end: 0.5rem;
+		}
+
+		h3 { padding-block-end: 0; }
+
+		p { margin: 0; }
+
+		.filter {
+			display: inline-grid;
+			grid-template-columns: 8.5rem 1fr 1fr 1fr;
+			margin-block-start: 1rem;
+		}
+
+		.filter .label {
+			font-size: 1.15rem;
+			padding-block: 0.45rem;
+			padding-inline: 0;
+		}
+
+		.count {
+			border-radius: 0;
+			border-width: 0;
+			box-shadow: 0.1rem 0.25rem 0.5rem rgba(0 0 0 / 15%);
+			cursor: pointer;
+			display: inline-grid;
+			font-size: 1.15rem;
+			grid-template-columns: 0.35rem 1fr;
+			margin-inline-end: 0.75rem;
+			min-inline-size: 80px;
+		}
+
+		.count .body {
+			border-style: solid;
+			border-width: 1px 1px 1px 0;
+			overflow-x: hidden;
+			padding-block: 0.35rem;
+			padding-inline: 0.7rem;
+			text-align: center;
+		}
+
+		.count.hidden {
+			background-color: #f4f4f4;
+			color: rgb(51 51 51);
+		}
+
+		.count.hidden .left-bar { background-color: #808080; }
+
+		.count.hidden .body { border-color: #d4d4d4; }
+
+		.issues {
+			list-style: none;
+			margin: 0;
+			margin-block-start: 1.5rem;
+			padding-inline-start: 0;
+		}
+
+		.issue {
+			border-radius: 0;
+			border-width: 0;
+			box-shadow: 0.1rem 0.25rem 0.5rem rgba(0 0 0 / 15%);
+			display: grid;
+			grid-template-columns: 0.5rem 1fr;
+			margin: 0;
+			margin-block-end: 1.5rem;
+			padding: 0;
+		}
+
+		/* stylelint-disable-next-line no-descending-specificity -- different parent elements */
+		.issue .left-bar { background-color: #808080; }
+
+		.issue p:not(:last-child) { padding-block-end: 0.1rem; }
+
+		.issue.hidden { display: none; }
+
+		/* stylelint-disable-next-line no-descending-specificity -- different parent elements */
+		.issue .body {
+ 			border-color: #bfbfbf;
+ 			border-style: solid;
+			border-width: 1px 1px 1px 0;
+			overflow-x: hidden;
+			padding: 0.5rem;
+			position: relative;
+		}
+
+		.issue .body h3 { padding-block-end: 0.25rem; }
+
+		.context, .selector {
+			font-family: monospace;
+			font-size: 0.95rem;
+			padding-block-start: 0.1rem;
+		}
+
+		.error {
+			background-color: #f8d7da;
+			color: rgb(103 25 31);
+		}
+
+		.warning {
+			background-color: #fff3cd;
+			color: rgb(84 64 3);
+		}
+
+		.notice {
+			background-color: #cfe2ff;
+			color: rgb(6 44 101);
+		}
+
+		.error a { color: #842029; }
+		.warning a { color: #664d03; }
+		.notice a { color: #074197; }
+
+		/* stylelint-disable-next-line no-descending-specificity -- different parent elements */
+		.error .left-bar { background-color: #d53447; }
+		/* stylelint-disable-next-line no-descending-specificity -- different parent elements */
+		.warning .left-bar { background-color: #c79500; }
+		/* stylelint-disable-next-line no-descending-specificity -- different parent elements */
+		.notice .left-bar { background-color: #015cda; }
+
+		/* stylelint-disable-next-line no-descending-specificity -- different parent elements */
+		.error .body { border-color: #f2bbc1; }
+		/* stylelint-disable-next-line no-descending-specificity -- different parent elements */
+		.warning .body { border-color: #ffd761; }
+		/* stylelint-disable-next-line no-descending-specificity -- different parent elements */
+		.notice .body { border-color: #a9cefe; }
+
+		.clipboard-button {
+			background-color: rgba(51 51 51 / 10%);
+			border: 2px solid;
+			border-color: rgba(51 51 51 / 30%);
+			border-radius: 2px;
+			color: rgba(51 51 51 / 40%);
+			font-size: 0.8rem;
+			inset-block-start: 7px;
+			inset-inline-end: 7px;
+			margin: 0;
+			opacity: 0;
+			padding-block: 5px 4px;
+			padding-inline: 7px;
+			position: absolute;
+			transition: 0.1s;
+			visibility: hidden;
+			z-index: 1;
+		}
+
+		.error .clipboard-button {
+			background-color: rgba(103 25 31 / 10%);
+			border-color: rgba(103 25 31 / 30%);
+			color: rgba(103 25 31 / 40%);
+		}
+
+		.warning .clipboard-button {
+			background-color: rgba(84 64 3 / 10%);
+			border-color: rgba(84 64 3 / 30%);
+			color: rgba(84 64 3 / 40%);
+		}
+
+		.notice .clipboard-button {
+			background-color: rgba(6 44 101 / 10%);
+			border-color: rgba(6 44 101 / 30%);
+			color: rgba(6 44 101 / 40%);
+		}
+
+		.clipboard-button > svg { fill: rgba(51 51 51 / 40%); }
+		.error .clipboard-button > svg { fill: rgba(103 25 31 / 40%); }
+		.warning .clipboard-button > svg { fill: rgba(84 64 3 / 40%); }
+		.notice .clipboard-button > svg { fill: rgba(6 44 101 / 40%); }
+
+		.clipboard-button:focus { outline: 0; }
+
+		.clipboard-button:hover,
+		.clipboard-button:focus {
+			background-color: rgba(51 51 51 / 20%);
+			border-color: rgba(51 51 51 / 70%);
+			color: rgba(51 51 51 / 80%);
+			cursor: pointer;
+		}
+
+		.error .clipboard-button:hover,
+		.error .clipboard-button:focus {
+			background-color: rgba(103 25 31 / 20%);
+			border-color: rgba(103 25 31 / 70%);
+			color: rgba(103 25 31 / 80%);
+		}
+
+		.warning .clipboard-button:hover,
+		.warning .clipboard-button:focus {
+			background-color: rgba(84 64 3 / 20%);
+			border-color: rgba(84 64 3 / 70%);
+			color: rgba(84 64 3 / 80%);
+		}
+
+		.notice .clipboard-button:hover,
+		.notice .clipboard-button:focus {
+			background-color: rgba(6 44 101 / 20%);
+			border-color: rgba(6 44 101 / 70%);
+			color: rgba(6 44 101 / 80%);
+		}
+
+		.clipboard-button:hover > svg,
+		.clipboard-button:focus > svg {
+			fill: rgba(51 51 51 / 80%);
+		}
+
+		.error .clipboard-button:hover > svg,
+		.error .clipboard-button:focus > svg {
+			fill: rgba(103 25 31 / 80%);
+		}
+
+		.warning .clipboard-button:hover > svg,
+		.warning .clipboard-button:focus > svg {
+			fill: rgba(84 64 3 / 80%);
+		}
+
+		.notice .clipboard-button:hover > svg,
+		.notice .clipboard-button:focus > svg {
+			fill: rgba(6 44 101 / 80%);
+		}
+
+		.issue .body:hover > .clipboard-button,
+		.issue .body:focus-within > .clipboard-button {
+			opacity: 1;
+			transition: 0.2s;
+			visibility: visible;
+		}
+	</style>
+</head>
+
+<body>
+	<main>
+		<h1>Pa11y results for "https://www.ny.gov/"</h1>
+		<h2>Generated at: Fri Feb 07 2025 15:11:58 GMT-0500 (Eastern Standard Time)</h2>
+		<h2>Runners (with issues): axe, htmlcs</h2>
+
+		<p class="filter">
+			<span class="label">Toggle by type</span>
+			<span class="count error" id="error-count" tabindex="0" role="button" aria-label="Toggle errors">
+				<span class="left-bar" aria-hidden="true"></span>
+				<span class="body">4 errors</span>
+			</span>
+			<span class="count warning" id="warning-count" tabindex="0" role="button" aria-label="Toggle warnings">
+				<span class="left-bar" aria-hidden="true"></span>
+				<span class="body">59 warnings</span>
+			</span>
+			<span class="count notice" id="notice-count" tabindex="0" role="button" aria-label="Toggle notices">
+				<span class="left-bar" aria-hidden="true"></span>
+				<span class="body">0 notices</span>
+			</span>
+		</p>
+		<ul class="issues">
+			<li class="issue warning">
+				<div class="left-bar" aria-hidden="true"></div>
+				<div class="body">
+					<h3><strong>Warning/Moderate</strong>: All page content should be contained by landmarks</h3><p>Ensures all page content is contained by landmarks</p><p><a href="https://dequeuniversity.com/rules/axe/4.2/region?application&#x3D;axeAPI">axe: region</a></p><p class="context">&lt;div class&#x3D;&quot;nygov-unav__logo&quot;&gt;
+      &lt;a href&#x3D;&quot;https://www.ny....&lt;/div&gt;</p><p class="selector">(selector "#ny-universal-navigation &gt; div:nth-child(3) &gt; div")</p></div>
+			</li>
+			<li class="issue warning">
+				<div class="left-bar" aria-hidden="true"></div>
+				<div class="body">
+					<h3><strong>Warning/Moderate</strong>: All page content should be contained by landmarks</h3><p>Ensures all page content is contained by landmarks</p><p><a href="https://dequeuniversity.com/rules/axe/4.2/region?application&#x3D;axeAPI">axe: region</a></p><p class="context">&lt;div class&#x3D;&quot;footer-navigations&quot;&gt;
+    
+        &lt;div class&#x3D;&quot;o-nyg...&lt;/div&gt;</p><p class="selector">(selector "html &gt; body &gt; div:nth-child(4) &gt; div &gt; div:nth-child(3)")</p></div>
+			</li>
+			<li class="issue warning">
+				<div class="left-bar" aria-hidden="true"></div>
+				<div class="body">
+					<h3><strong>Warning/Moderate</strong>: All page content should be contained by landmarks</h3><p>Ensures all page content is contained by landmarks</p><p><a href="https://dequeuniversity.com/rules/axe/4.2/region?application&#x3D;axeAPI">axe: region</a></p><p class="context">&lt;span class&#x3D;&quot;sr-only&quot;&gt;Globe icon&lt;/span&gt;</p><p class="selector">(selector "#footer-translate-section &gt; div &gt; div:nth-child(2) &gt; div &gt; div &gt; span:nth-child(2)")</p></div>
+			</li>
+			<li class="issue warning">
+				<div class="left-bar" aria-hidden="true"></div>
+				<div class="body">
+					<h3><strong>Warning/Moderate</strong>: All page content should be contained by landmarks</h3><p>Ensures all page content is contained by landmarks</p><p><a href="https://dequeuniversity.com/rules/axe/4.2/region?application&#x3D;axeAPI">axe: region</a></p><p class="context">&lt;a href&#x3D;&quot;https://www.ny.gov/web-translation-services&quot; class&#x3D;&quot;footer-translate__tr-link&quot;&gt;Translation Services&lt;/a&gt;</p><p class="selector">(selector "#footer-translate-section &gt; div &gt; div:nth-child(2) &gt; div &gt; a")</p></div>
+			</li>
+			<li class="issue warning">
+				<div class="left-bar" aria-hidden="true"></div>
+				<div class="body">
+					<h3><strong>Warning/Moderate</strong>: All page content should be contained by landmarks</h3><p>Ensures all page content is contained by landmarks</p><p><a href="https://dequeuniversity.com/rules/axe/4.2/region?application&#x3D;axeAPI">axe: region</a></p><p class="context">&lt;p class&#x3D;&quot;footer-translate__info&quot;&gt;This page is available in other...&lt;/p&gt;</p><p class="selector">(selector "#footer-translate-section &gt; div &gt; div:nth-child(2) &gt; p")</p></div>
+			</li>
+			<li class="issue warning">
+				<div class="left-bar" aria-hidden="true"></div>
+				<div class="body">
+					<h3><strong>Warning/Moderate</strong>: All page content should be contained by landmarks</h3><p>Ensures all page content is contained by landmarks</p><p><a href="https://dequeuniversity.com/rules/axe/4.2/region?application&#x3D;axeAPI">axe: region</a></p><p class="context">&lt;ul class&#x3D;&quot;language-links footer-translate__links&quot;&gt;
+                &lt;li class&#x3D;&quot;foo...&lt;/ul&gt;</p><p class="selector">(selector "#footer-translate-links &gt; ul")</p></div>
+			</li>
+			<li class="issue error">
+				<div class="left-bar" aria-hidden="true"></div>
+				<div class="body">
+					<h3><strong>Error/Serious</strong>: Elements must have sufficient color contrast</h3><p>Ensures the contrast between foreground and background colors meets WCAG 2 AA contrast ratio thresholds</p><p><a href="https://dequeuniversity.com/rules/axe/4.2/color-contrast?application&#x3D;axeAPI">axe: color-contrast</a></p><p class="context">&lt;span class&#x3D;&quot;a-date a-hero__dateLanding&quot;&gt;February 06, 2025&lt;/span&gt;</p><p class="selector">(selector "html &gt; body &gt; div:nth-child(4) &gt; div &gt; main &gt; div:nth-child(2) &gt; div &gt; article &gt; article &gt; div &gt; div:nth-child(2) &gt; div:nth-child(2) &gt; div &gt; div:nth-child(1) &gt; div:nth-child(1) &gt; span")</p></div>
+			</li>
+			<li class="issue error">
+				<div class="left-bar" aria-hidden="true"></div>
+				<div class="body">
+					<h3><strong>Error/Serious</strong>: Elements must have sufficient color contrast</h3><p>Ensures the contrast between foreground and background colors meets WCAG 2 AA contrast ratio thresholds</p><p><a href="https://dequeuniversity.com/rules/axe/4.2/color-contrast?application&#x3D;axeAPI">axe: color-contrast</a></p><p class="context">&lt;h1 class&#x3D;&quot;a-title a-hero__titleLanding&quot;&gt;
+    Two Winter Storms to Impac...&lt;/h1&gt;</p><p class="selector">(selector "html &gt; body &gt; div:nth-child(4) &gt; div &gt; main &gt; div:nth-child(2) &gt; div &gt; article &gt; article &gt; div &gt; div:nth-child(2) &gt; div:nth-child(2) &gt; div &gt; div:nth-child(1) &gt; div:nth-child(2) &gt; h1")</p></div>
+			</li>
+			<li class="issue error">
+				<div class="left-bar" aria-hidden="true"></div>
+				<div class="body">
+					<h3><strong>Error/Serious</strong>: Elements must have sufficient color contrast</h3><p>Ensures the contrast between foreground and background colors meets WCAG 2 AA contrast ratio thresholds</p><p><a href="https://dequeuniversity.com/rules/axe/4.2/color-contrast?application&#x3D;axeAPI">axe: color-contrast</a></p><p class="context">&lt;div class&#x3D;&quot;a-text__string a-hero__description -text&quot;&gt;Two strong winter storms are ex...&lt;/div&gt;</p><p class="selector">(selector "html &gt; body &gt; div:nth-child(4) &gt; div &gt; main &gt; div:nth-child(2) &gt; div &gt; article &gt; article &gt; div &gt; div:nth-child(2) &gt; div:nth-child(2) &gt; div &gt; div:nth-child(1) &gt; div:nth-child(3) &gt; div")</p></div>
+			</li>
+			<li class="issue error">
+				<div class="left-bar" aria-hidden="true"></div>
+				<div class="body">
+					<h3><strong>Error/Serious</strong>: Elements must have sufficient color contrast</h3><p>Ensures the contrast between foreground and background colors meets WCAG 2 AA contrast ratio thresholds</p><p><a href="https://dequeuniversity.com/rules/axe/4.2/color-contrast?application&#x3D;axeAPI">axe: color-contrast</a></p><p class="context">&lt;a class&#x3D;&quot;a-hero__btn -linkLanding&quot; href&#x3D;&quot;https://www.governor.ny.gov/news/governor-hochul-urges-new-yorkers-exercise-caution-two-strong-winter-storms-expected-impact&quot; data-once&#x3D;&quot;nygovExitModal&quot;&gt;Winter Storm Details&lt;/a&gt;</p><p class="selector">(selector "html &gt; body &gt; div:nth-child(4) &gt; div &gt; main &gt; div:nth-child(2) &gt; div &gt; article &gt; article &gt; div &gt; div:nth-child(2) &gt; div:nth-child(2) &gt; div &gt; div:nth-child(2) &gt; div &gt; a")</p></div>
+			</li>
+			<li class="issue warning">
+				<div class="left-bar" aria-hidden="true"></div>
+				<div class="body">
+					<h3><strong>Warning</strong>: This element is absolutely positioned and the background color can not be determined. Ensure the contrast ratio between the text and all covered parts of the background are at least 4.5:1.</h3><p><a href="https://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/#sc1_4_3">htmlcs: WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Abs</a></p><p class="context">&lt;a href&#x3D;&quot;#main-content&quot; class&#x3D;&quot;visually-hidden focusable skip-link&quot;&gt;
+      Skip to main content
+   ...&lt;/a&gt;</p><p class="selector">(selector "html &gt; body &gt; a")</p></div>
+			</li>
+			<li class="issue warning">
+				<div class="left-bar" aria-hidden="true"></div>
+				<div class="body">
+					<h3><strong>Warning</strong>: This element&#x27;s text is placed on a background image. Ensure the contrast ratio between the text and all covered parts of the image are at least 4.5:1.</h3><p><a href="https://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/#sc1_4_3">htmlcs: WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.BgImage</a></p><p class="context">&lt;span class&#x3D;&quot;sr-only&quot;&gt;New York State Home&lt;/span&gt;</p><p class="selector">(selector "#ny-universal-navigation &gt; div:nth-child(3) &gt; div &gt; a &gt; span")</p></div>
+			</li>
+			<li class="issue warning">
+				<div class="left-bar" aria-hidden="true"></div>
+				<div class="body">
+					<h3><strong>Warning</strong>: This element is absolutely positioned and the background color can not be determined. Ensure the contrast ratio between the text and all covered parts of the background are at least 4.5:1.</h3><p><a href="https://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/#sc1_4_3">htmlcs: WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Abs</a></p><p class="context">&lt;label class&#x3D;&quot;sr-only&quot; for&#x3D;&quot;nygov-unav-search&quot;&gt;Search this website&lt;/label&gt;</p><p class="selector">(selector "#ny-universal-navigation &gt; div:nth-child(6) &gt; form &gt; label")</p></div>
+			</li>
+			<li class="issue warning">
+				<div class="left-bar" aria-hidden="true"></div>
+				<div class="body">
+					<h3><strong>Warning</strong>: This element is absolutely positioned and the background color can not be determined. Ensure the contrast ratio between the text and all covered parts of the background are at least 4.5:1.</h3><p><a href="https://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/#sc1_4_3">htmlcs: WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Abs</a></p><p class="context">&lt;span class&#x3D;&quot;sr-only&quot;&gt;Search this website&lt;/span&gt;</p><p class="selector">(selector "#ny-universal-navigation &gt; div:nth-child(6) &gt; form &gt; button:nth-child(4) &gt; span:nth-child(2)")</p></div>
+			</li>
+			<li class="issue warning">
+				<div class="left-bar" aria-hidden="true"></div>
+				<div class="body">
+					<h3><strong>Warning</strong>: Anchor element found with an ID but without a href or link text. Consider moving its ID to a parent or nearby element.</h3><p><a href="https://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/#sc4_1_2">htmlcs: WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.A.Empty</a></p><p class="context">&lt;a id&#x3D;&quot;main-content&quot; tabindex&#x3D;&quot;-1&quot; data-once&#x3D;&quot;nygovExitModal&quot;&gt;&lt;/a&gt;</p><p class="selector">(selector "#main-content")</p></div>
+			</li>
+			<li class="issue warning">
+				<div class="left-bar" aria-hidden="true"></div>
+				<div class="body">
+					<h3><strong>Warning</strong>: This element&#x27;s text or background contains transparency. Ensure the contrast ratio between the text and background are at least 4.5:1.</h3><p><a href="https://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/#sc1_4_3">htmlcs: WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Alpha</a></p><p class="context">&lt;span class&#x3D;&quot;a-date a-hero__dateLanding&quot;&gt;February 06, 2025&lt;/span&gt;</p><p class="selector">(selector "html &gt; body &gt; div:nth-child(4) &gt; div &gt; main &gt; div:nth-child(2) &gt; div &gt; article &gt; article &gt; div &gt; div:nth-child(2) &gt; div:nth-child(2) &gt; div &gt; div:nth-child(1) &gt; div:nth-child(1) &gt; span")</p></div>
+			</li>
+			<li class="issue warning">
+				<div class="left-bar" aria-hidden="true"></div>
+				<div class="body">
+					<h3><strong>Warning</strong>: This element&#x27;s text or background contains transparency. Ensure the contrast ratio between the text and background are at least 3:1.</h3><p><a href="https://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/#sc1_4_3">htmlcs: WCAG2AA.Principle1.Guideline1_4.1_4_3.G145.Alpha</a></p><p class="context">&lt;h1 class&#x3D;&quot;a-title a-hero__titleLanding&quot;&gt;
+    Two Winter Storms to Impac...&lt;/h1&gt;</p><p class="selector">(selector "html &gt; body &gt; div:nth-child(4) &gt; div &gt; main &gt; div:nth-child(2) &gt; div &gt; article &gt; article &gt; div &gt; div:nth-child(2) &gt; div:nth-child(2) &gt; div &gt; div:nth-child(1) &gt; div:nth-child(2) &gt; h1")</p></div>
+			</li>
+			<li class="issue warning">
+				<div class="left-bar" aria-hidden="true"></div>
+				<div class="body">
+					<h3><strong>Warning</strong>: This element&#x27;s text or background contains transparency. Ensure the contrast ratio between the text and background are at least 4.5:1.</h3><p><a href="https://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/#sc1_4_3">htmlcs: WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Alpha</a></p><p class="context">&lt;div class&#x3D;&quot;a-text__string a-hero__description -text&quot;&gt;Two strong winter storms are ex...&lt;/div&gt;</p><p class="selector">(selector "html &gt; body &gt; div:nth-child(4) &gt; div &gt; main &gt; div:nth-child(2) &gt; div &gt; article &gt; article &gt; div &gt; div:nth-child(2) &gt; div:nth-child(2) &gt; div &gt; div:nth-child(1) &gt; div:nth-child(3) &gt; div")</p></div>
+			</li>
+			<li class="issue warning">
+				<div class="left-bar" aria-hidden="true"></div>
+				<div class="body">
+					<h3><strong>Warning</strong>: This element&#x27;s text or background contains transparency. Ensure the contrast ratio between the text and background are at least 4.5:1.</h3><p><a href="https://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/#sc1_4_3">htmlcs: WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Alpha</a></p><p class="context">&lt;a class&#x3D;&quot;a-hero__btn -linkLanding&quot; href&#x3D;&quot;https://www.governor.ny.gov/news/governor-hochul-urges-new-yorkers-exercise-caution-two-strong-winter-storms-expected-impact&quot; data-once&#x3D;&quot;nygovExitModal&quot;&gt;Winter Storm Details&lt;/a&gt;</p><p class="selector">(selector "html &gt; body &gt; div:nth-child(4) &gt; div &gt; main &gt; div:nth-child(2) &gt; div &gt; article &gt; article &gt; div &gt; div:nth-child(2) &gt; div:nth-child(2) &gt; div &gt; div:nth-child(2) &gt; div &gt; a")</p></div>
+			</li>
+			<li class="issue warning">
+				<div class="left-bar" aria-hidden="true"></div>
+				<div class="body">
+					<h3><strong>Warning</strong>: This element is absolutely positioned and the background color can not be determined. Ensure the contrast ratio between the text and all covered parts of the background are at least 4.5:1.</h3><p><a href="https://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/#sc1_4_3">htmlcs: WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Abs</a></p><p class="context">&lt;h3 class&#x3D;&quot;a-headline a-government__title&quot;&gt;
+		Governor
+  &lt;/h3&gt;</p><p class="selector">(selector "html &gt; body &gt; div:nth-child(4) &gt; div &gt; main &gt; div:nth-child(2) &gt; div &gt; article &gt; article &gt; div &gt; div:nth-child(6) &gt; div &gt; div:nth-child(2) &gt; div:nth-child(1) &gt; div &gt; div:nth-child(1) &gt; h3")</p></div>
+			</li>
+			<li class="issue warning">
+				<div class="left-bar" aria-hidden="true"></div>
+				<div class="body">
+					<h3><strong>Warning</strong>: This element is absolutely positioned and the background color can not be determined. Ensure the contrast ratio between the text and all covered parts of the background are at least 3:1.</h3><p><a href="https://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/#sc1_4_3">htmlcs: WCAG2AA.Principle1.Guideline1_4.1_4_3.G145.Abs</a></p><p class="context">&lt;a class&#x3D;&quot;a-government__name&quot; href&#x3D;&quot;https://www.governor.ny.gov/&quot; data-once&#x3D;&quot;nygovExitModal&quot;&gt;Kathy Hochul&lt;/a&gt;</p><p class="selector">(selector "html &gt; body &gt; div:nth-child(4) &gt; div &gt; main &gt; div:nth-child(2) &gt; div &gt; article &gt; article &gt; div &gt; div:nth-child(6) &gt; div &gt; div:nth-child(2) &gt; div:nth-child(1) &gt; div &gt; div:nth-child(2) &gt; a")</p></div>
+			</li>
+			<li class="issue warning">
+				<div class="left-bar" aria-hidden="true"></div>
+				<div class="body">
+					<h3><strong>Warning</strong>: If this element contains a navigation section, it is recommended that it be marked up as a list.</h3><p><a href="https://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/#sc1_3_1">htmlcs: WCAG2AA.Principle1.Guideline1_3.1_3_1.H48</a></p><p class="context">&lt;div class&#x3D;&quot;m-card__bioSocial&quot;&gt;
+                              ...&lt;/div&gt;</p><p class="selector">(selector "html &gt; body &gt; div:nth-child(4) &gt; div &gt; main &gt; div:nth-child(2) &gt; div &gt; article &gt; article &gt; div &gt; div:nth-child(6) &gt; div &gt; div:nth-child(2) &gt; div:nth-child(1) &gt; div &gt; div:nth-child(3)")</p></div>
+			</li>
+			<li class="issue warning">
+				<div class="left-bar" aria-hidden="true"></div>
+				<div class="body">
+					<h3><strong>Warning</strong>: This element is absolutely positioned and the background color can not be determined. Ensure the contrast ratio between the text and all covered parts of the background are at least 4.5:1.</h3><p><a href="https://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/#sc1_4_3">htmlcs: WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Abs</a></p><p class="context">&lt;span class&#x3D;&quot;sr-only&quot;&gt;Kathy Hochul on X&lt;/span&gt;</p><p class="selector">(selector "html &gt; body &gt; div:nth-child(4) &gt; div &gt; main &gt; div:nth-child(2) &gt; div &gt; article &gt; article &gt; div &gt; div:nth-child(6) &gt; div &gt; div:nth-child(2) &gt; div:nth-child(1) &gt; div &gt; div:nth-child(3) &gt; a:nth-child(1) &gt; span:nth-child(2)")</p></div>
+			</li>
+			<li class="issue warning">
+				<div class="left-bar" aria-hidden="true"></div>
+				<div class="body">
+					<h3><strong>Warning</strong>: This element is absolutely positioned and the background color can not be determined. Ensure the contrast ratio between the text and all covered parts of the background are at least 4.5:1.</h3><p><a href="https://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/#sc1_4_3">htmlcs: WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Abs</a></p><p class="context">&lt;span class&#x3D;&quot;sr-only&quot;&gt;Kathy Hochul on facebook&lt;/span&gt;</p><p class="selector">(selector "html &gt; body &gt; div:nth-child(4) &gt; div &gt; main &gt; div:nth-child(2) &gt; div &gt; article &gt; article &gt; div &gt; div:nth-child(6) &gt; div &gt; div:nth-child(2) &gt; div:nth-child(1) &gt; div &gt; div:nth-child(3) &gt; a:nth-child(2) &gt; span:nth-child(2)")</p></div>
+			</li>
+			<li class="issue warning">
+				<div class="left-bar" aria-hidden="true"></div>
+				<div class="body">
+					<h3><strong>Warning</strong>: This element is absolutely positioned and the background color can not be determined. Ensure the contrast ratio between the text and all covered parts of the background are at least 4.5:1.</h3><p><a href="https://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/#sc1_4_3">htmlcs: WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Abs</a></p><p class="context">&lt;span class&#x3D;&quot;sr-only&quot;&gt;Kathy Hochul on flickr&lt;/span&gt;</p><p class="selector">(selector "html &gt; body &gt; div:nth-child(4) &gt; div &gt; main &gt; div:nth-child(2) &gt; div &gt; article &gt; article &gt; div &gt; div:nth-child(6) &gt; div &gt; div:nth-child(2) &gt; div:nth-child(1) &gt; div &gt; div:nth-child(3) &gt; a:nth-child(3) &gt; span:nth-child(2)")</p></div>
+			</li>
+			<li class="issue warning">
+				<div class="left-bar" aria-hidden="true"></div>
+				<div class="body">
+					<h3><strong>Warning</strong>: This element is absolutely positioned and the background color can not be determined. Ensure the contrast ratio between the text and all covered parts of the background are at least 4.5:1.</h3><p><a href="https://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/#sc1_4_3">htmlcs: WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Abs</a></p><p class="context">&lt;span class&#x3D;&quot;sr-only&quot;&gt;Kathy Hochul on instagram&lt;/span&gt;</p><p class="selector">(selector "html &gt; body &gt; div:nth-child(4) &gt; div &gt; main &gt; div:nth-child(2) &gt; div &gt; article &gt; article &gt; div &gt; div:nth-child(6) &gt; div &gt; div:nth-child(2) &gt; div:nth-child(1) &gt; div &gt; div:nth-child(3) &gt; a:nth-child(4) &gt; span:nth-child(2)")</p></div>
+			</li>
+			<li class="issue warning">
+				<div class="left-bar" aria-hidden="true"></div>
+				<div class="body">
+					<h3><strong>Warning</strong>: This element is absolutely positioned and the background color can not be determined. Ensure the contrast ratio between the text and all covered parts of the background are at least 4.5:1.</h3><p><a href="https://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/#sc1_4_3">htmlcs: WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Abs</a></p><p class="context">&lt;span class&#x3D;&quot;sr-only&quot;&gt;Kathy Hochul on youtube&lt;/span&gt;</p><p class="selector">(selector "html &gt; body &gt; div:nth-child(4) &gt; div &gt; main &gt; div:nth-child(2) &gt; div &gt; article &gt; article &gt; div &gt; div:nth-child(6) &gt; div &gt; div:nth-child(2) &gt; div:nth-child(1) &gt; div &gt; div:nth-child(3) &gt; a:nth-child(5) &gt; span:nth-child(2)")</p></div>
+			</li>
+			<li class="issue warning">
+				<div class="left-bar" aria-hidden="true"></div>
+				<div class="body">
+					<h3><strong>Warning</strong>: This element is absolutely positioned and the background color can not be determined. Ensure the contrast ratio between the text and all covered parts of the background are at least 4.5:1.</h3><p><a href="https://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/#sc1_4_3">htmlcs: WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Abs</a></p><p class="context">&lt;h3 class&#x3D;&quot;a-headline a-government__title&quot;&gt;
+		Comptroller
+  &lt;/h3&gt;</p><p class="selector">(selector "html &gt; body &gt; div:nth-child(4) &gt; div &gt; main &gt; div:nth-child(2) &gt; div &gt; article &gt; article &gt; div &gt; div:nth-child(6) &gt; div &gt; div:nth-child(2) &gt; div:nth-child(2) &gt; div &gt; div:nth-child(1) &gt; h3")</p></div>
+			</li>
+			<li class="issue warning">
+				<div class="left-bar" aria-hidden="true"></div>
+				<div class="body">
+					<h3><strong>Warning</strong>: This element is absolutely positioned and the background color can not be determined. Ensure the contrast ratio between the text and all covered parts of the background are at least 3:1.</h3><p><a href="https://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/#sc1_4_3">htmlcs: WCAG2AA.Principle1.Guideline1_4.1_4_3.G145.Abs</a></p><p class="context">&lt;a class&#x3D;&quot;a-government__name&quot; href&#x3D;&quot;https://www.osc.state.ny.us/&quot; data-once&#x3D;&quot;nygovExitModal&quot;&gt;Thomas P. DiNapoli&lt;/a&gt;</p><p class="selector">(selector "html &gt; body &gt; div:nth-child(4) &gt; div &gt; main &gt; div:nth-child(2) &gt; div &gt; article &gt; article &gt; div &gt; div:nth-child(6) &gt; div &gt; div:nth-child(2) &gt; div:nth-child(2) &gt; div &gt; div:nth-child(2) &gt; a")</p></div>
+			</li>
+			<li class="issue warning">
+				<div class="left-bar" aria-hidden="true"></div>
+				<div class="body">
+					<h3><strong>Warning</strong>: If this element contains a navigation section, it is recommended that it be marked up as a list.</h3><p><a href="https://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/#sc1_3_1">htmlcs: WCAG2AA.Principle1.Guideline1_3.1_3_1.H48</a></p><p class="context">&lt;div class&#x3D;&quot;m-card__bioSocial&quot;&gt;
+                              ...&lt;/div&gt;</p><p class="selector">(selector "html &gt; body &gt; div:nth-child(4) &gt; div &gt; main &gt; div:nth-child(2) &gt; div &gt; article &gt; article &gt; div &gt; div:nth-child(6) &gt; div &gt; div:nth-child(2) &gt; div:nth-child(2) &gt; div &gt; div:nth-child(3)")</p></div>
+			</li>
+			<li class="issue warning">
+				<div class="left-bar" aria-hidden="true"></div>
+				<div class="body">
+					<h3><strong>Warning</strong>: This element is absolutely positioned and the background color can not be determined. Ensure the contrast ratio between the text and all covered parts of the background are at least 4.5:1.</h3><p><a href="https://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/#sc1_4_3">htmlcs: WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Abs</a></p><p class="context">&lt;span class&#x3D;&quot;sr-only&quot;&gt;Thomas P. DiNapoli on X&lt;/span&gt;</p><p class="selector">(selector "html &gt; body &gt; div:nth-child(4) &gt; div &gt; main &gt; div:nth-child(2) &gt; div &gt; article &gt; article &gt; div &gt; div:nth-child(6) &gt; div &gt; div:nth-child(2) &gt; div:nth-child(2) &gt; div &gt; div:nth-child(3) &gt; a:nth-child(1) &gt; span:nth-child(2)")</p></div>
+			</li>
+			<li class="issue warning">
+				<div class="left-bar" aria-hidden="true"></div>
+				<div class="body">
+					<h3><strong>Warning</strong>: This element is absolutely positioned and the background color can not be determined. Ensure the contrast ratio between the text and all covered parts of the background are at least 4.5:1.</h3><p><a href="https://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/#sc1_4_3">htmlcs: WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Abs</a></p><p class="context">&lt;span class&#x3D;&quot;sr-only&quot;&gt;Thomas P. DiNapoli on facebook&lt;/span&gt;</p><p class="selector">(selector "html &gt; body &gt; div:nth-child(4) &gt; div &gt; main &gt; div:nth-child(2) &gt; div &gt; article &gt; article &gt; div &gt; div:nth-child(6) &gt; div &gt; div:nth-child(2) &gt; div:nth-child(2) &gt; div &gt; div:nth-child(3) &gt; a:nth-child(2) &gt; span:nth-child(2)")</p></div>
+			</li>
+			<li class="issue warning">
+				<div class="left-bar" aria-hidden="true"></div>
+				<div class="body">
+					<h3><strong>Warning</strong>: This element is absolutely positioned and the background color can not be determined. Ensure the contrast ratio between the text and all covered parts of the background are at least 4.5:1.</h3><p><a href="https://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/#sc1_4_3">htmlcs: WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Abs</a></p><p class="context">&lt;span class&#x3D;&quot;sr-only&quot;&gt;Thomas P. DiNapoli on instagram&lt;/span&gt;</p><p class="selector">(selector "html &gt; body &gt; div:nth-child(4) &gt; div &gt; main &gt; div:nth-child(2) &gt; div &gt; article &gt; article &gt; div &gt; div:nth-child(6) &gt; div &gt; div:nth-child(2) &gt; div:nth-child(2) &gt; div &gt; div:nth-child(3) &gt; a:nth-child(3) &gt; span:nth-child(2)")</p></div>
+			</li>
+			<li class="issue warning">
+				<div class="left-bar" aria-hidden="true"></div>
+				<div class="body">
+					<h3><strong>Warning</strong>: This element is absolutely positioned and the background color can not be determined. Ensure the contrast ratio between the text and all covered parts of the background are at least 4.5:1.</h3><p><a href="https://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/#sc1_4_3">htmlcs: WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Abs</a></p><p class="context">&lt;span class&#x3D;&quot;sr-only&quot;&gt;Thomas P. DiNapoli on linkedin&lt;/span&gt;</p><p class="selector">(selector "html &gt; body &gt; div:nth-child(4) &gt; div &gt; main &gt; div:nth-child(2) &gt; div &gt; article &gt; article &gt; div &gt; div:nth-child(6) &gt; div &gt; div:nth-child(2) &gt; div:nth-child(2) &gt; div &gt; div:nth-child(3) &gt; a:nth-child(4) &gt; span:nth-child(2)")</p></div>
+			</li>
+			<li class="issue warning">
+				<div class="left-bar" aria-hidden="true"></div>
+				<div class="body">
+					<h3><strong>Warning</strong>: This element is absolutely positioned and the background color can not be determined. Ensure the contrast ratio between the text and all covered parts of the background are at least 4.5:1.</h3><p><a href="https://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/#sc1_4_3">htmlcs: WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Abs</a></p><p class="context">&lt;span class&#x3D;&quot;sr-only&quot;&gt;Thomas P. DiNapoli on youtube&lt;/span&gt;</p><p class="selector">(selector "html &gt; body &gt; div:nth-child(4) &gt; div &gt; main &gt; div:nth-child(2) &gt; div &gt; article &gt; article &gt; div &gt; div:nth-child(6) &gt; div &gt; div:nth-child(2) &gt; div:nth-child(2) &gt; div &gt; div:nth-child(3) &gt; a:nth-child(5) &gt; span:nth-child(2)")</p></div>
+			</li>
+			<li class="issue warning">
+				<div class="left-bar" aria-hidden="true"></div>
+				<div class="body">
+					<h3><strong>Warning</strong>: This element is absolutely positioned and the background color can not be determined. Ensure the contrast ratio between the text and all covered parts of the background are at least 4.5:1.</h3><p><a href="https://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/#sc1_4_3">htmlcs: WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Abs</a></p><p class="context">&lt;h3 class&#x3D;&quot;a-headline a-government__title&quot;&gt;
+		Attorney General
+  &lt;/h3&gt;</p><p class="selector">(selector "html &gt; body &gt; div:nth-child(4) &gt; div &gt; main &gt; div:nth-child(2) &gt; div &gt; article &gt; article &gt; div &gt; div:nth-child(6) &gt; div &gt; div:nth-child(2) &gt; div:nth-child(3) &gt; div &gt; div:nth-child(1) &gt; h3")</p></div>
+			</li>
+			<li class="issue warning">
+				<div class="left-bar" aria-hidden="true"></div>
+				<div class="body">
+					<h3><strong>Warning</strong>: This element is absolutely positioned and the background color can not be determined. Ensure the contrast ratio between the text and all covered parts of the background are at least 3:1.</h3><p><a href="https://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/#sc1_4_3">htmlcs: WCAG2AA.Principle1.Guideline1_4.1_4_3.G145.Abs</a></p><p class="context">&lt;a class&#x3D;&quot;a-government__name&quot; href&#x3D;&quot;https://ag.ny.gov/&quot; data-once&#x3D;&quot;nygovExitModal&quot;&gt;Letitia James&lt;/a&gt;</p><p class="selector">(selector "html &gt; body &gt; div:nth-child(4) &gt; div &gt; main &gt; div:nth-child(2) &gt; div &gt; article &gt; article &gt; div &gt; div:nth-child(6) &gt; div &gt; div:nth-child(2) &gt; div:nth-child(3) &gt; div &gt; div:nth-child(2) &gt; a")</p></div>
+			</li>
+			<li class="issue warning">
+				<div class="left-bar" aria-hidden="true"></div>
+				<div class="body">
+					<h3><strong>Warning</strong>: If this element contains a navigation section, it is recommended that it be marked up as a list.</h3><p><a href="https://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/#sc1_3_1">htmlcs: WCAG2AA.Principle1.Guideline1_3.1_3_1.H48</a></p><p class="context">&lt;div class&#x3D;&quot;m-card__bioSocial&quot;&gt;
+                              ...&lt;/div&gt;</p><p class="selector">(selector "html &gt; body &gt; div:nth-child(4) &gt; div &gt; main &gt; div:nth-child(2) &gt; div &gt; article &gt; article &gt; div &gt; div:nth-child(6) &gt; div &gt; div:nth-child(2) &gt; div:nth-child(3) &gt; div &gt; div:nth-child(3)")</p></div>
+			</li>
+			<li class="issue warning">
+				<div class="left-bar" aria-hidden="true"></div>
+				<div class="body">
+					<h3><strong>Warning</strong>: This element is absolutely positioned and the background color can not be determined. Ensure the contrast ratio between the text and all covered parts of the background are at least 4.5:1.</h3><p><a href="https://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/#sc1_4_3">htmlcs: WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Abs</a></p><p class="context">&lt;span class&#x3D;&quot;sr-only&quot;&gt;Letitia James on X&lt;/span&gt;</p><p class="selector">(selector "html &gt; body &gt; div:nth-child(4) &gt; div &gt; main &gt; div:nth-child(2) &gt; div &gt; article &gt; article &gt; div &gt; div:nth-child(6) &gt; div &gt; div:nth-child(2) &gt; div:nth-child(3) &gt; div &gt; div:nth-child(3) &gt; a:nth-child(1) &gt; span:nth-child(2)")</p></div>
+			</li>
+			<li class="issue warning">
+				<div class="left-bar" aria-hidden="true"></div>
+				<div class="body">
+					<h3><strong>Warning</strong>: This element is absolutely positioned and the background color can not be determined. Ensure the contrast ratio between the text and all covered parts of the background are at least 4.5:1.</h3><p><a href="https://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/#sc1_4_3">htmlcs: WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Abs</a></p><p class="context">&lt;span class&#x3D;&quot;sr-only&quot;&gt;Letitia James on facebook&lt;/span&gt;</p><p class="selector">(selector "html &gt; body &gt; div:nth-child(4) &gt; div &gt; main &gt; div:nth-child(2) &gt; div &gt; article &gt; article &gt; div &gt; div:nth-child(6) &gt; div &gt; div:nth-child(2) &gt; div:nth-child(3) &gt; div &gt; div:nth-child(3) &gt; a:nth-child(2) &gt; span:nth-child(2)")</p></div>
+			</li>
+			<li class="issue warning">
+				<div class="left-bar" aria-hidden="true"></div>
+				<div class="body">
+					<h3><strong>Warning</strong>: This element is absolutely positioned and the background color can not be determined. Ensure the contrast ratio between the text and all covered parts of the background are at least 4.5:1.</h3><p><a href="https://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/#sc1_4_3">htmlcs: WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Abs</a></p><p class="context">&lt;span class&#x3D;&quot;sr-only&quot;&gt;Letitia James on instagram&lt;/span&gt;</p><p class="selector">(selector "html &gt; body &gt; div:nth-child(4) &gt; div &gt; main &gt; div:nth-child(2) &gt; div &gt; article &gt; article &gt; div &gt; div:nth-child(6) &gt; div &gt; div:nth-child(2) &gt; div:nth-child(3) &gt; div &gt; div:nth-child(3) &gt; a:nth-child(3) &gt; span:nth-child(2)")</p></div>
+			</li>
+			<li class="issue warning">
+				<div class="left-bar" aria-hidden="true"></div>
+				<div class="body">
+					<h3><strong>Warning</strong>: This element is absolutely positioned and the background color can not be determined. Ensure the contrast ratio between the text and all covered parts of the background are at least 4.5:1.</h3><p><a href="https://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/#sc1_4_3">htmlcs: WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Abs</a></p><p class="context">&lt;span class&#x3D;&quot;sr-only&quot;&gt;Letitia James on youtube&lt;/span&gt;</p><p class="selector">(selector "html &gt; body &gt; div:nth-child(4) &gt; div &gt; main &gt; div:nth-child(2) &gt; div &gt; article &gt; article &gt; div &gt; div:nth-child(6) &gt; div &gt; div:nth-child(2) &gt; div:nth-child(3) &gt; div &gt; div:nth-child(3) &gt; a:nth-child(4) &gt; span:nth-child(2)")</p></div>
+			</li>
+			<li class="issue warning">
+				<div class="left-bar" aria-hidden="true"></div>
+				<div class="body">
+					<h3><strong>Warning</strong>: This element is absolutely positioned and the background color can not be determined. Ensure the contrast ratio between the text and all covered parts of the background are at least 4.5:1.</h3><p><a href="https://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/#sc1_4_3">htmlcs: WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Abs</a></p><p class="context">&lt;span class&#x3D;&quot;sr-only&quot;&gt;Letitia James on linkedin&lt;/span&gt;</p><p class="selector">(selector "html &gt; body &gt; div:nth-child(4) &gt; div &gt; main &gt; div:nth-child(2) &gt; div &gt; article &gt; article &gt; div &gt; div:nth-child(6) &gt; div &gt; div:nth-child(2) &gt; div:nth-child(3) &gt; div &gt; div:nth-child(3) &gt; a:nth-child(5) &gt; span:nth-child(2)")</p></div>
+			</li>
+			<li class="issue warning">
+				<div class="left-bar" aria-hidden="true"></div>
+				<div class="body">
+					<h3><strong>Warning</strong>: This element is absolutely positioned and the background color can not be determined. Ensure the contrast ratio between the text and all covered parts of the background are at least 4.5:1.</h3><p><a href="https://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/#sc1_4_3">htmlcs: WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Abs</a></p><p class="context">&lt;h3 class&#x3D;&quot;a-headline a-government__title&quot;&gt;
+		Judicial
+  &lt;/h3&gt;</p><p class="selector">(selector "html &gt; body &gt; div:nth-child(4) &gt; div &gt; main &gt; div:nth-child(2) &gt; div &gt; article &gt; article &gt; div &gt; div:nth-child(6) &gt; div &gt; div:nth-child(3) &gt; div:nth-child(1) &gt; div:nth-child(3) &gt; div:nth-child(1) &gt; div &gt; h3")</p></div>
+			</li>
+			<li class="issue warning">
+				<div class="left-bar" aria-hidden="true"></div>
+				<div class="body">
+					<h3><strong>Warning</strong>: This element is absolutely positioned and the background color can not be determined. Ensure the contrast ratio between the text and all covered parts of the background are at least 4.5:1.</h3><p><a href="https://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/#sc1_4_3">htmlcs: WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Abs</a></p><p class="context">&lt;a href&#x3D;&quot;https://www.nycourts.gov/ctapps/&quot; target&#x3D;&quot;_blank&quot; data-once&#x3D;&quot;nygovExitModal&quot;&gt;
+            Court of Appeals
+ ...&lt;/a&gt;</p><p class="selector">(selector "html &gt; body &gt; div:nth-child(4) &gt; div &gt; main &gt; div:nth-child(2) &gt; div &gt; article &gt; article &gt; div &gt; div:nth-child(6) &gt; div &gt; div:nth-child(3) &gt; div:nth-child(1) &gt; div:nth-child(3) &gt; div:nth-child(2) &gt; div:nth-child(1) &gt; a")</p></div>
+			</li>
+			<li class="issue warning">
+				<div class="left-bar" aria-hidden="true"></div>
+				<div class="body">
+					<h3><strong>Warning</strong>: This element is absolutely positioned and the background color can not be determined. Ensure the contrast ratio between the text and all covered parts of the background are at least 4.5:1.</h3><p><a href="https://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/#sc1_4_3">htmlcs: WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Abs</a></p><p class="context">&lt;a href&#x3D;&quot;http://www.nycourts.gov/&quot; target&#x3D;&quot;_blank&quot; data-once&#x3D;&quot;nygovExitModal&quot;&gt;
+            NY State Unified C...&lt;/a&gt;</p><p class="selector">(selector "html &gt; body &gt; div:nth-child(4) &gt; div &gt; main &gt; div:nth-child(2) &gt; div &gt; article &gt; article &gt; div &gt; div:nth-child(6) &gt; div &gt; div:nth-child(3) &gt; div:nth-child(1) &gt; div:nth-child(3) &gt; div:nth-child(2) &gt; div:nth-child(2) &gt; a")</p></div>
+			</li>
+			<li class="issue warning">
+				<div class="left-bar" aria-hidden="true"></div>
+				<div class="body">
+					<h3><strong>Warning</strong>: This element is absolutely positioned and the background color can not be determined. Ensure the contrast ratio between the text and all covered parts of the background are at least 4.5:1.</h3><p><a href="https://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/#sc1_4_3">htmlcs: WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Abs</a></p><p class="context">&lt;h3 class&#x3D;&quot;a-headline a-government__title&quot;&gt;
+		Legislature
+  &lt;/h3&gt;</p><p class="selector">(selector "html &gt; body &gt; div:nth-child(4) &gt; div &gt; main &gt; div:nth-child(2) &gt; div &gt; article &gt; article &gt; div &gt; div:nth-child(6) &gt; div &gt; div:nth-child(3) &gt; div:nth-child(2) &gt; div:nth-child(3) &gt; div:nth-child(1) &gt; div &gt; h3")</p></div>
+			</li>
+			<li class="issue warning">
+				<div class="left-bar" aria-hidden="true"></div>
+				<div class="body">
+					<h3><strong>Warning</strong>: This element is absolutely positioned and the background color can not be determined. Ensure the contrast ratio between the text and all covered parts of the background are at least 4.5:1.</h3><p><a href="https://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/#sc1_4_3">htmlcs: WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Abs</a></p><p class="context">&lt;a href&#x3D;&quot;https://www.nysenate.gov/&quot; target&#x3D;&quot;_blank&quot; data-once&#x3D;&quot;nygovExitModal&quot;&gt;
+            NY State Senate
+  ...&lt;/a&gt;</p><p class="selector">(selector "html &gt; body &gt; div:nth-child(4) &gt; div &gt; main &gt; div:nth-child(2) &gt; div &gt; article &gt; article &gt; div &gt; div:nth-child(6) &gt; div &gt; div:nth-child(3) &gt; div:nth-child(2) &gt; div:nth-child(3) &gt; div:nth-child(2) &gt; div:nth-child(1) &gt; a")</p></div>
+			</li>
+			<li class="issue warning">
+				<div class="left-bar" aria-hidden="true"></div>
+				<div class="body">
+					<h3><strong>Warning</strong>: This element is absolutely positioned and the background color can not be determined. Ensure the contrast ratio between the text and all covered parts of the background are at least 4.5:1.</h3><p><a href="https://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/#sc1_4_3">htmlcs: WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Abs</a></p><p class="context">&lt;a href&#x3D;&quot;https://nyassembly.gov/&quot; target&#x3D;&quot;_blank&quot; data-once&#x3D;&quot;nygovExitModal&quot;&gt;
+            NY State Assembly
+...&lt;/a&gt;</p><p class="selector">(selector "html &gt; body &gt; div:nth-child(4) &gt; div &gt; main &gt; div:nth-child(2) &gt; div &gt; article &gt; article &gt; div &gt; div:nth-child(6) &gt; div &gt; div:nth-child(3) &gt; div:nth-child(2) &gt; div:nth-child(3) &gt; div:nth-child(2) &gt; div:nth-child(2) &gt; a")</p></div>
+			</li>
+			<li class="issue warning">
+				<div class="left-bar" aria-hidden="true"></div>
+				<div class="body">
+					<h3><strong>Warning</strong>: This element is absolutely positioned and the background color can not be determined. Ensure the contrast ratio between the text and all covered parts of the background are at least 4.5:1.</h3><p><a href="https://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/#sc1_4_3">htmlcs: WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Abs</a></p><p class="context">&lt;a href&#x3D;&quot;/new-york-state-congressional-delegation&quot; target&#x3D;&quot;_blank&quot; data-once&#x3D;&quot;nygovExitModal&quot;&gt;
+            NY State Congressi...&lt;/a&gt;</p><p class="selector">(selector "html &gt; body &gt; div:nth-child(4) &gt; div &gt; main &gt; div:nth-child(2) &gt; div &gt; article &gt; article &gt; div &gt; div:nth-child(6) &gt; div &gt; div:nth-child(3) &gt; div:nth-child(2) &gt; div:nth-child(3) &gt; div:nth-child(2) &gt; div:nth-child(3) &gt; a")</p></div>
+			</li>
+			<li class="issue warning">
+				<div class="left-bar" aria-hidden="true"></div>
+				<div class="body">
+					<h3><strong>Warning</strong>: If this element contains a navigation section, it is recommended that it be marked up as a list.</h3><p><a href="https://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/#sc1_3_1">htmlcs: WCAG2AA.Principle1.Guideline1_3.1_3_1.H48</a></p><p class="context">&lt;div class&#x3D;&quot;o-buttons__group -buttonGroup&quot;&gt;
+                              ...&lt;/div&gt;</p><p class="selector">(selector "html &gt; body &gt; div:nth-child(4) &gt; div &gt; main &gt; div:nth-child(2) &gt; div &gt; article &gt; article &gt; div &gt; div:nth-child(7) &gt; div &gt; div &gt; div")</p></div>
+			</li>
+			<li class="issue warning">
+				<div class="left-bar" aria-hidden="true"></div>
+				<div class="body">
+					<h3><strong>Warning</strong>: This element is absolutely positioned and the background color can not be determined. Ensure the contrast ratio between the text and all covered parts of the background are at least 4.5:1.</h3><p><a href="https://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/#sc1_4_3">htmlcs: WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Abs</a></p><p class="context">&lt;span class&#x3D;&quot;sr-only&quot;&gt;X&lt;/span&gt;</p><p class="selector">(selector "html &gt; body &gt; div:nth-child(4) &gt; div &gt; main &gt; div:nth-child(2) &gt; div &gt; article &gt; article &gt; div &gt; div:nth-child(8) &gt; div &gt; div:nth-child(2) &gt; div:nth-child(1) &gt; a &gt; span:nth-child(2)")</p></div>
+			</li>
+			<li class="issue warning">
+				<div class="left-bar" aria-hidden="true"></div>
+				<div class="body">
+					<h3><strong>Warning</strong>: This element is absolutely positioned and the background color can not be determined. Ensure the contrast ratio between the text and all covered parts of the background are at least 4.5:1.</h3><p><a href="https://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/#sc1_4_3">htmlcs: WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Abs</a></p><p class="context">&lt;span class&#x3D;&quot;sr-only&quot;&gt;instagram&lt;/span&gt;</p><p class="selector">(selector "html &gt; body &gt; div:nth-child(4) &gt; div &gt; main &gt; div:nth-child(2) &gt; div &gt; article &gt; article &gt; div &gt; div:nth-child(8) &gt; div &gt; div:nth-child(2) &gt; div:nth-child(2) &gt; a &gt; span:nth-child(2)")</p></div>
+			</li>
+			<li class="issue warning">
+				<div class="left-bar" aria-hidden="true"></div>
+				<div class="body">
+					<h3><strong>Warning</strong>: This element has &quot;position: fixed&quot;. This may require scrolling in two dimensions, which is considered a failure of this Success Criterion.</h3><p><a href="https://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/#sc1_4_10">htmlcs: WCAG2AA.Principle1.Guideline1_4.1_4_10.C32,C31,C33,C38,SCR34,G206</a></p><p class="context">&lt;a href&#x3D;&quot;#main-content&quot; class&#x3D;&quot;nygov-back-to-top nygov-back-to-top-hidden&quot; data-once&#x3D;&quot;backToTopButton nygovExitModal&quot;&gt;
+        &lt;span class&#x3D;&quot;fa fa-che...&lt;/a&gt;</p><p class="selector">(selector "html &gt; body &gt; div:nth-child(4) &gt; div &gt; main &gt; div:nth-child(3) &gt; a")</p></div>
+			</li>
+			<li class="issue warning">
+				<div class="left-bar" aria-hidden="true"></div>
+				<div class="body">
+					<h3><strong>Warning</strong>: This element&#x27;s text is placed on a background image. Ensure the contrast ratio between the text and all covered parts of the image are at least 4.5:1.</h3><p><a href="https://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/#sc1_4_3">htmlcs: WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.BgImage</a></p><p class="context">&lt;span class&#x3D;&quot;sr-only&quot;&gt;New York State Home&lt;/span&gt;</p><p class="selector">(selector "html &gt; body &gt; div:nth-child(4) &gt; div &gt; div:nth-child(3) &gt; div &gt; div:nth-child(1) &gt; a &gt; span")</p></div>
+			</li>
+			<li class="issue warning">
+				<div class="left-bar" aria-hidden="true"></div>
+				<div class="body">
+					<h3><strong>Warning</strong>: If this element contains a navigation section, it is recommended that it be marked up as a list.</h3><p><a href="https://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/#sc1_3_1">htmlcs: WCAG2AA.Principle1.Guideline1_3.1_3_1.H48</a></p><p class="context">&lt;div id&#x3D;&quot;o-exitModal&quot;&gt;
+  &lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;o-exitMod...&lt;/div&gt;</p><p class="selector">(selector "#o-exitModal")</p></div>
+			</li>
+			<li class="issue warning">
+				<div class="left-bar" aria-hidden="true"></div>
+				<div class="body">
+					<h3><strong>Warning</strong>: This element is absolutely positioned and the background color can not be determined. Ensure the contrast ratio between the text and all covered parts of the background are at least 4.5:1.</h3><p><a href="https://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/#sc1_4_3">htmlcs: WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Abs</a></p><p class="context">&lt;span class&#x3D;&quot;sr-only&quot;&gt;Globe icon&lt;/span&gt;</p><p class="selector">(selector "#footer-translate-section &gt; div &gt; div:nth-child(2) &gt; div &gt; div &gt; span:nth-child(2)")</p></div>
+			</li>
+			<li class="issue warning">
+				<div class="left-bar" aria-hidden="true"></div>
+				<div class="body">
+					<h3><strong>Warning</strong>: This element&#x27;s text is placed on a background image. Ensure the contrast ratio between the text and all covered parts of the image are at least 4.5:1.</h3><p><a href="https://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/#sc1_4_3">htmlcs: WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.BgImage</a></p><p class="context">&lt;span class&#x3D;&quot;sr-only&quot;&gt;Redundant image link for visual...&lt;/span&gt;</p><p class="selector">(selector "html &gt; body &gt; div:nth-child(4) &gt; div &gt; main &gt; div:nth-child(2) &gt; div &gt; article &gt; article &gt; div &gt; div:nth-child(6) &gt; div &gt; div:nth-child(2) &gt; div:nth-child(1) &gt; a &gt; span")</p></div>
+			</li>
+			<li class="issue warning">
+				<div class="left-bar" aria-hidden="true"></div>
+				<div class="body">
+					<h3><strong>Warning</strong>: This element&#x27;s text is placed on a background image. Ensure the contrast ratio between the text and all covered parts of the image are at least 4.5:1.</h3><p><a href="https://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/#sc1_4_3">htmlcs: WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.BgImage</a></p><p class="context">&lt;span class&#x3D;&quot;sr-only&quot;&gt;Redundant image link for visual...&lt;/span&gt;</p><p class="selector">(selector "html &gt; body &gt; div:nth-child(4) &gt; div &gt; main &gt; div:nth-child(2) &gt; div &gt; article &gt; article &gt; div &gt; div:nth-child(6) &gt; div &gt; div:nth-child(2) &gt; div:nth-child(2) &gt; a &gt; span")</p></div>
+			</li>
+			<li class="issue warning">
+				<div class="left-bar" aria-hidden="true"></div>
+				<div class="body">
+					<h3><strong>Warning</strong>: This element&#x27;s text is placed on a background image. Ensure the contrast ratio between the text and all covered parts of the image are at least 4.5:1.</h3><p><a href="https://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/#sc1_4_3">htmlcs: WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.BgImage</a></p><p class="context">&lt;span class&#x3D;&quot;sr-only&quot;&gt;Redundant image link for visual...&lt;/span&gt;</p><p class="selector">(selector "html &gt; body &gt; div:nth-child(4) &gt; div &gt; main &gt; div:nth-child(2) &gt; div &gt; article &gt; article &gt; div &gt; div:nth-child(6) &gt; div &gt; div:nth-child(2) &gt; div:nth-child(3) &gt; a &gt; span")</p></div>
+			</li>
+			<li class="issue warning">
+				<div class="left-bar" aria-hidden="true"></div>
+				<div class="body">
+					<h3><strong>Warning</strong>: This element&#x27;s text is placed on a background image. Ensure the contrast ratio between the text and all covered parts of the image are at least 4.5:1.</h3><p><a href="https://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/#sc1_4_3">htmlcs: WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.BgImage</a></p><p class="context">&lt;span class&#x3D;&quot;sr-only&quot;&gt;New York State Paid Prenatal Le...&lt;/span&gt;</p><p class="selector">(selector "html &gt; body &gt; div:nth-child(4) &gt; div &gt; main &gt; div:nth-child(2) &gt; div &gt; article &gt; article &gt; div &gt; div:nth-child(4) &gt; div:nth-child(2) &gt; div &gt; div:nth-child(1) &gt; article &gt; div:nth-child(1) &gt; a &gt; span")</p></div>
+			</li>
+			<li class="issue warning">
+				<div class="left-bar" aria-hidden="true"></div>
+				<div class="body">
+					<h3><strong>Warning</strong>: This element&#x27;s text is placed on a background image. Ensure the contrast ratio between the text and all covered parts of the image are at least 4.5:1.</h3><p><a href="https://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/#sc1_4_3">htmlcs: WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.BgImage</a></p><p class="context">&lt;span class&#x3D;&quot;sr-only&quot;&gt;Benefits for 9/11 Survivors&lt;/span&gt;</p><p class="selector">(selector "html &gt; body &gt; div:nth-child(4) &gt; div &gt; main &gt; div:nth-child(2) &gt; div &gt; article &gt; article &gt; div &gt; div:nth-child(4) &gt; div:nth-child(2) &gt; div &gt; div:nth-child(2) &gt; article &gt; div:nth-child(1) &gt; a &gt; span")</p></div>
+			</li>
+			<li class="issue warning">
+				<div class="left-bar" aria-hidden="true"></div>
+				<div class="body">
+					<h3><strong>Warning</strong>: This element&#x27;s text is placed on a background image. Ensure the contrast ratio between the text and all covered parts of the image are at least 4.5:1.</h3><p><a href="https://squizlabs.github.io/HTML_CodeSniffer/Standards/WCAG2/#sc1_4_3">htmlcs: WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.BgImage</a></p><p class="context">&lt;span class&#x3D;&quot;sr-only&quot;&gt;Get Offline, Get Outside!&lt;/span&gt;</p><p class="selector">(selector "html &gt; body &gt; div:nth-child(4) &gt; div &gt; main &gt; div:nth-child(2) &gt; div &gt; article &gt; article &gt; div &gt; div:nth-child(4) &gt; div:nth-child(2) &gt; div &gt; div:nth-child(3) &gt; article &gt; div:nth-child(1) &gt; a &gt; span")</p></div>
+			</li>
+		</ul>
+	</main>
+	<script>
+		const toggleIssues = (btn, pageQuery) => {
+			const className = 'hidden';
+			document.getElementById(btn).classList.toggle(className);
+			document.querySelectorAll(pageQuery).forEach((page) => {
+				page.classList.toggle(className);
+			});
+		};
+
+		const errorCountFilter = document.getElementById('error-count');
+		errorCountFilter.addEventListener('click', () =>
+			toggleIssues('error-count', '.issues .issue.error')
+		);
+		errorCountFilter.addEventListener('keydown', (event) =>
+			event.key === "Enter" && toggleIssues('error-count', '.issues .issue.error')
+		);
+
+		const warningCountButton = document.getElementById('warning-count');
+		warningCountButton.addEventListener('click', () =>
+			toggleIssues('warning-count', '.issues .issue.warning')
+		);
+		warningCountButton.addEventListener('keydown', (event) =>
+			event.key === "Enter" && toggleIssues('warning-count', '.issues .issue.warning')
+		);
+
+		const noticeCountButton = document.getElementById('notice-count');
+		noticeCountButton.addEventListener('click', () =>
+			toggleIssues('notice-count', '.issues .issue.notice')
+		);
+		noticeCountButton.addEventListener('keydown', (event) =>
+			event.key === "Enter" && toggleIssues('notice-count', '.issues .issue.notice')
+		);
+	</script>
+	<script>
+		const svgCopy = '<svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg>';
+		const svgCheck = '<svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true"><path fill-rule="evenodd" fill="rgb(63, 185, 80)" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg>';
+
+		if (navigator && navigator.clipboard) {
+			document.querySelectorAll(".issue .body .selector").forEach((selectorNode) => {
+				const selector = selectorNode.innerText
+					.match(/\(selector "(?<selector>.+)"\)/).groups.selector;
+
+				const button = document.createElement("button");
+				button.className = "clipboard-button";
+				button.type = "button";
+				button.title = "Copy selector";
+				button.innerHTML = svgCopy;
+				button.addEventListener("click", (event) => {
+					navigator.clipboard.writeText(selector)
+						.then(() => {
+							// Remove focus if mouse, since hovering and will remain visible.
+							// If keyboard, keep focus until another keyboard action blurs.
+							event.detail && button.blur();
+							button.innerHTML = svgCheck;
+							setTimeout(() => (button.innerHTML = svgCopy), 2000);
+						},
+						(error) => (button.innerHTML = "Error")
+					);
+				});
+
+				selectorNode.parentNode.insertBefore(button, selectorNode);
+			});
+		};
+	</script>
+</body>
+
+</html>

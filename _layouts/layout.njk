@@ -6,26 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="{{title}}">
     <meta name="generator" content="11ty/eleventy">    
-    <!-- Facebook Meta Tags -->
     <meta property="og:url" content="https://{{url}}">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="{{facebook.title}}">
-    <meta property="og:description" content="{{facebook.description}}">
-    <meta property="og:image" content="https://{{domain}}/img/{{facebook.image}}">
-    <!-- Twitter Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://{{url}}">
-    <meta name="twitter:title" content="{{twitter.title}}">
-    <meta name="twitter:description" content="{{twitter.description}}">
-    <meta name="twitter:image" content="https://{{domain}}/img/{{twitter.image}}">
-    {# {% include '_css-link.njk' %}
-    {% include '_js-link.njk' %} #}
+    <meta property="og:title" content="{{title}}">
+    <meta property="og:description" content="{{description}}">
+    {% include '_css-link.njk' %}
+    {% include '_js-link.njk' %}
     <title>{{ title }}</title>
   </head>
   <body class="">
   <a href="#main-site-content-for-skiplink" class="sr-only focus:not-sr-only text-blue-700 underline">Skip to Main Content</a>
     {# {% from '../_includes/_components.njk' import unav,nav,footer  %}
-    {% include 'unav-data.njk' %}
      {% include 'nav-data.njk' %} #}
     <main class="" id="main-site-content-for-skiplink">
     {{ content | safe }}

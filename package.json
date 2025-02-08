@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "npx @11ty/eleventy --serve",
-    "test": "pa11y-ci",
+    "pa11y": "pa11y-ci",
     "ibm": "npx achecker _tests/$AGENCY.txt",
-    "lighthouse":"npx lighthouse $URL"
+    "lighthouse": "npx lighthouse $URL"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +17,8 @@
     "accessibility-checker": "^3.1.79"
   },
   "dependencies": {
-    "lighthouse": "^12.3.0"
+    "lighthouse": "^12.3.0",
+    "pa11y-ci": "^3.1.0",
+    "pa11y-ci-reporter-html": "^7.0.0"
   }
 }
