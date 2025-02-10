@@ -1,1 +1,0 @@
-import "./emergencyPageFrames.scss";

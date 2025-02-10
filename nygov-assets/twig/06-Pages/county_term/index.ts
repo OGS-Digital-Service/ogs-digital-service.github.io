@@ -1,1 +1,0 @@
-import './county_term.scss';

@@ -1,1 +1,0 @@
-import './service_page.scss';

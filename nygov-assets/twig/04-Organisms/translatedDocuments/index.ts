@@ -1,1 +1,0 @@
-import "./translatedDocuments.scss";

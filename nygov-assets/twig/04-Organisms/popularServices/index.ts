@@ -1,3 +1,0 @@
-
-import "./popularServices.scss";
-

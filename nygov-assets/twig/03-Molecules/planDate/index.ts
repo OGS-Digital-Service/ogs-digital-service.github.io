@@ -1,1 +1,0 @@
-import "./planDate.scss";

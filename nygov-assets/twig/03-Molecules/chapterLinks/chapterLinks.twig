@@ -1,9 +1,0 @@
-{% if variant == "m-card__chapterLinks" %}
-  <div class="m-card__chapterLinks"> 
-    <ul>
-    {% for item in chapterLinks %}
-      <li><a href="{{item.url.path}}" aria-label="{{item.linkText}} quicklink for {{card.label}}" {{ (loop.index == 3) ? "class=m-card__lastLink" : ""}}><span class="line-clamp-2">{{item.linkText}}</span><span class="icon-play-button-arrow text-primary-links" aria-hidden="true"></span></a></li>
-    {% endfor %}
-    </ul>
-  </div>
-{% endif %}
