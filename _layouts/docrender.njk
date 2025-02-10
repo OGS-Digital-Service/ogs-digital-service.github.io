@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <!-- If you're reading this: help us obi-wan can-coder, you're our only hope. NYS is committed to Digital Accessibility. Apply today: digital.services@ogs.ny.gov -->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{title}}">
+    <meta name="generator" content="11ty/eleventy">    
+    {% include '_css-link.njk' %}
+    <title>{{ title }}</title>
+  </head>
+  <body class="nys-a11y-body">
+  <a href="#main-site-content-for-skiplink" class="sr-only not-sr-only underline">Skip to Main Content</a>
+    <main class="nys-a11y-main" id="main-site-content-for-skiplink">
+    {{ content | safe }}
+    </main>
+    {# {% include 'footer-data.njk' %} #}
+  </body>
+</html>

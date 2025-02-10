@@ -1,1 +1,0 @@
-import "./connectFooterMenu.scss";

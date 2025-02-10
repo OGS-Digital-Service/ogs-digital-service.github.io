@@ -1,7 +1,0 @@
-fragment SocialMediasShare on ParagraphSocialMediasShare {
-  facebookToggle: fieldPsmsFacebookToggle
-  twitterToggle: fieldPsmsTwitterToggle
-  linkedinToggle: fieldPsmsLinkedinToggle
-  linkedInText: fieldPsmsLinkedinText
-  twitterText: fieldPsmsTwitterText
-}
