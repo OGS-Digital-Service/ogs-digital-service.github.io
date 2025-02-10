@@ -7,4 +7,3 @@
 ## In progress
 - IBM Equal access accessibility checker
 - Lighthouse CI
-
