@@ -12,6 +12,7 @@ html {
 .nysds-a11y-main {
    display: flex;
    flex-direction: column;
+   margin-bottom: 4rem;
 }
 
 p {
