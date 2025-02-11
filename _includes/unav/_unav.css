@@ -6,7 +6,6 @@
   display: flex;
   height: 60px;
   width: 90px;
-  margin-left: 60px;
 }
 
 
@@ -15,6 +14,15 @@
   align-items: center;
 }
 
+.nysds-unav-bottom-border {
+  border-bottom: 3px solid #d0d0ce;
+}
+
 .nysds-unav-trust-link {
+  margin-right: 12px;
+  margin-left: 60px;
+}
+
+.nysds-trust-identifier {
   font-size: 0.7em;
 }
