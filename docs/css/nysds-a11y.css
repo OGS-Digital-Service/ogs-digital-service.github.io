@@ -1,0 +1,81 @@
+html {
+    font-family: "Noto Sans", serif;
+    font-optical-sizing: auto;
+    font-size: 16px;
+}
+
+.nysds-a11y-document {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.nysds-a11y-main {
+   display: flex;
+   flex-direction: column;
+}
+
+p {
+    line-height: 1.5;
+}
+
+li {
+    line-height: 1.5;
+    padding-top: 0.2rem;
+    padding-bottom: 0.4rem;
+}
+
+li:first-child {
+    padding-top: 0.6rem;
+}
+
+.nysds-a11y-toc {
+    margin: 5% 0;
+    border: 2px solid #d0d0ce;
+    border-radius: 15px;
+    padding: 1% 2%;
+}
+
+.nysds-a11y-toc ul > li {
+    font-weight: bold;
+}
+
+.nysds-a11y-toc ul > li > ul > li {
+    font-weight: normal;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.not-sr-only:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+}
+
+@media (min-width: 1024px) {
+    .nysds-a11y-document {
+        max-width: 80%;
+    }
+}

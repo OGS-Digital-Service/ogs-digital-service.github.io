@@ -1,16 +1,22 @@
-.nys-a11y-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+html {
     font-family: "Noto Sans", serif;
     font-optical-sizing: auto;
     font-size: 16px;
 }
 
+.nysds-a11y-document {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.nysds-a11y-main {
+   display: flex;
+   flex-direction: column;
+}
+
 p {
     line-height: 1.5;
 }
-
 
 li {
     line-height: 1.5;
@@ -35,10 +41,6 @@ li:first-child {
 
 .nysds-a11y-toc ul > li > ul > li {
     font-weight: normal;
-}
-
-.nys-a11y-main {
-    max-width: 90%;
 }
 
 .sr-only {
@@ -73,9 +75,7 @@ li:first-child {
 }
 
 @media (min-width: 1024px) {
-
-.nys-a11y-main {
-    max-width: 80%;
-}
-
+    .nysds-a11y-document {
+        max-width: 80%;
+    }
 }
