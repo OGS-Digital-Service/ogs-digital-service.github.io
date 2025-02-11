@@ -10,3 +10,11 @@
 }
 
 
+.nysds-unav {
+  display: flex;
+  align-items: center;
+}
+
+.nysds-unav-trust-link {
+  font-size: 0.7em;
+}

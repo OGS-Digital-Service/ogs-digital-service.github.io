@@ -10,6 +10,14 @@
 }
 
 
+.nysds-unav {
+  display: flex;
+  align-items: center;
+}
+
+.nysds-unav-trust-link {
+  font-size: 0.7em;
+}
 /* back to top - NYSDS JHK */
 .back-to-top {
     position: fixed;
