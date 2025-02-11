@@ -1,15 +1,15 @@
 /* back to top - NYSDS JHK */
 .back-to-top {
     position: fixed;
-    bottom: 7%;
+    bottom: 4%;
     right: 3%;
     z-index: 23000;
 }
 
 .back-to-top-button {
-    font-size: 1em;
+    font-size: 0.8em;
     background-color: #154973;
-    padding: 12px;
+    padding: 10px;
     color: #fff;
     border: 2px solid #fff;
     border-radius: 15px;
@@ -32,3 +32,13 @@
 }
 
 
+@media (min-width: 1024px) {
+    .back-to-top {
+        bottom: 7%;
+        right: 4%;
+    }
+    .back-to-top-button {
+        font-size: 1em;
+        padding: 12px;
+    }
+}

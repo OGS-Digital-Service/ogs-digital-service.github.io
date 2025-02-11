@@ -36,6 +36,10 @@ li:first-child {
     padding: 1% 2%;
 }
 
+.nysds-a11y-toc ul {
+    padding-left: 1rem;
+}
+
 .nysds-a11y-toc ul > li {
     font-weight: bold;
 }
@@ -78,5 +82,8 @@ li:first-child {
 @media (min-width: 1024px) {
     .nysds-a11y-document {
         max-width: 80%;
+    }
+    .nysds-a11y-toc ul {
+        padding-left: 2rem;
     }
 }
