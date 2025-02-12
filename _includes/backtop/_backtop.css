@@ -1,4 +1,5 @@
 /* back to top - NYSDS JHK */
+
 .back-to-top {
     position: fixed;
     bottom: 5%;
@@ -30,7 +31,16 @@
     border: 2px solid #face00;
     text-decoration: underline;
 }
-
+@media (max-width: 480px) {
+    .back-to-top {
+        bottom: 8%;
+        right: 4%;
+    }
+    .back-to-top-button {
+        font-size: 0.8em;
+        padding: 8px;
+    }
+}
 
 @media (min-width: 1024px) {
     .back-to-top {
