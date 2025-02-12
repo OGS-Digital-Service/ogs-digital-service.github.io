@@ -20,13 +20,19 @@
 
 .nysds-unav-trust-link {
   margin-right: 12px;
-  margin-left: 60px;
+  margin-left: 30px;
 }
 
 .nysds-trust-identifier {
   font-size: 0.7em;
 }
-/* back to top - NYSDS JHK */
+
+
+@media (min-width: 1024px) {
+  .nysds-unav-trust-link {
+    margin-left: 60px;
+  }
+}/* back to top - NYSDS JHK */
 .back-to-top {
     position: fixed;
     bottom: 4%;
