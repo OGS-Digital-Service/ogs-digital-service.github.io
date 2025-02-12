@@ -2,7 +2,7 @@
 
 .back-to-top {
     position: fixed;
-    bottom: 5%;
+    bottom: 6%;
     right: 5%;
     z-index: 23000;
 }
@@ -10,7 +10,7 @@
 .back-to-top-button {
     font-size: 0.9em;
     background-color: #154973;
-    padding: 15px;
+    padding: 13px;
     color: #fff;
     border: 2px solid #fff;
     border-radius: 15px;
@@ -30,16 +30,6 @@
     color: #fff;
     border: 2px solid #face00;
     text-decoration: underline;
-}
-@media (max-width: 480px) {
-    .back-to-top {
-        bottom: 8%;
-        right: 4%;
-    }
-    .back-to-top-button {
-        font-size: 0.8em;
-        padding: 8px;
-    }
 }
 
 @media (min-width: 1024px) {
