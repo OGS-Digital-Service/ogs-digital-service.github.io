@@ -1,0 +1,16 @@
+<nav class="nysds-global-nav">
+    <h1 class="nysds-global-site-name">
+        <a href="/" class="nysds-global-home-link">
+            {{params.siteName}}
+        </a>
+    </h1>
+    <ul class="nysds-global-link-list">
+        {% for link in params.links %}
+            <li class="">
+                <a href="{{link.url}}" class="">
+                    {{link.text}}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</nav>

@@ -32,6 +32,11 @@
   .nysds-unav-trust-link {
     margin-left: 60px;
   }
+}
+
+
+@media (min-width: 1024px) {
+
 }/* back to top - NYSDS JHK */
 
 .back-to-top {
