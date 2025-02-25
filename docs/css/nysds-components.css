@@ -32,8 +32,22 @@
   .nysds-unav-trust-link {
     margin-left: 60px;
   }
+}.nysds-global-nav {
+  display:flex;
+  background: var(--primary-core-blue);
+  height: 80px;
+  align-items: center;
 }
 
+.nysds-global-site-name {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.nysds-global-home-link {
+  text-decoration: none;
+  color: var(--white)
+}
 
 @media (min-width: 1024px) {
 
