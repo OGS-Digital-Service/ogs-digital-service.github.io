@@ -3,6 +3,7 @@
   background: var(--primary-core-blue);
   height: 80px;
   align-items: center;
+  font-family: Proxima Nova, Arial, sans-serif
 }
 
 .nysds-global-site-name {
