@@ -1,15 +1,51 @@
-<nav class="nysds-global-nav">
+<nav class="nysds-global-nav" 
+     x-data="{ 
+                menuOpen: false,
+
+                close () {
+                this.menuOpen = false
+                } 
+                
+                }" 
+     @focusin.window = "! $refs.submenu.contains($event.target) && close()"
+     x-id="['nysds-global-dropdown-menu']"
+     >
     <h1 class="nysds-global-site-name">
         <a href="/" class="nysds-global-home-link">
             {{params.siteName}}
         </a>
     </h1>
-    <ul class="nysds-global-link-list">
+    <ul class="nysds-global-link-list" >
         {% for link in params.links %}
-            <li class="">
-                <a href="{{link.url}}" class="">
-                    {{link.text}}
-                </a>
+            <li class="nysds-global-list-item">
+                {% if link.url %}
+                    <a href="{{link.url}}" class="nysds-global-link">
+                        {{link.text}}
+                    </a>
+                {% else %}
+                    <button class="nysds-global-button nysds-global-link"  
+                        @click="menuOpen = ! menuOpen;"
+                        :aria-expanded="menuOpen" 
+                        :aria-controls="$id('nysds-global-dropdown-menu')"
+                        @click.outside="menuOpen = false"
+                        > 
+                        {{link.text}} 
+                    </button>
+                    <ul class="nysds-global-link-list" 
+                        x-show="menuOpen" 
+                        x-cloak 
+                        x-ref="submenu" 
+                        :id="$id('nysds-global-dropdown-menu')"
+                        >
+                    {%  for childLink in link.items %}
+                        <li class="nysds-global-list-child-item">
+                            <a href="{{childLink.url}}" class="nysds-global-link" >
+                                {{childLink.text}}
+                            </a>
+                        </li>
+                    {% endfor %}
+                    </ul>
+                {% endif %}
             </li>
         {% endfor %}
     </ul>
