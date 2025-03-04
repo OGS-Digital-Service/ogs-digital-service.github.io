@@ -33,6 +33,7 @@
      <nav class="nysds-global-nav" 
      x-data="{ 
                 menuOpen: false,
+                mobileOpen: false,
 
                 close () {
                 this.menuOpen = false
@@ -42,7 +43,11 @@
      @focusin.window = "! $refs.submenu.contains($event.target) && close()"
      x-id="['nysds-global-dropdown-menu']"
      >
-    <button class="nysds-global-mobile-menu">
+    <button class="nysds-global-mobile-menu"
+            @click="mobileOpen = ! mobileOpen"
+            aria-controls="nygov-nav-menu"
+            :aria-expanded="mobileOpen" 
+    >
         <span class="nysds-global-menu-icon"></span>
         <span class="sr-only"> Toggle Website Navigation </span>
     </button>
@@ -51,7 +56,12 @@
             New York State Digital Service
         </a>
     </h1>
-    <ul class="nysds-global-link-list" >
+    <ul class="nysds-global-link-list"
+        :class="window.innerWidth < 1024 && ! mobileOpen ? 'nysds-hidden' : ''"
+        x-cloak
+        id="nygov-nav-menu"
+
+     >
         
             <li class="nysds-global-list-item">
                 

@@ -39,7 +39,7 @@
   height: 50px;
   align-items: center;
   font-family: Proxima Nova, Arial, sans-serif;
-  padding: 0 0 0 25px;
+  padding: 0 0 0 20px;
 }
 
 .nysds-global-mobile-menu {
@@ -96,7 +96,10 @@
 
 .nysds-global-link-list {
   list-style-type: "";
-  display: none;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  background-color: var(--primary-core-blue);
 }
 
 .nysds-global-link-sub-list {
@@ -149,14 +152,11 @@
 
 @media (min-width: 1024px) {
   .nysds-global-nav {
-
     height: 60px;
-
     padding: 0 0 0 60px;
   }
 
   .nysds-global-link-list {
-    display: flex;
     flex-direction: row;
     align-items: center;
   }

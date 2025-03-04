@@ -23,6 +23,10 @@
     display: none !important; 
 }
 
+[hidden] {
+    display: none !important;
+}
+
 .nysds-hidden {
     display: none !important;
 }
