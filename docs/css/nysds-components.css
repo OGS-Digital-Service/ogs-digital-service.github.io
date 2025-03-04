@@ -32,10 +32,16 @@
   .nysds-unav-trust-link {
     margin-left: 60px;
   }
-}.nysds-global-nav {
+}.nysds-global-menu-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3C!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--%3E%3Cpath d='M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z'/%3E%3C/svg%3E");
+  filter: invert(100%);
+}
+
+
+.nysds-global-nav {
   display:flex;
   background: var(--primary-core-blue);
-  height: 80px;
+  height: 60px;
   align-items: center;
   font-family: Proxima Nova, Arial, sans-serif;
   padding: 0 60px;
@@ -63,7 +69,20 @@
 
 .nysds-global-link-list {
   list-style-type: "";
-  
+}
+
+.nysds-global-link-sub-list {
+  list-style-type: "";
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background-color: var(--primary-core-blue);
+  margin: 5px 0;
+  padding: 0;
+}
+
+.nysds-global-list-child-item {
+  padding: 20px;
 }
 
 .nysds-global-list-item {
@@ -96,7 +115,8 @@
 .nysds-global-link:focus {
   color:var(--core-accent-yellow);
   text-decoration: underline;
-  outline: 2px solid var(--core-accent-yellow)
+  outline: 1px solid var(--core-accent-yellow);
+  box-shadow: 0 0 0 2px var(--light-gray)
 }
 
 @media (min-width: 1024px) {
@@ -104,6 +124,10 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+  }
+
+  .nysds-global-link-sub-list {
+    border-top: 1px solid #fff;
   }
 
 

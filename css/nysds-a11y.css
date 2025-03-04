@@ -33,6 +33,15 @@
     margin: 0 auto;
 }
 
+.nysds-a11y-skiplink {
+    color: blue;
+    font-size: 1.2rem;
+    width: fit-content !important;
+    display: flex;
+    align-items: center;
+    margin: 20px 60px !important;
+}
+
 .nysds-a11y-main {
    display: flex;
    flex-direction: column;
@@ -95,7 +104,7 @@
     text-align: center;
 }
 
-.not-sr-only:focus {
+.focus\:not-sr-only:focus  {
     position: static;
     width: auto;
     height: auto;
