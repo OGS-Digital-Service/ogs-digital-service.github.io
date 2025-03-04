@@ -32,19 +32,46 @@
   .nysds-unav-trust-link {
     margin-left: 60px;
   }
-}.nysds-global-menu-icon {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3C!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--%3E%3Cpath d='M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z'/%3E%3C/svg%3E");
-  filter: invert(100%);
 }
-
-
 .nysds-global-nav {
   display:flex;
   background: var(--primary-core-blue);
-  height: 60px;
+  height: 50px;
   align-items: center;
   font-family: Proxima Nova, Arial, sans-serif;
-  padding: 0 60px;
+  padding: 0 0 0 25px;
+}
+
+.nysds-global-mobile-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  padding: 0.5em;
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.nysds-global-mobile-menu:focus {
+  filter: brightness(0) saturate(100%) invert(80%) sepia(58%) saturate(1418%) hue-rotate(359deg) brightness(98%) contrast(101%);
+  outline: 1px dashed var(--core-accent-yellow);
+}
+
+.nysds-global-mobile-menu:hover {
+  filter: brightness(0) saturate(100%) invert(80%) sepia(58%) saturate(1418%) hue-rotate(359deg) brightness(98%) contrast(101%);
+  outline: 1px dashed var(--core-accent-yellow);
+}
+
+.nysds-global-menu-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3C!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--%3E%3Cpath d='M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z'/%3E%3C/svg%3E");
+  filter: invert(100%);
+  height: 25px;
+  width: 23px;
+  background-repeat: no-repeat;
 }
 
 .nysds-global-site-name {
@@ -69,6 +96,7 @@
 
 .nysds-global-link-list {
   list-style-type: "";
+  display: none;
 }
 
 .nysds-global-link-sub-list {
@@ -120,6 +148,13 @@
 }
 
 @media (min-width: 1024px) {
+  .nysds-global-nav {
+
+    height: 60px;
+
+    padding: 0 0 0 60px;
+  }
+
   .nysds-global-link-list {
     display: flex;
     flex-direction: row;
@@ -128,6 +163,10 @@
 
   .nysds-global-link-sub-list {
     border-top: 1px solid #fff;
+  }
+
+  .nysds-global-mobile-menu  {
+    display: none;
   }
 
 
