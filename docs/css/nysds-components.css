@@ -35,11 +35,11 @@
 }
 .nysds-global-nav {
   display:flex;
+  flex-direction: column;
   background: var(--primary-core-blue);
-  height: 50px;
-  align-items: center;
+  justify-content: center;
   font-family: Proxima Nova, Arial, sans-serif;
-  padding: 0 0 0 20px;
+  padding: 10px 0 10px 20px;
 }
 
 .nysds-global-mobile-menu {
@@ -48,6 +48,7 @@
   align-items: center;
   justify-content: center;
   margin-right: 20px;
+  margin-left: auto;
   padding: 0.5em;
   appearance: none;
   -webkit-appearance: none;
@@ -55,6 +56,8 @@
   border: none;
   cursor: pointer;
 }
+
+
 
 .nysds-global-mobile-menu:focus {
   filter: brightness(0) saturate(100%) invert(80%) sepia(58%) saturate(1418%) hue-rotate(359deg) brightness(98%) contrast(101%);
@@ -92,6 +95,17 @@
 .nysds-global-home-link:focus { 
   color:var(--core-accent-yellow);
   text-decoration: underline;
+}
+
+.nysds-global-nav-container {
+  display: none;
+  flex-direction: column;
+}
+
+.nysds-global-name-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
 }
 
 .nysds-global-link-list {
@@ -152,8 +166,20 @@
 
 @media (min-width: 1024px) {
   .nysds-global-nav {
-    height: 60px;
-    padding: 0 0 0 60px;
+    padding: 5px 0 5px 60px;
+    justify-content: initial;
+    flex-direction: row;
+  }
+
+  .nysds-global-nav-container {
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .nysds-global-name-container {
+    width: 25%;
+    align-items: center;
   }
 
   .nysds-global-link-list {

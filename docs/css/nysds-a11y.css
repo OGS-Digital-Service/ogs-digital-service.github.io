@@ -31,6 +31,9 @@
     display: none !important;
 }
   
+.nysds-flex {
+    display:flex !important;
+}
 
 .nysds-a11y-document {
     max-width: 90%;

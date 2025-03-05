@@ -43,82 +43,89 @@
      @focusin.window = "! $refs.submenu.contains($event.target) && close()"
      x-id="['nysds-global-dropdown-menu']"
      >
-    <button class="nysds-global-mobile-menu"
-            @click="mobileOpen = ! mobileOpen"
-            aria-controls="nygov-nav-menu"
-            :aria-expanded="mobileOpen" 
-    >
-        <span class="nysds-global-menu-icon"></span>
-        <span class="sr-only"> Toggle Website Navigation </span>
-    </button>
-    <h1 class="nysds-global-site-name">
-        <a href="/" class="nysds-global-home-link">
-            New York State Digital Service
-        </a>
-    </h1>
-    <ul class="nysds-global-link-list"
-        :class="window.innerWidth < 1024 && ! mobileOpen ? 'nysds-hidden' : ''"
-        x-cloak
-        id="nygov-nav-menu"
 
-     >
-        
-            <li class="nysds-global-list-item">
-                
-                    <a href="/state-of-the-state-book-2025" class="nysds-global-link">
-                        SOTS 2025 HTML
-                    </a>
-                
-            </li>
-        
-            <li class="nysds-global-list-item">
-                
-                    <a href="/analytics" class="nysds-global-link">
-                        Analytics
-                    </a>
-                
-            </li>
-        
-            <li class="nysds-global-list-item">
-                
-                    <button class="nysds-global-button nysds-global-link"  
-                        @click="menuOpen = ! menuOpen;"
-                        :aria-expanded="menuOpen" 
-                        :aria-controls="$id('nysds-global-dropdown-menu')"
-                        @click.outside="menuOpen = false"
-                        > 
-                        Dropdown menu 
-                    </button>
-                    <ul class="nysds-global-link-sub-list" 
-                        x-show="menuOpen" 
-                        x-cloak 
-                        x-ref="submenu" 
-                        :id="$id('nysds-global-dropdown-menu')"
-                        >
+    <div class="nysds-global-name-container">
+        <h1 class="nysds-global-site-name">
+            <a href="/" class="nysds-global-home-link">
+                New York State Digital Service
+            </a>
+        </h1>
+        <button class="nysds-global-mobile-menu"
+                @click="mobileOpen = ! mobileOpen"
+                aria-controls="nygov-nav-menu"
+                :aria-expanded="mobileOpen" 
+        >
+            <span class="nysds-global-menu-icon"></span>
+            <span class="sr-only"> Toggle Website Navigation </span>
+        </button>
+    </div>
+
+    <div class="nysds-global-nav-container"
+            
+        :class="window.innerWidth < 1024 &&  mobileOpen ? 'nysds-flex' : ''"
+         x-cloak
+         id="nygov-nav-menu"
+    
+    >
+        <ul class="nysds-global-link-list">
+            
+                <li class="nysds-global-list-item">
                     
-                        <li class="nysds-global-list-child-item">
-                            <a href="#" class="nysds-global-link" >
-                                test 1
-                            </a>
-                        </li>
+                        <a href="/state-of-the-state-book-2025" class="nysds-global-link">
+                            SOTS 2025 HTML
+                        </a>
                     
-                        <li class="nysds-global-list-child-item">
-                            <a href="#" class="nysds-global-link" >
-                                test 2 longer name
-                            </a>
-                        </li>
+                </li>
+            
+                <li class="nysds-global-list-item">
                     
-                        <li class="nysds-global-list-child-item">
-                            <a href="#" class="nysds-global-link" >
-                                test 3 even longer thing
-                            </a>
-                        </li>
+                        <a href="/analytics" class="nysds-global-link">
+                            Analytics
+                        </a>
                     
-                    </ul>
-                
-            </li>
-        
-    </ul>
+                </li>
+            
+                <li class="nysds-global-list-item">
+                    
+                        <button class="nysds-global-button nysds-global-link"  
+                            @click="menuOpen = ! menuOpen;"
+                            :aria-expanded="menuOpen" 
+                            :aria-controls="$id('nysds-global-dropdown-menu')"
+                            @click.outside="menuOpen = false"
+                            > 
+                            Dropdown menu 
+                        </button>
+                        <ul class="nysds-global-link-sub-list" 
+                            x-show="menuOpen" 
+                            x-cloak 
+                            x-ref="submenu" 
+                            :id="$id('nysds-global-dropdown-menu')"
+                            >
+                        
+                            <li class="nysds-global-list-child-item">
+                                <a href="#" class="nysds-global-link" >
+                                    test 1
+                                </a>
+                            </li>
+                        
+                            <li class="nysds-global-list-child-item">
+                                <a href="#" class="nysds-global-link" >
+                                    test 2 longer name
+                                </a>
+                            </li>
+                        
+                            <li class="nysds-global-list-child-item">
+                                <a href="#" class="nysds-global-link" >
+                                    test 3 even longer thing
+                                </a>
+                            </li>
+                        
+                        </ul>
+                    
+                </li>
+            
+        </ul>
+    </div>
 </nav>
  
     <main class="nysds-main" id="main-site-content-for-skiplink">
