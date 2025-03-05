@@ -4,27 +4,137 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="NYS Digital Service Accessibility Sandbox">
+    <meta name="description" content="NYS Digital Service">
     <meta name="generator" content="11ty/eleventy">    
     <meta property="og:url" content="https://ogs-digital-service.github.io">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="NYS Digital Service Accessibility Sandbox">
+    <meta property="og:title" content="NYS Digital Service">
     <meta property="og:description" content="We&#39;re committed to providing equal access">
     <link href="/css/normalize.css" rel="stylesheet">
+<link href="/css/fonts.css" rel="stylesheet">
 <link href="/css/nysds-a11y.css" rel="stylesheet">
 <link href="/css/nysds-components.css" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<style>
+    .nysds-main {
+        font-family: Proxima Nova, Arial, sans-serif;
+        font-size: 1rem;
+    }
+</style>
     
 <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <title>NYS Digital Service Accessibility Sandbox</title>
+    <title>NYS Digital Service</title>
   </head>
   <body class="">
-  <a href="#main-site-content-for-skiplink" class="sr-only focus:not-sr-only text-blue-700 underline">Skip to Main Content</a>
+  <a href="#main-site-content-for-skiplink" class="sr-only focus:not-sr-only nysds-a11y-skiplink">Skip to Main Content</a>
     
-    <main class="" id="main-site-content-for-skiplink">
-    <h1> NYS Digital Service Accessibility Sandbox </h1>
+     <nav class="nysds-global-nav" 
+     x-data="{ 
+                menuOpen: false,
+                mobileOpen: false,
+
+                close () {
+                this.menuOpen = false
+                } 
+                
+                }" 
+     @focusin.window = "! $refs.submenu.contains($event.target) && close()"
+     x-id="['nysds-global-dropdown-menu']"
+     >
+
+    <div class="nysds-global-name-container">
+        <h1 class="nysds-global-site-name">
+            <a href="/" class="nysds-global-home-link">
+                New York State Digital Service
+            </a>
+        </h1>
+        <button class="nysds-global-mobile-menu"
+                @click="mobileOpen = ! mobileOpen"
+                aria-controls="nygov-nav-menu"
+                :aria-expanded="mobileOpen" 
+        >
+            <span class="nysds-global-menu-icon"></span>
+            <span class="sr-only"> Toggle Website Navigation </span>
+        </button>
+    </div>
+
+    <div class="nysds-global-nav-container"
+            
+        :class="window.innerWidth < 1024 &&  mobileOpen ? 'nysds-flex' : ''"
+         x-cloak
+         id="nygov-nav-menu"
+    
+    >
+        <ul class="nysds-global-link-list">
+            
+                <li class="nysds-global-list-item"
+                    >
+                    
+                        <a href="/state-of-the-state-book-2025" class="nysds-global-link">
+                            SOTS 2025 HTML
+                        </a>
+                    
+                </li>
+            
+                <li class="nysds-global-list-item"
+                    >
+                    
+                        <a href="/analytics" class="nysds-global-link">
+                            Analytics
+                        </a>
+                    
+                </li>
+            
+                <li class="nysds-global-list-item"
+                    >
+                    
+                        <button class="nysds-global-button nysds-global-link "  
+                            @click="menuOpen = ! menuOpen;"
+                            :aria-expanded="menuOpen" 
+                            :aria-controls="$id('nysds-global-dropdown-menu')"
+                            @click.outside="menuOpen = false"
+                            > 
+                            Dropdown menu 
+                            <span class="nysds-global-caret-icon"></span>
+                        </button>
+                        
+                        <ul class="nysds-global-link-sub-list" 
+                            x-show="menuOpen" 
+                            x-cloak 
+                            x-ref="submenu" 
+                            :id="$id('nysds-global-dropdown-menu')"
+                            >
+                        
+                            <li class="nysds-global-list-child-item">
+                                <a href="#" class="nysds-global-link" >
+                                    test 1
+                                </a>
+                            </li>
+                        
+                            <li class="nysds-global-list-child-item">
+                                <a href="#" class="nysds-global-link" >
+                                    test 2 longer name
+                                </a>
+                            </li>
+                        
+                            <li class="nysds-global-list-child-item">
+                                <a href="#" class="nysds-global-link" >
+                                    test 3 even longer thing
+                                </a>
+                            </li>
+                        
+                        </ul>
+                    
+                </li>
+            
+        </ul>
+    </div>
+</nav>
+ 
+    <main class="nysds-main" id="main-site-content-for-skiplink">
+    <h1> NYS Digital Service </h1>
 <a href="/state-of-the-state-book-2025"> State of the State Book 2025 </a>
 <p> Test content only, please disregard for now </p>
     </main>

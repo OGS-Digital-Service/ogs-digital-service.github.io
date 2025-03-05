@@ -1,7 +1,38 @@
-html {
-    font-family: "Noto Sans", serif;
-    font-optical-sizing: auto;
-    font-size: 1rem;
+
+:root {
+    --primary-core-blue: #154973;
+    --secondary-core-blue: #457AA5;
+    --link-blue: #004DD1;
+    --tertiary-core-blue: #EFF6FB;
+    --quaternary-blue: #007AC2;
+    --core-accent-yellow: #FACE00;
+    --yellow-alert: #FFE396;
+    --black: #000000;
+    --darkest-gray: #242424;
+    --dark-gray: #62666A;
+    --mid-gray: #D0D0CE;
+    --light-gray: #EDEDED;
+    --white: #FFFFFF;
+    --dark-red-alert: #B32E31;
+    --light-red-alert: #FEC3C3;
+    --success-green: #329d08;
+    --warning-orange: #d4820c;
+  }
+
+[x-cloak] { 
+    display: none !important; 
+}
+
+[hidden] {
+    display: none !important;
+}
+
+.nysds-hidden {
+    display: none !important;
+}
+  
+.nysds-flex {
+    display:flex !important;
 }
 
 .nysds-a11y-document {
@@ -9,23 +40,35 @@ html {
     margin: 0 auto;
 }
 
+.nysds-a11y-skiplink {
+    color: blue;
+    font-size: 1.2rem;
+    width: fit-content !important;
+    display: flex;
+    align-items: center;
+    margin: 20px 60px !important;
+}
+
 .nysds-a11y-main {
    display: flex;
    flex-direction: column;
    margin-bottom: 4rem;
+   font-family: "Noto Sans", serif;
+   font-optical-sizing: auto;
+   font-size: 1rem;
 }
 
-p {
+.nysds-a11y-main p {
     line-height: 1.5;
 }
 
-li {
+.nysds-a11y-main li {
     line-height: 1.5;
     padding-top: 0.2rem;
     padding-bottom: 0.4rem;
 }
 
-li:first-child {
+.nysds-a11y-main li:first-child {
     padding-top: 0.6rem;
 }
 

@@ -1,4 +1,4 @@
-# NYS Digital Service Performance, Analytics, and Accessibility Testing and Reporting Environment
+
 
 ## A11y Tooling
 
@@ -10,6 +10,3 @@
 - IBM Equal access accessibility checker
 - Lighthouse CI
 
-## Analytics Reporting
-
-## Performance Testing and Reporting
