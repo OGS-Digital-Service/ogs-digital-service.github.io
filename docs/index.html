@@ -69,7 +69,8 @@
     >
         <ul class="nysds-global-link-list">
             
-                <li class="nysds-global-list-item">
+                <li class="nysds-global-list-item"
+                    >
                     
                         <a href="/state-of-the-state-book-2025" class="nysds-global-link">
                             SOTS 2025 HTML
@@ -77,7 +78,8 @@
                     
                 </li>
             
-                <li class="nysds-global-list-item">
+                <li class="nysds-global-list-item"
+                    >
                     
                         <a href="/analytics" class="nysds-global-link">
                             Analytics
@@ -85,16 +87,19 @@
                     
                 </li>
             
-                <li class="nysds-global-list-item">
+                <li class="nysds-global-list-item"
+                    >
                     
-                        <button class="nysds-global-button nysds-global-link"  
+                        <button class="nysds-global-button nysds-global-link "  
                             @click="menuOpen = ! menuOpen;"
                             :aria-expanded="menuOpen" 
                             :aria-controls="$id('nysds-global-dropdown-menu')"
                             @click.outside="menuOpen = false"
                             > 
                             Dropdown menu 
+                            <span class="nysds-global-caret-icon"></span>
                         </button>
+                        
                         <ul class="nysds-global-link-sub-list" 
                             x-show="menuOpen" 
                             x-cloak 
