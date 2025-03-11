@@ -44,12 +44,30 @@
 
 .nysds-global-caret-icon {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3C!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--%3E%3Cpath d='M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z'/%3E%3C/svg%3E");
-  filter: invert(100%);
-  height: 25px;
-  width: 23px;
+  height: 18px;
+  width: 16px;
   background-repeat: no-repeat;
   margin-left: auto;
   display: block;
+}
+
+.nysds-global-turn-arrow-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512'%3E%3C!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--%3E%3Cpath d='M350 177.5c3.8-8.8 2-19-4.6-26l-136-144C204.9 2.7 198.6 0 192 0s-12.9 2.7-17.4 7.5l-136 144c-6.6 7-8.4 17.2-4.6 26s12.5 14.5 22 14.5l88 0 0 192c0 17.7-14.3 32-32 32l-80 0c-17.7 0-32 14.3-32 32l0 32c0 17.7 14.3 32 32 32l80 0c70.7 0 128-57.3 128-128l0-192 88 0c9.6 0 18.2-5.7 22-14.5z'/%3E%3C/svg%3E");
+  transform: rotate(90deg);
+  height: 15px;
+  width: 13px;
+  background-repeat: no-repeat;
+  display: block;
+  margin-top: 2px;
+  margin-right: 15px;
+}
+
+.nysds-global-close-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512'%3E%3C!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--%3E%3Cpath d='M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z'/%3E%3C/svg%3E");
+  filter: invert(100%);
+  height: 24px;
+  width: 18px;
+  background-repeat: no-repeat;
 }
 
 .nysds-global-site-name {
@@ -90,15 +108,14 @@
   display: flex;
   flex-direction: column;
   margin: 0;
-  padding: 10px 35px;
-  background-color: var(--primary-core-blue);
+  background-color: var(--light-gray);
 }
 
 .nysds-global-link-sub-list {
   list-style-type: "";
   display: flex;
   flex-direction: column;
-  background-color: var(--primary-core-blue);
+  background-color: var(--light-gray);
   margin: 0;
   padding: 0;
 }
@@ -108,9 +125,8 @@
 }
 
 .nysds-global-list-item {
-  padding: 15px 10px;
-  border-top: 1px solid var(--light-gray);
- 
+  padding: 15px 25px 15px 10px;
+  border-top: 1px solid var(--mid-gray);
 }
 
 .nysds-global-list-item:first-of-type {
@@ -118,10 +134,11 @@
 }
 
 .nysds-global-link {
-  color:var(--white);
+  color:var(--black);
   text-decoration: none;
   font-weight: bold;
   padding: 5px;
+  display: flex;
 }
 
 .nysds-global-button {
@@ -130,23 +147,34 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
-  color: #fff;
+  color: var(--black);
   font-weight:bold;
-  padding: 0px 10px; 
   display: flex;
   width: 100%;
 }
 
 .nysds-global-link:hover {
-  color:var(--core-accent-yellow);
+  color:var(--primary-core-blue);
   text-decoration: underline;
 }
 
 .nysds-global-link:focus {
-  color:var(--core-accent-yellow);
+  color:var(--primary-core-blue);
   text-decoration: underline;
-  outline: 1px solid var(--core-accent-yellow);
-  box-shadow: 0 0 0 2px var(--light-gray)
+  outline: 1px solid var(--primary-core-blue);
+  box-shadow: 0 0 0 1px var(--light-gray)
+}
+
+.nysds-global-link:hover .nysds-global-turn-arrow-icon {
+  filter: brightness(0) saturate(100%) invert(22%) sepia(20%) saturate(3240%) hue-rotate(176deg) brightness(96%) contrast(91%);
+}
+
+.nysds-global-link:focus .nysds-global-turn-arrow-icon {
+  filter: brightness(0) saturate(100%) invert(22%) sepia(20%) saturate(3240%) hue-rotate(176deg) brightness(96%) contrast(91%);
+}
+
+.nysds-rotate-180 {
+  transform: rotate(180deg);
 }
 
 
@@ -176,15 +204,20 @@
   .nysds-global-link-list {
     flex-direction: row;
     align-items: center;
+    background-color: var(--primary-core-blue);
   }
 
+  .nysds-global-button {
+    color: var(--white);
+    padding: 0px 10px; 
+  }
 
   .nysds-global-site-name {
     margin: 20px 0 20px 60px;
   }
 
   .nysds-global-list-item {
-    border-top: 0;
+    border: 0;
     padding: 10px 10px;
     display: initial;
   }
@@ -194,13 +227,44 @@
     position: absolute;
     margin: 20px 0;
     padding: 0;
+    color: var(--black);
+    background-color: var(--primary-core-blue);
   }
 
   .nysds-global-mobile-menu  {
     display: none;
   }
 
-  .nysds-global-caret-icon  {
-    display: none;
+  .nysds-global-link {
+    color: var(--white);
+  }
+
+  .nysds-global-link:hover {
+    color:var(--core-accent-yellow);
+  }
+  
+  .nysds-global-link:focus {
+    color:var(--core-accent-yellow);
+    outline: 1px solid var(--core-accent-yellow);
+  }
+
+  .nysds-global-caret-icon {
+    filter: invert(100%)
+  }
+
+  .nysds-global-turn-arrow-icon {
+    filter:invert(100%);
+  }
+
+  .nysds-global-link:focus .nysds-global-turn-arrow-icon {
+    filter: brightness(0) saturate(100%) invert(80%) sepia(58%) saturate(1418%) hue-rotate(359deg) brightness(98%) contrast(101%);
+  }
+
+  .nysds-global-link:hover .nysds-global-turn-arrow-icon {
+    filter: brightness(0) saturate(100%) invert(80%) sepia(58%) saturate(1418%) hue-rotate(359deg) brightness(98%) contrast(101%);
+  }
+
+  .nysds-global-caret-icon { 
+    margin-left: 15px;
   }
 }

@@ -2,6 +2,7 @@
      x-data="{ 
                 menuOpen: false,
                 mobileOpen: false,
+                closeIcon: false,
 
                 close () {
                 this.menuOpen = false
@@ -19,11 +20,12 @@
             </a>
         </h1>
         <button class="nysds-global-mobile-menu"
-                @click="mobileOpen = ! mobileOpen"
+                @click="mobileOpen = ! mobileOpen, closeIcon = ! closeIcon"
                 aria-controls="nygov-nav-menu"
                 :aria-expanded="mobileOpen" 
         >
-            <span class="nysds-global-menu-icon"></span>
+            <span class="nysds-global-menu-icon" x-show="! closeIcon"></span>
+            <span class="nysds-global-close-icon" x-show="closeIcon" x-cloak></span>
             <span class="sr-only"> Toggle Website Navigation </span>
         </button>
     </div>
@@ -51,7 +53,7 @@
                             @click.outside="menuOpen = false"
                             > 
                             {{link.text}} 
-                            <span class="nysds-global-caret-icon"></span>
+                            <span class="nysds-global-caret-icon" :class="! menuOpen ? '' : 'nysds-rotate-180'"></span>
                         </button>
                         
                         <ul class="nysds-global-link-sub-list" 
@@ -62,7 +64,9 @@
                             >
                         {%  for childLink in link.items %}
                             <li class="nysds-global-list-child-item">
+                                
                                 <a href="{{childLink.url}}" class="nysds-global-link" >
+                                    <span class="nysds-global-turn-arrow-icon" aria-hidden="true"></span>
                                     {{childLink.text}}
                                 </a>
                             </li>
