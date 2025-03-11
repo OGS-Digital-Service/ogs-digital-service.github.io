@@ -62,6 +62,15 @@
     line-height: 1.5;
 }
 
+.nysds-a11y-main a:hover {
+    text-decoration-thickness: 3px;
+}
+
+.nysds-a11y-main a:focus {
+    text-decoration-thickness: 3px;
+}
+
+
 .nysds-a11y-main li {
     line-height: 1.5;
     padding-top: 0.2rem;
