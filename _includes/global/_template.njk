@@ -1,18 +1,12 @@
 <nav class="nysds-global-nav" 
      x-data="{ 
-                menuOpen: false,
+                dropdownMenu: false,
                 mobileOpen: false,
-                closeIcon: false,
-
-                close () {
-                this.menuOpen = false
-                }
+                closeIcon: false
+                }"  
                 
-                }" 
-     @focusin.window = "! $refs.submenu.contains($event.target) && close()"
-     @click.outside="mobileOpen = false"
-     x-id="['nysds-global-dropdown-menu']"
-     x-ref="globalMenu" 
+     @click.outside="mobileOpen = false, closeIcon = false"
+     @keydown.escape.document="mobileOpen = false, closeIcon = false"
      >
 
     <div class="nysds-global-name-container">
@@ -21,6 +15,7 @@
                 {{params.siteName}}
             </a>
         </h1>
+        {# mobile hamburger #}
         <button class="nysds-global-mobile-menu"
                 @click="mobileOpen = ! mobileOpen, closeIcon = ! closeIcon"
                 aria-controls="nygov-nav-menu"
@@ -30,47 +25,58 @@
             <span class="nysds-global-close-icon" x-show="closeIcon" x-cloak></span>
             <span class="sr-only"> Toggle Website Navigation </span>
         </button>
+        {# end #}
     </div>
 
     <div class="nysds-global-nav-container"
         :class="window.innerWidth < 1024 &&  mobileOpen ? 'nysds-flex' : ''"
          x-cloak
-         id="nygov-nav-menu"
-        
+         id="nygov-nav-menu"  
     >
         <ul class="nysds-global-link-list"
         >
             {% for link in params.links %}
                 <li class="nysds-global-list-item"
+                    x-data="{
+                                dropdown: false
+                            }"
                     >
                     {% if link.url %}
                         <a href="{{link.url}}" class="nysds-global-link">
                             {{link.text}}
                         </a>
                     {% else %}
+
+                        {# dropdown button ________________________________#}
                         <button class="nysds-global-button nysds-global-link "  
-                            @click="menuOpen = ! menuOpen;"
-                            :aria-expanded="menuOpen" 
-                            :aria-controls="$id('nysds-global-dropdown-menu')"
-                            @click.outside="menuOpen = false"
+                            @click="dropdown = ! dropdown"
+                            :aria-expanded="dropdown"
+                            aria-controls="nysds-global-dropdown-menu{{loop.index}}"
+                            @click.outside="dropdown=false"
                             > 
                             {{link.text}} 
-                            <span class="nysds-global-caret-icon" :class="! menuOpen ? '' : 'nysds-rotate-180'"></span>
+                            <span class="nysds-global-caret-icon" :class="! dropdown ? '' : 'nysds-rotate-180'" ></span>
                         </button>
-                        
+                        {# _______________________________________________ #}
+
+                        {# dropdown list __________________________________#}
                         <ul class="nysds-global-link-sub-list" 
-                            x-show="menuOpen" 
+                            @keydown.escape.document="dropdown=false"
+                            @focusin.outside="dropdown=false"
+                            x-show="dropdown"
                             x-cloak 
-                            x-ref="submenu" 
-                            :id="$id('nysds-global-dropdown-menu')"
+                            x-ref="submenu{{loop.index}}" 
+                            id="nysds-global-dropdown-menu{{loop.index}}"
                             >
+                        {# _______________________________________________ #}
                         {%  for childLink in link.items %}
                             <li class="nysds-global-list-child-item">
-                                
-                                <a href="{{childLink.url}}" class="nysds-global-sublink nysds-global-link" >
+                                <a href="{{childLink.url}}" class="nysds-global-sublink nysds-global-link" 
+                                >
                                     <span class="nysds-global-turn-arrow-icon" aria-hidden="true"></span>
                                     {{childLink.text}}
                                 </a>
+                                
                             </li>
                         {% endfor %}
                         </ul>
