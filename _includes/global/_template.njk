@@ -6,11 +6,13 @@
 
                 close () {
                 this.menuOpen = false
-                } 
+                }
                 
                 }" 
      @focusin.window = "! $refs.submenu.contains($event.target) && close()"
+     @click.outside="mobileOpen = false"
      x-id="['nysds-global-dropdown-menu']"
+     x-ref="globalMenu" 
      >
 
     <div class="nysds-global-name-container">
@@ -31,13 +33,13 @@
     </div>
 
     <div class="nysds-global-nav-container"
-            
         :class="window.innerWidth < 1024 &&  mobileOpen ? 'nysds-flex' : ''"
          x-cloak
          id="nygov-nav-menu"
-    
+        
     >
-        <ul class="nysds-global-link-list">
+        <ul class="nysds-global-link-list"
+        >
             {% for link in params.links %}
                 <li class="nysds-global-list-item"
                     >
