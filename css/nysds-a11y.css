@@ -35,6 +35,12 @@
     display:flex !important;
 }
 
+.nysds-iframe {
+    display: flex;
+    justify-content: center;
+    margin: 4% 1%;
+}
+
 .nysds-a11y-document {
     max-width: 90%;
     margin: 0 auto;
