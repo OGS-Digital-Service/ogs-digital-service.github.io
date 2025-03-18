@@ -24,12 +24,12 @@
 
 .nysds-global-mobile-menu:focus {
   filter: brightness(0) saturate(100%) invert(80%) sepia(58%) saturate(1418%) hue-rotate(359deg) brightness(98%) contrast(101%);
-  outline: 1px dashed var(--core-accent-yellow);
+  outline: 1px solid var(--core-accent-yellow);
 }
 
 .nysds-global-mobile-menu:hover {
   filter: brightness(0) saturate(100%) invert(80%) sepia(58%) saturate(1418%) hue-rotate(359deg) brightness(98%) contrast(101%);
-  outline: 1px dashed var(--core-accent-yellow);
+  outline: 1px solid var(--core-accent-yellow);
 }
 
 .nysds-global-menu-icon {
@@ -273,11 +273,7 @@
   .nysds-global-caret-icon {
     filter: invert(100%)
   }
-/*
-  .nysds-global-turn-arrow-icon {
-    filter:invert(100%);
-  }
-    */
+
 
   .nysds-global-link:focus .nysds-global-caret-icon {
     filter: brightness(0) saturate(100%) invert(81%) sepia(66%) saturate(1269%) hue-rotate(357deg) brightness(96%) contrast(105%);

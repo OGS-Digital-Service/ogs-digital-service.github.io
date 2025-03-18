@@ -1,4 +1,5 @@
 <nav class="nysds-global-nav" 
+     aria-labelledby="nysds-global-nav-label"
      x-data="{ 
                 dropdownMenu: false,
                 mobileOpen: false,
@@ -8,7 +9,7 @@
      @click.outside="mobileOpen = false, closeIcon = false"
      @keydown.escape.document="mobileOpen = false, closeIcon = false"
      >
-
+    <span class="sr-only" id="nysds-global-nav-label"> main website navigation </span>
     <div class="nysds-global-name-container">
         <h1 class="nysds-global-site-name">
             <a href="/" class="nysds-global-home-link">
