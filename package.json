@@ -7,7 +7,8 @@
     "start": "npx @11ty/eleventy --serve",
     "pa11y": "pa11y-ci",
     "ibm": "npx achecker _tests/$AGENCY.txt",
-    "lighthouse": "npx lighthouse $URL"
+    "lighthouse": "npx lighthouse $URL",
+    "build":"npx @11ty/eleventy"
   },
   "keywords": [],
   "author": "",
