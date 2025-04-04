@@ -45,7 +45,7 @@
     <div class="nysds-global-name-container">
         <h1 class="nysds-global-site-name">
             <a href="/" class="nysds-global-home-link">
-                New York State Digital Service
+                NYS Digital Service A11Y
             </a>
         </h1>
         
@@ -88,130 +88,8 @@
                     >
                     
                         <a href="#" class="nysds-global-link">
-                            Analytics
+                            DeafBlind Annual Report HTML
                         </a>
-                    
-                </li>
-            
-                <li class="nysds-global-list-item"
-                    x-data="{
-                                dropdown: false
-                            }"
-                    >
-                    
-
-                        
-                        <button class="nysds-global-button nysds-global-link "  
-                            @click="dropdown = ! dropdown"
-                            :aria-expanded="dropdown"
-                            aria-controls="nysds-global-dropdown-menu3"
-                            @click.outside="dropdown=false"
-                            > 
-                            Dropdown menu 
-                            <span class="nysds-global-caret-icon" :class="! dropdown ? '' : 'nysds-rotate-180'" ></span>
-                        </button>
-                        
-
-                        
-                        <ul class="nysds-global-link-sub-list" 
-                            @keydown.escape.document="dropdown=false"
-                            @focusin.outside="dropdown=false"
-                            x-show="dropdown"
-                            x-cloak 
-                            x-ref="submenu3" 
-                            id="nysds-global-dropdown-menu3"
-                            >
-                        
-                        
-                            <li class="nysds-global-list-child-item">
-                                <a href="#" class="nysds-global-sublink nysds-global-link" 
-                                >
-                                    <span class="nysds-global-turn-arrow-icon" aria-hidden="true"></span>
-                                    test 1
-                                </a>
-                                
-                            </li>
-                        
-                            <li class="nysds-global-list-child-item">
-                                <a href="#" class="nysds-global-sublink nysds-global-link" 
-                                >
-                                    <span class="nysds-global-turn-arrow-icon" aria-hidden="true"></span>
-                                    test 2 longer name
-                                </a>
-                                
-                            </li>
-                        
-                            <li class="nysds-global-list-child-item">
-                                <a href="#" class="nysds-global-sublink nysds-global-link" 
-                                >
-                                    <span class="nysds-global-turn-arrow-icon" aria-hidden="true"></span>
-                                    test 3 even longer thing
-                                </a>
-                                
-                            </li>
-                        
-                        </ul>
-                    
-                </li>
-            
-                <li class="nysds-global-list-item"
-                    x-data="{
-                                dropdown: false
-                            }"
-                    >
-                    
-
-                        
-                        <button class="nysds-global-button nysds-global-link "  
-                            @click="dropdown = ! dropdown"
-                            :aria-expanded="dropdown"
-                            aria-controls="nysds-global-dropdown-menu4"
-                            @click.outside="dropdown=false"
-                            > 
-                            Dropdown menu 
-                            <span class="nysds-global-caret-icon" :class="! dropdown ? '' : 'nysds-rotate-180'" ></span>
-                        </button>
-                        
-
-                        
-                        <ul class="nysds-global-link-sub-list" 
-                            @keydown.escape.document="dropdown=false"
-                            @focusin.outside="dropdown=false"
-                            x-show="dropdown"
-                            x-cloak 
-                            x-ref="submenu4" 
-                            id="nysds-global-dropdown-menu4"
-                            >
-                        
-                        
-                            <li class="nysds-global-list-child-item">
-                                <a href="#" class="nysds-global-sublink nysds-global-link" 
-                                >
-                                    <span class="nysds-global-turn-arrow-icon" aria-hidden="true"></span>
-                                    test 1
-                                </a>
-                                
-                            </li>
-                        
-                            <li class="nysds-global-list-child-item">
-                                <a href="#" class="nysds-global-sublink nysds-global-link" 
-                                >
-                                    <span class="nysds-global-turn-arrow-icon" aria-hidden="true"></span>
-                                    test 2 longer name
-                                </a>
-                                
-                            </li>
-                        
-                            <li class="nysds-global-list-child-item">
-                                <a href="#" class="nysds-global-sublink nysds-global-link" 
-                                >
-                                    <span class="nysds-global-turn-arrow-icon" aria-hidden="true"></span>
-                                    test 3 even longer thing
-                                </a>
-                                
-                            </li>
-                        
-                        </ul>
                     
                 </li>
             
