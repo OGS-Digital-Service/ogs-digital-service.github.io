@@ -4,6 +4,37 @@ title: NYS Digital Service
 description: We're committed to providing equal access
 url: ogs-digital-service.github.io
 ---
-<h1> {{title}} Accessible Documents Conversion Library</h1>
+{% from './_includes/_components.njk' import hero, cards %}
+{{ hero({
+    title: "NYS Digital Service Accessibility Hub",
+    description:"A single source location for our accessible document conversions and digital accessibility resources.",
+    image:"https://www.governor.ny.gov/sites/default/files/styles/hero_wide/public/thumbnails/image/AlbanyAerial3_hero.jpg?h=fd99c4f7&itok=rkuJP-e5",
+    headline:"",
+    date:""
+    })
+}}
 
-<p> Hello! This is under construction, please check back soon for updates! </p>
+{{
+    cards({
+        heading:"Accessible Document Conversions",
+        intro:"",
+        cards:[
+            {
+                title:"State of the State Book 2025",
+                content:"The Constitution of New York State requires the Governor to deliver an annual message to the Legislature regarding the state of the state. The State of the State proposals are the first step in defining the Governor's agenda in 2025.",
+                link:"/state-of-the-state-book-2025",
+                image:"https://www.governor.ny.gov/sites/default/files/2024-08/Governor%27sSeal1280x512_1.jpg",
+                imagealt:"new york state seal"
+            },
+            {
+                title:"NYS Deaf, DeafBlind, and Hard of Hearing Office 2023-2024 Annual Report",
+                content:"2023-2024 Annual Report by the Deaf, DeafBlind, and Hard of Hearing Office and the Interagency Coordinating Council on Services to Persons who are Deaf, DeafBlind, and Hard of Hearing",
+                link:"/DDBHH-annual-report-2024",
+                image:"https://www.governor.ny.gov/sites/default/files/2024-08/Governor%27sSeal1280x512_1.jpg",
+                imagealt:"new york state seal"
+            }
+        ]
+    })
+}}
+
+<p class="mx-content"> The New York State Digital Service is working on creating a re-usable library of tools to more easily convert documents, PDFs, and data tables to simple and more accessible formats using semantic HTML and basic CSS. This site is evolving and a work in progress! If you have questions please feel free to contact us at <a href="mailto:digital.services@ogs.ny.gov">Digital.Services@ogs.ny.gov</a> </p>

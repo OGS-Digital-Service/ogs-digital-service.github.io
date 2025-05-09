@@ -12,6 +12,7 @@
 .nysds-unav {
   display: flex;
   align-items: center;
+  font-family: "Noto Sans", sans-serif;
 }
 
 .nysds-unav-bottom-border {

@@ -1,0 +1,37 @@
+<style>
+.nysds-hero-background-image {
+    {% if params.image %}
+    background-image: url('{{params.image}}');
+    {% else %}
+    background-color: #457AA5;
+    min-height: 275px;
+    {% endif %}
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+</style>
+<div class="nysds-hero-container nysds-hero-background-image ">
+    <div class="nysds-hero-information">
+        {% if params.date %}
+            <p class="nysds-hero-date">{{params.date}}</p>
+        {% endif %}
+        {% if params.headline %}
+            <p class="nysds-hero-headline">{{params.headline}}</p>
+        {%endif %}
+            <h2 class="nysds-hero-title">{{params.title}}</h2>
+        {% if params.description %}
+            <p class="nysds-hero-description">{{params.description }}</p>
+        {% endif %}
+        {% if params.links %}
+        <ul class="nysds-hero-links-list">
+            {% for herolink in params.links%}
+                <li>
+                    <a class="nysds-hero-link" href="{{herolink.link}}" {% if herolink.arialabel %} aria-label="{{herolink.arialabel}}" {%endif%}>{{herolink.text}}</a>
+                    <span class="nysds-hero-link-arrow" aria-hidden="true"></span>  
+                </li>
+            {% endfor %}
+        </ul>
+        {%endif%}
+    </div>
+</div>

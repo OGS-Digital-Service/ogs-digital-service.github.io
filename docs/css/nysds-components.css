@@ -12,6 +12,7 @@
 .nysds-unav {
   display: flex;
   align-items: center;
+  font-family: "Noto Sans", sans-serif;
 }
 
 .nysds-unav-bottom-border {
@@ -365,4 +366,541 @@
         font-size: 1em;
         padding: 12px;
     }
+}
+.nysds-footer {
+    background: var(--tertiary-core-blue);
+    min-height: 125px;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    font-family: Proxima Nova, Arial, sans-serif;
+    padding:35px;
+}
+
+.nysds-footer-site-name {
+    font-size: 1.25em;
+    font-weight: bold;
+    padding: 15px 0 15px 15px;
+    font-family: 'D Sari Bold', Arial, sans-serif;
+    display: flex;
+    align-items: center;
+}
+
+.nysds-footer-list {
+    list-style-type: '';
+    display: flex;
+    flex-direction: column;
+    margin: 0 5px;
+    padding: 0;
+}
+.nysds-footer-links {
+    color: #000;
+    font-weight: bold;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    padding: 5px;
+    margin: 5px;
+} 
+
+.nysds-footer-links:hover {
+    text-decoration-thickness: 3px;
+    text-underline-offset: 3px;
+}
+
+.nysds-footer-links:focus {
+    text-decoration-thickness: 3px;
+    text-underline-offset: 3px;
+    outline: 2px solid var(--primary-core-blue);
+}
+
+.nysds-footer-separator {
+    display: none;
+}
+
+
+/* media queries */
+@media (min-width: 1024px) {
+    .nysds-footer-separator {
+        height: 35px;
+        border-right: 2px solid #000;
+        margin: 0 10px 0 20px;
+        display: flex;
+    }
+
+    .nysds-footer {
+        flex-direction: row;
+        align-items: center;
+        padding:0 60px;
+    }
+
+    .nysds-footer-list {
+        flex-direction: row;
+    }
+}.nysds-hero-container {
+    width: 100%;
+    display: flex;
+    align-items: end;
+    min-height: 400px;
+
+}
+
+.nysds-hero-background-image {
+     background-image: url(); /* PUT THE IMAGE URL HERE - replace the current full url with the new one */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.nysds-hero-information {
+    width: 100%;
+    color: #fff;
+    padding: 35px 20px;
+    background-color: #154973;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.nysds-hero-title {
+    font-size: 28px;
+    line-height: 1.15em;
+    font-weight: 800;
+    margin: 0px;
+}
+
+.nysds-hero-headline {
+    color:#FACE00;
+    margin-bottom: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight:bold;
+}
+
+.nysds-hero-description {
+    font-size: 16px;
+    line-height: 25px;
+    margin: 20px 0 0;
+}
+
+.nysds-hero-links-list {
+    list-style-type: "";
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+.nysds-hero-links-list li {
+    display: flex;
+    align-items: center;
+    margin-right: 45px;
+    margin-top: 20px;
+}
+
+ .nysds-hero-link {
+    color: #FACE00;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 14px;
+}
+
+.nysds-hero-link:hover {
+    color: #FACE00;
+    text-decoration-thickness: 3px;
+}
+
+.nysds-hero-link:focus {
+    color: #FACE00;
+    text-decoration-thickness: 3px;
+    outline-offset: 4px;
+}
+
+.nysds-hero-link-arrow {
+    display: block;
+    height: 16px;
+    width: 16px;
+    margin: 0 5px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3C!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--%3E%3Cpath fill='%23FACE00' d='M334.5 414c8.8 3.8 19 2 26-4.6l144-136c4.8-4.5 7.5-10.8 7.5-17.4s-2.7-12.9-7.5-17.4l-144-136c-7-6.6-17.2-8.4-26-4.6s-14.5 12.5-14.5 22l0 72L32 192c-17.7 0-32 14.3-32 32l0 64c0 17.7 14.3 32 32 32l288 0 0 72c0 9.6 5.7 18.2 14.5 22z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+}
+
+.nysds-hero-link-arrow:dir(rtl) {
+    rotate: 180deg;
+}
+
+@media (min-width: 1024px) {
+    .nysds-hero-information {
+        margin-top: 0px;
+        margin: 0px 60px;
+        width: 580px;
+        padding: 45px 45px;
+        border-radius: 30px;
+    }
+
+    .nysds-hero-container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .nysds-hero-description {
+        font-size: 18px;
+    }
+
+    .nysds-hero-title {
+        font-size: 36px;
+    }
+
+    .nysds-hero-information {
+        padding: 45px 35px;
+    }
+
+    .nysds-hero-links-list {
+        flex-direction: row;
+    }
+
+    .nysds-hero-links-list li {
+        margin-top: 35px;
+    }
+}
+/* accordion - NYSDS JHK */
+.accordion {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #d0d0ce;
+    border-radius: 15px;
+    background: none;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 15px;
+}
+
+.accordion-headline {
+    font-family: Oswald, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: block;
+    text-align: center;
+    padding-bottom: 15px;
+    color:#154973;
+}
+
+.accordion-button {
+    background: none;
+    padding: 20px;
+    border: 0;
+    text-align: left;
+    border-top:2px solid #d0d0ce;
+    border-bottom: none;
+    color: #154973;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.accordion-filter-button {
+    background: #154973;
+    padding:10px;
+    margin: 10px 15px;
+    border-radius: 10px;
+    color: #fff;
+    min-width: 250px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    display: block;
+    text-decoration: none;
+    appearance: none;
+    border: none;
+}
+
+.accordion-filter-button:hover {
+    background-color: #000;
+}
+
+.accordion-filter-button:focus {
+    background-color: #000;
+}
+
+.accordion-filter {
+    display: flex;
+    justify-content: center;
+}
+
+.accordion-data-button {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.accordion-data-button-date {
+    display: none;
+}
+
+.accordion-mobile-date {
+    display: block;
+        font-weight: normal;
+        font-size: 13px;
+        margin-bottom: 8px;
+        color: #000;
+        padding: 3px 4px 4px 2px;
+        border-radius: 5px;
+        background: #d0d0ce;
+        width: max-content;
+}
+
+.accordion-bold {
+    font-weight: bold;
+}
+
+.accordion-agency {
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: #457AA5;
+    color: #fff;
+    width: fit-content;
+    padding: 4px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    text-decoration: none !important;
+}
+
+.accordion-program {
+    max-width: 90%;
+}
+
+.accordion-button-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' width='18' height='18' %3E%3C!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--%3E%3Cpath d='M416 208H272V64c0-17.7-14.3-32-32-32h-32c-17.7 0-32 14.3-32 32v144H32c-17.7 0-32 14.3-32 32v32c0 17.7 14.3 32 32 32h144v144c0 17.7 14.3 32 32 32h32c17.7 0 32-14.3 32-32V304h144c17.7 0 32-14.3 32-32v-32c0-17.7-14.3-32-32-32z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    height: 18px;
+    width: 18px;
+    display: inline-block;
+    color: #154973;
+}
+
+.accordion-button:first-of-type {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-top: none;
+    border-bottom: none;
+}
+
+.accordion-button:last-of-type {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-top: 2px solid #d0d0ce;
+    border-bottom: none;
+}
+
+.accordion-button:hover {
+    background-color: #ededed;
+    text-decoration: underline;
+}
+.accordion-button[aria-expanded=true] {
+    background-color: #ededed;
+}
+
+.accordion-button:focus {
+    background-color: #ededed;
+    text-decoration: underline; 
+    outline: 4px solid #FACE00;
+    outline-offset: -1.5px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;    
+}
+
+.accordion-button:active {
+    background-color: #ededed;
+    text-decoration: underline; 
+    outline: 3px solid #FACE00;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.accordion-description {
+    font-size: 16px;
+    font-weight: normal;
+    padding: 5px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.accordion-description h4 {
+    font-weight: bold;
+}
+
+.accordion-description:last-child {
+    padding-bottom: 20px;
+}
+
+.accordion-description h4 {
+    white-space: nowrap;
+}
+
+.accordion-cta {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: right;
+    justify-content: flex-end;
+    display: flex;   
+    align-items: center;
+}
+
+.accordion-cta:hover {
+    color: #000;
+    outline: 1px #FACE00;
+}
+
+.accordion-cta:focus {
+    color: #000;
+    outline: 1px #FACE00;
+}
+
+.accordion-cta-arrow {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' width='20' height='20'%3E%3C!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--%3E%3Cpath d='M313.9 216H12c-6.6 0-12 5.4-12 12v56c0 6.6 5.4 12 12 12h301.9v46.1c0 21.4 25.9 32.1 41 17l86.1-86.1c9.4-9.4 9.4-24.6 0-33.9l-86.1-86.1c-15.1-15.1-41-4.4-41 17V216z'/%3E%3C/svg%3E");
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    margin-left: 5px;
+    filter: invert(17%) sepia(100%) saturate(6232%) hue-rotate(214deg) brightness(91%) contrast(101%);
+}
+
+.accordion-item {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* media queries */
+@media (min-width: 1024px) {
+   .accordion-item {
+        flex-direction: row;
+        margin-bottom: -30px;
+    }
+   .accordion-description {
+        padding: 15px 20px;
+    }
+    .accordion-filter {
+        justify-content: right;
+    }
+    .accordion-data-button-date {
+        display: flex;
+        font-weight: normal;
+        font-size: 14px;
+        background: #D0D0CE;
+        color: #000;
+        padding: 6px;
+        border: 2px solid #62626A;
+        border-radius: 5px;
+        margin-left: auto;
+        margin-right:3%;
+    }
+    .accordion-mobile-date {
+        display: none;
+    }
+    .accordion-data-button {
+        width: 60%;
+    }
+    
+}
+/* cards - NYSDS JHK */
+
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    margin: 50px 0px;
+    
+}
+
+.cards-heading {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 12px;
+    width: 100%;
+    font-family: 'Figtree', sans-serif;
+}
+
+.cards-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.nysds-card {
+    width: 320px;
+    margin: 1.5rem 1rem;
+    background: #ededed;
+    border: 1px solid #d0d0ce;
+    border-radius: 15px;
+}
+
+.card-image {
+    border-radius: 15px;
+    object-fit: cover;
+    height: 220px;
+    width: 100%;
+    display: block;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 18px;
+    margin: 0 25px 0 0;
+    font-weight: bold;
+    font-family: 'Figtree', sans-serif;
+}
+
+.card-link {
+    color: #004DD1;
+    text-decoration: none;
+    font-family: 'Figtree', sans-serif;
+}
+
+.card-link:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+.card-link:focus {
+    color: #000;
+    text-decoration: underline;
+}
+
+.card-description {
+    font-size: 16px;
+    font-family: 'Figtree', sans-serif;
+    margin-top: 15px;
+}
+
+.cards-intro {
+    font-size: 17px;
+    margin: 15px 0px;
+    text-align: center;
+    font-family: 'Figtree', sans-serif;
+}
+
+
+/* media queries */
+@media (min-width: 1024px) {
+    .cards-wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card-content {
+        padding: 25px;
+    }
+    
 }

@@ -1,0 +1,8 @@
+<footer class="nysds-footer">
+    <h2 class="nysds-footer-site-name">{{params.siteName}} <span class="nysds-footer-separator" aria-hidden="true"></span></h2>
+    <ul class="nysds-footer-list">
+        {% for link in params.links %}
+            <li ><a href="{{link.url}}" class="nysds-footer-links">{{link.text}}</a></li>
+        {% endfor %}
+    </ul>
+</footer>
