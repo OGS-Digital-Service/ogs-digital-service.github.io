@@ -93,6 +93,13 @@
     display: block;
     margin: 0 auto;
 }
+
+.nysds-a11y-footnote-return {
+    margin: 1.5em;
+    font-style: italic;
+    line-height: 3em;
+}
+
 .nysds-a11y-toc {
     margin: 5% 0;
     border: 2px solid #d0d0ce;
