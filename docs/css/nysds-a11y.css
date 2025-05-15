@@ -96,12 +96,14 @@
 
 .nysds-a11y-footnote {
     word-break: break-all;
+    display: flex;
+    flex-direction: column;
+
 }
 
 .nysds-a11y-footnote-return {
-    margin: 2.5em;
+    margin: 1.5em 0 2.5em 0;
     font-style: italic;
-    line-height: 6em;
    
 }
 
