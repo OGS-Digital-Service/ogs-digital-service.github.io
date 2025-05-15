@@ -94,6 +94,10 @@
     margin: 0 auto;
 }
 
+.nysds-a11y-footnote {
+    word-break: break-all;
+}
+
 .nysds-a11y-footnote-return {
     margin: 2.5em;
     font-style: italic;
