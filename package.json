@@ -8,14 +8,15 @@
     "pa11y": "pa11y-ci",
     "ibm": "npx achecker _tests/$AGENCY.txt",
     "lighthouse": "npx lighthouse $URL",
-    "build":"npx @11ty/eleventy"
+    "build": "npx @11ty/eleventy"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
-    "accessibility-checker": "^3.1.79"
+    "accessibility-checker": "^3.1.79",
+    "ics": "^3.8.1"
   },
   "dependencies": {
     "lighthouse": "^12.3.0",
