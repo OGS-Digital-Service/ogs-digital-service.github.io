@@ -3,16 +3,16 @@ VERSION:2.0
 CALSCALE:GREGORIAN
 X-PUBLISHED-TTL:PT1H
 BEGIN:VEVENT
-UID:fzadw_NL7ie9XE_pLm88m
+UID:mUQOXtOi2o0s2gJ9G-bTt
 SUMMARY:Gov. Hochul's 2026 State of the State Address
-DTSTAMP:20260108T180756Z
+DTSTAMP:20260108T203139Z
 DTSTART:20260113T180000Z
 DESCRIPTION:On January 13\, 2026\, Governor Hochul is delivering her 2026 S
 	tate of the State Address! Tune in to hear the governor's plans to make Ne
 	w York safer\, more affordable\, and a place where every family can thrive
 	.
 URL:https://www.governor.ny.gov/SOTS2026
-LOCATION:Virtual on Youtube https://youtube.com/live/Kyx6ffQvpY0?feature=share
+LOCATION:Virtual -- tune in at https://governor.ny.gov/SOTS2026
 DURATION:PT1H
 END:VEVENT
 END:VCALENDAR
