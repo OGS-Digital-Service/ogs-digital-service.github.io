@@ -6,8 +6,8 @@ ics.createEvent({
   duration: { hours: 1, minutes: 0 },
   title: "Gov. Hochul's 2026 State of the State Address",
   description: "On January 13, 2026, Governor Hochul is delivering her 2026 State of the State Address! Tune in to hear the governor's plans to make New York safer, more affordable, and a place where every family can thrive.",
-  location: 'Virtual',
-  url: 'https://youtube.com/live/Kyx6ffQvpY0?feature=share'
+  location: 'Virtual on Youtube https://youtube.com/live/Kyx6ffQvpY0?feature=share',
+  url: 'https://www.governor.ny.gov/SOTS2026'
 }, (error, value) => {
   if (error) {
     console.log(error)
