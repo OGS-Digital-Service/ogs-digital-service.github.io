@@ -118,12 +118,17 @@
     padding-left: 1rem;
 }
 
-.nysds-a11y-toc ul > li {
+.nysds-a11y-toc li:has(ul) {
+    list-style-type: "";
+}
+
+.font-bold {
     font-weight: bold;
 }
 
-.nysds-a11y-toc ul > li > ul > li  {
-    font-weight: normal;
+.nysds-a11y-textarea {
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .sr-only {
